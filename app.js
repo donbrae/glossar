@@ -11,23 +11,6 @@ $(function() {
             distance: 15,
             maxPatternLength: 3,
             minMatchCharLength: 5,
-            // keys: [{
-            //         name: 'sc',
-            //         weight: 0.5
-            //     },
-            //     {
-            //         name: 'sc_alt',
-            //         weight: 0.1
-            //     },
-            //     {
-            //         name: 'en',
-            //         weight: 0.3
-            //     },
-            //     {
-            //         name: 'tr',
-            //         weight: 0.1
-            //     }
-            // ]
             keys: [{
                     name: 'sc',
                     weight: 0.4
