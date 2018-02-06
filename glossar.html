@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sco">
+
+<head>
+    <title>Glossar</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css"> -->
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,600" rel="stylesheet">
+
+    <script src="zepto.min.js"></script>
+
+    <script src="fuse.min.js"></script>
+    <script src="glossar.js"></script>
+    <script src="glossar-v.js"></script>
+    <!-- verbs -->
+    <script src="glossar-adj.js"></script>
+    <!-- adjectives -->
+    <script src="glossar-adv.js"></script>
+    <!-- adjectives -->
+    <script src="glossar-n.js"></script>
+    <!-- nouns -->
+    <script src="glossar-geo.js"></script>
+    <!-- geographical -->
+    <script src="app.js"></script>
+
+    <!-- Production JS bundle -->
+    <!-- <script defer src="glossar-bundle.min.js" onload="GLOSSAR.init()"></script> -->
+
+</head>
+
+<body>
+    <!-- Begin page content -->
+    <main role="main" class="container">
+        <h1 class="mt-5 text-center">Scots glossar</h1>
+        <section id="search">
+            <div class="form-group form-inline">
+                <input type="text" class="form-control mx-auto w-50" id="searchTextbox" placeholder="Inpit Scots or English" autofocus>
+            </div>
+
+            <ul id="result" class="result"></ul>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted"><em>Mak Forrit</em> glossar gibble (alpha). Biggit by Jamie Smith, 2018. Rype algorithm: <a href="http://fusejs.io">Fuse.js</a></span>
+        </div>
+    </footer>
+    <!-- <h1>Glossar</h1>
+    <section id="search">
+        <div class="form-group form-inline">
+            <input type="text" class="form-control" id="searchTextbox" placeholder="Inpit Scots or English" autofocus>
+        </div>
+
+        <ul id="result" class="result"></ul>
+
+    </section> -->
+</body>
+
+</html>
