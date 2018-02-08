@@ -34,7 +34,7 @@ G.dict.push(
         sc: 'wabsteid',
         en: 'website',
         pr: 'wabsteed',
-        tr: ['websteid', 'websteed'],
+        tr: ['websteid', 'websteed', 'wabsite'],
         gr: 'n',
         or: []
     }

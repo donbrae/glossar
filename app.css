@@ -64,6 +64,9 @@ h1 {
 .grammar {
     font-style: italic;
 }
+.grammar span {
+    font-style: normal;
+}
 .hl {
     background-color: #ffeb3b57;
 }

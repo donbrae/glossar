@@ -108,7 +108,11 @@ $(function() {
         if (en) {
             if (r.item.en.join) { // Result is an array of values
                 $.each(r.item.en, function(i) {
-                    en = en.concat(this); // Add both strings and arrays to the 'en' array
+                    if (this.toString().indexOf(', ') > -1) { // If multiple 'synomyms'
+                        en = en.concat(this.toString().split(', ')); // Split any 'synomym' meanings and add to 'en' array
+                    } else {
+                        en = en.concat(this); // Add array to the 'en' array
+                    }
                 });
             } else { // Result is single string
                 en.push(r.item.en);
@@ -161,7 +165,7 @@ $(function() {
             items = $(this).text().split(', ');
             en_all = [];
 
-            en = getEnglishWords(r[i]); // Get corresponding English words to act as triggers
+            en = getEnglishWords(r[i]); // Get corresponding English words to highlight
 
             // console.log(en);
             i = i + 1;

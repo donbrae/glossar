@@ -15,7 +15,9 @@ G.dict = [{
     },
     {
         sc: 'naewey',
-        en: [['on no account', 'nowhere', 'no way']],
+        en: [
+            ['on no account', 'nowhere', 'no way']
+        ],
         tr: ['naewye', 'naewhaur', 'nowhere'],
         or: []
     },
@@ -30,7 +32,7 @@ G.dict = [{
         pr: ['ane', 'een', 'yin', 'wan'],
         en: 'one',
         gr: 'cardinal number',
-        tr: ['ae', 'ain', 'ann'],
+        tr: ['ae', 'ain', 'ann', 'yae', 'yay'],
         hl: ['ane', 'ain', 'yin', 'wan', 'een', 'ann'],
         or: []
     },
@@ -64,7 +66,9 @@ G.dict = [{
     },
     {
         sc: ['dinna', 'dinnae'],
-        en: [['don\'t', 'do not']],
+        en: [
+            ['don\'t', 'do not']
+        ],
         tr: ['dinny', 'dont'],
         or: []
     },
@@ -77,3 +81,10 @@ G.dict = [{
         or: []
     }
 ];
+
+G.utils = {
+    // Adds <span> around string 's'
+    addSpan: function(s) {
+        return '<span>' + s + '</span>';
+    }
+};

@@ -18,7 +18,7 @@ G.dict.push({
     pr: ['ae', 'yae'],
     en: 'one',
     gr: 'adj',
-    tr: ['ane', 'yay'],
+    tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
     hl: ['ae', 'yae', 'yay'],
     or: []
 }, {

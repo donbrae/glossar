@@ -113,7 +113,7 @@ G.dict.push(
     },
     {
         sc: 'Czechland',
-        en: ['Czech Republic', 'Czechia']
+        en: ['Czech Republic, Czechia']
     },
     {
         sc: 'Denmark',
@@ -395,7 +395,7 @@ G.dict.push(
     },
     {
         sc: 'Camfeir',
-        en: ['Campveer', 'Veere'],
+        en: [['Campveer', 'Veere']],
         def: 'a cíty in the Netherlands'
     },
     {
@@ -435,7 +435,7 @@ G.dict.push(
     },
     {
         sc: 'Elsenure',
-        en: ['Helsignor, Elsinore'],
+        en: [['Helsignor, Elsinore']],
         def: 'a cíty in eastlin Denmark'
     },
     {
@@ -576,6 +576,5 @@ G.dict.push(
     {
         sc: 'kintra',
         en: 'country'
-    },
-
+    }
 );

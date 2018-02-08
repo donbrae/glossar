@@ -9,21 +9,19 @@ G.v.gae = {
     sc: ['gae', 'gang', 'gan'],
     en: ['go'],
     tr: ['ging'],
-    // tps: // > Third person singular
-    // {
-    //     sc: ['gaes', 'gangs', 'gans'],
-    //     en: 'goes',
-    //     tr: ['gings'],
-    // },
     neg: {
         sc: ['gaena', 'gangna'],
-        en: 'do not go',
+        en: [
+            ['do not go, go not']
+        ],
         tr: ['ganna', 'gingna', 'gona', 'don\'t go'],
-        // > tps: {
-        // sc: ['gaesna', 'gangsna', 'gansna'],
-        // en: 'goes not',
-        // tr: ['gingsna', 'goesna']
-        // },
+        tps: {
+            sc: ['gaesna', 'gangsna', 'gansna'],
+            en: [
+                ['does not go, goes not']
+            ],
+            tr: ['gingsna', 'goesna', 'doesn\'t go']
+        }
     },
     pt: {
         sc: ['gaed', 'went'],
@@ -43,16 +41,26 @@ G.v.gae = {
         sc: ['gaun', 'gangin', 'gaein'],
         en: 'going',
         tr: ['gingin', 'goin', 'gawn', 'gawin'],
+    },
+    tps: { // > Third person singular
+        sc: ['gaes', 'gangs', 'gans'],
+        en: 'goes',
+        tr: ['gings'],
     }
 };
 G.v.gae.trigs = [].concat( // Control display of conjugated 'gae'
-    G.v.gae.sc, G.v.gae.en, G.v.gae.tr, // Gae
-    G.v.gae.neg.sc, G.v.gae.neg.en, G.v.gae.neg.tr, // Gae neg
-    G.v.gae.pt.sc, G.v.gae.pt.en, G.v.gae.pt.tr, // Gae pt
-    G.v.gae.pt.neg.sc, G.v.gae.pt.neg.en, // Gae pt neg
-    G.v.gae.pp.sc, G.v.gae.pp.en, G.v.gae.pp.tr, // Gae pp
-    G.v.gae.ing.sc, G.v.gae.ing.en, G.v.gae.ing.tr // Gae -ing form
+    G.v.gae.sc, G.v.gae.en, G.v.gae.tr, // gae
+    G.v.gae.neg.sc, G.v.gae.neg.en, G.v.gae.neg.tr, // gae neg
+    G.v.gae.neg.tps.sc, G.v.gae.neg.tps.en, G.v.gae.neg.tps.tr, // gae neg third person singular
+    G.v.gae.pt.sc, G.v.gae.pt.en, G.v.gae.pt.tr, // gae pt
+    G.v.gae.pt.neg.sc, G.v.gae.pt.neg.en, // gae pt neg
+    G.v.gae.pp.sc, G.v.gae.pp.en, G.v.gae.pp.tr, // gae pp
+    G.v.gae.ing.sc, G.v.gae.ing.en, G.v.gae.ing.tr, // gae -ing form
+    G.v.gae.tps.sc, G.v.gae.tps.en, G.v.gae.tps.tr // gae third person singular
 );
+G.v.gae.meta = { // Metadata
+    gr_hw: G.utils.addSpan(G.v.gae.sc[0]) + ' etc.' // Which headwords should appear in the grammar definition
+};
 // gae end
 
 /**
@@ -71,29 +79,45 @@ G.dict.push(
         sc: G.v.gae.neg.sc,
         en: G.v.gae.neg.en,
         tr: G.v.gae.trigs,
-        hl: [].concat(G.v.gae.neg.en, G.v.gae.neg.tr)
+        hl: [].concat(G.v.gae.neg.en, G.v.gae.neg.tr),
+        gr: 'neg o ' + G.v.gae.meta.gr_hw
+    }, { // v gae neg third person singular
+        sc: G.v.gae.neg.tps.sc,
+        en: G.v.gae.neg.tps.en,
+        tr: G.v.gae.neg.tps.tr,
+        hl: [].concat(G.v.gae.neg.tps.en, G.v.gae.neg.tps.tr),
+        gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw
     }, { // v gae pt
         sc: G.v.gae.pt.sc,
         en: G.v.gae.pt.en,
         tr: G.v.gae.trigs, // So this is triggered when 'go' is entered
         hl: G.v.gae.pt.tr, // Which trigger words should cause the headwords to be highlighted
-        gr: ['pt o ' + [].concat(G.v.gae.sc).join(', ')]
+        // gr: ['pt o <span>' + [].concat(G.v.gae.sc).join(', ')] + '</span>'
+        gr: 'pt o ' + G.v.gae.meta.gr_hw
     }, { // v gae pt neg
         sc: G.v.gae.pt.neg.sc,
         en: G.v.gae.pt.neg.en,
         tr: G.v.gae.trigs,
-        hl: G.v.gae.pt.neg.en
+        hl: G.v.gae.pt.neg.en,
+        gr: 'neg pt o ' + G.v.gae.meta.gr_hw
     }, { // v gae pp
         sc: G.v.gae.pp.sc,
         en: G.v.gae.pp.en,
         tr: G.v.gae.trigs,
         hl: G.v.gae.pp.tr,
-        gr: ['pp o ' + [].concat(G.v.gae.sc).join(', ')]
+        gr: 'pp o ' + G.v.gae.meta.gr_hw
     }, { // v gae -ing form
         sc: G.v.gae.ing.sc,
         en: G.v.gae.ing.en,
         tr: G.v.gae.trigs,
         hl: G.v.gae.ing.tr
+    }, { // v Third person singular
+        sc: G.v.gae.tps.sc,
+        en: G.v.gae.tps.en,
+        tr: G.v.gae.trigs,
+        hl: G.v.gae.tps.tr,
+        gr: 'third person singular o ' + G.v.gae.meta.gr_hw
+
     },
     // v gae end);
     {
@@ -102,7 +126,7 @@ G.dict.push(
         pr: 'jalooz',
         // > pt: 'jaloused',
         gr: 'v',
-        tr: ['jaloose', 'suspect'],
+        tr: ['jaloose', 'suspect', 'suppose'],
         or: ['Fr|jalouser|To regard with jealousy']
     }, {
         sc: 'remuive',
