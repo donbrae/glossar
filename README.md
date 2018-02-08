@@ -15,5 +15,4 @@ Audience: Scots speakers, writers and learners.
 
 # Dev
 
-When splitting 'synonyms' with the pipe (`|`) character, sort the 'items' descending from the left in terms of number of words in the single meaning, e.g.:
 Trigger words (`tr`), pronunciations (`pr`) and alternative spellings (`sc_alt`) will be highlighted in the UI by default. You can use the *highlight* property (`hl`) to override this. Note how typing *depute* (Scots) vs *deputy* (English) is handled. For a more complex example, see the verb tae *gae*.
