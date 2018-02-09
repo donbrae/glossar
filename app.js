@@ -17,10 +17,14 @@ $(function() {
                 },
                 {
                     name: 'pt.sc',
-                    weight: 0.03
+                    weight: 0.02
                 },
                 {
                     name: 'pt.en',
+                    weight: 0.01
+                },
+                {
+                    name: 'pt.tr',
                     weight: 0.01
                 },
                 {
@@ -96,7 +100,8 @@ $(function() {
                  */
 
                 // Simpler Verbs
-                pt_arr = this.item.pt && this.item.pt.en ? [].concat(this.item.pt.en) : null; // English past tense
+                pt_arr = this.item.pt && this.item.pt.en ? [].concat(this.item.pt.en) : []; // Any english past tense
+                pt_arr = this.item.pt && this.item.pt.tr ? pt_arr.concat(this.item.pt.tr) : pt_arr; // Any past tense triggers
 
                 if (this.item.hl) { // Specific trigger highlight words
                     hl_all = [].concat(this.item.hl);
@@ -120,7 +125,7 @@ $(function() {
                     hl = ''; // No trigger words
                 }
 
-                pt = pt_arr ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + this.item.pt.sc + '</span></span> ' : ''; // Past tense (simpler verbs)
+                pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + this.item.pt.sc + '</span></span> ' : ''; // Past tense (simpler verbs)
 
                 $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.item.sc).join(', ') + '</span> ' +
                     pr +
@@ -195,16 +200,14 @@ $(function() {
             i = 0;
 
         // Clear any highlights
-        $('.sc, .en', '#result').each(function() {
+        $('.sc, .pt span', '#result').each(function() {
             $(this).removeClass('hl');
         });
 
         // Add any new highlights
         $('#result').children('li').each(function() {
             items = $('.sc', this).text().split(', ');
-            en_all = [];
-
-            en = makeSingleArray(r[i].item.en); // Get corresponding English words to highlight
+            en = r[i].item.en ? makeSingleArray(r[i].item.en) : null; // Get corresponding English words to highlight
 
             if ($('.sc', this).data('hl')) { // Add any highlight words to the items array
                 items = items.concat($('.sc', this).data('hl').split(','));
@@ -221,18 +224,16 @@ $(function() {
                 }
             });
 
-            // ****
+            // > PAST TENSE STUFF >
 
             if ($('.pt', this).length) {
-                items = $('.pt', this).text().split(', ');
-                en_all = [];
-
+                items = $('.pt span', this).text().split(', ');
                 en = r[i].item.pt && r[i].item.pt.en ? makeSingleArray(r[i].item.pt.en) : null; // Get corresponding English past tense words to highlight
 
-                if ($('.pt', this).data('hl')) { // Add any highlight words to the items array
-                    items = items.concat($('.pt', this).data('hl').split(','));
+                if ($('.pt span', this).data('hl')) { // Add any highlight words to the items array
+                    items = items.concat($('.pt span', this).data('hl').split(','));
                 }
-                $span = $('.pt', this);
+                $span = $('.pt span', this);
                 $.each(items, function() {
                     if (this &&
                         (this.toLowerCase() == state.word.toLowerCase() ||

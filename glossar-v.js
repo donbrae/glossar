@@ -149,7 +149,7 @@ G.dict.push(
         gr: ['n', 'v'],
         or: []
     }, {
-        sc: 'fash',
+        sc: ['fash', 'merp'],
         en: [
             ['to annoy', 'irritate', 'trouble', 'bother', 'enrage', 'inconvenience'],
             ['to fret', 'be angry']
@@ -157,8 +157,9 @@ G.dict.push(
         pt: {
             sc: 'fasht',
             en: [
-                ['annoyed', 'irritated', 'troubled', 'bothered', 'enraged', 'inconvenienced']
-            ]
+                ['annoyed', 'irritated', 'troubled', 'bothered', 'enraged', 'inconvenienced', 'angered', 'fretted']
+            ],
+            tr: 'fashed'
         },
         pp: {
             sc: 'fasht'
