@@ -113,13 +113,6 @@ $(function() {
                 if (this.item.pr) {
                     hl_all = hl_all.concat(this.item.pr);
                 }
-                // // Add any past tenses
-                // if (this.item.pt) {
-                //     hl_all = hl_all.concat(makeSingleArray(this.item.pt, 'sc'));
-                //     if (this.item.pt.en) {
-                //         hl_all = hl_all.concat(makeSingleArray(this.item.pt, 'en'));
-                //     }
-                // }
                 // Add any highlighting words
                 if (hl_all.length) {
                     hl = ' data-hl="' + hl_all.join(',') + '"';
@@ -146,32 +139,29 @@ $(function() {
 
     /**
      * Returns a single array of words (to cover multidemensional arrays) for the purposes of highlighting them in the UI
-     * @param {Object} r - Object defining a word
-     * @param {String} property - The object property name to use (e.g. en, sc)
-     * @returns {Array|null}
+     * @param {Array|String} w
+     * @returns {Array}
      */
-    function makeSingleArray(r, property) {
-        var words = r[property] ? [] : null;
+    function makeSingleArray(w) {
+        var words = [];
 
         // Redd word(s)
-        if (words) {
-            if (r[property].join) { // Result is an array of values
-                $.each(r[property], function(i) {
-                    if (this.toString().indexOf(', ') > -1) { // If multiple 'synomyms'
-                        words = words.concat(this.toString().split(', ')); // Split any 'synomym' meanings and add to 'words' array
-                    } else {
-                        words = words.concat(this); // Add array to the 'words' array
-                    }
-                });
-            } else { // Result is single string
-                words.push(r[property]);
-            }
-
-            // Make lowercase
-            $.each(words, function(i) {
-                words[i] = this.toLowerCase();
+        if (w.join) { // Result is an array of values
+            $.each(w, function(i) {
+                if (this.toString().indexOf(', ') > -1) { // If multiple 'synomyms'
+                    words = words.concat(this.toString().split(', ')); // Split any 'synomym' meanings and add to 'words' array
+                } else {
+                    words = words.concat(this); // Add array to the 'words' array
+                }
             });
+        } else { // Result is single string
+            words.push(w);
         }
+
+        // Make lowercase
+        $.each(words, function(i) {
+            words[i] = this.toLowerCase();
+        });
 
         return words;
     }
@@ -214,10 +204,8 @@ $(function() {
             items = $('.sc', this).text().split(', ');
             en_all = [];
 
-            en = makeSingleArray(r[i].item, 'en'); // Get corresponding English words to highlight
+            en = makeSingleArray(r[i].item.en); // Get corresponding English words to highlight
 
-            // console.log(en);
-            i = i + 1;
             if ($('.sc', this).data('hl')) { // Add any highlight words to the items array
                 items = items.concat($('.sc', this).data('hl').split(','));
             }
@@ -232,70 +220,34 @@ $(function() {
                     return false; // Exit loop
                 }
             });
+
+            // ****
+
+            if ($('.pt', this).length) {
+                items = $('.pt', this).text().split(', ');
+                en_all = [];
+
+                en = r[i].item.pt && r[i].item.pt.en ? makeSingleArray(r[i].item.pt.en) : null; // Get corresponding English past tense words to highlight
+
+                if ($('.pt', this).data('hl')) { // Add any highlight words to the items array
+                    items = items.concat($('.pt', this).data('hl').split(','));
+                }
+                $span = $('.pt', this);
+                $.each(items, function() {
+                    if (this &&
+                        (this.toLowerCase() == state.word.toLowerCase() ||
+                            (en && en.indexOf(state.word.toLowerCase()) > -1)
+                        )
+                    ) {
+                        $span.addClass('hl');
+                        return false; // Exit loop
+                    }
+                });
+            }
+
+            i = i + 1;
         });
     }
-
-    // function highlight(r) {
-    //     var item, sn, en, pt, hl, w, $sc, exact_match, hl_all = [];
-    //
-    //     // Clear any highlights
-    //     $('.sc, .pt span', '#result').each(function() {
-    //         $(this).removeClass('hl');
-    //     });
-    //
-    //     // Gather words which will should gar a highlight
-    //     $.each(r, function() { // Each result in results set
-    //         item = this.item;
-    //
-    //         sc = item.sc ? makeSingleArray(item, 'sc') : null; // Get Scots words highlight
-    //         en = item.en ? makeSingleArray(item, 'en') : null; // Get any English words
-    //         pt_sc = item.pt ? makeSingleArray(item.pt, 'sc') : null; // Get any Scots past tenses
-    //         pt_en = item.pt ? makeSingleArray(item.pt, 'en') : null; // Get any English past tenses
-    //         if (item.hl) { // Add any specified highlight words to the collection array
-    //             hl_all = hl_all.concat(item.hl);
-    //         }
-    //
-    //         hl_all = sc ? hl_all.concat(sc) : hl_all; // Add any English words
-    //         hl_all = en ? hl_all.concat(en) : hl_all; // Add any English words
-    //         hl_all = pt_sc ? hl_all.concat(pt_sc) : hl_all; // Add any Scots past tense words
-    //         hl_all = pt_en ? hl_all.concat(pt_en) : hl_all; // Add any English past tense words
-    //     });
-    //
-    //     // Add any new highlights
-    //     if (hl_all.indexOf(state.word.toLowerCase()) > -1) { // If the currently entered words is in the highlight array
-    //         exact_match = false;
-    //         $('.sc, .pt span', '#result').each(function() { // Go throu every Scots word (including past tenses), looking for an exact match
-    //
-    //             if ($(this).hasClass('sc')) { // Might need to highlight this if the currently typed word doens't match one of the Scots words
-    //                 $sc = $(this);
-    //             }
-    //
-    //             hl = $(this).data('hl') ? $(this).data('hl').split(',') : null;
-    //             if (hl && hl.indexOf(state.word.toLowerCase())) { // Has highlight data attribute
-    //                 $(this).addClass('hl');
-    //                 exact_match = true;
-    //                 return false; // Exit loop
-    //             } else if (!hl && $(this).text().toLowerCase() === state.word.toLowerCase()) { // Word matches exactly the word typed the user
-    //                 $(this).addClass('hl');
-    //                 exact_match = true;
-    //                 return false; // Exit loop
-    //             }
-    //             // if ($(this).text().toLowerCase() === state.word.toLowerCase()) { // Exact match
-    //             //     $(this).addClass('hl');
-    //             //     exact_match = true;
-    //             //     return false; // Exit loop
-    //             // }
-    //         });
-    //
-    //         if (!exact_match) {
-    //             $sc.addClass('hl');
-    //         }
-    //
-    //         // if (!exact_match) { // If we didn't find an exact match
-    //         //     $sc.addClass('hl');
-    //         // }
-    //     }
-    // }
 
     $('#searchTextbox').on('keyup', function() {
         state.word = $.trim($(this).val());
