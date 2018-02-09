@@ -4,6 +4,8 @@
 
 G.v = {}; // Verbs
 
+// Complex Verbs
+
 // v gae
 G.v.gae = {
     sc: ['gae', 'gang', 'gan'],
@@ -12,13 +14,13 @@ G.v.gae = {
     neg: {
         sc: ['gaena', 'gangna'],
         en: [
-            ['do not go, go not']
+            ['do not go', 'go not']
         ],
         tr: ['ganna', 'gingna', 'gona', 'don\'t go'],
-        tps: {
+        tps: { // > Third person singular
             sc: ['gaesna', 'gangsna', 'gansna'],
             en: [
-                ['does not go, goes not']
+                ['does not go', 'goes not']
             ],
             tr: ['gingsna', 'goesna', 'doesn\'t go']
         }
@@ -42,7 +44,7 @@ G.v.gae = {
         en: 'going',
         tr: ['gingin', 'goin', 'gawn', 'gawin'],
     },
-    tps: { // > Third person singular
+    tps: {
         sc: ['gaes', 'gangs', 'gans'],
         en: 'goes',
         tr: ['gings'],
@@ -64,7 +66,7 @@ G.v.gae.meta = { // Metadata
 // gae end
 
 /**
- * Add verbs to dictionary object
+ * Add verbs (both complex and more simple) to dictionary object
  */
 
 G.dict.push(
@@ -146,5 +148,27 @@ G.dict.push(
         en: 'upload',
         gr: ['n', 'v'],
         or: []
+    }, {
+        sc: 'fash',
+        en: [
+            ['to annoy', 'irritate', 'trouble', 'bother', 'enrage', 'inconvenience'],
+            ['to fret', 'be angry']
+        ],
+        pt: {
+            sc: 'fasht',
+            en: [
+                ['annoyed', 'irritated', 'troubled', 'bothered', 'enraged', 'inconvenienced']
+            ]
+        },
+        pp: {
+            sc: 'fasht'
+        },
+        neg: {
+            sc: 'fashna'
+        },
+        ing: {
+            sc: ['fashin'],
+        },
+        gr: 'v',
     }
 );

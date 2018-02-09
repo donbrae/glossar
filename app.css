@@ -49,10 +49,13 @@ ol>li {
 h1 {
     font-weight: bold;
 }
-.sc, .en, .def, .sc-alt {
+.sc, .en, .def, .sc-alt, .pt {
     padding: 1px 4px;
 }
-.sc, .sc-alt span {
+.def, .pt {
+    display: block;
+}
+.sc, .sc-alt span, .pt span {
     font-weight: bold;
 }
 .en {
