@@ -196,8 +196,23 @@ $(function() {
     }
 
     function highlight(r) {
-        var items, $span, end,
-            i = 0;
+        var i = 0;
+
+        function hielicht($el, items, en) {
+            if ($el.data('hl')) { // Add any highlight words to the items array
+                items = items.concat($el.data('hl').split(','));
+            }
+            $.each(items, function() {
+                if (this &&
+                    (this.toLowerCase() == state.word.toLowerCase() ||
+                        (en && en.indexOf(state.word.toLowerCase()) > -1)
+                    )
+                ) {
+                    $el.addClass('hl');
+                    return false; // Exit loop
+                }
+            });
+        }
 
         // Clear any highlights
         $('.sc, .pt span', '#result').each(function() {
@@ -206,44 +221,23 @@ $(function() {
 
         // Add any new highlights
         $('#result').children('li').each(function() {
+
+            // Head word(s)
             items = $('.sc', this).text().split(', ');
-            en = r[i].item.en ? makeSingleArray(r[i].item.en) : null; // Get corresponding English words to highlight
+            hielicht(
+                $('.sc', this), // UI element
+                items, // Scots words
+                r[i].item.en ? makeSingleArray(r[i].item.en) : null // Corresponding English words to highlight
+            );
 
-            if ($('.sc', this).data('hl')) { // Add any highlight words to the items array
-                items = items.concat($('.sc', this).data('hl').split(','));
-            }
-            $span = $('.sc', this);
-            $.each(items, function() {
-                if (this &&
-                    (this.toLowerCase() == state.word.toLowerCase() ||
-                        (en && en.indexOf(state.word.toLowerCase()) > -1)
-                    )
-                ) {
-                    $span.addClass('hl');
-                    return false; // Exit loop
-                }
-            });
-
-            // > PAST TENSE STUFF >
-
+            // Past tense
             if ($('.pt', this).length) {
                 items = $('.pt span', this).text().split(', ');
-                en = r[i].item.pt && r[i].item.pt.en ? makeSingleArray(r[i].item.pt.en) : null; // Get corresponding English past tense words to highlight
-
-                if ($('.pt span', this).data('hl')) { // Add any highlight words to the items array
-                    items = items.concat($('.pt span', this).data('hl').split(','));
-                }
-                $span = $('.pt span', this);
-                $.each(items, function() {
-                    if (this &&
-                        (this.toLowerCase() == state.word.toLowerCase() ||
-                            (en && en.indexOf(state.word.toLowerCase()) > -1)
-                        )
-                    ) {
-                        $span.addClass('hl');
-                        return false; // Exit loop
-                    }
-                });
+                hielicht(
+                    $('.pt span', this),
+                    items, // Scots words
+                    r[i].item.pt && r[i].item.pt.en ? makeSingleArray(r[i].item.pt.en) : null // Corresponding English past tense words to highlight
+                );
             }
 
             i = i + 1;
