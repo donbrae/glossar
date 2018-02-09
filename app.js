@@ -79,7 +79,7 @@ $(function() {
      */
     function print(r) {
         var grammar, hl_sc_alt = null,
-            hl, hl_all, def, pr, pt_arr;
+            hl, hl_all, def, pr, pt, pt_arr, neg;
 
         $('#result').html('');
         // console.log(r);
@@ -102,6 +102,7 @@ $(function() {
                 // Simpler Verbs
                 pt_arr = this.item.pt && this.item.pt.en ? [].concat(this.item.pt.en) : []; // Any english past tense
                 pt_arr = this.item.pt && this.item.pt.tr ? pt_arr.concat(this.item.pt.tr) : pt_arr; // Any past tense triggers
+                neg = this.item.neg ? '<span class="neg">neg. <span>' + [].concat(this.item.neg.sc).join(', ') + '</span></span>' : ''; // Negative
 
                 if (this.item.hl) { // Specific trigger highlight words
                     hl_all = [].concat(this.item.hl);
@@ -125,7 +126,7 @@ $(function() {
                     hl = ''; // No trigger words
                 }
 
-                pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + this.item.pt.sc + '</span></span> ' : ''; // Past tense (simpler verbs)
+                pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + this.item.pt.sc + '</span></span>' : ''; // Past tense (simpler verbs)
 
                 $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.item.sc).join(', ') + '</span> ' +
                     pr +
@@ -133,6 +134,7 @@ $(function() {
                     def +
                     sc_alt +
                     pt +
+                    neg +
                     en +
                     '</li>');
             });
@@ -237,6 +239,16 @@ $(function() {
                     $('.pt span', this),
                     items, // Scots words
                     r[i].item.pt && r[i].item.pt.en ? makeSingleArray(r[i].item.pt.en) : null // Corresponding English past tense words to highlight
+                );
+            }
+
+            // Negative
+            if ($('.neg', this).length) {
+                items = $('.neg span', this).text().split(', ');
+                hielicht(
+                    $('.neg span', this),
+                    items,
+                    r[i].item.neg && r[i].item.neg.en ? makeSingleArray(r[i].item.neg.en) : null
                 );
             }
 

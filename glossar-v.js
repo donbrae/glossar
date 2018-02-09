@@ -31,7 +31,7 @@ G.v.gae = {
         tr: ['gad', 'goed', 'ginged', 'ganged'],
         neg: {
             sc: ['gaedna'],
-            en: ['did not go']
+            en: 'did not go',
         }
     },
     pp: {
@@ -149,7 +149,7 @@ G.dict.push(
         gr: ['n', 'v'],
         or: []
     }, {
-        sc: ['fash', 'merp'],
+        sc: ['fash'],
         en: [
             ['to annoy', 'irritate', 'trouble', 'bother', 'enrage', 'inconvenience'],
             ['to fret', 'be angry']
@@ -165,10 +165,8 @@ G.dict.push(
             sc: 'fasht'
         },
         neg: {
-            sc: 'fashna'
-        },
-        ing: {
-            sc: ['fashin'],
+            sc: ['fashna', 'fash na'],
+            en: 'fash not'
         },
         gr: 'v',
     }

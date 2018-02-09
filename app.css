@@ -41,7 +41,12 @@ ul {
 ul>li:not(.no-results) {
     margin-bottom: 10px;
     background-color: #fafafa;
-    padding: 3px 5px;
+    padding: 6px 5px;
+    line-height: 1.4;
+}
+ol {
+    margin-top: 3px;
+    line-height: 1.5;
 }
 ol>li {
     list-style-position: inside;
@@ -49,13 +54,20 @@ ol>li {
 h1 {
     font-weight: bold;
 }
-.sc, .en, .def, .sc-alt, .pt {
+.sc, .en, .def, .sc-alt {
     padding: 1px 4px;
 }
-.def, .pt {
+.pt, .neg {
+    padding-left: 4px;
+    line-height: 1.4;
+}
+.pt span, .neg span {
+    padding: 1px 4px;
+}
+.def, .pt, .neg {
     display: block;
 }
-.sc, .sc-alt span, .pt span {
+.sc, .sc-alt span, .pt span, .neg span {
     font-weight: bold;
 }
 .en {
