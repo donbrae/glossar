@@ -32,6 +32,21 @@ G.dict = [{
         hl: ['ane', 'ain', 'yin', 'wan', 'een', 'ann']
     },
     {
+        sc: 'our',
+        // sc_alt: 'oor',
+        pr: 'oor',
+        en: 'our',
+        tr: 'wir',
+        hl: 'our',
+        gr: ['possesive pronoun']
+    }, {
+        sc: 'wir',
+        en: 'our',
+        tr: ['oor'],
+        hl: 'wir',
+        gr: ['possesive pronoun']
+    },
+    {
         sc: ['whaniver', 'faniver'],
         en: 'whenever',
         tr: ['wheniver', 'fanever']

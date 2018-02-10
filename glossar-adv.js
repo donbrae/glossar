@@ -9,6 +9,18 @@ G.adv = {}; // More complex adverbs
  */
 
 G.dict.push({
+    sc: 'ablo',
+    pr: 'abLo',
+    sc_alt: 'ablow',
+    en: 'below',
+    gr: ['prep', 'adv']
+}, {
+    sc: 'about',
+    sc_alt: 'aboot',
+    pr: 'aboot',
+    en: 'about',
+    gr: ['prep', 'adv']
+}, {
     sc: 'guid',
     en: [
         ['good', 'very', 'pretty']
