@@ -8,10 +8,6 @@ G.dict = [{
         tr: ['whae', 'whay', 'whey']
     },
     {
-        sc: ['whan', 'fan'],
-        en: 'when'
-    },
-    {
         sc: 'naewey',
         en: [
             ['on no account', 'nowhere', 'no way']
@@ -33,7 +29,7 @@ G.dict = [{
     },
     {
         sc: 'our',
-        // sc_alt: 'oor',
+        sc_alt: 'oor',
         pr: 'oor',
         en: 'our',
         tr: 'wir',
@@ -41,8 +37,9 @@ G.dict = [{
         gr: ['possesive pronoun']
     }, {
         sc: 'wir',
+        pr: ['wir', 'wur', 'war', 'weer'],
         en: 'our',
-        tr: ['oor'],
+        tr: 'oor',
         hl: 'wir',
         gr: ['possesive pronoun']
     },
@@ -50,6 +47,26 @@ G.dict = [{
         sc: ['whaniver', 'faniver'],
         en: 'whenever',
         tr: ['wheniver', 'fanever']
+    },
+    {
+        sc: ['whit', 'fit', 'what'],
+        pr: ['whit', 'whut', 'what', 'whot', 'fit', 'fut', 'fat', 'aut'],
+        en: 'what',
+        gr: ['adj', 'adv', 'pron', 'conj']
+    },
+    {
+        sc: 'wi',
+        pr: ['wi', 'wae', 'w'],
+        en: 'with',
+        gr: ['preposition']
+    },
+    {
+        sc: ['whiles', 'fyles'],
+        pr: ['whilez', 'filez'],
+        en: [
+            ['while', 'whilst']
+        ],
+        gr: ['conj']
     },
     {
         sc: ['thay', 'they'],
@@ -90,5 +107,9 @@ G.utils = {
     // Adds <span> around string 's'
     addSpan: function(s) {
         return '<span>' + s + '</span>';
+    },
+    // Works with filter method to get unique array values
+    onlyUnique: function(value, index, self) {
+        return self.indexOf(value) === index;
     }
 };

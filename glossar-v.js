@@ -173,5 +173,12 @@ G.dict.push(
         or: [
             ['MFr', 'faschier']
         ]
+    }, {
+        sc: 'uise',
+        pr: ['yöz', 'yüz', 'öz', 'yaiz', 'ees'],
+        en: 'use',
+        tr: ['yaise', 'uiss', 'yiss', 'yaize'],
+        hl: ['yaise', 'yaize', 'uise', 'yaiz', 'ees'],
+        gr: ['v']
     }
 );

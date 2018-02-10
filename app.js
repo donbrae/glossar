@@ -78,8 +78,8 @@ $(function() {
      * Prints data on screen
      */
     function print(r) {
-        var grammar, hl_sc_alt = null,
-            hl, hl_all, def, pr, pt, pt_arr, neg, or;
+        var grammar, hl_sc_alt,
+            hl, hl_all, def, en, pr, pt, pt_arr, neg, or;
 
         $('#result').html('');
         // console.log(r);
@@ -92,9 +92,7 @@ $(function() {
                 pr = this.item.pr ? '<span class="pr">(‘' + [].concat(this.item.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
                 def = this.item.def ? '<span class="def">' + this.item.def + '</span>' : ''; // Definition
                 or = this.item.or ? formatOrigin(this.item.or) : ''; // Origin
-                if (this.item.sc_alt) { // Make sure to highlight any alternative Scots words
-                    hl_sc_alt = [].concat(this.item.sc_alt);
-                }
+                hl_sc_alt = this.item.sc_alt ? [].concat(this.item.sc_alt) : []; // Make sure to highlight any alternative Scots words
 
                 /**
                  * Highlight based on trigger words by default; if not, use the specific highlight words
@@ -113,7 +111,7 @@ $(function() {
                     hl_all = [];
                 }
                 // Add any alternative Scots words which should trigger highlighting
-                if (hl_sc_alt) {
+                if (hl_sc_alt.length) {
                     hl_all = hl_all.concat(hl_sc_alt);
                 }
                 // Add any phonetic spellings
@@ -122,7 +120,7 @@ $(function() {
                 }
                 // Add any highlighting words
                 if (hl_all.length) {
-                    hl = ' data-hl="' + hl_all.join(',') + '"';
+                    hl = ' data-hl="' + hl_all.filter(G.utils.onlyUnique).join(',') + '"';
                 } else {
                     hl = ''; // No trigger words
                 }

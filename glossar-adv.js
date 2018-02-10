@@ -41,4 +41,21 @@ G.dict.push({
     ],
     tr: 'attour',
     gr: ['adv', 'prep']
+}, {
+    sc: 'than',
+    pr: ['than', 'thaun', 'thin', 'dan'],
+    en: 'then',
+    gr: ['adv', 'n']
+}, {
+    sc: ['whan', 'fan'],
+    pr: ['whan', 'whaun', 'whin', 'fan', 'fin', 'aan'],
+    en: 'when',
+    gr: ['adv', 'conj']
+}, {
+    sc: ['whiles', 'fyles'],
+    pr: ['whilez', 'filez'],
+    en: [
+        ['sometimes', 'at times', 'occasionally']
+    ],
+    gr: ['adv']
 });
