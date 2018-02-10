@@ -124,40 +124,41 @@ G.dict.push(
     // v gae end);
     {
         sc: 'jalouse',
-        en: ['to suspect', ['to suppose', 'guess', 'surmise']],
-        pr: 'jalooz',
+        en: ['suspect', ['suppose', 'guess', 'surmise']],
+        pr: 'jaLooz',
         // > pt: 'jaloused',
         gr: 'v',
-        tr: ['jaloose', 'suspect', 'suppose'],
-        or: ['Fr|jalouser|To regard with jealousy']
+        tr: ['jaloose'],
+        or: [
+            ['Fr', 'jalouser']
+        ]
     }, {
         sc: 'remuive',
         en: 'remove',
         tr: 'remeeve',
         gr: 'v',
-        or: []
     }, {
         sc: 'dounlaid',
         en: 'download',
         pr: 'doonlaid',
         gr: ['n', 'v'],
         tr: ['doonload', 'downlaid'],
-        or: []
     }, {
         sc: 'uplaid',
         en: 'upload',
         gr: ['n', 'v'],
-        or: []
     }, {
         sc: ['fash'],
         en: [
-            ['to annoy', 'irritate', 'trouble', 'bother', 'enrage', 'inconvenience'],
-            ['to fret', 'be angry']
+            ['irritate', 'annoy', 'anger', 'inconvenience'],
+            ['take trouble over', 'take pains with'],
+            ['vex', 'bother'],
+            ['fret']
         ],
         pt: {
             sc: 'fasht',
             en: [
-                ['annoyed', 'irritated', 'troubled', 'bothered', 'enraged', 'inconvenienced', 'angered', 'fretted']
+                ['irritated', 'annoyed', 'angered', 'inconvenienced', 'troubled', 'vexed', 'bothered', 'fretted']
             ],
             tr: 'fashed'
         },
@@ -169,5 +170,8 @@ G.dict.push(
             en: 'fash not'
         },
         gr: 'v',
+        or: [
+            ['MFr', 'faschier']
+        ]
     }
 );

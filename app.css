@@ -41,11 +41,27 @@ ul {
 ul>li:not(.no-results) {
     margin-bottom: 10px;
     background-color: #fafafa;
-    padding: 6px 5px;
+    padding: 5px 5px;
     line-height: 1.4;
+}
+ul.or {
+    display: inline;
+}
+ul.or .list-inline-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+ul.or .list-inline-item:last-child {
+    padding-right: 0;
+}
+ul.or .list-inline-item span, div.or-container span {
+    font-style: italic;
 }
 ol {
     margin-top: 3px;
+    margin-bottom: 3px !important;
     line-height: 1.5;
 }
 ol>li {
@@ -54,11 +70,18 @@ ol>li {
 h1 {
     font-weight: bold;
 }
-.sc, .en, .def, .sc-alt {
+.sc, .def, .sc-alt, .or-container {
     padding: 1px 4px;
+}
+.en {
+    padding: 1px 4px 0 4px;
 }
 .pt, .neg {
     padding-left: 4px;
+    line-height: 1.4;
+}
+.or {
+    padding-left: 0;
     line-height: 1.4;
 }
 .pt span, .neg span {
@@ -85,7 +108,7 @@ h1 {
 .hl {
     background-color: #ffeb3b57;
 }
-.sc-alt {
+.sc-alt, .or-container {
     color: #9e9e9e;
 }
 #search {

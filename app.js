@@ -79,7 +79,7 @@ $(function() {
      */
     function print(r) {
         var grammar, hl_sc_alt = null,
-            hl, hl_all, def, pr, pt, pt_arr, neg;
+            hl, hl_all, def, pr, pt, pt_arr, neg, or;
 
         $('#result').html('');
         // console.log(r);
@@ -91,6 +91,7 @@ $(function() {
                 en = this.item.en ? formatMultipleMeanings(this.item.en) : ''; // English
                 pr = this.item.pr ? '<span class="pr">(‘' + [].concat(this.item.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
                 def = this.item.def ? '<span class="def">' + this.item.def + '</span>' : ''; // Definition
+                or = this.item.or ? formatOrigin(this.item.or) : ''; // Origin
                 if (this.item.sc_alt) { // Make sure to highlight any alternative Scots words
                     hl_sc_alt = [].concat(this.item.sc_alt);
                 }
@@ -136,11 +137,31 @@ $(function() {
                     pt +
                     neg +
                     en +
+                    or +
                     '</li>');
             });
             highlight(r);
         } else {
             $('#result').html('<li class="text-center no-results">Sorry, the’re nae results for <strong>' + state.word + '</strong></li>');
+        }
+    }
+
+    function formatOrigin(obj) {
+        var origin = [].concat(obj),
+            ul = [];
+
+        $.each(origin, function(i) {
+            if (this.join) { // If an array
+                ul.push(this[0] + ' <span>' + this[1] + '</span>');
+            } else { // If a string
+                ul.push(this);
+            }
+        });
+
+        if (ul.length > 1) { // There are multiple (possible) origins
+            return '<div class="or-container">[<ul class="or"><li class="list-inline-item">' + ul.join(', </li><li class="list-inline-item">') + '</li></ul>]</div>';
+        } else { // If there is just one origin
+            return '<div class="or-container">[' + ul[0] + ']</div>';
         }
     }
 

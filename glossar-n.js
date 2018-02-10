@@ -12,14 +12,12 @@ G.dict.push(
     {
         sc: 'claes',
         en: 'clothes',
-        or: []
     },
     {
         sc: 'depute',
         en: 'a deputy',
         gr: ['n'],
         tr: 'deputy',
-        or: []
     },
     {
         sc: 'hous',
@@ -28,7 +26,6 @@ G.dict.push(
         en: 'house',
         tr: ['houss', 'hooss'],
         gr: 'n',
-        or: []
     },
     {
         sc: 'wabsteid',
@@ -36,6 +33,5 @@ G.dict.push(
         pr: 'wabsteed',
         tr: ['websteid', 'websteed', 'wabsite'],
         gr: 'n',
-        or: []
     }
 );
