@@ -1,6 +1,12 @@
 $(function() {
+    var cfg = {},
+        state = {
+            word: '' // Value of search text box
+        },
+        fuse;
 
-    var options = {
+    function init() {
+        var options = {
             shouldSort: true,
             includeScore: true,
             tokenize: true,
@@ -12,67 +18,63 @@ $(function() {
             maxPatternLength: 3,
             minMatchCharLength: 5,
             keys: [{
-                    name: 'sc',
-                    weight: 0.4
-                },
-                {
-                    name: 'pt.sc',
-                    weight: 0.02
-                },
-                {
-                    name: 'pt.en',
-                    weight: 0.01
-                },
-                {
-                    name: 'pt.tr',
-                    weight: 0.01
-                },
-                {
-                    name: 'pp.sc',
-                    weight: 0.01
-                },
-                {
-                    name: 'pp.en',
-                    weight: 0.01
-                },
-                {
-                    name: 'neg.sc',
-                    weight: 0.01
-                },
-                {
-                    name: 'neg.en',
-                    weight: 0.01
-                },
-                {
-                    name: 'ing.sc',
-                    weight: 0.01
-                },
-                {
-                    name: 'ing.en',
-                    weight: 0.01
-                },
-                {
-                    name: 'sc_alt',
-                    weight: 0.1
-                },
-                {
-                    name: 'pr',
-                    weight: 0.1
-                },
-                {
-                    name: 'en',
-                    weight: 0.2
-                },
-                {
-                    name: 'tr',
-                    weight: 0.1
-                }
-            ]
-        },
-        state = {
-            word: '' // Value of search text box
-        },
+                name: 'sc',
+                weight: 0.4
+            }, {
+                name: 'pt.sc',
+                weight: 0.02
+            }, {
+                name: 'pt.en',
+                weight: 0.01
+            }, {
+                name: 'pt.tr',
+                weight: 0.01
+            }, {
+                name: 'pp.sc',
+                weight: 0.01
+            }, {
+                name: 'pp.en',
+                weight: 0.01
+            }, {
+                name: 'neg.sc',
+                weight: 0.01
+            }, {
+                name: 'neg.en',
+                weight: 0.01
+            }, {
+                name: 'ing.sc',
+                weight: 0.01
+            }, {
+                name: 'ing.en',
+                weight: 0.01
+            }, {
+                name: 'sc_alt',
+                weight: 0.1
+            }, {
+                name: 'pr',
+                weight: 0.1
+            }, {
+                name: 'en',
+                weight: 0.2
+            }, {
+                name: 'tr',
+                weight: 0.1
+            }]
+        };
+
         fuse = new Fuse(GLOSSAR.dict, options); // 'list' is the item array
+
+        $('#searchTextbox').on('keyup', function() {
+            state.word = $.trim($(this).val());
+
+            if (state.word.length) {
+                print(fuse.search(state.word));
+            } else {
+                $('#result').html('');
+            }
+
+        });
+    }
 
     /**
      * Prints data on screen
@@ -275,14 +277,5 @@ $(function() {
         });
     }
 
-    $('#searchTextbox').on('keyup', function() {
-        state.word = $.trim($(this).val());
-
-        if (state.word.length) {
-            print(fuse.search(state.word));
-        } else {
-            $('#result').html('');
-        }
-
-    });
+    init();
 });
