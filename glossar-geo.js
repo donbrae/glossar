@@ -97,11 +97,16 @@ G.dict.push(
     {
         sc: 'Bulgairie',
         en: 'Bulgaria',
-        or: G.notes.b
+        tr: ['Bulgars', 'Bulgarie'],
+        hl: ['Bulgairie', 'Bulgarie'],
+        or: G.notes.b,
+        gr: 'pn'
     },
     {
         sc: 'Bulgars',
         en: 'Bulgarian',
+        tr: ['Bulgairie', 'Bulgarie'],
+        hl: 'Bulgars',
         gr: 'adj',
         def: 'anent Bulgairie, its fowk, or thair leid'
     },
@@ -604,6 +609,7 @@ G.dict.push(
     },
     {
         sc: 'kintra',
+        pr: ['kintra', 'kintrae'],
         en: 'country'
     }
 );

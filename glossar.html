@@ -17,22 +17,24 @@
     <script src="zepto.min.js"></script>
 
     <script src="fuse.min.js"></script>
-    <script src="glossar.js"></script>
-    <script src="glossar-v.js"></script>
-    <!-- verbs -->
-    <script src="glossar-adj.js"></script>
-    <!-- adjectives -->
-    <script src="glossar-adv.js"></script>
-    <!-- adjectives -->
-    <script src="glossar-n.js"></script>
-    <!-- nouns -->
-    <script src="glossar-geo.js"></script>
-    <!-- geographical -->
-    <!-- <script src="glossar-load-test.js"></script> -->
     <script src="app.js"></script>
+    <script src="glossar.js"></script> <!-- GLOSSAR.dict -->
+    <script src="glossar-v.js"></script> <!-- verbs -->
+    <script src="glossar-adj.js"></script> <!-- adjectives -->
+    <script src="glossar-adv.js"></script> <!-- adjectives -->
+    <script src="glossar-n.js"></script> <!-- nouns -->
+    <script src="glossar-geo.js"></script> <!-- geographical -->
+
+    <!-- <script src="glossar-load-test.js"></script> -->
 
     <!-- Production JS bundle -->
     <!-- <script defer src="glossar-bundle.min.js" onload="GLOSSAR.init()"></script> -->
+
+    <script>
+        $(function() {
+            GLOSSAR.init();
+        });
+    </script>
 
 </head>
 

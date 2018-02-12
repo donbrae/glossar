@@ -1,9 +1,3 @@
-/**
- * @name glossar.js
- * @author Jamie Smith
- * @description Scots glossar
- */
-
 var GLOSSAR = GLOSSAR || {};
 
 var G = GLOSSAR;
