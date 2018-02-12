@@ -21,6 +21,11 @@ G.dict.push({
     en: 'about',
     gr: ['prep', 'adv']
 }, {
+    sc: 'bluitert',
+    tr: ['bloutered', 'blootered', 'bloutert', 'blootert'],
+    en: ['drunk', 'having been hit or kicked hard'],
+    gr: ['adj', 'informal']
+}, {
     sc: 'guid',
     en: [
         ['good', 'very', 'pretty']

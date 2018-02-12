@@ -65,6 +65,97 @@ G.v.gae.meta = { // Metadata
 };
 // gae end
 
+// v gae
+G.v.be = {
+    sc: ['be'],
+    en: ['be'],
+    tr: [],
+    ind: {
+        sc: 'is',
+        en: 'is',
+        pt: {
+            sing: {
+                sc: 'wis',
+                en: 'was'
+            },
+            pl: {
+                sc: 'war',
+                en: 'were'
+            },
+            pp: {
+                sc: 'been',
+                en: 'been'
+            }
+        },
+        neg: {
+            sc: ['isna', 'isnae'],
+            en: ['is not', 'isn\'t'],
+            sing: {
+                sc: ['wisna', 'wisnae'],
+                en: ['was not', 'wasn\'t']
+            },
+            pl: {
+                sc: ['warna', 'warnae'],
+                en: ['were not', 'weren\'t'],
+                tr: ['werena', 'werenae']
+            }
+        }
+    },
+    // > Plural present are
+    neg: {
+        sc: ['binna'],
+        en: [
+            ['do not be', 'don\'t be', 'unless', 'except', 'be not', 'are not']
+        ],
+        tr: ['dinna be', 'dinnae be'],
+        // tps: { // > Third person singular
+        //     sc: ['gaesna', 'gangsna', 'gansna'],
+        //     en: [
+        //         ['does not go', 'goes not']
+        //     ],
+        //     tr: ['gingsna', 'goesna', 'doesn\'t go']
+        // }
+    }
+    // pt: {
+    //     sc: ['gaed', 'went'],
+    //     en: 'went',
+    //     tr: ['gad', 'goed', 'ginged', 'ganged'],
+    //     neg: {
+    //         sc: ['gaedna'],
+    //         en: 'did not go',
+    //     }
+    // },
+    // pp: {
+    //     sc: 'gane',
+    //     en: 'gone',
+    //     tr: ['ganed', 'goan', 'gaen'],
+    // },
+    // ing: {
+    //     sc: ['gaun', 'gangin', 'gaein'],
+    //     en: 'going',
+    //     tr: ['gingin', 'goin', 'gawn', 'gawin'],
+    // },
+    // tps: {
+    //     sc: ['gaes', 'gangs', 'gans'],
+    //     en: 'goes',
+    //     tr: ['gings'],
+    // }
+};
+G.v.gae.trigs = [].concat( // Control display of conjugated 'gae'
+    G.v.gae.sc, G.v.gae.en, G.v.gae.tr, // gae
+    G.v.gae.neg.sc, G.v.gae.neg.en, G.v.gae.neg.tr, // gae neg
+    G.v.gae.neg.tps.sc, G.v.gae.neg.tps.en, G.v.gae.neg.tps.tr, // gae neg third person singular
+    G.v.gae.pt.sc, G.v.gae.pt.en, G.v.gae.pt.tr, // gae pt
+    G.v.gae.pt.neg.sc, G.v.gae.pt.neg.en, // gae pt neg
+    G.v.gae.pp.sc, G.v.gae.pp.en, G.v.gae.pp.tr, // gae pp
+    G.v.gae.ing.sc, G.v.gae.ing.en, G.v.gae.ing.tr, // gae -ing form
+    G.v.gae.tps.sc, G.v.gae.tps.en, G.v.gae.tps.tr // gae third person singular
+);
+G.v.gae.meta = { // Metadata
+    gr_hw: G.utils.addSpan(G.v.gae.sc[0]) + ' etc.' // Which headwords should appear in the grammar definition
+};
+// gae end
+
 /**
  * Add verbs (both complex and more simple) to dictionary object
  */

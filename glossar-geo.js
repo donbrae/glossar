@@ -5,11 +5,13 @@
 G.dict.push(
     {
         sc: 'Catalonie',
-        en: 'Catalonia'
+        en: 'Catalonia',
+        or: G.notes.b
     },
     {
         sc: 'Africae',
-        en: 'Africa'
+        en: 'Africa',
+        or: G.notes.b
     },
     {
         sc: 'African',
@@ -18,7 +20,8 @@ G.dict.push(
     },
     {
         sc: 'Albainie',
-        en: 'Albania'
+        en: 'Albania',
+        or: G.notes.b
     },
     {
         sc: 'Albainian',
@@ -28,7 +31,8 @@ G.dict.push(
     },
     {
         sc: 'Americae',
-        en: 'America'
+        en: 'America',
+        or: G.notes.b
     },
     {
         sc: 'American',
@@ -37,27 +41,30 @@ G.dict.push(
     {
         sc: 'Andorrie',
         en: 'Andorra',
-        gr: ['pn', 'adj']
+        gr: ['pn', 'adj'],
+        or: G.notes.b
     },
     {
         sc: 'Armeinie',
         en: 'Armenia',
-        gr: ['pn', 'adj']
+        gr: ['pn', 'adj'],
+        or: G.notes.b
     },
     {
         sc: 'Austrailie',
         en: 'Australia',
-        gr: ['pn', 'adj']
+        gr: ['pn', 'adj'],
+        or: G.notes.b
     },
     {
         sc: 'Austrich',
         en: 'Austria',
-        gr: ['pn', 'adj']
+        gr: ['pn', 'adj'],
     },
     {
         sc: 'Baliaries',
         en: 'Balearics',
-        gr: ['pn', 'adj']
+        gr: ['pn', 'adj'],
     },
     {
         sc: 'Belgium',
@@ -74,7 +81,8 @@ G.dict.push(
     },
     {
         sc: 'Beyellaroushie',
-        en: 'Bellarussia'
+        en: 'Bellarussia',
+        or: G.notes.b
     },
     {
         sc: 'Beyellaroushian',
@@ -83,11 +91,13 @@ G.dict.push(
     {
         sc: 'Bosnie',
         en: 'Bosnia',
-        gr: ['pn', 'adj']
+        gr: ['pn', 'adj'],
+        or: G.notes.b
     },
     {
         sc: 'Bulgairie',
-        en: 'Bulgaria'
+        en: 'Bulgaria',
+        or: G.notes.b
     },
     {
         sc: 'Bulgars',
@@ -97,7 +107,8 @@ G.dict.push(
     },
     {
         sc: 'Canadae',
-        en: 'Canada'
+        en: 'Canada',
+        or: G.notes.b
     },
     {
         sc: 'China',
@@ -105,11 +116,13 @@ G.dict.push(
     },
     {
         sc: 'Corsicae',
-        en: 'Corsica'
+        en: 'Corsica',
+        or: G.notes.b
     },
     {
         sc: 'Croaitie',
-        en: 'Croatia'
+        en: 'Croatia',
+        or: G.notes.b
     },
     {
         sc: 'Czechland',
@@ -143,7 +156,8 @@ G.dict.push(
     },
     {
         sc: 'Faerae Isles',
-        en: 'Faroe Isles'
+        en: 'Faroe Isles',
+        or: G.notes.b
     },
     {
         sc: 'Finland',
@@ -163,11 +177,13 @@ G.dict.push(
     },
     {
         sc: 'Galeisie',
-        en: 'Galicia'
+        en: 'Galicia',
+        or: G.notes.b
     },
     {
         sc: 'Georgie',
-        en: 'Georgia'
+        en: 'Georgia',
+        or: G.notes.b
     },
     {
         sc: 'Germany',
@@ -199,7 +215,8 @@ G.dict.push(
     },
     {
         sc: 'Jamaicae',
-        en: 'Jamaica'
+        en: 'Jamaica',
+        or: G.notes.b
     },
     {
         sc: 'Japan',
@@ -231,7 +248,8 @@ G.dict.push(
     },
     {
         sc: 'Malaysie',
-        en: 'Malaysia'
+        en: 'Malaysia',
+        or: G.notes.b
     },
     {
         sc: 'Meditterane Sea',
@@ -271,25 +289,29 @@ G.dict.push(
         en: 'Poland'
     },
     {
-        sc: 'Portingal',
+        sc: ['Portingal', 'Portugal'],
         en: 'Portugal'
     },
     {
         sc: 'Roumainie',
-        en: 'Romania'
+        en: 'Romania',
+        or: G.notes.b
     },
     {
         sc: 'Roushie',
         en: 'Russia',
-        gr: ['pn', 'adj']
+        gr: ['pn', 'adj'],
+        or: G.notes.b
     },
     {
         sc: 'Sardinnie',
-        en: 'Sardinia'
+        en: 'Sardinia',
+        or: G.notes.b
     },
     {
         sc: 'Scandinaivie',
-        en: 'Scandinavia'
+        en: 'Scandinavia',
+        or: G.notes.b
     },
     {
         sc: 'Scotland',
@@ -297,7 +319,8 @@ G.dict.push(
     },
     {
         sc: 'Serbie',
-        en: 'Serbia'
+        en: 'Serbia',
+        or: G.notes.b
     },
     {
         sc: 'Sicillie',
@@ -305,21 +328,25 @@ G.dict.push(
     },
     {
         sc: 'Slovakie',
-        en: 'Slovakia'
+        en: 'Slovakia',
+        or: G.notes.b
     },
     {
         sc: 'Sloveinie',
-        en: 'Slovenia'
+        en: 'Slovenia',
+        or: G.notes.b
     },
     {
         sc: 'South Africae',
         pr: 'Sooth Africae',
-        en: 'South Africa'
+        en: 'South Africa',
+        or: G.notes.b
     },
     {
         sc: 'South Americae',
         pr: 'Sooth Americae',
-        en: 'South America'
+        en: 'South America',
+        or: G.notes.b
     },
     {
         sc: 'South Pole',
@@ -328,7 +355,8 @@ G.dict.push(
     },
     {
         sc: 'Spainie',
-        en: 'Spain'
+        en: 'Spain',
+        or: G.notes.b
     },
     {
         sc: 'Swaden',
@@ -342,7 +370,8 @@ G.dict.push(
     },
     {
         sc: 'Syrie',
-        en: 'Syria'
+        en: 'Syria',
+        or: G.notes.a
     },
     {
         sc: ['Atlantic Ocean', 'The Muckle Dub'],
@@ -379,7 +408,7 @@ G.dict.push(
         def: 'a port in south-wast Fraunce'
     },
     {
-        sc: 'Bristow',
+        sc: ['Bristow', 'Bristol'],
         en: 'Bristol',
         def: 'a cíty in south-wast England'
     },
@@ -424,12 +453,12 @@ G.dict.push(
         def: 'a cíty in Germany'
     },
     {
-        sc: 'Danskin',
+        sc: ['Danskin', 'Gdańsk'],
         en: 'Gdańsk',
         def: 'a cíty in Poland'
     },
     {
-        sc: 'Druntin',
+        sc: ['Druntin', 'Trondheim'],
         en: 'Trondheim',
         def: 'a toun in Norawa'
     },
@@ -439,7 +468,7 @@ G.dict.push(
         def: 'a cíty in eastlin Denmark'
     },
     {
-        sc: ['Frankfuird', 'Frankfort'],
+        sc: ['Frankfuird', 'Frankfort', 'Frankfurt'],
         en: 'Frankfurt',
         def: 'a cíty in waster Germany'
     },
@@ -548,7 +577,7 @@ G.dict.push(
         def: 'ane o the tradítional stewartries o Fraunce'
     },
     {
-        sc: 'Upslo',
+        sc: ['Upslo', 'Oslo'],
         en: 'Oslo',
         def: 'the caipital cíty o Norrowa'
     },

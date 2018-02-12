@@ -21,6 +21,24 @@ G.dict.push({
         tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
         hl: ['ae', 'yae', 'yay'],
     }, {
+        sc: 'baltic',
+        def: 'fell cauld',
+        tr: ['chankin', 'cold', 'cauld'],
+        hl: ['baltic', 'cold', 'cauld'],
+        gr: ['adj', 'informal']
+    }, {
+        sc: 'chankin',
+        def: '(fell) cauld',
+        tr: ['chanking', 'baltic', 'cold', 'cauld'],
+        hl: ['chankin', 'cold', 'cauld'],
+        gr: ['adj', 'informal']
+    }, {
+        sc: 'cauld',
+        en: 'cold',
+        tr: ['chanking', 'chankin', 'baltic', 'cold', 'cauld'],
+        hl: 'cauld',
+        gr: ['adj']
+    }, {
         sc: 'guid',
         en: 'good',
         tr: G.adj.guid.trigs,

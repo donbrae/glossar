@@ -4,8 +4,10 @@ var G = GLOSSAR;
 
 G.dict = [{
         sc: ['wha', 'fa'],
+        pr: ['whah', 'whau', 'whae', 'whiu', 'fa', 'a', 'wha'],
         en: 'who',
-        tr: ['whae', 'whay', 'whey']
+        tr: ['whae', 'whay', 'whey'],
+        gr: 'pron'
     },
     {
         sc: 'naewey',
@@ -50,7 +52,7 @@ G.dict = [{
     },
     {
         sc: ['whit', 'fit', 'what'],
-        pr: ['whit', 'whut', 'what', 'whot', 'fit', 'fut', 'fat', 'aut'],
+        pr: ['whit', 'whut', 'what', 'whot', 'fit', 'fut', 'fat', 'ut'],
         en: 'what',
         gr: ['adj', 'adv', 'pron', 'conj']
     },
@@ -102,6 +104,11 @@ G.dict = [{
         gr: 'adj'
     }
 ];
+
+G.notes = {
+    a: "Protologism: frae analogy wi <em>Catalonie</em>, <em>Slovenie</em>, <em>Austrailie</em> et al", // Syrie
+    b: "<em>-ae</em> an <em>-y/-ie</em> place-name endins kythes Dutch an French influence" // Americae, Slovakie et al
+};
 
 G.utils = {
     // Adds <span> around string 's'
