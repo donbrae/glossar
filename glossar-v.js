@@ -116,29 +116,47 @@ G.v.be.trigs = [].concat( // Control display of conjugated 'be'
 // v wis
 G.v.wis = {
     sc: 'wis',
+    pr: ['waz', 'wez', 'wiz', 'wuz'],
     en: [
         ['was', 'had been']
     ],
     sc_alt: 'wes',
-    tr: ['wiz', 'wus', 'wuz'],
+    tr: 'wus',
     neg: {
         sc: ['wisna', 'wisnae'],
         en: [
             ['was not', 'wasn\'t', 'had not been']
         ],
-        tr: ['wasnae', 'wasna', 'wesna', 'wesnae']
+        tr: ['wasnae', 'wasna', 'wesna', 'wesnae', 'wiznae', 'wizna', 'wuznae', 'wuzna']
     }
 };
 G.v.wis.trigs = [].concat(
-    G.v.wis.sc, G.v.wis.en, G.v.wis.sc_alt, G.v.wis.tr, // wis
+    G.v.wis.sc, G.v.wis.pr, G.v.wis.en, G.v.wis.sc_alt, G.v.wis.tr, // wis
     G.v.wis.neg.sc, G.v.wis.neg.en, G.v.wis.neg.tr // neg
-    // G.v.wis.ps.neg.sc, G.v.wis.ps.neg.en, // neg
-    // G.v.wis.tpps.sc, G.v.wis.tpps.en, // wis third present present singular
-    // G.v.wis.tpps.neg.sc, G.v.wis.tpps.neg.en, // neg
-    // G.v.wis.psp.sc, G.v.wis.psp.en, // wis present singular and plural
-    // G.v.wis.psp.neg.sc, G.v.wis.psp.neg.en, G.v.wis.psp.neg.tr // neg
 );
-// be end
+// wis end
+
+// v wis
+G.v.war = {
+    sc: 'war',
+    pr: ['war', 'wir', 'wur'],
+    en: [
+        ['were', 'had been']
+    ],
+    sc_alt: 'were',
+    neg: {
+        sc: ['warna', 'warnae'],
+        en: [
+            ['were not', 'weren\'t', 'had not been']
+        ],
+        tr: ['werena', 'werenae', 'wirna', 'wirnae']
+    }
+};
+G.v.war.trigs = [].concat(
+    G.v.war.sc, G.v.war.pr, G.v.war.en, G.v.war.sc_alt, G.v.war.tr, // war
+    G.v.war.neg.sc, G.v.war.neg.en, G.v.war.neg.tr // neg
+);
+// wis end
 
 /**
  * Add verbs (both complex and more simple) to dictionary object
@@ -375,34 +393,34 @@ G.dict.push(
     {
         sc: G.v.wis.sc,
         sc_alt: G.v.wis.sc_alt,
+        pr: G.v.wis.pr,
         en: G.v.wis.en,
-        tr: G.v.wis.trigs,
-        hl: G.v.wis.sc,
+        tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
+        hl: [].concat(G.v.wis.sc, G.v.wis.pr, G.v.wis.tr),
         gr: ['v']
     }, { // wis neg
         sc: G.v.wis.neg.sc,
         en: G.v.wis.neg.en,
-        tr: G.v.wis.trigs,
+        tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
         hl: [].concat(G.v.wis.neg.sc, G.v.wis.neg.tr),
         gr: ['neg o v ' + G.utils.addSpan(G.v.wis.sc)]
-    }, { // war neg
-        sc: 'war',
-        sc_alt: 'were',
-        en: [
-            ['were', 'had been']
-        ],
-        tr: ['warna', 'warnae', 'werena', 'werenae', 'were not', 'weren\'t'],
-        hl: ['war', 'were', 'had been'],
-        gr: ['past tense plural o v ' + G.utils.addSpan('wis')]
-    }, { // wir neg
-        sc: ['warna', 'warnae'],
-        sc_alt: ['werena', 'werenae'],
-        en: [
-            ['were not', 'weren\'t']
-        ],
-        tr: ['war', 'were'],
-        hl: ['warna', 'warnae', 'werena', 'werenae', 'were not', 'weren\'t'],
-        gr: ['neg o v ' + G.utils.addSpan('war')]
-    }
+    },
     // v wis end
+    // v war
+    {
+        sc: G.v.war.sc,
+        sc_alt: G.v.war.sc_alt,
+        pr: G.v.war.pr,
+        en: G.v.war.en,
+        tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
+        hl: [].concat(G.v.war.sc, G.v.war.pr),
+        gr: ['v']
+    }, { // war neg
+        sc: G.v.war.neg.sc,
+        en: G.v.war.neg.en,
+        tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
+        hl: [].concat(G.v.war.neg.sc, G.v.war.neg.tr),
+        gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)]
+    }
+    // v war end
 );
