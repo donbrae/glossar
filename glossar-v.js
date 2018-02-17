@@ -160,7 +160,16 @@ G.v.gae.meta = { // Metadata
  * Add verbs (both complex and more simple) to dictionary object
  */
 
-G.dict.push(
+G.dict.push({
+        sc: 'contrair',
+        en: [
+            ['oppose', 'contradict', 'go contrary to']
+        ],
+        gr: 'v',
+        or: [
+            [G.notes.or.af, 'contraire']
+        ]
+    },
     // v gae
     { // v gae
         sc: G.v.gae.sc,
@@ -221,19 +230,48 @@ G.dict.push(
         gr: 'v',
         tr: ['jaloose'],
         or: [
-            ['Fr', 'jalouser']
+            [G.notes.or.f, 'jalouser']
         ]
-    }, {
-        sc: 'remuive',
-        en: 'remove',
-        tr: 'remeeve',
-        gr: 'v',
     }, {
         sc: 'dounlaid',
         en: 'download',
         pr: 'doonlaid',
         gr: ['n', 'v'],
         tr: ['doonload', 'downlaid'],
+    }, {
+        sc: 'edify',
+        en: [
+            ['instruct', 'enlighten']
+        ],
+        gr: ['v'],
+        or: [
+            [G.notes.or.mf, 'edifier'],
+            [G.notes.or.l, 'aedificāre']
+        ]
+    }, {
+        sc: 'effeir',
+        pr: 'iFeer',
+        en: [
+            ['belong to', 'pertain to', 'be appropriate to', 'be fitting or proper']
+        ],
+        gr: ['v'],
+        tr: ['effeirin tae', 'effeirin til'],
+        hl: ['effeir', 'be fitting', 'be proper'],
+        or: [
+            [G.notes.or.af, 'afferir']
+        ]
+    }, {
+        sc: ['effeirin tae', 'effeirin til'],
+        pr: ['iFeerin tae', 'iFeerin til'],
+        en: [
+            ['pertaining to', 'belonging to'],
+            ['in relation to', 'in proportion to', 'corresponding to']
+        ],
+        tr: ['effeir', 'relating to'],
+        hl: ['effeirin tae', 'effeirin til', 'relating to'],
+        or: [
+            [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
+        ]
     }, {
         sc: 'uplaid',
         en: 'upload',
@@ -262,14 +300,45 @@ G.dict.push(
         },
         gr: 'v',
         or: [
-            ['MFr', 'faschier']
+            [G.notes.or.mf, 'faschier']
         ]
+    }, {
+        sc: 'rax',
+        en: [
+            ['reach', 'stretch']
+        ],
+        gr: 'v',
+        pt: {
+            sc: ['raxed', 'raxt'],
+            en: ['reached', 'stretched']
+        },
+        pp: {
+            sc: ['raxed', 'raxt'],
+            en: ['reached', 'stretched']
+        }
+    }, {
+        sc: 'redd',
+        en: [
+            ['clear', 'rid'], 'clarify'
+        ],
+        gr: ['v']
+    }, {
+        sc: 'skare',
+        en: 'share',
+        gr: ['v']
     }, {
         sc: 'uise',
         pr: ['yöz', 'yüz', 'öz', 'yaiz', 'ees'],
         en: 'use',
         tr: ['yaise', 'uiss', 'yiss', 'yaize'],
         hl: ['yaise', 'yaize', 'uise', 'yaiz', 'ees'],
+        gr: ['v']
+    }, {
+        sc: 'upsteir',
+        pr: 'upsteer',
+        en: [
+            ['stir up', 'rouse', 'incite', 'quicken']
+        ],
         gr: ['v']
     }
 );

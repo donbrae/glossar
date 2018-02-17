@@ -2,7 +2,55 @@ var GLOSSAR = GLOSSAR || {};
 
 var G = GLOSSAR;
 
+G.notes = {
+    a: "Protologism: frae analogy wi <em>Catalonie</em>, <em>Slovenie</em>, <em>Austrailie</em> et al", // Syrie
+    b: "<em>-ae</em> an <em>-y/-ie</em> place-name endins kythes Dutch an French influence", // Americae, Slovakie et al
+    or: {
+        af: 'Auld French',
+        mf: 'Modren French',
+        f: 'French',
+        an: 'Anglo-Norman',
+        l: 'Laitin',
+        ae: 'Auld English',
+        me: 'Middle English'
+    }
+};
+
 G.dict = [{
+        sc: 'anent',
+        en: [
+            ['opposite', 'in front of', 'before'],
+            ['concerning', 'about', 'in view of'],
+
+        ],
+        gr: 'prep',
+        or: [
+            [G.notes.or.ae, 'on efen']
+        ]
+    },
+    {
+        sc: 'anenst',
+        en: [
+            ['over against', 'opposite'],
+            ['in respect of', 'concerning'],
+
+        ],
+        tr: 'about',
+        hl: 'anenst',
+        gr: 'prep'
+    },
+    {
+        sc: 'forby',
+        sc_alt: 'forbye',
+        pr: 'forBye',
+        en: [
+            ['besides', 'in addition to'],
+            ['except'],
+            ['beside', 'beyond'],
+            ['let alone', 'not to mention', 'far from', 'much less']
+        ],
+        gr: ['prep']
+    }, {
         sc: ['wha', 'fa'],
         pr: ['whah', 'whau', 'whae', 'whiu', 'fa', 'a', 'wha'],
         en: 'who',
@@ -104,11 +152,6 @@ G.dict = [{
         gr: 'adj'
     }
 ];
-
-G.notes = {
-    a: "Protologism: frae analogy wi <em>Catalonie</em>, <em>Slovenie</em>, <em>Austrailie</em> et al", // Syrie
-    b: "<em>-ae</em> an <em>-y/-ie</em> place-name endins kythes Dutch an French influence" // Americae, Slovakie et al
-};
 
 G.utils = {
     // Adds <span> around string 's'

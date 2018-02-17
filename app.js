@@ -6,9 +6,12 @@
 
 var GLOSSAR = (function() {
 
-    var cfg = {},
+    var cfg = {
+            search_delay: 500 // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
+        },
         state = {
-            word: '' // Value of search text box
+            word: '', // Value of search text box
+            timeout: null
         },
         fuse;
 
@@ -71,15 +74,29 @@ var GLOSSAR = (function() {
 
         fuse = new Fuse(GLOSSAR.dict, options); // 'list' is the item array
 
-        $('#searchTextbox').on('keyup', function() {
-            state.word = $.trim($(this).val());
+        $('#searchTextbox').on('keyup', function(e) {
 
-            if (state.word.length) {
-                print(fuse.search(state.word));
-            } else {
-                $('#result').html('');
+            var t;
+
+            function search() {
+                if (state.word.length) {
+                    $('#result').removeClass('show');
+                    print(fuse.search(state.word));
+                } else {
+                    $('#result').removeClass('show');
+                    t = setTimeout(function() {
+                        $('#result').html('');
+                    }, 100);
+                }
             }
 
+            state.word = $.trim($(this).val());
+
+            if (e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
+                search();
+            } else {
+                timeoutStart(search);
+            }
         });
     }
 
@@ -90,10 +107,8 @@ var GLOSSAR = (function() {
         var grammar, hl_sc_alt,
             hl, hl_all, def, en, pr, pt, pt_arr, neg, or;
 
-        $('#result').html('');
-        // console.log(r);
-
         if (r && r.length) {
+            $('#result').html('');
             $.each(r, function() {
                 grammar = this.item.gr ? '<span class="grammar">' + [].concat(this.item.gr).join('; ') + '</span> ' : ''; // Grammar
                 sc_alt = this.item.sc_alt ? '<div class="sc-alt">(alt. spellins: <span>' + [].concat(this.item.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
@@ -134,7 +149,7 @@ var GLOSSAR = (function() {
                     hl = ''; // No trigger words
                 }
 
-                pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + this.item.pt.sc + '</span></span>' : ''; // Past tense (simpler verbs)
+                pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + [].concat(this.item.pt.sc).join(', ') + '</span></span>' : ''; // Past tense (simpler verbs)
 
                 $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.item.sc).join(', ') + '</span> ' +
                     pr +
@@ -147,9 +162,12 @@ var GLOSSAR = (function() {
                     or +
                     '</li>');
             });
-            highlight(r);
+            highlight(r, function() {
+                $('#result').addClass('show');
+            });
         } else {
             $('#result').html('<li class="text-center no-results">Sorry, the’re nae results for <strong>' + state.word + '</strong></li>');
+            $('#result').addClass('show');
         }
     }
 
@@ -225,7 +243,7 @@ var GLOSSAR = (function() {
         }
     }
 
-    function highlight(r) {
+    function highlight(r, callback) {
         var i = 0;
 
         function hielicht($el, items, en) {
@@ -282,6 +300,24 @@ var GLOSSAR = (function() {
 
             i = i + 1;
         });
+
+        callback();
+    }
+
+    function timeoutStart(callback) {
+
+        function start() {
+            console.log('start timeout');
+            state.timeout = setTimeout(callback, cfg.search_delay);
+        }
+
+        if (!state.timeout) { // If there is no timeout currently running
+            start();
+        } else { // If there's a timeout in place already
+            clearTimeout(state.timeout); // Cancel timeout
+            console.log('cancel timeout');
+            start(); // Start a new one
+        }
     }
 
     return {

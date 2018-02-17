@@ -118,3 +118,6 @@ h1 {
 #result {
     padding-bottom: 30px;
 }
+.fade {
+    transition: opacity 0.05s linear;
+}
