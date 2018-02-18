@@ -114,7 +114,7 @@ var GLOSSAR = (function() {
                 sc_alt = this.item.sc_alt ? '<div class="sc-alt">(alt. spellins: <span>' + [].concat(this.item.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
                 en = this.item.en ? formatMultipleMeanings(this.item.en) : ''; // English
                 pr = this.item.pr ? '<span class="pr">(‘' + [].concat(this.item.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
-                def = this.item.def ? '<span class="def">' + this.item.def + '</span>' : ''; // Definition
+                def = this.item.def ? '<span class="def">' + [].concat(this.item.def).join('; ') + '</span>' : ''; // Definition
                 or = this.item.or ? formatOrigin(this.item.or) : ''; // Origin
                 hl_sc_alt = this.item.sc_alt ? [].concat(this.item.sc_alt) : []; // Make sure to highlight any alternative Scots words
 

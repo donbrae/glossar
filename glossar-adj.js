@@ -13,20 +13,47 @@ G.adj.guid = {
  * Add adjectives to dictionary object
  */
 
-G.dict.push({
+G.dict.push({ // A
     sc: 'ae',
     pr: ['ae', 'yae'],
     en: 'one',
     gr: 'adj',
     tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
     hl: ['ae', 'yae', 'yay'],
-}, {
+}, { // B
     sc: 'baltic',
     def: 'fell cauld',
     tr: ['chankin', 'cold', 'cauld'],
     hl: ['baltic', 'cold', 'cauld'],
     gr: ['adj', 'informal']
 }, {
+    sc: 'bluitert',
+    pr: ['blootert', 'bleetert'],
+    tr: ['bloutered', 'blootered', 'bloutert', 'blootert'],
+    en: ['drunk', 'having been hit or kicked hard'],
+    gr: ['adj', 'informal']
+}, {
+    sc: 'braw',
+    en: [
+        ['fine', 'splendid', 'excellent', 'worthy'],
+        ['elegant', 'well-dressed', 'showy'],
+        ['handsome', 'beautiful', 'strong', 'able-bodied'],
+        'considerable (of a sum of money)',
+        'pleasant (of the weather)'
+    ],
+    tr: ['well dressed', 'able bodied', 'considerable', 'pleasant', 'bra', 'braa', 'brow'],
+    gr: ['adj'],
+    or: [
+        ['variant o the ' + G.notes.or.mf, 'brave']
+    ]
+}, {
+    sc: 'brawlike',
+    en: [
+        ['fine', 'splendid', 'nice']
+    ],
+    tr: ['braw like', 'braw-like'],
+    gr: ['adj']
+}, { // C
     sc: 'chankin',
     def: '(fell) cauld',
     tr: ['chanking', 'baltic', 'cold', 'cauld'],
@@ -53,7 +80,7 @@ G.dict.push({
     tr: ['wester', 'wastern', 'western'],
     hl: 'easter',
     gr: ['adj'],
-    def: 'Locatit tae the east. The mair easter o twa steids, biggins or ither things. Kythes in steid names, e.g. Easter Road'
+    def: ['locatit tae the east', 'the mair easter o twa steids, biggins or ither things', 'kythes in steid names, e.g. Easter Road']
 }, {
     sc: 'forby',
     sc_alt: 'forbye',
@@ -62,6 +89,19 @@ G.dict.push({
         ['extraordinary', 'strange', 'unusually good'],
     ],
     gr: ['adj']
+}, {
+    sc: 'gey',
+    pr: 'guyee',
+    en: [
+        ['excellent', 'splendid'],
+        ['considerable', 'good-sized', 'great'],
+        ['disreputable', 'wild']
+    ],
+    tr: ['guy', 'giy'],
+    gr: ['adj'],
+    or: [
+        [G.notes.or.f, 'gai']
+    ]
 }, {
     sc: 'guid',
     en: 'good',
@@ -96,5 +136,5 @@ G.dict.push({
     tr: ['easter', 'eastern'],
     hl: 'wester',
     gr: ['adj'],
-    def: 'Locatit tae the wast. The mair waster o twa steids, biggins or ither things. Aft-times in steid names, e.g. Wester Hailes'
+    def: ['locatit tae the wast', 'the mair waster o twa steids, biggins or ither things', 'aft-times in steid names, e.g. Wester Hailes']
 });

@@ -9,6 +9,23 @@ G.n = {}; // More complex nouns
  */
 
 G.dict.push({
+    sc: 'associe',
+    pr: 'aSosee',
+    en: 'association',
+    gr: ['n'],
+    or: [
+        ['?' + G.notes.or.f, 'associé']
+    ]
+
+}, {
+    sc: 'certificat',
+    sc_alt: 'certificate',
+    en: 'certificate',
+    gr: ['n'],
+    or: [
+        [G.notes.or.mf, 'certificat']
+    ],
+}, {
     sc: 'claes',
     en: 'clothes',
 }, {
@@ -36,7 +53,7 @@ G.dict.push({
 }, {
     sc: 'hous',
     sc_alt: ['hoose'],
-    pr: 'hoose',
+    pr: 'hooss',
     en: 'house',
     tr: ['houss', 'hooss'],
     gr: 'n',
@@ -54,6 +71,14 @@ G.dict.push({
         ['source', 'origin']
     ],
     gr: ['n']
+}, {
+    sc: 'toun',
+    pr: 'toon',
+    en: 'town',
+    gr: ['n'],
+    or: [
+        [G.notes.or.ae, 'tūn']
+    ]
 }, {
     sc: 'wabsteid',
     en: 'website',

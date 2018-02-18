@@ -75,18 +75,20 @@ G.v.be = {
         neg: {
             sc: ['isna', 'isnae'],
             en: [
-                ['isn\'t', 'is not']
+                ['is not', 'isn\'t']
             ],
         }
     },
     ps: { // Present singular
         sc: 'am',
         en: 'am',
+        tr: 'um',
         neg: {
             sc: ['amna', 'amnae'],
             en: [
-                ['amn\'t', 'am not']
+                ['am not', 'amn\'t']
             ],
+            tr: ['umna', 'umnae']
         }
     },
     psp: { // Present singular and plural
@@ -96,20 +98,26 @@ G.v.be = {
         neg: { // Present singular and plural
             sc: ['arena', 'arenae'],
             en: [
-                ['aren\'t', 'are not']
+                ['are not', 'aren\'t']
             ],
             tr: ['urna', 'urnae', 'arna', 'arnae']
         }
+    },
+    neg: {
+        sc: 'binna',
+        en: 'is not',
+        tr: ['binnae', 'is no', 'ins\'t']
     }
 };
 G.v.be.trigs = [].concat( // Control display of conjugated 'be'
     G.v.be.sc, G.v.be.en, // be
-    G.v.be.ps.sc, G.v.be.ps.en, // be present singular
-    G.v.be.ps.neg.sc, G.v.be.ps.neg.en, // neg
+    G.v.be.ps.sc, G.v.be.ps.en, G.v.be.ps.tr, // be present singular
+    G.v.be.ps.neg.sc, G.v.be.ps.neg.en, G.v.be.ps.neg.tr, // neg
     G.v.be.tpps.sc, G.v.be.tpps.en, // be third present present singular
     G.v.be.tpps.neg.sc, G.v.be.tpps.neg.en, // neg
     G.v.be.psp.sc, G.v.be.psp.en, // be present singular and plural
-    G.v.be.psp.neg.sc, G.v.be.psp.neg.en, G.v.be.psp.neg.tr // neg
+    G.v.be.psp.neg.sc, G.v.be.psp.neg.en, G.v.be.psp.neg.tr, // neg
+    G.v.be.neg.sc, G.v.be.neg.en, G.v.be.neg.tr // be neg
 );
 // be end
 
@@ -162,7 +170,18 @@ G.v.war.trigs = [].concat(
  * Add verbs (both complex and more simple) to dictionary object
  */
 
-G.dict.push(
+G.dict.push({
+        sc: 'adduce',
+        en: ['cite as pertinent, quote as evidence'],
+        gr: ['v'],
+        or: [
+            [G.notes.or.l, 'adūcere']
+        ]
+    }, {
+        sc: 'adduce',
+        def: ['lat see (an item o) evidence in proof', 'bring forrit a witness'],
+        gr: ['v', 'law']
+    },
     // v be
     {
         sc: G.v.be.sc,
@@ -174,13 +193,13 @@ G.dict.push(
         sc: G.v.be.ps.sc,
         en: G.v.be.ps.en,
         tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.ps.en),
+        hl: [].concat(G.v.be.ps.en, G.v.be.ps.tr),
         gr: 'praisent singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // amna
         sc: G.v.be.ps.neg.sc,
         en: G.v.be.ps.neg.en,
         tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.ps.neg.en),
+        hl: [].concat(G.v.be.ps.neg.en, G.v.be.ps.neg.tr),
         gr: 'praisent singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // is
         sc: G.v.be.tpps.sc,
@@ -206,6 +225,12 @@ G.dict.push(
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.psp.en, G.v.be.psp.neg.tr),
         gr: 'praisent singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+    }, { // binna
+        sc: G.v.be.neg.sc,
+        en: G.v.be.neg.en,
+        tr: G.v.be.trigs,
+        hl: [].concat(G.v.be.neg.en, G.v.be.neg.tr),
+        gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; líterar'
     },
     // v be end
     {
@@ -306,7 +331,7 @@ G.dict.push(
         tr: ['effeirin tae', 'effeirin til'],
         hl: ['effeir', 'be fitting', 'be proper'],
         or: [
-            [G.notes.or.af, 'afferir']
+            [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
         ]
     }, {
         sc: ['effeirin tae', 'effeirin til'],
@@ -319,6 +344,16 @@ G.dict.push(
         hl: ['effeirin tae', 'effeirin til', 'relating to'],
         or: [
             [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
+        ]
+    }, {
+        sc: 'inbring',
+        pt: 'inbrocht',
+        en: [
+            ['bring into a place', 'bring to a place', 'convey', 'import']
+        ],
+        gr: ['v'],
+        or: [
+            [G.notes.or.ae, 'inbrengan']
         ]
     }, {
         sc: 'uplaid',
@@ -382,11 +417,12 @@ G.dict.push(
         hl: ['yaise', 'yaize', 'uise', 'yaiz', 'ees'],
         gr: ['v']
     }, {
-        sc: 'upsteir',
-        pr: 'upsteer',
+        sc: 'upsteer',
+        sc_alt: 'upsteir',
         en: [
-            ['stir up', 'rouse', 'incite', 'quicken']
+            ['stir up', 'throw into turmoil', 'stimulate', 'encourage', 'arouse', 'incite']
         ],
+        tr: 'rouse',
         gr: ['v']
     },
     // v wis

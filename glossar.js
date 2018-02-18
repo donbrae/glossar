@@ -7,7 +7,7 @@ G.notes = {
     b: "<em>-ae</em> an <em>-y/-ie</em> place-name endins kythes Dutch an French influence", // Americae, Slovakie et al
     or: {
         af: 'Auld French',
-        mf: 'Modren French',
+        mf: 'Middle French',
         f: 'French',
         an: 'Anglo-Norman',
         l: 'Laitin',
@@ -24,6 +24,7 @@ G.dict = [{
 
         ],
         gr: 'prep',
+        tr: 'regarding',
         or: [
             [G.notes.or.ae, 'on efen']
         ]
@@ -38,8 +39,24 @@ G.dict = [{
         tr: 'about',
         hl: 'anenst',
         gr: 'prep'
-    },
-    {
+    }, {
+        sc: 'binna',
+        en: 'don\'t be',
+        tr: ['do not be', 'binnae'],
+        gr: ['imperative']
+    }, {
+        sc: 'binna',
+        en: [
+            ['unless', 'except']
+        ],
+        tr: 'binnae',
+        gr: ['conj']
+    }, {
+        sc: 'binna',
+        en: 'except for',
+        tr: 'binnae',
+        gr: ['prep', 'líterar']
+    }, {
         sc: 'forby',
         sc_alt: 'forbye',
         pr: 'forBye',

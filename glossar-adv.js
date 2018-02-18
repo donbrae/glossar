@@ -8,7 +8,7 @@ G.adv = {}; // More complex adverbs
  * Add adverbs to dictionary object
  */
 
-G.dict.push({
+G.dict.push({ // A
     sc: 'ablo',
     pr: 'abLo',
     sc_alt: 'ablow',
@@ -23,11 +23,40 @@ G.dict.push({
     hl: 'about',
     gr: ['prep', 'adv']
 }, {
-    sc: 'bluitert',
-    tr: ['bloutered', 'blootered', 'bloutert', 'blootert'],
-    en: ['drunk', 'having been hit or kicked hard'],
-    gr: ['adj', 'informal']
+    sc: 'aft',
+    en: [
+        ['often', 'oft']
+    ],
+    gr: ['adv'],
+    or: [
+        [G.notes.or.ae, 'oft']
+    ]
 }, {
+    sc: 'aft-times',
+    tr: 'afttimes',
+    en: [
+        ['often', 'frequently']
+    ],
+    gr: ['adv']
+}, { // B
+    sc: 'braw',
+    en: [
+        ['well', 'finely'],
+        ['very', 'extremely']
+    ],
+    tr: ['bra', 'braa', 'brow'],
+    gr: ['adv'],
+    or: [
+        ['variant o the ' + G.notes.or.mf, 'brave']
+    ]
+}, {
+    sc: ['braw an', 'braw and'],
+    en: [
+        ['very', 'extremely']
+    ],
+    gr: ['adv'],
+    qu: 'I\'m braw an weel, thanks'
+}, { // C
     sc: 'contrair',
     en: [
         ['in a contrary way']
@@ -46,6 +75,23 @@ G.dict.push({
         ['besides', 'in addition', 'as well']
     ],
     gr: ['adv']
+}, {
+    sc: 'gey',
+    pr: 'guyee',
+    en: [
+        ['considerably', 'very', 'rather'],
+    ],
+    tr: ['guy', 'giy'],
+    gr: ['adv'],
+    or: [
+        [G.notes.or.f, 'gai']
+    ]
+}, {
+    sc: ['gey an', 'gey and'],
+    en: [
+        ['rather', 'very'],
+    ],
+    gr: 'adv'
 }, {
     sc: 'hinderly',
     en: 'eventually',
@@ -72,17 +118,14 @@ G.dict.push({
     tr: 'attour',
     gr: ['adv', 'prep']
 }, {
-    sc: ['certes', 'certe'],
-    sc_alt: 'certie',
-    pr: ['certis', 'certie'],
+    sc: ['certie', 'certes'],
+    pr: ['certie', 'certis'],
     en: [
-        ['assuredly', 'to be sure', 'sure enough', 'certainly']
+        ['certainly', 'assuredly']
     ],
     gr: ['adv'],
     or: [
-        [G.notes.or.me, 'certis, certes'],
-        [G.notes.or.af, 'certes'],
-        [G.notes.or.l, 'certis, certas, certo']
+        [G.notes.or.me, 'certes']
     ]
 }, {
     sc: 'than',
