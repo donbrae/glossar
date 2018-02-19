@@ -44,6 +44,7 @@ G.dict.push({ // A
     tr: ['well dressed', 'able bodied', 'considerable', 'pleasant', 'bra', 'braa', 'brow'],
     gr: ['adj'],
     or: [
+        [G.notes.or.as, 'braw, bra, brawf'],
         ['variant o the ' + G.notes.or.mf, 'brave']
     ]
 }, {
@@ -71,9 +72,13 @@ G.dict.push({ // A
         ['contrary', 'opposite', 'unfavourable', 'adverse']
     ],
     gr: 'adj',
-    or: [
-        [G.notes.or.af, 'contraire']
-    ]
+    or: 'see n'
+}, {
+    sc: 'doutsome',
+    en: [
+        ['doubtful', 'undecided', 'ambiguous', 'uncertain']
+    ],
+    gr: ['adj']
 }, {
     sc: 'easter',
     en: ['eastern', 'the more easterly of two places'],
@@ -99,9 +104,7 @@ G.dict.push({ // A
     ],
     tr: ['guy', 'giy'],
     gr: ['adj'],
-    or: [
-        [G.notes.or.f, 'gai']
-    ]
+    or: 'see adv'
 }, {
     sc: 'guid',
     en: 'good',
@@ -129,6 +132,18 @@ G.dict.push({ // A
     ],
     ex: [
         'I’m no yet fully acquent wi the policy'
+    ]
+}, { // P
+    sc: 'pertinent',
+    en: [
+        ['belonging or relevant to', 'appropriate']
+    ],
+    tr: ['belonging to', 'relevant to', 'relevant'],
+    gr: ['adj'],
+    or: [
+        [G.notes.or.as, 'pertinent'],
+        [G.notes.or.me, 'pertinent'],
+        [G.notes.or.l, 'pertinentia']
     ]
 }, {
     sc: ['waster', 'wester'],

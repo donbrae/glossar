@@ -184,9 +184,10 @@ var GLOSSAR = (function() {
         });
 
         if (ul.length > 1) { // There are multiple (possible) origins
-            return '<div class="or-container">[<ul class="or"><li class="list-inline-item">' + ul.join(', </li><li class="list-inline-item">') + '</li></ul>]</div>';
+
+            return '<div class="or-container">Origin: <ul class="or"><li class="list-inline-item">' + ul.join('; </li><li class="list-inline-item">') + '</li></ul></div>';
         } else { // If there is just one origin
-            return '<div class="or-container">[' + ul[0] + ']</div>';
+            return '<div class="or-container">Origin: ' + ul[0] + '</div>';
         }
     }
 

@@ -239,9 +239,7 @@ G.dict.push({
             ['oppose', 'contradict', 'go contrary to']
         ],
         gr: 'v',
-        or: [
-            [G.notes.or.af, 'contraire']
-        ]
+        or: 'see n'
     },
     // v gae
     { // v gae
@@ -303,7 +301,7 @@ G.dict.push({
         gr: 'v',
         tr: ['jaloose'],
         or: [
-            [G.notes.or.f, 'jalouser']
+            'this uissage first kythes in ' + G.notes.or.lms, ['frae the ' + G.notes.or.f, 'jalouser']
         ]
     }, {
         sc: 'dounlaid',
@@ -355,6 +353,17 @@ G.dict.push({
         or: [
             [G.notes.or.ae, 'inbrengan']
         ]
+    }, { // M
+        sc: 'mind',
+        pt: {
+            sc: 'mindit',
+            en: ['reminded', 'remembered', 'recollected', 'called to mind']
+        },
+        en: ['remind', ['remember', 'recollect', 'call to mind']],
+        gr: ['v'],
+        or: [
+            [G.notes.or.ae, 'mynd']
+        ]
     }, {
         sc: 'uplaid',
         en: 'upload',
@@ -405,10 +414,19 @@ G.dict.push({
             ['clear', 'rid'], 'clarify'
         ],
         gr: ['v']
-    }, {
+    }, { // S
         sc: 'skare',
         en: 'share',
         gr: ['v']
+    }, {
+        sc: 'swither',
+        en: [
+            ['doubt', 'falter', 'hesitate', 'dither']
+        ],
+        tr: ['ditter', 'doiter'],
+        hl: 'swither',
+        gr: ['v'],
+        or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms]
     }, {
         sc: 'uise',
         pr: ['yöz', 'yüz', 'öz', 'yaiz', 'ees'],

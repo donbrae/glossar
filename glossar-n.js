@@ -33,7 +33,11 @@ G.dict.push({
     en: [
         ['desk', 'seat', 'church pew']
     ],
-    gr: ['n']
+    gr: ['n'],
+    or: [
+        [G.notes.or.as + ' (frae 1530)', 'dask, daske'],
+        ['possible influence o ' + G.notes.or.as + ' <em>dais, das</em>, frae the ' + G.notes.or.nfd, 'dais']
+    ]
 }, {
     sc: 'contrair',
     en: [
@@ -43,7 +47,8 @@ G.dict.push({
     hl: ['contrary', 'opposite'],
     gr: 'n',
     or: [
-        [G.notes.or.af, 'contraire']
+        [G.notes.or.as, 'contrar, contrair'],
+        ['frae the ' + G.notes.or.af, 'contraire']
     ]
 }, {
     sc: 'depute',
@@ -56,7 +61,19 @@ G.dict.push({
     pr: 'hooss',
     en: 'house',
     tr: ['houss', 'hooss'],
-    gr: 'n',
+    gr: 'n'
+}, { // M
+    sc: 'mind',
+    def: 'the mind; that whilk is brocht back tae mind or mindit, memory, a mindin',
+    gr: ['n'],
+    or: 'see v'
+}, {
+    sc: 'mindin',
+    en: [
+        ['a memory', 'a recollection']
+    ],
+    tr: ['memory', 'recollection'],
+    gr: ['n']
 }, {
     sc: 'uiss',
     pr: ['yös', 'yis', 'ees', 'yoos'],
@@ -64,13 +81,25 @@ G.dict.push({
     hl: ['uiss', 'yiss', 'ees'],
     en: 'use',
     gr: ['n']
-}, {
+}, { // S
     sc: 'springheid',
     pr: 'springheed',
     en: [
         ['source', 'origin']
     ],
     gr: ['n']
+}, {
+    sc: 'swither',
+    en: [
+        ['state of indecision or doubt', 'hesitation', 'uncertainty'],
+        ['state of nervousness or agitation', 'panic', 'fluster'],
+        ['state of confusion', 'tangled or muddled condition'],
+        ['dithering, undecided person']
+    ],
+    tr: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle', 'ditter', 'doiter'],
+    hl: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle'],
+    gr: ['n'],
+    or: 'see v'
 }, {
     sc: 'toun',
     pr: 'toon',

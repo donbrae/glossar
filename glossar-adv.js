@@ -46,9 +46,7 @@ G.dict.push({ // A
     ],
     tr: ['bra', 'braa', 'brow'],
     gr: ['adv'],
-    or: [
-        ['variant o the ' + G.notes.or.mf, 'brave']
-    ]
+    or: 'see the adj'
 }, {
     sc: ['braw an', 'braw and'],
     en: [
@@ -63,9 +61,7 @@ G.dict.push({ // A
     ],
     tr: 'contrarily',
     gr: 'adv',
-    or: [
-        [G.notes.or.af, 'contraire']
-    ]
+    or: 'see n'
 }, {
     sc: 'forby',
     sc_alt: 'forbye',
@@ -84,7 +80,8 @@ G.dict.push({ // A
     tr: ['guy', 'giy'],
     gr: ['adv'],
     or: [
-        [G.notes.or.f, 'gai']
+        [G.notes.or.as, 'gay(e), gey'],
+        ['frae the ' + G.notes.or.f, 'gai']
     ]
 }, {
     sc: ['gey an', 'gey and'],

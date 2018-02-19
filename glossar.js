@@ -3,7 +3,7 @@ var GLOSSAR = GLOSSAR || {};
 var G = GLOSSAR;
 
 G.notes = {
-    a: "Protologism: frae analogy wi <em>Catalonie</em>, <em>Slovenie</em>, <em>Austrailie</em> et al", // Syrie
+    a: "protologism; frae analogy wi <em>Catalonie</em>, <em>Slovenie</em>, <em>Austrailie</em> et al", // Syrie
     b: "<em>-ae</em> an <em>-y/-ie</em> place-name endins kythes Dutch an French influence", // Americae, Slovakie et al
     or: {
         af: 'Auld French',
@@ -11,8 +11,14 @@ G.notes = {
         f: 'French',
         an: 'Anglo-Norman',
         l: 'Laitin',
+        nfd: 'northren French dialect',
         ae: 'Auld English',
-        me: 'Middle English'
+        me: 'Middle English',
+        ms: 'Middle Scots',
+        ems: 'Early Middle Scots',
+        lms: 'Late Middle Scots',
+        anor: 'Auld Norse',
+        as: 'Aulder Scots'
     }
 };
 

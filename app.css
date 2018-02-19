@@ -50,7 +50,7 @@ ul.or {
 }
 ul.or .list-inline-item {
     margin: 0;
-    padding: 0;
+    padding: 0 2px 0 0;
 }
 ul.or .list-inline-item:last-child {
     padding-right: 0;
@@ -74,12 +74,13 @@ h1 {
 .or-container {
     padding: 5px 0 0 4px;
 }
-.or-container ul {
-    display: inline-block;
+.or-container ul, .or-container ul li {
+    display: inline;
 }
 /* .def {
     padding: 1px 0 0 4px;
 } */
+
 .sc-alt {
     padding: 3px 4px 0 4px;
 }
@@ -135,7 +136,6 @@ div.en, .def {
 .fade {
     transition: opacity 0.05s linear;
 }
-
 @media (min-width: 576px) {
     .grammar {
         display: inline;
