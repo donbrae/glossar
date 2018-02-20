@@ -15,10 +15,14 @@ G.notes = {
         ae: 'Auld English',
         me: 'Middle English',
         ms: 'Middle Scots',
+        es: 'Early Scots',
         ems: 'Early Middle Scots',
         lms: 'Late Middle Scots',
+        emods: 'Early Modren Scots',
         anor: 'Auld Norse',
-        as: 'Aulder Scots'
+        as: 'Aulder Scots',
+        md: 'Middle Dutch',
+        mode: 'Modren English'
     }
 };
 
@@ -32,6 +36,7 @@ G.dict = [{
         gr: 'prep',
         tr: 'regarding',
         or: [
+            [G.notes.or.as, 'anent'],
             [G.notes.or.ae, 'on efen']
         ]
     },
@@ -72,6 +77,8 @@ G.dict = [{
             ['beside', 'beyond'],
             ['let alone', 'not to mention', 'far from', 'much less']
         ],
+        tr: 'also',
+        hl: 'forby',
         gr: ['prep']
     }, {
         sc: ['wha', 'fa'],

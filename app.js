@@ -154,10 +154,10 @@ var GLOSSAR = (function() {
                 $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.item.sc).join(', ') + '</span> ' +
                     pr +
                     grammar +
-                    def +
                     sc_alt +
                     pt +
                     neg +
+                    def +
                     en +
                     or +
                     '</li>');

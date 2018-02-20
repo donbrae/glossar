@@ -23,6 +23,7 @@ G.dict.push({
     en: 'certificate',
     gr: ['n'],
     or: [
+        [G.notes.or.ms, 'certificat'],
         [G.notes.or.mf, 'certificat']
     ],
 }, {
@@ -55,13 +56,27 @@ G.dict.push({
     en: 'a deputy',
     gr: ['n'],
     tr: 'deputy',
-}, {
+}, { // H
     sc: 'hous',
     sc_alt: ['hoose'],
     pr: 'hooss',
     en: 'house',
     tr: ['houss', 'hooss'],
     gr: 'n'
+}, {
+    sc: 'maet',
+    sc_alt: 'meat',
+    en: [
+        ['food', 'sustenance'],
+        'a meal',
+        'meat'
+    ],
+    tr: ['meal', 'mait'],
+    gr: ['n'],
+    or: [
+        [G.notes.or.as, 'mete, meit, met, mait, meat'],
+        [G.notes.or.ae, 'mete']
+    ]
 }, { // M
     sc: 'mind',
     def: 'the mind; that whilk is brocht back tae mind or mindit, memory, a mindin',
@@ -73,6 +88,10 @@ G.dict.push({
         ['a memory', 'a recollection']
     ],
     tr: ['memory', 'recollection'],
+    gr: ['n']
+}, { // O
+    sc: 'origin',
+    en: 'origin',
     gr: ['n']
 }, {
     sc: 'uiss',
@@ -106,6 +125,7 @@ G.dict.push({
     en: 'town',
     gr: ['n'],
     or: [
+        [G.notes.or.as, 'toun, town(e), ton(e)'],
         [G.notes.or.ae, 'tūn']
     ]
 }, {

@@ -305,10 +305,19 @@ G.dict.push({
         ]
     }, {
         sc: 'dounlaid',
+        pt: {
+            sc: 'dounlaidit',
+            en: 'downloaded',
+            tr: ['doonloadit', 'downlaidit']
+        },
+        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
         en: 'download',
         pr: 'doonlaid',
-        gr: ['n', 'v'],
+        gr: ['v', 'n'],
         tr: ['doonload', 'downlaid'],
+        or: [
+            [G.notes.or.mode, 'download']
+        ]
     }, {
         sc: 'edify',
         en: [
@@ -362,12 +371,22 @@ G.dict.push({
         en: ['remind', ['remember', 'recollect', 'call to mind']],
         gr: ['v'],
         or: [
+            [G.notes.or.as, 'minde, mynd(e)'],
             [G.notes.or.ae, 'mynd']
         ]
     }, {
         sc: 'uplaid',
         en: 'upload',
-        gr: ['n', 'v'],
+        pt: {
+            sc: 'uplaidit',
+            en: 'uploaded',
+            tr: 'uploadit'
+        },
+        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar til a server, an aften ower the internet; <em>n</em> the data (file) uplaidit',
+        gr: ['v', 'n'],
+        or: [
+            [G.notes.or.mode, 'upload']
+        ]
     }, {
         sc: ['fash'],
         en: [
@@ -392,6 +411,7 @@ G.dict.push({
         },
         gr: 'v',
         or: [
+            [G.notes.or.ms, 'fasch, fash'],
             [G.notes.or.mf, 'faschier']
         ]
     }, {
@@ -417,7 +437,12 @@ G.dict.push({
     }, { // S
         sc: 'skare',
         en: 'share',
-        gr: ['v']
+        gr: ['v'],
+        or: [
+            [G.notes.or.as, 'skar, scar(e), schare'],
+            ['?' + G.notes.or.anor, 'skera'],
+            ['?' + G.notes.or.md, 'scare, scaer']
+        ]
     }, {
         sc: 'swither',
         en: [

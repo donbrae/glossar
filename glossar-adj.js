@@ -86,7 +86,7 @@ G.dict.push({ // A
     hl: 'easter',
     gr: ['adj'],
     def: ['locatit tae the east', 'the mair easter o twa steids, biggins or ither things', 'kythes in steid names, e.g. Easter Road']
-}, {
+}, { // F
     sc: 'forby',
     sc_alt: 'forbye',
     pr: 'forBye',
@@ -94,6 +94,31 @@ G.dict.push({ // A
         ['extraordinary', 'strange', 'unusually good'],
     ],
     gr: ['adj']
+}, {
+    sc: 'forementioned',
+    en: 'aforementioned',
+    gr: ['adj'],
+    or: ['?' + G.notes.or.me + '; ?by analogy wi <em>foresaid</em>; kythes in ' + G.notes.or.lms + ' an ' + G.notes.or.emods]
+}, {
+    sc: 'foresaid',
+    en: 'aforesaid',
+    gr: ['adj'],
+    or: [
+        [G.notes.or.as, 'for(e)said, foirsaid'],
+        [G.notes.or.me, 'forsayde, forsaid']
+    ]
+}, { // F
+    sc: 'furrin',
+    en: [
+        ['foreign', 'abroad']
+    ],
+    gr: ['adj'],
+    tr: ['forrin', 'forain'],
+    or: [
+        [G.notes.or.as + ' haes ', 'forain(e), forayne, forane'],
+        [G.notes.or.me, 'forain(e), forayn(e), forein(e), foreyne'],
+        [G.notes.or.af, 'forain']
+    ]
 }, {
     sc: 'gey',
     pr: 'guyee',

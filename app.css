@@ -132,9 +132,13 @@ div.en, .def {
 }
 #result {
     padding-bottom: 30px;
+    padding-top: 15px;
 }
 .fade {
     transition: opacity 0.05s linear;
+}
+.mt-5, .my-5 {
+    margin-top: 1.7rem !important;
 }
 @media (min-width: 576px) {
     .grammar {
