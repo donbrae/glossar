@@ -103,6 +103,8 @@ G.dict.push({ // A
     sc: 'foresaid',
     en: 'aforesaid',
     gr: ['adj'],
+    tr: 'mention',
+    hl: 'foresaid',
     or: [
         [G.notes.or.as, 'for(e)said, foirsaid'],
         [G.notes.or.me, 'forsayde, forsaid']
@@ -158,6 +160,10 @@ G.dict.push({ // A
     ex: [
         'I’m no yet fully acquent wi the policy'
     ]
+}, { // O
+    sc: 'ocht',
+    en: 'any',
+    gr: ['adj']
 }, { // P
     sc: 'pertinent',
     en: [

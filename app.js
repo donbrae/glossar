@@ -29,7 +29,7 @@ var GLOSSAR = (function() {
             minMatchCharLength: 5,
             keys: [{
                 name: 'sc',
-                weight: 0.4
+                weight: 0.3
             }, {
                 name: 'pt.sc',
                 weight: 0.02
@@ -52,12 +52,6 @@ var GLOSSAR = (function() {
                 name: 'neg.en',
                 weight: 0.01
             }, {
-                name: 'ing.sc',
-                weight: 0.01
-            }, {
-                name: 'ing.en',
-                weight: 0.01
-            }, {
                 name: 'sc_alt',
                 weight: 0.1
             }, {
@@ -65,10 +59,10 @@ var GLOSSAR = (function() {
                 weight: 0.1
             }, {
                 name: 'en',
-                weight: 0.2
+                weight: 0.12
             }, {
                 name: 'tr',
-                weight: 0.1
+                weight: 0.3
             }]
         };
 
@@ -102,10 +96,14 @@ var GLOSSAR = (function() {
 
     /**
      * Prints data on screen
+     * @param {Object} r - Algorhythm
+     * @returns {}
      */
     function print(r) {
         var grammar, hl_sc_alt,
-            hl, hl_all, def, en, pr, pt, pt_arr, neg, or;
+            hl, hl_all, $li, def, en, pr, pt, pt_arr, neg, or;
+
+        console.log(r);
 
         if (r && r.length) {
             $('#result').html('');
@@ -163,6 +161,12 @@ var GLOSSAR = (function() {
                     '</li>');
             });
             highlight(r, function() {
+                $($('#result > li').get().reverse()).each(function() { // Move highlighted entries to the top
+                    $li = $(this);
+                    if ($li.children('span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                        $li.parent().prepend($li);
+                    }
+                });
                 $('#result').addClass('show');
             });
         } else {
@@ -245,7 +249,7 @@ var GLOSSAR = (function() {
     }
 
     function highlight(r, callback) {
-        var i = 0;
+        var i = r.length - 1;
 
         function hielicht($el, items, en) {
             if ($el.data('hl')) { // Add any highlight words to the items array
@@ -269,7 +273,7 @@ var GLOSSAR = (function() {
         });
 
         // Add any new highlights
-        $('#result').children('li').each(function() {
+        $($('#result > li').get().reverse()).each(function() {
 
             // Head word(s)
             items = $('.sc', this).text().split(', ');
@@ -299,7 +303,7 @@ var GLOSSAR = (function() {
                 );
             }
 
-            i = i + 1;
+            i = i - 1;
         });
 
         callback();
@@ -308,7 +312,6 @@ var GLOSSAR = (function() {
     function timeoutStart(callback) {
 
         function start() {
-            console.log('start timeout');
             state.timeout = setTimeout(callback, cfg.search_delay);
         }
 
@@ -316,7 +319,6 @@ var GLOSSAR = (function() {
             start();
         } else { // If there's a timeout in place already
             clearTimeout(state.timeout); // Cancel timeout
-            console.log('cancel timeout');
             start(); // Start a new one
         }
     }

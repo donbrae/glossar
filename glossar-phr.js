@@ -7,7 +7,8 @@
  */
 
 G.dict.push({
-    sc: ['gie a kythin tae', 'gie a kythin til'],
+    sc: ['gie a kythin tae/til'],
     en: 'demonstrate',
+    tr: 'gie a kythin til',
     gr: 'v phr'
 });

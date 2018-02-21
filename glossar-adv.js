@@ -70,6 +70,7 @@ G.dict.push({ // A
         ['beyond', 'past'],
         ['besides', 'in addition', 'as well']
     ],
+    tr: 'also',
     gr: ['adv']
 }, {
     sc: 'gey',
@@ -81,7 +82,7 @@ G.dict.push({ // A
     gr: ['adv'],
     or: [
         [G.notes.or.as, 'gay(e), gey'],
-        ['frae the ' + G.notes.or.f, 'gai']
+        [G.notes.or.f, 'gai']
     ]
 }, {
     sc: ['gey an', 'gey and'],
@@ -124,6 +125,12 @@ G.dict.push({ // A
     or: [
         [G.notes.or.me, 'certes']
     ]
+}, {
+    sc: 'ocht',
+    en: [
+        ['somewhat', 'rather', 'in some way', 'to some degree']
+    ],
+    gr: ['adv']
 }, {
     sc: 'than',
     pr: ['than', 'thaun', 'thin', 'dan'],

@@ -3,8 +3,8 @@ var GLOSSAR = GLOSSAR || {};
 var G = GLOSSAR;
 
 G.notes = {
-    a: "protologism; frae analogy wi <em>Catalonie</em>, <em>Slovenie</em>, <em>Austrailie</em> et al", // Syrie
-    b: "<em>-ae</em> an <em>-y/-ie</em> place-name endins kythes Dutch an French influence", // Americae, Slovakie et al
+    a: "protologism; frae analogy wi Dutch an French-influenced <em>Catalonie</em>, <em>Slovenie</em>, <em>Austrailie</em> et al, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Syrie, Californie et al
+    b: "<em>-ae</em> an <em>-y/-ie</em> steid-name endins kythes Dutch an French influence, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Americae, Slovakie et al
     or: {
         af: 'Auld French',
         mf: 'Middle French',
@@ -47,8 +47,7 @@ G.dict = [{
             ['in respect of', 'concerning'],
 
         ],
-        tr: 'about',
-        hl: 'anenst',
+        tr: ['about', 'regarding'],
         gr: 'prep'
     }, {
         sc: 'binna',

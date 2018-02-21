@@ -16,8 +16,7 @@ G.dict.push({
     or: [
         ['?' + G.notes.or.f, 'associé']
     ]
-
-}, {
+}, { // C
     sc: 'certificat',
     sc_alt: 'certificate',
     en: 'certificate',
@@ -57,6 +56,10 @@ G.dict.push({
     gr: ['n'],
     tr: 'deputy',
 }, { // H
+    sc: 'hauden gaun',
+    en: 'continuation',
+    gr: ['n']
+}, {
     sc: 'hous',
     sc_alt: ['hoose'],
     pr: 'hooss',
@@ -89,9 +92,19 @@ G.dict.push({
     ],
     tr: ['memory', 'recollection'],
     gr: ['n']
+}, { // N
+    sc: 'nat',
+    def: 'an ocht derogatory term for nationalist; a body that’s for the Scotland’s polítical independence',
+    gr: ['n', 'derogatory'],
 }, { // O
     sc: 'origin',
     en: 'origin',
+    gr: ['n']
+}, {
+    sc: 'ocht',
+    en: [
+        ['aught', 'anything'], 'nothing'
+    ],
     gr: ['n']
 }, {
     sc: 'uiss',
@@ -128,10 +141,14 @@ G.dict.push({
         [G.notes.or.as, 'toun, town(e), ton(e)'],
         [G.notes.or.ae, 'tūn']
     ]
-}, {
+}, { // W
     sc: 'wabsteid',
     en: 'website',
     pr: 'wabsteed',
     tr: ['websteid', 'websteed', 'wabsite'],
     gr: 'n',
+}, {
+    sc: 'yoon',
+    def: 'a derogatory term for unionist; a body that’s for the hauden gaun o the polítical union atween Scotland an England',
+    gr: ['n', 'derogatory']
 });

@@ -111,6 +111,7 @@ G.v.be = {
 };
 G.v.be.trigs = [].concat( // Control display of conjugated 'be'
     G.v.be.sc, G.v.be.en, // be
+    'to be', 'tae be',
     G.v.be.ps.sc, G.v.be.ps.en, G.v.be.ps.tr, // be present singular
     G.v.be.ps.neg.sc, G.v.be.ps.neg.en, G.v.be.ps.neg.tr, // neg
     G.v.be.tpps.sc, G.v.be.tpps.en, // be third present present singular
@@ -186,8 +187,8 @@ G.dict.push({
     {
         sc: G.v.be.sc,
         en: G.v.be.en,
-        tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.en),
+        tr: G.v.be.trigs, // Highlighted by default
+        hl: [].concat(G.v.be.en, 'to be', 'tae be'),
         gr: 'v'
     }, { // am
         sc: G.v.be.ps.sc,
@@ -223,7 +224,7 @@ G.dict.push({
         sc: G.v.be.psp.neg.sc,
         en: G.v.be.psp.neg.en,
         tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.psp.en, G.v.be.psp.neg.tr),
+        hl: [].concat(G.v.be.psp.neg.en, G.v.be.psp.neg.tr),
         gr: 'praisent singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // binna
         sc: G.v.be.neg.sc,
@@ -245,7 +246,7 @@ G.dict.push({
     { // v gae
         sc: G.v.gae.sc,
         en: G.v.gae.en,
-        tr: G.v.gae.trigs, // Highlighted by default
+        tr: G.v.gae.trigs,
         hl: [].concat(G.v.gae.en, G.v.gae.tr), // Overrides tr highlighting above, as here we don't want all the tr words being highlighted
         gr: 'v'
     }, { // v gae neg
@@ -257,7 +258,7 @@ G.dict.push({
     }, { // v gae neg third person singular
         sc: G.v.gae.neg.tps.sc,
         en: G.v.gae.neg.tps.en,
-        tr: G.v.gae.neg.tps.tr,
+        tr: G.v.gae.trigs,
         hl: [].concat(G.v.gae.neg.tps.en, G.v.gae.neg.tps.tr),
         gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw
     }, { // v gae pt
@@ -301,7 +302,7 @@ G.dict.push({
         gr: 'v',
         tr: ['jaloose'],
         or: [
-            'this uissage first kythes in ' + G.notes.or.lms, ['frae the ' + G.notes.or.f, 'jalouser']
+            'this uissage first kythes in ' + G.notes.or.lms, [G.notes.or.f, 'jalouser']
         ]
     }, {
         sc: 'dounlaid',
@@ -341,7 +342,7 @@ G.dict.push({
             [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
         ]
     }, {
-        sc: ['effeirin tae', 'effeirin til'],
+        sc: ['effeirin tae/til'],
         pr: ['iFeerin tae', 'iFeerin til'],
         en: [
             ['pertaining to', 'belonging to'],
@@ -414,6 +415,10 @@ G.dict.push({
             [G.notes.or.ms, 'fasch, fash'],
             [G.notes.or.mf, 'faschier']
         ]
+    }, { // O
+        sc: 'ocht',
+        en: 'ought',
+        gr: ['v']
     }, {
         sc: 'rax',
         en: [
