@@ -20,9 +20,19 @@ G.dict.push({ // A
     gr: 'adj',
     tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
     hl: ['ae', 'yae', 'yay'],
+}, {
+    sc: 'allevolie',
+    en: [
+        ['giddy', 'volatile']
+    ],
+    gr: ['adj'],
+    or: [
+        [G.notes.or.ms, 'alla-volie'],
+        ['frae the ' + G.notes.or.f, 'à la volée']
+    ]
 }, { // B
     sc: 'baltic',
-    def: 'fell cauld',
+    def: 'o the weather, the temperatur: fell cauld',
     tr: ['chankin', 'cold', 'cauld'],
     hl: ['baltic', 'cold', 'cauld'],
     gr: ['adj', 'informal']
@@ -56,7 +66,7 @@ G.dict.push({ // A
     gr: ['adj']
 }, { // C
     sc: 'chankin',
-    def: '(fell) cauld',
+    def: 'o the weather, the temperatur: (fell) cauld',
     tr: ['chanking', 'baltic', 'cold', 'cauld'],
     hl: ['chankin', 'cold', 'cauld'],
     gr: ['adj', 'informal']
@@ -176,6 +186,16 @@ G.dict.push({ // A
         [G.notes.or.me, 'pertinent'],
         [G.notes.or.l, 'pertinentia']
     ]
+}, {
+    sc: 'ragglish',
+    en: [
+        ['erratic'],
+        ['wild', 'unreliable', 'undisciplined'],
+        ['uneven', 'straggling', 'higgledy-piggledy'],
+        ['of weather: boisterous, uncertain, gusty with rain']
+    ],
+    tr: ['boisterous', 'uncertain'],
+    gr: ['adj']
 }, {
     sc: ['waster', 'wester'],
     en: ['western', 'the more westerly of two places'],

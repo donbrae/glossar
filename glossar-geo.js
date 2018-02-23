@@ -22,7 +22,7 @@ G.dict.push({
     sc: 'Albainian',
     en: 'Albanian',
     gr: 'adj',
-    def: 'anent Albainie, its fowk, or thair leid'
+    def: 'anent Albainie, its fowk, or their leid'
 }, {
     sc: 'Americae',
     en: 'America',
@@ -88,7 +88,7 @@ G.dict.push({
     tr: ['Bulgairie', 'Bulgarie'],
     hl: 'Bulgars',
     gr: 'adj',
-    def: 'anent Bulgairie, its fowk, or thair leid'
+    def: 'anent Bulgairie, its fowk, or their leid'
 }, {
     sc: 'Californie',
     en: 'California',

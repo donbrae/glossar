@@ -38,6 +38,11 @@ G.dict.push({ // A
         ['often', 'frequently']
     ],
     gr: ['adv']
+}, {
+    sc: 'allevolie',
+    en: ['at random'],
+    gr: ['adv'],
+    or: 'see the adj'
 }, { // B
     sc: 'braw',
     en: [

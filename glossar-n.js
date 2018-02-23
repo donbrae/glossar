@@ -94,8 +94,8 @@ G.dict.push({
     gr: ['n']
 }, { // N
     sc: 'nat',
-    def: 'an ocht derogatory term for nationalist; a body that’s for the Scotland’s polítical independence',
-    gr: ['n', 'derogatory'],
+    def: 'an ocht derogatory term for nationalist; a body that’s for Scotland’s polítical independence',
+    gr: ['n', 'informal', 'derogatory'],
 }, { // O
     sc: 'origin',
     en: 'origin',
@@ -113,6 +113,10 @@ G.dict.push({
     hl: ['uiss', 'yiss', 'ees'],
     en: 'use',
     gr: ['n']
+}, {
+    sc: 'roaster',
+    def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o thaimsels',
+    gr: ['n', 'informal', 'derogatory']
 }, { // S
     sc: 'springheid',
     pr: 'springheed',
@@ -150,5 +154,9 @@ G.dict.push({
 }, {
     sc: 'yoon',
     def: 'a derogatory term for unionist; a body that’s for the hauden gaun o the polítical union atween Scotland an England',
-    gr: ['n', 'derogatory']
+    gr: ['n', 'informal', 'derogatory']
+}, {
+    sc: 'zoomer',
+    def: 'a body that’s ragglish or allevolie',
+    gr: ['n', 'informal', 'derogatory']
 });
