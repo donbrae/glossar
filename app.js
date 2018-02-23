@@ -18,7 +18,7 @@ var GLOSSAR = (function() {
     function init() {
         var options = {
             shouldSort: true,
-            includeScore: true,
+            includeScore: false,
             tokenize: true,
             matchAllTokens: true,
             findAllMatches: false,
@@ -108,27 +108,27 @@ var GLOSSAR = (function() {
         if (r && r.length) {
             $('#result').html('');
             $.each(r, function() {
-                grammar = this.item.gr ? '<span class="grammar">' + [].concat(this.item.gr).join('; ') + '</span> ' : ''; // Grammar
-                sc_alt = this.item.sc_alt ? '<div class="sc-alt">(alt. spellins: <span>' + [].concat(this.item.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
-                en = this.item.en ? formatMultipleMeanings(this.item.en) : ''; // English
-                pr = this.item.pr ? '<span class="pr">(‘' + [].concat(this.item.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
-                def = this.item.def ? '<span class="def">' + [].concat(this.item.def).join('; ') + '</span>' : ''; // Definition
-                or = this.item.or ? formatOrigin(this.item.or) : ''; // Origin
-                hl_sc_alt = this.item.sc_alt ? [].concat(this.item.sc_alt) : []; // Make sure to highlight any alternative Scots words
+                grammar = this.gr ? '<span class="grammar">' + [].concat(this.gr).join('; ') + '</span> ' : ''; // Grammar
+                sc_alt = this.sc_alt ? '<div class="sc-alt">(alt. spellins: <span>' + [].concat(this.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
+                en = this.en ? formatMultipleMeanings(this.en) : ''; // English
+                pr = this.pr ? '<span class="pr">(‘' + [].concat(this.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
+                def = this.def ? '<span class="def">' + [].concat(this.def).join('; ') + '</span>' : ''; // Definition
+                or = this.or ? formatOrigin(this.or) : ''; // Origin
+                hl_sc_alt = this.sc_alt ? [].concat(this.sc_alt) : []; // Make sure to highlight any alternative Scots words
 
                 /**
                  * Highlight based on trigger words by default; if not, use the specific highlight words
                  */
 
                 // Simpler Verbs
-                pt_arr = this.item.pt && this.item.pt.en ? [].concat(this.item.pt.en) : []; // Any english past tense
-                pt_arr = this.item.pt && this.item.pt.tr ? pt_arr.concat(this.item.pt.tr) : pt_arr; // Any past tense triggers
-                neg = this.item.neg ? '<span class="neg">neg. <span>' + [].concat(this.item.neg.sc).join(', ') + '</span></span>' : ''; // Negative
+                pt_arr = this.pt && this.pt.en ? [].concat(this.pt.en) : []; // Any english past tense
+                pt_arr = this.pt && this.pt.tr ? pt_arr.concat(this.pt.tr) : pt_arr; // Any past tense triggers
+                neg = this.neg ? '<span class="neg">neg. <span>' + [].concat(this.neg.sc).join(', ') + '</span></span>' : ''; // Negative
 
-                if (this.item.hl) { // Specific trigger highlight words
-                    hl_all = [].concat(this.item.hl);
-                } else if (this.item.tr) { // Standard triggers
-                    hl_all = [].concat(this.item.tr);
+                if (this.hl) { // Specific trigger highlight words
+                    hl_all = [].concat(this.hl);
+                } else if (this.tr) { // Standard triggers
+                    hl_all = [].concat(this.tr);
                 } else { // No triggers of any kind
                     hl_all = [];
                 }
@@ -137,8 +137,8 @@ var GLOSSAR = (function() {
                     hl_all = hl_all.concat(hl_sc_alt);
                 }
                 // Add any phonetic spellings
-                if (this.item.pr) {
-                    hl_all = hl_all.concat(this.item.pr);
+                if (this.pr) {
+                    hl_all = hl_all.concat(this.pr);
                 }
                 // Add any highlighting words
                 if (hl_all.length) {
@@ -147,9 +147,9 @@ var GLOSSAR = (function() {
                     hl = ''; // No trigger words
                 }
 
-                pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + [].concat(this.item.pt.sc).join(', ') + '</span></span>' : ''; // Past tense (simpler verbs)
+                pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + [].concat(this.pt.sc).join(', ') + '</span></span>' : ''; // Past tense (simpler verbs)
 
-                $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.item.sc).join(', ') + '</span> ' +
+                $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
                     pr +
                     grammar +
                     sc_alt +
@@ -280,7 +280,7 @@ var GLOSSAR = (function() {
             hielicht(
                 $('.sc', this), // UI element
                 items, // Scots words
-                r[i].item.en ? makeSingleArray(r[i].item.en) : null // Corresponding English words to highlight
+                r[i].en ? makeSingleArray(r[i].en) : null // Corresponding English words to highlight
             );
 
             // Past tense
@@ -289,7 +289,7 @@ var GLOSSAR = (function() {
                 hielicht(
                     $('.pt span', this),
                     items, // Scots words
-                    r[i].item.pt && r[i].item.pt.en ? makeSingleArray(r[i].item.pt.en) : null // Corresponding English past tense words to highlight
+                    r[i].pt && r[i].pt.en ? makeSingleArray(r[i].pt.en) : null // Corresponding English past tense words to highlight
                 );
             }
 
@@ -299,7 +299,7 @@ var GLOSSAR = (function() {
                 hielicht(
                     $('.neg span', this),
                     items,
-                    r[i].item.neg && r[i].item.neg.en ? makeSingleArray(r[i].item.neg.en) : null
+                    r[i].neg && r[i].neg.en ? makeSingleArray(r[i].neg.en) : null
                 );
             }
 

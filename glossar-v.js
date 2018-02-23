@@ -167,6 +167,63 @@ G.v.war.trigs = [].concat(
 );
 // wis end
 
+// v hae
+G.v.hae = {
+    sc: ['hae', 'hiv'],
+    en: 'have',
+    pr: ['hae', 'ha', 'a', 'hiv', 'huv', 'hev'],
+    neg: {
+        sc: ['haena', 'hinna', 'hivna'],
+        sc_alt: ['haenae', 'hinnae', 'hivnae'],
+        en: [
+            ['have not', 'haven\'t']
+        ],
+        tr: ['huvnae', 'huvna', 'havenae']
+    },
+    ps: { // Present singular
+        sc: 'haes',
+        sc_alt: 'hes',
+        en: 'has',
+        pr: ['hez', 'hiz', 'huz'],
+        tr: ['his', 'hus'],
+        neg: {
+            sc: ['haesna', 'haesnae'],
+            en: [
+                ['has not', 'hasn\'t']
+            ],
+            tr: ['hesna', 'hisnae', 'hisna', 'hiznae', 'husnae']
+        }
+    },
+    pt: {
+        sc: 'haed',
+        en: 'had',
+        pr: ['haid', 'hed', 'hid', 'hud'],
+        neg: {
+            sc: ['haedna', 'haednae'],
+            en: [
+                ['had not', 'hadn\'t']
+            ],
+            tr: ['hudnae', 'hidnae', 'hidna', 'hudna']
+        }
+    },
+    ptp: {
+        sc: ['haed', 'haen'],
+        en: 'had',
+        sc_alt: 'hed',
+        pr: ['haid', 'hed', 'hid', 'hud', 'hain']
+    }
+};
+G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
+    G.v.hae.sc, G.v.hae.en, G.v.hae.pr, // hae
+    G.v.hae.neg.sc, G.v.hae.neg.sc_alt, G.v.hae.neg.en, G.v.hae.neg.tr, // hae neg
+    G.v.hae.ps.sc, G.v.hae.ps.sc_alt, G.v.hae.ps.en, G.v.hae.ps.pr, G.v.hae.ps.tr, // hae present singular
+    G.v.hae.ps.neg.sc, G.v.hae.ps.neg.en, G.v.hae.ps.neg.tr, // hae neg present singular
+    G.v.hae.pt.sc, G.v.hae.pt.en, G.v.hae.pt.pr, // hae past tense
+    G.v.hae.pt.neg.sc, G.v.hae.pt.neg.en, G.v.hae.pt.neg.tr, // hae neg past tense
+    G.v.hae.ptp.sc, G.v.hae.ptp.sc_alt, G.v.hae.ptp.pr // hae past participle
+);
+// hae end
+
 /**
  * Add verbs (both complex and more simple) to dictionary object
  */
@@ -174,7 +231,7 @@ G.v.war.trigs = [].concat(
 G.dict.push({
         sc: 'adduce',
         en: ['cite as pertinent, quote as evidence'],
-        gr: ['v'],
+        gr: 'v',
         or: [
             [G.notes.or.l, 'adūcere']
         ]
@@ -324,7 +381,7 @@ G.dict.push({
         en: [
             ['instruct', 'enlighten']
         ],
-        gr: ['v'],
+        gr: 'v',
         or: [
             [G.notes.or.mf, 'edifier'],
             [G.notes.or.l, 'aedificāre']
@@ -335,7 +392,7 @@ G.dict.push({
         en: [
             ['belong to', 'pertain to', 'be appropriate to', 'be fitting or proper']
         ],
-        gr: ['v'],
+        gr: 'v',
         tr: ['effeirin tae', 'effeirin til'],
         hl: ['effeir', 'be fitting', 'be proper'],
         or: [
@@ -348,7 +405,7 @@ G.dict.push({
             ['pertaining to', 'belonging to'],
             ['in relation to', 'in proportion to', 'corresponding to']
         ],
-        tr: ['effeir', 'relating to'],
+        tr: ['effeir', 'relating to', 'according to'],
         hl: ['effeirin tae', 'effeirin til', 'relating to'],
         or: [
             [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
@@ -359,7 +416,7 @@ G.dict.push({
         en: [
             ['bring into a place', 'bring to a place', 'convey', 'import']
         ],
-        gr: ['v'],
+        gr: 'v',
         or: [
             [G.notes.or.ae, 'inbrengan']
         ]
@@ -370,7 +427,7 @@ G.dict.push({
             en: ['reminded', 'remembered', 'recollected', 'called to mind']
         },
         en: ['remind', ['remember', 'recollect', 'call to mind']],
-        gr: ['v'],
+        gr: 'v',
         or: [
             [G.notes.or.as, 'minde, mynd(e)'],
             [G.notes.or.ae, 'mynd']
@@ -415,10 +472,60 @@ G.dict.push({
             [G.notes.or.ms, 'fasch, fash'],
             [G.notes.or.mf, 'faschier']
         ]
+    }, // H
+    { // hae
+        sc: G.v.hae.sc,
+        pr: G.v.hae.pr,
+        en: G.v.hae.en,
+        tr: G.v.hae.trigs,
+        hl: G.v.hae.sc,
+        gr: 'v'
+    }, { // hae neg
+        sc: G.v.hae.neg.sc,
+        sc_alt: G.v.hae.neg.sc_alt,
+        pr: G.v.hae.neg.pr,
+        en: G.v.hae.neg.en,
+        tr: G.v.hae.trigs,
+        hl: [].concat(G.v.hae.neg.sc, G.v.hae.neg.tr),
+        gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    }, { // hae present singular
+        sc: G.v.hae.ps.sc,
+        sc_alt: G.v.hae.ps.sc_alt,
+        en: G.v.hae.ps.en,
+        pr: G.v.hae.ps.pr,
+        tr: G.v.hae.trigs,
+        hl: [].concat(G.v.hae.ps.sc, G.v.hae.ps.tr),
+        gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    }, { // hae present singular neg
+        sc: G.v.hae.ps.neg.sc,
+        en: G.v.hae.ps.neg.en,
+        tr: G.v.hae.trigs,
+        hl: [].concat(G.v.hae.ps.neg.sc, G.v.hae.ps.neg.tr),
+        gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    }, { // hae past tense
+        sc: G.v.hae.pt.sc,
+        pr: G.v.hae.pt.pr,
+        en: G.v.hae.pt.en,
+        tr: G.v.hae.trigs,
+        hl: [].concat(G.v.hae.pt.sc),
+        gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    }, { // hae neg past tense
+        sc: G.v.hae.pt.neg.sc,
+        en: G.v.hae.pt.neg.en,
+        tr: G.v.hae.trigs,
+        hl: [].concat(G.v.hae.pt.neg.sc, G.v.hae.pt.neg.tr),
+        gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    }, { // hae past par
+        sc: G.v.hae.ptp.sc,
+        en: G.v.hae.ptp.en,
+        pr: G.v.hae.ptp.pr,
+        tr: G.v.hae.trigs,
+        hl: [].concat(G.v.hae.ptp.sc, G.v.hae.ptp.pr),
+        gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
     }, { // O
         sc: 'ocht',
         en: 'ought',
-        gr: ['v']
+        gr: 'v'
     }, {
         sc: 'rax',
         en: [
@@ -438,11 +545,11 @@ G.dict.push({
         en: [
             ['clear', 'rid'], 'clarify'
         ],
-        gr: ['v']
+        gr: 'v'
     }, { // S
         sc: 'skare',
         en: 'share',
-        gr: ['v'],
+        gr: 'v',
         or: [
             [G.notes.or.as, 'skar, scar(e), schare'],
             ['?' + G.notes.or.anor, 'skera'],
@@ -455,7 +562,7 @@ G.dict.push({
         ],
         tr: ['ditter', 'doiter'],
         hl: 'swither',
-        gr: ['v'],
+        gr: 'v',
         or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms]
     }, {
         sc: 'uise',
@@ -463,7 +570,7 @@ G.dict.push({
         en: 'use',
         tr: ['yaise', 'uiss', 'yiss', 'yaize'],
         hl: ['yaise', 'yaize', 'uise', 'yaiz', 'ees'],
-        gr: ['v']
+        gr: 'v'
     }, {
         sc: 'upsteer',
         sc_alt: 'upsteir',
@@ -471,7 +578,7 @@ G.dict.push({
             ['stir up', 'throw into turmoil', 'stimulate', 'encourage', 'arouse', 'incite']
         ],
         tr: 'rouse',
-        gr: ['v']
+        gr: 'v'
     },
     // v wis
     {
@@ -481,7 +588,7 @@ G.dict.push({
         en: G.v.wis.en,
         tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
         hl: [].concat(G.v.wis.sc, G.v.wis.pr, G.v.wis.tr),
-        gr: ['v']
+        gr: 'v'
     }, { // wis neg
         sc: G.v.wis.neg.sc,
         en: G.v.wis.neg.en,
@@ -498,7 +605,7 @@ G.dict.push({
         en: G.v.war.en,
         tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
         hl: [].concat(G.v.war.sc, G.v.war.pr),
-        gr: ['v']
+        gr: 'v'
     }, { // war neg
         sc: G.v.war.neg.sc,
         en: G.v.war.neg.en,
