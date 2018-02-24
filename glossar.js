@@ -86,7 +86,7 @@ G.dict = [{
         tr: ['whae', 'whay', 'whey'],
         gr: 'pron'
     },
-    {
+    { // N
         sc: 'naewey',
         en: [
             ['on no account', 'nowhere', 'no way']
@@ -97,6 +97,17 @@ G.dict = [{
         sc: 'naewhaur',
         en: 'nowhere',
         tr: ['naewhere']
+    },
+    {
+        sc: 'nor',
+        pr: ['naur', 'nir', 'nar'],
+        en: ['than', 'and not', '(but) that'],
+        gr: ['conj'],
+        tr: ['but that'],
+        or: [
+            [G.notes.or.as, 'nor'],
+            [G.notes.or.me, 'nor']
+        ]
     },
     {
         sc: 'ane',

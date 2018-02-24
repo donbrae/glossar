@@ -50,13 +50,14 @@ ul.or {
 }
 ul.or .list-inline-item {
     margin: 0;
-    padding: 0 2px 0 0;
-}
-ul.or .list-inline-item:last-child {
-    padding-right: 0;
+    padding: 0 1px 0 0;
 }
 ul.or .list-inline-item span, div.or-container span {
     font-style: italic;
+    padding-right: 1px;
+}
+ul.or .list-inline-item:last-child {
+    padding-right: 0;
 }
 ol {
     margin-top: 3px;

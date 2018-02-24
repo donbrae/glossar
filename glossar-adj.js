@@ -186,7 +186,7 @@ G.dict.push({ // A
         [G.notes.or.me, 'pertinent'],
         [G.notes.or.l, 'pertinentia']
     ]
-}, {
+}, { // R
     sc: 'ragglish',
     en: [
         ['erratic'],
@@ -196,6 +196,29 @@ G.dict.push({ // A
     ],
     tr: ['boisterous', 'uncertain'],
     gr: ['adj']
+}, { // S
+    sc: 'shuir',
+    pr: ['shair', 'shör', 'shür', 'sheer', 'seer'],
+    en: [
+        ['efficacious', 'effective'],
+        ['safe', 'secure', 'strong', 'reliable'],
+        ['accurate', 'true', 'assured', 'convinced']
+    ],
+    tr: 'sure',
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'sure, suir(e), seur(e), s(c)hur(e)'],
+        [G.notes.or.an, 'sur']
+    ]
+}, {
+    sc: 'shuirly',
+    en: [
+        ['securely', 'safely'],
+        ['with assurance, certainty or conviction', 'undoubtedly']
+    ],
+    tr: ['with certainty', 'with conviction', 'shairly', 'sheerly', 'seerly', 'surely'],
+    gr: 'adv',
+    or: 'see adj'
 }, {
     sc: ['waster', 'wester'],
     en: ['western', 'the more westerly of two places'],

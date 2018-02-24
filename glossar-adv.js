@@ -136,6 +136,14 @@ G.dict.push({ // A
         ['somewhat', 'rather', 'in some way', 'to some degree']
     ],
     gr: ['adv']
+}, { // S
+    sc: 'shuir',
+    en: [
+        ['surely', 'indeed', 'for certain']
+    ],
+    gr: ['adv'],
+    tr: ['shair', 'shör', 'shür', 'sheer', 'seer', 'sure'],
+    or: 'see adj'
 }, {
     sc: 'than',
     pr: ['than', 'thaun', 'thin', 'dan'],

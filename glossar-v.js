@@ -421,6 +421,20 @@ G.dict.push({
             [G.notes.or.ae, 'inbrengan']
         ]
     }, { // M
+        sc: 'maun',
+        pr: ['maun', 'mon', 'man', 'mun'],
+        en: 'must',
+        neg: {
+            sc: ['maunna', 'maunnae'],
+            en: ['must not', 'mustn\'t']
+        },
+        gr: ['v'],
+        or: [
+            [G.notes.or.as, 'man'],
+            [G.notes.or.me + ' (afore 1400-50)', 'man'],
+            [G.notes.or.anor, 'muna > man']
+        ]
+    }, {
         sc: 'mind',
         pt: {
             sc: 'mindit',

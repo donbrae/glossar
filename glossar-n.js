@@ -55,6 +55,18 @@ G.dict.push({
     en: 'a deputy',
     gr: ['n'],
     tr: 'deputy',
+}, { // E
+    sc: 'environs',
+    en: [
+        ['the environment', 'surrounds']
+    ],
+    tr: 'environment',
+    gr: ['n'],
+    or: [
+        '?uissage as n frae Modren English',
+        G.notes.or.as + ' haes the v <em>enveron, inviroun, inveroun</em> <em>(to encircle, surround)</em>', ['frae the ' + G.notes.or.me, 'envirounen'],
+        [G.notes.or.af, 'environner']
+    ]
 }, { // H
     sc: 'hauden gaun',
     en: 'continuation',
@@ -81,6 +93,14 @@ G.dict.push({
         [G.notes.or.ae, 'mete']
     ]
 }, { // M
+    sc: 'maun',
+    pr: 'maun',
+    en: [
+        ['compulsion', 'necessity']
+    ],
+    gr: 'n',
+    or: 'see v'
+}, {
     sc: 'mind',
     def: 'the mind; that whilk is brocht back tae mind or mindit, memory, a mindin',
     gr: ['n'],
