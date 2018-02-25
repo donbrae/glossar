@@ -114,8 +114,21 @@ G.dict.push({
     en: ['Czech Republic, Czechia']
 }, {
     sc: 'Denmark',
-    en: 'Denmark',
     def: 'kintra in Scandinaivie'
+}, {
+    sc: 'Dens',
+    def: ['the Scandinaivie leid spoken in Denmark, an in pairts o Greenland an the Faerae Isles', ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']],
+    tr: ['dane', 'danish'],
+    gr: ['n'],
+    or: 'see adj'
+}, {
+    sc: 'Dens',
+    def: 'anent Denmark, its fowk, or their leid',
+    tr: 'danish',
+    gr: ['adj'],
+    or: [
+        [G.notes.or.ae, 'denisc']
+    ]
 }, {
     sc: 'Easter Seas',
     en: 'Baltic Sea'
@@ -216,7 +229,8 @@ G.dict.push({
     sc: 'Neveron',
     en: 'Basque Country'
 }, {
-    sc: 'Norawa',
+    sc: 'Norrowa',
+    sc_alt: 'Norroway',
     en: 'Norway',
     def: 'kintra in Scandinaivie'
 }, {
@@ -292,9 +306,31 @@ G.dict.push({
     or: G.notes.b
 }, {
     sc: 'Swaden',
-    en: 'Sweden',
-    gr: 'pn',
-    def: 'kintra in Scandinaivie'
+    def: 'kintra in Scandinaivie',
+    tr: 'sweden',
+    gr: 'n',
+    or: [
+        [G.notes.or.mlg + ', ' + G.notes.or.md, 'Sweden']
+    ]
+}, {
+    sc: 'Swade',
+    def: [
+        ['a body that bides in, or is frae, Swaden', 'someane o Swades strynd'], 'a kind o neep'
+    ],
+    tr: 'swede',
+    gr: ['n']
+}, {
+    sc: 'Swades',
+    sc_alt: 'Swaidish',
+    tr: 'swedish',
+    def: 'anent Swaden, its fowk, or their leid',
+    gr: ['adj']
+}, {
+    sc: 'Swades',
+    sc_alt: 'Swaidish',
+    tr: 'swedish',
+    def: 'the Scandinaivie leid o Swaden, forby spoken in pairts o Finland',
+    gr: ['n']
 }, {
     sc: 'Swisserland',
     en: 'Switzerland'

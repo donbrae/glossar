@@ -109,7 +109,7 @@ var GLOSSAR = (function() {
             $('#result').html('');
             $.each(r, function() {
                 grammar = this.gr ? '<span class="grammar">' + [].concat(this.gr).join('; ') + '</span> ' : ''; // Grammar
-                sc_alt = this.sc_alt ? '<div class="sc-alt">(alt. spellins: <span>' + [].concat(this.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
+                sc_alt = this.sc_alt ? '<div class="sc-alt">(alt Scots maks: <span>' + [].concat(this.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
                 en = this.en ? formatMultipleMeanings(this.en) : ''; // English
                 pr = this.pr ? '<span class="pr">(‘' + [].concat(this.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
                 def = this.def ? '<span class="def">' + [].concat(this.def).join('; ') + '</span>' : ''; // Definition

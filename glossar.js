@@ -22,7 +22,8 @@ G.notes = {
         anor: 'Auld Norse',
         as: 'Aulder Scots',
         md: 'Middle Dutch',
-        mode: 'Modren English'
+        mode: 'Modren English',
+        mlg: 'Middle Laich German'
     }
 };
 
