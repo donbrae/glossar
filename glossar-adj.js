@@ -179,7 +179,8 @@ G.dict.push({ // A
     en: [
         ['belonging or relevant to', 'appropriate']
     ],
-    tr: ['belonging to', 'relevant to', 'relevant'],
+    tr: ['belonging to', 'relevant to', 'relevant', 'pertain'],
+    hl: ['belonging to', 'relevant to', 'relevant', 'pertinent'],
     gr: ['adj'],
     or: [
         [G.notes.or.as, 'pertinent'],

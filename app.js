@@ -96,7 +96,7 @@ var GLOSSAR = (function() {
 
     /**
      * Prints data on screen
-     * @param {Object} r - Algorhythm
+     * @param {Object} r - Algorithm
      * @returns {}
      */
     function print(r) {

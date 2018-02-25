@@ -231,6 +231,8 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
 G.dict.push({
         sc: 'adduce',
         en: ['cite as pertinent, quote as evidence'],
+        tr: 'pertain',
+        hl: 'adduce',
         gr: 'v',
         or: [
             [G.notes.or.l, 'adūcere']
