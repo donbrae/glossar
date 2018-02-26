@@ -300,6 +300,28 @@ G.dict.push({
         ],
         gr: 'v',
         or: 'see n'
+    }, { // E
+        sc: 'ettle',
+        en: [
+            ['intend', 'plan', 'propose'],
+            'take aim at', ['attempt', 'venture'],
+            'desire very much'
+        ],
+        tr: ['aim', 'desire', 'ettlin'],
+        hl: ['aim', 'desire'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'ettle, ettill'],
+            [G.notes.or.anor, 'ætla']
+        ]
+    }, {
+        sc: 'ettlin',
+        en: [
+            ['endeavouring', 'trying']
+        ],
+        tr: ['attempting', 'ettle'],
+        hl: ['ettlin'],
+        gr: ['v']
     },
     // v gae
     { // v gae
@@ -368,13 +390,12 @@ G.dict.push({
         pt: {
             sc: 'dounlaidit',
             en: 'downloaded',
-            tr: ['doonloadit', 'downlaidit']
+            tr: 'doonloadit'
         },
         def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
-        en: 'download',
         pr: 'doonlaid',
         gr: ['v', 'n'],
-        tr: ['doonload', 'downlaid'],
+        tr: ['doonload', 'download'],
         or: [
             [G.notes.or.mode, 'download']
         ]
@@ -450,7 +471,7 @@ G.dict.push({
         ]
     }, {
         sc: 'uplaid',
-        en: 'upload',
+        tr: 'upload',
         pt: {
             sc: 'uplaidit',
             en: 'uploaded',

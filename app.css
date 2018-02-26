@@ -89,10 +89,10 @@ h1 {
 .grammar {
     padding: 0 4px;
 }
-.en {
+.en, .def {
     padding: 1px 4px 0 4px;
 }
-div.en, .def {
+div.en, div.def {
     padding: 4px 0 0 4px;
 }
 .pt, .neg {
@@ -106,7 +106,7 @@ div.en, .def {
 .pt span, .neg span {
     padding: 1px 4px;
 }
-.def, .pt, .neg {
+.pt, .neg {
     display: block;
 }
 .sc, .sc-alt span, .pt span, .neg span {

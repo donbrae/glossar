@@ -117,7 +117,10 @@ G.dict.push({
     def: 'kintra in Scandinaivie'
 }, {
     sc: 'Dens',
-    def: ['the Scandinaivie leid spoken in Denmark, an in pairts o Greenland an the Faerae Isles', ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']],
+    def: ['the Scandinaivie leid spoken in Denmark an in pairts o Greenland an the Faerae Isles', ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']],
+    // def: [
+    //     ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']
+    // ],
     tr: ['dane', 'danish'],
     gr: ['n'],
     or: 'see adj'
@@ -141,7 +144,7 @@ G.dict.push({
     en: 'Estonia'
 }, {
     sc: 'England',
-    en: 'England'
+    def: 'a kintra in southren Great Brítain that is pairt o the Unitit Kinrick'
 }, {
     sc: 'Europe',
     en: 'Europe'
@@ -186,7 +189,8 @@ G.dict.push({
     en: 'India'
 }, {
     sc: 'Ireland',
-    en: 'Ireland'
+    def: ['a kintra comprehendin about fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, tae the wast o Great Brítain'],
+    tr: ['Republic o Ireland', 'Republic of Ireland']
 }, {
     sc: 'Italy',
     en: 'Italy'
@@ -244,7 +248,8 @@ G.dict.push({
     en: 'North Sea'
 }, {
     sc: 'Northren Ireland',
-    en: 'Northern Ireland'
+    def: 'yon pairt o the Unitit Kinrick locatit in the north-east pairt o Ireland',
+    tr: 'Northern Ireland'
 }, {
     sc: 'Poland',
     en: 'Poland'
@@ -270,7 +275,7 @@ G.dict.push({
     or: G.notes.b
 }, {
     sc: 'Scotland',
-    en: 'Scotland'
+    def: 'a kintra in northren Great Brítain that is pairt o the Unitit Kinrick'
 }, {
     sc: 'Serbie',
     en: 'Serbia',
@@ -349,7 +354,7 @@ G.dict.push({
     en: 'Hungary'
 }, {
     sc: 'Wales',
-    en: 'Wales'
+    def: 'a kintra in Great Brítain that is pairt o the Unitit Kinrick'
 }, {
     sc: 'warld',
     en: 'world'

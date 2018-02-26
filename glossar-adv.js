@@ -23,6 +23,11 @@ G.dict.push({ // A
     hl: 'about',
     gr: ['prep', 'adv']
 }, {
+    sc: 'abuin',
+    pr: ['abön', 'abün', 'abin', 'abain', 'abeen'],
+    en: 'above',
+    gr: ['adv', 'prep']
+}, {
     sc: 'aft',
     en: [
         ['often', 'oft']

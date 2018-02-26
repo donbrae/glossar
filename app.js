@@ -110,9 +110,9 @@ var GLOSSAR = (function() {
             $.each(r, function() {
                 grammar = this.gr ? '<span class="grammar">' + [].concat(this.gr).join('; ') + '</span> ' : ''; // Grammar
                 sc_alt = this.sc_alt ? '<div class="sc-alt">(alt Scots maks: <span>' + [].concat(this.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
-                en = this.en ? formatMultipleMeanings(this.en) : ''; // English
+                en = this.en ? formatMultipleMeanings(this.en, ',', 'en') : ''; // English
                 pr = this.pr ? '<span class="pr">(‘' + [].concat(this.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
-                def = this.def ? '<span class="def">' + [].concat(this.def).join('; ') + '</span>' : ''; // Definition
+                def = this.def ? formatMultipleMeanings(this.def, ';', 'def') : ''; // Definition
                 or = this.or ? formatOrigin(this.or) : ''; // Origin
                 hl_sc_alt = this.sc_alt ? [].concat(this.sc_alt) : []; // Make sure to highlight any alternative Scots words
 
@@ -225,26 +225,28 @@ var GLOSSAR = (function() {
     }
 
     /**
-     * For English words. Creates an <ol> out of an array, or, if passed only a string, returns the original string
-     * @param {word} array
+     * For English words and definitions. Creates an <ol> out of an array, or, if passed only a string, returns the original string
+     * @param {Array} word
+     * @param {String} separator - e.g. ';'
+     * @param {String} cl - class, e.g. 'en'
      * @returns {String}
      */
-    function formatMultipleMeanings(word) {
+    function formatMultipleMeanings(word, separator, cl) {
         var words = [].concat(word), // Make array in case we're passed a string
             ol = [];
 
         $.each(words, function() {
             if (this.join) { // If an array
-                ol.push(this.join(', ')); // Join array items into a single string
+                ol.push(this.join(separator + ' ')); // Join array items into a single string
             } else { // If a string
                 ol.push(this);
             }
         });
 
         if (ol.length > 1) { // There are multiple meanings
-            return '<ol class="en"><li>' + ol.join('</li><li>') + '</li></ol>';
+            return '<ol class="' + cl + '"><li>' + ol.join('</li><li>') + '</li></ol>';
         } else { // If there is just one meaning
-            return '<div class="en">' + ol[0] + '</div>';
+            return '<div class="' + cl + '">' + ol[0] + '</div>';
         }
     }
 

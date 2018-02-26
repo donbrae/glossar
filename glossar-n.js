@@ -56,6 +56,13 @@ G.dict.push({
     gr: ['n'],
     tr: 'deputy',
 }, { // E
+    sc: 'eneuch',
+    pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
+    tr: 'sufficient',
+    hl: 'eneuch',
+    en: 'enough',
+    gr: ['n', 'adj', 'adv']
+}, {
     sc: 'environs',
     en: [
         ['the environment', 'surrounds']
@@ -66,6 +73,33 @@ G.dict.push({
         '?uissage as n frae Modren English',
         G.notes.or.as + ' haes the v <em>enveron, inviroun, inveroun</em> <em>(to encircle, surround)</em>', ['frae the ' + G.notes.or.me, 'envirounen'],
         [G.notes.or.af, 'environner']
+    ]
+}, {
+    sc: 'ettle',
+    en: [
+        ['one\'s aim or purpose', 'one\'s design or object'],
+        ['an effort', 'an attempt'],
+        ['an ambition', 'a desire']
+    ],
+    tr: ['objective', 'effort', 'attempt', 'aim', 'purpose', 'design', 'object', 'ambition', 'desire', 'ettlin'],
+    hl: ['objective', 'effort', 'attempt', 'aim', 'purpose', 'design', 'object', 'ambition', 'desire'],
+    gr: ['n'],
+    or: 'see v'
+}, {
+    sc: 'ettlin',
+    en: [
+        ['purpose', 'intention', 'effort', 'endeavour', 'eagerness', 'ambition']
+    ],
+    tr: 'ettle',
+    hl: 'ettlin',
+    gr: ['n']
+}, {
+    sc: 'fowk',
+    pr: ['fuowk', 'foak'],
+    en: 'people',
+    gr: ['n'],
+    or: [
+        [G.notes.or.ae, 'folc']
     ]
 }, { // H
     sc: 'hauden gaun',
