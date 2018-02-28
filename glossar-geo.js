@@ -179,6 +179,10 @@ G.dict.push({
     sc: 'Girth o the North Pole',
     en: 'Arctic Circle'
 }, {
+    sc: 'Gran Canarie',
+    en: 'Gran Canaria',
+    or: G.notes.a
+}, {
     sc: 'Greece',
     en: 'Greece'
 }, {

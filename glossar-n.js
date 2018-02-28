@@ -126,6 +126,19 @@ G.dict.push({
         [G.notes.or.as, 'mete, meit, met, mait, meat'],
         [G.notes.or.ae, 'mete']
     ]
+}, { // I
+    sc: 'ilk',
+    en: [
+        ['a family', 'a race', 'a kind', 'a type']
+    ],
+    tr: ['family', 'race', 'kind', 'type'],
+    gr: ['n']
+}, {
+    sc: ['ilkane', 'ilk ane'],
+    en: [
+        ['each one', 'everyone']
+    ],
+    gr: ['pron']
 }, { // M
     sc: 'maun',
     pr: 'maun',

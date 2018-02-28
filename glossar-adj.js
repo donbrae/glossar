@@ -148,6 +148,27 @@ G.dict.push({ // A
     tr: G.adj.guid.trigs,
     pr: G.adj.guid.pr,
     gr: 'adj'
+}, { // I
+    sc: 'ilk',
+    en: 'same',
+    gr: ['adj']
+}, {
+    sc: 'ilka',
+    en: [
+        ['each', 'every']
+    ],
+    gr: ['adj']
+}, { // J
+    sc: 'juist',
+    en: [
+        ['equitable', 'fair', 'lawful', 'justified'],
+        ['exact', 'precise', 'correct', 'accurate']
+    ],
+    tr: ['just', 'jist'],
+    gr: ['adj'],
+    or: [
+        [G.notes.or.me, 'just']
+    ]
 }, {
     sc: 'depute',
     gr: ['adj'],

@@ -118,6 +118,18 @@ G.dict = [{
     or: [
         [G.notes.or.lms + ' haes', 'gin']
     ]
+}, { // I
+    sc: 'ilk',
+    en: [
+        ['each one', 'every one']
+    ],
+    gr: ['pron']
+}, {
+    sc: 'ilka ane',
+    en: [
+        ['each one', 'everyone']
+    ],
+    gr: 'pron'
 }, {
     sc: ['wha', 'fa'],
     pr: ['whah', 'whau', 'whae', 'whiu', 'fa', 'a', 'wha'],

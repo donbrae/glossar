@@ -379,7 +379,9 @@ G.dict.push({
         sc: 'jalouse',
         en: ['suspect', ['suppose', 'guess', 'surmise']],
         pr: 'jaLooz',
-        // > pt: 'jaloused',
+        pt: {
+            sc: 'jaloused'
+        },
         gr: 'v',
         tr: ['jaloose'],
         or: [
@@ -434,8 +436,103 @@ G.dict.push({
             [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
         ]
     }, {
+        sc: 'haud',
+        pr: ['haud', 'hod', 'hud', 'had'],
+        en: [
+            ['have', 'keep in the hand', 'hold onto', 'possess'],
+            ['confine', 'detain', 'hinder', 'restrain'],
+            ['continue as before'],
+            'arrange an event', ['continue', 'proceed', 'keep to a path or route'],
+            ['observe', 'adhere to', 'maintain'],
+            ['contain', 'keep within'],
+            ['restrain oneself', 'prevent']
+        ],
+        pt: {
+            sc: ['haudit', 'held']
+        },
+        gr: 'v'
+    }, {
+        sc: 'hauden',
+        en: 'be obliged or required to do something',
+        tr: ['obliged', 'required'],
+        gr: ['pp o v <span>haud</span>']
+    }, {
+        sc: 'haud aff',
+        en: 'keep off or away',
+        tr: ['keep off', 'keep away'],
+        gr: 'phrasal v'
+    }, {
+        sc: 'haud at',
+        en: [
+            ['persist in', 'keep at']
+        ],
+        tr: ['haud at', 'persist at', 'persevere at'],
+        gr: 'phrasal v'
+    }, {
+        sc: 'haud awa',
+        en: [
+            ['keep away', 'keep out or off'],
+            ['continue on one\'s way', 'go away']
+        ],
+        tr: ['keep out', 'keep off', 'continue'],
+        gr: 'phrasal v'
+    }, {
+        sc: 'haud for',
+        en: [
+            ['aim at', 'make for']
+        ],
+        gr: 'phrasal v'
+    }, {
+        sc: 'haud forrit',
+        en: 'continue to improve (in health)',
+        tr: 'continue to improve',
+        gr: 'phrasal v'
+    }, {
+        sc: 'haud gaun',
+        en: 'keep going',
+        gr: 'phrasal v'
+    }, {
+        sc: 'haud haul',
+        en: [
+            ['offer resistance', 'prop', 'support']
+        ],
+        gr: 'phrasal v'
+    }, {
+        sc: 'haud in',
+        en: [
+            ['confine', 'retain', 'restrain', 'keep in order'],
+            ['save', 'economize', 'be miserly']
+        ],
+        gr: 'phrasal v'
+    }, {
+        sc: 'haud in about',
+        pr: 'haud in aboot',
+        en: [
+            ['keep in order', 'restrain', 'control'],
+            ['bring', 'come closer']
+        ],
+        gr: ['phrasal v']
+    }, {
+        sc: 'haud in wi',
+        en: [
+            ['keep in with', 'curry favour with'],
+        ],
+        gr: ['phrasal v']
+    }, {
+        sc: 'haud on',
+        en: [
+            ['carry on', 'continue'],
+        ],
+        gr: ['phrasal v']
+    }, {
+        sc: 'haud on',
+        en: 'stop',
+        gr: ['imp phrasal v']
+    }, {
         sc: 'inbring',
-        pt: 'inbrocht',
+        pt: {
+            sc: 'inbrocht'
+        },
         en: [
             ['bring into a place', 'bring to a place', 'convey', 'import']
         ],

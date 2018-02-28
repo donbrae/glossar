@@ -121,7 +121,7 @@ var GLOSSAR = (function() {
                  */
 
                 // Simpler Verbs
-                pt_arr = this.pt && this.pt.en ? [].concat(this.pt.en) : []; // Any english past tense
+                pt_arr = this.pt && this.pt.sc ? [].concat(this.pt.sc) : []; // Any Scots past tense
                 pt_arr = this.pt && this.pt.tr ? pt_arr.concat(this.pt.tr) : pt_arr; // Any past tense triggers
                 neg = this.neg ? '<span class="neg">neg. <span>' + [].concat(this.neg.sc).join(', ') + '</span></span>' : ''; // Negative
 

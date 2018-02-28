@@ -104,6 +104,17 @@ G.dict.push({ // A
     sc: 'hinderly',
     en: 'eventually',
     gr: ['adv']
+}, { // J
+    sc: 'juist',
+    pr: ['jöst', 'jüst', 'düst', 'joost', 'doost', 'jist', 'dist', 'jeest'],
+    en: [
+        ['exactly', 'accurately', 'correctly', 'directly'],
+        ['at this time', 'just now', 'precisely'],
+        ['only', 'merely', 'barely']
+    ],
+    tr: 'just',
+    gr: ['adv'],
+    or: 'see adj'
 }, {
     sc: 'guid',
     en: [
