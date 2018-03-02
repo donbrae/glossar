@@ -98,7 +98,7 @@ h1 {
 div.en, div.def {
     padding: 4px 0 0 4px;
 }
-.pt, .neg {
+.pt, .pp, .neg {
     padding-left: 4px;
     line-height: 1.4;
 }
@@ -106,13 +106,13 @@ div.en, div.def {
     padding-left: 0;
     line-height: 1.4;
 }
-.pt span, .neg span {
+.pt span, .pp span, .neg span {
     padding: 1px 4px;
 }
-.pt, .neg {
+.pt, .pp, .neg {
     display: block;
 }
-.sc, .sc-alt span, .pt span, .neg span {
+.sc, .sc-alt span, .pt span, .pp span, .neg span {
     font-weight: bold;
 }
 .en {

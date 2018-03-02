@@ -230,6 +230,14 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
 
 G.dict.push({
         sc: 'accress',
+        pt: {
+            sc: 'accressed',
+            en: ['increased', 'accrued', 'grown']
+        },
+        pp: {
+            sc: 'accressed',
+            en: ['increased', 'accrued', 'grown']
+        },
         en: ['accrue', ['increase', 'grow']],
         gr: 'v',
         tr: 'added',

@@ -101,7 +101,7 @@ var GLOSSAR = (function() {
      */
     function print(r) {
         var grammar, hl_sc_alt,
-            hl, hl_all, $li, def, en, pr, pt, pt_arr, neg, or;
+            hl, hl_all, $li, def, en, pr, pt, pt_arr, pp, pp_arr, neg, or;
 
         console.log(r);
 
@@ -123,6 +123,8 @@ var GLOSSAR = (function() {
                 // Simpler Verbs
                 pt_arr = this.pt && this.pt.sc ? [].concat(this.pt.sc) : []; // Any Scots past tense
                 pt_arr = this.pt && this.pt.tr ? pt_arr.concat(this.pt.tr) : pt_arr; // Any past tense triggers
+
+                pp_arr = this.pp && this.pp.sc ? [].concat(this.pp.sc) : []; // Any Scots past participle
                 neg = this.neg ? '<span class="neg">neg. <span>' + [].concat(this.neg.sc).join(', ') + '</span></span>' : ''; // Negative
 
                 if (this.hl) { // Specific trigger highlight words
@@ -149,11 +151,14 @@ var GLOSSAR = (function() {
 
                 pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + [].concat(this.pt.sc).join(', ') + '</span></span>' : ''; // Past tense (simpler verbs)
 
+                pp = pp_arr.length ? '<span class="pp">pp. <span data-hl="' + pp_arr.join(',') + '">' + [].concat(this.pp.sc).join(', ') + '</span></span>' : ''; // Past participle (simpler verbs)
+
                 $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
                     pr +
                     grammar +
                     sc_alt +
                     pt +
+                    pp +
                     neg +
                     def +
                     en +
@@ -270,7 +275,7 @@ var GLOSSAR = (function() {
         }
 
         // Clear any highlights
-        $('.sc, .pt span', '#result').each(function() {
+        $('.sc, .pt span, .pp span', '#result').each(function() {
             $(this).removeClass('hl');
         });
 
@@ -292,6 +297,16 @@ var GLOSSAR = (function() {
                     $('.pt span', this),
                     items, // Scots words
                     r[i].pt && r[i].pt.en ? makeSingleArray(r[i].pt.en) : null // Corresponding English past tense words to highlight
+                );
+            }
+
+            // Past participle
+            if ($('.pp', this).length) {
+                items = $('.pp span', this).text().split(', ');
+                hielicht(
+                    $('.pp span', this),
+                    items, // Scots words
+                    r[i].pp && r[i].pp.en ? makeSingleArray(r[i].pp.en) : null // Corresponding English past participle words to highlight
                 );
             }
 
