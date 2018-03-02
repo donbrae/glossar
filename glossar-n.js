@@ -9,10 +9,18 @@ G.n = {}; // More complex nouns
  */
 
 G.dict.push({
+    sc: 'annualrent',
+    def: ['rent peyed ilka year', 'interest on borraed siller'],
+    tr: ['interest', 'annual rent'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'annualrent, annual rent']
+    ]
+}, {
     sc: 'associe',
     pr: 'aSosee',
     en: 'association',
-    gr: ['n'],
+    gr: 'n',
     or: [
         ['?' + G.notes.or.f, 'associé']
     ]
@@ -20,7 +28,7 @@ G.dict.push({
     sc: 'certificat',
     sc_alt: 'certificate',
     en: 'certificate',
-    gr: ['n'],
+    gr: 'n',
     or: [
         [G.notes.or.ms, 'certificat'],
         [G.notes.or.mf, 'certificat']
@@ -29,11 +37,30 @@ G.dict.push({
     sc: 'claes',
     en: 'clothes',
 }, {
+    sc: 'componer',
+    en: 'composer',
+    gr: 'n',
+    or: 'see the v <span>tae compone</span>'
+}, {
+    sc: 'composition',
+    en: [
+        ['<span>law</span> a sum paid in settlement of a claim, dispute or obligation; the amount fixed by mutual agreement'],
+        ['a piece of writing; a work of literature, music or art'],
+        ['a combination of elements', 'a mixture']
+    ],
+    tr: 'settlement',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'compositioun, composicioun'],
+        [G.notes.or.me, 'composicioun'],
+        [G.notes.or.l, 'compositio']
+    ]
+}, {
     sc: 'dask',
     en: [
         ['desk', 'seat', 'church pew']
     ],
-    gr: ['n'],
+    gr: 'n',
     or: [
         [G.notes.or.as + ' (frae 1530)', 'dask, daske'],
         ['possible influence o ' + G.notes.or.as + ' <em>dais, das</em>, frae the ' + G.notes.or.nfd, 'dais']
@@ -53,7 +80,7 @@ G.dict.push({
 }, {
     sc: 'depute',
     en: 'a deputy',
-    gr: ['n'],
+    gr: 'n',
     tr: 'deputy',
 }, { // E
     sc: 'eneuch',
@@ -68,7 +95,7 @@ G.dict.push({
         ['the environment', 'surrounds']
     ],
     tr: 'environment',
-    gr: ['n'],
+    gr: 'n',
     or: [
         '?uissage as n frae Modren English',
         G.notes.or.as + ' haes the v <em>enveron, inviroun, inveroun</em> <em>(to encircle, surround)</em>', ['frae the ' + G.notes.or.me, 'envirounen'],
@@ -83,7 +110,7 @@ G.dict.push({
     ],
     tr: ['objective', 'effort', 'attempt', 'aim', 'purpose', 'design', 'object', 'ambition', 'desire', 'ettlin'],
     hl: ['objective', 'effort', 'attempt', 'aim', 'purpose', 'design', 'object', 'ambition', 'desire'],
-    gr: ['n'],
+    gr: 'n',
     or: 'see v'
 }, {
     sc: 'ettlin',
@@ -92,19 +119,19 @@ G.dict.push({
     ],
     tr: 'ettle',
     hl: 'ettlin',
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: 'fowk',
     pr: ['fuowk', 'foak'],
     en: 'people',
-    gr: ['n'],
+    gr: 'n',
     or: [
         [G.notes.or.ae, 'folc']
     ]
 }, { // H
     sc: 'hauden gaun',
     en: 'continuation',
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: 'hous',
     sc_alt: ['hoose'],
@@ -121,7 +148,7 @@ G.dict.push({
         'meat'
     ],
     tr: ['meal', 'mait'],
-    gr: ['n'],
+    gr: 'n',
     or: [
         [G.notes.or.as, 'mete, meit, met, mait, meat'],
         [G.notes.or.ae, 'mete']
@@ -132,13 +159,18 @@ G.dict.push({
         ['a family', 'a race', 'a kind', 'a type']
     ],
     tr: ['family', 'race', 'kind', 'type'],
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: ['ilkane', 'ilk ane'],
     en: [
         ['each one', 'everyone']
     ],
     gr: ['pron']
+}, {
+    sc: 'accress',
+    en: 'increase',
+    gr: 'n',
+    or: 'see v'
 }, { // M
     sc: 'maun',
     pr: 'maun',
@@ -150,7 +182,7 @@ G.dict.push({
 }, {
     sc: 'mind',
     def: 'the mind; that whilk is brocht back tae mind or mindit, memory, a mindin',
-    gr: ['n'],
+    gr: 'n',
     or: 'see v'
 }, {
     sc: 'mindin',
@@ -158,39 +190,48 @@ G.dict.push({
         ['a memory', 'a recollection']
     ],
     tr: ['memory', 'recollection'],
-    gr: ['n']
+    gr: 'n'
 }, { // N
     sc: 'nat',
     def: 'an ocht derogatory term for nationalist; a body that’s for Scotland’s polítical independence',
     gr: ['n', 'informal', 'derogatory'],
+}, {
+    sc: 'onybody',
+    en: 'anybody',
+    tr: ['oniebody', 'emdie', 'emdy'],
+    gr: 'n'
 }, { // O
     sc: 'origin',
     en: 'origin',
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: 'ocht',
     en: [
         ['aught', 'anything'], 'nothing'
     ],
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: 'uiss',
     pr: ['yös', 'yis', 'ees', 'yoos'],
     tr: ['yiss', 'uise', 'yaise', 'yaize'],
     hl: ['uiss', 'yiss', 'ees'],
     en: 'use',
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: 'roaster',
     def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o thaimsels',
     gr: ['n', 'informal', 'derogatory']
 }, { // S
+    sc: 'signatur',
+    en: 'signature',
+    gr: 'n'
+}, {
     sc: 'springheid',
     pr: 'springheed',
     en: [
         ['source', 'origin']
     ],
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: 'swither',
     en: [
@@ -201,13 +242,13 @@ G.dict.push({
     ],
     tr: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle', 'ditter', 'doiter'],
     hl: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle'],
-    gr: ['n'],
+    gr: 'n',
     or: 'see v'
 }, {
     sc: 'toun',
     pr: 'toon',
     en: 'town',
-    gr: ['n'],
+    gr: 'n',
     or: [
         [G.notes.or.as, 'toun, town(e), ton(e)'],
         [G.notes.or.ae, 'tūn']

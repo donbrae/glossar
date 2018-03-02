@@ -23,7 +23,8 @@ G.notes = {
         as: 'Aulder Scots',
         md: 'Middle Dutch',
         mode: 'Modren English',
-        mlg: 'Middle Laich German'
+        mlg: 'Middle Laich German',
+        rl: 'Roman Law'
     }
 };
 
@@ -163,6 +164,16 @@ G.dict = [{
     gr: 'cardinal number',
     tr: ['ae', 'ain', 'ann', 'yae', 'yay'],
     hl: ['ane', 'ain', 'yin', 'wan', 'een', 'ann']
+}, {
+    sc: 'ony',
+    en: [
+        ['any', 'either']
+    ],
+    gr: ['pron']
+}, { // O
+    sc: 'onyane',
+    en: 'anyone',
+    gr: ['pron']
 }, {
     sc: 'our',
     sc_alt: 'oor',

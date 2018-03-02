@@ -229,6 +229,16 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
  */
 
 G.dict.push({
+        sc: 'accress',
+        en: ['accrue', ['increase', 'grow']],
+        gr: 'v',
+        tr: 'added',
+        hl: 'accress',
+        or: [
+            [G.notes.or.as, 'accress, accresce'],
+            ['frae the ' + G.notes.or.rl + ' term', 'accrescere']
+        ]
+    }, { // A
         sc: 'adduce',
         en: ['cite as pertinent, quote as evidence'],
         tr: 'pertain',
@@ -376,6 +386,27 @@ G.dict.push({
     },
     // v gae end
     {
+        sc: 'compone',
+        en: [
+            ['come to an agreement', 'settle a dispute with payment'],
+            ['compound', 'combine'],
+            'compose in speech or writing',
+            'compound a payment for a certain sum',
+            'compose or calm oneself'
+        ],
+        tr: ['compose', 'calm', 'settle'],
+        gr: ['v', 'merkit obsolete in CSD2']
+    }, {
+        sc: 'compone',
+        en: 'compose (in music, speech or writing)',
+        tr: ['compose', 'write'],
+        hl: 'compose',
+        gr: ['v'],
+        or: [
+            ['protologism, frae the ' + G.notes.or.as, 'compone <span>‘to compose, make by combination’</span>'],
+            [G.notes.or.l, 'compōnere']
+        ]
+    }, {
         sc: 'jalouse',
         en: ['suspect', ['suppose', 'guess', 'surmise']],
         pr: 'jaLooz',

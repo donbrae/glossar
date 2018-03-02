@@ -146,6 +146,36 @@ G.dict.push({ // A
     or: [
         [G.notes.or.me, 'certes']
     ]
+}, { // O
+    sc: 'ony',
+    en: [
+        ['in any degree', 'to any extent'],
+        ['in any way', 'at all']
+    ],
+    gr: ['adv'],
+    or: 'see adj'
+}, {
+    sc: 'onyplace',
+    en: 'anywhere',
+    gr: ['adv']
+}, {
+    sc: 'onywhaur',
+    en: 'anywhere',
+    gr: ['adv']
+}, {
+    sc: 'onywey',
+    en: [
+        ['anyhow', 'in any way']
+    ],
+    tr: 'anyway',
+    gr: ['adv']
+}, {
+    sc: 'onyweys',
+    en: [
+        ['anyhow', 'in any way', 'anywhere']
+    ],
+    tr: 'anyway',
+    gr: ['adv']
 }, {
     sc: 'ocht',
     en: [

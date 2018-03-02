@@ -195,6 +195,21 @@ G.dict.push({ // A
     sc: 'ocht',
     en: 'any',
     gr: ['adj']
+}, {
+    sc: ['ongaun', 'ongaein'],
+    en: [
+        ['ongoing', 'continuing']
+    ],
+    gr: ['adj']
+}, {
+    sc: 'ony',
+    en: 'any',
+    tr: 'onie',
+    gr: ['adj'],
+    or: [
+        [G.notes.or.as, 'ony'],
+        [G.notes.or.ae, 'ǽniᵹ']
+    ]
 }, { // P
     sc: 'pertinent',
     en: [
