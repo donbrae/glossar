@@ -53,6 +53,7 @@ G.dict.push({ // A
     ],
     tr: ['well dressed', 'able bodied', 'considerable', 'pleasant', 'bra', 'braa', 'brow'],
     gr: ['adj'],
+    ex: 'It wis a gey an braw day outside',
     or: [
         [G.notes.or.as, 'braw, bra, brawf'],
         ['variant o the ' + G.notes.or.mf, 'brave']

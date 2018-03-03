@@ -565,16 +565,20 @@ G.dict.push({
         gr: ['imp phrasal v']
     }, {
         sc: 'inbring',
-        pt: {
-            sc: 'inbrocht'
+        pt_pp: {
+            sc: 'inbrocht',
+            tr: ['imported', 'importit', 'conveyed']
         },
         en: [
-            ['bring into a place', 'bring to a place', 'convey', 'import']
+            ['bring to or into a place', 'convey', 'import']
         ],
+        tr: ['bring to a place', 'bring into a place'],
         gr: 'v',
         or: [
             [G.notes.or.ae, 'inbrengan']
-        ]
+        ],
+        ex: ['Scotland is thocht tae inbring around 60 per cent o its guids an services frae the lave o the Unitit Kinrick', 'a new pipe netwark inbrocht watter tae the hous']
+
     }, { // M
         sc: 'maun',
         pr: ['maun', 'mon', 'man', 'mun'],
@@ -697,11 +701,7 @@ G.dict.push({
             ['reach', 'stretch']
         ],
         gr: 'v',
-        pt: {
-            sc: ['raxed', 'raxt'],
-            en: ['reached', 'stretched']
-        },
-        pp: {
+        pt_pp: {
             sc: ['raxed', 'raxt'],
             en: ['reached', 'stretched']
         }
@@ -728,6 +728,7 @@ G.dict.push({
         tr: ['ditter', 'doiter'],
         hl: 'swither',
         gr: 'v',
+        ex: '“Dinna swither, min — haud gaun!”',
         or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms]
     }, {
         sc: 'uise',

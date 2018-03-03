@@ -70,6 +70,13 @@ ol {
 ol>li {
     list-style-position: inside;
 }
+ol.ex {
+    list-style-type: none;
+}
+ol.ex li::before, div.ex::before {
+    content: '\25c7';
+    padding-right: 3px;
+}
 h1 {
     font-weight: bold;
 }
@@ -79,8 +86,14 @@ h1 {
 .or-container {
     padding: 5px 0 0 4px;
 }
-.or-container ul, .or-container ul li {
+.or-container ul, .or-container ul li, ol.ex li {
     display: inline;
+}
+ol.ex, div.ex {
+    color: #676767;
+}
+ol.ex li:not(:last-child) {
+    padding-right: 3px;
 }
 /* .def {
     padding: 1px 0 0 4px;
@@ -92,11 +105,14 @@ h1 {
 .grammar {
     padding: 0 4px;
 }
-.en, .def {
+.en, .def, .ex {
     padding: 1px 4px 0 4px;
 }
-div.en, div.def {
+div.en, div.def, div.ex {
     padding: 4px 0 0 4px;
+}
+.ex {
+    font-size: .8rem;
 }
 .pt, .pp, .pt-pp, .neg {
     padding-left: 4px;

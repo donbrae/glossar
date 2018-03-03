@@ -104,7 +104,7 @@ var GLOSSAR = (function() {
      */
     function print(r) {
         var grammar, hl_sc_alt,
-            hl, hl_all, $li, def, en, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or;
+            hl, hl_all, $li, def, ex, en, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or;
 
         console.log(r);
 
@@ -113,9 +113,10 @@ var GLOSSAR = (function() {
             $.each(r, function() {
                 grammar = this.gr ? '<span class="grammar">' + [].concat(this.gr).join('; ') + '</span> ' : ''; // Grammar
                 sc_alt = this.sc_alt ? '<div class="sc-alt">(alt Scots maks: <span>' + [].concat(this.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
-                en = this.en ? formatMultipleMeanings(this.en, ',', 'en') : ''; // English
+                en = this.en ? formatMultiple(this.en, ',', 'en') : ''; // English
                 pr = this.pr ? '<span class="pr">(‘' + [].concat(this.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
-                def = this.def ? formatMultipleMeanings(this.def, ';', 'def') : ''; // Definition
+                def = this.def ? formatMultiple(this.def, ';', 'def') : ''; // Definition
+                ex = this.ex ? formatMultiple(this.ex, ';', 'ex') : ''; // Examples
                 or = this.or ? formatOrigin(this.or) : ''; // Origin
                 hl_sc_alt = this.sc_alt ? [].concat(this.sc_alt) : []; // Make sure to highlight any alternative Scots words
 
@@ -173,6 +174,7 @@ var GLOSSAR = (function() {
                     neg +
                     def +
                     en +
+                    ex +
                     or +
                     '</li>');
             });
@@ -241,13 +243,13 @@ var GLOSSAR = (function() {
     }
 
     /**
-     * For English words and definitions. Creates an <ol> out of an array, or, if passed only a string, returns the original string
+     * For English words, definitions, examples etc. Creates an <ol> out of an array, or, if passed only a string, returns the original string
      * @param {Array} word
      * @param {String} separator - e.g. ';'
      * @param {String} cl - class, e.g. 'en'
      * @returns {String}
      */
-    function formatMultipleMeanings(word, separator, cl) {
+    function formatMultiple(word, separator, cl) {
         var words = [].concat(word), // Make array in case we're passed a string
             ol = [];
 

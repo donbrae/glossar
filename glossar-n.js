@@ -209,7 +209,8 @@ G.dict.push({
     en: [
         ['aught', 'anything'], 'nothing'
     ],
-    gr: 'n'
+    gr: 'n',
+    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'Will haed ocht ava tae dae wi the failt IT project']
 }, {
     sc: 'uiss',
     pr: ['yös', 'yis', 'ees', 'yoos'],
@@ -243,6 +244,7 @@ G.dict.push({
     tr: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle', 'ditter', 'doiter'],
     hl: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle'],
     gr: 'n',
+    ex: 'William wis in a swither about whilk Hogmanay pairty tae gang tae',
     or: 'see v'
 }, {
     sc: 'toun',
