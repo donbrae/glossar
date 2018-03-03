@@ -34,22 +34,25 @@ var GLOSSAR = (function() {
                 name: 'pt.sc',
                 weight: 0.02
             }, {
-                name: 'pt.en',
-                weight: 0.01
-            }, {
                 name: 'pt.tr',
-                weight: 0.01
+                weight: 0.005
             }, {
                 name: 'pp.sc',
                 weight: 0.01
             }, {
-                name: 'pp.en',
+                name: 'pp.tr',
                 weight: 0.01
+            }, {
+                name: 'pt_pp.sc',
+                weight: 0.01
+            }, {
+                name: 'pt_pp.tr',
+                weight: 0.005
             }, {
                 name: 'neg.sc',
                 weight: 0.01
             }, {
-                name: 'neg.en',
+                name: 'neg.tr',
                 weight: 0.01
             }, {
                 name: 'sc_alt',
@@ -101,7 +104,7 @@ var GLOSSAR = (function() {
      */
     function print(r) {
         var grammar, hl_sc_alt,
-            hl, hl_all, $li, def, en, pr, pt, pt_arr, pp, pp_arr, neg, or;
+            hl, hl_all, $li, def, en, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or;
 
         console.log(r);
 
@@ -120,12 +123,17 @@ var GLOSSAR = (function() {
                  * Highlight based on trigger words by default; if not, use the specific highlight words
                  */
 
-                // Simpler Verbs
-                pt_arr = this.pt && this.pt.sc ? [].concat(this.pt.sc) : []; // Any Scots past tense
+                // Simpler (Scots) verbs
+                pt_arr = this.pt && this.pt.sc ? [].concat(this.pt.sc) : []; // Any past tense
                 pt_arr = this.pt && this.pt.tr ? pt_arr.concat(this.pt.tr) : pt_arr; // Any past tense triggers
 
-                pp_arr = this.pp && this.pp.sc ? [].concat(this.pp.sc) : []; // Any Scots past participle
-                neg = this.neg ? '<span class="neg">neg. <span>' + [].concat(this.neg.sc).join(', ') + '</span></span>' : ''; // Negative
+                pp_arr = this.pp && this.pp.sc ? [].concat(this.pp.sc) : []; // Any past participle
+                pp_arr = this.pp && this.pp.tr ? pp_arr.concat(this.pp.tr) : pp_arr; // Any past tense triggers
+
+                pt_pp_arr = this.pt_pp && this.pt_pp.sc ? [].concat(this.pt_pp.sc) : []; // Where Scots past tense and past participle are the same
+                pt_pp_arr = this.pt_pp && this.pt_pp.tr ? pt_pp_arr.concat(this.pt_pp.tr) : pt_pp_arr; // triggers
+
+                neg = this.neg ? '<span class="neg">neg. <span>' + [].concat(this.neg.sc).join(', ') + '</span></span>' : ''; // Any Scots negative
 
                 if (this.hl) { // Specific trigger highlight words
                     hl_all = [].concat(this.hl);
@@ -153,12 +161,15 @@ var GLOSSAR = (function() {
 
                 pp = pp_arr.length ? '<span class="pp">pp. <span data-hl="' + pp_arr.join(',') + '">' + [].concat(this.pp.sc).join(', ') + '</span></span>' : ''; // Past participle (simpler verbs)
 
+                pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt. pp. <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(this.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
+
                 $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
                     pr +
                     grammar +
                     sc_alt +
                     pt +
                     pp +
+                    pt_pp +
                     neg +
                     def +
                     en +
@@ -287,7 +298,7 @@ var GLOSSAR = (function() {
             hielicht(
                 $('.sc', this), // UI element
                 items, // Scots words
-                r[i].en ? makeSingleArray(r[i].en) : null // Corresponding English words to highlight
+                r[i].en ? makeSingleArray(r[i].en) : null // Corresponding English words to gar highlighting
             );
 
             // Past tense
@@ -296,7 +307,7 @@ var GLOSSAR = (function() {
                 hielicht(
                     $('.pt span', this),
                     items, // Scots words
-                    r[i].pt && r[i].pt.en ? makeSingleArray(r[i].pt.en) : null // Corresponding English past tense words to highlight
+                    r[i].pt && r[i].pt.tr ? makeSingleArray(r[i].pt.tr) : null // Corresponding trigger words to gar highlighting
                 );
             }
 
@@ -306,7 +317,17 @@ var GLOSSAR = (function() {
                 hielicht(
                     $('.pp span', this),
                     items, // Scots words
-                    r[i].pp && r[i].pp.en ? makeSingleArray(r[i].pp.en) : null // Corresponding English past participle words to highlight
+                    r[i].pp && r[i].pp.tr ? makeSingleArray(r[i].pp.tr) : null
+                );
+            }
+
+            // Identical past tense and past participle
+            if ($('.pt-pp', this).length) {
+                items = $('.pt-pp span', this).text().split(', ');
+                hielicht(
+                    $('.pt-pp span', this),
+                    items, // Scots words
+                    r[i].pt_pp && r[i].pt_pp.tr ? makeSingleArray(r[i].pt_pp.tr) : null
                 );
             }
 
@@ -316,7 +337,7 @@ var GLOSSAR = (function() {
                 hielicht(
                     $('.neg span', this),
                     items,
-                    r[i].neg && r[i].neg.en ? makeSingleArray(r[i].neg.en) : null
+                    r[i].neg && r[i].neg.tr ? makeSingleArray(r[i].neg.tr) : null
                 );
             }
 

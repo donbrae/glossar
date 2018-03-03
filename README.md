@@ -16,3 +16,5 @@ Audience: Scots speakers, writers and learners.
 # Dev
 
 Trigger words (`tr`), pronunciations (`pr`) and alternative spellings (`sc_alt`) will be highlighted in the UI by default. You can use the *highlight* property (`hl`) to override this. Note how typing *depute* (Scots) vs *deputy* (English) is handled. For a more complex example, see the verb tae *gae*.
+
+When pushing past tenses and past participles to `G.dict` (via properties `pt`, `pp` and `pt_pp`), note that both the English and trigger words should be added to the `tr` property — there is no separate `en` property.

@@ -230,13 +230,9 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
 
 G.dict.push({
         sc: 'accress',
-        pt: {
+        pt_pp: {
             sc: 'accressed',
-            en: ['increased', 'accrued', 'grown']
-        },
-        pp: {
-            sc: 'accressed',
-            en: ['increased', 'accrued', 'grown']
+            tr: ['increased', 'accrued', 'grown', 'grew']
         },
         en: ['accrue', ['increase', 'grow']],
         gr: 'v',
@@ -585,7 +581,7 @@ G.dict.push({
         en: 'must',
         neg: {
             sc: ['maunna', 'maunnae'],
-            en: ['must not', 'mustn\'t']
+            tr: ['must not', 'mustn\'t']
         },
         gr: ['v'],
         or: [
@@ -626,19 +622,15 @@ G.dict.push({
             ['vex', 'bother'],
             ['fret']
         ],
-        pt: {
+        pt_pp: {
             sc: 'fasht',
-            en: [
-                ['irritated', 'annoyed', 'angered', 'inconvenienced', 'troubled', 'vexed', 'bothered', 'fretted']
-            ],
-            tr: 'fashed'
-        },
-        pp: {
-            sc: 'fasht'
+            tr: [
+                ['irritated', 'annoyed', 'angered', 'inconvenienced', 'troubled', 'vexed', 'bothered', 'fretted', 'fashed']
+            ]
         },
         neg: {
-            sc: ['fashna', 'fash na'],
-            en: 'fash not'
+            sc: 'fashna',
+            tr: ['fash not', 'fash na']
         },
         gr: 'v',
         or: [
