@@ -84,6 +84,26 @@ G.dict.push({ // A
     ],
     gr: 'adj',
     or: 'see n'
+}, { // D
+    sc: 'defeat',
+    tr: ['defait', 'defeet'],
+    en: [
+        ['defeated'],
+        ['exhausted', 'worn out']
+    ],
+    gr: 'adj',
+    or: 'see v'
+}, {
+    sc: 'deleerit',
+    en: [
+        ['delirious', 'mad', 'temporarily out of one\'s senses']
+    ],
+    gr: 'adj',
+    or: [
+        [G.notes.or.emods2, 'deleeret, deleerit, delireet'],
+        [G.notes.or.mf, 'delirer'],
+        [G.notes.or.l, 'dēlīrāre']
+    ]
 }, {
     sc: 'doutsome',
     en: [
@@ -96,7 +116,7 @@ G.dict.push({ // A
     tr: ['wester', 'wastern', 'western'],
     hl: 'easter',
     gr: ['adj'],
-    def: ['locatit tae the east', 'the mair easter o twa steids, biggins or ither things', 'kythes in steid names, e.g. Easter Road']
+    def: 'locatit tae the east; the mair easter o twa steids, biggins or ither things; kythes in steid names, e.g. Easter Road'
 }, { // F
     sc: 'forby',
     sc_alt: 'forbye',
@@ -263,5 +283,5 @@ G.dict.push({ // A
     tr: ['easter', 'eastern'],
     hl: 'wester',
     gr: ['adj'],
-    def: ['locatit tae the wast', 'the mair waster o twa steids, biggins or ither things', 'aft-times in steid names, e.g. Wester Hailes']
+    def: 'locatit tae the wast; the mair waster o twa steids, biggins or ither things; aft-times in steid names, e.g. Wester Hailes'
 });

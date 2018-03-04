@@ -56,16 +56,6 @@ G.dict.push({
         [G.notes.or.l, 'compositio']
     ]
 }, {
-    sc: 'dask',
-    en: [
-        ['desk', 'seat', 'church pew']
-    ],
-    gr: 'n',
-    or: [
-        [G.notes.or.as + ' (frae 1530)', 'dask, daske'],
-        ['possible influence o ' + G.notes.or.as + ' <em>dais, das</em>, frae the ' + G.notes.or.nfd, 'dais']
-    ]
-}, {
     sc: 'contrair',
     en: [
         ['the contrary', 'the opposite']
@@ -76,6 +66,44 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'contrar, contrair'],
         ['frae the ' + G.notes.or.af, 'contraire']
+    ]
+}, { // D
+    sc: 'dask',
+    en: [
+        ['desk', 'seat', 'church pew']
+    ],
+    gr: 'n',
+    or: [
+        [G.notes.or.as + ' (frae 1530)', 'dask, daske'],
+        ['possible influence o ' + G.notes.or.as + ' <em>dais, das</em>, frae the ' + G.notes.or.nfd, 'dais']
+    ]
+}, {
+    sc: 'defeat',
+    en: 'defeat',
+    tr: ['defait', 'defeet'],
+    gr: 'n',
+    or: 'see v'
+}, {
+    sc: 'defect',
+    pr: ['deefekt', 'deefek'],
+    en: [
+        ['shortcoming', 'imperfection', 'flaw']
+    ],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'defect'],
+        [G.notes.or.l, 'dēfectus']
+    ]
+}, {
+    sc: 'defection',
+    en: [
+        ['desertion', 'failure in duty'],
+        ['defect', 'flaw', 'failure']
+    ],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'defection'],
+        [G.notes.or.l, 'dēfectio']
     ]
 }, {
     sc: 'depute',

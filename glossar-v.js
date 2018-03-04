@@ -307,13 +307,26 @@ G.dict.push({
         gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; líterar'
     },
     // v be end
-    {
+    { // C
         sc: 'contrair',
         en: [
             ['oppose', 'contradict', 'go contrary to']
         ],
         gr: 'v',
         or: 'see n'
+    }, { // D
+        sc: 'defeat',
+        pr: ['defait', 'defeet'],
+        en: 'defeat',
+        pt_pp: {
+            sc: 'defeat',
+            tr: ['defeated', 'defait', 'defeet']
+        },
+        ex: 'Hibs war defeat by Hearts in the Cup final on Seturday',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'defait', 'defett'], G.notes.or.af + ' <span>desfait</span>, ptp o <span>desfaire</span>'
+        ]
     }, { // E
         sc: 'ettle',
         en: [
@@ -577,8 +590,7 @@ G.dict.push({
         or: [
             [G.notes.or.ae, 'inbrengan']
         ],
-        ex: ['Scotland is thocht tae inbring around 60 per cent o its guids an services frae the lave o the Unitit Kinrick', 'a new pipe netwark inbrocht watter tae the hous']
-
+        ex: ['O the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick', 'a new pipe netwark inbrocht watter tae the hous']
     }, { // M
         sc: 'maun',
         pr: ['maun', 'mon', 'man', 'mun'],
