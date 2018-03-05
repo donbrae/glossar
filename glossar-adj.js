@@ -206,6 +206,7 @@ G.dict.push({ // A
     hl: ['acquant', 'acquaint', 'aquent', 'aquaint'],
     gr: 'adj',
     or: [
+        [G.notes.or.as, 'acquent, acquant, aquynt'],
         [G.notes.or.me, 'aquointe'],
         [G.notes.or.mf, 'accointe']
     ],

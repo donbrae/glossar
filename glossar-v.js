@@ -224,6 +224,10 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
 );
 // hae end
 
+// ken and knaw triggers
+G.v.ken_knaw = {};
+G.v.ken_knaw.trigs = ['ken', 'know', 'kenna', 'know not', 'kent', 'kenned', 'knew', 'kentna', 'knew not', 'did not know', 'didn\'t know', 'known', 'knaw', 'knawed', 'knawn'];
+
 /**
  * Add verbs (both complex and more simple) to dictionary object
  */
@@ -268,42 +272,49 @@ G.dict.push({
         en: G.v.be.ps.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.ps.en, G.v.be.ps.tr),
+        pv: 'be', // Primary verb
         gr: 'praisent singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // amna
         sc: G.v.be.ps.neg.sc,
         en: G.v.be.ps.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.ps.neg.en, G.v.be.ps.neg.tr),
+        pv: 'be', // Primary verb
         gr: 'praisent singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // is
         sc: G.v.be.tpps.sc,
         en: G.v.be.tpps.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.tpps.en),
+        pv: 'be', // Primary verb
         gr: 'third person praisent singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // isna
         sc: G.v.be.tpps.neg.sc,
         en: G.v.be.tpps.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.tpps.neg.en),
+        pv: 'be', // Primary verb
         gr: 'third person praisent singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // are
         sc: G.v.be.psp.sc,
         en: G.v.be.psp.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.psp.en, G.v.be.psp.tr),
+        pv: 'be', // Primary verb
         gr: 'praisent singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // arena
         sc: G.v.be.psp.neg.sc,
         en: G.v.be.psp.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.psp.neg.en, G.v.be.psp.neg.tr),
+        pv: 'be', // Primary verb
         gr: 'praisent singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // binna
         sc: G.v.be.neg.sc,
         en: G.v.be.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.neg.en, G.v.be.neg.tr),
+        pv: 'be', // Primary verb
         gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; líterar'
     },
     // v be end
@@ -576,7 +587,7 @@ G.dict.push({
         sc: 'haud on',
         en: 'stop',
         gr: ['imp phrasal v']
-    }, {
+    }, { // I
         sc: 'inbring',
         pt_pp: {
             sc: 'inbrocht',
@@ -591,6 +602,47 @@ G.dict.push({
             [G.notes.or.ae, 'inbrengan']
         ],
         ex: ['O the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick', 'a new pipe netwark inbrocht watter tae the hous']
+    }, {
+        sc: 'ken',
+        en: 'know',
+        neg: {
+            sc: 'kenna',
+            en: 'know not'
+        },
+        tr: G.v.ken_knaw.trigs,
+        hl: 'ken',
+        gr: 'v'
+    }, {
+        sc: ['kent', 'kenned'],
+        en: ['knew'],
+        neg: {
+            sc: 'kentna',
+            tr: ['knew not', 'did not know', 'didn\'t know']
+        },
+        tr: G.v.ken_knaw.trigs,
+        hl: ['kent', 'kenned'],
+        gr: 'pt o v ' + G.utils.addSpan('tae ken')
+    }, {
+        sc: 'kent',
+        en: 'known',
+        gr: ['adj, an ptp o v ' + G.utils.addSpan('tae ken')],
+        ex: 'Brian is a weel kent face on the Edinburgh jazz scene',
+        tr: G.v.ken_knaw.trigs,
+        hl: 'kent'
+    }, {
+        sc: 'knaw',
+        en: 'know',
+        pt: {
+            sc: ['knew', 'knawed'],
+            tr: ['knew']
+        },
+        pp: {
+            sc: 'knawn',
+            tr: 'known'
+        },
+        tr: G.v.ken_knaw.trigs,
+        hl: 'knaw',
+        gr: 'v'
     }, { // M
         sc: 'maun',
         pr: ['maun', 'mon', 'man', 'mun'],

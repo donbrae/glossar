@@ -11,65 +11,66 @@ var GLOSSAR = (function() {
         },
         state = {
             word: '', // Value of search text box
-            timeout: null
+            timeout: null,
+            highlight: 0 // True if at least one word is highlighted
         },
         fuse;
 
     function init() {
         var options = {
-            shouldSort: true,
-            includeScore: false,
-            tokenize: true,
-            matchAllTokens: true,
-            findAllMatches: false,
-            threshold: 0.05,
-            location: 0,
-            distance: 15,
-            maxPatternLength: 3,
-            minMatchCharLength: 5,
-            keys: [{
-                name: 'sc',
-                weight: 0.3
-            }, {
-                name: 'pt.sc',
-                weight: 0.02
-            }, {
-                name: 'pt.tr',
-                weight: 0.005
-            }, {
-                name: 'pp.sc',
-                weight: 0.01
-            }, {
-                name: 'pp.tr',
-                weight: 0.01
-            }, {
-                name: 'pt_pp.sc',
-                weight: 0.01
-            }, {
-                name: 'pt_pp.tr',
-                weight: 0.005
-            }, {
-                name: 'neg.sc',
-                weight: 0.01
-            }, {
-                name: 'neg.tr',
-                weight: 0.01
-            }, {
-                name: 'sc_alt',
-                weight: 0.1
-            }, {
-                name: 'pr',
-                weight: 0.1
-            }, {
-                name: 'en',
-                weight: 0.12
-            }, {
-                name: 'tr',
-                weight: 0.3
-            }]
-        };
+                shouldSort: true,
+                includeScore: false,
+                tokenize: true,
+                matchAllTokens: true,
+                findAllMatches: false,
+                threshold: 0.05,
+                location: 0,
+                distance: 15,
+                maxPatternLength: 3,
+                minMatchCharLength: 5,
+                keys: [{
+                    name: 'sc',
+                    weight: 0.3
+                }, {
+                    name: 'pt.sc',
+                    weight: 0.02
+                }, {
+                    name: 'pt.tr',
+                    weight: 0.005
+                }, {
+                    name: 'pp.sc',
+                    weight: 0.01
+                }, {
+                    name: 'pp.tr',
+                    weight: 0.01
+                }, {
+                    name: 'pt_pp.sc',
+                    weight: 0.01
+                }, {
+                    name: 'pt_pp.tr',
+                    weight: 0.005
+                }, {
+                    name: 'neg.sc',
+                    weight: 0.01
+                }, {
+                    name: 'neg.tr',
+                    weight: 0.01
+                }, {
+                    name: 'sc_alt',
+                    weight: 0.1
+                }, {
+                    name: 'pr',
+                    weight: 0.1
+                }, {
+                    name: 'en',
+                    weight: 0.12
+                }, {
+                    name: 'tr',
+                    weight: 0.3
+                }]
+            },
 
-        fuse = new Fuse(GLOSSAR.dict, options); // 'list' is the item array
+            fuse = new Fuse(GLOSSAR.dict, options);
 
         $('#searchTextbox').on('keyup', function(e) {
 
@@ -95,6 +96,11 @@ var GLOSSAR = (function() {
                 timeoutStart(search);
             }
         });
+    }
+
+    function noResults() {
+        $('#result').html('<li class="text-center no-results">Sorry, the’re nae results for <strong>' + state.word + '</strong></li>');
+        $('#result').addClass('show');
     }
 
     /**
@@ -134,6 +140,8 @@ var GLOSSAR = (function() {
                 pt_pp_arr = this.pt_pp && this.pt_pp.sc ? [].concat(this.pt_pp.sc) : []; // Where Scots past tense and past participle are the same
                 pt_pp_arr = this.pt_pp && this.pt_pp.tr ? pt_pp_arr.concat(this.pt_pp.tr) : pt_pp_arr; // triggers
 
+                pv = this.pv ? ' data-pv="' + this.pv + '"' : ''; // Primary verb
+
                 neg = this.neg ? '<span class="neg">neg. <span>' + [].concat(this.neg.sc).join(', ') + '</span></span>' : ''; // Any Scots negative
 
                 if (this.hl) { // Specific trigger highlight words
@@ -158,13 +166,13 @@ var GLOSSAR = (function() {
                     hl = ''; // No trigger words
                 }
 
-                pt = pt_arr.length ? '<span class="pt">pt. <span data-hl="' + pt_arr.join(',') + '">' + [].concat(this.pt.sc).join(', ') + '</span></span>' : ''; // Past tense (simpler verbs)
+                pt = pt_arr.length ? '<span class="pt">pt <span data-hl="' + pt_arr.join(',') + '">' + [].concat(this.pt.sc).join(', ') + '</span></span>' : ''; // Past tense (simpler verbs)
 
-                pp = pp_arr.length ? '<span class="pp">ptp. <span data-hl="' + pp_arr.join(',') + '">' + [].concat(this.pp.sc).join(', ') + '</span></span>' : ''; // Past participle (simpler verbs)
+                pp = pp_arr.length ? '<span class="pp">ptp <span data-hl="' + pp_arr.join(',') + '">' + [].concat(this.pp.sc).join(', ') + '</span></span>' : ''; // Past participle (simpler verbs)
 
-                pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt. ptp. <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(this.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
+                pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(this.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
 
-                $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
+                $('#result').append('<li><span class="sc"' + hl + pv + '>' + [].concat(this.sc).join(', ') + '</span> ' +
                     pr +
                     grammar +
                     sc_alt +
@@ -179,17 +187,25 @@ var GLOSSAR = (function() {
                     '</li>');
             });
             highlight(r, function() {
-                $($('#result > li').get().reverse()).each(function() { // Move highlighted entries to the top
-                    $li = $(this);
-                    if ($li.children('span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
-                        $li.parent().prepend($li);
-                    }
-                });
-                $('#result').addClass('show');
+                if (state.highlight) {
+                    $($('#result > li').get().reverse()).each(function() { // Move highlighted entries to the top
+                        $li = $(this);
+                        if ($li.find('span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                            $li.parent().prepend($li);
+                        } else if (state.word.length < 3) { // For one- or two-character queries
+                            $li.remove();
+                        }
+                    });
+                }
+
+                if (!state.highlight && state.word.length < 3) {
+                    noResults();
+                } else {
+                    $('#result').addClass('show');
+                }
             });
         } else {
-            $('#result').html('<li class="text-center no-results">Sorry, the’re nae results for <strong>' + state.word + '</strong></li>');
-            $('#result').addClass('show');
+            noResults();
         }
     }
 
@@ -271,6 +287,8 @@ var GLOSSAR = (function() {
     function highlight(r, callback) {
         var i = r.length - 1;
 
+        state.highlight = 0;
+
         function hielicht($el, items, en) {
             if ($el.data('hl')) { // Add any highlight words to the items array
                 items = items.concat($el.data('hl').split(','));
@@ -282,6 +300,7 @@ var GLOSSAR = (function() {
                     )
                 ) {
                     $el.addClass('hl');
+                    state.highlight = state.highlight + 1;
                     return false; // Exit loop
                 }
             });

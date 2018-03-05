@@ -199,6 +199,10 @@ G.dict.push({
     en: 'increase',
     gr: 'n',
     or: 'see v'
+}, {
+    sc: 'knawledge',
+    en: 'knowledge',
+    gr: 'n'
 }, { // M
     sc: 'maun',
     pr: 'maun',
@@ -272,7 +276,7 @@ G.dict.push({
     tr: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle', 'ditter', 'doiter'],
     hl: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle'],
     gr: 'n',
-    ex: 'William wis in a swither about whilk Hogmanay pairty tae gang tae',
+    ex: 'Will wis in a swither about whit Hogmanay pairty tae gang tae',
     or: 'see v'
 }, {
     sc: 'toun',
