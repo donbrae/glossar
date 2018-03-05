@@ -272,49 +272,42 @@ G.dict.push({
         en: G.v.be.ps.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.ps.en, G.v.be.ps.tr),
-        pv: 'be', // Primary verb
         gr: 'praisent singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // amna
         sc: G.v.be.ps.neg.sc,
         en: G.v.be.ps.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.ps.neg.en, G.v.be.ps.neg.tr),
-        pv: 'be', // Primary verb
         gr: 'praisent singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // is
         sc: G.v.be.tpps.sc,
         en: G.v.be.tpps.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.tpps.en),
-        pv: 'be', // Primary verb
         gr: 'third person praisent singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // isna
         sc: G.v.be.tpps.neg.sc,
         en: G.v.be.tpps.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.tpps.neg.en),
-        pv: 'be', // Primary verb
         gr: 'third person praisent singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // are
         sc: G.v.be.psp.sc,
         en: G.v.be.psp.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.psp.en, G.v.be.psp.tr),
-        pv: 'be', // Primary verb
         gr: 'praisent singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // arena
         sc: G.v.be.psp.neg.sc,
         en: G.v.be.psp.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.psp.neg.en, G.v.be.psp.neg.tr),
-        pv: 'be', // Primary verb
         gr: 'praisent singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // binna
         sc: G.v.be.neg.sc,
         en: G.v.be.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.neg.en, G.v.be.neg.tr),
-        pv: 'be', // Primary verb
         gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; líterar'
     },
     // v be end

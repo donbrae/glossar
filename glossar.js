@@ -42,7 +42,7 @@ G.dict = [{
 
     ],
     gr: 'prep',
-    tr: 'regarding',
+    tr: ['regarding', 're'],
     or: [
         [G.notes.or.as, 'anent'],
         [G.notes.or.ae, 'on efen']
@@ -54,7 +54,7 @@ G.dict = [{
         ['in respect of', 'concerning'],
 
     ],
-    tr: ['about', 'regarding'],
+    tr: ['about', 'regarding', 're'],
     gr: 'prep'
 }, {
     sc: 'binna',
@@ -185,7 +185,7 @@ G.dict = [{
     gr: ['possesive pronoun']
 }, {
     sc: 'wir',
-    pr: ['wir', 'wur', 'war', 'weer'],
+    pr: ['wir', 'wur', 'war', 'weer', 'wor'],
     en: 'our',
     tr: 'oor',
     hl: 'wir',
