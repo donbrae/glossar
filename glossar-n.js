@@ -25,8 +25,7 @@ G.dict.push({
         ['?' + G.notes.or.f, 'associé']
     ]
 }, { // C
-    sc: 'certificat',
-    sc_alt: 'certificate',
+    sc: 'certificate',
     en: 'certificate',
     gr: 'n',
     or: [
@@ -36,6 +35,15 @@ G.dict.push({
 }, {
     sc: 'claes',
     en: 'clothes',
+}, {
+    sc: 'complouther',
+    pr: 'comploother',
+    en: [
+        ['a mix up', 'confusion'], 'a mixture', 'a conversation'
+    ],
+    tr: ['mix up', 'mix-up', 'mixture', 'conversation', 'compluter', 'compluther'],
+    gr: 'n',
+    or: ['wankent, but mak compare wi ' + G.notes.or.af + ' <span>complote</span>, ‘a raivelt thrang o fowk’']
 }, {
     sc: 'componer',
     en: 'composer',
@@ -147,6 +155,16 @@ G.dict.push({
     ],
     tr: 'ettle',
     hl: 'ettlin',
+    gr: 'n'
+}, { // F
+    sc: 'fankle',
+    en: [
+        ['tangle', 'muddle']
+    ],
+    gr: 'n'
+}, {
+    sc: 'feartie',
+    en: 'coward',
     gr: 'n'
 }, {
     sc: 'fowk',
@@ -268,10 +286,10 @@ G.dict.push({
 }, {
     sc: 'swither',
     en: [
-        ['state of indecision or doubt', 'hesitation', 'uncertainty'],
-        ['state of nervousness or agitation', 'panic', 'fluster'],
-        ['state of confusion', 'tangled or muddled condition'],
-        ['dithering, undecided person']
+        ['a state of indecision or doubt', 'hesitation', 'uncertainty'],
+        ['a state of nervousness or agitation', 'panic', 'fluster'],
+        ['a state of confusion', 'a tangled or muddled condition'],
+        ['a dithering, undecided person']
     ],
     tr: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle', 'ditter', 'doiter'],
     hl: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle'],

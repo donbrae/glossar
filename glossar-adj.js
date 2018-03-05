@@ -118,6 +118,23 @@ G.dict.push({ // A
     gr: ['adj'],
     def: 'locatit tae the east; the mair easter o twa steids, biggins or ither things; kythes in steid names, e.g. Easter Road'
 }, { // F
+    sc: 'fantoush',
+    en: [
+        ['overdressed', 'flashy', 'fancy', 'ultra fashionable']
+    ],
+    gr: 'adj',
+    or: [
+        [G.notes.or.mode, 'fanty-sheeny'],
+        [G.notes.or.it, 'fantoccino']
+    ]
+}, {
+    sc: 'feart',
+    en: [
+        ['afraid', 'anxious']
+    ],
+    gr: 'adj',
+    ex: G.ex.a
+}, {
     sc: 'forby',
     sc_alt: 'forbye',
     pr: 'forBye',

@@ -18,13 +18,16 @@ var GLOSSAR = (function() {
 
     function init() {
         var options = {
-                tokenize: true,
                 shouldSort: true,
-                threshold: 0,
+                includeScore: false,
+                tokenize: true,
+                matchAllTokens: true,
+                findAllMatches: false,
+                threshold: 0.05,
                 location: 0,
-                distance: 100,
-                maxPatternLength: 32,
-                minMatchCharLength: 1,
+                distance: 15,
+                maxPatternLength: 3,
+                minMatchCharLength: 5,
                 keys: [{
                     name: 'sc',
                     weight: 0.3

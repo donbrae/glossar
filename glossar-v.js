@@ -259,6 +259,12 @@ G.dict.push({
         sc: 'adduce',
         def: ['lat see (an item o) evidence in proof', 'bring forrit a witness'],
         gr: ['v', 'law']
+    }, {
+        sc: 'appluise',
+        en: [
+            ['offer, make available, make known']
+        ],
+        gr: 'v'
     },
     // v be
     {
@@ -312,6 +318,27 @@ G.dict.push({
     },
     // v be end
     { // C
+        sc: 'complouther',
+        en: [
+            ['mix or associate with'],
+            ['agree, coincide or fit in with']
+        ],
+        tr: ['compluter', 'compluther', 'comploother', 'agree', 'coincide', 'fit in'],
+        gr: 'v',
+        or: 'see n'
+    }, {
+        sc: 'comprise',
+        en: [
+            ['include', 'contain', 'consist of'],
+            ['appraise', 'value']
+        ],
+        tr: 'make up',
+        hl: 'comprise',
+        gr: 'v',
+        or: [
+            [G.notes.or.mf, 'compris']
+        ]
+    }, {
         sc: 'contrair',
         en: [
             ['oppose', 'contradict', 'go contrary to']
@@ -600,11 +627,12 @@ G.dict.push({
         en: 'know',
         neg: {
             sc: 'kenna',
-            en: 'know not'
+            tr: 'know not'
         },
         tr: G.v.ken_knaw.trigs,
         hl: 'ken',
-        gr: 'v'
+        gr: 'v',
+        ex: G.ex.c
     }, {
         sc: ['kent', 'kenned'],
         en: ['knew'],
@@ -614,7 +642,8 @@ G.dict.push({
         },
         tr: G.v.ken_knaw.trigs,
         hl: ['kent', 'kenned'],
-        gr: 'pt o v ' + G.utils.addSpan('tae ken')
+        gr: 'pt o v ' + G.utils.addSpan('tae ken'),
+        ex: 'Tammas kentna whit tae dae'
     }, {
         sc: 'kent',
         en: 'known',
@@ -634,6 +663,7 @@ G.dict.push({
             tr: 'known'
         },
         tr: G.v.ken_knaw.trigs,
+        ex: G.ex.b,
         hl: 'knaw',
         gr: 'v'
     }, { // M
@@ -675,6 +705,13 @@ G.dict.push({
         or: [
             [G.notes.or.mode, 'upload']
         ]
+    }, { // F
+        sc: 'fankle',
+        en: [
+            ['tangle', 'mix up'], 'become tangled', ['trap', 'ensnare'],
+            ['stumble', 'fumble']
+        ],
+        gr: 'v'
     }, {
         sc: ['fash'],
         en: [

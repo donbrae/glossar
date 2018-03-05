@@ -25,7 +25,8 @@ G.notes = {
         md: 'Middle Dutch',
         mode: 'Modren English',
         mlg: 'Middle Laich German',
-        rl: 'Roman Law'
+        rl: 'Roman Law',
+        it: 'Italians'
     }
 };
 
