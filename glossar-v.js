@@ -358,6 +358,17 @@ G.dict.push({
         or: [
             [G.notes.or.as, 'defait', 'defett'], G.notes.or.af + ' <span>desfait</span>, ptp o <span>desfaire</span>'
         ]
+    }, {
+        sc: 'depute',
+        pt_pp: {
+            sc: 'depute',
+            tr: 'deputised'
+        },
+        // en: 'deputise',
+        def: 'apynt as depute',
+        gr: 'v',
+        ex: 'Aaron wis depute tae cover for his manager at the comatee meetin',
+        or: 'see adj'
     }, { // E
         sc: 'ettle',
         en: [
@@ -487,6 +498,7 @@ G.dict.push({
         ],
         gr: 'v',
         or: [
+            [G.notes.or.as, 'edify, edifie'],
             [G.notes.or.mf, 'edifier'],
             [G.notes.or.l, 'aedificāre']
         ]
@@ -500,6 +512,7 @@ G.dict.push({
         tr: ['effeirin tae', 'effeirin til'],
         hl: ['effeir', 'be fitting', 'be proper'],
         or: [
+            [G.notes.or.as, 'affer(e), effere'],
             [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
         ]
     }, {
@@ -511,9 +524,7 @@ G.dict.push({
         ],
         tr: ['effeir', 'relating to', 'according to'],
         hl: ['effeirin tae', 'effeirin til', 'relating to'],
-        or: [
-            [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
-        ]
+        or: 'see v <span>effeir</span>'
     }, {
         sc: 'haud',
         pr: ['haud', 'hod', 'hud', 'had'],

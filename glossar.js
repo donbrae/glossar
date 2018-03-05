@@ -171,7 +171,8 @@ G.dict = [{
     en: [
         ['any', 'either']
     ],
-    gr: ['pron']
+    gr: ['pron'],
+    or: 'see adj'
 }, { // O
     sc: 'onyane',
     en: 'anyone',

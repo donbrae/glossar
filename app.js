@@ -12,7 +12,8 @@ var GLOSSAR = (function() {
         state = {
             word: '', // Value of search text box
             timeout: null,
-            highlight: 0 // True if at least one word is highlighted
+            highlight: 0, // True if at least one word is highlighted in results set
+            random: [] // Indexes of which random entries have already been selected
         },
         fuse;
 
@@ -96,6 +97,38 @@ var GLOSSAR = (function() {
                 timeoutStart(search);
             }
         });
+
+        $('#random').click(function() {
+
+            var num, word, $btn = $(this);
+
+            function getRandomIndex() {
+
+                if (state.random.length === G.dict.length) { // If all words have been shown
+                    state.random = [];
+                }
+
+                num = Math.floor(Math.random() * ((G.dict.length - 1) - 0 + 1) + 0);
+
+                if (state.random.indexOf(num) > -1) { // Index already used?
+                    getRandomIndex();
+                }
+            }
+
+            getRandomIndex();
+
+            word = G.dict[num].sc.join ? G.dict[num].sc[0] : G.dict[num].sc;
+
+            $btn.prop('disabled', true);
+
+            state.word = word;
+            $('#searchTextbox').val(word);
+            $('#result').removeClass('show');
+            print(fuse.search(state.word), function() {
+                state.random.push(num);
+                $btn.prop('disabled', false);
+            });
+        });
     }
 
     function noResults() {
@@ -106,13 +139,11 @@ var GLOSSAR = (function() {
     /**
      * Prints data on screen
      * @param {Object} r - Algorithm
-     * @returns {}
+     * @param {Function} callback
      */
-    function print(r) {
+    function print(r, callback) {
         var grammar, hl_sc_alt,
             hl, hl_all, $li, def, ex, en, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or;
-
-        console.log(r);
 
         if (r && r.length) {
             $('#result').html('');
@@ -200,6 +231,10 @@ var GLOSSAR = (function() {
                     noResults();
                 } else {
                     $('#result').addClass('show');
+                }
+
+                if (typeof(callback) === 'function') {
+                    callback();
                 }
             });
         } else {

@@ -63,7 +63,7 @@ G.dict.push({ // A
         ['very', 'extremely']
     ],
     gr: ['adv'],
-    qu: 'I\'m braw an weel, thanks'
+    ex: ['“I\'m braw an weel, thanks”', '“Hae yersels a braw an cantie Christmas”']
 }, { // C
     sc: 'contrair',
     en: [
@@ -144,6 +144,7 @@ G.dict.push({ // A
     ],
     gr: ['adv'],
     or: [
+        [G.notes.or.as, 'certis'],
         [G.notes.or.me, 'certes']
     ]
 }, { // O

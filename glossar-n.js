@@ -36,6 +36,14 @@ G.dict.push({
     sc: 'claes',
     en: 'clothes',
 }, {
+    sc: 'collectorie',
+    def: 'the office o (tax) collector',
+    tr: 'tax collector',
+    gr: ['n', 'obsolete'],
+    or: [
+        ['Ablins ' + G.notes.or.af, 'collecterie']
+    ]
+}, {
     sc: 'complouther',
     pr: 'comploother',
     en: [
@@ -118,6 +126,8 @@ G.dict.push({
     en: 'a deputy',
     gr: 'n',
     tr: 'deputy',
+    ex: ['The Green Pairty wis ettlin tae appynt a depute convener by the end o the simmer'],
+    or: 'see adj'
 }, { // E
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
@@ -260,7 +270,7 @@ G.dict.push({
         ['aught', 'anything'], 'nothing'
     ],
     gr: 'n',
-    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'Will haed ocht ava tae dae wi the failt IT project']
+    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'John haed ocht ava tae dae wi the maist recent failt IT project']
 }, {
     sc: 'uiss',
     pr: ['yös', 'yis', 'ees', 'yoos'],
