@@ -184,6 +184,16 @@ G.dict.push({
     or: [
         [G.notes.or.ae, 'folc']
     ]
+}, { // G
+    sc: 'gloriosity',
+    en: 'self-importance',
+    tr: ['boast', 'gloriositie', 'self importance'],
+    hl: ['gloriosity', 'gloriositie', 'self importance'],
+    gr: 'n',
+    or: [
+        [G.notes.or.ms, 'gloriositie'],
+        [G.notes.or.mf, 'glorieuseté']
+    ]
 }, { // H
     sc: 'hauden gaun',
     en: 'continuation',
@@ -252,9 +262,24 @@ G.dict.push({
     tr: ['memory', 'recollection'],
     gr: 'n'
 }, { // N
+    sc: 'nationalist',
+    def: 'a body that’s for Scotland’s polítical independence',
+    gr: ['n'],
+}, {
+    sc: 'naturality',
+    en: [
+        ['innate ability or intelligence', 'talent']
+    ],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'naturalité, naturalty'],
+        [G.notes.or.f, 'naturalité'],
+        [G.notes.or.l, 'nātūrālitas']
+    ]
+}, {
     sc: 'nat',
-    def: 'an ocht derogatory term for nationalist; a body that’s for Scotland’s polítical independence',
-    gr: ['n', 'informal', 'derogatory'],
+    def: 'ocht derogatory term for a Scots nationalist',
+    gr: ['n', 'informal']
 }, {
     sc: 'onybody',
     en: 'anybody',
@@ -322,8 +347,12 @@ G.dict.push({
     tr: ['websteid', 'websteed', 'wabsite'],
     gr: 'n',
 }, {
+    sc: 'unionist',
+    def: 'a body that’s for the hauden gaun o the polítical union atween Scotland an England',
+    gr: ['n']
+}, {
     sc: 'yoon',
-    def: 'a derogatory term for unionist; a body that’s for the hauden gaun o the polítical union atween Scotland an England',
+    def: 'a derogatory term for unionist',
     gr: ['n', 'informal', 'derogatory']
 }, {
     sc: 'zoomer',

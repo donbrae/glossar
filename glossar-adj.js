@@ -302,6 +302,18 @@ G.dict.push({ // A
     gr: 'adv',
     or: 'see adj'
 }, {
+    sc: 'versant',
+    en: [
+        ['conversant with', 'versed in'], 'fluent'
+    ],
+    tr: ['conversant', 'versed', 'familiar with'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.lms, 'versant'],
+        [G.notes.or.eme, 'versant']
+    ],
+    ex: ['Nicola wis versant in baith Italians an French', 'He wis weel versant in Scots medieval history']
+}, {
     sc: ['waster', 'wester'],
     en: ['western', 'the more westerly of two places'],
     tr: ['easter', 'eastern'],

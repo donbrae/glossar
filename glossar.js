@@ -23,6 +23,7 @@ G.notes = {
         anor: 'Auld Norse',
         as: 'Aulder Scots',
         md: 'Middle Dutch',
+        eme: 'Early Modren English',
         mode: 'Modren English',
         mlg: 'Middle Laich German',
         rl: 'Roman Law',

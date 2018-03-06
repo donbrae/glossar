@@ -228,6 +228,10 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
 G.v.ken_knaw = {};
 G.v.ken_knaw.trigs = ['ken', 'know', 'kenna', 'know not', 'kent', 'kenned', 'knew', 'kentna', 'knew not', 'did not know', 'didn\'t know', 'known', 'knaw', 'knawed', 'knawn'];
 
+// lat triggers
+G.v.lat = {};
+G.v.lat.trigs = ['allow', 'permit', 'cause', 'make happen', 'luit', 'latten', 'luiten', 'lit', 'lat', 'lit', 'leet', 'löt', 'lüt'];
+
 /**
  * Add verbs (both complex and more simple) to dictionary object
  */
@@ -677,6 +681,33 @@ G.dict.push({
         ex: G.ex.b,
         hl: 'knaw',
         gr: 'v'
+    }, { // L
+        sc: 'lat',
+        en: 'let',
+        pr: ['lat', 'lit'],
+        tr: G.v.lat.trigs,
+        hl: ['allow', 'permit', 'cause', 'make happen'],
+        gr: 'v',
+        ex: ['Lat’s hae a drink efter wark', G.ex.d],
+        or: [
+            [G.notes.or.as, 'lat, let, lete'],
+            [G.notes.or.ae, 'lǽtan']
+        ]
+    }, {
+        sc: 'luit',
+        en: 'let',
+        tr: G.v.lat.trigs,
+        hl: 'luit',
+        pr: ['lit', 'leet', 'löt', 'lüt'],
+        gr: 'pt o the v <span>tae lat</span>',
+        ex: G.ex.e
+    }, {
+        sc: ['latten', 'luiten'],
+        en: 'let',
+        tr: G.v.lat.trigs,
+        hl: ['latten', 'luiten'],
+        gr: 'ptp o the v <span>tae lat</span>',
+        ex: 'John haed been latten doun by his colleague'
     }, { // M
         sc: 'maun',
         pr: ['maun', 'mon', 'man', 'mun'],
@@ -833,7 +864,7 @@ G.dict.push({
         tr: ['ditter', 'doiter'],
         hl: 'swither',
         gr: 'v',
-        ex: '“Dinna swither, min — haud gaun!”',
+        ex: 'Dinna swither, min — haud gaun!',
         or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms]
     }, {
         sc: 'uise',
