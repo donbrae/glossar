@@ -16,10 +16,24 @@ G.adj.guid = {
 G.dict.push({ // A
     sc: 'ae',
     pr: ['ae', 'yae'],
-    en: 'one',
+    en: ['one', 'only'],
     gr: 'adj',
     tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
     hl: ['ae', 'yae', 'yay'],
+}, {
+    sc: 'aesome',
+    en: [
+        ['single', 'solitary']
+    ],
+    gr: 'adj'
+}, {
+    sc: 'aefauld',
+    en: [
+        ['single'],
+        ['simple', 'sincere', 'honest', 'faithful', 'single-minded']
+    ],
+    tr: 'single-minded',
+    gr: 'adj'
 }, {
     sc: 'allevolie',
     en: [
@@ -53,7 +67,7 @@ G.dict.push({ // A
     ],
     tr: ['well dressed', 'able bodied', 'considerable', 'pleasant', 'bra', 'braa', 'brow'],
     gr: ['adj'],
-    ex: 'It wis a gey an braw day',
+    ex: G.ex.g,
     or: [
         [G.notes.or.as, 'braw, bra, brawf'],
         ['variant o the ' + G.notes.or.mf, 'brave']
@@ -66,6 +80,16 @@ G.dict.push({ // A
     tr: ['braw like', 'braw-like'],
     gr: ['adj']
 }, { // C
+    sc: 'cantie',
+    en: [
+        ['lively', 'cheerful', 'pleasant'],
+        ['small and neat'],
+        ['comfortable']
+    ],
+    tr: 'canty',
+    gr: 'adj',
+    ex: 'They haed a cantie efternuin in the beer gairden'
+}, {
     sc: 'chankin',
     def: 'o the weather, the temperatur: (fell) cauld',
     tr: ['chanking', 'baltic', 'cold', 'cauld'],
@@ -127,6 +151,13 @@ G.dict.push({ // A
         [G.notes.or.mode, 'fanty-sheeny'],
         [G.notes.or.it, 'fantoccino']
     ]
+}, {
+    sc: 'fashious',
+    en: [
+        ['troublesome', 'annoying', 'difficult'],
+        ['fractious', 'peevish']
+    ],
+    gr: 'adj'
 }, {
     sc: 'feart',
     en: [
@@ -213,7 +244,7 @@ G.dict.push({ // A
     tr: 'deputy',
     hl: 'depute',
     def: 'apointit as, or exercein the duties o, depute',
-    ex: 'The Depute Preses gied a gey dreich screed at the annual collogue',
+    ex: ['The preses depute gied a gey dreich screed at the annual collogue', G.ex.f],
     or: [
         [G.notes.or.as, 'depute, deput'],
         [G.notes.or.me, 'depute'],

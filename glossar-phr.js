@@ -11,4 +11,8 @@ G.dict.push({
     en: 'demonstrate',
     tr: 'gie a kythin til',
     gr: 'v phr'
+}, {
+    sc: 'at that',
+    en: 'with that',
+    ex: 'At that, Jamie teuk the gate hame'
 });

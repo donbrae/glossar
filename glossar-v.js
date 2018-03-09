@@ -721,7 +721,8 @@ G.dict.push({
             [G.notes.or.as, 'man'],
             [G.notes.or.me + ' (afore 1400-50)', 'man'],
             [G.notes.or.anor, 'muna > man']
-        ]
+        ],
+        ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
     }, {
         sc: 'mind',
         pt: {
@@ -776,7 +777,8 @@ G.dict.push({
         or: [
             [G.notes.or.ms, 'fasch, fash'],
             [G.notes.or.mf, 'faschier']
-        ]
+        ],
+        ex: ['Dinna fash yersel', 'I wis richt fasht anent the job interview', G.ex.d]
     }, // H
     { // hae
         sc: G.v.hae.sc,

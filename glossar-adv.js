@@ -99,7 +99,8 @@ G.dict.push({ // A
     en: [
         ['rather', 'very'],
     ],
-    gr: 'adv'
+    gr: 'adv',
+    ex: [G.ex.g, 'The band’s new album wis gey an listenable']
 }, {
     sc: 'hinderly',
     en: 'eventually',
@@ -191,6 +192,12 @@ G.dict.push({ // A
     gr: ['adv'],
     tr: ['shair', 'shör', 'shür', 'sheer', 'seer', 'sure'],
     or: 'see adj'
+}, {
+    sc: 'aefauldly',
+    en: [
+        ['sincerely', 'honestly', 'faithfully']
+    ],
+    gr: 'adv'
 }, {
     sc: 'than',
     pr: ['than', 'thaun', 'thin', 'dan'],
