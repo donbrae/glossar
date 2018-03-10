@@ -322,7 +322,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'sure, suir(e), seur(e), s(c)hur(e)'],
         [G.notes.or.an, 'sur']
-    ]
+    ],
+    ex: 'He wis shuir he’d seen the fellae somewhaur afore'
 }, {
     sc: 'shuirly',
     en: [
@@ -333,6 +334,42 @@ G.dict.push({ // A
     gr: 'adv',
     or: 'see adj'
 }, {
+    sc: 'sweir',
+    pr: 'sweer',
+    en: [
+        ['lazy', 'slothful', 'indolent'],
+        ['unwilling', 'reluctant', 'loath'],
+    ],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'swer(e), sweir(e), sweer'],
+        [G.notes.or.ae, 'swǽr']
+    ]
+}, {
+    sc: 'sweirt',
+    en: [
+        ['sluggish', 'loath', 'reluctant']
+    ],
+    gr: 'adj',
+    or: 'see adj <span>sweir</span>'
+}, { // T
+    sc: 'tuim',
+    pr: ['toom', 'teem', 'taim', 'tim'],
+    en: [
+        ['empty', 'vacant'],
+        'hungry', ['<span>(of a place)</span> unoccupied'],
+        ['<span>(of people)</span> thin', 'lean', 'lank'],
+        ['<span>(of a machine)</span> idling', 'not processing material']
+    ],
+    tr: ['lanky', 'thin', 'lean', 'unoccupied', 'idling', 'idle'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'tome, tume'],
+        [G.notes.or.ae, 'tōm'],
+        [G.notes.or.anor, 'tómr']
+    ],
+    ex: ['The man wis tuim-heidit!', 'I cam back tuim-haundit']
+}, { // V
     sc: 'versant',
     en: [
         ['conversant with', 'versed in'], 'fluent'

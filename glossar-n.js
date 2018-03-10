@@ -35,6 +35,7 @@ G.dict.push({
 }, {
     sc: 'claes',
     en: 'clothes',
+    gr: 'n'
 }, {
     sc: 'collectorie',
     def: 'the office o (tax) collector',
@@ -94,6 +95,11 @@ G.dict.push({
         ['possible influence o ' + G.notes.or.as + ' <em>dais, das</em>, frae the ' + G.notes.or.nfd, 'dais']
     ]
 }, {
+    sc: 'debursement',
+    en: 'disbursement',
+    gr: 'n',
+    or: 'see v <span>deburse</span>'
+}, {
     sc: 'defeat',
     en: 'defeat',
     tr: ['defait', 'defeet'],
@@ -128,13 +134,25 @@ G.dict.push({
     tr: 'deputy',
     ex: ['The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer'],
     or: 'see adj'
+}, {
+    sc: 'desuetude',
+    en: [
+        ['disuse', 'discontinuance']
+    ],
+    gr: 'n law',
+    or: [
+        [G.notes.or.f, 'désuétude'],
+        [G.notes.or.l, 'dēsuētūdo']
+    ],
+    ex: 'It wis an auld law that haed fawen intae desuetude'
 }, { // E
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
     tr: 'sufficient',
     hl: 'eneuch',
     en: 'enough',
-    gr: ['n', 'adj', 'adv']
+    gr: ['n', 'adj', 'adv'],
+    ex: 'I’ve haed juist about eneuch o your haiverin'
 }, {
     sc: 'environs',
     en: [
@@ -171,7 +189,11 @@ G.dict.push({
     en: [
         ['tangle', 'muddle']
     ],
-    gr: 'n'
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'fang'],
+        [G.notes.or.anor, 'fang']
+    ]
 }, {
     sc: 'fash',
     en: [
@@ -336,12 +358,12 @@ G.dict.push({
     sc: 'nat',
     def: 'ocht derogatory term for a Scots nationalist',
     gr: ['n', 'informal']
-}, {
+}, { // O
     sc: 'onybody',
     en: 'anybody',
     tr: ['oniebody', 'emdie', 'emdy'],
     gr: 'n'
-}, { // O
+}, {
     sc: 'origin',
     en: 'origin',
     gr: 'n'
@@ -353,6 +375,16 @@ G.dict.push({
     gr: 'n',
     ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'John haed ocht ava tae dae wi the maist recent failt IT project']
 }, {
+    sc: 'pneumonie',
+    en: 'pneumonia',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'peripneumonie'],
+        [G.notes.or.eme, 'peripneumony'],
+        [G.notes.or.f, 'péripneumonie']
+    ],
+    ex: 'She wis awfu unweel wi the pneumonie'
+}, { // Q
     sc: ['quine', 'quinie'],
     sc_alt: 'quean',
     pr: ['kwine', 'kwinie'],
@@ -375,6 +407,18 @@ G.dict.push({
     hl: ['uiss', 'yiss', 'ees'],
     en: 'use',
     gr: 'n'
+}, { // R
+    sc: 'rhetoric',
+    pr: 'rEtorik',
+    en: 'rhetoric',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'rethorik, rethorie, rethoreis'],
+        [G.notes.or.af, 'rhétorique'],
+        [G.notes.or.l, 'rhētorica'],
+        'frae the Greek <span>rhētorikē</span>'
+    ],
+    ex: 'It wis naething but tuim rhetoric'
 }, {
     sc: 'roaster',
     def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o thaimsels',

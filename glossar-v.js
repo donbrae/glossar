@@ -327,6 +327,9 @@ G.dict.push({
             ['mix or associate with'],
             ['agree, coincide or fit in with']
         ],
+        pt_pp: {
+            sc: 'complouthert'
+        },
         tr: ['compluter', 'compluther', 'comploother', 'agree', 'coincide', 'fit in'],
         gr: 'v',
         or: 'see n'
@@ -340,6 +343,7 @@ G.dict.push({
         hl: 'comprise',
         gr: 'v',
         or: [
+            [G.notes.or.as, 'comprise, compryse, comprize'],
             [G.notes.or.mf, 'compris']
         ]
     }, {
@@ -373,6 +377,15 @@ G.dict.push({
         gr: 'v',
         ex: 'Aaron wis depute tae cover for his manager at the comatee meetin',
         or: 'see adj'
+    }, {
+        sc: 'deburse',
+        en: 'disburse',
+        def: 'pey out (siller frae a fund)',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'deburs, debours'],
+            [G.notes.or.mf, 'desbourser']
+        ]
     }, { // E
         sc: 'ettle',
         en: [
@@ -380,6 +393,10 @@ G.dict.push({
             'take aim at', ['attempt', 'venture'],
             'desire very much'
         ],
+        pt_pp: {
+            sc: 'ettelt',
+            tr: ['intended', 'planned', 'proposed', 'attempted', 'ventured']
+        },
         tr: ['aim', 'desire', 'ettlin'],
         hl: ['aim', 'desire'],
         gr: 'v',
@@ -395,6 +412,23 @@ G.dict.push({
         tr: ['attempting', 'ettle'],
         hl: ['ettlin'],
         gr: ['v']
+    }, {
+        sc: 'evite',
+        pr: ['evite', 'eveet'],
+        en: [
+            ['avoid', 'escape', 'shun', 'evade']
+        ],
+        pt_pp: {
+            sc: 'evitit',
+            tr: ['avoided', 'escaped', 'shunned', 'evaded', 'evited']
+        },
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'evit(e), eveit'],
+            [G.notes.or.f, 'éviter'],
+            [G.notes.or.l, 'ēvītāre']
+        ],
+        ex: 'He ettelt tae evite bein liftit by the polis'
     },
     // v gae
     { // v gae
@@ -754,7 +788,12 @@ G.dict.push({
             ['tangle', 'mix up'], 'become tangled', ['trap', 'ensnare'],
             ['stumble', 'fumble']
         ],
-        gr: 'v'
+        pt_pp: {
+            sc: 'fankelt',
+            tr: ['tangled', 'mixed up', 'trapped', 'ensnared', 'stumbled', 'fumbled']
+        },
+        gr: 'v',
+        or: 'see n'
     }, {
         sc: ['fash'],
         en: [
@@ -833,7 +872,25 @@ G.dict.push({
         sc: 'ocht',
         en: 'ought',
         gr: 'v'
-    }, {
+    }, { // T
+        sc: 'tuim',
+        en: [
+            'empty a container', ['pour', 'empty out'],
+            'discharge (a gun or shot)',
+            'drain water from (potatoes)',
+            '<span>(of water)</span> flow or gush copiously', ['<span>(of rain)</span> to pour', 'come down in torrents']
+        ],
+        pt_pp: {
+            sc: 'tuimt',
+            tr: ['emptied', 'emptied out',
+                'discharge', 'drained', 'gushed', 'poured'
+            ]
+        },
+        tr: ['empty', 'gush'],
+        gr: 'v',
+        or: 'frae the adj',
+        ex: 'He tuimt the watter doun the cundie'
+    }, { // R
         sc: 'rax',
         en: [
             ['reach', 'stretch']
