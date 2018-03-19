@@ -386,7 +386,6 @@ G.dict.push({
     sc: 'Swaden',
     def: 'kintra in Scandinaivie',
     tr: 'sweden',
-    gr: 'n',
     gr: 'pn',
     or: [
         [G.notes.or.mlg + ', ' + G.notes.or.md, 'Sweden']

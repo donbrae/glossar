@@ -129,6 +129,10 @@ var GLOSSAR = (function() {
                 $btn.prop('disabled', false);
             });
         });
+
+        if ('ontouchstart' in window === false) {
+            $('#searchTextbox').focus();
+        }
     }
 
     function noResults() {

@@ -79,6 +79,12 @@ G.dict.push({ // A
     ],
     tr: ['braw like', 'braw-like'],
     gr: ['adj']
+}, {
+    sc: 'byous',
+    en: [
+        ['wonderful', 'extraordinary', 'exceptional']
+    ],
+    gr: 'adj'
 }, { // C
     sc: 'cantie',
     en: [
@@ -305,7 +311,7 @@ G.dict.push({ // A
         ['erratic'],
         ['wild', 'unreliable', 'undisciplined'],
         ['uneven', 'straggling', 'higgledy-piggledy'],
-        ['of weather: boisterous, uncertain, gusty with rain']
+        ['<span>of weather</span> boisterous, uncertain, gusty with rain']
     ],
     tr: ['boisterous', 'uncertain'],
     gr: ['adj']

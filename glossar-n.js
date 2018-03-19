@@ -212,7 +212,7 @@ G.dict.push({
         [G.notes.or.ms, 'fasch(e)rie, fash(e)rie'],
         [G.notes.or.mf, 'fascherie']
     ],
-    ex: 'There wis a wee bit fasherie atween supporters efter the fitba gemm'
+    ex: 'There wis a bit fasherie winnin at the fitba stadium in time for kick-aff'
 }, {
     sc: 'feartie',
     en: 'coward',
@@ -447,7 +447,7 @@ G.dict.push({
     gr: 'n',
     ex: 'Will wis in a swither about whit Hogmanay pairty tae gang tae',
     or: 'see v'
-}, {
+}, { // T
     sc: 'toun',
     pr: 'toon',
     en: 'town',
@@ -456,6 +456,11 @@ G.dict.push({
         [G.notes.or.as, 'toun, town(e), ton(e)'],
         [G.notes.or.ae, 'tūn']
     ]
+}, {
+    sc: 'tred',
+    en: 'trade',
+    gr: 'n',
+    ex: 'He\'s a jyner tae tred'
 }, { // W
     sc: 'wabsteid',
     en: 'website',

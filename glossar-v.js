@@ -522,7 +522,7 @@ G.dict.push({
             en: 'downloaded',
             tr: 'doonloadit'
         },
-        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
+        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar owre the internet; <em>n</em> the data (file) dounlaidit',
         pr: 'doonlaid',
         gr: ['v', 'n'],
         tr: ['doonload', 'download'],
@@ -756,7 +756,7 @@ G.dict.push({
             [G.notes.or.me + ' (afore 1400-50)', 'man'],
             [G.notes.or.anor, 'muna > man']
         ],
-        ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
+        ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be owre 3,000 wirds']
     }, {
         sc: 'mind',
         pt: {
@@ -777,7 +777,7 @@ G.dict.push({
             en: 'uploaded',
             tr: 'uploadit'
         },
-        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar til a server, an aften ower the internet; <em>n</em> the data (file) uplaidit',
+        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar til a server, an aften owre the internet; <em>n</em> the data (file) uplaidit',
         gr: ['v', 'n'],
         or: [
             [G.notes.or.mode, 'upload']
@@ -817,7 +817,7 @@ G.dict.push({
             [G.notes.or.ms, 'fasch, fash'],
             [G.notes.or.mf, 'faschier']
         ],
-        ex: ['Dinna fash yersel', 'I wis richt fasht anent the job interview', G.ex.d]
+        ex: ['Dinna fash yersel', 'I wis sair fasht anent the job interview', G.ex.d]
     }, // H
     { // hae
         sc: G.v.hae.sc,
@@ -873,6 +873,10 @@ G.dict.push({
         en: 'ought',
         gr: 'v'
     }, { // T
+        sc: 'tred',
+        en: 'trade',
+        gr: 'v'
+    }, {
         sc: 'tuim',
         en: [
             'empty a container', ['pour', 'empty out'],

@@ -78,7 +78,7 @@ ol.ex li::before, div.ex::before {
     padding-right: 3px;
 }
 h1 {
-    font-weight: bold;
+    font-weight: 600;
 }
 .sc {
     padding: 1px 4px;
@@ -129,7 +129,7 @@ div.en, div.def, div.ex {
     display: block;
 }
 .sc, .sc-alt span, .pt span, .pp span, .pt-pp span, .neg span {
-    font-weight: bold;
+    font-weight: 600;
 }
 .en {
     font-style: italic;
