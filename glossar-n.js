@@ -240,9 +240,9 @@ G.dict.push({
     en: 'continuation',
     gr: 'n'
 }, {
-    sc: 'hous',
+    sc: 'house',
     sc_alt: ['hoose'],
-    pr: 'hooss',
+    pr: 'hoose',
     en: 'house',
     tr: ['houss', 'hooss'],
     gr: 'n'

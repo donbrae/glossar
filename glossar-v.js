@@ -670,7 +670,7 @@ G.dict.push({
         or: [
             [G.notes.or.ae, 'inbrengan']
         ],
-        ex: ['O the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick', 'a new pipe netwark inbrocht watter tae the hous']
+        ex: ['O the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick', 'a new pipe netwark inbrocht watter tae the house']
     }, {
         sc: 'ken',
         en: 'know',

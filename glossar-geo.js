@@ -45,7 +45,7 @@ G.dict.push({
     gr: ['pn', 'adj'],
     or: G.notes.b
 }, {
-    sc: 'Austrailie',
+    sc: 'Australie',
     en: 'Australia',
     gr: ['pn', 'adj'],
     or: G.notes.b
