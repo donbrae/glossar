@@ -130,7 +130,7 @@ G.dict.push({
     or: '‘Czechie’ is uised on the Scots Wikipedia, an is maistlikes a modren protologism o Česko, a new offícial name for Česká republika; ' + G.notes.b
 }, {
     sc: 'Denmark',
-    def: 'kintra in Scandinaivie',
+    def: 'a kintra in Scandinaivie',
     gr: 'pn'
 }, {
     sc: 'Dens',
@@ -228,7 +228,7 @@ G.dict.push({
     gr: 'pn'
 }, {
     sc: 'Ireland',
-    def: ['a kintra comprehendin about fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, tae the wast o Great Brítain'],
+    def: ['a kintra comprisin about fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, tae the wast o Great Brítain'],
     tr: ['Republic o Ireland', 'Republic of Ireland'],
     gr: 'pn'
 }, {
@@ -289,7 +289,7 @@ G.dict.push({
     sc: 'Norrowa',
     sc_alt: 'Norroway',
     en: 'Norway',
-    def: 'kintra in Scandinaivie',
+    def: 'a kintra in Scandinaivie',
     gr: 'pn'
 }, {
     sc: 'Norse Sea',
@@ -384,7 +384,7 @@ G.dict.push({
     or: G.notes.b
 }, {
     sc: 'Swaden',
-    def: 'kintra in Scandinaivie',
+    def: 'a kintra in Scandinaivie',
     tr: 'sweden',
     gr: 'pn',
     or: [
@@ -395,7 +395,7 @@ G.dict.push({
     def: [
         ['a body that bides in, or is frae, Swaden', 'someane o Swades strynd'], 'a kind o neep'
     ],
-    tr: 'swede',
+    tr: ['swede', 'neep', 'turnip'],
     gr: ['n']
 }, {
     sc: 'Swades',

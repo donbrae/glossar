@@ -31,6 +31,18 @@ G.notes = {
     }
 };
 
+G.ex = {
+    a: "Alasdair an Ashley wis feart they wadna win at the kirk in time tae be mairit",
+    b: "It wis sae thrang Isobel didna knaw whan she wad get out o wark",
+    c: "I kenna whit ye mean — ye\'re haiverin, mun!",
+    d: "I wadna lat it fash ye",
+    e: "The CEO luit skarehauders speir at him efter the tele-collogue",
+    f: "Her depute gree’d tae tak in haund the airtin o the policy an its pitten intil effect",
+    g: "It wis a gey an braw day",
+    h: "I ken brawly richt by wrang!",
+    i: "Jamie wis in a swither about whit Hogmanay pairty tae gang til"
+};
+
 G.dict = [{
     sc: ['an'],
     sc_alt: 'and',
@@ -219,9 +231,18 @@ G.dict = [{
     en: 'they',
     tr: ['thai']
 }, {
-    sc: ['I', 'A', 'ah'],
+    sc: 'I',
+    pr: ['ah', 'aw', 'eh', 'eye'],
+    sc_alt: ['A', 'ah', 'eh'],
     en: 'I',
-    tr: ['A', 'Ah', 'E', 'Eh', 'eh']
+    tr: ['A', 'Ah', 'E', 'Eh', 'eh'],
+    gr: 'first personal pronoun',
+    ex: ['I dinna ken whit ye\'re talkin about', 'I bide in Edinburgh'],
+    or: [
+        [G.notes.or.as, 'I'],
+        [G.notes.or.ae, 'ic']
+    ],
+    inf: 'Mony fowk the day writes <em>A</em> or <em>ah</em>, but thae maks disna kythe owre aften in the líteratur. Frae early Scots, throu Burns, Lorimer an mair modren warks sic as the outpit o furthsetter Itchy Coo, it\'s aye <em>I</em>'
 }, {
     sc: 'the',
     en: 'the'
@@ -241,6 +262,12 @@ G.dict = [{
     en: 'particular',
     tr: 'partiecular',
     gr: 'adj'
+}, { // T
+    sc: 'til',
+    en: 'to',
+    gr: 'prep',
+    inf: '<em>til</em> is niver uised afore a verb, an whiles juist afore vouels an the letter h',
+    ex: ['I walkit owre an spak til him', G.ex.i]
 }];
 
 G.utils = {

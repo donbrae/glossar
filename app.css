@@ -70,12 +70,18 @@ ol {
 ol>li {
     list-style-position: inside;
 }
-ol.ex {
+ol.ex, ol.inf {
     list-style-type: none;
 }
-ol.ex li::before, div.ex::before {
-    content: '\25c7';
+ol.ex li::before, div.ex::before, ol.inf li::before, div.inf::before {
     padding-right: 3px;
+}
+ol.ex li::before, div.ex::before {
+    font-style: normal;
+    content: '\25c7';
+}
+ol.inf li::before, div.inf::before {
+    content: '\25CC';
 }
 h1 {
     font-weight: 600;
@@ -86,13 +92,13 @@ h1 {
 .or-container {
     padding: 5px 0 0 4px;
 }
-.or-container ul, .or-container ul li, ol.ex li {
+.or-container ul, .or-container ul li, ol.ex li, ol.inf li {
     display: inline;
 }
-ol.ex, div.ex {
+ol.ex, div.ex, ol.inf, div.inf {
     color: #676767;
 }
-ol.ex li:not(:last-child) {
+ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     padding-right: 3px;
 }
 /* .def {
@@ -105,13 +111,16 @@ ol.ex li:not(:last-child) {
 .grammar {
     padding: 0 4px;
 }
-.en, .def, .ex {
+.ex {
+    font-style: italic;
+}
+.en, .def, .ex, .inf {
     padding: 1px 4px 0 4px;
 }
-div.en, div.def, div.ex {
+div.en, div.def, div.ex, div.inf {
     padding: 4px 0 0 4px;
 }
-.ex {
+.ex, .inf {
     font-size: .8rem;
 }
 .pt, .pp, .pt-pp, .neg {

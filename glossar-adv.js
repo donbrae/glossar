@@ -49,14 +49,15 @@ G.dict.push({ // A
     gr: ['adv'],
     or: 'see the adj'
 }, { // B
-    sc: 'braw',
+    sc: ['braw', 'brawly'],
     en: [
         ['well', 'finely'],
         ['very', 'extremely']
     ],
     tr: ['bra', 'braa', 'brow'],
     gr: ['adv'],
-    or: 'see the adj'
+    or: 'see the adj',
+    ex: G.ex.h
 }, {
     sc: ['braw an', 'braw and'],
     en: [
@@ -213,6 +214,11 @@ G.dict.push({ // A
     sc: 'sicweys',
     en: 'thus',
     gr: ['adv']
+}, {
+    sc: 'up the stair',
+    en: 'upstairs',
+    gr: 'phrasal adv',
+    ex: ['Awa up the stair an hae a leuk', 'My neebour up the stair telt me']
 }, {
     sc: ['whan', 'fan'],
     pr: ['whan', 'whaun', 'whin', 'fan', 'fin', 'aan'],

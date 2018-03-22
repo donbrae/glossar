@@ -241,11 +241,15 @@ G.dict.push({
     gr: 'n'
 }, {
     sc: 'house',
-    sc_alt: ['hoose'],
     pr: 'hoose',
     en: 'house',
     tr: ['houss', 'hooss'],
-    gr: 'n'
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'hous, hows, hus(e)'],
+        [G.notes.or.me, 'hous(e), hows(e), hus(e)'],
+        [G.notes.or.ae + ' an ' + G.notes.or.anor, 'hús']
+    ]
 }, {
     sc: 'maet',
     sc_alt: 'meat',
@@ -442,10 +446,10 @@ G.dict.push({
         ['a state of confusion', 'a tangled or muddled condition'],
         ['a dithering, undecided person']
     ],
-    tr: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle', 'ditter', 'doiter'],
+    tr: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle', 'ditter', 'doiter', 'unsure'],
     hl: ['indecision', 'doubt', 'nervousness', 'agitation', 'confusion', 'tangle', 'muddle'],
     gr: 'n',
-    ex: 'Will wis in a swither about whit Hogmanay pairty tae gang tae',
+    ex: G.ex.i,
     or: 'see v'
 }, { // T
     sc: 'toun',

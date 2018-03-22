@@ -394,4 +394,9 @@ G.dict.push({ // A
     hl: 'wester',
     gr: ['adj'],
     def: 'locatit tae the wast; the mair waster o twa steids, biggins or ither things; aft-times in steid names, e.g. Wester Hailes'
+}, {
+    sc: 'wastren',
+    tr: 'wastern',
+    en: 'western',
+    gr: 'adj'
 });

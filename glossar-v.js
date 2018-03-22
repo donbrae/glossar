@@ -681,7 +681,7 @@ G.dict.push({
         tr: G.v.ken_knaw.trigs,
         hl: 'ken',
         gr: 'v',
-        ex: G.ex.c
+        ex: [G.ex.h, G.ex.c]
     }, {
         sc: ['kent', 'kenned'],
         en: ['knew'],
@@ -924,7 +924,7 @@ G.dict.push({
         en: [
             ['doubt', 'falter', 'hesitate', 'dither']
         ],
-        tr: ['ditter', 'doiter'],
+        tr: ['ditter', 'doiter', 'unsure'],
         hl: 'swither',
         gr: 'v',
         ex: 'Dinna swither, min — haud gaun!',
