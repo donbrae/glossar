@@ -142,7 +142,7 @@ G.dict.push({ // A
     en: [
         ['besides', 'over and above', 'moreover', 'in addition']
     ],
-    tr: 'attour',
+    tr: ['attour', 'further'],
     gr: ['adv', 'prep']
 }, {
     sc: ['certie', 'certes'],
@@ -200,6 +200,19 @@ G.dict.push({ // A
     tr: ['shair', 'shör', 'shür', 'sheer', 'seer', 'sure'],
     or: 'see adj'
 }, {
+    sc: 'shuirly',
+    en: [
+        ['securely', 'safely'],
+        ['with assurance, certainty or conviction', 'undoubtedly']
+    ],
+    tr: ['with certainty', 'with conviction', 'shairly', 'sheerly', 'seerly', 'surely'],
+    gr: 'adv',
+    or: 'see adj'
+}, {
+    sc: 'sicweys',
+    en: 'thus',
+    gr: ['adv']
+}, {
     sc: 'aefauldly',
     en: [
         ['sincerely', 'honestly', 'faithfully']
@@ -210,10 +223,13 @@ G.dict.push({ // A
     pr: ['than', 'thaun', 'thin', 'dan'],
     en: 'then',
     gr: ['adv', 'n']
-}, {
-    sc: 'sicweys',
-    en: 'thus',
-    gr: ['adv']
+}, { // U
+    sc: 'unco',
+    en: [
+        ['very', 'exceedingly', 'extremely']
+    ],
+    gr: 'adv',
+    or: 'see adj'
 }, {
     sc: 'up the stair',
     en: 'upstairs',

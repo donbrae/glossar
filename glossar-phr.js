@@ -15,4 +15,7 @@ G.dict.push({
     sc: 'at that',
     en: 'with that',
     ex: 'At that, Jamie teuk the gate hame'
+}, {
+    sc: 'be on the haik for',
+    en: 'be on the lookout for'
 });

@@ -670,7 +670,7 @@ G.dict.push({
         or: [
             [G.notes.or.ae, 'inbrengan']
         ],
-        ex: ['O the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick', 'a new pipe netwark inbrocht watter tae the house']
+        ex: ['O the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick', 'A new pipe netwark inbrocht watter tae the house']
     }, {
         sc: 'ken',
         en: 'know',
@@ -868,6 +868,15 @@ G.dict.push({
         tr: G.v.hae.trigs,
         hl: [].concat(G.v.hae.ptp.sc, G.v.hae.ptp.pr),
         gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    }, {
+        sc: 'haik',
+        en: [
+            ['trek', 'rove', 'roam', 'wander aimlessly', 'trudge'], 'carry or drag with difficulty'
+        ],
+        gr: 'v',
+        or: [
+            [G.notes.or.ms, 'haik']
+        ]
     }, { // O
         sc: 'ocht',
         en: 'ought',

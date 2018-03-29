@@ -236,6 +236,12 @@ G.dict.push({
         [G.notes.or.mf, 'glorieuseté']
     ]
 }, { // H
+    sc: 'haik',
+    en: ['a person or animal given to roaming about', ['a trek', 'journey']],
+    tr: 'trek',
+    gr: 'n',
+    or: 'see v'
+}, {
     sc: 'hauden gaun',
     en: 'continuation',
     gr: 'n'
@@ -465,6 +471,16 @@ G.dict.push({
     en: 'trade',
     gr: 'n',
     ex: 'He\'s a jyner tae tred'
+}, {
+    sc: 'unco',
+    en: [
+        ['<span>mainly pl</span> strange or unusual things, rarites, novelties, curiosities'],
+        ['<span>pl</span> news', 'gossip'],
+        ['<span>mainly pl</span> strangers', 'foreigners']
+    ],
+    tr: ['news', 'strangers'],
+    gr: 'n',
+    or: 'see adj'
 }, { // W
     sc: 'wabsteid',
     en: 'website',

@@ -331,15 +331,6 @@ G.dict.push({ // A
     ],
     ex: 'He wis shuir he’d seen the fellae somewhaur afore'
 }, {
-    sc: 'shuirly',
-    en: [
-        ['securely', 'safely'],
-        ['with assurance, certainty or conviction', 'undoubtedly']
-    ],
-    tr: ['with certainty', 'with conviction', 'shairly', 'sheerly', 'seerly', 'surely'],
-    gr: 'adv',
-    or: 'see adj'
-}, {
     sc: 'sweir',
     pr: 'sweer',
     en: [
@@ -375,6 +366,24 @@ G.dict.push({ // A
         [G.notes.or.anor, 'tómr']
     ],
     ex: ['The man wis tuim-heidit!', 'I cam back tuim-haundit']
+}, {
+    sc: 'unco',
+    en: [
+        ['unknown', 'unfamiliar', 'strange'],
+        ['unusual', 'odd', 'strange', 'peculiar', 'unnatural', 'weird', 'remarkable', '<span>as an intensifier</span> extraordinary', 'great', 'awful'],
+        ['reserved', 'shy', 'unfriendly'],
+        ['foreign', 'belonging to another nation or culture']
+    ],
+    tr: ['furrin', 'extraordinary'],
+    gr: 'adj',
+    or: [
+        ['variant o ', 'uncouth'],
+        [G.notes.or.as, 'uncow'],
+        [G.notes.or.me, 'unkow']
+    ],
+    ex: [
+        'He fand himsel in an unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', 'The mechanic haed an unco job sortin the electrics'
+    ]
 }, { // V
     sc: 'versant',
     en: [

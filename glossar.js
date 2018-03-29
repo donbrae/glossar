@@ -231,18 +231,16 @@ G.dict = [{
     en: 'they',
     tr: ['thai']
 }, {
-    sc: 'I',
+    sc: ['I', 'ah', 'A'],
     pr: ['ah', 'aw', 'eh', 'eye'],
-    sc_alt: ['A', 'ah', 'eh'],
     en: 'I',
     tr: ['A', 'Ah', 'E', 'Eh', 'eh'],
     gr: 'first personal pronoun',
-    ex: ['I dinna ken whit ye\'re talkin about', 'I bide in Edinburgh'],
+    ex: ['I ken whit ye mean', 'I stey in the wast end o Edinburgh'],
     or: [
         [G.notes.or.as, 'I'],
         [G.notes.or.ae, 'ic']
-    ],
-    inf: 'Mony fowk the day writes <em>A</em> or <em>ah</em>, but thae maks disna kythe owre aften in the líteratur. Frae early Scots, throu Burns, Lorimer an mair modren warks sic as the outpit o furthsetter Itchy Coo, it\'s aye <em>I</em>'
+    ]
 }, {
     sc: 'the',
     en: 'the'
