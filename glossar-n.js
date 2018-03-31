@@ -105,6 +105,15 @@ G.dict.push({
     gr: 'n',
     or: 'see v <span>deburse</span>'
 }, {
+    sc: 'defaut',
+    en: 'default',
+    gr: ['n', 'v'],
+    or: [
+        [G.notes.or.as, 'defaut, defawt'],
+        [G.notes.or.me, 'defaute, defaut, defawt(e)'],
+        [G.notes.or.af, 'defaut(e)']
+    ]
+}, {
     sc: 'defeat',
     en: 'defeat',
     tr: ['defait', 'defeet'],

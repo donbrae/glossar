@@ -595,7 +595,7 @@ G.dict.push({
         tr: ['effeir', 'relating to', 'according to'],
         hl: ['effeirin tae', 'effeirin til', 'relating to'],
         or: 'see v <span>effeir</span>',
-        ex: 'They spak anent maiters efferin til halth policy'
+        ex: 'They spak anent maiters effeirin til halth policy'
     }, {
         sc: 'gie bield tae/til',
         en: 'protect',
@@ -618,15 +618,18 @@ G.dict.push({
             sc: ['haudit', 'held', 'huild'],
             tr: 'held'
         },
+        pp: {
+            sc: 'hauden',
+            tr: 'held'
+        },
         tr: 'hauden',
         hl: 'haud',
-        gr: 'v'
+        gr: 'v',
+        ex: ['I div haud that ye’re wrang', 'I jaloused I’d better haud my tongue', 'The neist comatee meetin will be hauden in Mey']
     }, {
         sc: 'hauden',
         en: 'be obliged or required to do something',
-        tr: ['obliged', 'required', 'haud', 'held', 'huild'],
-        hl: 'hauden',
-        gr: ['pp o v <span>tae haud</span>']
+        tr: ['obliged', 'required'],
     }, {
         sc: 'haud aff',
         en: 'keep off or away',
@@ -940,7 +943,41 @@ G.dict.push({
         sc: 'ocht',
         en: 'ought',
         gr: 'v'
+    }, { // P
+        sc: 'pit',
+        en: 'put',
+        pt: {
+            sc: ['pat', 'pit'],
+            tr: 'put'
+        },
+        pp: {
+            sc: ['pat', 'pit', 'pitten', 'putten'],
+            tr: 'put'
+        },
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'pit'],
+            [G.notes.or.ae, 'pȳtan']
+        ],
+        ex: ['I pit it tae ye that ye’v tint the pynt o my threap', 'Jamie pit the cat out', 'Iona haed pitten forrit mony guid ideas']
     }, { // T
+        sc: 'tak',
+        en: 'take',
+        pt: {
+            sc: 'teuk',
+            tr: 'took'
+        },
+        pp: {
+            sc: ['taen', 'takken'],
+            tr: ['taken', 'tane', 'takkin']
+        },
+        pr: ['tak', 'take'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'tak'],
+            G.notes.or.ae + ' <span>tacan</span> frae the ' + G.notes.or.anor + ' <span>taka</span>'
+        ]
+    }, {
         sc: 'tak on',
         en: 'adopt',
         tr: {
