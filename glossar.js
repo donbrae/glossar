@@ -40,7 +40,10 @@ G.ex = {
     f: "Her depute gree’d tae tak in haund the airtin o the policy an its pittin intil effect",
     g: "It wis a gey an braw day",
     h: "I ken brawly richt by wrang!",
-    i: "Jamie wis in a swither about whit Hogmanay pairty tae gang til"
+    i: "Jamie wis in a swither about whit Hogmanay pairty tae gang til",
+    j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid beild, an mak namely its pairt in Scotland’s identity nou an in time tae come",
+    k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
+    l: "In terms o tred, o the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick"
 };
 
 G.dict = [{

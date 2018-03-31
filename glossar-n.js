@@ -73,6 +73,11 @@ G.dict.push({
         [G.notes.or.l, 'compositio']
     ]
 }, {
+    sc: 'co-airtar',
+    en: 'coordinator',
+    gr: 'n',
+    ex: 'A full-time co-airtar wis appyntit tae the team'
+}, {
     sc: 'contrair',
     en: [
         ['the contrary', 'the opposite']
@@ -145,6 +150,10 @@ G.dict.push({
         [G.notes.or.l, 'dēsuētūdo']
     ],
     ex: 'It wis an auld law that haed fawen intae desuetude'
+}, {
+    sc: 'development',
+    en: 'development',
+    gr: 'n'
 }, { // E
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
@@ -384,6 +393,12 @@ G.dict.push({
     ],
     gr: 'n',
     ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'John haed ocht ava tae dae wi the maist recent failt IT project']
+}, { // P
+    sc: 'pairt-takar',
+    tr: 'pairt takar',
+    en: 'stakeholder',
+    gr: 'n',
+    ex: G.ex.k
 }, {
     sc: 'pneumonie',
     en: 'pneumonia',
@@ -470,7 +485,7 @@ G.dict.push({
     sc: 'tred',
     en: 'trade',
     gr: 'n',
-    ex: 'He\'s a jyner tae tred'
+    ex: ['He\'s a jyner tae tred', G.ex.l]
 }, {
     sc: 'unco',
     en: [

@@ -261,7 +261,9 @@ G.dict.push({
         ]
     }, {
         sc: 'adduce',
-        def: ['lat see (an item o) evidence in proof', 'bring forrit a witness'],
+        def: ['lat see (an item o) evidence in pruif', 'bring forrit a witness'],
+        tr: ['witness', 'evidence', 'pruif'],
+        hl: 'adduce',
         gr: ['v', 'law']
     }, {
         sc: 'appluise',
@@ -322,6 +324,12 @@ G.dict.push({
     },
     // v be end
     { // C
+        sc: 'cast-owre',
+        en: 'review',
+        tr: ['cast owre'],
+        gr: 'v phr',
+        ex: 'Whiles we will cast-owre the policy an mak mair recommends'
+    }, {
         sc: 'complouther',
         en: [
             ['mix or associate with'],
@@ -386,6 +394,14 @@ G.dict.push({
             [G.notes.or.as, 'deburs, debours'],
             [G.notes.or.mf, 'desbourser']
         ]
+    }, {
+        sc: 'develop',
+        en: 'develop',
+        pt_pp: {
+            sc: 'developit',
+            tr: 'developed'
+        },
+        gr: 'v'
     }, { // E
         sc: 'ettle',
         en: [
@@ -412,6 +428,17 @@ G.dict.push({
         tr: ['attempting', 'ettle'],
         hl: ['ettlin'],
         gr: ['v']
+    }, {
+        sc: 'ettle sair',
+        en: [
+            ['try hard', 'strive']
+        ],
+        pt_pp: {
+            sc: 'ettelt sair',
+            tr: ['tried hard', 'strove', 'striven', 'strived']
+        },
+        gr: 'v phr',
+        ex: 'She’d ettelt sair tae pass aw her exams'
     }, {
         sc: 'evite',
         pr: ['evite', 'eveet'],
@@ -564,6 +591,12 @@ G.dict.push({
         hl: ['effeirin tae', 'effeirin til', 'relating to'],
         or: 'see v <span>effeir</span>'
     }, {
+        sc: 'gie bield tae/til',
+        en: 'protect',
+        tr: ['gie bield tae', 'gie bield til'],
+        gr: 'v phr',
+        ex: 'The 1992 Chairter gies bield til Europe’s regional or smaw leids'
+    }, {
         sc: 'haud',
         pr: ['haud', 'hod', 'hud', 'had'],
         en: [
@@ -674,7 +707,7 @@ G.dict.push({
         or: [
             [G.notes.or.ae, 'inbrengan']
         ],
-        ex: ['O the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick', 'A new pipe netwark inbrocht watter tae the house']
+        ex: [G.ex.l, 'A new pipe netwark inbrocht watter tae the hous']
     }, {
         sc: 'ken',
         en: 'know',
@@ -746,6 +779,10 @@ G.dict.push({
         hl: ['latten', 'luiten'],
         gr: 'ptp o the v <span>tae lat</span>',
         ex: 'John haed been latten doun by his colleague'
+    }, {
+        sc: 'lat see',
+        en: 'produce',
+        gr: 'v phr'
     }, { // M
         sc: 'maun',
         pr: ['maun', 'mon', 'man', 'mun'],
@@ -822,6 +859,18 @@ G.dict.push({
             [G.notes.or.mf, 'faschier']
         ],
         ex: ['Dinna fash yersel', 'I wis sair fasht anent the job interview', G.ex.d]
+    }, {
+        sc: 'fesh-on',
+        en: [
+            ['bring forward', 'advance', 'bring to maturity', 'develop']
+        ],
+        pt_pp: {
+            sc: 'fesht-on',
+            tr: ['feshed on', 'fesht on', 'brought forward', 'advanced', 'brought to maturity', 'developed']
+        },
+        tr: 'fesh on',
+        gr: 'v',
+        ex: 'The report recommendit we fesh-on a national policy'
     }, // H
     { // hae
         sc: G.v.hae.sc,
@@ -886,6 +935,19 @@ G.dict.push({
         en: 'ought',
         gr: 'v'
     }, { // T
+        sc: 'tak on',
+        en: 'adopt',
+        tr: {
+            sc: 'teuk on',
+            tr: 'adopted'
+        },
+        pp: {
+            sc: ['taen on', 'takken on', 'teuken on'],
+            tr: 'adopted'
+        },
+        gr: 'v phr',
+        ex: 'The Chairter wis taen on in 1992'
+    }, {
         sc: 'tred',
         en: 'trade',
         gr: 'v'

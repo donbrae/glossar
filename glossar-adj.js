@@ -32,7 +32,8 @@ G.dict.push({ // A
         ['single'],
         ['simple', 'sincere', 'honest', 'faithful', 'single-minded']
     ],
-    tr: 'single-minded',
+    tr: ['single minded', 'unified'],
+    hl: ['aefauld', 'single minded'],
     gr: 'adj'
 }, {
     sc: 'allevolie',
@@ -216,7 +217,8 @@ G.dict.push({ // A
     ],
     tr: ['guy', 'giy'],
     gr: ['adj'],
-    or: 'see adv'
+    or: 'see adv',
+    ex: 'Wi it bein sic a het day, it wis a gey trauchle tae win at the tap o Lee Pen'
 }, {
     sc: 'guid',
     en: 'good',
@@ -396,7 +398,7 @@ G.dict.push({ // A
         [G.notes.or.eme, 'versant']
     ],
     ex: ['Nicola wis versant in baith Italians an French', 'He wis weel versant in Scots medieval history']
-}, {
+}, { // W
     sc: ['waster', 'wester'],
     en: ['western', 'the more westerly of two places'],
     tr: ['easter', 'eastern'],
@@ -407,5 +409,12 @@ G.dict.push({ // A
     sc: 'wastren',
     tr: 'wastern',
     en: 'western',
+    gr: 'adj'
+}, {
+    sc: 'wicelike',
+    tr: ['wysslike', 'wycelike'],
+    en: [ // >
+        ['sensible, respectable']
+    ],
     gr: 'adj'
 });
