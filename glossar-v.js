@@ -576,14 +576,18 @@ G.dict.push({
             ['restrain oneself', 'prevent']
         ],
         pt: {
-            sc: ['haudit', 'held']
+            sc: ['haudit', 'held', 'huild'],
+            tr: 'held'
         },
+        tr: 'hauden',
+        hl: 'haud',
         gr: 'v'
     }, {
         sc: 'hauden',
         en: 'be obliged or required to do something',
-        tr: ['obliged', 'required'],
-        gr: ['pp o v <span>haud</span>']
+        tr: ['obliged', 'required', 'haud', 'held', 'huild'],
+        hl: 'hauden',
+        gr: ['pp o v <span>tae haud</span>']
     }, {
         sc: 'haud aff',
         en: 'keep off or away',

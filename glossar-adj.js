@@ -92,7 +92,7 @@ G.dict.push({ // A
         ['small and neat'],
         ['comfortable']
     ],
-    tr: 'canty',
+    tr: ['canty', 'merry'],
     gr: 'adj',
     ex: 'They haed a cantie efternuin in the beer gairden'
 }, {

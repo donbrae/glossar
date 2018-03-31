@@ -37,7 +37,7 @@ G.ex = {
     c: "I kenna whit ye mean — ye\'re haiverin, mun!",
     d: "I wadna lat it fash ye",
     e: "The CEO luit skarehauders speir at him efter the tele-collogue",
-    f: "Her depute gree’d tae tak in haund the airtin o the policy an its pitten intil effect",
+    f: "Her depute gree’d tae tak in haund the airtin o the policy an its pittin intil effect",
     g: "It wis a gey an braw day",
     h: "I ken brawly richt by wrang!",
     i: "Jamie wis in a swither about whit Hogmanay pairty tae gang til"

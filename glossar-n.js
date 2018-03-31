@@ -249,7 +249,7 @@ G.dict.push({
     sc: 'house',
     pr: 'hoose',
     en: 'house',
-    tr: ['houss', 'hooss'],
+    tr: ['houss', 'hous'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'hous, hows, hus(e)'],

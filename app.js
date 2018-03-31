@@ -275,15 +275,17 @@ var GLOSSAR = (function() {
      */
     function makeSingleArray(w) {
         var words = [];
-
+        
         // Redd word(s)
         if (w.join) { // Result is an array of values
             $.each(w, function(i) {
-                if (this.toString().indexOf(', ') > -1) { // If multiple 'synomyms'
-                    words = words.concat(this.toString().split(', ')); // Split any 'synomym' meanings and add to 'words' array
-                } else {
-                    words = words.concat(this); // Add array to the 'words' array
-                }
+                $.each([].concat(this), function() {
+                    if (this.indexOf(', ') > -1) { // If multiple 'synomyms'
+                        words = words.concat(this.split(', ')); // Split any 'synomym' meanings and add to 'words' array
+                    } else {
+                        words = words.concat(this); // Add array to the 'words' array
+                    }
+                });
             });
         } else { // Result is single string
             words.push(w);
