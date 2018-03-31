@@ -225,7 +225,7 @@ G.dict.push({
 }, {
     sc: 'feartie',
     en: 'coward',
-    gr: 'n'
+    gr: ['n', 'informal']
 }, {
     sc: 'fowk',
     pr: ['fuowk', 'foak'],

@@ -43,7 +43,8 @@ G.ex = {
     i: "Jamie wis in a swither about whit Hogmanay pairty tae gang til",
     j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid beild, an mak namely its pairt in Scotland’s identity nou an in time tae come",
     k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
-    l: "In terms o tred, o the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick"
+    l: "In terms o tred, o the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
+    m: "The First Mínister wrate til her cabinet secretar anent the said policy"
 };
 
 G.dict = [{
@@ -63,7 +64,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'anent'],
         [G.notes.or.ae, 'on efen']
-    ]
+    ],
+    ex: G.ex.m
 }, {
     sc: 'anenst',
     en: [
