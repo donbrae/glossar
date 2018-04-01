@@ -89,7 +89,7 @@ var GLOSSAR = (function() {
                 }
             }
 
-            state.word = $.trim($(this).val());
+            state.word = G.utils.replaceQo($.trim($(this).val()));
 
             if (e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
                 search();
@@ -121,7 +121,7 @@ var GLOSSAR = (function() {
 
             $btn.prop('disabled', true);
 
-            state.word = word;
+            state.word = G.utils.replaceQo(word);
             $('#searchTextbox').val(word);
             $('#result').removeClass('show');
             print(fuse.search(state.word), function() {
@@ -275,7 +275,7 @@ var GLOSSAR = (function() {
      */
     function makeSingleArray(w) {
         var words = [];
-        
+
         // Redd word(s)
         if (w.join) { // Result is an array of values
             $.each(w, function(i) {

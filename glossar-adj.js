@@ -195,7 +195,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'for(e)said, foirsaid'],
         [G.notes.or.me, 'forsayde, forsaid']
     ]
-}, { // F
+}, {
     sc: 'furrin',
     en: [
         ['foreign', 'abroad']
@@ -207,6 +207,17 @@ G.dict.push({ // A
         [G.notes.or.me, 'forain(e), forayn(e), forein(e), foreyne'],
         [G.notes.or.af, 'forain']
     ]
+}, {
+    sc: 'furthie',
+    en: [
+        ['bold', 'energetic', 'impulsive'],
+        ['generous', 'hospitable', 'liberal'],
+        ['forward in disposition', 'bold', 'unabashed']
+    ],
+    tr: ['friendly', 'affable'],
+    hl: 'furthie',
+    gr: 'adj',
+    or: [G.notes.or.as + ' haes <span>forthy</span> an later <span>furthy</span> ‘forrit, bauld, enterprísin’']
 }, {
     sc: 'gey',
     pr: 'guyee',
@@ -383,9 +394,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'uncow'],
         [G.notes.or.me, 'unkow']
     ],
-    ex: [
-        'He fand himsel in an unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', 'The mechanic haed an unco job sortin the electrics'
-    ]
+    ex: ['Mind aye tae be furthie til unco fowk', 'He fand himsel in an unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', 'The mechanic haed an unco job sortin the electrics']
 }, { // V
     sc: 'versant',
     en: [

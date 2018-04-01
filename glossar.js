@@ -281,5 +281,9 @@ G.utils = {
     // Works with filter method to get unique array values
     onlyUnique: function(value, index, self) {
         return self.indexOf(value) === index;
+    },
+    // Replaces ‘ and ’ with '
+    replaceQo: function(s) {
+        return s.replace(/‘|’/g, "'");
     }
 };
