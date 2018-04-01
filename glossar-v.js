@@ -6,6 +6,66 @@ G.v = {}; // Verbs
 
 // Complex Verbs
 
+// Complex verb template
+// v {{ wird }} [search also for // v {{ wird }}]
+// G.v.{{ wird }} = {
+//     sc: [],
+//     en: [],
+//     tr: [],
+//     neg: {
+//         sc: [],
+//         en: [
+//             []
+//         ],
+//         tr: [],
+//         tps: { // > Third person singular
+//             sc: [],
+//             en: [
+//                 []
+//             ],
+//             tr: []
+//         }
+//     },
+//     pt: {
+//         sc: [],
+//         en: [],
+//         tr: [],
+//         neg: {
+//             sc: [],
+//             en: []
+//         }
+//     },
+//     pp: {
+//         sc: '',
+//         en: '',
+//         tr: [],
+//     },
+//     ing: {
+//         sc: [],
+//         en: '',
+//         tr: [],
+//     },
+//     tps: {
+//         sc: [],
+//         en: '',
+//         tr: [],
+//     }
+// };
+// G.v.{{ wird }}.trigs = [].concat( // Control display of conjugated '{{ wird }}'
+//     G.v.{{ wird }}.sc, G.v.{{ wird }}.en, G.v.{{ wird }}.tr, // {{ wird }}
+//     G.v.{{ wird }}.neg.sc, G.v.{{ wird }}.neg.en, G.v.{{ wird }}.neg.tr, // {{ wird }} neg
+//     G.v.{{ wird }}.neg.tps.sc, G.v.{{ wird }}.neg.tps.en, G.v.{{ wird }}.neg.tps.tr, // {{ wird }} neg third person singular
+//     G.v.{{ wird }}.pt.sc, G.v.{{ wird }}.pt.en, G.v.{{ wird }}.pt.tr, // {{ wird }} pt
+//     G.v.{{ wird }}.pt.neg.sc, G.v.{{ wird }}.pt.neg.en, // {{ wird }} pt neg
+//     G.v.{{ wird }}.pp.sc, G.v.{{ wird }}.pp.en, G.v.{{ wird }}.pp.tr, // {{ wird }} pp
+//     G.v.{{ wird }}.ing.sc, G.v.{{ wird }}.ing.en, G.v.{{ wird }}.ing.tr, // {{ wird }} -ing form
+//     G.v.{{ wird }}.tps.sc, G.v.{{ wird }}.tps.en, G.v.{{ wird }}.tps.tr // {{ wird }} third person singular
+// );
+// G.v.{{ wird }}.meta = { // Metadata
+//     gr_hw: G.utils.addSpan(G.v.{{ wird }}.sc[0]) + ' etc.' // Which headwords should appear in the grammar definition
+// };
+// {{ wird }} end
+
 // v gae
 G.v.gae = {
     sc: ['gae', 'gang', 'gan'],
@@ -31,7 +91,7 @@ G.v.gae = {
         tr: ['gad', 'goed', 'ginged', 'ganged'],
         neg: {
             sc: ['gaedna'],
-            en: 'did not go',
+            en: 'did not go'
         }
     },
     pp: {
@@ -61,9 +121,59 @@ G.v.gae.trigs = [].concat( // Control display of conjugated 'gae'
     G.v.gae.tps.sc, G.v.gae.tps.en, G.v.gae.tps.tr // gae third person singular
 );
 G.v.gae.meta = { // Metadata
-    gr_hw: G.utils.addSpan(G.v.gae.sc[0]) + ' etc.' // Which headwords should appear in the grammar definition
+    gr_hw: 'v ' + G.utils.addSpan('tae ' + G.v.gae.sc[0]) + ' etc.' // Which headwords should appear in the grammar definition
 };
 // gae end
+
+// v gie
+G.v.gie = {
+    sc: 'gie',
+    en: 'give',
+    pr: 'gee',
+    neg: {
+        sc: 'giena',
+        en: [
+            ['do not give', 'give not']
+        ]
+    },
+    pt: {
+        sc: 'gied',
+        en: 'gave',
+        neg: {
+            sc: 'giedna',
+            en: [
+                ['did not give', 'gave not']
+            ]
+        }
+    },
+    pp: {
+        sc: ['gien', 'gied'],
+        en: 'given'
+    },
+    ing: {
+        sc: ['giein'],
+        en: 'giving',
+        tr: 'givin'
+    },
+    tps: {
+        sc: 'gies',
+        en: 'gives'
+    }
+};
+G.v.gie.trigs = [].concat( // Control display of conjugated 'gie'
+    G.v.gie.sc, G.v.gie.en, // gie
+    G.v.gie.pr, // gie pr
+    G.v.gie.neg.sc, G.v.gie.neg.en, // gie neg
+    G.v.gie.pt.sc, G.v.gie.pt.en, // gie pt
+    G.v.gie.pt.neg.sc, G.v.gie.pt.neg.en, // gie pt neg
+    G.v.gie.pp.sc, G.v.gie.pp.en, // gie pp
+    G.v.gie.ing.sc, G.v.gie.ing.en, G.v.gie.ing.tr, // gie -ing form
+    G.v.gie.tps.sc, G.v.gie.tps.en // gie third person singular
+);
+G.v.gie.meta = { // Metadata
+    gr_hw: 'v ' + G.utils.addSpan('tae ' + G.v.gie.sc)
+};
+// gie end
 
 // v be
 G.v.be = {
@@ -462,32 +572,31 @@ G.dict.push({
         sc: G.v.gae.sc,
         en: G.v.gae.en,
         tr: G.v.gae.trigs,
-        hl: [].concat(G.v.gae.en, G.v.gae.tr), // Overrides tr highlighting above, as here we don't want all the tr words being highlighted
+        hl: [].concat(G.v.gae.sc, G.v.gae.tr), // Overrides tr highlighting above, as here we don't want all the tr words being highlighted
         gr: 'v'
     }, { // v gae neg
         sc: G.v.gae.neg.sc,
         en: G.v.gae.neg.en,
         tr: G.v.gae.trigs,
-        hl: [].concat(G.v.gae.neg.en, G.v.gae.neg.tr),
+        hl: [].concat(G.v.gae.neg.sc, G.v.gae.neg.tr),
         gr: 'neg o ' + G.v.gae.meta.gr_hw
     }, { // v gae neg third person singular
         sc: G.v.gae.neg.tps.sc,
         en: G.v.gae.neg.tps.en,
         tr: G.v.gae.trigs,
-        hl: [].concat(G.v.gae.neg.tps.en, G.v.gae.neg.tps.tr),
+        hl: [].concat(G.v.gae.neg.tps.sc, G.v.gae.neg.tps.tr),
         gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw
     }, { // v gae pt
         sc: G.v.gae.pt.sc,
         en: G.v.gae.pt.en,
         tr: G.v.gae.trigs, // So this is triggered when 'go' is entered
         hl: G.v.gae.pt.tr, // Which trigger words should cause the headwords to be highlighted
-        // gr: ['pt o <span>' + [].concat(G.v.gae.sc).join(', ')] + '</span>'
         gr: 'pt o ' + G.v.gae.meta.gr_hw
     }, { // v gae pt neg
         sc: G.v.gae.pt.neg.sc,
         en: G.v.gae.pt.neg.en,
         tr: G.v.gae.trigs,
-        hl: G.v.gae.pt.neg.en,
+        hl: G.v.gae.pt.neg.sc,
         gr: 'neg pt o ' + G.v.gae.meta.gr_hw
     }, { // v gae pp
         sc: G.v.gae.pp.sc,
@@ -509,6 +618,52 @@ G.dict.push({
 
     },
     // v gae end
+    // v gie
+    { // v gie
+        sc: G.v.gie.sc,
+        en: G.v.gie.en,
+        pr: G.v.gie.pr,
+        tr: G.v.gie.trigs,
+        hl: [].concat(G.v.gie.sc, G.v.gie.pr),
+        gr: 'v'
+    }, { // v gie neg
+        sc: G.v.gie.neg.sc,
+        en: G.v.gie.neg.en,
+        tr: G.v.gie.trigs,
+        hl: G.v.gie.neg.sc,
+        gr: 'neg o ' + G.v.gie.meta.gr_hw
+    }, { // v gie pt
+        sc: G.v.gie.pt.sc,
+        en: G.v.gie.pt.en,
+        tr: G.v.gie.trigs,
+        hl: G.v.gie.pt.sc,
+        gr: 'pt o ' + G.v.gie.meta.gr_hw
+    }, { // v gie pt neg
+        sc: G.v.gie.pt.neg.sc,
+        en: G.v.gie.pt.neg.en,
+        tr: G.v.gie.trigs,
+        hl: G.v.gie.pt.neg.sc,
+        gr: 'neg pt o ' + G.v.gie.meta.gr_hw
+    }, { // v gie pp
+        sc: G.v.gie.pp.sc,
+        en: G.v.gie.pp.en,
+        tr: G.v.gie.trigs,
+        hl: G.v.gie.pp.sc,
+        gr: 'pp o ' + G.v.gie.meta.gr_hw
+    }, { // v gie -ing form
+        sc: G.v.gie.ing.sc,
+        en: G.v.gie.ing.en,
+        tr: G.v.gie.trigs,
+        hl: G.v.gie.ing.tr
+    }, { // v Third person singular
+        sc: G.v.gie.tps.sc,
+        en: G.v.gie.tps.en,
+        tr: G.v.gie.trigs,
+        hl: G.v.gie.tps.sc,
+        gr: 'third person singular o ' + G.v.gie.meta.gr_hw
+
+    },
+    // v gie end
     {
         sc: 'compone',
         en: [
@@ -968,15 +1123,21 @@ G.dict.push({
             tr: 'took'
         },
         pp: {
-            sc: ['taen', 'takken'],
-            tr: ['taken', 'tane', 'takkin']
+            sc: ['taen', 'takken', 'teuken'],
+            tr: ['taken', 'tane', 'takkin', 'tooken', 'tookin']
         },
         pr: ['tak', 'take'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'tak'],
             G.notes.or.ae + ' <span>tacan</span> frae the ' + G.notes.or.anor + ' <span>taka</span>'
-        ]
+        ],
+        ex: 'The roaster’s comment haed been taen doun afore I coud repone til him'
+    }, { // Tak -ing ending
+        sc: ['takkin', 'taein'],
+        en: 'taking',
+        tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'takkin', 'tooken', 'tookin'],
+        ex: 'I wis takkin the dug for a walk an it stairtit smirrin'
     }, {
         sc: 'tak on',
         en: 'adopt',
@@ -1097,4 +1258,57 @@ G.dict.push({
         gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)]
     }
     // v war end
+    // Template
+    // // v {{ wird }}
+    // { // v {{ wird }}
+    //     sc: G.v.{{ wird }}.sc,
+    //     en: G.v.{{ wird }}.en,
+    //     pr: G.v.{{ wird }}.pr,
+    //     tr: G.v.{{ wird }}.trigs,
+    //     hl: [].concat(G.v.{{ wird }}.sc, G.v.{{ wird }}.pr),
+    //     gr: 'v'
+    // }, { // v {{ wird }} neg
+    //     sc: G.v.{{ wird }}.neg.sc,
+    //     en: G.v.{{ wird }}.neg.en,
+    //     tr: G.v.{{ wird }}.trigs,
+    //     hl: [].concat(G.v.{{ wird }}.neg.sc, G.v.{{ wird }}.neg.tr),
+    //     gr: 'neg o ' + G.v.{{ wird }}.meta.gr_hw
+    // }, { // v {{ wird }} neg third person singular
+    //     sc: G.v.{{ wird }}.neg.tps.sc,
+    //     en: G.v.{{ wird }}.neg.tps.en,
+    //     tr: G.v.{{ wird }}.trigs,
+    //     hl: G.v.{{ wird }}.neg.tps.sc, // no specific trigger for this conjugation
+    //     gr: 'neg third person singular o ' + G.v.{{ wird }}.meta.gr_hw
+    // }, { // v {{ wird }} pt
+    //     sc: G.v.{{ wird }}.pt.sc,
+    //     en: G.v.{{ wird }}.pt.en,
+    //     tr: G.v.{{ wird }}.trigs,
+    //     hl: G.v.{{ wird }}.pt.sc,
+    //     gr: 'pt o ' + G.v.{{ wird }}.meta.gr_hw
+    // }, { // v {{ wird }} pt neg
+    //     sc: G.v.{{ wird }}.pt.neg.sc,
+    //     en: G.v.{{ wird }}.pt.neg.en,
+    //     tr: G.v.{{ wird }}.trigs,
+    //     hl: G.v.{{ wird }}.pt.neg.sc,
+    //     gr: 'neg pt o ' + G.v.{{ wird }}.meta.gr_hw
+    // }, { // v {{ wird }} pp
+    //     sc: G.v.{{ wird }}.pp.sc,
+    //     en: G.v.{{ wird }}.pp.en,
+    //     tr: G.v.{{ wird }}.trigs,
+    //     hl: G.v.{{ wird }}.pp.sc,
+    //     gr: 'pp o ' + G.v.{{ wird }}.meta.gr_hw
+    // }, { // v {{ wird }} -ing form
+    //     sc: G.v.{{ wird }}.ing.sc,
+    //     en: G.v.{{ wird }}.ing.en,
+    //     tr: G.v.{{ wird }}.trigs,
+    //     hl: G.v.{{ wird }}.ing.sc
+    // }, { // v Third person singular
+    //     sc: G.v.{{ wird }}.tps.sc,
+    //     en: G.v.{{ wird }}.tps.en,
+    //     tr: G.v.{{ wird }}.trigs,
+    //     hl: G.v.{{ wird }}.tps.sc,
+    //     gr: 'third person singular o ' + G.v.{{ wird }}.meta.gr_hw
+    //
+    // },
+    // // v {{ wird }} end
 );
