@@ -46,6 +46,10 @@ ul>li:not(.no-results) {
     padding: 5px 5px;
     line-height: 1.4;
 }
+ul>li.phrase {
+    background-color: inherit;
+    border: 1px dotted #dcdcdc;
+}
 ul.or {
     display: inline;
 }

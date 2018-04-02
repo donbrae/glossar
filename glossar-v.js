@@ -548,7 +548,8 @@ G.dict.push({
             tr: ['tried hard', 'strove', 'striven', 'strived']
         },
         gr: 'v phr',
-        ex: 'She’d ettelt sair tae pass aw her exams'
+        ex: 'She’d ettelt sair tae pass aw her exams',
+        ph: true
     }, {
         sc: 'evite',
         pr: ['evite', 'eveet'],
@@ -750,13 +751,15 @@ G.dict.push({
         tr: ['effeir', 'relating to', 'according to'],
         hl: ['effeirin tae', 'effeirin til', 'relating to'],
         or: 'see v <span>effeir</span>',
-        ex: 'They spak anent maiters effeirin til halth policy'
+        ex: 'They spak anent maiters effeirin til halth policy',
+        ph: true
     }, {
         sc: 'gie bield tae/til',
         en: 'protect',
         tr: ['gie bield tae', 'gie bield til'],
         gr: 'v phr',
-        ex: 'The 1992 Chairter gies bield til Europe’s regional or smaw leids'
+        ex: 'The 1992 Chairter gies bield til Europe’s regional or smaw leids',
+        ph: true
     }, {
         sc: 'haud',
         pr: ['haud', 'hod', 'hud', 'had'],
@@ -946,7 +949,8 @@ G.dict.push({
     }, {
         sc: 'lat see',
         en: 'produce',
-        gr: 'v phr'
+        gr: 'v phr',
+        ph: true
     }, { // M
         sc: 'maun',
         pr: ['maun', 'mon', 'man', 'mun'],
@@ -966,9 +970,10 @@ G.dict.push({
         sc: 'mind',
         pt: {
             sc: 'mindit',
-            en: ['reminded', 'remembered', 'recollected', 'called to mind']
+            tr: ['reminded', 'remembered', 'recollected', 'called to mind', 'myndit']
         },
         en: ['remind', ['remember', 'recollect', 'call to mind']],
+        tr: 'mynd',
         gr: 'v',
         or: [
             [G.notes.or.as, 'minde, mynd(e)'],
@@ -1114,7 +1119,7 @@ G.dict.push({
             [G.notes.or.as, 'pit'],
             [G.notes.or.ae, 'pȳtan']
         ],
-        ex: ['I pit it tae ye that ye’v tint the pynt o my threap', 'Jamie pit the cat out', 'Iona haed pitten forrit mony guid ideas']
+        ex: ['I pit it tae ye that ye’v tint the pynt o my threap', 'Jamie pit the cat out', G.ex.f, 'Iona haed pitten forrit mony guid ideas']
     }, { // T
         sc: 'tak',
         en: 'take',
@@ -1150,7 +1155,8 @@ G.dict.push({
             tr: 'adopted'
         },
         gr: 'v phr',
-        ex: 'The Chairter wis taen on in 1992'
+        ex: 'The Chairter wis taen on in 1992',
+        ph: true
     }, {
         sc: 'tred',
         en: 'trade',

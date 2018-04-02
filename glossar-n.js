@@ -358,6 +358,7 @@ G.dict.push({
 }, {
     sc: 'mind',
     def: 'the mind; that whilk is brocht back tae mind or mindit, memory, a mindin',
+    tr: 'mynd',
     gr: 'n',
     or: 'see v'
 }, {

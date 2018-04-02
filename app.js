@@ -147,7 +147,7 @@ var GLOSSAR = (function() {
      */
     function print(r, callback) {
         var grammar, hl_sc_alt,
-            hl, hl_all, $li, def, ex, inf, en, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or;
+            hl, hl_all, $li, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or;
 
         if (r && r.length) {
             $('#result').html('');
@@ -158,6 +158,7 @@ var GLOSSAR = (function() {
                 pr = this.pr ? '<span class="pr">(‘' + [].concat(this.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
                 def = this.def ? formatMultiple(this.def, ';', 'def') : ''; // Definition
                 ex = this.ex ? formatMultiple(this.ex, ';', 'ex') : ''; // Examples
+                ph = this.ph ? ' class="phrase"' : ''; // Phrases, idioms
                 inf = this.inf ? formatMultiple(this.inf, ';', 'inf') : ''; // Additional information
                 or = this.or ? formatOrigin(this.or) : ''; // Origin
                 hl_sc_alt = this.sc_alt ? [].concat(this.sc_alt) : []; // Make sure to highlight any alternative Scots words
@@ -206,7 +207,7 @@ var GLOSSAR = (function() {
 
                 pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(this.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
 
-                $('#result').append('<li><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
+                $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
                     pr +
                     grammar +
                     sc_alt +

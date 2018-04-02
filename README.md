@@ -24,3 +24,6 @@ When pushing past tenses and past participles to `G.dict` (via properties `pt`, 
 # Biggin
 
 Run `build.sh` to write to **glossar-bundle.min.js**
+
+https://glossar.makforrit.scot/
+(Non-local) dev URL: https://glossar.makforrit.scot/index-dev.html
