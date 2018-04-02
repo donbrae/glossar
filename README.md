@@ -1,4 +1,4 @@
-Merk: this readme is scrieved in Scots, while the code an comments itsel is in English.
+Merk: this readme is scrieved in Scots; the code an comments is in English.
 
 # Ettle
 
@@ -12,7 +12,7 @@ Praisently at prototype stage.
 2. See results as ye teep
 3. Input wirds uisin aither mair estaiblisht spellins, or phonetically
 4. Retours baith the Scots, an the English translate (or whiles a definítion in Scots)
-4. Gies ‘correct’ spellin, basic pronunciation an grammar, some wittins anent wird origin, alang wi ony common alternative spellins
+4. Gies ‘richt’ spellin, basic pronunciation an grammar, some wittins anent wird origin, alang wi ony common alternative spellins
 5. Lichtwecht an accessible on dasktap, tablet an mobile.
 
 Audience: Scots spikkers, scrievers an learners.
@@ -21,7 +21,7 @@ Audience: Scots spikkers, scrievers an learners.
 
 index-dev.html
 
-Trigger wirds (`tr`), pronunciations (`pr`) an alternative spellins (`sc_alt`) will be hielichtit in the UI by defaut. ye can uise the *highlight* property (`hl`) to owreride this. Merk hou teepin *depute* (Scots) vs *deputy* (English) is haundelt. For a mair complex exemple, tak tent o the verbs *tae gae* an *tae gie*.
+Trigger wirds (`tr`), pronunciations (`pr`) an alternative spellins (`sc_alt`) will be hielichtit in the UI by defaut. Ye can uise the *highlight* property (`hl`) to owerride this. Merk hou teepin *depute* (Scots) vs *deputy* (English) is haundelt. For a mair complex example, tak tent o the verbs *tae gae* an *tae gie*.
 
 Whan pushin past tenses an past partíciples til `G.dict` (by gate o properties `pt`, `pp` an `pt_pp`), merk that baith the English an trigger wirds shoud be eikit til the `tr` property — there isna a separate `en` property.
 
