@@ -1,29 +1,33 @@
-Main ettle: enable users to look up common (and some more obscure) Scots words quickly and easily.
+Merk: this readme is scrieved in Scots, while the code an comments itsel is in English.
 
-Presently at prototype stage.
+# Ettle
+
+The heidmaist ettle o this wab-gibble is tae allou uisers tae translate wirds an ídioms atween Scots an English, swith an easy, an be gien basic wittins anent the wirds.
+
+Praisently at prototype stage.
 
 # Featurs
 
-1. Look up vocabulary in English or Scots using a single textbox
-2. Get instant results as you type
-3. Enter words using more established spellings, or phonetically
-4. Returns both the Scots, and the English translation
-4. Gives ‘correct’ spelling, basic pronunciation and grammar, along with any common alternative spellings
-5. Lightweight wab-gibble accessible on desktop, tablet and mobile
+1. Leuk up vocabular in English or Scots uisin an aefauld text kistie
+2. See results as ye teep
+3. Input wirds uisin aither mair estaiblisht spellins, or phonetically
+4. Retours baith the Scots, an the English translate (or whiles a definítion in Scots)
+4. Gies ‘correct’ spellin, basic pronunciation an grammar, some wittins anent wird origin, alang wi ony common alternative spellins
+5. Lichtwecht an accessible on dasktap, tablet an mobile.
 
-Audience: Scots speakers, writers and learners.
+Audience: Scots spikkers, scrievers an learners.
 
 # Dev
 
 index-dev.html
 
-Trigger words (`tr`), pronunciations (`pr`) and alternative spellings (`sc_alt`) will be highlighted in the UI by default. You can use the *highlight* property (`hl`) to override this. Note how typing *depute* (Scots) vs *deputy* (English) is handled. For a more complex example, see the verb tae *gae*.
+Trigger wirds (`tr`), pronunciations (`pr`) an alternative spellins (`sc_alt`) will be hielichtit in the UI by defaut. ye can uise the *highlight* property (`hl`) to owreride this. Merk hou teepin *depute* (Scots) vs *deputy* (English) is haundelt. For a mair complex exemple, tak tent o the verbs *tae gae* an *tae gie*.
 
-When pushing past tenses and past participles to `G.dict` (via properties `pt`, `pp` and `pt_pp`), note that both the English and trigger words should be added to the `tr` property — there is no separate `en` property.
+Whan pushin past tenses an past partíciples til `G.dict` (by gate o properties `pt`, `pp` an `pt_pp`), merk that baith the English an trigger wirds shoud be eikit til the `tr` property — there isna a separate `en` property.
 
 # Biggin
 
-Run `build.sh` to write to **glossar-bundle.min.js**
+Rin `build.sh` tae write til **glossar-bundle.min.js**
 
-https://glossar.makforrit.scot/
-(Non-local) dev URL: https://glossar.makforrit.scot/index-dev.html
+* https://glossar.makforrit.scot/
+* (non-local) dev URL: https://glossar.makforrit.scot/index-dev.html

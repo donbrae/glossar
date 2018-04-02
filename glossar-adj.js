@@ -210,12 +210,11 @@ G.dict.push({ // A
 }, {
     sc: 'furthie',
     en: [
-        ['bold', 'energetic', 'impulsive'],
-        ['generous', 'hospitable', 'liberal'],
-        ['forward in disposition', 'bold', 'unabashed']
+        ['forward in disposition', 'bold', 'energetic', 'impulsive', 'unabashed'],
+        ['generous', 'hospitable', 'liberal']
     ],
-    tr: ['friendly', 'affable'],
-    hl: 'furthie',
+    tr: ['friendly', 'affable', 'outgoing', 'forward', 'forrit', 'bauld'],
+    hl: ['furthie', 'outgoing', 'forward', 'forrit', 'bauld'],
     gr: 'adj',
     or: [G.notes.or.as + ' haes <span>forthy</span> an later <span>furthy</span> ‘forrit, bauld, enterprísin’']
 }, {

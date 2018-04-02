@@ -170,7 +170,7 @@ G.dict.push({
     hl: 'eneuch',
     en: 'enough',
     gr: ['n', 'adj', 'adv'],
-    ex: 'I’ve haed juist about eneuch o your haiverin'
+    ex: 'I’v haed juist about eneuch o your haiverin'
 }, {
     sc: 'environs',
     en: [
@@ -260,7 +260,7 @@ G.dict.push({
     gr: 'n',
     or: 'see v'
 }, {
-    sc: 'hauden gaun',
+    sc: 'haudin gaun',
     en: 'continuation',
     gr: 'n'
 }, {
@@ -514,7 +514,7 @@ G.dict.push({
     gr: 'n',
 }, {
     sc: 'unionist',
-    def: 'a body that’s for the hauden gaun o the polítical union atween Scotland an England',
+    def: 'a body that’s for the haudin gaun o the polítical union atween Scotland an England',
     gr: ['n']
 }, {
     sc: 'yoon',
