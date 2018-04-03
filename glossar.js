@@ -48,7 +48,8 @@ G.ex = {
     n: "I’m meetin up wi an auld fríend efter",
     o: "The Fisk Secretar-depute will the day set furth new wittins anent the proponed tax exemptions",
     p: "The day’s gemm agin Aiberdeen will be played at hame",
-    q: "Jeannie stuid anent him, fair pecht"
+    q: "Jeannie stuid anent him, fair pecht",
+    r: "Mind aye tae be furthie til unco fowk"
 };
 
 G.dict = [{
@@ -277,7 +278,7 @@ G.dict = [{
     en: 'to',
     gr: 'prep',
     inf: '<em>til</em> is niver uised afore a verb, an whiles juist afore vouels an the letter h',
-    ex: ['I walkit owre an spak til him', G.ex.i]
+    ex: ['I walkit ower an spak til him', G.ex.i]
 }];
 
 G.utils = {

@@ -434,11 +434,11 @@ G.dict.push({
     },
     // v be end
     { // C
-        sc: 'cast-owre',
+        sc: 'cast-ower',
         en: 'review',
-        tr: ['cast owre'],
+        tr: ['cast ower'],
         gr: 'v phr',
-        ex: 'Whiles we will cast-owre the policy an mak mair recommends'
+        ex: 'Whiles we will cast-ower the policy an mak mair recommends'
     }, {
         sc: 'complouther',
         en: [
@@ -705,7 +705,7 @@ G.dict.push({
             en: 'downloaded',
             tr: 'doonloadit'
         },
-        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar owre the internet; <em>n</em> the data (file) dounlaidit',
+        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
         pr: 'doonlaid',
         gr: ['v', 'n'],
         tr: ['doonload', 'download'],
@@ -751,7 +751,7 @@ G.dict.push({
         tr: ['effeir', 'relating to', 'according to', 'applicable to'],
         hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to'],
         or: 'see v <span>effeir</span>',
-        ex: 'They spak anent maiters effeirin til halth policy',
+        ex: 'The comatee spak anent maiters effeirin til halth policy',
         ph: true
     }, {
         sc: 'gie bield tae/til',
@@ -965,7 +965,7 @@ G.dict.push({
             [G.notes.or.me + ' (afore 1400-50)', 'man'],
             [G.notes.or.anor, 'muna > man']
         ],
-        ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be owre 3,000 wirds']
+        ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
     }, {
         sc: 'mind',
         pt: {
@@ -987,7 +987,7 @@ G.dict.push({
             en: 'uploaded',
             tr: 'uploadit'
         },
-        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar til a server, an aften owre the internet; <em>n</em> the data (file) uplaidit',
+        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar til a server, an aften ower the internet; <em>n</em> the data (file) uplaidit',
         gr: ['v', 'n'],
         or: [
             [G.notes.or.mode, 'upload']
@@ -1142,7 +1142,7 @@ G.dict.push({
         sc: ['takkin', 'taein'],
         en: 'taking',
         tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'takkin', 'tooken', 'tookin'],
-        ex: 'I wis takkin the dug for a walk an it stairtit smirrin'
+        ex: 'I wis takkin the dug for a walk whan it stairtit smirrin'
     }, {
         sc: 'tak on',
         en: 'adopt',

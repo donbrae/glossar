@@ -227,7 +227,8 @@ G.dict.push({ // A
     tr: ['friendly', 'affable', 'outgoing', 'forward', 'forrit', 'bauld'],
     hl: ['furthie', 'outgoing', 'forward', 'forrit', 'bauld'],
     gr: 'adj',
-    or: [G.notes.or.as + ' haes <span>forthy</span> an later <span>furthy</span> ‘forrit, bauld, enterprísin’']
+    or: [G.notes.or.as + ' haes <span>forthy</span> an later <span>furthy</span> ‘forrit, bauld, enterprísin’'],
+    ex: G.ex.r
 }, {
     sc: 'gey',
     pr: 'guyee',
@@ -407,7 +408,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'uncow'],
         [G.notes.or.me, 'unkow']
     ],
-    ex: ['Mind aye tae be furthie til unco fowk', 'He fand himsel in an unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', 'The mechanic haed an unco job sortin the electrics']
+    ex: [G.ex.r, 'He fand himsel in an unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', 'The mechanic haed an unco job sortin the electrics']
 }, { // V
     sc: 'versant',
     en: [
