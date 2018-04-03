@@ -44,7 +44,11 @@ G.ex = {
     j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid beild, an mak namely its pairt in Scotland’s identity nou an in time tae come",
     k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
     l: "In terms o tred, o the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
-    m: "The First Mínister wrate til her cabinet secretar anent the said policy"
+    m: "The First Mínister wrate til her cabinet secretar anenst the forementiont policy",
+    n: "I’m meetin up wi an auld fríend efter",
+    o: "The Fisk Secretar-depute will the day set furth new wittins anent the proponed tax exemptions",
+    p: "The day’s gemm agin Aiberdeen will be played at hame",
+    q: "Jeannie stuid anent him, fair pecht"
 };
 
 G.dict = [{
@@ -59,13 +63,14 @@ G.dict = [{
         ['concerning', 'about', 'in view of'],
 
     ],
-    gr: 'prep',
-    tr: ['regarding', 're'],
+    gr: ['prep', 'formal'],
+    tr: ['regarding', 're', 'anenst', 'about'],
+    hl: ['regarding', 're', 'anent', 'about'],
     or: [
         [G.notes.or.as, 'anent'],
         [G.notes.or.ae, 'on efen']
     ],
-    ex: G.ex.m
+    ex: [G.ex.q, G.ex.o]
 }, {
     sc: 'anenst',
     en: [
@@ -73,8 +78,10 @@ G.dict = [{
         ['in respect of', 'concerning'],
 
     ],
-    tr: ['about', 'regarding', 're'],
-    gr: 'prep'
+    tr: ['about', 'regarding', 're', 'anent'],
+    hl: ['regarding', 're', 'anenst'],
+    gr: ['prep', 'formal'],
+    ex: G.ex.m
 }, {
     sc: 'binna',
     en: 'don\'t be',

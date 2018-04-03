@@ -228,7 +228,7 @@ G.dict.push({
     gr: 'pn'
 }, {
     sc: 'Ireland',
-    def: ['a kintra comprisin about fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, tae the wast o Great Brítain'],
+    def: ['a kintra comprisin about fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, til the wast o Great Brítain'],
     tr: ['Republic o Ireland', 'Republic of Ireland'],
     gr: 'pn'
 }, {

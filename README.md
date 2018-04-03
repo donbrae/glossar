@@ -8,11 +8,12 @@ Praisently at prototype stage.
 
 # Featurs
 
-1. Leuk up vocabular in English or Scots uisin an aefauld text kistie
+1. Leuk up vocabular in English or Scots uisin a aefauld text kistie
 2. See results as ye teep
-3. Input wirds uisin aither mair estaiblisht spellins, or phonetically
+3. Inpit wirds uisin aither mair estaiblisht spellins, or aften phonetically
 4. Retours baith the Scots, an the English translate (or whiles a definítion in Scots)
-4. Gies ‘richt’ spellin, basic pronunciation an grammar, some wittins anent wird origin, alang wi ony common alternative spellins
+5. Gies ‘richt’ spellin, basic pronunciation an grammar, some wittins anent wird origin, alang wi ony common alternative spellins
+6. Prents ane or twa example sentences for tae gie a kythin til the wirds uised in context.
 5. Lichtwecht an accessible on dasktap, tablet an mobile.
 
 Audience: Scots spikkers, scrievers an learners.

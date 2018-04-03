@@ -24,6 +24,18 @@ G.dict.push({
     or: [
         ['?' + G.notes.or.f, 'associé']
     ]
+}, {
+    sc: 'bittie',
+    en: [
+        ['a small piece', 'a little bit'],
+        'a short distance',
+        'a short time',
+        'difficulty'
+    ],
+    tr: 'little',
+    gr: 'n',
+    or: 'dim o <span>bit</span>',
+    ex: ['Ay, I\'ll hae a bittie, please', 'Sophie texted tae lat her faither ken she’d be there in a bittie', 'Alec walkit on a wee bittie aheid']
 }, { // C
     sc: 'certificate',
     en: 'certificate',
@@ -163,6 +175,13 @@ G.dict.push({
     sc: 'development',
     en: 'development',
     gr: 'n'
+}, {
+    sc: ['ditter'],
+    en: 'dither',
+    tr: 'swither',
+    hl: 'dither',
+    gr: ['n', 'v'],
+    ex: ['Ay, he’s a richt ditter', 'The’re nae time tae be ditterin about']
 }, { // E
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
@@ -217,9 +236,10 @@ G.dict.push({
     en: [
         ['trouble', 'bother', 'annoyance'], 'a troublesome person'
     ],
+    tr: 'nuisance',
     gr: 'n',
     or: 'see v',
-    ex: 'Whit wi aw the snaw, gettin tae wark wis a muckle fash'
+    ex: 'It wis a richt fash for Tammas tae get his wark duin whan he haed tae uise ane o his auld laptops'
 }, {
     sc: 'fasherie',
     en: [
@@ -230,7 +250,7 @@ G.dict.push({
         [G.notes.or.ms, 'fasch(e)rie, fash(e)rie'],
         [G.notes.or.mf, 'fascherie']
     ],
-    ex: 'There wis a bit fasherie winnin at the fitba stadium in time for kick-aff'
+    ex: 'The’ wis a bit fasherie winnin at the fitba stadium in time for kick-aff'
 }, {
     sc: 'feartie',
     en: 'coward',
@@ -264,16 +284,17 @@ G.dict.push({
     en: 'continuation',
     gr: 'n'
 }, {
-    sc: 'house',
+    sc: 'hous',
     pr: 'hoose',
     en: 'house',
-    tr: ['houss', 'hous'],
+    tr: 'houss',
     gr: 'n',
     or: [
         [G.notes.or.as, 'hous, hows, hus(e)'],
         [G.notes.or.me, 'hous(e), hows(e), hus(e)'],
         [G.notes.or.ae + ' an ' + G.notes.or.anor, 'hús']
-    ]
+    ],
+    ex: 'It’s yersel! Come awa ben the hous'
 }, {
     sc: 'maet',
     sc_alt: 'meat',

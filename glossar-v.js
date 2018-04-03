@@ -733,7 +733,7 @@ G.dict.push({
             sc: 'effeirt'
         },
         gr: ['v', 'formal'],
-        tr: ['effeirin tae', 'effeirin til'],
+        tr: ['effeirin tae', 'effeirin til', 'applicable to', 'apply to'],
         hl: ['effeir', 'be fitting', 'be proper'],
         or: [
             [G.notes.or.as, 'affer(e), effere'],
@@ -748,8 +748,8 @@ G.dict.push({
             ['in relation to', 'in proportion to', 'corresponding to']
         ],
         gr: ['v phr', 'formal'],
-        tr: ['effeir', 'relating to', 'according to'],
-        hl: ['effeirin tae', 'effeirin til', 'relating to'],
+        tr: ['effeir', 'relating to', 'according to', 'applicable to'],
+        hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to'],
         or: 'see v <span>effeir</span>',
         ex: 'They spak anent maiters effeirin til halth policy',
         ph: true

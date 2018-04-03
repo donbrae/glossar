@@ -49,6 +49,15 @@ G.dict.push({ // A
     gr: ['adv'],
     or: 'see the adj'
 }, { // B
+    sc: 'a bittie',
+    en: [
+        ['somewhat', 'to a small extent', 'a little too']
+    ],
+    tr: ['bittie', 'little', 'ower', 'owre', 'too'],
+    hl: ['little', 'a little', 'a bittie', 'bittie'],
+    or: 'see n',
+    ex: ['Jamie haed recovert frae the flu a bittie, but didna yet feel up tae gaun back til his wark', 'I’m a bittie tired for gaun out, likes', 'It’s a bittie cauld for shorts an t-shirts, is it no?']
+}, {
     sc: ['braw', 'brawly'],
     en: [
         ['well', 'finely'],
@@ -218,11 +227,16 @@ G.dict.push({ // A
         ['sincerely', 'honestly', 'faithfully']
     ],
     gr: 'adv'
-}, {
+}, { // T
     sc: 'than',
     pr: ['than', 'thaun', 'thin', 'dan'],
     en: 'then',
     gr: ['adv', 'n']
+}, {
+    sc: 'the day',
+    en: 'today',
+    gr: 'adv, n',
+    ex: [G.ex.n, G.ex.o, G.ex.p]
 }, { // U
     sc: 'unco',
     en: [

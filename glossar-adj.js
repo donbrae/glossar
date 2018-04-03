@@ -52,6 +52,12 @@ G.dict.push({ // A
     hl: ['baltic', 'cold', 'cauld'],
     gr: ['adj', 'informal']
 }, {
+    sc: 'bittie',
+    en: 'a bit of',
+    gr: 'adj (quasi), by omíssion o prep <span>o</span>',
+    ex: 'I wadna mind a wee bittie cake',
+    or: 'see n'
+}, {
     sc: 'bluitert',
     pr: ['blootert', 'bleetert'],
     tr: ['bloutered', 'blootered', 'bloutert', 'blootert'],
@@ -150,6 +156,7 @@ G.dict.push({ // A
     def: 'locatit tae the east; the mair easter o twa steids, biggins or ither things; kythes in steid names, e.g. Easter Road'
 }, { // F
     sc: 'fantoush',
+    pr: 'fantoosh',
     en: [
         ['overdressed', 'flashy', 'fancy', 'ultra fashionable']
     ],
@@ -157,14 +164,16 @@ G.dict.push({ // A
     or: [
         [G.notes.or.mode, 'fanty-sheeny'],
         [G.notes.or.it, 'fantoccino']
-    ]
+    ],
+    ex: 'Ye dinna think this jaiket is a bittie fantoush, div ye?'
 }, {
     sc: 'fashious',
     en: [
         ['troublesome', 'annoying', 'difficult'],
         ['fractious', 'peevish']
     ],
-    gr: 'adj'
+    gr: 'adj',
+    ex: 'Whit wi aw the snaw, drivin intae wark wis awfu fashious'
 }, {
     sc: 'feart',
     en: [
@@ -181,10 +190,12 @@ G.dict.push({ // A
     ],
     gr: ['adj']
 }, {
-    sc: 'forementioned',
+    sc: ['forementioned', 'forementiont'],
     en: 'aforementioned',
+    tr: 'aforementiont',
     gr: ['adj'],
-    or: ['?' + G.notes.or.me + '; ?by analogy wi <em>foresaid</em>; kythes in ' + G.notes.or.lms + ' an ' + G.notes.or.emods]
+    or: ['?' + G.notes.or.me + '; ?by analogy wi <em>foresaid</em>; <span>forementioned</span> kythes in ' + G.notes.or.lms + ' an ' + G.notes.or.emods],
+    ex: G.ex.m
 }, {
     sc: 'foresaid',
     en: 'aforesaid',
@@ -349,6 +360,7 @@ G.dict.push({ // A
         ['lazy', 'slothful', 'indolent'],
         ['unwilling', 'reluctant', 'loath'],
     ],
+    tr: 'laith',
     gr: 'adj',
     or: [
         [G.notes.or.as, 'swer(e), sweir(e), sweer'],
@@ -356,9 +368,11 @@ G.dict.push({ // A
     ]
 }, {
     sc: 'sweirt',
+    pr: 'sweert',
     en: [
         ['sluggish', 'loath', 'reluctant']
     ],
+    tr: 'laith',
     gr: 'adj',
     or: 'see adj <span>sweir</span>'
 }, { // T
