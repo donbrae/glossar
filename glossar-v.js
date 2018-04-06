@@ -262,7 +262,6 @@ G.v.war = {
     en: [
         ['were', 'had been']
     ],
-    sc_alt: 'were',
     neg: {
         sc: ['warna', 'warnae'],
         en: [
@@ -272,7 +271,7 @@ G.v.war = {
     }
 };
 G.v.war.trigs = [].concat(
-    G.v.war.sc, G.v.war.pr, G.v.war.en, G.v.war.sc_alt, G.v.war.tr, // war
+    G.v.war.sc, G.v.war.pr, G.v.war.en, G.v.war.tr, // war
     G.v.war.neg.sc, G.v.war.neg.en, G.v.war.neg.tr // neg
 );
 // wis end
@@ -367,20 +366,9 @@ G.dict.push({
         hl: 'adduce',
         gr: 'v',
         or: [
+            [G.notes.or.as, 'adduce'],
             [G.notes.or.l, 'adūcere']
         ]
-    }, {
-        sc: 'adduce',
-        def: ['lat see (an item o) evidence in pruif', 'bring forrit a witness'],
-        tr: ['witness', 'evidence', 'pruif'],
-        hl: 'adduce',
-        gr: ['v', 'law']
-    }, {
-        sc: 'appluise',
-        en: [
-            ['offer, make available, make known']
-        ],
-        gr: 'v'
     },
     // v be
     {
@@ -467,10 +455,13 @@ G.dict.push({
     }, {
         sc: 'contrair',
         en: [
-            ['oppose', 'contradict', 'go contrary to']
+            ['oppose', 'contradict', 'go contrary to', 'act or speak against']
         ],
+        tr: 'against',
+        hl: 'contrair',
         gr: 'v',
-        or: 'see n'
+        or: 'see n',
+        ex: ['He contraired the new regulations the Pairlament haed pitten intae law']
     }, { // D
         sc: 'defeat',
         pr: ['defait', 'defeet'],
@@ -567,6 +558,21 @@ G.dict.push({
             [G.notes.or.l, 'ēvītāre']
         ],
         ex: 'He ettelt tae evite bein liftit by the polis'
+    }, {
+        sc: ['examine', 'exaimine'],
+        pt_pp: {
+            sc: ['examint', 'exaimint'],
+            tr: 'examined'
+        },
+        en: [
+            ['inspect', 'question', 'investigate']
+        ],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'examin, exemyn'],
+            [G.notes.or.mf, 'examiner'],
+            [G.notes.or.l, 'exāmināre']
+        ]
     },
     // v gae
     { // v gae
@@ -678,12 +684,12 @@ G.dict.push({
         gr: ['v', 'merkit obsolete in CSD2']
     }, {
         sc: 'compone',
-        en: 'compose (in music, speech or writing)',
+        def: 'write or create (a wark o airt, inspecially muisic or poetry)',
         tr: ['compose', 'write'],
         hl: 'compose',
         gr: ['v'],
         or: [
-            ['protologism, frae the ' + G.notes.or.as, 'compone <span>‘to compose, make by combination’</span>'],
+            ['pairt archaism, pairt protologism, frae the ' + G.notes.or.as, 'compone <span>‘tae mak by pitten thegither, create in speak or writin’</span>'],
             [G.notes.or.l, 'compōnere']
         ]
     }, {
@@ -733,8 +739,8 @@ G.dict.push({
             sc: 'effeirt'
         },
         gr: ['v', 'formal'],
-        tr: ['effeirin tae', 'effeirin til', 'applicable to', 'apply to'],
-        hl: ['effeir', 'be fitting', 'be proper'],
+        tr: ['effeirin tae', 'effeirin til', 'applicable to', 'apply to', 'relate to', 'correspond to', 'concern', 'about'],
+        hl: ['effeir', 'be fitting', 'be proper', 'relate to', 'correspond to', 'concern'],
         or: [
             [G.notes.or.as, 'affer(e), effere'],
             [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
@@ -748,11 +754,22 @@ G.dict.push({
             ['in relation to', 'in proportion to', 'corresponding to']
         ],
         gr: ['v phr', 'formal'],
-        tr: ['effeir', 'relating to', 'according to', 'applicable to'],
-        hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to'],
+        tr: ['effeir', 'relating to', 'according to', 'applicable to', 'concerning', 'about'],
+        hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to', 'concerning'],
         or: 'see v <span>effeir</span>',
         ex: 'The comatee spak anent maiters effeirin til halth policy',
         ph: true
+    }, {
+        sc: 'gar',
+        en: [
+            ['make', 'cause', 'force', 'compel']
+        ],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'ger, gar'],
+            [G.notes.or.an, 'gera']
+        ],
+        ex: ['It gars ye think', G.ex.u]
     }, {
         sc: 'gie bield tae/til',
         en: 'protect',
@@ -874,7 +891,7 @@ G.dict.push({
         or: [
             [G.notes.or.ae, 'inbrengan']
         ],
-        ex: [G.ex.l, 'A new pipe netwark inbrocht watter tae the hous']
+        ex: [G.ex.l, G.ex.s]
     }, {
         sc: 'ken',
         en: 'know',
@@ -1027,7 +1044,7 @@ G.dict.push({
             [G.notes.or.ms, 'fasch, fash'],
             [G.notes.or.mf, 'faschier']
         ],
-        ex: ['Dinna fash yersel', 'I wis sair fasht anent the job interview', G.ex.d]
+        ex: ['Dinna fash yersel', 'I wis sair fasht about the job interview', G.ex.d]
     }, {
         sc: 'fesh-on',
         en: [
@@ -1120,6 +1137,17 @@ G.dict.push({
             [G.notes.or.ae, 'pȳtan']
         ],
         ex: ['I pit it tae ye that ye’v tint the pynt o my threap', 'Jamie pit the cat out', G.ex.f, 'Iona haed pitten forrit mony guid ideas']
+    }, {
+        sc: 'proceed',
+        en: 'proceed',
+        gr: 'v',
+        tr: 'go',
+        or: [
+            [G.notes.or.as, 'proced(e), proceid'],
+            [G.notes.or.me + ' an ' + G.notes.or.eme, 'proced(e), proceede'],
+            [G.notes.or.f, 'procéder'],
+            [G.notes.or.l, 'procéder']
+        ]
     }, { // T
         sc: 'tak',
         en: 'take',
@@ -1195,6 +1223,12 @@ G.dict.push({
             ['clear', 'rid'], 'clarify'
         ],
         gr: 'v'
+    }, {
+        sc: ['set furth', 'furthset'],
+        en: 'publish',
+        gr: 'v phr, v',
+        or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],
+        ex: 'She haes setten furth a pose o onco bonnie poetry'
     }, { // S
         sc: 'skare',
         en: 'share',
@@ -1250,7 +1284,6 @@ G.dict.push({
     // v war
     {
         sc: G.v.war.sc,
-        sc_alt: G.v.war.sc_alt,
         pr: G.v.war.pr,
         en: G.v.war.en,
         tr: [].concat(G.v.war.trigs, G.v.wis.trigs),

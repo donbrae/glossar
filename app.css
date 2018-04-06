@@ -151,6 +151,10 @@ div.en, div.def, div.ex, div.inf {
     font-style: normal;
     color: #9e9e9e;
 }
+.def span {
+    font-style: italic;
+    color: #9e9e9e;
+}
 .grammar {
     font-style: italic;
     display: block;

@@ -89,7 +89,11 @@ var GLOSSAR = (function() {
                 }
             }
 
-            state.word = G.utils.replaceQo($.trim($(this).val()));
+            state.word = G.utils.replaceQo(
+                $.trim(
+                    $(this).val().replace(/(<([^>]+)>)/ig, ' ') // Strip any HTML
+                )
+            );
 
             if (e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
                 search();

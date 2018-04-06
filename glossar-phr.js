@@ -38,4 +38,10 @@ G.dict.push({
     gr: 'subordinatin conj',
     ex: G.ex.k,
     ph: true
+}, {
+    sc: 'pit intil effect',
+    en: 'implement',
+    gr: 'v phr',
+    ex: G.ex.f,
+    ph: true
 });

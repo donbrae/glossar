@@ -9,6 +9,12 @@ G.n = {}; // More complex nouns
  */
 
 G.dict.push({
+    sc: 'airtin',
+    def: 'wab link',
+    tr: 'link',
+    gr: 'n',
+    ex: 'The airtins ablo gang intil mair detail'
+}, {
     sc: 'annualrent',
     def: ['rent peyed ilka year', 'interest on borraed siller'],
     tr: ['interest', 'annual rent'],
@@ -24,7 +30,7 @@ G.dict.push({
     or: [
         ['?' + G.notes.or.f, 'associé']
     ]
-}, {
+}, { // B
     sc: 'bittie',
     en: [
         ['a small piece', 'a little bit'],
@@ -36,7 +42,20 @@ G.dict.push({
     gr: 'n',
     or: 'dim o <span>bit</span>',
     ex: ['Ay, I\'ll hae a bittie, please', 'Sophie texted tae lat her faither ken she’d be there in a bittie', 'Alec walkit on a wee bittie aheid']
+}, {
+    sc: 'bouk',
+    en: [
+        ['bulk', 'size', 'quantity'], 'body (of a person or animal)'
+    ],
+    tr: 'body',
+    gr: 'n',
+    ex: 'The tapmaist file bouk permittit is 8MB'
 }, { // C
+    sc: 'cairt',
+    en: ['cart', ['chart, map']],
+    tr: 'cairte',
+    gr: 'n'
+}, {
     sc: 'certificate',
     en: 'certificate',
     gr: 'n',
@@ -67,7 +86,8 @@ G.dict.push({
     or: ['wankent, but mak compare wi ' + G.notes.or.af + ' <span>complote</span>, ‘a raivelt thrang o fowk’']
 }, {
     sc: 'componer',
-    en: 'composer',
+    def: 'a body that writes muisic',
+    tr: 'composer',
     gr: 'n',
     or: 'see the v <span>tae compone</span>'
 }, {
@@ -99,8 +119,10 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.as, 'contrar, contrair'],
-        ['frae the ' + G.notes.or.af, 'contraire']
-    ]
+        [G.notes.or.af, 'contraire'],
+        [G.notes.or.l, 'contrarius']
+    ],
+    ex: ['Her client haed naething tae say in the contrair', 'Na, na; I dinna haud wi that — I ken tae the contrair!', 'I wis expectin the play tae be awfu dreich, but it turnt out the contrair wis true']
 }, { // D
     sc: 'dask',
     en: [
@@ -221,6 +243,43 @@ G.dict.push({
     tr: 'ettle',
     hl: 'ettlin',
     gr: 'n'
+}, {
+    sc: 'evidence',
+    def: 'pruif',
+    tr: 'proof',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'evidence, evidens'],
+        [G.notes.or.mf, 'evidence'],
+        [G.notes.or.l, 'ēvidentia']
+    ]
+}, {
+    sc: ['examine', 'exaimine'],
+    en: 'examination',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'examyn(e), examine'],
+        [G.notes.or.l, 'exāmen']
+    ]
+}, {
+    sc: 'examination',
+    en: [
+        ['testing', 'a test', 'investigation', 'interrogation']
+    ],
+    tr: 'test',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'examinatioun, exemenatioun'],
+        [G.notes.or.l, 'exāminātio']
+    ]
+}, {
+    sc: 'examinator',
+    en: 'examiner',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'examinato(u)r'],
+        [G.notes.or.l, 'examinator']
+    ]
 }, { // F
     sc: 'fankle',
     en: [
@@ -262,6 +321,14 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.ae, 'folc']
+    ]
+}, {
+    sc: 'furthsetter',
+    def: 'a body or company that redds an sets furth beuks, jurnals, or muisic for sale',
+    tr: 'publisher',
+    gr: 'n',
+    or: [
+        [G.notes.or.ms, 'furthsettar, furthsetter']
     ]
 }, { // G
     sc: 'gloriosity',
@@ -408,6 +475,11 @@ G.dict.push({
     sc: 'nat',
     def: 'ocht derogatory term for a Scots nationalist',
     gr: ['n', 'informal']
+}, {
+    sc: 'netwark',
+    en: 'network',
+    gr: 'n',
+    ex: [G.ex.s, G.ex.t]
 }, { // O
     sc: 'onybody',
     en: 'anybody',
@@ -423,7 +495,7 @@ G.dict.push({
         ['aught', 'anything'], 'nothing'
     ],
     gr: 'n',
-    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'John haed ocht ava tae dae wi the maist recent failt IT project']
+    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'Yon’s ocht ava tae dae wi it!']
 }, { // P
     sc: 'pairt-takar',
     tr: 'pairt takar',

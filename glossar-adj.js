@@ -36,6 +36,12 @@ G.dict.push({ // A
     hl: ['aefauld', 'single minded'],
     gr: 'adj'
 }, {
+    sc: 'afore gane',
+    en: [
+        ['previous', 'prior', 'antecedent']
+    ],
+    gr: 'adj phr'
+}, {
     sc: 'allevolie',
     en: [
         ['giddy', 'volatile']
@@ -74,7 +80,7 @@ G.dict.push({ // A
     ],
     tr: ['well dressed', 'able bodied', 'considerable', 'pleasant', 'bra', 'braa', 'brow'],
     gr: ['adj'],
-    ex: G.ex.g,
+    ex: [G.ex.g, G.ex.v],
     or: [
         [G.notes.or.as, 'braw, bra, brawf'],
         ['variant o the ' + G.notes.or.mf, 'brave']
@@ -119,8 +125,11 @@ G.dict.push({ // A
     en: [
         ['contrary', 'opposite', 'unfavourable', 'adverse']
     ],
+    tr: 'against',
+    hl: 'contrair',
     gr: 'adj',
-    or: 'see n'
+    or: 'see n',
+    ex: ['Contrair til expectations, he did weel in his exams', 'Maist law makars threapit for a chynge in the law, but a wheen held the contrair view', 'He’s a ill-naiturt an contrair chiel']
 }, { // D
     sc: 'defeat',
     tr: ['defait', 'defeet'],
@@ -147,13 +156,49 @@ G.dict.push({ // A
         ['doubtful', 'undecided', 'ambiguous', 'uncertain']
     ],
     gr: ['adj']
-}, {
+}, { // E
     sc: 'easter',
     en: ['eastern', 'the more easterly of two places'],
     tr: ['wester', 'wastern', 'western'],
     hl: 'easter',
     gr: ['adj'],
     def: 'locatit tae the east; the mair easter o twa steids, biggins or ither things; kythes in steid names, e.g. Easter Road'
+}, {
+    sc: 'evendoun',
+    en: [
+        ['<span>of heavy rain</span> straight', 'perpendicular'],
+        ['honest', 'frank', 'sincere'],
+        ['sheer', 'absolute', 'downright']
+    ],
+    pr: 'evendoon',
+    tr: 'straight',
+    gr: 'adj'
+}, {
+    sc: 'evenforrit',
+    en: 'straightforward',
+    tr: 'straight forward',
+    gr: 'adj'
+}, {
+    sc: 'evident',
+    en: [
+        ['clear', 'plain', 'obvious']
+    ],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'evident, euident'],
+        [G.notes.or.l, 'ēvidens']
+    ]
+}, {
+    sc: 'exact',
+    en: 'precise',
+    pr: ['egzak', 'egzakt'],
+    tr: ['exactly', 'exact', 'exackly'],
+    hl: ['exact', 'exack'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'exact, exack'],
+        [G.notes.or.l, 'exactus']
+    ]
 }, { // F
     sc: 'fantoush',
     pr: 'fantoosh',
@@ -194,7 +239,7 @@ G.dict.push({ // A
     en: 'aforementioned',
     tr: 'aforementiont',
     gr: ['adj'],
-    or: ['?' + G.notes.or.me + '; ?by analogy wi <em>foresaid</em>; <span>forementioned</span> kythes in ' + G.notes.or.lms + ' an ' + G.notes.or.emods],
+    or: ['?' + G.notes.or.eme + '; <span>forementioned</span> kythes in ' + G.notes.or.lms + ' an ' + G.notes.or.emods],
     ex: G.ex.m
 }, {
     sc: 'foresaid',
@@ -263,9 +308,10 @@ G.dict.push({ // A
         ['equitable', 'fair', 'lawful', 'justified'],
         ['exact', 'precise', 'correct', 'accurate']
     ],
-    tr: ['just', 'jist'],
+    tr: ['just', 'jist', 'exackly', 'exack'],
     gr: ['adj'],
     or: [
+        [G.notes.or.as, 'just, juist'],
         [G.notes.or.me, 'just']
     ]
 }, {
@@ -294,9 +340,17 @@ G.dict.push({ // A
         [G.notes.or.me, 'aquointe'],
         [G.notes.or.mf, 'accointe']
     ],
-    ex: [
-        'I’m no yet fully acquent wi the policy'
-    ]
+    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi yon view']
+}, {
+    sc: 'maist',
+    en: [
+        ['largest', 'greatest', 'very great'],
+        ['<span>of persons</span> chief', 'most powerful or important', 'greatest'],
+        ['<span>of things</span> chief, principal']
+    ],
+    tr: 'most',
+    gr: 'adj',
+    or: 'see pron'
 }, { // O
     sc: 'ocht',
     en: 'any',
@@ -328,6 +382,16 @@ G.dict.push({ // A
         [G.notes.or.as, 'pertinent'],
         [G.notes.or.me, 'pertinent'],
         [G.notes.or.l, 'pertinentia']
+    ]
+}, {
+    sc: 'previous',
+    en: 'previous',
+    tr: ['prior', 'antecedent', 'afore gane'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.lms, 'pravious'],
+        [G.notes.or.mode, 'prævious, previous'],
+        [G.notes.or.l, 'prævi-us']
     ]
 }, { // R
     sc: 'ragglish',
@@ -408,7 +472,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'uncow'],
         [G.notes.or.me, 'unkow']
     ],
-    ex: [G.ex.r, 'He fand himsel in an unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', 'The mechanic haed an unco job sortin the electrics']
+    ex: [G.ex.r, 'He fand himsel in a unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', G.ex.v, 'The mechanic haed an unco job sortin the electrics']
 }, { // V
     sc: 'versant',
     en: [
@@ -435,7 +499,7 @@ G.dict.push({ // A
     gr: 'adj'
 }, {
     sc: 'wicelike',
-    tr: ['wysslike', 'wycelike'],
+    tr: ['wysslike', 'wycelike', 'wyselike', 'wiselike'],
     en: [ // >
         ['sensible, respectable']
     ],

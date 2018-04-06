@@ -45,11 +45,15 @@ G.ex = {
     k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
     l: "In terms o tred, o the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
     m: "The First Mínister wrate til her cabinet secretar anenst the forementiont policy",
-    n: "I’m meetin up wi an auld fríend efter",
+    n: "I’m meetin up wi an auld fríend the day",
     o: "The Fisk Secretar-depute will the day set furth new wittins anent the proponed tax exemptions",
     p: "The day’s gemm agin Aiberdeen will be played at hame",
     q: "Jeannie stuid anent him, fair pecht",
-    r: "Mind aye tae be furthie til unco fowk"
+    r: "Mind aye tae be furthie til unco fowk",
+    s: "A new pipe netwark inbrocht watter tae the hous",
+    t: "The netwark wis doun sae he coudna send ony emails",
+    u: "The heezin up o hous prices an financial mercat speculation thegither wis aye mair like tae gar the economy clyte",
+    v: "He gied an unco braw performance"
 };
 
 G.dict = [{
@@ -165,6 +169,18 @@ G.dict = [{
     en: 'who',
     tr: ['whae', 'whay', 'whey'],
     gr: 'pron'
+}, {
+    sc: 'maist',
+    def: [
+        ['the mucklest amount, the lairgest nummer, the majority']
+    ],
+    tr: ['most', 'majority'],
+    gr: 'determiner an pronoun',
+    or: [
+        [G.notes.or.as, 'mast(e), maist(e)'],
+        [G.notes.or.ae, 'mǣst, māst']
+    ],
+    ex: ['I’d haed the maist beers', 'Maist o the dishes wis duin']
 }, { // N
     sc: 'naewey',
     en: [

@@ -85,9 +85,25 @@ G.dict.push({ // A
     en: [
         ['in a contrary way']
     ],
-    tr: 'contrarily',
+    tr: ['contrarily', 'against'],
+    hl: 'contrair',
     gr: 'adv',
-    or: 'see n'
+    or: 'see n',
+    ex: 'He chynged the contents o the file ’ithout takkin a backup, contrair til best prattick'
+}, {
+    sc: 'evendoun',
+    en: [
+        ['absolutely', 'completely', 'downright']
+    ],
+    tr: 'evendoon',
+    gr: 'adv'
+}, {
+    sc: ['exact', 'exactly'],
+    en: 'precisely',
+    tr: 'exackly',
+    gr: 'adv',
+    or: 'see adj',
+    ex: 'Meet me there at fower o’clock exact'
 }, {
     sc: 'forby',
     sc_alt: 'forbye',
@@ -129,7 +145,7 @@ G.dict.push({ // A
         ['at this time', 'just now', 'precisely'],
         ['only', 'merely', 'barely']
     ],
-    tr: 'just',
+    tr: ['just', 'exack', 'exact'],
     gr: ['adv'],
     or: 'see adj'
 }, {
@@ -164,6 +180,37 @@ G.dict.push({ // A
         [G.notes.or.as, 'certis'],
         [G.notes.or.me, 'certes']
     ]
+}, { // M
+    sc: 'maist',
+    en: [
+        ['to the greatest extent', 'in the highest degree'],
+        '<span>as the superlative</span> most',
+        'very',
+        'mainly'
+    ],
+    tr: 'most',
+    gr: 'adv',
+    or: 'see pron',
+    ex: ['She wis maist sonsie in her ettles', 'It wis maist kind o ye', 'Whit she wantit maist o aw wis a vacance']
+}, {
+    sc: 'maist',
+    def: 'aphetic mak o <em>awmaist</em>',
+    tr: ['almost', 'aamaist', 'awmaist'],
+    gr: 'adv'
+}, {
+    sc: 'maistlins',
+    en: [
+        ['almost', 'nearly']
+    ],
+    gr: 'adv'
+}, {
+    sc: 'maistly',
+    en: [
+        ['most of all', 'especially'],
+        ['almost', 'nearly']
+    ],
+    gr: 'adv',
+    ex: ['The wather wis maistly sunny', 'I‘m maistly fínisht in the gairden']
 }, { // O
     sc: 'ony',
     en: [
