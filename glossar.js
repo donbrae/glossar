@@ -178,7 +178,7 @@ G.dict = [{
         [G.notes.or.as, 'mast(e), maist(e)'],
         [G.notes.or.ae, 'mǣst, māst']
     ],
-    ex: ['I’d haed the maist beers', 'Maist o the dishes wis duin']
+    ex: ['I’d haen the maist beers', 'Maist o the dishes wis duin']
 }, { // N
     sc: 'naewey',
     en: [
@@ -291,7 +291,7 @@ G.dict = [{
     sc: 'til',
     en: 'to',
     gr: 'prep',
-    inf: '<em>til</em> is niver uised afore a verb, an whiles juist afore vouels an the letter h',
+    inf: '<em>til</em> is whiles uised only afore vouels an the letter h, an aften no afore verbs',
     ex: ['I walkit ower an spak til him', G.ex.i]
 }];
 

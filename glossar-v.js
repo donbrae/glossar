@@ -1123,6 +1123,17 @@ G.dict.push({
         or: [
             [G.notes.or.ms, 'haik']
         ]
+    }, {
+        sc: 'hous',
+        pr: 'hoos',
+        def: ['tae provide wi a hous', 'tae provide ainimals wi housin or bield', 'tae bouk guids or craps'],
+        tr: ['houss', 'hoose', 'house'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'hous, huse, hows'],
+            [G.notes.or.ae, 'hūsian']
+        ],
+        ex: ['We can hous the kye in the byre the nicht']
     }, { // O
         sc: 'ocht',
         en: 'ought',

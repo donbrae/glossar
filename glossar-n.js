@@ -123,6 +123,17 @@ G.dict.push({
         [G.notes.or.l, 'contrarius']
     ],
     ex: ['Her client haed naething tae say in the contrair', 'Na, na; I dinna haud wi that — I ken tae the contrair!', 'I wis expectin the play tae be awfu dreich, but it turnt out the contrair wis true']
+}, {
+    sc: 'council',
+    pr: 'cooncil',
+    en: 'council',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'council(l), counsale, councell, counsell'],
+        [G.notes.or.me, 'counseil'],
+        [G.notes.or.l, 'concilium']
+    ],
+    ex: 'Edinburgh Cíty Council the day set furth new wittins anent the raxin out o the tram netwark til Newhaven'
 }, { // D
     sc: 'dask',
     en: [
@@ -353,6 +364,16 @@ G.dict.push({
     en: 'continuation',
     gr: 'n'
 }, {
+    sc: 'hour',
+    pr: 'oor',
+    en: 'hour',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'hour, howr'],
+        [G.notes.or.me, 'houre']
+    ],
+    ex: 'The forgaitherin o the management comatee is tae stairt at twa hours, juist efter denner'
+}, {
     sc: 'hous',
     pr: 'hoos',
     en: 'house',
@@ -362,7 +383,10 @@ G.dict.push({
         [G.notes.or.as, 'hous, hows, hus(e)'],
         [G.notes.or.ae, 'hūs']
     ],
-    ex: ['It’s yersel! Come awa ben the hous']
+    ex: [
+        ['They’d juist about pit by eneuch siller for a deposit on a hous'],
+        ['It’s yersel! Come awa ben the hous'],
+    ]
 }, {
     sc: 'maet',
     sc_alt: 'meat',
