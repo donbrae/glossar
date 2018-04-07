@@ -463,6 +463,15 @@ G.dict.push({
         or: 'see n',
         ex: ['He contraired the new regulations the Pairlament haed pitten intae law']
     }, { // D
+        sc: 'defaut',
+        en: 'to fail to fulfil an obligation or pay a debt',
+        tr: 'default',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'defalt, defawt, defaut'],
+            [G.notes.or.af, 'defaillir']
+        ]
+    }, {
         sc: 'defeat',
         pr: ['defait', 'defeet'],
         en: 'defeat',
@@ -761,15 +770,14 @@ G.dict.push({
         ph: true
     }, {
         sc: 'gar',
-        en: [
-            ['make', 'cause', 'force', 'compel']
-        ],
+        def: ['cause something tae be duin', 'mak a body or thing dae something'],
+        tr: ['make', 'cause', 'force', 'compel'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'ger, gar'],
-            [G.notes.or.an, 'gera']
+            [G.notes.or.anor, 'gera']
         ],
-        ex: ['It gars ye think', G.ex.u]
+        ex: ['It gars ye think', G.ex.u, 'The court gart the company provide addítional wittins']
     }, {
         sc: 'gie bield tae/til',
         en: 'protect',
@@ -979,7 +987,6 @@ G.dict.push({
         gr: ['v'],
         or: [
             [G.notes.or.as, 'man'],
-            [G.notes.or.me + ' (afore 1400-50)', 'man'],
             [G.notes.or.anor, 'muna > man']
         ],
         ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
@@ -1170,7 +1177,8 @@ G.dict.push({
         sc: ['takkin', 'taein'],
         en: 'taking',
         tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'takkin', 'tooken', 'tookin'],
-        ex: 'I wis takkin the dug for a walk whan it stairtit smirrin'
+        ex: 'I wis takkin the dug for a walk whan it stairtit smirrin',
+        gr: 'pres pt o the v <span>tae tak</span>'
     }, {
         sc: 'tak on',
         en: 'adopt',

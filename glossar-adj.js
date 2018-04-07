@@ -249,7 +249,7 @@ G.dict.push({ // A
     hl: 'foresaid',
     or: [
         [G.notes.or.as, 'for(e)said, foirsaid'],
-        [G.notes.or.me, 'forsayde, forsaid']
+        [G.notes.or.ae, 'foresæᵹd, foresǽd']
     ]
 }, {
     sc: 'furrin',
@@ -323,7 +323,6 @@ G.dict.push({ // A
     ex: ['The preses depute gied a gey dreich screed at the annual collogue', G.ex.f],
     or: [
         [G.notes.or.as, 'depute, deput'],
-        [G.notes.or.me, 'depute'],
         [G.notes.or.af, 'deputé']
     ]
 }, {
@@ -470,7 +469,7 @@ G.dict.push({ // A
     or: [
         ['variant o ', 'uncouth'],
         [G.notes.or.as, 'uncow'],
-        [G.notes.or.me, 'unkow']
+        [G.notes.or.ae, 'uncūð']
     ],
     ex: [G.ex.r, 'He fand himsel in a unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', G.ex.v, 'The mechanic haed an unco job sortin the electrics']
 }, { // V

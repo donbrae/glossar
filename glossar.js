@@ -136,9 +136,7 @@ G.dict = [{
     hl: 'gif',
     gr: ['conj'],
     or: [
-        [G.notes.or.as + ' haes', 'gif, gyf, iff'],
-        [G.notes.or.me + ' haes', 'if'],
-        [G.notes.or.ae + ' haes', 'ᵹif']
+        [G.notes.or.as, 'gef, gefe, geve']
     ]
 }, {
     sc: 'gin',

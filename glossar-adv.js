@@ -263,7 +263,8 @@ G.dict.push({ // A
     ],
     tr: ['with certainty', 'with conviction', 'shairly', 'sheerly', 'seerly', 'surely'],
     gr: 'adv',
-    or: 'see adj'
+    or: 'see adj',
+    ex: 'Ye’d shuirly need tae hae a permit, wad ye no?'
 }, {
     sc: 'sicweys',
     en: 'thus',

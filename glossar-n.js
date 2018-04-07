@@ -140,12 +140,14 @@ G.dict.push({
     or: 'see v <span>deburse</span>'
 }, {
     sc: 'defaut',
-    en: 'default',
-    gr: ['n', 'v'],
+    en: [
+        ['lack or absence (of something)', 'neglect', 'negligence', 'failure to pay (a debt)']
+    ],
+    tr: ['default', 'lack', 'absence'],
+    gr: ['n'],
     or: [
-        [G.notes.or.as, 'defaut, defawt'],
-        [G.notes.or.me, 'defaute, defaut, defawt(e)'],
-        [G.notes.or.af, 'defaut(e)']
+        [G.notes.or.as, 'defaut, defalt, defawt'],
+        [G.notes.or.me, 'defaut']
     ]
 }, {
     sc: 'defeat',
@@ -352,16 +354,15 @@ G.dict.push({
     gr: 'n'
 }, {
     sc: 'hous',
-    pr: 'hoose',
+    pr: 'hoos',
     en: 'house',
-    tr: 'houss',
+    tr: ['houss', 'hoose'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'hous, hows, hus(e)'],
-        [G.notes.or.me, 'hous(e), hows(e), hus(e)'],
-        [G.notes.or.ae + ' an ' + G.notes.or.anor, 'hús']
+        [G.notes.or.ae, 'hūs']
     ],
-    ex: 'It’s yersel! Come awa ben the hous'
+    ex: ['It’s yersel! Come awa ben the hous']
 }, {
     sc: 'maet',
     sc_alt: 'meat',
@@ -441,6 +442,7 @@ G.dict.push({
     en: [
         ['compulsion', 'necessity']
     ],
+    tr: 'must',
     gr: 'n',
     or: 'see v'
 }, {
@@ -562,6 +564,12 @@ G.dict.push({
         ['source', 'origin']
     ],
     gr: 'n'
+}, {
+    sc: 'steerar',
+    sc_alt: 'steerer',
+    en: 'activist',
+    gr: 'n',
+    or: '<span>steer</span> ‘tae steer, gie airt til’ wi <span>-ar</span> suffix. Baith <span>-ar</span> an <span>-er</span> kythe on SLC wabsteid. Gane here wi <span>-ar</span> by analogy wi <span>co-airtar</span> an <span>pairt-takar</span>'
 }, {
     sc: 'swither',
     en: [
