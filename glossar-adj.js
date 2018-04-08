@@ -339,7 +339,7 @@ G.dict.push({ // A
         [G.notes.or.me, 'aquointe'],
         [G.notes.or.mf, 'accointe']
     ],
-    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi yon view']
+    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the Mínister’s view on the said maiter']
 }, {
     sc: 'maist',
     en: [
@@ -502,5 +502,9 @@ G.dict.push({ // A
     en: [ // >
         ['sensible, respectable']
     ],
+    gr: 'adj'
+}, {
+    sc: 'wrocht-up',
+    en: 'overwrought',
     gr: 'adj'
 });

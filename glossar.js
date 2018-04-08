@@ -39,7 +39,7 @@ G.ex = {
     e: "The CEO luit skarehauders speir at him efter the tele-collogue",
     f: "Her depute gree’d tae tak in haund the airtin o the policy an its pittin intil effect",
     g: "It wis a gey an braw day",
-    h: "I ken brawly richt by wrang!",
+    h: "I ken brawly richt bi wrang!",
     i: "Jamie wis in a swither about whit Hogmanay pairty tae gang til",
     j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid beild, an mak namely its pairt in Scotland’s identity nou an in time tae come",
     k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
@@ -53,7 +53,8 @@ G.ex = {
     s: "A new pipe netwark inbrocht watter tae the hous",
     t: "The netwark wis doun sae he coudna send ony emails",
     u: "The heezin up o hous prices an financial mercat speculation thegither wis aye mair like tae gar the economy clyte",
-    v: "He gied an unco braw performance"
+    v: "He gied an unco braw performance",
+    w: "The new symphony is a stuir an sonsie wark, if a bittie wrocht-up in pairts"
 };
 
 G.dict = [{
@@ -293,6 +294,18 @@ G.dict = [{
     gr: 'prep',
     inf: '<em>til</em> is whiles uised only afore vouels an the letter h, an aften no afore verbs',
     ex: ['I walkit ower an spak til him', G.ex.i]
+}, {
+    sc: ['than', '’an'],
+    en: 'than',
+    pr: ['than', 'thaun', 'thin', 'dan'],
+    gr: 'conj',
+    tr: ['nor', 'an'],
+    hl: ['than', 'an'],
+    ex: 'Ye maun can dae better than that!',
+    or: [
+        [G.notes.or.as, 'than, then'],
+        [G.notes.or.ae, 'ðanne']
+    ]
 }];
 
 G.utils = {

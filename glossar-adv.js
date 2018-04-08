@@ -56,7 +56,7 @@ G.dict.push({ // A
     tr: ['bittie', 'little', 'ower', 'owre', 'too'],
     hl: ['little', 'a little', 'a bittie', 'bittie'],
     or: 'see n',
-    ex: ['Jamie haed recovert frae the flu a bittie, but didna yet feel up tae gaun back til his wark', 'I’m a bittie tired for gaun out, likes', 'It’s a bittie cauld for shorts an t-shirts, is it no?']
+    ex: ['Jamie haed recovert frae the flu a bittie, but didna yet feel up tae gaun back til his wark', 'I’m a bittie tired for gaun out, likes', 'It’s a bittie cauld for shorts an t-shirt, is it no?']
 }, {
     sc: ['braw', 'brawly'],
     en: [
@@ -276,10 +276,16 @@ G.dict.push({ // A
     ],
     gr: 'adv'
 }, { // T
-    sc: 'than',
+    sc: ['than'],
     pr: ['than', 'thaun', 'thin', 'dan'],
-    en: 'then',
-    gr: ['adv', 'n']
+    en: ['at a particular time', 'subsequently', ['consequently', 'in that case']],
+    tr: 'then',
+    gr: ['adv'],
+    ex: 'Lat’s gang til the pairty for a wee whilie than come hame',
+    or: [
+        [G.notes.or.as, 'than, then'],
+        [G.notes.or.ae, 'ðanne']
+    ]
 }, {
     sc: 'the day',
     en: 'today',

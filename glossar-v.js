@@ -1282,6 +1282,22 @@ G.dict.push({
         ],
         tr: 'rouse',
         gr: 'v'
+    }, { // W
+        sc: 'wirk',
+        pr: 'wirk, wurk',
+        pt_pp: {
+            sc: 'wrocht',
+            tr: ['worked', 'workit']
+        },
+        tr: ['labour', 'labor', 'toil', 'wark'],
+        hl: 'wirk',
+        en: 'work',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'wirk, wyrk'],
+            [G.notes.or.ae, 'wyrcan']
+        ],
+        ex: ['She haed wrocht hersel sair tae win the company the contract', 'The team haed been wirkin on the project for a guid while']
     },
     // v wis
     {

@@ -98,6 +98,7 @@ G.dict.push({
         ['a combination of elements', 'a mixture']
     ],
     tr: 'settlement',
+    hl: ['composition', 'settlement'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'compositioun, composicioun'],
@@ -333,6 +334,7 @@ G.dict.push({
     en: 'people',
     gr: 'n',
     or: [
+        [G.notes.or.as, 'folk, folkis'],
         [G.notes.or.ae, 'folc']
     ]
 }, {
@@ -608,6 +610,19 @@ G.dict.push({
     ex: G.ex.i,
     or: 'see v'
 }, { // T
+    sc: 'than',
+    pr: ['than', 'thaun', 'thin', 'dan'],
+    en: [
+        ['that time', 'a particular time']
+    ],
+    tr: 'then',
+    gr: 'n',
+    ex: 'We shoud hae it fínisht by than',
+    or: [
+        [G.notes.or.as, 'than, thyne'],
+        [G.notes.or.ae, 'ðanne']
+    ]
+}, {
     sc: 'toun',
     pr: 'toon',
     en: 'town',
@@ -638,14 +653,36 @@ G.dict.push({
     tr: ['websteid', 'websteed', 'wabsite'],
     gr: 'n',
 }, {
-    sc: 'unionist',
-    def: 'a body that’s for the haudin gaun o the polítical union atween Scotland an England',
-    gr: ['n']
+    sc: 'wark',
+    en: 'work',
+    tr: ['labour', 'labor', 'toil', 'wirk'],
+    hl: 'wark',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'wark, werk'],
+        [G.notes.or.ae, 'weorc']
+    ],
+    ex: [
+        ['He gaed intae wark early for tae set furth a saftware update'],
+        G.ex.w
+    ]
 }, {
+    sc: 'wirker',
+    sc_alt: 'warker',
+    pr: ['wirkur', 'wurkur'],
+    en: 'worker',
+    gr: 'n',
+    ex: 'He wis an awfu haurd wirker',
+    or: [G.notes.or.as, 'wirkar, wyrkar(e)']
+}, { // U
+    sc: 'unionist',
+    def: 'in a Scots context, a body that’s for the haudin gaun o the polítical union atween Scotland an England',
+    gr: ['n']
+}, { // Y
     sc: 'yoon',
     def: 'a derogatory term for unionist',
     gr: ['n', 'informal', 'derogatory']
-}, {
+}, { // Z
     sc: 'zoomer',
     def: 'a body that’s ragglish or allevolie',
     gr: ['n', 'informal', 'derogatory']
