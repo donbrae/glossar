@@ -490,11 +490,13 @@ G.dict.push({
             sc: 'depute',
             tr: 'deputised'
         },
-        // en: 'deputise',
         def: 'apynt as depute',
         gr: 'v',
         ex: 'Aaron wis depute tae cover for his manager at the comatee meetin',
-        or: 'see adj'
+        or: [
+            [G.notes.or.as, 'depute, deput'],
+            [G.notes.or.af, 'deputer']
+        ]
     }, {
         sc: 'deburse',
         en: 'disburse',
@@ -1171,6 +1173,22 @@ G.dict.push({
             [G.notes.or.me + ' an ' + G.notes.or.eme, 'proced(e), proceede'],
             [G.notes.or.f, 'procéder'],
             [G.notes.or.l, 'procéder']
+        ]
+    }, {
+        sc: 'propone',
+        pt_pp: {
+            sc: ['proponed', 'propone’t'],
+            tr: ['suggested', 'proposed', 'put forward']
+        },
+        def: [
+            ['pit forrit for consíderation', 'suggest'],
+            ['<span>law</span> pit forrit or state (a plea) in a court']
+        ],
+        tr: ['propose', 'bring forward'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'propone'],
+            [G.notes.or.l, 'prōpōnere']
         ]
     }, { // T
         sc: 'tak',
