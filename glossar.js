@@ -54,7 +54,10 @@ G.ex = {
     t: "The netwark wis doun sae he coudna send ony emails",
     u: "The heezin up o hous prices an financial mercat speculation thegither wis aye mair like tae gar the economy clyte",
     v: "He gied an unco braw performance",
-    w: "The new symphony is a stuir an sonsie wark, if a bittie wrocht-up in pairts"
+    w: "The new symphony is a stuir an sonsie wark, if a bittie wrocht-up in pairts",
+    x: "Shuirly there’s mair tae the story than that",
+    y: "The pub wis mair thrang than they’d jaloused it wad be",
+    z: "I jaloused I’d better haud ma tongue!"
 };
 
 G.dict = [{
@@ -169,6 +172,13 @@ G.dict = [{
     tr: ['whae', 'whay', 'whey'],
     gr: 'pron'
 }, {
+    sc: 'mair',
+    en: ['a greater amount or number', ['something else', 'something in addition']],
+    tr: 'more',
+    gr: 'pron',
+    or: 'see adj',
+    ex: ['He haed about fower hunder pound in his bank account; Ruth haed mair', G.ex.x, 'Moyen dis muckle but money dis mair']
+}, {
     sc: 'maist',
     def: [
         ['the mucklest amount, the lairgest nummer, the majority']
@@ -179,7 +189,7 @@ G.dict = [{
         [G.notes.or.as, 'mast(e), maist(e)'],
         [G.notes.or.ae, 'mǣst, māst']
     ],
-    ex: ['I’d haen the maist beers', 'Maist o the dishes wis duin']
+    ex: ['Out o the lot o us I’d haen the maist beers', 'Maist o the dishes wis duin']
 }, { // N
     sc: 'naewey',
     en: [

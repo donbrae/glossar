@@ -181,6 +181,16 @@ G.dict.push({ // A
         [G.notes.or.me, 'certes']
     ]
 }, { // M
+    sc: 'mair',
+    en: [
+        ['to a greater extent', 'in a greater degree'],
+        'more', ['in addition', 'besides'],
+        ['any longer', 'again']
+    ],
+    gr: 'adv',
+    or: 'see adj',
+    ex: ['He’s mair aulder nor me', 'She was mair fasht about it than he wis', G.ex.y]
+}, {
     sc: 'maist',
     en: [
         ['to the greatest extent', 'in the highest degree'],
@@ -211,6 +221,15 @@ G.dict.push({ // A
     ],
     gr: 'adv',
     ex: ['The wather wis maistly sunny', 'I‘m maistly fínisht in the gairden']
+}, {
+    sc: 'muckle',
+    pr: ['muckl', 'meekl'],
+    en: [
+        ['to a large extent or degree']
+    ],
+    tr: ['much', 'greatly', 'very', 'exceedingly', 'mukkil'],
+    gr: 'adv',
+    or: 'see adj'
 }, { // O
     sc: 'ony',
     en: [
@@ -264,7 +283,7 @@ G.dict.push({ // A
     tr: ['with certainty', 'with conviction', 'shairly', 'sheerly', 'seerly', 'surely'],
     gr: 'adv',
     or: 'see adj',
-    ex: 'Ye’d shuirly need tae hae a permit, wad ye no?'
+    ex: ['Ye’d shuirly need tae hae a permit, wad ye no?', G.ex.x]
 }, {
     sc: 'sicweys',
     en: 'thus',

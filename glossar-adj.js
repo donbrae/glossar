@@ -340,6 +340,16 @@ G.dict.push({ // A
         [G.notes.or.mf, 'accointe']
     ],
     ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the Mínister’s view on the said maiter']
+}, { // M
+    sc: 'mair',
+    en: ['larger in physical size', 'greater in quantity or amount', ['additional in quantity or number', 'further']],
+    tr: 'more',
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'mair, mare, mar'],
+        [G.notes.or.ae, 'māre']
+    ],
+    ex: ['We steyed in Milan twa mair days', 'This flouer is mair bonnie than yon ane ower there']
 }, {
     sc: 'maist',
     en: [
@@ -350,6 +360,23 @@ G.dict.push({ // A
     tr: 'most',
     gr: 'adj',
     or: 'see pron'
+}, {
+    sc: 'muckle',
+    pr: ['muckl', 'meekl'],
+    en: [
+        ['large in size or extent', 'big', 'bulky'],
+        ['numerous', 'abundant'],
+        ['full-grown', 'adult'],
+        ['of high rank or social standing', 'self-important'],
+        ['<span>of letters of the alphabet</span> capital']
+    ],
+    tr: ['large', 'great', 'much', 'capital letter', 'mukkil', 'self important'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'mekill, mykill, mukill, muckle'],
+        [G.notes.or.ae, 'micel'],
+        [G.notes.or.anor, 'mikill']
+    ]
 }, { // O
     sc: 'ocht',
     en: 'any',

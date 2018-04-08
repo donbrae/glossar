@@ -706,13 +706,15 @@ G.dict.push({
         en: ['suspect', ['suppose', 'guess', 'surmise']],
         pr: 'jaLooz',
         pt: {
-            sc: 'jaloused'
+            sc: 'jaloused',
+            tr: ['suspected', 'supposed', 'guessed', 'surmised']
         },
         gr: 'v',
         tr: ['jaloose'],
         or: [
             'this uissage first kythes in ' + G.notes.or.lms, [G.notes.or.f, 'jalouser']
-        ]
+        ],
+        ex: [G.ex.y, G.ex.z]
     }, {
         sc: 'dounlaid',
         pt: {
@@ -770,6 +772,10 @@ G.dict.push({
         ph: true
     }, {
         sc: 'gar',
+        pt_pp: {
+            sc: ['gart', 'garred'],
+            tr: ['made', 'caused', 'forced', 'compelled']
+        },
         def: ['cause something tae be duin', 'mak a body or thing dae something'],
         tr: ['make', 'cause', 'force', 'compel'],
         gr: 'v',
@@ -777,7 +783,7 @@ G.dict.push({
             [G.notes.or.as, 'ger, gar'],
             [G.notes.or.anor, 'gera']
         ],
-        ex: ['It gars ye think', G.ex.u, 'The court gart the company provide addítional wittins']
+        ex: ['It gars ye think', G.ex.u, 'The court gart the company provide mair wittins']
     }, {
         sc: 'gie bield tae/til',
         en: 'protect',
@@ -808,7 +814,7 @@ G.dict.push({
         tr: 'hauden',
         hl: 'haud',
         gr: 'v',
-        ex: ['I div haud that ye’re wrang', 'I jaloused I’d better haud my tongue', 'The neist comatee meetin will be hauden in Mey']
+        ex: ['I div haud that ye’re wrang', G.ex.z, 'The neist comatee meetin will be hauden in Mey']
     }, {
         sc: 'hauden',
         en: 'be obliged or required to do something',
