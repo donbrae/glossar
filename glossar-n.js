@@ -149,7 +149,8 @@ G.dict.push({
     sc: 'debursement',
     en: 'disbursement',
     gr: 'n',
-    or: 'see v <span>deburse</span>'
+    or: 'see v <span>deburse</span>',
+    ex: 'A comatee wis estaiblisht tae owersee the debursement o aid'
 }, {
     sc: 'defaut',
     en: [
@@ -194,7 +195,7 @@ G.dict.push({
     en: 'a deputy',
     gr: 'n',
     tr: 'deputy',
-    ex: ['The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer'],
+    ex: ['The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer', G.ex.f],
     or: 'see adj'
 }, {
     sc: 'desuetude',
@@ -673,7 +674,9 @@ G.dict.push({
     en: 'worker',
     gr: 'n',
     ex: 'He wis an awfu haurd wirker',
-    or: [G.notes.or.as, 'wirkar, wyrkar(e)']
+    or: [
+        [G.notes.or.as, 'wirkar, wyrkar(e)']
+    ]
 }, { // U
     sc: 'unionist',
     def: 'in a Scots context, a body that’s for the haudin gaun o the polítical union atween Scotland an England',

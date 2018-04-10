@@ -167,7 +167,8 @@ G.dict.push({ // A
     en: [
         ['besides', 'over and above', 'moreover', 'in addition']
     ],
-    tr: ['attour', 'further'],
+    tr: ['attour', 'further', 'as well', 'too'],
+    hl: ['attour', 'further', 'atour'],
     gr: ['adv', 'prep']
 }, {
     sc: ['certie', 'certes'],
@@ -189,7 +190,7 @@ G.dict.push({ // A
     ],
     gr: 'adv',
     or: 'see adj',
-    ex: ['He’s mair aulder nor me', 'She was mair fasht about it than he wis', G.ex.y]
+    ex: ['He’s mair aulder nor me', 'She wis mair fasht about it than he wis', G.ex.y]
 }, {
     sc: 'maist',
     en: [
@@ -266,6 +267,21 @@ G.dict.push({ // A
         ['somewhat', 'rather', 'in some way', 'to some degree']
     ],
     gr: ['adv']
+}, {
+    sc: 'ower',
+    en: [
+        ['above', 'covering', 'downward (over)'],
+        ['across', 'sideways'],
+        ['overmuch, excessively'],
+        ['from beginning to end', 'throughout'],
+        ['off to sleep']
+    ],
+    tr: ['owre', 'outthrou', 'overly', 'abuin'],
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'over, ouer, ower'],
+        [G.notes.or.ae, 'ofer']
+    ]
 }, { // S
     sc: 'shuir',
     en: [
@@ -288,6 +304,19 @@ G.dict.push({ // A
     sc: 'sicweys',
     en: 'thus',
     gr: ['adv']
+}, {
+    sc: 'syne',
+    en: [
+        ['thereupon', 'directly after', 'next', 'afterwards', 'subsequently'],
+        ['ago', 'since', 'before now'],
+        ['from then', 'since', 'thereafter', 'as a result', 'consequently'],
+        ['in that case', 'so', 'then']
+    ],
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'syn(e), sin, sen, sene'],
+        [G.notes.or.ae, 'siþþan']
+    ]
 }, {
     sc: 'aefauldly',
     en: [

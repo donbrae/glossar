@@ -57,7 +57,13 @@ G.ex = {
     w: "The new symphony is a stuir an sonsie wark, if a bittie wrocht-up in pairts",
     x: "Shuirly there’s mair tae the story than that",
     y: "The pub wis mair thrang than they’d jaloused it wad be",
-    z: "I jaloused I’d better haud ma tongue!"
+    z: "I jaloused I’d better haud ma tongue!",
+    a1: "Dae ye hae anither ane o thir?",
+    b1: "The’re ower muckle guid stuff on TV thir days that I hinna the time tae watch it aw",
+    c1: "I wad luve tae stey an hae a bit blether wi ye, but I maun be gettin hame",
+    d1: "He haed about fower hunder pound in his bank account; Ruth haed mair",
+    e1: "Out o the lot o us I’d haen the maist beers",
+    f1: "Rax me ane o thae GFE26 ile filters, wad ye?"
 };
 
 G.dict = [{
@@ -177,7 +183,7 @@ G.dict = [{
     tr: 'more',
     gr: 'pron',
     or: 'see adj',
-    ex: ['He haed about fower hunder pound in his bank account; Ruth haed mair', G.ex.x, 'Moyen dis muckle but money dis mair']
+    ex: [G.ex.d1, G.ex.x, 'Moyen dis muckle but money dis mair']
 }, {
     sc: 'maist',
     def: [
@@ -189,7 +195,7 @@ G.dict = [{
         [G.notes.or.as, 'mast(e), maist(e)'],
         [G.notes.or.ae, 'mǣst, māst']
     ],
-    ex: ['Out o the lot o us I’d haen the maist beers', 'Maist o the dishes wis duin']
+    ex: [G.ex.e1, 'Maist o the dishes wis duin']
 }, { // N
     sc: 'naewey',
     en: [
@@ -236,6 +242,16 @@ G.dict = [{
     tr: 'wir',
     hl: 'our',
     gr: ['possesive pronoun']
+}, {
+    sc: 'ower',
+    en: [
+        ['above', 'cross'],
+        ['down from', 'out of', 'out at'],
+        ['beyond the control or capabilities of', 'too much for']
+    ],
+    tr: 'owre',
+    gr: 'prep',
+    or: 'see adv'
 }, {
     sc: 'wir',
     pr: ['wir', 'wur', 'war', 'weer', 'wor'],
@@ -298,12 +314,36 @@ G.dict = [{
     en: 'particular',
     tr: 'partiecular',
     gr: 'adj'
+}, {
+    sc: 'syne',
+    en: 'after',
+    tr: 'efter',
+    gr: 'prep',
+    or: 'see adv'
+}, {
+    sc: 'syne',
+    en: [
+        ['since', 'from the time that'],
+        ['since', 'because', 'seeing that']
+    ],
+    gr: 'conj',
+    or: 'see adv'
 }, { // T
     sc: 'til',
     en: 'to',
     gr: 'prep',
     inf: '<em>til</em> is whiles uised only afore vouels an the letter h, an aften no afore verbs',
     ex: ['I walkit ower an spak til him', G.ex.i]
+}, {
+    sc: 'thae',
+    en: 'those',
+    tr: ['they', 'thai', 'ey'],
+    gr: 'pron pl, dem adj',
+    or: [
+        [G.notes.or.as, 'tha(i), thay, thae'],
+        [G.notes.or.ae, 'ðā']
+    ],
+    ex: [G.ex.f1, 'Lat’s hae a blether about thae twa pynts ye brocht up in the meetin']
 }, {
     sc: ['than', '’an'],
     en: 'than',
@@ -316,6 +356,14 @@ G.dict = [{
         [G.notes.or.as, 'than, then'],
         [G.notes.or.ae, 'ðanne']
     ]
+}, {
+    sc: 'thir',
+    en: 'these',
+    gr: 'dem pron, dem adj',
+    or: [
+        [G.notes.or.as, 'thir']
+    ],
+    ex: [G.ex.a1, G.ex.b1]
 }];
 
 G.utils = {

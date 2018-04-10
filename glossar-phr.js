@@ -39,6 +39,10 @@ G.dict.push({
     ex: G.ex.k,
     ph: true
 }, {
+    sc: 'ower an abuin',
+    en: 'over and above',
+    ph: true
+}, {
     sc: 'pit intil effect',
     en: 'implement',
     gr: 'v phr',

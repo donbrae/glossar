@@ -320,7 +320,7 @@ G.dict.push({ // A
     tr: 'deputy',
     hl: 'depute',
     def: 'apointit as, or exercein the duties o, depute',
-    ex: ['The preses depute gied a gey dreich screed at the annual collogue', G.ex.f],
+    ex: ['The preses depute gied a gey dreich screed at the annual collogue'],
     or: [
         [G.notes.or.as, 'depute, deput'],
         [G.notes.or.af, 'deputé']
@@ -395,6 +395,17 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'ony'],
         [G.notes.or.ae, 'ǽniᵹ']
+    ]
+}, {
+    sc: 'ower',
+    en: [
+        ['upper', 'higher']
+    ],
+    gr: 'adj',
+    tr: 'owre',
+    or: [
+        [G.notes.or.as, 'over, oer, ower'],
+        [G.notes.or.ae, 'uferra']
     ]
 }, { // P
     sc: 'pertinent',

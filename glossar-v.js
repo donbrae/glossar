@@ -1079,7 +1079,8 @@ G.dict.push({
         en: G.v.hae.en,
         tr: G.v.hae.trigs,
         hl: G.v.hae.sc,
-        gr: 'v'
+        gr: 'v',
+        ex: [G.ex.a1, G.ex.c1]
     }, { // hae neg
         sc: G.v.hae.neg.sc,
         sc_alt: G.v.hae.neg.sc_alt,
@@ -1087,7 +1088,8 @@ G.dict.push({
         en: G.v.hae.neg.en,
         tr: G.v.hae.trigs,
         hl: [].concat(G.v.hae.neg.sc, G.v.hae.neg.tr),
-        gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+        gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+        ex: G.ex.b1
     }, { // hae present singular
         sc: G.v.hae.ps.sc,
         sc_alt: G.v.hae.ps.sc_alt,
@@ -1108,7 +1110,8 @@ G.dict.push({
         en: G.v.hae.pt.en,
         tr: G.v.hae.trigs,
         hl: [].concat(G.v.hae.pt.sc),
-        gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+        gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+        ex: G.ex.d1
     }, { // hae neg past tense
         sc: G.v.hae.pt.neg.sc,
         en: G.v.hae.pt.neg.en,
@@ -1121,7 +1124,8 @@ G.dict.push({
         pr: G.v.hae.ptp.pr,
         tr: G.v.hae.trigs,
         hl: [].concat(G.v.hae.ptp.sc, G.v.hae.ptp.pr),
-        gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+        gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+        ex: G.ex.e1
     }, {
         sc: 'haik',
         en: [
@@ -1146,6 +1150,14 @@ G.dict.push({
         sc: 'ocht',
         en: 'ought',
         gr: 'v'
+    }, {
+        sc: 'ower',
+        en: [
+            ['overpower', 'take control', 'regulate or manage oneself']
+        ],
+        gr: 'v',
+        tr: 'owre',
+        or: 'see adv'
     }, { // P
         sc: 'pit',
         en: 'put',
@@ -1253,13 +1265,19 @@ G.dict.push({
     }, { // R
         sc: 'rax',
         en: [
-            ['reach', 'stretch']
+            'stretch', ['make a great effort', 'overexert', 'strain a part of yourself', 'rouse yourself'], 'deal (a person) a blow', ['lengthen by stretching', 'pull out', 'extend something to its full reach or capacity', 'be flexible or accommodating'], 'hang a person', ['reach out or over the hand or arm', 'give a person your hand'], 'extend, raise up the head or eyes in order to look or listen', 'hand a person down or over an object'
         ],
         gr: 'v',
+        tr: ['hit', 'lengthen', 'rouse'],
         pt_pp: {
             sc: ['raxed', 'raxt'],
-            en: ['reached', 'stretched']
-        }
+            tr: ['reached', 'stretched', 'overexterted', 'strained', 'roused', 'lengthened', 'extended', 'accomodated']
+        },
+        or: [
+            [G.notes.or.as, 'rax, raux, wrax'],
+            [G.notes.or.ae, 'raxan']
+        ],
+        ex: [G.ex.f1, 'I raxt mysel sair pittin in yon byler']
     }, {
         sc: 'redd',
         en: [

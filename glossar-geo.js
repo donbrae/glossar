@@ -127,7 +127,7 @@ G.dict.push({
     sc: ['Czechland', 'Czechie'],
     en: ['Czech Republic, Czechia'],
     gr: 'pn',
-    or: '‘Czechie’ is uised on the Scots Wikipedia, an is maistlikes a modren protologism o Česko, a new offícial name for Česká republika; ' + G.notes.b
+    or: 'Czechie is uised on the Scots Wikipedia, an is maistlikes a modren protologism o Česko, a new offícial name for Česká republika; ' + G.notes.b
 }, {
     sc: 'Denmark',
     def: 'a kintra in Scandinaivie',
