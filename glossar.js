@@ -244,12 +244,13 @@ G.dict = [{
     gr: ['possesive pronoun']
 }, {
     sc: 'ower',
+    pr: ['uower', 'oar', 'oor', 'err'],
     en: [
         ['above', 'cross'],
         ['down from', 'out of', 'out at'],
         ['beyond the control or capabilities of', 'too much for']
     ],
-    tr: 'owre',
+    tr: ['owre', 'over'],
     gr: 'prep',
     or: 'see adv'
 }, {
@@ -316,12 +317,14 @@ G.dict = [{
     gr: 'adj'
 }, {
     sc: 'syne',
+    pr: ['sine', 'seen'],
     en: 'after',
     tr: 'efter',
     gr: 'prep',
     or: 'see adv'
 }, {
     sc: 'syne',
+    pr: ['sine', 'seen'],
     en: [
         ['since', 'from the time that'],
         ['since', 'because', 'seeing that']
@@ -358,6 +361,7 @@ G.dict = [{
     ]
 }, {
     sc: 'thir',
+    pr: ['thir', 'thur'],
     en: 'these',
     gr: 'dem pron, dem adj',
     or: [

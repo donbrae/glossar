@@ -269,6 +269,7 @@ G.dict.push({ // A
     gr: ['adv']
 }, {
     sc: 'ower',
+    pr: ['uower', 'oar', 'oor', 'err'],
     en: [
         ['above', 'covering', 'downward (over)'],
         ['across', 'sideways'],
@@ -276,7 +277,7 @@ G.dict.push({ // A
         ['from beginning to end', 'throughout'],
         ['off to sleep']
     ],
-    tr: ['owre', 'outthrou', 'overly', 'abuin'],
+    tr: ['owre', 'outthrou', 'overly', 'abuin', 'over'],
     gr: 'adv',
     or: [
         [G.notes.or.as, 'over, ouer, ower'],
@@ -306,6 +307,7 @@ G.dict.push({ // A
     gr: ['adv']
 }, {
     sc: 'syne',
+    pr: ['sine', 'seen'],
     en: [
         ['thereupon', 'directly after', 'next', 'afterwards', 'subsequently'],
         ['ago', 'since', 'before now'],

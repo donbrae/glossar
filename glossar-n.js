@@ -152,6 +152,19 @@ G.dict.push({
     or: 'see v <span>deburse</span>',
     ex: 'A comatee wis estaiblisht tae owersee the debursement o aid'
 }, {
+    sc: 'defamation',
+    en: [
+        ['discredit', 'disgrace', 'dishonour'],
+        ['<span>law</span> libel', 'slander']
+    ],
+    tr: ['libel', 'discrediting'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'defamatioun, defamatione'],
+        [G.notes.or.me, 'defāmacioun'],
+        [G.notes.or.l, 'diffāmātio']
+    ]
+}, {
     sc: 'defaut',
     en: [
         ['lack or absence (of something)', 'neglect', 'negligence', 'failure to pay (a debt)']
@@ -450,6 +463,12 @@ G.dict.push({
         [G.notes.or.as, 'laddie']
     ]
 }, {
+    sc: 'lawmakar',
+    en: [
+        ['lawmaker', 'legislator']
+    ],
+    gr: 'n'
+}, {
     sc: 'loun',
     pr: 'loon',
     en: [
@@ -564,6 +583,15 @@ G.dict.push({
     hl: ['uiss', 'yiss', 'ees'],
     en: 'use',
     gr: 'n'
+}, {
+    sc: 'rax',
+    en: [
+        ['stretching', 'a pull', 'a stretch'],
+        ['a strain', 'a sprain'],
+        ['reaching', 'reach']
+    ],
+    gr: 'n',
+    or: 'see verb'
 }, { // R
     sc: 'rhetoric',
     pr: 'rEtorik',
@@ -596,7 +624,7 @@ G.dict.push({
     sc_alt: 'steerer',
     en: 'activist',
     gr: 'n',
-    or: '<span>steer</span> ‘tae steer, gie airt til’ wi <span>-ar</span> suffix. Baith <span>-ar</span> an <span>-er</span> kythe on SLC wabsteid. Gane here wi <span>-ar</span> by analogy wi <span>co-airtar</span> an <span>pairt-takar</span>'
+    or: '<span>steer</span> ‘tae steer, gie airt til’ wi <span>-ar</span> suffix. Baith <span>-ar</span> an <span>-er</span> kythe on the SLC wabsteid. Wale’t <span>-ar</span> here by analogy wi <span>co-airtar</span>, <span>pairt-takar</span> an <span>lawmakar</span>'
 }, {
     sc: 'swither',
     en: [

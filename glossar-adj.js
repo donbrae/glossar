@@ -121,6 +121,31 @@ G.dict.push({ // A
     hl: 'cauld',
     gr: ['adj']
 }, {
+    sc: 'contigue',
+    en: [
+        ['contiguous', 'adjacent']
+    ],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'contigue'],
+        [G.notes.or.mf, 'contigu'],
+        [G.notes.or.l, 'contiguus']
+    ]
+}, {
+    sc: 'contermit',
+    tr: 'contermt',
+    en: [
+        ['determined', 'stubborn']
+    ],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'contermit, contermyt']
+    ]
+}, {
+    sc: 'contemporar',
+    en: 'contemporary',
+    gr: 'adj'
+}, {
     sc: 'contrair',
     en: [
         ['contrary', 'opposite', 'unfavourable', 'adverse']
@@ -130,6 +155,15 @@ G.dict.push({ // A
     gr: 'adj',
     or: 'see n',
     ex: ['Contrair til expectations, he did weel in his exams', 'Maist law makars threapit for a chynge in the law, but a wheen held the contrair view', 'He’s a ill-naiturt an contrair chiel']
+}, {
+    sc: 'defamatoir',
+    en: 'defamatory',
+    tr: 'defamator',
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'defamatoir, defamatore, defamatour'],
+        [G.notes.or.mf, 'diffamatoire']
+    ]
 }, { // D
     sc: 'defeat',
     tr: ['defait', 'defeet'],
@@ -163,6 +197,19 @@ G.dict.push({ // A
     hl: 'easter',
     gr: ['adj'],
     def: 'locatit tae the east; the mair easter o twa steids, biggins or ither things; kythes in steid names, e.g. Easter Road'
+}, {
+    sc: 'elementar',
+    en: [
+        ['basic', 'elemental', 'elementary']
+    ],
+    tr: 'fundamental',
+    hl: 'elementar',
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'elementar, elementair'],
+        [G.notes.or.mf, 'elementaire'],
+        [G.notes.or.l, 'elementārius']
+    ]
 }, {
     sc: 'evendoun',
     en: [
@@ -339,7 +386,7 @@ G.dict.push({ // A
         [G.notes.or.me, 'aquointe'],
         [G.notes.or.mf, 'accointe']
     ],
-    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the Mínister’s view on the said maiter']
+    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the mínister’s view on the said maiter']
 }, { // M
     sc: 'mair',
     en: ['larger in physical size', 'greater in quantity or amount', ['additional in quantity or number', 'further']],
@@ -398,11 +445,13 @@ G.dict.push({ // A
     ]
 }, {
     sc: 'ower',
+    pr: ['uower', 'oar', 'oor', 'err'],
     en: [
         ['upper', 'higher']
     ],
     gr: 'adj',
-    tr: 'owre',
+    tr: ['owre', 'over'],
+    hl: ['ower', 'owre'],
     or: [
         [G.notes.or.as, 'over, oer, ower'],
         [G.notes.or.ae, 'uferra']

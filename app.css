@@ -77,6 +77,9 @@ ol>li {
 ol.ex, ol.inf {
     list-style-type: none;
 }
+ol.inf span, div.inf span {
+    font-style: italic;
+}
 ol.ex li::before, div.ex::before, ol.inf li::before, div.inf::before {
     padding-right: 3px;
 }

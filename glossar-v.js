@@ -485,6 +485,21 @@ G.dict.push({
             [G.notes.or.as, 'defait', 'defett'], G.notes.or.af + ' <span>desfait</span>, ptp o <span>desfaire</span>'
         ]
     }, {
+        sc: 'depone',
+        en: [
+            ['make a sworn statement', 'swear', 'testify', 'give evidence on oath']
+        ],
+        pt_pp: {
+            sc: ['deponed', 'depone’t'],
+            tr: ['swore', 'sworn', 'testified']
+        },
+        tr: 'declare',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'depone'],
+            [G.notes.or.l, 'dēpōnere']
+        ]
+    }, {
         sc: 'depute',
         pt_pp: {
             sc: 'depute',
@@ -909,6 +924,20 @@ G.dict.push({
         ],
         ex: [G.ex.l, G.ex.s]
     }, {
+        sc: 'interpone',
+        en: 'interpose',
+        pt_pp: {
+            sc: ['interponed', 'interpone’t'],
+            tr: ['interposed', 'intervened', 'interjected']
+        },
+        tr: ['intervene', 'interject'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'interpone'],
+            [G.notes.or.l, 'interpõnere']
+        ],
+        inf: 'Uisses the day are limitit tae Scots law — aft-times in the phrase <span>interpone authority to</span> — but it wis uised mair braidly in Aulder Scots'
+    }, {
         sc: 'ken',
         en: 'know',
         neg: {
@@ -1152,11 +1181,16 @@ G.dict.push({
         gr: 'v'
     }, {
         sc: 'ower',
+        pr: ['uower', 'oar', 'oor', 'err'],
+        pt_pp: {
+            sc: ['owert, owered']
+        },
         en: [
             ['overpower', 'take control', 'regulate or manage oneself']
         ],
+        tr: ['over', 'owre'],
+        hl: ['ower', 'owre'],
         gr: 'v',
-        tr: 'owre',
         or: 'see adv'
     }, { // P
         sc: 'pit',
@@ -1265,19 +1299,19 @@ G.dict.push({
     }, { // R
         sc: 'rax',
         en: [
-            'stretch', ['make a great effort', 'overexert', 'strain a part of yourself', 'rouse yourself'], 'deal (a person) a blow', ['lengthen by stretching', 'pull out', 'extend something to its full reach or capacity', 'be flexible or accommodating'], 'hang a person', ['reach out or over the hand or arm', 'give a person your hand'], 'extend, raise up the head or eyes in order to look or listen', 'hand a person down or over an object'
+            'stretch', ['make a great effort', 'overexert', 'strain a part of yourself', 'rouse yourself'], 'deal (a person) a blow', ['lengthen by stretching', 'pull out', 'extend something to its full reach or capacity', 'be flexible or accommodating'], 'hang a person', ['reach out or over the hand or arm', 'give a person your hand'], 'extend, raise up the head or eyes in order to look or listen', 'hand a person an object', 'sprain a limb', 'reach for, stretch out to take or grasp something'
         ],
         gr: 'v',
-        tr: ['hit', 'lengthen', 'rouse'],
+        tr: ['hit', 'lengthen', 'rouse', 'reach', 'hand', 'sprain', 'hang'],
         pt_pp: {
             sc: ['raxed', 'raxt'],
-            tr: ['reached', 'stretched', 'overexterted', 'strained', 'roused', 'lengthened', 'extended', 'accomodated']
+            tr: ['hit', 'handed', 'reached', 'stretched', 'overexterted', 'strained', 'sprained', 'roused', 'lengthened', 'extended', 'accomodated', 'hanged']
         },
         or: [
             [G.notes.or.as, 'rax, raux, wrax'],
             [G.notes.or.ae, 'raxan']
         ],
-        ex: [G.ex.f1, 'I raxt mysel sair pittin in yon byler']
+        ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler']
     }, {
         sc: 'redd',
         en: [
