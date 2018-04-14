@@ -453,6 +453,21 @@ G.dict.push({
             [G.notes.or.mf, 'compris']
         ]
     }, {
+        sc: 'consíder',
+        pr: 'conseeder',
+        def: 'tae think on, tak intil account',
+        pt_pp: {
+            sc: ['consídert', 'consídered'],
+            tr: 'considered'
+        },
+        tr: ['think on', 'consider'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'consider, considder'],
+            [G.notes.or.af, 'considerer'],
+            [G.notes.or.l, 'consīderāre']
+        ]
+    }, {
         sc: 'contrair',
         en: [
             ['oppose', 'contradict', 'go contrary to', 'act or speak against']
@@ -529,6 +544,32 @@ G.dict.push({
             tr: 'developed'
         },
         gr: 'v'
+    }, {
+        sc: 'descrive',
+        pr: ['descreeve', 'descryve'],
+        pt_pp: {
+            sc: 'descrived',
+            tr: 'described'
+        },
+        en: 'describe',
+        tr: ['descrieve', 'discrieve'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'descrive, descryve, discrive, discryve'],
+            [G.notes.or.me, 'descriven']
+        ]
+    }, {
+        sc: 'differ',
+        en: [
+            ['be dissimilar or distinct'],
+            ['quarrel', 'disagree']
+        ],
+        tr: 'row',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'differ'],
+            [G.notes.or.mf, 'differer']
+        ]
     }, { // E
         sc: 'ettle',
         en: [
@@ -1343,12 +1384,18 @@ G.dict.push({
         gr: 'v',
         ex: 'Dinna swither, min — haud gaun!',
         or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms]
-    }, {
+    }, { // U
         sc: 'uise',
         pr: ['yöz', 'yüz', 'öz', 'yaiz', 'ees'],
         en: 'use',
         tr: ['yaise', 'uiss', 'yiss', 'yaize'],
         hl: ['yaise', 'yaize', 'uise', 'yaiz', 'ees'],
+        gr: 'v'
+    }, {
+        sc: 'upcast',
+        en: [
+            ['calculate', 'reckon', 'estimate']
+        ],
         gr: 'v'
     }, {
         sc: 'upsteer',

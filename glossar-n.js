@@ -226,6 +226,15 @@ G.dict.push({
     en: 'development',
     gr: 'n'
 }, {
+    sc: 'differ',
+    en: [
+        ['a difference of opinion', 'a disagreement or dispute'],
+        ['a difference', 'a dissimilarity']
+    ],
+    tr: ['disagreement', 'dispute', 'difference', 'dissimilarity'],
+    gr: 'n',
+    or: ['see v']
+}, {
     sc: ['ditter'],
     en: 'dither',
     tr: 'swither',
@@ -544,6 +553,17 @@ G.dict.push({
     ],
     gr: 'n',
     ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'Yon’s ocht ava tae dae wi it!']
+}, {
+    sc: 'owerance',
+    en: [
+        ['control', 'mastery', 'superiority']
+    ],
+    tr: ['command', 'owreance', 'owersicht', 'owresicht', 'oversight', 'supervision', 'ascendancy'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'ourance, owrance, overance']
+    ],
+    ex: 'The Labour Pairty tyned owerance o the council'
 }, { // P
     sc: 'pairt-takar',
     tr: 'pairt takar',
