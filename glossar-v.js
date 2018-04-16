@@ -1070,12 +1070,12 @@ G.dict.push({
         ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
     }, {
         sc: 'mind',
+        sc_alt: 'mynd',
         pt: {
             sc: 'mindit',
             tr: ['reminded', 'remembered', 'recollected', 'called to mind', 'myndit']
         },
         en: ['remind', ['remember', 'recollect', 'call to mind']],
-        tr: 'mynd',
         gr: 'v',
         or: [
             [G.notes.or.as, 'minde, mynd(e)'],
@@ -1233,6 +1233,16 @@ G.dict.push({
         hl: ['ower', 'owre'],
         gr: 'v',
         or: 'see adv'
+    }, {
+        sc: 'owergie',
+        en: [
+            ['give up', 'renounce', 'resign', 'surrender property']
+        ],
+        tr: ['owregie', 'relinquish', 'surrender'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'overgive, ourgive']
+        ]
     }, { // P
         sc: 'pit',
         en: 'put',

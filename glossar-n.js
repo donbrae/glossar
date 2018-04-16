@@ -502,8 +502,8 @@ G.dict.push({
     or: 'see v'
 }, {
     sc: 'mind',
+    sc_alt: 'mynd',
     def: 'the mind; that whilk is brocht back tae mind or mindit, memory, a mindin',
-    tr: 'mynd',
     gr: 'n',
     or: 'see v'
 }, {
@@ -511,6 +511,7 @@ G.dict.push({
     en: [
         ['a memory', 'a recollection']
     ],
+    sc_alt: 'myndin',
     tr: ['memory', 'recollection'],
     gr: 'n'
 }, { // N
@@ -674,6 +675,9 @@ G.dict.push({
 }, {
     sc: 'toun',
     pr: 'toon',
+    def: [
+        ['an area wi a name an bounds whaur fowk haes sattelt', 'a burgh', 'a cíty']
+    ],
     en: 'town',
     gr: 'n',
     or: [
