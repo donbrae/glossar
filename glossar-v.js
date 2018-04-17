@@ -1281,7 +1281,8 @@ G.dict.push({
             ['pit forrit for consíderation', 'suggest'],
             ['<span>law</span> pit forrit or state (a plea) in a court']
         ],
-        tr: ['propose', 'bring forward'],
+        en: 'propose',
+        tr: 'bring forward',
         gr: 'v',
         or: [
             [G.notes.or.as, 'propone'],
@@ -1371,6 +1372,14 @@ G.dict.push({
         gr: 'v'
     }, {
         sc: ['set furth', 'furthset'],
+        pt: {
+            sc: ['set furth', 'furthset'],
+            tr: 'published'
+        },
+        pp: {
+            sc: 'setten furth',
+            tr: 'published'
+        },
         en: 'publish',
         gr: 'v phr, v',
         or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],

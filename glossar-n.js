@@ -50,6 +50,17 @@ G.dict.push({
     tr: 'body',
     gr: 'n',
     ex: 'The tapmaist file bouk permittit is 8MB'
+}, {
+    sc: 'brae',
+    def: ['the (stey or sclentin) banks o a river, loch or seashore', 'a bank or lenth o grund wi a fairly strait upwart sclent til it', 'a gate wi a stey upcome; aft-times in street names', 'the brou o a hill'],
+    tr: ['hillside', 'slope', 'road', 'street', 'bank', 'knowe', 'brow', 'brou'],
+    hl: ['brae', 'hillside', 'brow', 'bank', 'street', 'road', 'brow', 'brou'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'bra', 'bray', 'brae'],
+        [G.notes.or.anor, 'brá'],
+        [G.notes.or.ga, 'bràighe']
+    ]
 }, { // C
     sc: 'cairt',
     en: ['cart', ['chart, map']],
@@ -361,12 +372,31 @@ G.dict.push({
         [G.notes.or.ae, 'folc']
     ]
 }, {
+    sc: 'fruit',
+    pr: ['fröt', 'frit', 'freet'],
+    def: ['the product o a tree or ither plant that haes seeds intil’t, an can be etten as fuid', 'revenue accressed frae the crap o the laund', 'affcome, vantage, profit', 'affspring'],
+    en: 'fruit',
+    tr: ['result', 'benefit', 'profit', 'offspring'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'fruit, fruyt, frute'],
+        [G.notes.or.me, 'fruit'],
+        [G.notes.or.l, 'frūctus']
+    ]
+}, {
     sc: 'furthsetter',
     def: 'a body or company that redds an sets furth beuks, jurnals, or muisic for sale',
     tr: 'publisher',
     gr: 'n',
     or: [
         [G.notes.or.ms, 'furthsettar, furthsetter']
+    ]
+}, {
+    sc: 'furthsettin',
+    en: 'publishing',
+    gr: 'n',
+    or: [
+        [G.notes.or.ms + ' <span>furthsetting</span>', '<span>‘settin forrit, feshin on, forderin’</span>']
     ]
 }, { // G
     sc: 'gloriosity',
@@ -388,6 +418,15 @@ G.dict.push({
     sc: 'haudin gaun',
     en: 'continuation',
     gr: 'n'
+}, {
+    sc: 'horse',
+    def: 'a huift, plant-eatin domesticatit mammal',
+    tr: 'hors',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'hors, horse'],
+        [G.notes.or.ae, 'hors']
+    ]
 }, {
     sc: 'hour',
     pr: 'oor',
@@ -477,6 +516,18 @@ G.dict.push({
         ['lawmaker', 'legislator']
     ],
     gr: 'n'
+}, {
+    sc: 'loch',
+    def: [
+        ['a naitural formt area o watter surroundit by laund (rangin in bouk frae muckle doun til lairge pownds), aft-times in street names', 'an inlat o the sea'], 'a dub'
+    ],
+    tr: ['lake', 'pond', 'puddle', 'pool', 'inlet', 'inlat', 'watter', 'dub'],
+    hl: ['lake', 'pond', 'puddle', 'pool', 'dub'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'loch, louch(e)'],
+        [G.notes.or.ga, 'loch']
+    ]
 }, {
     sc: 'loun',
     pr: 'loon',

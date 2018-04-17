@@ -11,6 +11,7 @@ G.notes = {
         f: 'French',
         an: 'Anglo-Norman',
         l: 'Laitin',
+        ga: 'Gaelic',
         nfd: 'northren French dialect',
         ae: 'Auld English',
         me: 'Middle English',
@@ -231,6 +232,16 @@ G.dict = [{
     gr: ['pron'],
     or: 'see adj'
 }, { // O
+    sc: 'o',
+    pr: ['oh', 'ae', 'uh'],
+    en: 'of',
+    tr: ['ey', 'ay', 'u', 'o\''],
+    gr: 'prep',
+    or: [
+        [G.notes.or.as, 'of, off'],
+        [G.notes.or.ae, 'of']
+    ]
+}, {
     sc: 'onyane',
     en: 'anyone',
     gr: ['pron']

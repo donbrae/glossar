@@ -127,6 +127,9 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 div.en, div.def, div.ex, div.inf {
     padding: 4px 0 0 4px;
 }
+.en, .def {
+    font-size: .95rem;
+}
 .ex, .inf {
     font-size: .8rem;
 }
