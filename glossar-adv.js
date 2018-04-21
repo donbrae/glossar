@@ -340,7 +340,43 @@ G.dict.push({ // A
     sc: 'the day',
     en: 'today',
     gr: 'adv, n',
-    ex: [G.ex.n, G.ex.o, G.ex.p]
+    ex: [G.ex.n, G.ex.o, G.ex.p],
+    or: '<span>the day</span> first kythes in scrievit form in ' + G.notes.or.as + ' frae about 1500'
+}, {
+    sc: 'the morn',
+    en: [
+        ['tomorrow', 'the following morning or day']
+    ],
+    gr: 'adv, n',
+    or: '<span>the morne</span> ‘the follaein day’ dates back til about 1470',
+    ex: 'I\'ll see ye the morn!'
+}, {
+    sc: 'the morra',
+    en: 'tomorrow',
+    gr: 'adv, n',
+    or: G.notes.or.as + ' haes <em>the morrow</em>'
+}, {
+    sc: 'the nicht',
+    en: 'tonight',
+    tr: 'the night',
+    gr: 'adv, n',
+    ex: ['Are ye gaun out the nicht?', 'It’s awfu cauld the nicht'],
+    or: 'first kythin DOST haes o <span>the nicht</span> (in the mak <em>the nycht</em>) ‘the praisent or approachin nicht’ is frae 1475'
+}, {
+    sc: 'the year',
+    en: 'this year',
+    or: [
+        [G.notes.or.as, 'the year']
+    ]
+}, {
+    sc: 'the nou',
+    en: [
+        ['just now', 'at present', 'just a moment ago'],
+        ['in a moment', 'soon']
+    ],
+    tr: ['the-nou', 'the-noo', 'the noo', 'the now', 'at the moment', 'suin', 'sin', 'seen', 'momentarily', 'a moment ago'],
+    ex: ['Haud on; I’ll be there the nou', 'I cawed her the nou but she wisna answerin'],
+    or: 'first kythes in ' + G.notes.or.mods
 }, { // U
     sc: 'unco',
     en: [

@@ -52,9 +52,9 @@ G.dict.push({
     ex: 'The tapmaist file bouk permittit is 8MB'
 }, {
     sc: 'brae',
-    def: ['the (stey or sclentin) banks o a river, loch or seashore', 'a bank or lenth o grund wi a fairly strait upwart sclent til it', 'a gate wi a stey upcome; aft-times in street names', 'the brou o a hill'],
-    tr: ['hillside', 'slope', 'road', 'street', 'bank', 'knowe', 'brow', 'brou'],
-    hl: ['brae', 'hillside', 'brow', 'bank', 'street', 'road', 'brow', 'brou'],
+    def: ['the (stey or sclentin) banks o a river, loch or seashore', 'a bank or lenth o grund wi a fairly strait upwart sclent til it', 'a gate wi a stey upcome (aft-times in street names)', 'the brou o a hill'],
+    tr: ['hillside', 'slope', 'road', 'street', 'bank', 'knowe', 'brow', 'brou', 'gate', 'gait'],
+    hl: ['brae', 'hillside', 'brow', 'bank', 'street', 'road', 'brow', 'brou', 'gate', 'gait'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'bra', 'bray', 'brae'],
@@ -78,6 +78,17 @@ G.dict.push({
     sc: 'claes',
     en: 'clothes',
     gr: 'n'
+}, {
+    sc: 'close',
+    def: ['an enclosed area neist til a biggin; a courtyaird', ['a passage atween biggins', 'a nairae loan wi houses on ilka side'], 'a fermyaird', 'the passage gien ingate til a common stair; the mean area in a block o flats', 'a tenement biggin'],
+    tr: ['passage', 'farmyard', 'farm yard', 'stairwell', 'tenement', 'building', 'courtyard', 'coortyaird'],
+    hl: ['passage', 'farmyard', 'farm yard', 'stairwell', 'tenement', 'courtyard', 'coortyaird'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'clos, clois, close'],
+        [G.notes.or.mf, 'clos'],
+        [G.notes.or.l, 'clausum']
+    ]
 }, {
     sc: 'collectorie',
     def: 'the office o (tax) collector',
@@ -147,6 +158,10 @@ G.dict.push({
     ],
     ex: 'Edinburgh Cíty Council the day set furth new wittins anent the raxin out o the tram netwark til Newhaven'
 }, { // D
+    sc: 'daeins',
+    en: 'activity',
+    gr: 'n'
+}, {
     sc: 'dask',
     en: [
         ['desk', 'seat', 'church pew']
@@ -218,7 +233,7 @@ G.dict.push({
     sc: 'depute',
     en: 'a deputy',
     gr: 'n',
-    tr: 'deputy',
+    tr: ['deputy', 'vice'],
     ex: ['The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer', G.ex.f],
     or: 'see adj'
 }, {
@@ -363,6 +378,14 @@ G.dict.push({
     en: 'coward',
     gr: ['n', 'informal']
 }, {
+    sc: 'fitba',
+    pr: ['fitbaw', 'fitbaa'],
+    en: 'football',
+    gr: 'n',
+    or: [
+        G.notes.or.as + ' <span>futebal(l), fuitbal, futbaw</span>.' + ' The last letter (‘l’) in the Aulder Scots maks is whit’s kent as a ‘vouel lenth merker’ an wisna soundit', [G.notes.or.lme, 'fotebal']
+    ]
+}, {
     sc: 'fowk',
     pr: ['fuowk', 'foak'],
     en: 'people',
@@ -399,6 +422,18 @@ G.dict.push({
         [G.notes.or.ms + ' <span>furthsetting</span>', '<span>‘settin forrit, feshin on, forderin’</span>']
     ]
 }, { // G
+    sc: 'gate',
+    sc_alt: 'gait',
+    def: [
+        ['a wey', 'a path', 'a road', 'a street (in a toun); kythes aft-times in steid names']
+    ],
+    tr: ['street', 'way', 'wey', 'path', 'road'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'gate, gait'],
+        [G.notes.or.anor, 'gata']
+    ]
+}, {
     sc: 'gloriosity',
     en: 'self-importance',
     tr: ['boast', 'gloriositie', 'self importance'],
@@ -517,9 +552,18 @@ G.dict.push({
     ],
     gr: 'n'
 }, {
+    sc: 'loan',
+    def: ['an unpedmentit or girssie track for cattle; aft-times in steid names', 'a througate, street or road', ['the ferm gate airtin til the fermhous', 'the grund adjynin a fermhous', 'the causey']],
+    tr: ['lane', 'track', 'street', 'road', 'path', 'causey', 'gate', 'gait', 'througate'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'lone, loan, loyne'],
+        [G.notes.or.ae, 'lanu']
+    ]
+}, {
     sc: 'loch',
     def: [
-        ['a naitural formt area o watter surroundit by laund (rangin in bouk frae muckle doun til lairge pownds), aft-times in street names', 'an inlat o the sea'], 'a dub'
+        ['a naitural formt area o watter surroundit by laund (rangin in bouk frae muckle doun til lairge pownds); aft-times in street names', 'an inlat o the sea'], 'a dub'
     ],
     tr: ['lake', 'pond', 'puddle', 'pool', 'inlet', 'inlat', 'watter', 'dub'],
     hl: ['lake', 'pond', 'puddle', 'pool', 'dub'],
@@ -543,6 +587,30 @@ G.dict.push({
         [G.notes.or.as, 'loun']
     ]
 }, { // M
+    sc: 'maiter',
+    en: [
+        ['material', 'substance'],
+        ['basis', 'ground', 'source', 'origin'],
+        ['the subject', 'the theme (of a literary work or discourse)'],
+        ['an undertaking', 'a course of events', 'a state of affairs', 'a concern', 'a business', 'an issue']
+    ],
+    tr: ['subject', 'theme', 'undertaking', 'course of events', 'state of affairs', 'concern', 'business', 'issue', 'matter'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'mater(e)'],
+        [G.notes.or.me, 'mater'],
+        [G.notes.or.l, 'māteria']
+    ]
+}, {
+    sc: 'mak',
+    en: [
+        ['form', 'shape', 'a (distinctive) style of manufacture'],
+        ['the action or process of manufacturing (an object) or developing (a character)']
+    ],
+    tr: ['style', 'manufacturing', 'developing', 'build', 'appearance', 'fashion', 'manufacturing'],
+    gr: 'n',
+    or: 'see v'
+}, {
     sc: 'maun',
     pr: 'maun',
     en: [
@@ -619,7 +687,7 @@ G.dict.push({
 }, { // P
     sc: 'pairt-takar',
     tr: 'pairt takar',
-    en: 'stakeholder',
+    en: ['stakeholder', 'supporter'],
     gr: 'n',
     ex: G.ex.k
 }, {
@@ -676,6 +744,15 @@ G.dict.push({
         'frae the Greek <span>rhētorikē</span>'
     ],
     ex: 'It wis naething but tuim rhetoric'
+}, {
+    sc: 'road',
+    def: [
+        ['a braid route atween twa steids', 'a gate']
+    ],
+    tr: ['gate', 'gait', 'route', 'raid'],
+    hl: ['gate', 'gait', 'route'],
+    gr: 'n',
+    or: 'SND states that the mak <em>road</em> (frae Auld English <em>rād</em>) is a 16t century borraein frae English, the historical Scots mak bein <em>raid</em>'
 }, {
     sc: 'roaster',
     def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o thaimsels',
@@ -779,6 +856,15 @@ G.dict.push({
     ex: 'He wis an awfu haurd wirker',
     or: [
         [G.notes.or.as, 'wirkar, wyrkar(e)']
+    ]
+}, {
+    sc: 'wynd',
+    def: '<em>mainly fund in street names</em> a nairae, aft-times windin street or pass, maist aften in touns an cíties',
+    tr: ['street', 'alley', 'road', 'gate', 'gait'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'wynd, wyne, wind, weynd'],
+        [G.notes.or.ae, 'gewind']
     ]
 }, { // U
     sc: 'unionist',

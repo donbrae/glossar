@@ -48,4 +48,10 @@ G.dict.push({
     gr: 'v phr',
     ex: G.ex.f,
     ph: true
+}, {
+    sc: 'douce an wicelike',
+    en: 'constructively',
+    gr: 'adv phr',
+    ex: 'The twa governments is committit tae haud gaun douce an wicelike',
+    ph: true
 });

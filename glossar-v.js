@@ -102,7 +102,7 @@ G.v.gae = {
     ing: {
         sc: ['gaun', 'gangin', 'gaein'],
         en: 'going',
-        tr: ['gingin', 'goin', 'gawn', 'gawin'],
+        tr: ['gingin', 'goin', 'gawn', 'gawin', 'gauin'],
     },
     tps: {
         sc: ['gaes', 'gangs', 'gans'],
@@ -805,11 +805,11 @@ G.dict.push({
             ['belong to', 'pertain to', 'be appropriate to', 'be fitting or proper']
         ],
         pt_pp: {
-            sc: 'effeirt'
+            sc: 'effeirt',
+            tr: ['belonged to', 'pertained to', 'related to', 'corresponded to', 'concerned', 'referred to', 'applied to', 'applicable to', 'belonged', 'pertained', 'related', 'corresponded', 'referred', 'applied', 'applicable', 'belonged']
         },
         gr: ['v', 'formal'],
-        tr: ['effeirin tae', 'effeirin til', 'applicable to', 'apply to', 'relate to', 'correspond to', 'concern', 'about'],
-        hl: ['effeir', 'be fitting', 'be proper', 'relate to', 'correspond to', 'concern'],
+        tr: ['belong', 'pertain', 'effeirin tae', 'effeirin til', 'applicable to', 'apply to', 'relate to', 'correspond to', 'concern', 'about', 'refer to'],
         or: [
             [G.notes.or.as, 'affer(e), effere'],
             [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
@@ -823,8 +823,8 @@ G.dict.push({
             ['in relation to', 'in proportion to', 'corresponding to']
         ],
         gr: ['v phr', 'formal'],
-        tr: ['effeir', 'relating to', 'according to', 'applicable to', 'concerning', 'about'],
-        hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to', 'concerning'],
+        tr: ['effeir', 'relating to', 'according to', 'applicable to', 'concerning', 'about', 'referring to'],
+        hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to', 'concerning', 'referring to'],
         or: 'see v <span>effeir</span>',
         ex: 'The comatee spak anent maiters effeirin til halth policy',
         ph: true
@@ -832,10 +832,10 @@ G.dict.push({
         sc: 'gar',
         pt_pp: {
             sc: ['gart', 'garred'],
-            tr: ['made', 'caused', 'forced', 'compelled']
+            tr: ['made', 'caused', 'forced', 'compelled', 'required']
         },
         def: ['cause something tae be duin', 'mak a body or thing dae something'],
-        tr: ['make', 'cause', 'force', 'compel'],
+        tr: ['make', 'cause', 'force', 'compel', 'require'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'ger, gar'],
@@ -910,7 +910,9 @@ G.dict.push({
         gr: 'phrasal v'
     }, {
         sc: 'haud gaun',
-        en: 'keep going',
+        en: [
+            ['keep going', 'continue']
+        ],
         gr: 'phrasal v'
     }, {
         sc: 'haud haul',
@@ -969,15 +971,24 @@ G.dict.push({
         en: 'interpose',
         pt_pp: {
             sc: ['interponed', 'interpone’t'],
-            tr: ['interposed', 'intervened', 'interjected']
+            tr: ['interposed', 'intervened', 'interjected', 'interrupted', 'interruptit']
         },
-        tr: ['intervene', 'interject'],
+        tr: ['intervene', 'interject', 'interrupt'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'interpone'],
             [G.notes.or.l, 'interpõnere']
         ],
         inf: 'Uisses the day are limitit tae Scots law — aft-times in the phrase <span>interpone authority to</span> — but it wis uised mair braidly in Aulder Scots'
+    }, {
+        sc: 'introduce',
+        pt_pp: {
+            sc: 'introduced',
+            tr: 'introduced',
+        },
+        en: 'introduce',
+        gr: 'v'
+        // or:
     }, {
         sc: 'ken',
         en: 'know',
@@ -1054,6 +1065,24 @@ G.dict.push({
         en: 'produce',
         gr: 'v phr',
         ph: true
+    }, {
+        sc: 'mak',
+        en: [
+            ['manufacture', 'produce', 'bring about', 'create', 'devise', 'organize', 'compose', 'appoint', 'institute', 'enact', 'give rise to', 'cause to be or become'],
+            'compel someone to do something', ['perform a task', 'deliver a speech', 'utter words'],
+            ['<em>law</em> execute a deed', 'conclude a contract'],
+            ['be the material or components of', 'go to form'],
+            'fix a price', ['prepare to go', 'set out', 'proceed'],
+            'draw up a document', ['earn', 'gain money', 'win something'],
+            'prepare a bed for use', ['draw a distiction', 'raise a difficulty'],
+            ['<em>of food or drink</em> thicken', 'set', 'infuse']
+        ],
+        tr: ['cause to become', 'compel', 'execute a deed', 'fix', 'thicken', 'make'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'mak'],
+            [G.notes.or.ae, 'macian']
+        ]
     }, { // M
         sc: 'maun',
         pr: ['maun', 'mon', 'man', 'mun'],
@@ -1260,6 +1289,10 @@ G.dict.push({
             [G.notes.or.ae, 'pȳtan']
         ],
         ex: ['I pit it tae ye that ye’v tint the pynt o my threap', 'Jamie pit the cat out', G.ex.f, 'Iona haed pitten forrit mony guid ideas']
+    }, {
+        sc: 'pit forrit',
+        en: 'introduce',
+        gr: 'v phr'
     }, {
         sc: 'proceed',
         en: 'proceed',

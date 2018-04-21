@@ -364,8 +364,8 @@ G.dict.push({ // A
 }, {
     sc: 'depute',
     gr: ['adj'],
-    tr: 'deputy',
-    hl: 'depute',
+    tr: ['deputy', 'vice'],
+    hl: ['depute', 'deputy', 'vice'],
     def: 'apointit as, or exercein the duties o, depute',
     ex: ['The preses depute gied a gey dreich screed at the annual collogue'],
     or: [
@@ -479,6 +479,10 @@ G.dict.push({ // A
         [G.notes.or.mode, 'prævious, previous'],
         [G.notes.or.l, 'prævi-us']
     ]
+}, {
+    sc: 'pyntit',
+    en: 'decisive',
+    gr: 'adj'
 }, { // R
     sc: 'ragglish',
     en: [
