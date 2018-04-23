@@ -595,7 +595,8 @@ G.dict.push({
         ],
         tr: ['attempting', 'ettle'],
         hl: ['ettlin'],
-        gr: ['v']
+        gr: ['v'],
+        ex: [G.ex.i1, G.ex.g1]
     }, {
         sc: 'ettle sair',
         en: [
@@ -788,10 +789,12 @@ G.dict.push({
             [G.notes.or.mode, 'download']
         ]
     }, {
-        sc: 'edify',
+        sc: 'edifý',
+        pr: 'edifee',
         en: [
             ['instruct', 'enlighten']
         ],
+        tr: 'edify',
         gr: 'v',
         or: [
             [G.notes.or.as, 'edify, edifie'],
@@ -1365,18 +1368,19 @@ G.dict.push({
         gr: 'v'
     }, {
         sc: 'tuim',
-        en: [
-            'empty a container', ['pour', 'empty out'],
-            'discharge (a gun or shot)',
-            'drain water from (potatoes)',
-            '<span>(of water)</span> flow or gush copiously', ['<span>(of rain)</span> to pour', 'come down in torrents']
-        ],
+        pr: ['tim', 'teem', 'toom', 'taim'],
         pt_pp: {
             sc: 'tuimt',
             tr: ['emptied', 'emptied out',
                 'discharge', 'drained', 'gushed', 'poured'
             ]
         },
+        en: [
+            'empty a container', ['pour', 'empty out'],
+            'discharge (a gun or shot)',
+            'drain water from (potatoes)',
+            '<span>(of water)</span> flow or gush copiously', ['<span>(of rain)</span> to pour', 'come down in torrents']
+        ],
         tr: ['empty', 'gush'],
         gr: 'v',
         or: 'frae the adj',
@@ -1462,7 +1466,7 @@ G.dict.push({
         pr: 'wirk, wurk',
         pt_pp: {
             sc: 'wrocht',
-            tr: ['worked', 'workit']
+            tr: ['worked', 'workit', 'made', 'built', 'manufactured', 'biggit']
         },
         tr: ['labour', 'labor', 'toil', 'wark'],
         hl: 'wirk',

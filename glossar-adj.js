@@ -532,7 +532,7 @@ G.dict.push({ // A
     or: 'see adj <span>sweir</span>'
 }, { // T
     sc: 'tuim',
-    pr: ['toom', 'teem', 'taim', 'tim'],
+    pr: ['tim', 'teem', 'toom', 'taim'],
     en: [
         ['empty', 'vacant'],
         'hungry', ['<span>(of a place)</span> unoccupied'],

@@ -16,7 +16,6 @@ G.dict.push({ // A
     gr: ['prep', 'adv']
 }, {
     sc: 'about',
-    sc_alt: 'aboot',
     pr: 'aboot',
     en: 'about',
     tr: 'anenst',
@@ -103,7 +102,7 @@ G.dict.push({ // A
     tr: 'exackly',
     gr: 'adv',
     or: 'see adj',
-    ex: 'Meet me there at fower o’clock exact'
+    ex: 'Meet me there at fower hours exact'
 }, {
     sc: 'forby',
     sc_alt: 'forbye',
@@ -147,7 +146,8 @@ G.dict.push({ // A
     ],
     tr: ['just', 'exack', 'exact'],
     gr: ['adv'],
-    or: 'see adj'
+    or: 'see adj',
+    ex: [G.ex.g1, 'It’s juist gane aicht hours', G.ex.h1]
 }, {
     sc: 'guid',
     en: [

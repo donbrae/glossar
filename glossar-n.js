@@ -51,6 +51,13 @@ G.dict.push({
     gr: 'n',
     ex: 'The tapmaist file bouk permittit is 8MB'
 }, {
+    sc: 'boy',
+    def: 'a man',
+    tr: ['man', 'lad', 'laddie', 'loun'],
+    hl: ['boy', 'man'],
+    gr: ['n', 'informal'],
+    ex: ['The boy wi the bustit timin belt is sittin waitin in the office', 'Ach, he’s an auld boy sae I wisna gaun’ae argie wi him', 'That boy taks nae shite frae naeb’dy!']
+}, {
     sc: 'brae',
     def: ['the (stey or sclentin) banks o a river, loch or seashore', 'a bank or lenth o grund wi a fairly strait upwart sclent til it', 'a gate wi a stey upcome (aft-times in street names)', 'the brou o a hill'],
     tr: ['hillside', 'slope', 'road', 'street', 'bank', 'knowe', 'brow', 'brou', 'gate', 'gait'],
@@ -530,7 +537,7 @@ G.dict.push({
         'a son',
         'a male sweetheart'
     ],
-    tr: ['son', 'male sweetheart', 'boy', 'young man', 'laddie', 'loun'],
+    tr: ['son', 'male sweetheart', 'boy', 'young man', 'laddie', 'loun', 'man'],
     hl: ['son', 'male sweetheart', 'boy', 'young man'],
     gr: 'n',
     or: [
@@ -539,12 +546,13 @@ G.dict.push({
 }, {
     sc: 'laddie',
     en: ['a young man', 'a male child', 'a male sweetheart', 'a son'],
-    tr: ['young man', 'male child', 'male sweetheart', 'son', 'boy', 'loun', 'lad'],
+    tr: ['young man', 'male child', 'male sweetheart', 'son', 'boy', 'loun', 'lad', 'man'],
     hl: ['young man', 'male child', 'male sweetheart', 'son', 'boy'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'laddie']
-    ]
+    ],
+    ex: 'That’s Eck’s laddie, is it no?'
 }, {
     sc: 'lawmakar',
     en: [
@@ -580,7 +588,7 @@ G.dict.push({
         ['a young farm worker'],
         ['a male child', 'son', 'baby boy']
     ],
-    tr: ['young man', 'farm-boy', 'farm boy', 'lad', 'laddie'],
+    tr: ['young man', 'farm-boy', 'farm boy', 'lad', 'laddie', 'man'],
     hl: ['young man', 'farm-boy', 'farm boy'],
     gr: 'n',
     or: [
@@ -658,6 +666,10 @@ G.dict.push({
     gr: 'n',
     ex: [G.ex.s, G.ex.t]
 }, { // O
+    sc: 'onhaudin',
+    en: 'continuation',
+    gr: 'n'
+}, {
     sc: 'onybody',
     en: 'anybody',
     tr: ['oniebody', 'emdie', 'emdy'],
@@ -758,6 +770,12 @@ G.dict.push({
     def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o thaimsels',
     gr: ['n', 'informal', 'derogatory']
 }, { // S
+    sc: 'sel-law',
+    en: 'self-governance',
+    tr: ['sel law', 'self governance'],
+    gr: 'n',
+    or: 'protologism'
+}, {
     sc: 'signatur',
     en: 'signature',
     gr: 'n'
@@ -787,6 +805,11 @@ G.dict.push({
     gr: 'n',
     ex: G.ex.i,
     or: 'see v'
+}, {
+    sc: 'sýstem',
+    pr: 'seestem',
+    en: 'system',
+    gr: 'n'
 }, { // T
     sc: 'than',
     pr: ['than', 'thaun', 'thin', 'dan'],

@@ -66,7 +66,10 @@ G.ex = {
     c1: "I wad luve tae stey an hae a bit blether wi ye, but I maun be gettin hame",
     d1: "He haed about fower hunder pound in his bank account; Ruth haed mair",
     e1: "Out o the lot o us I’d haen the maist beers",
-    f1: "Rax me ane o thae GFE26 ile filters, wad ye?"
+    f1: "Rax me ane o thae GFE26 ile filters, wad ye?",
+    g1: "The app’s uiser interface is juist whit the client’s ettlin efter",
+    h1: "I’v juist gotten stairtit the nou sae ye’ll hae tae gie me a bit mair time",
+    i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer"
 };
 
 G.dict = [{
