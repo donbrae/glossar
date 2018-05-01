@@ -970,6 +970,26 @@ G.dict.push({
         ],
         ex: [G.ex.l, G.ex.s]
     }, {
+        sc: 'innovate',
+        pt: {
+            sc: 'innovatit',
+            tr: 'innovated'
+        },
+        pp: {
+            sc: 'innovate',
+            tr: 'innovated'
+        },
+        en: [
+            ['alter or revise (established practice or the status quo)', 'introduce something new']
+        ],
+        tr: ['alter', 'revise'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'innovat, innovate'],
+            G.notes.or.l + ' <em>innovāt-</em>, ptp stem o <em>innovāre</em>'
+        ],
+        ex: ['She aye likit tae innovate in her wark', 'He haed been innovate as a componer o sangs for vyce an pianae']
+    }, {
         sc: 'interpone',
         en: 'interpose',
         pt_pp: {

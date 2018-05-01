@@ -250,7 +250,7 @@ G.dict.push({ // A
     sc: 'fantoush',
     pr: 'fantoosh',
     en: [
-        ['overdressed', 'flashy', 'fancy', 'ultra fashionable']
+        ['overdressed', 'flashy', 'fancy', 'ultra fashionable', 'ornate']
     ],
     gr: 'adj',
     or: [
@@ -273,6 +273,21 @@ G.dict.push({ // A
     ],
     gr: 'adj',
     ex: G.ex.a
+}, {
+    sc: 'fell',
+    en: [
+        ['fierce', 'cruel', 'harsh'],
+        ['remarkable', 'considerable', 'extremely strong, big or loud'],
+        ['<em>of weather</em> violent', 'inclement'],
+        ['energetic and capable', 'sturdy'],
+        ['clever', 'shrewd']
+    ],
+    tr: ['extremely big', 'extremely loud', 'violent', 'ruthless'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'fell, fel'],
+        [G.notes.or.me, 'fel']
+    ]
 }, {
     sc: 'forby',
     sc_alt: 'forbye',
@@ -349,6 +364,15 @@ G.dict.push({ // A
         ['each', 'every']
     ],
     gr: ['adj']
+}, {
+    sc: 'innovate',
+    en: 'innovative',
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'innovat, innowat, innovate'],
+        [G.notes.or.l, 'innovātus']
+    ],
+    ex: 'The company haed a guid wheen innovate products on the mercat'
 }, { // J
     sc: 'juist',
     en: [

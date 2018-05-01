@@ -89,7 +89,7 @@ G.dict.push({ // A
     gr: 'adv',
     or: 'see n',
     ex: 'He chynged the contents o the file ’ithout takkin a backup, contrair til best prattick'
-}, {
+}, { // E
     sc: 'evendoun',
     en: [
         ['absolutely', 'completely', 'downright']
@@ -103,6 +103,14 @@ G.dict.push({ // A
     gr: 'adv',
     or: 'see adj',
     ex: 'Meet me there at fower hours exact'
+}, { // F
+    sc: 'fell',
+    en: [
+        ['extremely', 'very', 'severely'],
+        ['vigorously', 'energetically']
+    ],
+    gr: 'adv',
+    or: 'see adj'
 }, {
     sc: 'forby',
     sc_alt: 'forbye',
@@ -113,7 +121,7 @@ G.dict.push({ // A
     ],
     tr: 'also',
     gr: ['adv']
-}, {
+}, { // G
     sc: 'gey',
     pr: 'guyee',
     en: [

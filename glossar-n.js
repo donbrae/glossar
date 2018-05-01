@@ -274,6 +274,18 @@ G.dict.push({
     hl: 'dither',
     gr: ['n', 'v'],
     ex: ['Ay, he’s a richt ditter', 'The’re nae time tae be ditterin about']
+}, {
+    sc: 'draucht trumpet',
+    def: [
+        ['an early kind o trombone uised in Renaissance muisic', 'a war trumpet or trumpet player']
+    ],
+    en: 'sackbut',
+    gr: 'n',
+    tr: ['trombone'],
+    hl: ['sackbut', 'draucht trumpet'],
+    or: [
+        [G.notes.or.as, 'draucht trumpet']
+    ]
 }, { // E
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
@@ -521,6 +533,27 @@ G.dict.push({
     ],
     gr: ['pron']
 }, {
+    sc: 'innovation',
+    def: [
+        ['the chyngin o an estaiblisht mak, wey o daein things or institution'],
+        ['<em>law</em> the chyngin or replacement o a legal servitude or provísion'],
+        ['something new introduce’t']
+    ],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'innovation(e), innovatioun(e)'],
+        [G.notes.or.l, 'innovātio']
+    ]
+}, {
+    sc: 'novator',
+    en: 'innovator',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'novator, novateur'],
+        [G.notes.or.f, 'novateur'],
+        [G.notes.or.l, 'novātor']
+    ]
+}, {
     sc: 'accress',
     en: 'increase',
     gr: 'n',
@@ -712,6 +745,24 @@ G.dict.push({
         [G.notes.or.f, 'péripneumonie']
     ],
     ex: 'She wis awfu unweel wi the pneumonie'
+}, {
+    sc: 'poyet',
+    en: 'poet',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'poet, poiet, poyet'],
+        // ['?' + G.notes.or.me, 'poet(e), poyet(e)'],
+        // ['?' + G.notes.or.af, 'poete'],
+        // [G.notes.or.l, 'poēta'],
+        // [G.notes.or.gk, 'poētēs']
+    ]
+}, {
+    sc: 'poyetry',
+    en: 'poetry',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'poetry, poetrie, poyetrie'],
+    ]
 }, { // Q
     sc: ['quine', 'quinie'],
     sc_alt: 'quean',
@@ -728,6 +779,15 @@ G.dict.push({
         [G.notes.or.as, 'quene, quein'],
         [G.notes.or.ae, 'cwēn, cwene']
     ]
+}, {
+    sc: 'question',
+    en: 'question',
+    tr: 'quaisten',
+    gr: ['n', 'v'],
+    // or: [
+    //     [x, ''],
+    //     [x, '']
+    // ]
 }, {
     sc: 'uiss',
     pr: ['yös', 'yis', 'ees', 'yoos'],

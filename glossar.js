@@ -30,7 +30,8 @@ G.notes = {
         mode: 'Modren English',
         mlg: 'Middle Laich German',
         rl: 'Roman Law',
-        it: 'Italians'
+        it: 'Italians',
+        gk: 'Greek'
     }
 };
 
