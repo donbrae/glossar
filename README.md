@@ -13,7 +13,7 @@ Praisently at prototype stage.
 3. Inpit wirds uisin aither mair estaiblisht spellins, alang wi some common mis-spellins
 4. Retours baith the Scots, an the English translate (or whiles a definítion in Scots)
 5. Gies ‘richt’ spellin, basic pronunciation an grammar, some wittins anent wird origin, alang wi ony common alternative spellins
-6. Prents ane or twa example sentences for tae gie a kythin til the wirds uised in context
+6. Prents ae or twa example sentences for tae gie a kythin til the wirds uised in context
 5. Lichtwecht an accessible on dasktap, tablet an mobile.
 
 Audience: Scots spikkers, scrievers an learners.

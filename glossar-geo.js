@@ -414,7 +414,7 @@ G.dict.push({
     en: 'Switzerland',
     gr: 'pn'
 }, {
-    sc: 'Syrie',
+    sc: 'Sýrie',
     en: 'Syria',
     gr: 'pn',
     or: G.notes.a

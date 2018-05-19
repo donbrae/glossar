@@ -468,6 +468,15 @@ G.dict.push({ // A
         [G.notes.or.ae, 'ǽniᵹ']
     ]
 }, {
+    sc: 'ordinar',
+    en: [['usual', 'normal']],
+    tr: 'ordinary',
+    gr: 'adj',
+    or: [
+        [G.notes.or.me, 'ordinari'],
+        [G.notes.or.mf, 'ordinaire']
+    ]
+}, {
     sc: 'ower',
     pr: ['uower', 'oar', 'oor', 'err'],
     en: [

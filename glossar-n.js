@@ -135,6 +135,14 @@ G.dict.push({
         [G.notes.or.l, 'compositio']
     ]
 }, {
+    sc: 'componition',
+    def: 'a wark o muisic, líteratur or airt',
+    en: 'composition',
+    gr: 'n',
+    or: [
+        ['protologism, steidit on the ' + G.notes.or.as, 'componitioun, compone'],
+    ]
+}, {
     sc: 'co-airtar',
     en: 'coordinator',
     gr: 'n',
@@ -707,6 +715,15 @@ G.dict.push({
     en: 'anybody',
     tr: ['oniebody', 'emdie', 'emdy'],
     gr: 'n'
+}, {
+    sc: 'ordinar',
+    en: [['the usual state of things', 'what is customary or habitual']],
+    tr: 'ordinary',
+    gr: 'n',
+    or: [
+        [G.notes.or.me, 'ordiner, ordinārī'],
+        [G.notes.or.mf, 'ordinaire']
+    ]
 }, {
     sc: 'origin',
     en: 'origin',

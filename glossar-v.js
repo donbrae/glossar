@@ -68,27 +68,26 @@ G.v = {}; // Verbs
 
 // v gae
 G.v.gae = {
-    sc: ['gae', 'gang', 'gan'],
+    sc: ['gae', 'gang', 'gan', 'ging'],
     en: ['go'],
-    tr: ['ging'],
     neg: {
-        sc: ['gaena', 'gangna'],
+        sc: ['gaena', 'gangna', 'gingna'],
         en: [
             ['do not go', 'go not']
         ],
-        tr: ['ganna', 'gingna', 'gona', 'don\'t go'],
+        tr: ['ganna', 'gona', 'don\'t go'],
         tps: { // > Third person singular
-            sc: ['gaesna', 'gangsna', 'gansna'],
+            sc: ['gaesna', 'gangsna', 'gansna', 'gingsna'],
             en: [
                 ['does not go', 'goes not']
             ],
-            tr: ['gingsna', 'goesna', 'doesn\'t go']
+            tr: ['goesna', 'doesn\'t go']
         }
     },
     pt: {
-        sc: ['gaed', 'went'],
+        sc: ['gaed', 'went', 'ginged'],
         en: 'went',
-        tr: ['gad', 'goed', 'ginged', 'ganged'],
+        tr: ['gad', 'goed', 'ganged'],
         neg: {
             sc: ['gaedna'],
             en: 'did not go'
@@ -100,25 +99,25 @@ G.v.gae = {
         tr: ['ganed', 'goan', 'gaen'],
     },
     ing: {
-        sc: ['gaun', 'gangin', 'gaein'],
+        sc: ['gaun', 'gangin', 'gaein', 'gingin'],
         en: 'going',
-        tr: ['gingin', 'goin', 'gawn', 'gawin', 'gauin'],
+        tr: ['goin', 'gawn', 'gawin', 'gauin'],
     },
     tps: {
-        sc: ['gaes', 'gangs', 'gans'],
+        sc: ['gaes', 'gangs', 'gans', 'gings'],
         en: 'goes',
         tr: ['gings'],
     }
 };
 G.v.gae.trigs = [].concat( // Control display of conjugated 'gae'
-    G.v.gae.sc, G.v.gae.en, G.v.gae.tr, // gae
+    G.v.gae.sc, G.v.gae.en, // gae
     G.v.gae.neg.sc, G.v.gae.neg.en, G.v.gae.neg.tr, // gae neg
     G.v.gae.neg.tps.sc, G.v.gae.neg.tps.en, G.v.gae.neg.tps.tr, // gae neg third person singular
     G.v.gae.pt.sc, G.v.gae.pt.en, G.v.gae.pt.tr, // gae pt
     G.v.gae.pt.neg.sc, G.v.gae.pt.neg.en, // gae pt neg
     G.v.gae.pp.sc, G.v.gae.pp.en, G.v.gae.pp.tr, // gae pp
     G.v.gae.ing.sc, G.v.gae.ing.en, G.v.gae.ing.tr, // gae -ing form
-    G.v.gae.tps.sc, G.v.gae.tps.en, G.v.gae.tps.tr // gae third person singular
+    G.v.gae.tps.sc, G.v.gae.tps.en // gae third person singular
 );
 G.v.gae.meta = { // Metadata
     gr_hw: 'v ' + G.utils.addSpan('tae ' + G.v.gae.sc[0]) + ' etc.' // Which headwords should appear in the grammar definition
@@ -625,7 +624,7 @@ G.dict.push({
             [G.notes.or.f, 'éviter'],
             [G.notes.or.l, 'ēvītāre']
         ],
-        ex: 'He ettelt tae evite bein liftit by the polis'
+        ex: 'He tried tae evite bein liftit by the polis'
     }, {
         sc: ['examine', 'exaimine'],
         pt_pp: {
@@ -688,7 +687,7 @@ G.dict.push({
         sc: G.v.gae.tps.sc,
         en: G.v.gae.tps.en,
         tr: G.v.gae.trigs,
-        hl: G.v.gae.tps.tr,
+        hl: G.v.gae.tps.sc,
         gr: 'third person singular o ' + G.v.gae.meta.gr_hw
 
     },
@@ -741,6 +740,10 @@ G.dict.push({
     // v gie end
     {
         sc: 'compone',
+        pt_pp: {
+            sc: ['compone’t', 'componed'],
+            tr: ['composed', 'componit', 'compounded', 'combined', 'settled', 'calmed']
+        },
         en: [
             ['come to an agreement', 'settle a dispute with payment'],
             ['compound', 'combine'],
@@ -748,16 +751,24 @@ G.dict.push({
             'compound a payment for a certain sum',
             'compose or calm oneself'
         ],
+        or: [
+            [G.notes.or.as, 'compone'],
+            [G.notes.or.l, 'compōnere']
+        ],
         tr: ['compose', 'calm', 'settle'],
         gr: ['v', 'merkit obsolete in CSD2']
     }, {
         sc: 'compone',
+        pt_pp: {
+            sc: ['compone’t', 'componed'],
+            tr: ['composed', 'componit']
+        },
         def: 'write or create (a wark o airt, inspecially muisic or poetry)',
         tr: ['compose', 'write'],
         hl: 'compose',
         gr: ['v'],
         or: [
-            ['pairt archaism, pairt protologism, frae the ' + G.notes.or.as, 'compone <span>‘tae mak by pitten thegither, create in speak or writin’</span>'],
+            'pairt archaism, pairt protologism, frae the ' + G.notes.or.as + ' <span>compone</span> ‘tae mak by pittin thegither, tae compose; create in speak or writin.’ Henryson wrate: ‘Of thir sex … fyve hevynly symphonyis Componyt ar,’ whaur <span>symphonyis</span> = ‘a harmonious muisical sound’',
             [G.notes.or.l, 'compōnere']
         ]
     }, {

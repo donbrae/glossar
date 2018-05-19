@@ -180,7 +180,7 @@ G.dict = [{
     gr: 'pron'
 }, {
     sc: ['wha', 'fa'],
-    pr: ['whah', 'whau', 'whae', 'whiu', 'fa', 'a', 'wha'],
+    pr: ['whah', 'whau', 'whae', 'whiu', 'fa', 'a'],
     en: 'who',
     tr: ['whae', 'whay', 'whey'],
     gr: 'pron'

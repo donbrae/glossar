@@ -59,6 +59,7 @@ ul.or .list-inline-item {
 }
 ul.or .list-inline-item span, div.or-container span {
     font-style: italic;
+    padding-right: 1px;
 }
 ul.or .list-inline-item span span, div.or-container span span {
     font-style: normal;

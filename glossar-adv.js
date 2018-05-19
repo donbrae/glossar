@@ -119,7 +119,8 @@ G.dict.push({ // A
         ['beyond', 'past'],
         ['besides', 'in addition', 'as well']
     ],
-    tr: 'also',
+    tr: ['also', 'too'],
+    hl: ['forby', 'also'],
     gr: ['adv']
 }, { // G
     sc: 'gey',
@@ -275,6 +276,18 @@ G.dict.push({ // A
         ['somewhat', 'rather', 'in some way', 'to some degree']
     ],
     gr: ['adv']
+}, {
+    sc: 'for ordinar',
+    en: [['normally', 'usually']],
+    tr: 'ordinarily',
+    gr: 'adv',
+    or: 'see n <em>ordinar</em>'
+}, {
+    sc: 'ordinar',
+    en: [['usually', 'in the usual way', 'somewhat', 'to a certain extent']],
+    tr: 'ordinarily',
+    gr: 'adv',
+    or: 'see the adj'
 }, {
     sc: 'ower',
     pr: ['uower', 'oar', 'oor', 'err'],
