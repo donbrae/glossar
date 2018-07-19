@@ -288,6 +288,7 @@ G.dict.push({
 }, {
     sc: 'Norrowa',
     sc_alt: 'Norroway',
+    tr: 'Norrawa',
     en: 'Norway',
     def: 'a kintra in Scandinaivie',
     gr: 'pn'

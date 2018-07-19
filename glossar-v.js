@@ -777,10 +777,11 @@ G.dict.push({
         pr: 'jaLooz',
         pt: {
             sc: 'jaloused',
-            tr: ['suspected', 'supposed', 'guessed', 'surmised']
+            tr: ['suspected', 'supposed', 'guessed', 'surmised', 'figured']
         },
         gr: 'v',
-        tr: ['jaloose'],
+        tr: ['jaloose', 'assume', 'assumed', 'figure'],
+        hl: ['jalouse', 'jaloose', 'figure'],
         or: [
             'this uissage first kythes in ' + G.notes.or.lms, [G.notes.or.f, 'jalouser']
         ],
@@ -919,7 +920,7 @@ G.dict.push({
         gr: 'phrasal v'
     }, {
         sc: 'haud forrit',
-        en: 'continue to improve (in health)',
+        en: 'continue to improve (e.g. in health, or in terms of the degree of one’s accomplishment at performing a given job, task or craft)',
         tr: 'continue to improve',
         gr: 'phrasal v'
     }, {

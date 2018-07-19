@@ -691,6 +691,7 @@ G.dict.push({
     en: [
         ['innate ability or intelligence', 'talent']
     ],
+    tr: 'brilliance',
     gr: 'n',
     or: [
         [G.notes.or.as, 'naturalité, naturalty'],
