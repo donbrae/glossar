@@ -11,7 +11,7 @@ Presently at prototype stage.
 3. Inpit wirds uisin mair estaiblisht spellins alang wi some common mis-spellins
 4. Returns baith the Scots, and the English translate (or a definition in Scots whiles)
 5. Gies ‘richt’ spellin, basic pronunciation and grammar, some info anent wird origin, alang wi ony common alternative spellins
-6. Prents ae or twa example sentences tie gie a idea of the wird in context
+6. Prents ae or twa example sentences tae gie a idea of the wird in context
 5. Lichtwecht and accessible on desktop, tablet and mobile.
 
 Audience: Scots speakers, scrievers and learners.
