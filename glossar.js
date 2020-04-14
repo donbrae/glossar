@@ -3,8 +3,8 @@ var GLOSSAR = GLOSSAR || {};
 var G = GLOSSAR;
 
 G.notes = {
-    a: "protologism; frae analogy wi Dutch an French-influenced <em>Catalonie</em>, <em>Slovenie</em>, <em>Austrailie</em> et al, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Syrie, Californie et al
-    b: "<em>-ae</em> an <em>-y/-ie</em> steid-name endins kythes Dutch an French influence, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Americae, Slovakie et al
+    a: "protologism; frae analogy wi Dutch and French-influenced <em>Galicie</em>, <em>Armenie</em>, <em>Roumainie</em> et al, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Californie et al
+    b: "<em>-ae</em> an <em>-y/-ie</em> steid-name endins shaws Dutch and French influence, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Americae, Slovakie et al
     or: {
         af: 'Auld French',
         mf: 'Middle French',
@@ -36,46 +36,50 @@ G.notes = {
 };
 
 G.ex = {
-    a: "Alasdair an Ashley wis feart they wadna win at the kirk in time tae be mairit",
+    a: "Alasdair and Ashley wis feart they wadna win at the kirk in time tae be mairit",
     b: "It wis sae thrang Isobel didna knaw whan she wad get out o wark",
     c: "I kenna whit ye mean — ye\'re haiverin, mun!",
     d: "I wadna lat it fash ye",
     e: "The CEO luit skarehauders speir at him efter the tele-collogue",
-    f: "Her depute gree’d tae tak in haund the airtin o the policy an its pittin intil effect",
-    g: "It wis a gey an braw day",
+    f: "Her depute gree’d tae tak in haund the airtin o the policy and its pittin intil effect",
+    g: "It wis a gey and braw day",
     h: "I ken brawly richt bi wrang!",
-    i: "Jamie wis in a swither about whit Hogmanay pairty tae gang til",
-    j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid beild, an mak namely its pairt in Scotland’s identity nou an in time tae come",
+    i: "Jamie wis in a swither aboot whit Hogmanay perty tae gang til",
+    j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid bield, and mak namely its pairt in Scotland’s identity nou and in time tae come",
     k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
-    l: "In terms o tred, o the guids an services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
-    m: "The First Mínister wrate til her cabinet secretar anenst the forementiont policy",
-    n: "I’m meetin up wi an auld fríend the day",
+    l: "In terms o tred, o the guids and services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
+    m: "The First Mínister wrate til her cabinet secretar anent the forementiont policy",
+    n: "I’m meetin up wi and auld fríend the day",
     o: "The Fisk Secretar-depute will the day set furth new wittins anent the proponed tax exemptions",
     p: "The day’s gemm agin Aiberdeen will be played at hame",
     q: "Jeannie stuid anent him, fair pecht",
     r: "Mind aye tae be furthie til unco fowk",
-    s: "A new pipe netwark inbrocht watter tae the hous",
+    s: "A new pipe netwark inbrocht watter tae the hoose",
     t: "The netwark wis doun sae he coudna send ony emails",
-    u: "The heezin up o hous prices an financial mercat speculation thegither wis aye mair like tae gar the economy clyte",
-    v: "He gied an unco braw performance",
-    w: "The new symphony is a stuir an sonsie wark, if a bittie wrocht-up in pairts",
+    u: "The heezin up o hoose prices and financial mercat speculation thegither wis aye mair like tae gar the economy clyte",
+    v: "He gied and unco braw performance",
+    w: "The new symphony is a stuir and sonsie wark, if a bittie wrocht-up in pairts",
     x: "Shuirly there’s mair tae the story than that",
     y: "The pub wis mair thrang than they’d jaloused it wad be",
     z: "I jaloused I’d better haud ma tongue!",
     a1: "Dae ye hae anither ane o thir?",
-    b1: "The’re ower muckle guid stuff on TV thir days that I hinna the time tae watch it aw",
-    c1: "I wad luve tae stey an hae a bit blether wi ye, but I maun be gettin hame",
-    d1: "He haed about fower hunder pound in his bank account; Ruth haed mair",
+    b1: "The’r ower muckle guid stuff on TV thir days that I hinna the time tae watch it aw",
+    c1: "I wad luve tae stey and hae a bit blether wi ye, but I maun be gettin hame",
+    d1: "Stewart haed aboot fower hunder poond in his bank account; Ruth haed mair",
     e1: "Out o the lot o us I’d haen the maist beers",
-    f1: "Rax me ane o thae GFE26 ile filters, wad ye?",
+    f1: "Rax me ane o thae ile filters, wad ye?",
     g1: "The app’s uiser interface is juist whit the client’s ettlin efter",
-    h1: "I’v juist gotten stairtit the nou sae ye’ll hae tae gie me a bit mair time",
+    h1: "I’v juist gotten stertit the nou sae ye’ll hae tae gie me a bit mair time",
     i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer"
 };
 
+G.pr = {
+    juist: ['jist','joost', 'jeest', 'jeust', 'doost', 'dist']
+};
+
 G.dict = [{
-    sc: ['an'],
-    sc_alt: 'and',
+    sc: ['an', 'and'],
+    pr: 'an',
     en: 'and',
     gr: ['conj']
 }, {
@@ -87,23 +91,12 @@ G.dict = [{
     ],
     gr: ['prep', 'formal'],
     tr: ['regarding', 're', 'anenst', 'about'],
-    hl: ['regarding', 're', 'anent', 'about'],
+    hl: ['regarding', 're', 'anent', 'aboot'],
     or: [
         [G.notes.or.as, 'anent'],
         [G.notes.or.ae, 'on efen']
     ],
     ex: [G.ex.q, G.ex.o]
-}, {
-    sc: 'anenst',
-    en: [
-        ['over against', 'opposite'],
-        ['in respect of', 'concerning'],
-
-    ],
-    tr: ['about', 'regarding', 're', 'anent'],
-    hl: ['regarding', 're', 'anenst'],
-    gr: ['prep', 'formal'],
-    ex: G.ex.m
 }, {
     sc: 'binna',
     en: 'don\'t be',
@@ -147,7 +140,7 @@ G.dict = [{
         [G.notes.or.anor, 'frá']
     ]
 }, {
-    sc: 'gif',
+    sc: ['if', 'gif'],
     en: 'if',
     tr: 'gin',
     hl: 'gif',
@@ -173,7 +166,7 @@ G.dict = [{
     ],
     gr: ['pron']
 }, {
-    sc: 'ilka ane',
+    sc: ['ilka ane', 'ilkane'],
     en: [
         ['each one', 'everyone']
     ],
@@ -328,7 +321,7 @@ G.dict = [{
 }, {
     sc: 'partícular',
     pr: ['purTikyulur', 'purTiklur', 'parTeekyulur', 'parTeeklur'],
-    sc_alt: ['parteecular', 'parteicular'],
+    sc_alt: ['parteecular'],
     en: 'particular',
     tr: 'partiecular',
     gr: 'adj'
@@ -363,7 +356,7 @@ G.dict = [{
         [G.notes.or.as, 'tha(i), thay, thae'],
         [G.notes.or.ae, 'ðā']
     ],
-    ex: [G.ex.f1, 'Lat’s hae a blether about thae twa pynts ye brocht up in the meetin']
+    ex: [G.ex.f1, 'Lat’s hae a blether aboot thae twa pynts ye brocht up in the meetin']
 }, {
     sc: ['than', '’an'],
     en: 'than',

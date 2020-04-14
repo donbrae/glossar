@@ -87,7 +87,7 @@ G.dict.push({
     gr: 'n'
 }, {
     sc: 'close',
-    def: ['an enclosed area neist til a biggin; a courtyaird', ['a passage atween biggins', 'a nairae loan wi houses on ilka side'], 'a fermyaird', 'the passage gien ingate til a common stair; the mean area in a block o flats', 'a tenement biggin'],
+    def: ['an enclosed area neist til a biggin; a courtyaird', ['a passage atween biggins', 'a nairae loan wi hoosees on ilka side'], 'a fermyaird', 'the passage gien ingate til a common stair; the mean area in a block o flats', 'a tenement biggin'],
     tr: ['passage', 'farmyard', 'farm yard', 'stairwell', 'tenement', 'building', 'courtyard', 'coortyaird'],
     hl: ['passage', 'farmyard', 'farm yard', 'stairwell', 'tenement', 'courtyard', 'coortyaird'],
     gr: 'n',
@@ -112,7 +112,7 @@ G.dict.push({
     ],
     tr: ['mix up', 'mix-up', 'mixture', 'conversation', 'compluter', 'compluther'],
     gr: 'n',
-    or: ['wankent, but mak compare wi ' + G.notes.or.af + ' <span>complote</span>, ‘a raivelt thrang o fowk’']
+    or: ['unkent, but mak compare wi ' + G.notes.or.af + ' <span>complote</span>, ‘a raivelt thrang o fowk’']
 }, {
     sc: 'componer',
     def: 'a body that writes muisic',
@@ -281,19 +281,7 @@ G.dict.push({
     tr: 'swither',
     hl: 'dither',
     gr: ['n', 'v'],
-    ex: ['Ay, he’s a richt ditter', 'The’re nae time tae be ditterin about']
-}, {
-    sc: 'draucht trumpet',
-    def: [
-        ['an early kind o trombone uised in Renaissance muisic', 'a war trumpet or trumpet player']
-    ],
-    en: 'sackbut',
-    gr: 'n',
-    tr: ['trombone'],
-    hl: ['sackbut', 'draucht trumpet'],
-    or: [
-        [G.notes.or.as, 'draucht trumpet']
-    ]
+    ex: ['Ay, he’s a richt ditter', 'The’r nae time tae be ditterin aboot']
 }, { // E
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
@@ -301,7 +289,7 @@ G.dict.push({
     hl: 'eneuch',
     en: 'enough',
     gr: ['n', 'adj', 'adv'],
-    ex: 'I’v haed juist about eneuch o your haiverin'
+    ex: 'I’v haed juist aboot eneuch o your haiverin'
 }, {
     sc: 'environs',
     en: [
@@ -410,7 +398,7 @@ G.dict.push({
     en: 'football',
     gr: 'n',
     or: [
-        G.notes.or.as + ' <span>futebal(l), fuitbal, futbaw</span>.' + ' The last letter (‘l’) in the Aulder Scots maks is whit’s kent as a ‘vouel lenth merker’ an wisna soundit', [G.notes.or.lme, 'fotebal']
+        G.notes.or.as + ' <span>futebal(l), fuitbal, futbaw</span>.' + ' The last letter (‘l’) in the Aulder Scots maks is what’s kent as a ‘vouel lenth merker’ and wadna aye hae been soondit', [G.notes.or.lme, 'fotebal']
     ]
 }, {
     sc: 'fowk',
@@ -435,6 +423,7 @@ G.dict.push({
     ]
 }, {
     sc: 'furthsetter',
+    sc_alt: 'furthsetter',
     def: 'a body or company that redds an sets furth beuks, jurnals, or muisic for sale',
     tr: 'publisher',
     gr: 'n',
@@ -490,7 +479,8 @@ G.dict.push({
         [G.notes.or.ae, 'hors']
     ]
 }, {
-    sc: 'hour',
+    sc: 'oor',
+    sc_alt: 'hour',
     pr: 'oor',
     en: 'hour',
     gr: 'n',
@@ -498,20 +488,18 @@ G.dict.push({
         [G.notes.or.as, 'hour, howr'],
         [G.notes.or.me, 'houre']
     ],
-    ex: 'The forgaitherin o the management comatee is tae stairt at twa hours, juist efter denner'
+    ex: 'The forgaitherin o the management comatee is tae stert at twa oors, juist efter denner'
 }, {
-    sc: 'hous',
-    pr: 'hoos',
+    sc: 'hoose',
     en: 'house',
-    tr: ['houss', 'hoose'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'hous, hows, hus(e)'],
         [G.notes.or.ae, 'hūs']
     ],
     ex: [
-        ['They’d juist about pit by eneuch siller for a deposit on a hous'],
-        ['It’s yersel! Come awa ben the hous'],
+        ['They’d juist aboot pit by eneuch siller for a deposit on a hoose'],
+        ['It’s yersel! Come awa ben the hoose'],
     ]
 }, {
     sc: 'maet',
@@ -602,7 +590,7 @@ G.dict.push({
     gr: 'n'
 }, {
     sc: 'loan',
-    def: ['an unpedmentit or girssie track for cattle; aft-times in steid names', 'a througate, street or road', ['the ferm gate airtin til the fermhous', 'the grund adjynin a fermhous', 'the causey']],
+    def: ['an unpedmentit or girssie track for cattle; aft-times in steid names', 'a througate, street or road', ['the ferm gate airtin til the fermhoose', 'the grund adjynin a fermhoose', 'the causey']],
     tr: ['lane', 'track', 'street', 'road', 'path', 'causey', 'gate', 'gait', 'througate'],
     gr: 'n',
     or: [
@@ -670,7 +658,7 @@ G.dict.push({
     or: 'see v'
 }, {
     sc: 'mind',
-    sc_alt: 'mynd',
+    tr: 'mynd',
     def: 'the mind; that whilk is brocht back tae mind or mindit, memory, a mindin',
     gr: 'n',
     or: 'see v'
@@ -679,8 +667,7 @@ G.dict.push({
     en: [
         ['a memory', 'a recollection']
     ],
-    sc_alt: 'myndin',
-    tr: ['memory', 'recollection'],
+    tr: ['memory', 'recollection', 'mynd'],
     gr: 'n'
 }, { // N
     sc: 'nationalist',

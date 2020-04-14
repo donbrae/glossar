@@ -140,7 +140,7 @@ var GLOSSAR = (function() {
     }
 
     function noResults() {
-        $('#result').html('<li class="text-center no-results">Sorry, the’re nae results for <strong>' + state.word + '</strong></li>');
+        $('#result').html('<li class="text-center no-results">Sorry, the’r nae results for <strong>' + state.word + '</strong></li>');
         $('#result').addClass('show');
     }
 

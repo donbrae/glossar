@@ -351,7 +351,7 @@ G.dict.push({
             tr: ['increased', 'accrued', 'grown', 'grew']
         },
         en: ['accrue', ['increase', 'grow']],
-        gr: 'v',
+        gr: ['v', 'obsolete'],
         tr: 'added',
         hl: 'accress',
         or: [
@@ -829,7 +829,7 @@ G.dict.push({
             [G.notes.or.as, 'affer(e), effere'],
             [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
         ],
-        ex: 'The regulations effeir til hous biggin'
+        ex: 'The regulations effeir til hoose biggin'
     }, {
         sc: ['effeirin tae/til'],
         pr: ['iFeerin tae', 'iFeerin til'],
@@ -887,7 +887,7 @@ G.dict.push({
         tr: 'hauden',
         hl: 'haud',
         gr: 'v',
-        ex: ['I div haud that ye’re wrang', G.ex.z, 'The neist comatee meetin will be hauden in Mey']
+        ex: ['I div haud that ye’r wrang', G.ex.z, 'The neist comatee meetin will be hauden in Mey']
     }, {
         sc: 'hauden',
         en: 'be obliged or required to do something',
@@ -943,8 +943,7 @@ G.dict.push({
         ],
         gr: 'phrasal v'
     }, {
-        sc: 'haud in about',
-        pr: 'haud in aboot',
+        sc: 'haud in aboot',
         en: [
             ['keep in order', 'restrain', 'control'],
             ['bring', 'come closer']
@@ -1193,7 +1192,7 @@ G.dict.push({
             [G.notes.or.ms, 'fasch, fash'],
             [G.notes.or.mf, 'faschier']
         ],
-        ex: ['Dinna fash yersel', 'I wis sair fasht about the job interview', G.ex.d]
+        ex: ['Dinna fash yersel', 'I wis sair fasht aboot the job interview', G.ex.d]
     }, {
         sc: 'fesh-on',
         en: [
@@ -1270,16 +1269,15 @@ G.dict.push({
             [G.notes.or.ms, 'haik']
         ]
     }, {
-        sc: 'hous',
-        pr: 'hoos',
-        def: ['tae provide wi a hous', 'tae provide ainimals wi housin or bield', 'tae bouk guids or craps'],
+        sc: 'hoose',
+        def: ['tae provide wi a hoose', 'tae bouk guids or craps'],
         tr: ['houss', 'hoose', 'house'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'hous, huse, hows'],
             [G.notes.or.ae, 'hūsian']
         ],
-        ex: ['We can hous the kye in the byre the nicht']
+        ex: ['We can hoose the kye in the byre the nicht']
     }, { // O
         sc: 'ocht',
         en: 'ought',
@@ -1378,7 +1376,7 @@ G.dict.push({
         sc: ['takkin', 'taein'],
         en: 'taking',
         tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'takkin', 'tooken', 'tookin'],
-        ex: 'I wis takkin the dug for a walk whan it stairtit smirrin',
+        ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
         gr: 'pres pt o the v <span>tae tak</span>'
     }, {
         sc: 'tak on',

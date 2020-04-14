@@ -15,11 +15,9 @@ G.dict.push({ // A
     en: 'below',
     gr: ['prep', 'adv']
 }, {
-    sc: 'about',
-    pr: 'aboot',
+    sc: 'aboot',
     en: 'about',
     tr: 'anenst',
-    hl: 'about',
     gr: ['prep', 'adv']
 }, {
     sc: 'abuin',
@@ -102,7 +100,7 @@ G.dict.push({ // A
     tr: 'exackly',
     gr: 'adv',
     or: 'see adj',
-    ex: 'Meet me there at fower hours exact'
+    ex: 'Meet me there at fower oors exact'
 }, { // F
     sc: 'fell',
     en: [
@@ -147,7 +145,7 @@ G.dict.push({ // A
     gr: ['adv']
 }, { // J
     sc: 'juist',
-    pr: ['jöst', 'jüst', 'düst', 'joost', 'doost', 'jist', 'dist', 'jeest'],
+    pr: G.pr.juist,
     en: [
         ['exactly', 'accurately', 'correctly', 'directly'],
         ['at this time', 'just now', 'precisely'],
@@ -156,7 +154,7 @@ G.dict.push({ // A
     tr: ['just', 'exack', 'exact'],
     gr: ['adv'],
     or: 'see adj',
-    ex: [G.ex.g1, 'It’s juist gane aicht hours', G.ex.h1]
+    ex: [G.ex.g1, 'It’s juist gane echt oors', G.ex.h1]
 }, {
     sc: 'guid',
     en: [
@@ -199,7 +197,7 @@ G.dict.push({ // A
     ],
     gr: 'adv',
     or: 'see adj',
-    ex: ['He’s mair aulder nor me', 'She wis mair fasht about it than he wis', G.ex.y]
+    ex: ['He’s mair aulder nor me', 'She wis mair fasht aboot it than he wis', G.ex.y]
 }, {
     sc: 'maist',
     en: [
@@ -362,14 +360,14 @@ G.dict.push({ // A
     en: 'today',
     gr: 'adv, n',
     ex: [G.ex.n, G.ex.o, G.ex.p],
-    or: '<span>the day</span> first kythes in scrievit form in ' + G.notes.or.as + ' frae about 1500'
+    or: '<span>the day</span> first kythes in scrievit form in ' + G.notes.or.as + ' frae aboot 1500'
 }, {
     sc: 'the morn',
     en: [
         ['tomorrow', 'the following morning or day']
     ],
     gr: 'adv, n',
-    or: '<span>the morne</span> ‘the follaein day’ dates back til about 1470',
+    or: '<span>the morne</span> ‘the follaein day’ dates back til aboot 1470',
     ex: 'I\'ll see ye the morn!'
 }, {
     sc: 'the morra',

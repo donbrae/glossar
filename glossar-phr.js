@@ -39,7 +39,7 @@ G.dict.push({
     ex: G.ex.k,
     ph: true
 }, {
-    sc: 'ower an abuin',
+    sc: 'ower and abuin',
     en: 'over and above',
     ph: true
 }, {
@@ -49,9 +49,9 @@ G.dict.push({
     ex: G.ex.f,
     ph: true
 }, {
-    sc: 'douce an wicelike',
+    sc: 'douce and wicelike',
     en: 'constructively',
     gr: 'adv phr',
-    ex: 'The twa governments is committit tae haud gaun douce an wicelike',
+    ex: 'The twa governments is committit tae haud gaun douce and wicelike',
     ph: true
 });

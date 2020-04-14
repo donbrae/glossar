@@ -1,3 +1,10 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+
 /* Sticky footer styles
 -------------------------------------------------- */
 
@@ -7,7 +14,10 @@ html {
 }
 body {
     margin-bottom: 60px;
-    font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0;
     /* Margin bottom by footer height */
 }
 .footer {
@@ -29,8 +39,17 @@ body {
 
 .container {
     width: auto;
-    max-width: 680px;
     padding: 0 15px;
+}
+@media (min-width: 992px) {
+    .container {
+        width: auto;
+        max-width: 960px;
+        padding: 0 15px;
+    }
+}
+main.container {
+    max-width: 680px;
 }
 ul {
     list-style-type: none;

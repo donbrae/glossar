@@ -364,17 +364,9 @@ G.dict.push({ // A
         ['each', 'every']
     ],
     gr: ['adj']
-}, {
-    sc: 'innovate',
-    en: 'innovative',
-    gr: 'adj',
-    or: [
-        [G.notes.or.as, 'innovat, innowat, innovate'],
-        [G.notes.or.l, 'innovātus']
-    ],
-    ex: 'The company haed a guid wheen innovate products on the mercat'
 }, { // J
     sc: 'juist',
+    pr: G.pr.juist,
     en: [
         ['equitable', 'fair', 'lawful', 'justified'],
         ['exact', 'precise', 'correct', 'accurate']

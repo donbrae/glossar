@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^glossary\.makforrit\.scot$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.glossary\.makforrit\.scot$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "https\:\/\/glossar\.makforrit\.scot" [R=301,L]
+

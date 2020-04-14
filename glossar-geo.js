@@ -5,13 +5,11 @@
 G.dict.push({
     sc: 'Catalonie',
     en: 'Catalonia',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Africae',
     en: 'Africa',
     gr: 'pn',
-    or: G.notes.b
 }, {
     sc: 'African',
     en: 'African',
@@ -30,7 +28,6 @@ G.dict.push({
     sc: 'Americae',
     en: 'America',
     gr: 'pn',
-    or: G.notes.b
 }, {
     sc: 'American',
     en: 'American'
@@ -38,9 +35,9 @@ G.dict.push({
     sc: 'Andorrie',
     en: 'Andorra',
     gr: ['pn', 'adj'],
-    or: G.notes.b
+
 }, {
-    sc: 'Armeinie',
+    sc: 'Armenie',
     en: 'Armenia',
     gr: ['pn', 'adj'],
     or: G.notes.b
@@ -71,12 +68,12 @@ G.dict.push({
     gr: 'pn'
 }, {
     sc: 'Beyellaroushie',
-    en: 'Bellarussia',
+    en: 'Belarus',
     gr: 'pn',
     or: G.notes.b
 }, {
     sc: 'Beyellaroushian',
-    en: 'Bellarussian',
+    en: 'Belarusian',
     gr: 'adj'
 }, {
     sc: 'Bosnie',
@@ -124,13 +121,14 @@ G.dict.push({
     gr: 'pn',
     or: G.notes.b
 }, {
-    sc: ['Czechland', 'Czechie'],
+    sc: ['Czechie', 'Czechland'],
     en: ['Czech Republic, Czechia'],
+    tr: ['checkia', 'check republic'],
     gr: 'pn',
-    or: 'Czechie is uised on the Scots Wikipedia, an is maistlikes a modren protologism o Česko, a new offícial name for Česká republika; ' + G.notes.b
+    or: 'Czechie is a modren protologism o Česko, a new offícial name for Česká republika; ' + G.notes.b
 }, {
     sc: 'Denmark',
-    def: 'a kintra in Scandinaivie',
+    def: 'a country in Scandinaivie',
     gr: 'pn'
 }, {
     sc: 'Dens',
@@ -164,7 +162,7 @@ G.dict.push({
     gr: 'pn'
 }, {
     sc: 'England',
-    def: 'a kintra in southren Great Brítain that is pairt o the Unitit Kinrick',
+    def: 'a country in soothren Great Brítain that is pairt o the Unitit Kinrick',
     gr: 'pn'
 }, {
     sc: 'Europe',
@@ -197,7 +195,7 @@ G.dict.push({
     def: 'anent Freishland, its fowk, or their leid',
     gr: 'adj'
 }, {
-    sc: 'Galeisie',
+    sc: 'Galicie',
     en: 'Galicia',
     gr: 'pn',
     or: G.notes.b
@@ -227,8 +225,8 @@ G.dict.push({
     en: 'India',
     gr: 'pn'
 }, {
-    sc: 'Ireland',
-    def: ['a kintra comprisin about fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, til the wast o Great Brítain'],
+    sc: ['Ireland', 'Irland'],
+    def: ['a country comprisin aboot fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, tae the wast o Great Brítain'],
     tr: ['Republic o Ireland', 'Republic of Ireland'],
     gr: 'pn'
 }, {
@@ -265,8 +263,8 @@ G.dict.push({
     en: 'Luxembourg',
     gr: 'pn'
 }, {
-    sc: 'Macedony',
-    en: 'Macedonia',
+    sc: 'North Macedonie',
+    en: 'North Macedonia',
     gr: 'pn'
 }, {
     sc: 'Malaysie',
@@ -290,7 +288,7 @@ G.dict.push({
     sc_alt: 'Norroway',
     tr: 'Norrawa',
     en: 'Norway',
-    def: 'a kintra in Scandinaivie',
+    def: 'a country in Scandinaivie',
     gr: 'pn'
 }, {
     sc: 'Norse Sea',
@@ -305,8 +303,8 @@ G.dict.push({
     en: 'North Sea',
     gr: 'pn'
 }, {
-    sc: 'Northren Ireland',
-    def: 'yon bit o the Unitit Kinrick locatit in the north-east pairt o Ireland',
+    sc: 'Norland Ireland',
+    def: 'the bit o the Unitit Kinrick locatit in the nor-east pairt o Ireland',
     tr: 'Northern Ireland',
     gr: 'pn'
 }, {
@@ -329,7 +327,7 @@ G.dict.push({
     gr: ['pn', 'adj'],
     or: G.notes.b
 }, {
-    sc: 'Sardinnie',
+    sc: 'Sardinie',
     en: 'Sardinia',
     gr: 'pn',
     or: G.notes.b
@@ -341,14 +339,14 @@ G.dict.push({
 }, {
     sc: 'Scotland',
     gr: 'pn',
-    def: 'a kintra in northren Great Brítain that is pairt o the Unitit Kinrick'
+    def: 'a country in northren Great Brítain that is pairt o the Unitit Kinrick'
 }, {
     sc: 'Serbie',
     en: 'Serbia',
     gr: 'pn',
     or: G.notes.b
 }, {
-    sc: 'Sicillie',
+    sc: 'Sicilie',
     en: 'Sicilly',
     gr: 'pn'
 }, {
@@ -362,39 +360,38 @@ G.dict.push({
     gr: 'pn',
     or: G.notes.b
 }, {
-    sc: 'South Africae',
-    pr: 'Sooth Africae',
+    sc: 'Sooth Africae',
     en: 'South Africa',
     gr: 'pn',
     or: G.notes.b
 }, {
-    sc: 'South Americae',
-    pr: 'Sooth Americae',
+    sc: 'Sooth Americae',
     en: 'South America',
     gr: 'pn',
     or: G.notes.b
 }, {
-    sc: 'South Pole',
-    pr: 'Sooth Pole',
+    sc: 'Sooth Pole',
     gr: 'pn',
     en: 'Antarctica'
 }, {
-    sc: 'Spainie',
+    sc: 'Spaingie',
+    tr: 'Spainie',
     en: 'Spain',
     gr: 'pn',
     or: G.notes.b
 }, {
-    sc: 'Swaden',
-    def: 'a kintra in Scandinaivie',
+    sc: 'Swaiden',
+    def: 'a country in Scandinaivie',
     tr: 'sweden',
     gr: 'pn',
     or: [
+        [G.notes.or.as, 'Swedin, Suadin'],
         [G.notes.or.mlg + ', ' + G.notes.or.md, 'Sweden']
     ]
 }, {
     sc: 'Swade',
     def: [
-        ['a body that bides in, or is frae, Swaden', 'someane o Swades strynd'], 'a kind o neep'
+        ['a body that bides in, or is frae, Swaden', 'someane o Swades strynd'], 'a kin o neep'
     ],
     tr: ['swede', 'neep', 'turnip'],
     gr: ['n']
@@ -402,23 +399,23 @@ G.dict.push({
     sc: 'Swades',
     sc_alt: 'Swaidish',
     tr: 'swedish',
-    def: 'anent Swaden, its fowk, or their leid',
+    def: 'anent Swaiden, its fowk, or their leid',
     gr: ['adj']
 }, {
     sc: 'Swades',
     sc_alt: 'Swaidish',
     tr: 'swedish',
-    def: 'the Scandinaivie leid o Swaden, forby spoken in pairts o Finland',
+    def: 'the Scandinaivie leid o Swaiden, forby spoken in pairts o Finland',
     gr: ['n']
 }, {
     sc: 'Swisserland',
     en: 'Switzerland',
     gr: 'pn'
 }, {
-    sc: 'Sýrie',
+    sc: 'Syrie',
     en: 'Syria',
     gr: 'pn',
-    or: G.notes.a
+    or: [[G.notes.or.as + ' haes ', 'Surry, Serry, Cyrie']]
 }, {
     sc: ['The Muckle Dub', 'Atlantic Ocean'],
     en: 'Atlantic Ocean',
@@ -434,10 +431,11 @@ G.dict.push({
     gr: 'pn'
 }, {
     sc: 'Wales',
-    def: 'a kintra in Great Brítain that is pairt o the Unitit Kinrick',
+    def: 'a country in Great Brítain that is pairt o the Unitit Kinrick',
     gr: 'pn'
 }, {
     sc: 'warld',
+    pr: 'wurald',
     en: 'world',
     gr: 'pn'
 }, {
@@ -448,17 +446,17 @@ G.dict.push({
     sc: 'Birran',
     en: 'Bergen',
     gr: 'pn',
-    def: 'a seaport in south-wast Norawa'
+    def: 'a seaport in sooth-wast Norrowa'
 }, {
     sc: 'Bourdeuse',
     en: 'Bordeaux',
     gr: 'pn',
-    def: 'a port in south-wast Fraunce'
+    def: 'a port in sooth-wast Fraunce'
 }, {
     sc: ['Bristow', 'Bristol'],
     en: 'Bristol',
     gr: 'pn',
-    def: 'a cíty in south-wast England'
+    def: 'a cíty in sooth-wast England'
 }, {
     sc: 'Bullen',
     en: 'Boulogne',
@@ -480,7 +478,7 @@ G.dict.push({
     sc: 'Caunterberry',
     en: 'Canterbury',
     gr: 'pn',
-    def: 'a cíty in south-east England'
+    def: 'a cíty in sooth-east England'
 }, {
     sc: 'Caurdiff',
     en: 'Cardiff',
@@ -510,7 +508,7 @@ G.dict.push({
     sc: ['Druntin', 'Trondheim'],
     en: 'Trondheim',
     gr: 'pn',
-    def: 'a toun in Norawa'
+    def: 'a toun in Norrowa'
 }, {
     sc: 'Elsenure',
     en: [
@@ -527,17 +525,17 @@ G.dict.push({
     sc: 'Gottenberry',
     en: 'Gothenburg',
     gr: 'pn',
-    def: 'a cíty in south-wast Swaden'
+    def: 'a cíty in sooth-wast Swaden'
 }, {
     sc: 'Grenidge',
     en: 'Greenwich',
     gr: 'pn',
-    def: 'a burgh in south-east London'
+    def: 'a burgh in sooth-east London'
 }, {
     sc: 'Hambra',
     en: 'Hamburg',
     gr: 'pn',
-    def: 'a cíty in northren Germany'
+    def: 'a cíty in norland Germany'
 }, {
     sc: 'Handwarp',
     en: 'Antwerp',
@@ -610,7 +608,7 @@ G.dict.push({
     sc: 'Salesberry',
     en: 'Salisbury',
     gr: 'pn',
-    def: 'a cíty in southren England'
+    def: 'a cíty in the sooth o England'
 }, {
     sc: 'Statin',
     en: 'Stettin',
@@ -640,12 +638,12 @@ G.dict.push({
     sc: 'Valsterboom',
     en: 'Falsterbo',
     gr: 'pn',
-    def: 'a toun in south-wast Denmark'
+    def: 'a toun in sooth-wast Denmark'
 }, {
     sc: 'Veinice',
     en: 'Venice',
     gr: 'pn',
-    def: 'a cíty in north-east Italy'
+    def: 'a cíty in nor-east Italy'
 }, {
     sc: 'Yearmuith',
     en: '(Great) Yarmouth',
@@ -653,7 +651,7 @@ G.dict.push({
     gr: 'pn',
     def: 'a toun in Norfolk, England'
 }, {
-    sc: 'kintra',
+    sc: ['kintra', 'country'],
     pr: ['kintra', 'kintrae'],
     en: 'country',
     gr: 'n'
