@@ -415,7 +415,7 @@ G.dict.push({
     sc: 'Syrie',
     en: 'Syria',
     gr: 'pn',
-    or: [[G.notes.or.as + ' haes ', 'Surry, Serry, Cyrie']]
+    or: [[G.notes.or.as, 'Surry, Serry, Cyrie']]
 }, {
     sc: ['The Muckle Dub', 'Atlantic Ocean'],
     en: 'Atlantic Ocean',

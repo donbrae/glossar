@@ -201,15 +201,15 @@ G.v.be = {
         }
     },
     psp: { // Present singular and plural
-        sc: 'are',
-        en: 'are',
-        tr: ['ur', 'ar'],
+        sc: 'ar',
+        en: 'ar',
+        tr: ['ur', 'are'],
         neg: { // Present singular and plural
-            sc: ['arena', 'arenae'],
+            sc: ['arna', 'arnae'],
             en: [
                 ['are not', 'aren\'t']
             ],
-            tr: ['urna', 'urnae', 'arna', 'arnae']
+            tr: ['urna', 'urnae']
         }
     },
     neg: {
@@ -1088,12 +1088,12 @@ G.dict.push({
         gr: 'pt o the v <span>tae lat</span>',
         ex: G.ex.e
     }, {
-        sc: ['latten', 'luiten'],
+        sc: ['luiten', 'latten'],
         en: 'let',
         tr: G.v.lat.trigs,
         hl: ['latten', 'luiten'],
         gr: 'ptp o the v <span>tae lat</span>',
-        ex: 'John haed been latten doun by his colleague'
+        ex: 'John haed been luiten doun by his colleague'
     }, {
         sc: 'lat see',
         en: 'produce',
@@ -1101,17 +1101,8 @@ G.dict.push({
         ph: true
     }, {
         sc: 'mak',
-        en: [
-            ['manufacture', 'produce', 'bring about', 'create', 'devise', 'organize', 'compose', 'appoint', 'institute', 'enact', 'give rise to', 'cause to be or become'],
-            'compel someone to do something', ['perform a task', 'deliver a speech', 'utter words'],
-            ['<em>law</em> execute a deed', 'conclude a contract'],
-            ['be the material or components of', 'go to form'],
-            'fix a price', ['prepare to go', 'set out', 'proceed'],
-            'draw up a document', ['earn', 'gain money', 'win something'],
-            'prepare a bed for use', ['draw a distiction', 'raise a difficulty'],
-            ['<em>of food or drink</em> thicken', 'set', 'infuse']
-        ],
-        tr: ['cause to become', 'compel', 'execute a deed', 'fix', 'thicken', 'make'],
+        en: 'make',
+        tr: ['manufacture', 'create', 'compose', 'compel'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'mak'],

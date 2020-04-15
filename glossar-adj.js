@@ -599,7 +599,7 @@ G.dict.push({ // A
         [G.notes.or.lms, 'versant'],
         [G.notes.or.eme, 'versant']
     ],
-    ex: ['Nicola wis versant in baith Italians an French', 'He wis weel versant in Scots medieval history']
+    ex: ['Lizzie wis versant in baith Italians and French', 'He wis weel versant in Scots medieval history']
 }, { // W
     sc: ['waster', 'wester'],
     en: ['western', 'the more westerly of two places'],
@@ -622,5 +622,6 @@ G.dict.push({ // A
 }, {
     sc: 'wrocht-up',
     en: 'overwrought',
+    tr: 'over-wrought',
     gr: 'adj'
 });

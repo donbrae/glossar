@@ -57,7 +57,7 @@ G.ex = {
     s: "A new pipe netwark inbrocht watter tae the hoose",
     t: "The netwark wis doun sae he coudna send ony emails",
     u: "The heezin up o hoose prices and financial mercat speculation thegither wis aye mair like tae gar the economy clyte",
-    v: "He gied and unco braw performance",
+    v: "He gied an unco braw performance",
     w: "The new symphony is a stuir and sonsie wark, if a bittie wrocht-up in pairts",
     x: "Shuirly there’s mair tae the story than that",
     y: "The pub wis mair thrang than they’d jaloused it wad be",
@@ -356,7 +356,7 @@ G.dict = [{
         [G.notes.or.as, 'tha(i), thay, thae'],
         [G.notes.or.ae, 'ðā']
     ],
-    ex: [G.ex.f1, 'Lat’s hae a blether aboot thae twa pynts ye brocht up in the meetin']
+    ex: [G.ex.f1, 'Lat’s hae a blether aboot thae twa issues ye brocht up in the meetin']
 }, {
     sc: ['than', '’an'],
     en: 'than',

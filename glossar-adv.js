@@ -70,7 +70,7 @@ G.dict.push({ // A
         ['very', 'extremely']
     ],
     gr: ['adv'],
-    ex: ['I\'m braw an weel, thanks', 'Hae yersels a braw an cantie Christmas']
+    ex: ['I\'m braw and weel, thanks', 'Hae yoursels a braw and cantie Christmas']
 }, {
     sc: 'byous',
     en: [

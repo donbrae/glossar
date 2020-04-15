@@ -26,7 +26,7 @@ Whan pushin past tenses and past participles tae `G.dict` (by gate of properties
 
 # Biggin
 
-Rin `build.sh` tae write tae **glossar-bundle.min.js**, and chynge the timestamp in **index.html** whan callin **glossar-bundle.min.js**.
+Rin `build.sh` tae write tae **glossar-bundle.min.js**, and chynge the timestamp in **index.html** whan callin **glossar-bundle.min.js** sae that the browser updates its cache.
 
 * https://glossar.makforrit.scot/
 * (non-local) dev URL: https://glossar.makforrit.scot/index-dev.html

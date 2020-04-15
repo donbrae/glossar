@@ -56,7 +56,7 @@ G.dict.push({
     tr: ['man', 'lad', 'laddie', 'loun'],
     hl: ['boy', 'man'],
     gr: ['n', 'informal'],
-    ex: ['The boy wi the bustit timin belt is sittin waitin in the office', 'Ach, he’s an auld boy sae I wisna gaun’ae argie wi him', 'That boy taks nae shite frae naeb’dy!']
+    ex: ['The boy wi the bustit timin belt is sittin waitin in the office', 'Ach, he’s an auld boy sae I wisna gonnae argue wi him', 'That boy taks nae shite frae naeb’dy!']
 }, {
     sc: 'brae',
     def: ['the (stey or sclentin) banks o a river, loch or seashore', 'a bank or lenth o grund wi a fairly strait upwart sclent til it', 'a gate wi a stey upcome (aft-times in street names)', 'the brou o a hill'],
@@ -102,7 +102,7 @@ G.dict.push({
     tr: 'tax collector',
     gr: ['n', 'obsolete'],
     or: [
-        ['Ablins ' + G.notes.or.af, 'collecterie']
+        ['Aiblins ' + G.notes.or.af, 'collecterie']
     ]
 }, {
     sc: 'complouther',
@@ -332,14 +332,6 @@ G.dict.push({
         [G.notes.or.l, 'ēvidentia']
     ]
 }, {
-    sc: ['examine', 'exaimine'],
-    en: 'examination',
-    gr: 'n',
-    or: [
-        [G.notes.or.as, 'examyn(e), examine'],
-        [G.notes.or.l, 'exāmen']
-    ]
-}, {
     sc: 'examination',
     en: [
         ['testing', 'a test', 'investigation', 'interrogation']
@@ -552,7 +544,7 @@ G.dict.push({
 }, {
     sc: 'accress',
     en: 'increase',
-    gr: 'n',
+    gr: ['n', 'obsolete'],
     or: 'see v'
 }, {
     sc: 'knawledge',
@@ -625,13 +617,8 @@ G.dict.push({
     ]
 }, { // M
     sc: 'maiter',
-    en: [
-        ['material', 'substance'],
-        ['basis', 'ground', 'source', 'origin'],
-        ['the subject', 'the theme (of a literary work or discourse)'],
-        ['an undertaking', 'a course of events', 'a state of affairs', 'a concern', 'a business', 'an issue']
-    ],
-    tr: ['subject', 'theme', 'undertaking', 'course of events', 'state of affairs', 'concern', 'business', 'issue', 'matter'],
+    en: 'matter',
+    tr: ['material', 'substance', 'subject', 'theme', 'undertaking', 'concern', 'business', 'issue'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'mater(e)'],
