@@ -999,7 +999,7 @@ G.dict.push({
             [G.notes.or.as, 'innovat, innovate'],
             G.notes.or.l + ' <em>innovāt-</em>, ptp stem o <em>innovāre</em>'
         ],
-        ex: ['She aye likit tae innovate in her wark', 'He haed been innovate as a componer o sangs for vyce an pianae']
+        ex: ['She aye likit tae innovate in her wark']
     }, {
         sc: 'interpone',
         en: 'interpose',

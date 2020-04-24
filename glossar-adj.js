@@ -47,6 +47,7 @@ G.dict.push({ // A
         ['giddy', 'volatile']
     ],
     gr: ['adj'],
+    tr: ['alevoly', 'alevolie'],
     or: [
         [G.notes.or.ms, 'alla-volie'],
         ['frae the ' + G.notes.or.f, 'à la volée']
@@ -78,7 +79,7 @@ G.dict.push({ // A
         'considerable (of a sum of money)',
         'pleasant (of the weather)'
     ],
-    tr: ['well dressed', 'able bodied', 'considerable', 'pleasant', 'bra', 'braa', 'brow'],
+    tr: ['well dressed', 'able bodied', 'considerable', 'pleasant', 'bra', 'braa', 'brow', 'good'],
     gr: ['adj'],
     ex: [G.ex.g, G.ex.v],
     or: [

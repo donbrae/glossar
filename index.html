@@ -26,13 +26,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app.css?ts=200424041919">
 
     <script src="zepto.min.js"></script>
     <script src="fuse.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?ts=200415100416" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?ts=200424041514" onload="GLOSSAR.init()"></script>
 
 </head>
 
@@ -41,11 +41,16 @@
     <main role="main" class="container">
         <h1 class="mt-5 text-center"><label for="searchTextbox">Scots glossar</label></h1>
         <section id="search">
-            <div class="form-group form-inline">
-                <input type="text" class="form-control mx-auto w-50" id="searchTextbox" placeholder="Inpit Scots or English…">
+            <div class="form-group form-inline justify-content-center">
+                <div class="input-group w-75">
+                    <input type="text" class="form-control mx-auto" id="searchTextbox" placeholder="Inpit Scots or English…" spellcheck="false">
+                    <button class="btn bg-transparent clear-value">
+                        <i class="demo-icon icon-cancel"></i>
+                    </button>
+                </div>
             </div>
             <div class="text-center">
-                <button id="random" class="btn btn-link">…or wale oot a random wird</button>
+                <button id="random" class="btn btn-link">…or wale oot a wird allevolie</button>
             </div>
 
             <ul id="result" class="result fade"></ul>

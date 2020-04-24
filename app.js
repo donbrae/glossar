@@ -134,6 +134,20 @@ var GLOSSAR = (function() {
             });
         });
 
+        $('.clear-value').click(function() {
+            $(this).prev('input').val('');
+
+            $('#result').removeClass('show');
+            var t = setTimeout(function() {
+                $('#result').html('');
+            }, 100);
+
+            // Cancel any timeout
+            if (state.timeout) {
+                clearTimeout(state.timeout);
+            }
+        });
+
         if ('ontouchstart' in window === false) {
             $('#searchTextbox').focus();
         }

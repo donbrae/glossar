@@ -44,6 +44,7 @@ G.dict.push({ // A
     sc: 'allevolie',
     en: ['at random'],
     gr: ['adv'],
+    tr: ['alevoly', 'alevolie'],
     or: 'see the adj'
 }, { // B
     sc: 'a bittie',
@@ -60,7 +61,7 @@ G.dict.push({ // A
         ['well', 'finely'],
         ['very', 'extremely']
     ],
-    tr: ['bra', 'braa', 'brow'],
+    tr: ['bra', 'braa', 'brow', 'good'],
     gr: ['adv'],
     or: 'see the adj',
     ex: G.ex.h
@@ -228,6 +229,7 @@ G.dict.push({ // A
         ['almost', 'nearly']
     ],
     gr: 'adv',
+    tr: 'mostly',
     ex: ['The wather wis maistly sunny', 'I‘m maistly fínisht in the gairden']
 }, {
     sc: 'muckle',
