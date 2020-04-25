@@ -37,8 +37,8 @@ G.notes = {
 
 G.ex = {
     a: "Alasdair and Ashley wis feart they wadna win at the kirk in time tae be mairit",
-    b: "It wis sae thrang Isobel didna knaw whan she wad get out o wark",
-    c: "I kenna whit ye mean — ye\'re haiverin, mun!",
+    b: "It wis sae thrang Isobel didna knaw whan she wad get oor o wark",
+    c: "I kenna whit ye mean — ye’r haiverin, mun!",
     d: "I wadna lat it fash ye",
     e: "The CEO luit skairhauders speir at him efter the tele-collogue",
     f: "Her depute gree’d tae tak in haund the airtin o the policy and its pittin intil effect",

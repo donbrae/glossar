@@ -160,7 +160,7 @@ G.dict.push({
         [G.notes.or.af, 'contraire'],
         [G.notes.or.l, 'contrarius']
     ],
-    ex: ['Her client haed naething tae say in the contrair', 'Na, na; I dinna haud wi that — I ken tae the contrair!', 'I wis expectin the play tae be awfu dreich, but it turnt out the contrair wis true']
+    ex: ['Her client haed naething tae say in the contrair', 'Na, na; I dinna haud wi that — I ken tae the contrair!', 'I wis expectin the play tae be awfu dreich, but it turnt oot the contrair wis true']
 }, {
     sc: 'council',
     pr: 'cooncil',
@@ -171,7 +171,7 @@ G.dict.push({
         [G.notes.or.me, 'counseil'],
         [G.notes.or.l, 'concilium']
     ],
-    ex: 'Edinburgh Cíty Council the day set furth new wittins anent the raxin out o the tram netwark til Newhaven'
+    ex: 'Edinburgh Cíty Council the day set furth new wittins anent the raxin oot o the tram netwark til Newhaven'
 }, { // D
     sc: 'daeins',
     en: 'activity',
@@ -415,7 +415,7 @@ G.dict.push({
     ]
 }, {
     sc: 'furthsetter',
-    sc_alt: 'furthsetter',
+    sc_alt: 'furthsettar',
     def: 'a body or company that redds an sets furth beuks, jurnals, or muisic for sale',
     tr: 'publisher',
     gr: 'n',

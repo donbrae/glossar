@@ -54,7 +54,7 @@ G.dict.push({ // A
     tr: ['bittie', 'little', 'ower', 'owre', 'too'],
     hl: ['little', 'a little', 'a bittie', 'bittie'],
     or: 'see n',
-    ex: ['Jamie haed recovert frae the flu a bittie, but didna yet feel up tae gaun back til his wark', 'I’m a bittie tired for gaun out, likes', 'It’s a bittie cauld for shorts an t-shirt, is it no?']
+    ex: ['Jamie haed recovert frae the flu a bittie, but didna yet feel up tae gaun back til his wark', 'I’m a bittie tired for gaun oot, likes', 'It’s a bittie cauld for shorts an t-shirt, is it no?']
 }, {
     sc: ['braw', 'brawly'],
     en: [
@@ -371,7 +371,7 @@ G.dict.push({ // A
     en: 'tonight',
     tr: 'the night',
     gr: 'adv, n',
-    ex: ['Are ye gaun out the nicht?', 'It’s awfu cauld the nicht'],
+    ex: ['Are ye gaun oot the nicht?', 'It’s awfu cauld the nicht'],
     or: 'first kythin DOST haes o <span>the nicht</span> (in the mak <em>the nycht</em>) ‘the praisent or approachin nicht’ is frae 1475'
 }, {
     sc: 'the year',

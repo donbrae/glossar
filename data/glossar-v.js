@@ -529,7 +529,7 @@ G.dict.push({
     }, {
         sc: 'deburse',
         en: 'disburse',
-        def: 'pey out (siller frae a fund)',
+        def: 'pey oot (siller frae a fund)',
         gr: 'v',
         or: [
             [G.notes.or.as, 'deburs, debours'],
@@ -1311,7 +1311,7 @@ G.dict.push({
             [G.notes.or.as, 'pit'],
             [G.notes.or.ae, 'pȳtan']
         ],
-        ex: ['I pit it tae ye that ye’v tint the pynt o my threap', 'Jamie pit the cat out', G.ex.f, 'Iona haed pitten forrit mony guid ideas']
+        ex: ['Jamie pit the cat oot', G.ex.f, 'Iona haed pitten forrit mony guid ideas']
     }, {
         sc: 'pit forrit',
         en: 'introduce',
