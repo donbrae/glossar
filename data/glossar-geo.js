@@ -63,7 +63,7 @@ G.dict.push({
     sc: 'Bertany',
     en: 'Brittany',
     gr: ['pn', 'adj'],
-    or: [G.notes.or.as, 'Bertan(e), Bartan(e)']
+    or: [[G.notes.or.as, 'Bertan(e), Bartan(e)']]
 }, {
     sc: 'Bey o Bescay',
     en: 'Bay of Biscay',

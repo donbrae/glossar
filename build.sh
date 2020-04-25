@@ -9,6 +9,6 @@ cat ./app.js ./data/glossar.js ./data/glossar-v.js ./data/glossar-adj.js ./data/
 
 timestamp
 
-sed "s/TIMESTAMP/$TS/" index.dev.html > index.html
+sed "s/{{ TIMESTAMP }}/$TS/" index.dev.php > index.php
 
 shopt -u extglob

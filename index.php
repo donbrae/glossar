@@ -1,3 +1,23 @@
+<?php
+
+$years = array(
+  'January' => 'Januar',
+  'February' => 'Februar',
+  'March' => 'Mairch',
+  'April' => 'Aprile',
+  'May' => 'Mey',
+  'June' => 'Juin',
+  'July' => 'Julie'
+);
+
+$last_updatit = str_replace(
+  array_keys($years),
+  array_values($years),
+  date("d F Y", filemtime("glossar-bundle.min.js"))
+);
+
+?>
+
 <!DOCTYPE html>
 <html lang="sco">
 
@@ -32,7 +52,7 @@
     <script src="fuse.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?ts=TIMESTAMP" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?ts=1587848507" onload="GLOSSAR.init()"></script>
 
 </head>
 
@@ -60,7 +80,7 @@
 
     <footer class="footer">
         <div class="container">
-            <span class="text-muted"><a href="https://makforrit.scot">Mak Forrit</a> glossar tuil (prototype). 2018–2020. Algorithm: <a href="http://fusejs.io">Fuse.js</a>. Nae cookies.</span>
+            <span class="text-muted"><a href="https://makforrit.scot">Mak Forrit</a> glossar tuil (prototype). <?php echo "Last updatit: $last_updatit"; ?>. Algorithm: <a href="http://fusejs.io">Fuse.js</a>. Nae cookies.</span>
         </div>
     </footer>
 </body>
