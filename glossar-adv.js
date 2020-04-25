@@ -139,7 +139,7 @@ G.dict.push({ // A
         ['rather', 'very'],
     ],
     gr: 'adv',
-    ex: [G.ex.g, 'The band’s new album wis gey an listenable']
+    ex: [G.ex.g, 'The band’s new album wis gey and listenable']
 }, {
     sc: 'hinderly',
     en: 'eventually',
@@ -190,16 +190,6 @@ G.dict.push({ // A
         [G.notes.or.me, 'certes']
     ]
 }, { // M
-    sc: 'mair',
-    en: [
-        ['to a greater extent', 'in a greater degree'],
-        'more', ['in addition', 'besides'],
-        ['any longer', 'again']
-    ],
-    gr: 'adv',
-    or: 'see adj',
-    ex: ['He’s mair aulder nor me', 'She wis mair fasht aboot it than he wis', G.ex.y]
-}, {
     sc: 'maist',
     en: [
         ['to the greatest extent', 'in the highest degree'],
@@ -207,7 +197,7 @@ G.dict.push({ // A
         'very',
         'mainly'
     ],
-    tr: 'most',
+    tr: ['most', 'maste'],
     gr: 'adv',
     or: 'see pron',
     ex: ['She wis maist sonsie in her ettles', 'It wis maist kind o ye', 'Whit she wantit maist o aw wis a vacance']

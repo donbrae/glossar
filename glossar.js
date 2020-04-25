@@ -40,7 +40,7 @@ G.ex = {
     b: "It wis sae thrang Isobel didna knaw whan she wad get out o wark",
     c: "I kenna whit ye mean — ye\'re haiverin, mun!",
     d: "I wadna lat it fash ye",
-    e: "The CEO luit skarehauders speir at him efter the tele-collogue",
+    e: "The CEO luit skairhauders speir at him efter the tele-collogue",
     f: "Her depute gree’d tae tak in haund the airtin o the policy and its pittin intil effect",
     g: "It wis a gey and braw day",
     h: "I ken brawly richt bi wrang!",
@@ -55,7 +55,7 @@ G.ex = {
     q: "Jeannie stuid anent him, fair pecht",
     r: "Mind aye tae be furthie til unco fowk",
     s: "A new pipe netwark inbrocht watter tae the hoose",
-    t: "The netwark wis doun sae he coudna send ony emails",
+    t: "The netwark wis doun sae he couldna send ony emails",
     u: "The heezin up o hoose prices and financial mercat speculation thegither wis aye mair like tae gar the economy clyte",
     v: "He gied an unco braw performance",
     w: "The new symphony is a stuir and sonsie wark, if a bittie wrocht-up in pairts",
@@ -65,7 +65,7 @@ G.ex = {
     a1: "Dae ye hae anither ane o thir?",
     b1: "The’r ower muckle guid stuff on TV thir days that I hinna the time tae watch it aw",
     c1: "I wad luve tae stey and hae a bit blether wi ye, but I maun be gettin hame",
-    d1: "Stewart haed aboot fower hunder poond in his bank account; Ruth haed mair",
+    d1: "Stewart haed aboot fower hunder poond in his bank accoont; Ruth haed mair",
     e1: "Out o the lot o us I’d haen the maist beers",
     f1: "Rax me ane o thae ile filters, wad ye?",
     g1: "The app’s uiser interface is juist whit the client’s ettlin efter",
@@ -178,18 +178,11 @@ G.dict = [{
     tr: ['whae', 'whay', 'whey'],
     gr: 'pron'
 }, {
-    sc: 'mair',
-    en: ['a greater amount or number', ['something else', 'something in addition']],
-    tr: 'more',
-    gr: 'pron',
-    or: 'see adj',
-    ex: [G.ex.d1, G.ex.x, 'Moyen dis muckle but money dis mair']
-}, {
     sc: 'maist',
     def: [
         ['the mucklest amount, the lairgest nummer, the majority']
     ],
-    tr: ['most', 'majority'],
+    tr: ['most', 'majority', 'maste'],
     gr: 'determiner an pronoun',
     or: [
         [G.notes.or.as, 'mast(e), maist(e)'],

@@ -721,6 +721,14 @@ G.dict.push({
         [G.notes.or.as, 'ourance, owrance, overance']
     ],
     ex: 'The Labour Pairty tyned owerance o the council'
+}, {
+    sc: 'pairlament',
+    en: 'parliament',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'perlament, pairliament, parliament'],
+        [G.notes.or.me, 'parlement']
+    ]
 }, { // P
     sc: 'pairt-takar',
     tr: 'pairt takar',
@@ -928,7 +936,7 @@ G.dict.push({
     pr: ['wirkur', 'wurkur'],
     en: 'worker',
     gr: 'n',
-    ex: 'He wis an awfu haurd wirker',
+    ex: 'He’s an awfu haurd wirker',
     or: [
         [G.notes.or.as, 'wirkar, wyrkar(e)']
     ]

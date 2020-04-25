@@ -337,7 +337,7 @@ G.dict.push({ // A
     gr: 'adj',
     or: [G.notes.or.as + ' haes <span>forthy</span> an later <span>furthy</span> ‘forrit, bauld, enterprísin’'],
     ex: G.ex.r
-}, {
+}, { // G
     sc: 'gey',
     pr: 'guyee',
     en: [
@@ -349,6 +349,11 @@ G.dict.push({ // A
     gr: ['adj'],
     or: 'see adv',
     ex: 'Wi it bein sic a het day, it wis a gey trauchle tae win at the tap o Lee Pen'
+}, {
+    sc: 'gray',
+    tr: 'grey',
+    def: 'o a colour somegate atween black and white',
+    gr: 'adj'
 }, {
     sc: 'guid',
     en: 'good',
@@ -406,14 +411,14 @@ G.dict.push({ // A
     ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the mínister’s view on the said maiter']
 }, { // M
     sc: 'mair',
-    en: ['larger in physical size', 'greater in quantity or amount', ['additional in quantity or number', 'further']],
-    tr: 'more',
-    gr: 'adj',
+    en: 'more',
+    tr: ['mare'],
+    gr: ['adj', 'adv', 'pron'],
     or: [
         [G.notes.or.as, 'mair, mare, mar'],
         [G.notes.or.ae, 'māre']
     ],
-    ex: ['We steyed in Milan twa mair days', 'This flouer is mair bonnie than yon ane ower there']
+    ex: ['We steyed in Milan twa mair days', 'This flouer is mair bonnie than yon ane ower there', 'He’s mair aulder nor me', 'She wis mair fasht aboot it than he wis', G.ex.d1, 'Moyen daes muckle but money daes mair']
 }, {
     sc: 'maist',
     en: [
@@ -421,7 +426,7 @@ G.dict.push({ // A
         ['<span>of persons</span> chief', 'most powerful or important', 'greatest'],
         ['<span>of things</span> chief, principal']
     ],
-    tr: 'most',
+    tr: ['most', 'maste'],
     gr: 'adj',
     or: 'see pron'
 }, {
@@ -462,7 +467,9 @@ G.dict.push({ // A
     ]
 }, {
     sc: 'ordinar',
-    en: [['usual', 'normal']],
+    en: [
+        ['usual', 'normal']
+    ],
     tr: 'ordinary',
     gr: 'adj',
     or: [

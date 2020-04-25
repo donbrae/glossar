@@ -95,11 +95,26 @@ var GLOSSAR = (function() {
                 )
             );
 
+            if ($(this).val().length) {
+                $('#clear-value').addClass('show');
+            } else {
+                $('#clear-value').removeClass('show');
+            }
+
             if (e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
                 search();
             } else {
                 timeoutStart(search);
             }
+        });
+
+        // Text field pseudo-focus state on clear button focus
+        $('#clear-value').on('focus', function() {
+            $('#searchTextbox').addClass('form-control-pseudo-focus');
+        });
+
+        $('#clear-value').on('blur', function() {
+            $('#searchTextbox').removeClass('form-control-pseudo-focus');
         });
 
         $('#random').click(function() {
@@ -128,16 +143,17 @@ var GLOSSAR = (function() {
             state.word = G.utils.replaceQo(word);
             $('#searchTextbox').val(word);
             $('#result').removeClass('show');
+            $('#clear-value').addClass('show');
             print(fuse.search(state.word), function() {
                 state.random.push(num);
                 $btn.prop('disabled', false);
             });
         });
 
-        $('.clear-value').click(function() {
-            $(this).prev('input').val('');
+        $('#clear-value').click(function() {
+            $(this).prev('input').val('').focus();
+            $(this, '#result').removeClass('show');
 
-            $('#result').removeClass('show');
             var t = setTimeout(function() {
                 $('#result').html('');
             }, 100);

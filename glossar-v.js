@@ -454,7 +454,7 @@ G.dict.push({
     }, {
         sc: 'consíder',
         pr: 'conseeder',
-        def: 'tae think on, tak intil account',
+        def: 'tae think on, tak intil accoont',
         pt_pp: {
             sc: ['consídert', 'consídered'],
             tr: 'considered'
@@ -801,8 +801,7 @@ G.dict.push({
             [G.notes.or.mode, 'download']
         ]
     }, {
-        sc: 'edifý',
-        pr: 'edifee',
+        sc: 'edifee',
         en: [
             ['instruct', 'enlighten']
         ],
@@ -1362,7 +1361,7 @@ G.dict.push({
             [G.notes.or.as, 'tak'],
             G.notes.or.ae + ' <span>tacan</span> frae the ' + G.notes.or.anor + ' <span>taka</span>'
         ],
-        ex: 'The roaster’s comment haed been taen doun afore I coud repone til him'
+        ex: 'The roaster’s comment haed been taen doun afore I could repone til him'
     }, { // Tak -ing ending
         sc: ['takkin', 'taein'],
         en: 'taking',
@@ -1443,9 +1442,10 @@ G.dict.push({
         or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],
         ex: 'She haes setten furth a pose o onco bonnie poetry'
     }, { // S
-        sc: 'skare',
+        sc: 'skair',
         en: 'share',
         gr: 'v',
+        tr: 'skare',
         or: [
             [G.notes.or.as, 'skar, scar(e), schare'],
             ['?' + G.notes.or.anor, 'skera'],

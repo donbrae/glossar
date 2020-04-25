@@ -47,8 +47,9 @@ G.dict.push({
     gr: ['pn', 'adj'],
     or: G.notes.b
 }, {
-    sc: 'Austrich',
+    sc: 'Austrik',
     en: 'Austria',
+    tr: ['austrich', 'austrick'],
     gr: ['pn', 'adj'],
 }, {
     sc: 'Baliaries',
@@ -59,9 +60,10 @@ G.dict.push({
     en: 'Belgium',
     gr: 'pn'
 }, {
-    sc: 'Bertanie',
+    sc: 'Bertany',
     en: 'Brittany',
-    gr: ['pn', 'adj']
+    gr: ['pn', 'adj'],
+    or: [G.notes.or.as, 'Bertan(e), Bartan(e)']
 }, {
     sc: 'Bey o Bescay',
     en: 'Bay of Biscay',
@@ -157,13 +159,18 @@ G.dict.push({
     def: 'the caipital cíty o Scotland',
     gr: 'pn'
 }, {
-    sc: 'Eistland',
+    sc: ['Estonie', 'Eistland'],
     en: 'Estonia',
     gr: 'pn'
 }, {
     sc: 'England',
     def: 'a country in soothren Great Brítain that is pairt o the Unitit Kinrick',
     gr: 'pn'
+}, {
+    sc: 'Ethiopie',
+    en: 'Ethiopia',
+    gr: 'pn',
+    or: G.notes.a
 }, {
     sc: 'Europe',
     en: 'Europe',
@@ -241,7 +248,8 @@ G.dict.push({
 }, {
     sc: 'Japan',
     en: 'Japan',
-    gr: 'pn'
+    gr: 'pn',
+    def: 'A country East Asie',
 }, {
     sc: 'Lappland',
     en: 'Lappland',
@@ -652,7 +660,7 @@ G.dict.push({
     def: 'a toun in Norfolk, England'
 }, {
     sc: ['kintra', 'country'],
-    pr: ['kintra', 'kintrae'],
+    pr: ['kintra', 'kintrae', 'kuntrae'],
     en: 'country',
     gr: 'n'
 });
