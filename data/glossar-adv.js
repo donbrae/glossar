@@ -219,8 +219,7 @@ G.dict.push({ // A
         ['almost', 'nearly']
     ],
     gr: 'adv',
-    tr: 'mostly',
-    ex: ['The wather wis maistly sunny', 'I‘m maistly fínisht in the gairden']
+    tr: 'mostly'
 }, {
     sc: 'muckle',
     pr: ['muckl', 'meekl'],

@@ -84,7 +84,11 @@ G.dict.push({
 }, {
     sc: 'claes',
     en: 'clothes',
-    gr: 'n'
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'claise, claes, clathis'],
+        [G.notes.or.ae, 'claðas']
+    ],
 }, {
     sc: 'close',
     def: ['an enclosed area neist til a biggin; a courtyaird', ['a passage atween biggins', 'a nairae loan wi hoosees on ilka side'], 'a fermyaird', 'the passage gien ingate til a common stair; the mean area in a block o flats', 'a tenement biggin'],
