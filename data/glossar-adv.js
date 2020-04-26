@@ -200,7 +200,7 @@ G.dict.push({ // A
     tr: ['most', 'maste'],
     gr: 'adv',
     or: 'see pron',
-    ex: ['She wis maist sonsie in her ettles', 'It wis maist kind o ye', 'Whit she wantit maist o aw wis a vacance']
+    ex: ['It wis maist kind o ye', 'Whit she wantit maist o aw wis a vacance']
 }, {
     sc: 'maist',
     def: 'aphetic mak o <em>awmaist</em>',
@@ -287,7 +287,7 @@ G.dict.push({ // A
         ['from beginning to end', 'throughout'],
         ['off to sleep']
     ],
-    tr: ['owre', 'outthrou', 'overly', 'abuin', 'over'],
+    tr: ['owre', 'ootthrou', 'overly', 'abuin', 'over', 'too'],
     gr: 'adv',
     or: [
         [G.notes.or.as, 'over, ouer, ower'],

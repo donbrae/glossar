@@ -302,8 +302,8 @@ G.dict.push({
     tr: 'environment',
     gr: 'n',
     or: [
-        '?uissage as n frae Modren English',
-        G.notes.or.as + ' haes the v <em>enveron, inviroun, inveroun</em> <em>(to encircle, surround)</em>', ['frae the ' + G.notes.or.me, 'envirounen'],
+        '?uissage as noun frae Modren English',
+        G.notes.or.as + ' haes the verb <em>enveron, inviroun, inveroun</em> <em>(to encircle, surroond)</em>', ['frae the ' + G.notes.or.me, 'envirounen'],
         [G.notes.or.af, 'environner']
     ]
 }, {
@@ -661,10 +661,6 @@ G.dict.push({
     tr: ['memory', 'recollection', 'mynd'],
     gr: 'n'
 }, { // N
-    sc: 'nationalist',
-    def: 'a body that’s for Scotland’s polítical independence',
-    gr: ['n'],
-}, {
     sc: 'naturality',
     en: [
         ['innate ability or intelligence', 'talent']
@@ -676,10 +672,6 @@ G.dict.push({
         [G.notes.or.f, 'naturalité'],
         [G.notes.or.l, 'nātūrālitas']
     ]
-}, {
-    sc: 'nat',
-    def: 'ocht derogatory term for a Scots nationalist',
-    gr: ['n', 'informal']
 }, {
     sc: 'netwark',
     en: 'network',
@@ -891,7 +883,7 @@ G.dict.push({
     sc: 'toun',
     pr: 'toon',
     def: [
-        ['an area wi a name an bounds whaur fowk haes sattelt', 'a burgh', 'a cíty']
+        ['an area wi a name and boonds whaur fowk haes sattelt', 'a burgh', 'a cíty']
     ],
     en: 'town',
     gr: 'n',
@@ -953,10 +945,6 @@ G.dict.push({
         [G.notes.or.as, 'wynd, wyne, wind, weynd'],
         [G.notes.or.ae, 'gewind']
     ]
-}, { // U
-    sc: 'unionist',
-    def: 'in a Scots context, a body that’s for the haudin gaun o the polítical union atween Scotland an England',
-    gr: ['n']
 }, { // Y
     sc: 'yoon',
     def: 'a derogatory term for unionist',

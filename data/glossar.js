@@ -3,7 +3,7 @@ var GLOSSAR = GLOSSAR || {};
 var G = GLOSSAR;
 
 G.notes = {
-    a: "protologism; frae analogy wi Dutch and French-influenced <em>Galicie</em>, <em>Armenie</em>, <em>Roumainie</em> et al, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Californie et al
+    a: "protologism; frae analogy wi Dutch and French-influenced <em>Armenie</em>, <em>Roumainie</em>, <em>Roushie</em> etc., vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Californie et al
     b: "<em>-ae</em> an <em>-y/-ie</em> steid-name endins shaws Dutch and French influence, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Americae, Slovakie et al
     or: {
         af: 'Auld French',
@@ -37,7 +37,7 @@ G.notes = {
 
 G.ex = {
     a: "Alasdair and Ashley wis feart they wadna win at the kirk in time tae be mairit",
-    b: "It wis sae thrang Isobel didna knaw whan she wad get oor o wark",
+    b: "It wis that thrang Isobel didna ken whan she wad get oot o wark",
     c: "I kenna whit ye mean — ye’r haiverin, mun!",
     d: "I wadna lat it fash ye",
     e: "The CEO luit skairhauders speir at him efter the tele-collogue",
@@ -194,7 +194,7 @@ G.dict = [{
     en: [
         ['on no account', 'nowhere', 'no way']
     ],
-    tr: ['naewye', 'naewhaur', 'nowhere']
+    tr: ['naewye', 'nae wey', 'naewhaur', 'on nae accoont']
 }, {
     sc: 'naewhaur',
     en: 'nowhere',
@@ -269,7 +269,7 @@ G.dict = [{
     tr: ['wheniver', 'fanever']
 }, {
     sc: ['whit', 'fit', 'what'],
-    pr: ['whit', 'whut', 'what', 'whot', 'fit', 'fut', 'fat', 'ut'],
+    pr: ['whit', 'whut', 'what', 'whaut', 'fit', 'fut', 'fat', 'ut'],
     en: 'what',
     gr: ['adj', 'adv', 'pron', 'conj']
 }, {

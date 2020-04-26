@@ -18,8 +18,7 @@ G.dict.push({ // A
     pr: ['ae', 'yae'],
     en: ['one', 'only'],
     gr: 'adj',
-    tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
-    hl: ['ae', 'yae', 'yay'],
+    tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann']
 }, {
     sc: 'aesome',
     en: [
@@ -595,7 +594,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'uncow'],
         [G.notes.or.ae, 'uncūð']
     ],
-    ex: [G.ex.r, 'He fand himsel in a unco pairt o toun', 'An unco thrang bourached outside the pairlament biggin', G.ex.v, 'The mechanic haed an unco job sortin the electrics']
+    ex: [G.ex.r, 'He fand hissel in a unco pairt o toun', 'An unco thrang bourached ootside the pairlament biggin', G.ex.v, 'The mechanic haed an unco job sortin the electrics']
 }, { // V
     sc: 'versant',
     en: [

@@ -80,7 +80,7 @@ $last_updatit = str_replace(
 
     <footer class="footer">
         <div class="container">
-            <span class="text-muted"><a href="https://makforrit.scot">Mak Forrit</a> glossar tuil (prototype). <?php echo "Last updatit: $last_updatit"; ?>. Algorithm: <a href="http://fusejs.io">Fuse.js</a>. Nae cookies.</span>
+            <span class="text-muted"><a href="https://makforrit.scot">Mak Forrit</a> glossar tuil (prototype). <?php echo "Last updatit: $last_updatit"; ?>. Nae cookies.</span>
         </div>
     </footer>
 </body>

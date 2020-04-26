@@ -5,11 +5,16 @@
 G.dict.push({
     sc: 'Catalonie',
     en: 'Catalonia',
-    gr: 'pn'
+    gr: 'pn',
+    or: G.notes.a
 }, {
     sc: 'Africae',
     en: 'Africa',
     gr: 'pn',
+    or: [
+        [G.notes.or.mods, 'Africy'],
+        [G.notes.or.as, 'Aphrik, Affrik, Afric']
+    ]
 }, {
     sc: 'African',
     en: 'African',
@@ -18,7 +23,7 @@ G.dict.push({
     sc: 'Albainie',
     en: 'Albania',
     gr: 'pn',
-    or: G.notes.b
+    or: '?' + G.notes.a
 }, {
     sc: 'Albainian',
     en: 'Albanian',
@@ -28,29 +33,40 @@ G.dict.push({
     sc: 'Americae',
     en: 'America',
     gr: 'pn',
+    tr: 'Ameriky',
+    or: [
+        [G.notes.or.mods + ' haes haed ', 'Ameriky <em>syne at least the 19t century</em>']
+    ]
 }, {
     sc: 'American',
     en: 'American'
 }, {
-    sc: 'Andorrie',
+    sc: 'Andorrae',
     en: 'Andorra',
-    gr: ['pn', 'adj'],
-
+    gr: ['pn', 'adj']
 }, {
     sc: 'Armenie',
     en: 'Armenia',
     gr: ['pn', 'adj'],
-    or: G.notes.b
+    or: [
+        [G.notes.or.as, 'Armeny, Armenye']
+    ]
 }, {
-    sc: 'Australie',
+    sc: 'Austrailie',
     en: 'Australia',
     gr: ['pn', 'adj'],
-    or: G.notes.b
+    tr: ['Australie', 'Australy'],
+    or: [
+        [G.notes.or.mods + ' haes haed ', 'Australy, Austraily <em>syne the 19t century</em>']
+    ]
 }, {
     sc: 'Austrik',
     en: 'Austria',
     tr: ['austrich', 'austrick'],
     gr: ['pn', 'adj'],
+    or: [
+        [G.notes.or.as, 'Ostrike, Austrik']
+    ]
 }, {
     sc: 'Baliaries',
     en: 'Balearics',
@@ -71,8 +87,7 @@ G.dict.push({
 }, {
     sc: 'Beyellaroushie',
     en: 'Belarus',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Beyellaroushian',
     en: 'Belarusian',
@@ -81,14 +96,14 @@ G.dict.push({
     sc: 'Bosnie',
     en: 'Bosnia',
     gr: ['pn', 'adj'],
-    or: G.notes.b
+    or: '?' + G.notes.a
 }, {
     sc: 'Bulgairie',
     pr: 'bulGairae',
     en: 'Bulgaria',
     tr: ['Bulgars', 'Bulgarie'],
     hl: ['Bulgairie', 'Bulgarie'],
-    or: G.notes.b,
+    or: '?' + G.notes.a,
     gr: 'pn'
 }, {
     sc: 'Bulgars',
@@ -101,13 +116,14 @@ G.dict.push({
     sc: 'Californie',
     en: 'California',
     gr: 'pn',
-    def: 'a state in wastren USA',
-    or: [G.notes.a, '<em>Californie</em> is the French mak forby']
+    def: 'a state in wastren USA'
 }, {
     sc: 'Canadae',
     en: 'Canada',
     gr: 'pn',
-    or: G.notes.b
+    or: [
+        [G.notes.or.mods + ' haes haed ', 'Canady, Canadie <em>syne at least the 19t century</em>']
+    ]
 }, {
     sc: 'China',
     en: 'China',
@@ -116,28 +132,28 @@ G.dict.push({
     sc: 'Corsicae',
     en: 'Corsica',
     gr: 'pn',
-    or: G.notes.b
+    or: '?' + G.notes.a
 }, {
     sc: 'Croaitie',
     en: 'Croatia',
     gr: 'pn',
-    or: G.notes.b
+    or: '?' + G.notes.a
 }, {
     sc: ['Czechie', 'Czechland'],
     en: ['Czech Republic, Czechia'],
     tr: ['checkia', 'check republic'],
     gr: 'pn',
-    or: 'Czechie is a modren protologism o Česko, a new offícial name for Česká republika; ' + G.notes.b
+    or: 'Czechie is a Modren Scots protologism o Česko, a new offícial name for Česká republika; ' + G.notes.b
 }, {
     sc: 'Denmark',
     def: 'a country in Scandinaivie',
-    gr: 'pn'
+    gr: 'pn',
+    or: [
+        [G.notes.or.as, 'Denmark']
+    ]
 }, {
     sc: 'Dens',
     def: ['the Scandinaivie leid spoken in Denmark an in pairts o Greenland an the Faerae Isles', ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']],
-    // def: [
-    //     ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']
-    // ],
     tr: ['dane', 'danish'],
     gr: ['n'],
     or: 'see adj'
@@ -147,6 +163,7 @@ G.dict.push({
     tr: 'danish',
     gr: ['adj'],
     or: [
+        [G.notes.or.as, 'Dens, Dence'],
         [G.notes.or.ae, 'denisc']
     ]
 }, {
@@ -154,9 +171,9 @@ G.dict.push({
     en: 'Baltic Sea',
     gr: 'pn'
 }, {
-    sc: 'Edinburgh',
+    sc: ['Edinburgh', 'Embra', 'Edinburrae'],
     en: 'Edinburgh',
-    def: 'the caipital cíty o Scotland',
+    def: 'the capital cíty o Scotland',
     gr: 'pn'
 }, {
     sc: ['Estonie', 'Eistland'],
@@ -165,12 +182,15 @@ G.dict.push({
 }, {
     sc: 'England',
     def: 'a country in soothren Great Brítain that is pairt o the Unitit Kinrick',
+    tr: 'Ingland',
     gr: 'pn'
 }, {
     sc: 'Ethiopie',
     en: 'Ethiopia',
     gr: 'pn',
-    or: G.notes.a
+    or: [
+        [G.notes.or.as, 'Ethiope']
+    ]
 }, {
     sc: 'Europe',
     en: 'Europe',
@@ -179,7 +199,7 @@ G.dict.push({
     sc: 'Faerae Isles',
     en: 'Faroe Isles',
     gr: 'pn',
-    or: G.notes.b
+    or: '?' + G.notes.a
 }, {
     sc: 'Finland',
     gr: 'pn',
@@ -376,7 +396,9 @@ G.dict.push({
     sc: 'Sooth Americae',
     en: 'South America',
     gr: 'pn',
-    or: G.notes.b
+    or: [
+        ['Scots <em>sooth</em> + ' + G.notes.or.mods + ' haes haed ', 'Ameriky <em>syne at least the 19t century</em>']
+    ]
 }, {
     sc: 'Sooth Pole',
     gr: 'pn',
@@ -456,7 +478,7 @@ G.dict.push({
     gr: 'pn',
     def: 'a seaport in sooth-wast Norrowa'
 }, {
-    sc: 'Bourdeuse',
+    sc: ['Bourdeux', 'Bourdeuse'],
     en: 'Bordeaux',
     gr: 'pn',
     def: 'a port in sooth-wast Fraunce'
@@ -491,12 +513,12 @@ G.dict.push({
     sc: 'Caurdiff',
     en: 'Cardiff',
     gr: 'pn',
-    def: 'the caipital cíty o Wales'
+    def: 'the capital cíty o Wales'
 }, {
     sc: 'Colpenhaven',
     en: 'Copenhagen',
     gr: 'pn',
-    def: 'the caipital cíty o Denmark'
+    def: 'the capital cíty o Denmark'
 }, {
     sc: 'Cortrik',
     en: 'Courtrai',
@@ -552,7 +574,7 @@ G.dict.push({
 }, {
     sc: 'Leisborn',
     en: 'Lisbon',
-    def: 'the caipital cíty o Portingal'
+    def: 'the capital cíty o Portingal'
 }, {
     sc: 'Lovan',
     en: 'Leuven',
@@ -572,7 +594,7 @@ G.dict.push({
     sc: ['London', 'Lunnon'],
     en: 'London',
     gr: 'pn',
-    def: 'the caipital cíty o England'
+    def: 'the capital cíty o England'
 }, {
     sc: 'Maestricht',
     en: 'Maastricht',
@@ -592,7 +614,7 @@ G.dict.push({
     sc: 'Pairis',
     en: 'Paris',
     gr: 'pn',
-    def: 'the caipital cíty o Fraunce'
+    def: 'the capital cíty o Fraunce'
 }, {
     sc: 'Poyters',
     en: 'Poitiers',
@@ -636,7 +658,7 @@ G.dict.push({
     sc: ['Upslo', 'Oslo'],
     en: 'Oslo',
     gr: 'pn',
-    def: 'the caipital cíty o Norrowa'
+    def: 'the capital cíty o Norrowa'
 }, {
     sc: 'Utrik',
     en: 'Utrecht',

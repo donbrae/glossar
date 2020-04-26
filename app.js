@@ -7,7 +7,8 @@
 var GLOSSAR = (function() {
 
     var cfg = {
-            search_delay: 500 // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
+            search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
+            threshold_non_hl: 3 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for
         },
         state = {
             word: '', // Value of search text box
@@ -262,13 +263,13 @@ var GLOSSAR = (function() {
                         $li = $(this);
                         if ($li.find('span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
                             $li.parent().prepend($li);
-                        } else if (state.word.length < 2) { // For one-character queries
+                        } else if (state.word.length < cfg.threshold_non_hl) { // For one-character queries
                             $li.remove();
                         }
                     });
                 }
 
-                if (!state.highlight && state.word.length < 2) {
+                if (!state.highlight && state.word.length < cfg.threshold_non_hl) {
                     noResults();
                 } else {
                     $('#result').addClass('show');
