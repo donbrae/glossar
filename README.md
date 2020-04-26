@@ -18,11 +18,13 @@ Audience: Scots speakers, scrievers and learners.
 
 # Dev
 
-Mak chynges tae index.dev.php and rin **build.sh** for tae create index.php. 
+Mak chynges tae index.dev.php and rin **build.sh** for tae create index.php.
 
 Trigger wirds (`tr`), pronunciations (`pr`) and alternative spellins (`sc_alt`) will be highlichtit in the UI by defaut. Ye can uise the *highlight* property (`hl`) tae owerride this. Note how typin *depute* (Scots) vs *deputy* (English) is haundelt. For a mair complex example, tak tent of the verbs *tae gae* and *tae gie*.
 
 Whan pushin past tenses and past participles tae `G.dict` (by gate of properties `pt`, `pp` and `pt_pp`), note that baith the English and trigger wirds should be eikit tae the `tr` property — thare isna a separate `en` property.
+
+Anent highlighting in verbs, *haud* is a guid example tae leuk at (tak tent o *haud* and *hold* bein in the `tr` property). That wey, if uiser enters *hauden*, only *hauden* will be hielichtit, and no *haud* an-aw.
 
 # Biggin
 
