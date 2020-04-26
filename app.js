@@ -209,16 +209,23 @@ var GLOSSAR = (function() {
 
     /**
      * Prints data on screen
-     * @param {Object} r - Algorithm
+     * @param {Object} r - Results returned by algorithm
      * @param {Function} callback
      */
     function print(r, callback) {
-        var grammar, hl_sc_alt, audio,
+        var grammar, hl_sc_alt, audio, tr_flag,
             hl, hl_all, $li, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or;
 
         if (r && r.length) {
             $('#result').html('');
             $.each(r, function() {
+
+                tr_flag = '';
+                console.log(this.tr);
+                if (this.tr && [].concat(this.tr).indexOf(state.word) > -1) { // If this currently searched for word appears as a trigger in this result, make sure it's shown (any threshold_non_hl will be ignored in relevant conditional below)
+                    tr_flag = ' tr';
+                }
+
                 grammar = this.gr ? '<span class="grammar">' + [].concat(this.gr).join('; ') + '</span> ' : ''; // Grammar
                 sc_alt = this.sc_alt ? '<div class="sc-alt">(alt Scots maks: <span>' + [].concat(this.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
                 en = this.en ? formatMultiple(this.en, ',', 'en') : ''; // English
@@ -275,7 +282,7 @@ var GLOSSAR = (function() {
 
                 pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(this.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
 
-                $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
+                $('#result').append('<li' + ph + '><span class="sc' + tr_flag + '"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
                     audio +
                     pr +
                     grammar +
@@ -297,7 +304,7 @@ var GLOSSAR = (function() {
                         $li = $(this);
                         if ($li.find('span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
                             $li.parent().prepend($li);
-                        } else if (state.word.length < cfg.threshold_non_hl) { // For one-character queries
+                        } else if (!$li.find('span').hasClass('tr') && state.word.length < cfg.threshold_non_hl) { // For fewer-character queries (unless this is a trigger word)
                             $li.remove();
                         }
                     });

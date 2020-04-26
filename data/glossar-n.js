@@ -910,7 +910,7 @@ G.dict.push({
     sc: ['wabsteid', 'wabsite'],
     en: 'website',
     pr: ['wabsteed', 'wabsyt'],
-    tr: ['websteid', 'websteed', 'wabsite'],
+    tr: ['websteid'],
     gr: 'n',
 }, {
     sc: 'wark',
