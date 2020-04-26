@@ -46,7 +46,7 @@ $last_updatit = str_replace(
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.css?ts=200425060417">
+    <link rel="stylesheet" href="app.css?ts=200426071229">
 
     <script src="zepto.min.js"></script>
     <script src="fuse.min.js"></script>
@@ -70,7 +70,7 @@ $last_updatit = str_replace(
                 </div>
             </div>
             <div class="text-center">
-                <button id="random" class="btn btn-link">…or wale oot a wird allevolie</button>
+                <button id="random" class="btn-link-gray">…or wale oot a wird allevolie</button>
             </div>
 
             <ul id="result" class="result fade"></ul>

@@ -168,11 +168,43 @@ var GLOSSAR = (function() {
         if ('ontouchstart' in window === false) {
             $('#searchTextbox').focus();
         }
+
+        $(document).on('click', '.play-audio', function(e) {
+
+          // Unique variables for click event
+          var $button = $(this),
+              audio;
+
+          $button.prop('disabled', true);
+          audio = document.getElementById($button.data('file'));
+
+          $(audio).bind('ended', function() {
+            $(this).unbind('ended');
+            $button.prop('disabled', false);
+          });
+
+          audio.play();
+
+          e.preventDefault();
+        });
     }
 
     function noResults() {
         $('#result').html('<li class="text-center no-results">Sorry, the’r nae results for <strong>' + state.word + '</strong></li>');
         $('#result').addClass('show');
+    }
+
+    function addAudio(s) {
+        var buttons = []; // HTML
+
+        $.each([].concat(s), function() {
+            if (!$('#' + this).length) {
+                $('body').prepend('<audio id="' + this + '" class="audio d-none" src="./audio/' + this.charAt(0) + '/' + this + '.mp3" preload="none"></audio>'); // Eik audio element
+            }
+            buttons.push('<button class="play-audio btn bg-transparent" data-file="' + this + '"><i class="demo-icon icon-sound"></i></button>'); // Eik button
+        });
+
+        return buttons.join('');
     }
 
     /**
@@ -181,7 +213,7 @@ var GLOSSAR = (function() {
      * @param {Function} callback
      */
     function print(r, callback) {
-        var grammar, hl_sc_alt,
+        var grammar, hl_sc_alt, audio,
             hl, hl_all, $li, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or;
 
         if (r && r.length) {
@@ -197,6 +229,7 @@ var GLOSSAR = (function() {
                 inf = this.inf ? formatMultiple(this.inf, ';', 'inf') : ''; // Additional information
                 or = this.or ? formatOrigin(this.or) : ''; // Origin
                 hl_sc_alt = this.sc_alt ? [].concat(this.sc_alt) : []; // Make sure to highlight any alternative Scots words
+                audio = this.au ? '<span class="audio">' + addAudio(this.au) + '</span> ' : ''; // Audio
 
                 /**
                  * Highlight based on trigger words by default; if not, use the specific highlight words
@@ -243,6 +276,7 @@ var GLOSSAR = (function() {
                 pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(this.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
 
                 $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
+                    audio +
                     pr +
                     grammar +
                     sc_alt +

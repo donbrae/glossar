@@ -699,7 +699,8 @@ G.dict.push({
         pr: G.v.gie.pr,
         tr: G.v.gie.trigs,
         hl: [].concat(G.v.gie.sc, G.v.gie.pr),
-        gr: 'v'
+        gr: 'v',
+        au: 'gie'
     }, { // v gie neg
         sc: G.v.gie.neg.sc,
         en: G.v.gie.neg.en,
@@ -1404,7 +1405,8 @@ G.dict.push({
         tr: ['empty', 'gush'],
         gr: 'v',
         or: 'frae the adj',
-        ex: 'He tuimt the watter doun the cundie'
+        ex: 'He tuimt the watter doun the cundie',
+        au: 'tuim'
     }, { // R
         sc: 'rax',
         en: [

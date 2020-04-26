@@ -774,7 +774,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'quene, quein'],
         [G.notes.or.ae, 'cwēn, cwene']
-    ]
+    ],
+    au: 'quine'
 }, {
     sc: 'question',
     en: 'question',
@@ -847,7 +848,7 @@ G.dict.push({
     sc_alt: 'steerer',
     en: 'activist',
     gr: 'n',
-    or: '<span>steer</span> ‘tae steer, gie airt til’ wi <span>-ar</span> suffix. Baith <span>-ar</span> an <span>-er</span> kythe on the SLC wabsteid. Wale’t <span>-ar</span> here by analogy wi <span>co-airtar</span>, <span>pairt-takar</span> an <span>lawmakar</span>'
+    or: '<span>steer</span> ‘tae steer, gie airt til’ wi <span>-ar</span> suffix. Baith <span>-ar</span> an <span>-er</span> kythe on the SLC wabsite. Waled <span>-ar</span> here by analogy wi <span>co-airtar</span>, <span>pairt-takar</span> an <span>lawmakar</span>'
 }, {
     sc: 'swither',
     en: [
@@ -862,8 +863,7 @@ G.dict.push({
     ex: G.ex.i,
     or: 'see v'
 }, {
-    sc: 'sýstem',
-    pr: 'seestem',
+    sc: 'system',
     en: 'system',
     gr: 'n'
 }, { // T
@@ -907,9 +907,9 @@ G.dict.push({
     gr: 'n',
     or: 'see adj'
 }, { // W
-    sc: 'wabsteid',
+    sc: ['wabsteid', 'wabsite'],
     en: 'website',
-    pr: 'wabsteed',
+    pr: ['wabsteed', 'wabsyt'],
     tr: ['websteid', 'websteed', 'wabsite'],
     gr: 'n',
 }, {

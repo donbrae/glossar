@@ -238,12 +238,10 @@ G.dict = [{
     en: 'anyone',
     gr: ['pron']
 }, {
-    sc: 'our',
-    sc_alt: 'oor',
+    sc: 'oor',
     pr: 'oor',
     en: 'our',
     tr: 'wir',
-    hl: 'our',
     gr: ['possesive pronoun']
 }, {
     sc: 'ower',
@@ -262,7 +260,8 @@ G.dict = [{
     en: 'our',
     tr: 'oor',
     hl: 'wir',
-    gr: ['possesive pronoun']
+    gr: ['possesive pronoun'],
+    au: 'wir'
 }, {
     sc: ['whaniver', 'faniver'],
     en: 'whenever',

@@ -54,10 +54,11 @@ html { font-family: 'Inter', sans-serif; }
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 .icon-cancel {
-    font-size: 19px;
+    font-size: 20px;
     color: #8f959a;
 }
-.icon-cancel:before { content: '\e800'; } /* '' */
+.icon-sound:before { content: '\e800'; }
+.icon-cancel:before { content: '\e801'; }
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -286,13 +287,44 @@ div.en, div.def, div.ex, div.inf {
     border-bottom-right-radius: 2rem;
 }
 .input-group button.btn.bg-transparent {
-    margin-left: -46px;
+    margin-left: -49px;
     z-index: 100;
 }
-.input-group button.btn.bg-transparent:focus {
+button.btn.bg-transparent:focus {
     outline: 0;
     opacity: .8;
     box-shadow: none;
+}
+.audio {
+    margin-left: -6px;
+    margin-right: -3px;
+}
+.hl + .audio {
+    margin-left: 0;
+}
+button.play-audio {
+    padding: 0;
+    margin: -3px 0 0 0;
+}
+button.play-audio i {
+    color: #34aeff;
+}
+.btn-link-gray {
+    border: 0;
+    border-bottom: 1px dotted #212529;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+.btn-link-gray:hover {
+    border-bottom-style: solid;
+    cursor: pointer;
+}
+.btn-link-gray:focus {
+    outline: 0;
+}
+.btn-link-gray:active {
+    color: inherit;
 }
 @media (min-width: 576px) {
     .grammar {
