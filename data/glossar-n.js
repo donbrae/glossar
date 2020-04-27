@@ -139,14 +139,6 @@ G.dict.push({
         [G.notes.or.l, 'compositio']
     ]
 }, {
-    sc: 'componition',
-    def: 'a wark o muisic, líteratur or airt',
-    en: 'composition',
-    gr: 'n',
-    or: [
-        ['protologism, steidit on the ' + G.notes.or.as, 'componitioun, compone'],
-    ]
-}, {
     sc: 'co-airtar',
     en: 'coordinator',
     gr: 'n',
@@ -215,7 +207,7 @@ G.dict.push({
         ['lack or absence (of something)', 'neglect', 'negligence', 'failure to pay (a debt)']
     ],
     tr: ['default', 'lack', 'absence'],
-    gr: ['n'],
+    gr: 'n',
     or: [
         [G.notes.or.as, 'defaut, defalt, defawt'],
         [G.notes.or.me, 'defaut']
@@ -289,7 +281,7 @@ G.dict.push({
 }, {
     sc: 'documentar',
     en: 'documentary',
-    gr: ['n', 'v']
+    gr: ['n', 'adj']
 }, { // E
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
@@ -396,12 +388,12 @@ G.dict.push({
     sc: 'film-makar',
     en: 'film-maker',
     tr: ['filmmaker', 'filmmakar'],
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: 'film-makkin',
     en: 'film-making',
     tr: ['filmmaking', 'filmmakkin'],
-    gr: ['n']
+    gr: 'n'
 }, {
     sc: 'fitba',
     pr: ['fitbaw', 'fitbaa'],
@@ -598,6 +590,14 @@ G.dict.push({
         ['lawmaker', 'legislator']
     ],
     gr: 'n'
+}, {
+    sc: 'licht',
+    en: 'light',
+    gr: ['n', 'adj'],
+    or: [
+        [G.notes.or.as, 'licht, lycht, lyght'],
+        [G.notes.or.ae, 'lēoht']
+    ]
 }, {
     sc: 'loan',
     def: ['an unpedmentit or girssie track for cattle; aft-times in steid names', 'a througate, street or road', ['the ferm gate airtin til the fermhoose', 'the grund adjynin a fermhoose', 'the causey']],

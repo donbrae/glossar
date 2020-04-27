@@ -381,37 +381,37 @@ G.dict.push({
         en: G.v.be.ps.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.ps.en, G.v.be.ps.tr),
-        gr: 'praisent singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+        gr: 'present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // amna
         sc: G.v.be.ps.neg.sc,
         en: G.v.be.ps.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.ps.neg.en, G.v.be.ps.neg.tr),
-        gr: 'praisent singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+        gr: 'present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // is
         sc: G.v.be.tpps.sc,
         en: G.v.be.tpps.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.tpps.en),
-        gr: 'third person praisent singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+        gr: 'third person present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // isna
         sc: G.v.be.tpps.neg.sc,
         en: G.v.be.tpps.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.tpps.neg.en),
-        gr: 'third person praisent singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+        gr: 'third person present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // are
         sc: G.v.be.psp.sc,
         en: G.v.be.psp.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.psp.en, G.v.be.psp.tr),
-        gr: 'praisent singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+        gr: 'present singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // arena
         sc: G.v.be.psp.neg.sc,
         en: G.v.be.psp.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.psp.neg.en, G.v.be.psp.neg.tr),
-        gr: 'praisent singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+        gr: 'present singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // binna
         sc: G.v.be.neg.sc,
         en: G.v.be.neg.en,
@@ -803,10 +803,8 @@ G.dict.push({
         ]
     }, {
         sc: 'edifee',
-        en: [
-            ['instruct', 'enlighten']
-        ],
-        tr: 'edify',
+        def: 'instruct, enlichten',
+        tr: ['edify', 'instruct', 'enlichten', 'enlighten', 'teach'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'edify, edifie'],
@@ -1080,6 +1078,19 @@ G.dict.push({
             [G.notes.or.ae, 'lǽtan']
         ]
     }, {
+        sc: 'licht',
+        en: 'light',
+        pt_pp: {
+            sc: ['lichtit'],
+            tr: 'lit'
+        },
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'licht, lycht, light'],
+            [G.notes.or.ae, 'līhtan']
+        ],
+        au: 'licht'
+    }, {
         sc: 'luit',
         en: 'let',
         tr: G.v.lat.trigs,
@@ -1124,7 +1135,6 @@ G.dict.push({
         ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
     }, {
         sc: 'mind',
-        sc_alt: 'mynd',
         pt: {
             sc: 'mindit',
             tr: ['reminded', 'remembered', 'recollected', 'called to mind', 'myndit']
@@ -1134,7 +1144,8 @@ G.dict.push({
         or: [
             [G.notes.or.as, 'minde, mynd(e)'],
             [G.notes.or.ae, 'mynd']
-        ]
+        ],
+        au: 'mind'
     }, {
         sc: 'uplaid',
         tr: 'upload',

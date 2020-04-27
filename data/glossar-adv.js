@@ -46,6 +46,10 @@ G.dict.push({ // A
     gr: ['adv'],
     tr: ['alevoly', 'alevolie'],
     or: 'see the adj'
+}, {
+    sc: 'awmaist',
+    en: 'almost',
+    gr: 'adv'
 }, { // B
     sc: 'a bittie',
     en: [
@@ -118,8 +122,8 @@ G.dict.push({ // A
         ['beyond', 'past'],
         ['besides', 'in addition', 'as well']
     ],
-    tr: ['also', 'too'],
-    hl: ['forby', 'also'],
+    tr: ['also', 'too', 'additionally'],
+    hl: ['forby', 'also', 'additionally'],
     gr: ['adv']
 }, { // G
     sc: 'gey',
@@ -175,8 +179,8 @@ G.dict.push({ // A
     en: [
         ['besides', 'over and above', 'moreover', 'in addition']
     ],
-    tr: ['attour', 'further', 'as well', 'too'],
-    hl: ['attour', 'further', 'atour'],
+    tr: ['attour', 'further', 'as well', 'too', 'additionally'],
+    hl: ['attour', 'further', 'atour', 'additionally'],
     gr: ['adv', 'prep']
 }, {
     sc: ['certie', 'certes'],
@@ -371,7 +375,7 @@ G.dict.push({ // A
     tr: 'the night',
     gr: 'adv, n',
     ex: ['Are ye gaun oot the nicht?', 'It’s awfu cauld the nicht'],
-    or: 'first kythin DOST haes o <span>the nicht</span> (in the mak <em>the nycht</em>) ‘the praisent or approachin nicht’ is frae 1475'
+    or: 'first kythin DOST haes o <span>the nicht</span> (in the mak <em>the nycht</em>) ‘the present or approachin nicht’ is frae 1475'
 }, {
     sc: 'the year',
     en: 'this year',

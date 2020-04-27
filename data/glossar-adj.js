@@ -156,7 +156,7 @@ G.dict.push({ // A
     or: 'see n',
     ex: ['Contrair til expectations, he did weel in his exams', 'Maist law makars threapit for a chynge in the law, but a wheen held the contrair view', 'He’s a ill-naiturt an contrair chiel']
 }, {
-    sc: 'defamatoir',
+    sc: 'defamator',
     en: 'defamatory',
     tr: 'defamator',
     gr: 'adj',

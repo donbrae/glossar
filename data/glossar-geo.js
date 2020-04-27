@@ -39,21 +39,22 @@ G.dict.push({
     ]
 }, {
     sc: 'American',
-    en: 'American'
+    en: 'American',
+    gr: 'adj'
 }, {
     sc: 'Andorrae',
-    en: 'Andorra',
+    en: ['Andorra', 'Andorran'],
     gr: ['pn', 'adj']
 }, {
     sc: 'Armenie',
-    en: 'Armenia',
+    en: ['Armenia', 'Armenian'],
     gr: ['pn', 'adj'],
     or: [
         [G.notes.or.as, 'Armeny, Armenye']
     ]
 }, {
     sc: 'Austrailie',
-    en: 'Australia',
+    en: ['Australia', 'Australian'],
     gr: ['pn', 'adj'],
     tr: ['Australie', 'Australy'],
     or: [
@@ -61,7 +62,7 @@ G.dict.push({
     ]
 }, {
     sc: 'Austrik',
-    en: 'Austria',
+    en: ['Austria', 'Austrian'],
     tr: ['austrich', 'austrick'],
     gr: ['pn', 'adj'],
     or: [
