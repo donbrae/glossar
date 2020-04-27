@@ -221,7 +221,6 @@ var GLOSSAR = (function() {
             $.each(r, function() {
 
                 tr_flag = '';
-                console.log(this.tr);
                 if (this.tr && [].concat(this.tr).indexOf(state.word) > -1) { // If this currently searched for word appears as a trigger in this result, make sure it's shown (any threshold_non_hl will be ignored in relevant conditional below)
                     tr_flag = ' tr';
                 }

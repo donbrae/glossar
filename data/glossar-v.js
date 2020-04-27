@@ -1446,7 +1446,7 @@ G.dict.push({
     }, { // S
         sc: 'skair',
         en: 'share',
-        gr: 'v',
+        gr: ['v', 'n'],
         tr: 'skare',
         or: [
             [G.notes.or.as, 'skar, scar(e), schare'],

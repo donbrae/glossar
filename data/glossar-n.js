@@ -623,7 +623,7 @@ G.dict.push({
     sc: 'maiter',
     en: 'matter',
     tr: ['material', 'substance', 'subject', 'theme', 'undertaking', 'concern', 'business', 'issue'],
-    gr: 'n',
+    gr: ['n', 'v'],
     or: [
         [G.notes.or.as, 'mater(e)'],
         [G.notes.or.me, 'mater'],
