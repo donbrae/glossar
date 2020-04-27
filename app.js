@@ -96,6 +96,7 @@ var GLOSSAR = (function() {
                     $(this).val().replace(/(<([^>]+)>)/ig, ' ') // Strip any HTML
                 )
             );
+            
             state.word_lc = state.word.toLowerCase();
 
             if ($(this).val().length) {
