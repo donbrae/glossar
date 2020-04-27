@@ -288,10 +288,10 @@ G.dict = [{
     en: 'they',
     tr: ['thai']
 }, {
-    sc: ['I', 'ah', 'A'],
+    sc: ['I', 'A', 'ah', 'eh'],
     pr: ['ah', 'aw', 'eh', 'eye'],
     en: 'I',
-    tr: ['A', 'Ah', 'E', 'Eh', 'eh'],
+    tr: ['e'],
     gr: 'first personal pronoun',
     ex: ['I ken whit ye mean', 'I stey in the wast end o Edinburgh'],
     or: [

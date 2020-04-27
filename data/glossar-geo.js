@@ -397,7 +397,7 @@ G.dict.push({
     en: 'South America',
     gr: 'pn',
     or: [
-        ['Scots <em>sooth</em> + ' + G.notes.or.mods + ' haes haed ', 'Ameriky <em>syne at least the 19t century</em>']
+        ['Scots <em>sooth</em> + ', '<em>Scots</em> Ameriky']
     ]
 }, {
     sc: 'Sooth Pole',

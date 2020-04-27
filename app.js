@@ -309,7 +309,6 @@ var GLOSSAR = (function() {
             if (results_filtered.length) { // If there is at least one relevant result amang returned results
                 highlight(results_filtered, function() {
                     if (state.highlight) {
-                        $('h1').append($('#result > li').length); // > debug
                         $($('#result > li').get().reverse()).each(function() { // Move highlighted entries to the top
                             $li = $(this);
                             if ($li.find('span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
@@ -318,7 +317,7 @@ var GLOSSAR = (function() {
                         });
                     }
 
-                    if (!state.highlight && state.word.length < cfg.threshold_non_hl) {
+                    if (!state.highlight && state.word.length < cfg.threshold_non_hl) { // If nothing in the UI has been highlighted and the length of user input is below the threshold
                         noResults();
                     } else {
                         $('#result').addClass('show');
@@ -423,9 +422,9 @@ var GLOSSAR = (function() {
                 items = items.concat($el.data('hl').split(','));
             }
             $.each(items, function() {
-                if (
-                    this.toLowerCase() === state.word_lc ||
-                    (en && en.indexOf(state.word_lc) > -1)
+                if (this &&
+                    (this.toLowerCase() === state.word_lc ||
+                    (en && en.indexOf(state.word_lc) > -1))
                 ) {
                     $el.addClass('hl');
                     state.highlight = state.highlight + 1;
