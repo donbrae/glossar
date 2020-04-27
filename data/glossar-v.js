@@ -215,7 +215,7 @@ G.v.be = {
     neg: {
         sc: 'binna',
         en: 'is not',
-        tr: ['binnae', 'is no', 'ins\'t']
+        tr: ['binnae', 'is no', 'isn\'t']
     }
 };
 G.v.be.trigs = [].concat( // Control display of conjugated 'be'

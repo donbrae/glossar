@@ -286,6 +286,10 @@ G.dict.push({
     hl: 'dither',
     gr: ['n', 'v'],
     ex: ['Ay, he’s a richt ditter', 'The’r nae time tae be ditterin aboot']
+}, {
+    sc: 'documentar',
+    en: 'documentary',
+    gr: ['n', 'v']
 }, { // E
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
@@ -388,6 +392,16 @@ G.dict.push({
     sc: 'feartie',
     en: 'coward',
     gr: ['n', 'informal']
+}, {
+    sc: 'film-makar',
+    en: 'film-maker',
+    tr: ['filmmaker', 'filmmakar'],
+    gr: ['n']
+}, {
+    sc: 'film-makkin',
+    en: 'film-making',
+    tr: ['filmmaking', 'filmmakkin'],
+    gr: ['n']
 }, {
     sc: 'fitba',
     pr: ['fitbaw', 'fitbaa'],
