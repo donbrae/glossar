@@ -409,6 +409,10 @@ G.dict.push({ // A
         [G.notes.or.mf, 'accointe']
     ],
     ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the mínister’s view on the said maiter']
+}, {
+    sc: ['leart', 'leared'],
+    en: [['learned', 'educated']],
+    gr: 'adj'
 }, { // M
     sc: 'mair',
     en: 'more',

@@ -585,11 +585,21 @@ G.dict.push({
     ],
     ex: 'That’s Eck’s laddie, is it no?'
 }, {
+    sc: 'lair',
+    en: [
+        'lore',
+        'teaching',
+        ['learning', 'knowledge', 'education']
+    ],
+    gr: 'n',
+    tr: ['instruct', 'lare'],
+}, {
     sc: 'lawmakar',
     en: [
         ['lawmaker', 'legislator']
     ],
-    gr: 'n'
+    gr: 'n',
+    or: 'protologism steidit on English <em>lawmaker</em>'
 }, {
     sc: 'licht',
     en: 'light',
@@ -702,7 +712,9 @@ G.dict.push({
     gr: 'n'
 }, {
     sc: 'ordinar',
-    en: [['the usual state of things', 'what is customary or habitual']],
+    en: [
+        ['the usual state of things', 'what is customary or habitual']
+    ],
     tr: 'ordinary',
     gr: 'n',
     or: [

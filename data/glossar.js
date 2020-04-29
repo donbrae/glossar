@@ -3,8 +3,9 @@ var GLOSSAR = GLOSSAR || {};
 var G = GLOSSAR;
 
 G.notes = {
-    a: "protologism; frae analogy wi Dutch and French-influenced <em>Armenie</em>, <em>Roumainie</em>, <em>Roushie</em> etc., vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Californie et al
-    b: "<em>-ae</em> an <em>-y/-ie</em> steid-name endins shaws Dutch and French influence, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin", // Americae, Slovakie et al
+    a: 'protologism; frae analogy wi Dutch and French-influenced <em>Armenie</em>, <em>Roumainie</em>, <em>Roushie</em> etc., vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin', // Californie et al
+    b: '<em>-ae</em> and <em>-y/-ie</em> steid-name endins shaws Dutch and French influence, vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin', // Slovakie et al
+    c: 'The etymology o <em>no</em>, <em>nae</em>, <em>na</em> etc. is gey quirkie. Consult the <a href="https://dsl.ac.uk" target="_blank">DSL</a> and <a href="https://edinburghuniversitypress.com/catalog/product/view/id/19910/s/book-concise-scots-dictionary" target="_blank">CSD2</a> for mair',
     or: {
         af: 'Auld French',
         mf: 'Middle French',
@@ -49,7 +50,7 @@ G.ex = {
     k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
     l: "In terms o tred, o the guids and services Scotland inbrings, around 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
     m: "The First Mínister wrate til her cabinet secretar anent the forementiont policy",
-    n: "I’m meetin up wi and auld freend the day",
+    n: "I’m meetin up wi an auld freend the day",
     o: "The Fisk Secretar-depute will the day set furth new wittins anent the proponed tax exemptions",
     p: "The day’s gemm agin Aiberdeen will be played at hame",
     q: "Jeannie stuid anent him, fair pecht",
@@ -74,10 +75,14 @@ G.ex = {
 };
 
 G.pr = {
-    juist: ['jist','joost', 'jeest', 'jeust', 'doost', 'dist']
+    juist: ['jist', 'joost', 'jeest', 'jeust', 'doost', 'dist']
 };
 
 G.dict = [{
+    sc: ['ay', 'aye'],
+    en: 'yes',
+    gr: 'exclamation'
+}, {
     sc: ['an', 'and'],
     pr: 'an',
     en: 'and',
@@ -183,7 +188,7 @@ G.dict = [{
         ['the mucklest amount, the lairgest nummer, the majority']
     ],
     tr: ['most', 'majority', 'maste'],
-    gr: 'determiner an pronoun',
+    gr: 'determiner and pronoun',
     or: [
         [G.notes.or.as, 'mast(e), maist(e)'],
         [G.notes.or.ae, 'mǣst, māst']
@@ -225,9 +230,9 @@ G.dict = [{
     or: 'see adj'
 }, { // O
     sc: 'o',
-    pr: ['oh', 'ae', 'uh'],
+    pr: ['oh', 'ae', 'uh'], // Eikit to tr[] due to word-length threshold
     en: 'of',
-    tr: ['ey', 'ay', 'u', 'o\''],
+    tr: ['ey', 'ay', 'u', 'o\'', 'ae', 'uh', 'oh'],
     gr: 'prep',
     or: [
         [G.notes.or.as, 'of, off'],
@@ -337,8 +342,8 @@ G.dict = [{
     sc: 'til',
     en: 'to',
     gr: 'prep',
-    inf: '<em>til</em> is whiles uised only afore vouels an the letter h, an aften no afore verbs',
-    ex: ['I walkit ower an spak til him', G.ex.i]
+    inf: '<em>til</em> is whiles uised only afore vouels and the letter h, and aften no afore verbs',
+    ex: ['I walkit ower and spak til him', G.ex.i]
 }, {
     sc: 'thae',
     en: 'those',

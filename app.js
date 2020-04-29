@@ -71,15 +71,15 @@ var GLOSSAR = (function() {
                     name: 'tr',
                     weight: 0.3
                 }]
-            },
+            }, t,
 
             fuse = new Fuse(GLOSSAR.dict, options);
 
-        $('#searchTextbox').on('keyup', function(e) {
+        function searchInit(e) {
+            var t,
+                $field = $('#searchTextbox');
 
-            var t;
-
-            function search() {
+            function goSearch() {
                 if (state.word.length) {
                     $('#result').removeClass('show');
                     print(fuse.search(state.word));
@@ -93,23 +93,36 @@ var GLOSSAR = (function() {
 
             state.word = G.utils.replaceQo(
                 $.trim(
-                    $(this).val().replace(/(<([^>]+)>)/ig, ' ') // Strip any HTML
+                    $field.val().replace(/(<([^>]+)>)/ig, ' ') // Strip any HTML
                 )
             );
             state.word_lc = state.word.toLowerCase();
 
-            if ($(this).val().length) {
+            if ($field.val().length) {
                 $('#clear-value').addClass('show');
             } else {
                 $('#clear-value').removeClass('show');
             }
 
-            if (e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
-                search();
+            if (e && e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
+                goSearch();
             } else {
-                timeoutStart(search);
+                timeoutStart(goSearch);
             }
-        });
+        }
+
+        // Check for value on page load (after back button or not-yet-implemented GET variable). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
+        t = setTimeout(function() {
+            if ($.trim($('#searchTextbox').val()).length) {
+                searchInit();
+            }
+        }, 500);
+
+        if ('ontouchstart' in window === false) {
+            $('#searchTextbox').focus();
+        }
+
+        $('#searchTextbox').on('keyup', searchInit);
 
         // Text field pseudo-focus state on clear button focus
         $('#clear-value').on('focus', function() {
@@ -167,10 +180,6 @@ var GLOSSAR = (function() {
                 clearTimeout(state.timeout);
             }
         });
-
-        if ('ontouchstart' in window === false) {
-            $('#searchTextbox').focus();
-        }
 
         $(document).on('click', '.play-audio', function(e) {
 

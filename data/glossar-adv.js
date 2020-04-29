@@ -233,6 +233,45 @@ G.dict.push({ // A
     tr: ['much', 'greatly', 'very', 'exceedingly', 'mukkil'],
     gr: 'adv',
     or: 'see adj'
+}, {
+    sc: 'no',
+    en: 'not',
+    gr: 'adv',
+    tr: ['nae', 'nay'],
+    or: [
+        [G.notes.or.as, 'no, nocht']
+    ],
+    ex: ['Haud on, I’ll no be a meenit', 'I’v no haed time tae check my email yet'],
+    inf: G.notes.c
+}, {
+    sc: 'nae',
+    en: 'not',
+    gr: 'adv',
+    tr: ['no', 'nay'],
+    or: [
+        [G.notes.or.as, 'na']
+    ],
+    ex: ['I’v nae heard that sang afore', 'She’s been nae weel for a whilie nou']
+}, {
+    sc: ['na', 'naw', 'nae'],
+    en: 'no',
+    gr: 'adv',
+    def: 'the negative repone',
+    tr: 'nay',
+    ex: 'Naw thanks, pal',
+    or: [
+        [G.notes.or.as, 'na'],
+        [G.notes.or.as, 'nay']
+    ]
+}, {
+    sc: ['nae'],
+    en: 'no',
+    gr: ['adj', 'adv'],
+    tr: 'nay',
+    ex: ['It’s nae bother', 'Nae nukes!', 'The’r nae mair tickets left'],
+    or: [
+        [G.notes.or.as, 'na, nae']
+    ]
 }, { // O
     sc: 'ony',
     en: [
@@ -271,13 +310,17 @@ G.dict.push({ // A
     gr: ['adv']
 }, {
     sc: 'for ordinar',
-    en: [['normally', 'usually']],
+    en: [
+        ['normally', 'usually']
+    ],
     tr: 'ordinarily',
     gr: 'adv',
     or: 'see n <em>ordinar</em>'
 }, {
     sc: 'ordinar',
-    en: [['usually', 'in the usual way', 'somewhat', 'to a certain extent']],
+    en: [
+        ['usually', 'in the usual way', 'somewhat', 'to a certain extent']
+    ],
     tr: 'ordinarily',
     gr: 'adv',
     or: 'see the adj'

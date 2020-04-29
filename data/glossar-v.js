@@ -1078,6 +1078,37 @@ G.dict.push({
             [G.notes.or.ae, 'lǽtan']
         ]
     }, {
+        sc: 'lair',
+        en: 'teach',
+        gr: 'v',
+        tr: ['instruct', 'learn'],
+        pt_pp: {
+            sc: ['lairt', 'laired'],
+            tr: ['taught', 'instructed']
+        }
+    }, {
+        sc: 'lear',
+        en: [
+            ['teach', 'instruct'],
+            'learn'
+        ],
+        gr: 'v',
+        tr: 'instruct',
+        pt_pp: {
+            sc: ['leart', 'leared'],
+            tr: ['taught', 'instructed', 'learned']
+        }
+    }, {
+        sc: 'learn',
+        en: [['teach', 'instruct']],
+        tr: ['lair', 'lear'],
+        hl: ['learn', 'lair', 'lear'],
+        pt_pp: {
+            sc: 'learnt',
+            tr: ['taught', 'instructed', 'educated']
+        },
+        gr: 'v',
+    }, {
         sc: 'licht',
         en: 'light',
         pt_pp: {
@@ -1394,6 +1425,10 @@ G.dict.push({
         gr: 'v phr',
         ex: 'The Chairter wis taen on in 1992',
         ph: true
+    }, {
+        sc: 'teach',
+        en: 'teach',
+        gr: 'v'
     }, {
         sc: 'tred',
         en: 'trade',

@@ -257,6 +257,14 @@ div.en, div.def, div.ex, div.inf {
     padding-bottom: 30px;
     padding-top: 15px;
 }
+#result a {
+    color: inherit;
+    border-bottom: 1px dotted #212529;
+}
+#result a:hover {
+    border-bottom-style: solid;
+    text-decoration: none;
+}
 .fade {
     transition: opacity 0.05s linear;
 }

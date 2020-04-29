@@ -33,6 +33,10 @@ G.dict.push({
     ex: G.ex.j,
     ph: true
 }, {
+    sc: ['nae bother', 'nae bather'],
+    en: 'no problem',
+    ph: true
+}, {
     sc: 'for tae',
     en: 'in order to',
     gr: 'subordinatin conj',
