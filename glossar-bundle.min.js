@@ -8,7 +8,7 @@ var GLOSSAR = (function() {
 
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_non_hl: 4 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for
+            threshold_non_hl: 3 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for
         },
         state = {
             word: '', // Value of search text box
@@ -20,17 +20,14 @@ var GLOSSAR = (function() {
         fuse;
 
     function init() {
-        var options = {
+        const options = {
                 shouldSort: true,
                 includeScore: false,
-                tokenize: true,
-                matchAllTokens: true,
                 findAllMatches: false,
                 threshold: 0.05,
                 location: 0,
                 distance: 15,
-                maxPatternLength: 3,
-                minMatchCharLength: 5,
+                minMatchCharLength: 1,
                 keys: [{
                     name: 'sc',
                     weight: 0.43
@@ -71,9 +68,11 @@ var GLOSSAR = (function() {
                     name: 'tr',
                     weight: 0.2
                 }]
-            }, t,
+            };
 
-            fuse = new Fuse(GLOSSAR.dict, options);
+        const fuse = new Fuse(GLOSSAR.dict, options);
+
+        var t;
 
         function searchInit(e) {
             var t,
@@ -183,21 +182,21 @@ var GLOSSAR = (function() {
 
         $(document).on('click', '.play-audio', function(e) {
 
-          // Unique variables for click event
-          var $button = $(this),
-              audio;
+            // Unique variables for click event
+            var $button = $(this),
+                audio;
 
-          $button.prop('disabled', true);
-          audio = document.getElementById($button.data('file'));
+            $button.prop('disabled', true);
+            audio = document.getElementById($button.data('file'));
 
-          $(audio).bind('ended', function() {
-            $(this).unbind('ended');
-            $button.prop('disabled', false);
-          });
+            $(audio).bind('ended', function() {
+                $(this).unbind('ended');
+                $button.prop('disabled', false);
+            });
 
-          audio.play();
+            audio.play();
 
-          e.preventDefault();
+            e.preventDefault();
         });
     }
 
@@ -225,7 +224,7 @@ var GLOSSAR = (function() {
      * @param {Function} callback
      */
     function print(r, callback) {
-        var grammar, hl_sc_alt, audio,
+        var grammar, hl_sc_alt, audio, item,
             hl, hl_all, $li, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or,
             results_filtered = [];
 
@@ -233,46 +232,49 @@ var GLOSSAR = (function() {
             $('#result').html('');
 
             $.each(r, function() {
+
+                item = this.item;
+
                 if (
                     state.word.length >= cfg.threshold_non_hl || // Length of word user has input is equal to or greater than threshold
-                    arrayToLowerCase([].concat(this.sc)).indexOf(state.word_lc) > -1 || // Exact match (Scots)
-                    arrayToLowerCase([].concat(this.en)).indexOf(state.word_lc) > -1 || // Exact match (English)
-                    this.tr && arrayToLowerCase([].concat(this.tr)).indexOf(state.word_lc) > -1 // Length of this word (returned by results) is below threshold but user input is a trigger for this word
+                    arrayToLowerCase([].concat(item.sc)).indexOf(state.word_lc) > -1 || // Exact match (Scots)
+                    arrayToLowerCase([].concat(item.en)).indexOf(state.word_lc) > -1 || // Exact match (English)
+                    item.tr && arrayToLowerCase([].concat(item.tr)).indexOf(state.word_lc) > -1 // Length of this word (returned by results) is below threshold but user input is a trigger for this word
                 ) {
-                    results_filtered.push(this);
+                    results_filtered.push(item);
 
-                    grammar = this.gr ? '<span class="grammar">' + [].concat(this.gr).join('; ') + '</span> ' : ''; // Grammar
-                    sc_alt = this.sc_alt ? '<div class="sc-alt">(alt Scots maks: <span>' + [].concat(this.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
-                    en = this.en ? formatMultiple(this.en, ',', 'en') : ''; // English
-                    pr = this.pr ? '<span class="pr">(‘' + [].concat(this.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
-                    def = this.def ? formatMultiple(this.def, ';', 'def') : ''; // Definition
-                    ex = this.ex ? formatMultiple(this.ex, ';', 'ex') : ''; // Examples
-                    ph = this.ph ? ' class="phrase"' : ''; // Phrases, idioms
-                    inf = this.inf ? formatMultiple(this.inf, ';', 'inf') : ''; // Additional information
-                    or = this.or ? formatOrigin(this.or) : ''; // Origin
-                    hl_sc_alt = this.sc_alt ? [].concat(this.sc_alt) : []; // Make sure to highlight any alternative Scots words
-                    audio = this.au ? '<span class="audio">' + addAudio(this.au) + '</span> ' : ''; // Audio
+                    grammar = item.gr ? '<span class="grammar">' + [].concat(item.gr).join('; ') + '</span> ' : ''; // Grammar
+                    sc_alt = item.sc_alt ? '<div class="sc-alt">(alt Scots maks: <span>' + [].concat(item.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
+                    en = item.en ? formatMultiple(item.en, ',', 'en') : ''; // English
+                    pr = item.pr ? '<span class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
+                    def = item.def ? formatMultiple(item.def, ';', 'def') : ''; // Definition
+                    ex = item.ex ? formatMultiple(item.ex, ';', 'ex') : ''; // Examples
+                    ph = item.ph ? ' class="phrase"' : ''; // Phrases, idioms
+                    inf = item.inf ? formatMultiple(item.inf, ';', 'inf') : ''; // Additional information
+                    or = item.or ? formatOrigin(item.or) : ''; // Origin
+                    hl_sc_alt = item.sc_alt ? [].concat(item.sc_alt) : []; // Make sure to highlight any alternative Scots words
+                    audio = item.au ? '<span class="audio">' + addAudio(item.au) + '</span> ' : ''; // Audio
 
                     /**
                      * Highlight based on trigger words by default; if not, use the specific highlight words
                      */
 
                     // Simpler (Scots) verbs
-                    pt_arr = this.pt && this.pt.sc ? [].concat(this.pt.sc) : []; // Any past tense
-                    pt_arr = this.pt && this.pt.tr ? pt_arr.concat(this.pt.tr) : pt_arr; // Any past tense triggers
+                    pt_arr = item.pt && item.pt.sc ? [].concat(item.pt.sc) : []; // Any past tense
+                    pt_arr = item.pt && item.pt.tr ? pt_arr.concat(item.pt.tr) : pt_arr; // Any past tense triggers
 
-                    pp_arr = this.pp && this.pp.sc ? [].concat(this.pp.sc) : []; // Any past participle
-                    pp_arr = this.pp && this.pp.tr ? pp_arr.concat(this.pp.tr) : pp_arr; // Any past tense triggers
+                    pp_arr = item.pp && item.pp.sc ? [].concat(item.pp.sc) : []; // Any past participle
+                    pp_arr = item.pp && item.pp.tr ? pp_arr.concat(item.pp.tr) : pp_arr; // Any past tense triggers
 
-                    pt_pp_arr = this.pt_pp && this.pt_pp.sc ? [].concat(this.pt_pp.sc) : []; // Where Scots past tense and past participle are the same
-                    pt_pp_arr = this.pt_pp && this.pt_pp.tr ? pt_pp_arr.concat(this.pt_pp.tr) : pt_pp_arr; // triggers
+                    pt_pp_arr = item.pt_pp && item.pt_pp.sc ? [].concat(item.pt_pp.sc) : []; // Where Scots past tense and past participle are the same
+                    pt_pp_arr = item.pt_pp && item.pt_pp.tr ? pt_pp_arr.concat(item.pt_pp.tr) : pt_pp_arr; // triggers
 
-                    neg = this.neg ? '<span class="neg">neg. <span>' + [].concat(this.neg.sc).join(', ') + '</span></span>' : ''; // Any Scots negative
+                    neg = item.neg ? '<span class="neg">neg. <span>' + [].concat(item.neg.sc).join(', ') + '</span></span>' : ''; // Any Scots negative
 
-                    if (this.hl) { // Specific trigger highlight words
-                        hl_all = [].concat(this.hl);
-                    } else if (this.tr) { // Standard triggers
-                        hl_all = [].concat(this.tr);
+                    if (item.hl) { // Specific trigger highlight words
+                        hl_all = [].concat(item.hl);
+                    } else if (item.tr) { // Standard triggers
+                        hl_all = [].concat(item.tr);
                     } else { // No triggers of any kind
                         hl_all = [];
                     }
@@ -281,8 +283,8 @@ var GLOSSAR = (function() {
                         hl_all = hl_all.concat(hl_sc_alt);
                     }
                     // Add any phonetic spellings
-                    if (this.pr) {
-                        hl_all = hl_all.concat(this.pr);
+                    if (item.pr) {
+                        hl_all = hl_all.concat(item.pr);
                     }
                     // Add any highlighting words
                     if (hl_all.length) {
@@ -291,13 +293,13 @@ var GLOSSAR = (function() {
                         hl = ''; // No trigger words
                     }
 
-                    pt = pt_arr.length ? '<span class="pt">pt <span data-hl="' + pt_arr.join(',') + '">' + [].concat(this.pt.sc).join(', ') + '</span></span>' : ''; // Past tense (simpler verbs)
+                    pt = pt_arr.length ? '<span class="pt">pt <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span></span>' : ''; // Past tense (simpler verbs)
 
-                    pp = pp_arr.length ? '<span class="pp">ptp <span data-hl="' + pp_arr.join(',') + '">' + [].concat(this.pp.sc).join(', ') + '</span></span>' : ''; // Past participle (simpler verbs)
+                    pp = pp_arr.length ? '<span class="pp">ptp <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span></span>' : ''; // Past participle (simpler verbs)
 
-                    pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(this.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
+                    pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
 
-                    $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(this.sc).join(', ')) + '</span> ' +
+                    $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</span> ' +
                         audio +
                         pr +
                         grammar +
@@ -433,7 +435,7 @@ var GLOSSAR = (function() {
             $.each(items, function() {
                 if (this &&
                     (this.toLowerCase() === state.word_lc ||
-                    (en && en.indexOf(state.word_lc) > -1))
+                        (en && en.indexOf(state.word_lc) > -1))
                 ) {
                     $el.addClass('hl');
                     state.highlight = state.highlight + 1;
