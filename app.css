@@ -208,7 +208,7 @@ div.en, div.def, div.ex, div.inf {
 .ex, .inf {
     font-size: .8rem;
 }
-.pt, .pp, .pt-pp, .neg {
+.pt, .pp, .pt-pp, .neg, .pl {
     padding-left: 4px;
     line-height: 1.4;
 }
@@ -216,13 +216,13 @@ div.en, div.def, div.ex, div.inf {
     padding-left: 0;
     line-height: 1.4;
 }
-.pt span, .pp span, .pt-pp span, .neg span {
+.pt span, .pp span, .pt-pp span, .neg span, .pl span {
     padding: 1px 4px;
 }
-.pt, .pp, .pt-pp, .neg {
+.pt, .pp, .pt-pp, .neg, .pl {
     display: block;
 }
-.sc, .sc-alt span, .pt span, .pp span, .pt-pp span, .neg span {
+.sc, .sc-alt span, .pt span, .pp span, .pt-pp span, .neg span, .pl span {
     font-weight: 600;
 }
 .en {

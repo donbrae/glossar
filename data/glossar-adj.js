@@ -5,8 +5,8 @@
 G.adj = {}; // More complex adjectives
 
 G.adj.guid = {
-    trigs: ['gwid', 'geed'],
-    pr: ['gid', 'gyid', 'göd', 'gweed']
+    trigs: 'gwid',
+    pr: ['gid', 'gyid', 'göd', 'gaed', 'gweed', 'geed']
 };
 
 /**

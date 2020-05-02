@@ -8,7 +8,7 @@ var GLOSSAR = (function() {
 
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_non_hl: 3 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for
+            threshold_non_hl: 4 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for
         },
         state = {
             word: '', // Value of search text box
@@ -32,8 +32,17 @@ var GLOSSAR = (function() {
                     name: 'sc',
                     weight: 0.43
                 }, {
-                    name: 'pt.sc',
+                    name: 'pl.sc',
+                    weight: 0.03
+                }, {
+                    name: 'pl.en',
                     weight: 0.02
+                }, {
+                    name: 'pl.tr',
+                    weight: 0.02
+                }, {
+                    name: 'pt.sc',
+                    weight: 0.05
                 }, {
                     name: 'pt.tr',
                     weight: 0.005
@@ -57,10 +66,10 @@ var GLOSSAR = (function() {
                     weight: 0.03
                 }, {
                     name: 'sc_alt',
-                    weight: 0.1
+                    weight: 0.05
                 }, {
                     name: 'pr',
-                    weight: 0.1
+                    weight: 0.05
                 }, {
                     name: 'en',
                     weight: 0.05
@@ -224,8 +233,8 @@ var GLOSSAR = (function() {
      * @param {Function} callback
      */
     function print(r, callback) {
-        var grammar, hl_sc_alt, audio, item,
-            hl, hl_all, $li, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, or,
+        var grammar, sc_alt, hl_sc_alt, audio, item,
+            hl, hl_all, $li, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, pl, pl_arr, or,
             results_filtered = [];
 
         if (r && r.length) {
@@ -244,7 +253,7 @@ var GLOSSAR = (function() {
                     results_filtered.push(item);
 
                     grammar = item.gr ? '<span class="grammar">' + [].concat(item.gr).join('; ') + '</span> ' : ''; // Grammar
-                    sc_alt = item.sc_alt ? '<div class="sc-alt">(alt Scots maks: <span>' + [].concat(item.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
+                    sc_alt = item.sc_alt ? '<div class="sc-alt">(alt. Scots maks: <span>' + [].concat(item.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
                     en = item.en ? formatMultiple(item.en, ',', 'en') : ''; // English
                     pr = item.pr ? '<span class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
                     def = item.def ? formatMultiple(item.def, ';', 'def') : ''; // Definition
@@ -270,6 +279,10 @@ var GLOSSAR = (function() {
                     pt_pp_arr = item.pt_pp && item.pt_pp.tr ? pt_pp_arr.concat(item.pt_pp.tr) : pt_pp_arr; // triggers
 
                     neg = item.neg ? '<span class="neg">neg. <span>' + [].concat(item.neg.sc).join(', ') + '</span></span>' : ''; // Any Scots negative
+
+                    // Noun plurals
+                    pl_arr = item.pl && item.pl.sc ? [].concat(item.pl.sc) : [];
+                    pl_arr = item.pl && item.pl.tr ? pl_arr.concat(item.pl.tr) : pl_arr; // Triggers
 
                     if (item.hl) { // Specific trigger highlight words
                         hl_all = [].concat(item.hl);
@@ -299,11 +312,14 @@ var GLOSSAR = (function() {
 
                     pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
 
+                    pl = pl_arr.length ? '<span class="pl">pl <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></span>' : ''; // Noun plurals
+
                     $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</span> ' +
                         audio +
                         pr +
                         grammar +
                         sc_alt +
+                        pl +
                         pt +
                         pp +
                         pt_pp +
@@ -457,7 +473,7 @@ var GLOSSAR = (function() {
             hielicht(
                 $('.sc', this), // UI element
                 items, // Scots words
-                r[i].en ? makeSingleArray(r[i].en) : null // Corresponding English words to gar highlighting
+                r[i].en ? makeSingleArray(r[i].en) : null // Corresponding English words to cause highlighting
             );
 
             // Past tense
@@ -466,7 +482,7 @@ var GLOSSAR = (function() {
                 hielicht(
                     $('.pt span', this),
                     items, // Scots words
-                    r[i].pt && r[i].pt.tr ? makeSingleArray(r[i].pt.tr) : null // Corresponding trigger words to gar highlighting
+                    r[i].pt && r[i].pt.tr ? makeSingleArray(r[i].pt.tr) : null // Corresponding trigger words to cause highlighting
                 );
             }
 
@@ -497,6 +513,16 @@ var GLOSSAR = (function() {
                     $('.neg span', this),
                     items,
                     r[i].neg && r[i].neg.tr ? makeSingleArray(r[i].neg.tr) : null
+                );
+            }
+
+            // Plurals
+            if ($('.pl', this).length) {
+                items = $('.pl span', this).text().split(', ');
+                hielicht(
+                    $('.pl span', this),
+                    items,
+                    r[i].pl && r[i].pl.en ? makeSingleArray(r[i].pl.en) : null
                 );
             }
 

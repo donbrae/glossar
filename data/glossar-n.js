@@ -461,6 +461,10 @@ G.dict.push({
         [G.notes.or.ms, 'gloriositie'],
         [G.notes.or.mf, 'glorieuseté']
     ]
+}, {
+    sc: 'guids',
+    en: 'goods',
+    gr: 'n'
 }, { // H
     sc: 'haik',
     en: ['a person or animal given to roaming about', ['a trek', 'journey']],
@@ -874,7 +878,7 @@ G.dict.push({
     sc_alt: 'steerer',
     en: 'activist',
     gr: 'n',
-    or: '<span>steer</span> ‘tae steer, gie airt til’ wi <span>-ar</span> suffix. Baith <span>-ar</span> an <span>-er</span> kythe on the SLC wabsite. Waled <span>-ar</span> here by analogy wi <span>co-airtar</span>, <span>pairt-takar</span> an <span>lawmakar</span>'
+    or: '<span>steer</span> ‘tae steer, gie airt til’ wi <span>-ar</span> suffix. Baith <span>-ar</span> an <span>-er</span> kythe on the SLC wabsite. Waled <span>-ar</span> here by analogy wi <span>co-airtar</span>, <span>pairt-takar</span> and <span>lawmakar</span>'
 }, {
     sc: 'swither',
     en: [
@@ -961,6 +965,21 @@ G.dict.push({
     ex: 'He’s an awfu haurd wirker',
     or: [
         [G.notes.or.as, 'wirkar, wyrkar(e)']
+    ]
+}, {
+    sc: 'wuman',
+    en: 'woman',
+    pl: {
+        sc: 'wemen',
+        en: 'women',
+        tr: ['weemen', 'weemin', 'weimen', 'wimmen', 'wimen']
+    },
+    gr: 'n',
+    tr: ['wummin', 'wumman'],
+    or: [
+        [G.notes.or.as, 'woman, weman'],
+        ['(plural)', 'wemen, weimen, weemen'],
+        [G.notes.or.ae, 'wīfmann']
     ]
 }, {
     sc: 'wynd',

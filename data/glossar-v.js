@@ -968,10 +968,10 @@ G.dict.push({
         sc: 'gar',
         pt_pp: {
             sc: ['gart', 'garred'],
-            tr: ['made', 'caused', 'forced', 'compelled', 'required']
+            tr: ['made', 'caused', 'forced', 'compelled', 'required', 'makkit']
         },
         def: ['cause something tae be duin', 'mak a body or thing dae something'],
-        tr: ['make', 'cause', 'force', 'compel', 'require'],
+        tr: ['make', 'mak', 'cause', 'force', 'compel', 'require'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'ger, gar'],
