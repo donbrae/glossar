@@ -310,12 +310,6 @@ G.dict = [{
     sc: ['thare', 'there'],
     en: 'there'
 }, {
-    sc: ['dinna', 'dinnae'],
-    en: [
-        ['don\'t', 'do not']
-    ],
-    tr: ['dinny', 'dont']
-}, {
     sc: 'partícular',
     pr: ['purTikyulur', 'purTiklur', 'parTeekyulur', 'parTeeklur'],
     sc_alt: ['parteecular'],

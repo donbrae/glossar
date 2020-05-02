@@ -52,7 +52,7 @@ $last_updatit = str_replace(
     <script src="fuse.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?ts=1588432467" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?ts=1588434681" onload="GLOSSAR.init()"></script>
 
 </head>
 

@@ -111,10 +111,10 @@ G.v.gae = {
 };
 G.v.gae.trigs = [].concat( // Control display of conjugated 'gae'
     G.v.gae.sc, G.v.gae.en, // gae
-    G.v.gae.neg.sc, G.v.gae.neg.en, G.v.gae.neg.tr, // gae neg
-    G.v.gae.neg.tps.sc, G.v.gae.neg.tps.en, G.v.gae.neg.tps.tr, // gae neg third person singular
+    G.v.gae.neg.sc, // gae neg
+    G.v.gae.neg.tps.sc, // gae neg third person singular
     G.v.gae.pt.sc, G.v.gae.pt.en, G.v.gae.pt.tr, // gae pt
-    G.v.gae.pt.neg.sc, G.v.gae.pt.neg.en, // gae pt neg
+    G.v.gae.pt.neg.sc, // gae pt neg
     G.v.gae.pp.sc, G.v.gae.pp.en, G.v.gae.pp.tr, // gae pp
     G.v.gae.ing.sc, G.v.gae.ing.en, G.v.gae.ing.tr, // gae -ing form
     G.v.gae.tps.sc, G.v.gae.tps.en // gae third person singular
@@ -168,10 +168,10 @@ G.v.gie = {
 G.v.gie.trigs = [].concat( // Control display of conjugated 'gie'
     G.v.gie.sc, G.v.gie.en, // gie
     G.v.gie.pr, // gie pr
-    G.v.gie.neg.sc, G.v.gie.neg.en, // gie neg
-    G.v.gie.neg.tps.sc, G.v.gie.neg.tps.en, G.v.gie.neg.tps.tr, // gie neg third person singular
+    G.v.gie.neg.sc, // gie neg
+    G.v.gie.neg.tps.sc, // gie neg third person singular
     G.v.gie.pt.sc, G.v.gie.pt.en, // gie pt
-    G.v.gie.pt.neg.sc, G.v.gie.pt.neg.en, // gie pt neg
+    G.v.gie.pt.neg.sc, // gie pt neg
     G.v.gie.pp.sc, G.v.gie.pp.en, // gie pp
     G.v.gie.ing.sc, G.v.gie.ing.en, G.v.gie.ing.tr, // gie -ing form
     G.v.gie.tps.sc, G.v.gie.tps.en // gie third person singular
@@ -397,7 +397,7 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
 
 // ken and knaw triggers
 G.v.ken_knaw = {};
-G.v.ken_knaw.trigs = ['ken', 'know', 'kenna', 'know not', 'kent', 'kenned', 'knew', 'kentna', 'knew not', 'did not know', 'didn\'t know', 'known', 'knaw', 'knawed', 'knawn'];
+G.v.ken_knaw.trigs = ['ken', 'know', 'kenna', 'know not', 'kent', 'kenned', 'knew', 'kentna', 'knew not', 'known', 'knaw', 'knawed', 'knawn'];
 
 // lat triggers
 G.v.lat = {};
@@ -720,7 +720,7 @@ G.dict.push({
     }, { // v gae neg third person singular
         sc: G.v.gae.neg.tps.sc,
         en: G.v.gae.neg.tps.en,
-        tr: G.v.gae.trigs,
+        tr: G.v.gae.neg.tps.tr,
         hl: [].concat(G.v.gae.neg.tps.sc, G.v.gae.neg.tps.tr),
         gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw
     }, { // v gae pt
@@ -1160,7 +1160,7 @@ G.dict.push({
         en: ['knew'],
         neg: {
             sc: 'kentna',
-            tr: ['knew not', 'did not know', 'didn\'t know']
+            tr: G.v.ken_knaw.trigs
         },
         tr: G.v.ken_knaw.trigs,
         hl: ['kent', 'kenned'],
@@ -1486,7 +1486,7 @@ G.dict.push({
         sc: 'proceed',
         en: 'proceed',
         gr: 'v',
-        tr: 'go',
+        tr: ['go', 'gae', 'gang', 'ging'],
         or: [
             [G.notes.or.as, 'proced(e), proceid'],
             [G.notes.or.me + ' an ' + G.notes.or.eme, 'proced(e), proceede'],
