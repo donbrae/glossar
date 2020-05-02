@@ -49,10 +49,10 @@ $last_updatit = str_replace(
     <link rel="stylesheet" href="app.css?ts=200429081711">
 
     <script src="zepto.min.js"></script>
-    <script src="fuse.min.js"></script>
+    <script src="fuse.basic.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?ts=1588440687" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?ts=1588188949" onload="GLOSSAR.init()"></script>
 
 </head>
 
