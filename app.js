@@ -8,7 +8,7 @@ var GLOSSAR = (function() {
 
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_non_hl: 3 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for
+            threshold_non_hl: 4 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for
         },
         state = {
             word: '', // Value of search text box
@@ -33,7 +33,7 @@ var GLOSSAR = (function() {
                 minMatchCharLength: 5,
                 keys: [{
                     name: 'sc',
-                    weight: 0.3
+                    weight: 0.43
                 }, {
                     name: 'pt.sc',
                     weight: 0.02
@@ -54,10 +54,10 @@ var GLOSSAR = (function() {
                     weight: 0.005
                 }, {
                     name: 'neg.sc',
-                    weight: 0.01
+                    weight: 0.03
                 }, {
                     name: 'neg.tr',
-                    weight: 0.01
+                    weight: 0.03
                 }, {
                     name: 'sc_alt',
                     weight: 0.1
@@ -66,10 +66,10 @@ var GLOSSAR = (function() {
                     weight: 0.1
                 }, {
                     name: 'en',
-                    weight: 0.12
+                    weight: 0.05
                 }, {
                     name: 'tr',
-                    weight: 0.3
+                    weight: 0.2
                 }]
             }, t,
 
@@ -91,7 +91,7 @@ var GLOSSAR = (function() {
                 }
             }
 
-            state.word = G.utils.replaceQo(
+            state.word = G.utils.replaceQo( // Replace ‘ and ’ with '
                 $.trim(
                     $field.val().replace(/(<([^>]+)>)/ig, ' ') // Strip any HTML
                 )
@@ -297,7 +297,7 @@ var GLOSSAR = (function() {
 
                     pt_pp = pt_pp_arr.length ? '<span class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(this.pt_pp.sc).join(', ') + '</span></span>' : ''; // Identical past tense and past participle (simpler verbs)
 
-                    $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + [].concat(this.sc).join(', ') + '</span> ' +
+                    $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(this.sc).join(', ')) + '</span> ' +
                         audio +
                         pr +
                         grammar +
@@ -307,7 +307,7 @@ var GLOSSAR = (function() {
                         pt_pp +
                         neg +
                         def +
-                        en +
+                        G.utils.curlyQuotes(en) +
                         ex +
                         inf +
                         or +

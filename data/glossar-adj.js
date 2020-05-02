@@ -347,7 +347,7 @@ G.dict.push({ // A
     tr: ['guy', 'giy'],
     gr: ['adj'],
     or: 'see adv',
-    ex: 'Wi it bein sic a het day, it wis a gey trauchle tae win at the tap o Lee Pen'
+    ex: ['It wis a gey trauchle winnin at the tap o Lee Pen', 'It’s gey cauld the nicht']
 }, {
     sc: 'gray',
     tr: 'grey',

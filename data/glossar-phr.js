@@ -58,4 +58,8 @@ G.dict.push({
     gr: 'adv phr',
     ex: 'The twa governments is committit tae haud gaun douce and wicelike',
     ph: true
+}, {
+    sc: 'gie\'s',
+    tr: ['gies', 'gie me', 'gie us', 'give me', 'give us'],
+    def: 'Gie me, gie us (contraction o ‘gie us’)'
 });

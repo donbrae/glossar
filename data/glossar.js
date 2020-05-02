@@ -389,5 +389,9 @@ G.utils = {
     // Replaces ‘ and ’ with '
     replaceQo: function(s) {
         return s.replace(/‘|’/g, "'");
+    },
+    // Replaces ' with ’
+    curlyQuotes: function(s) {
+        return s.replace(/'/g, "’");
     }
 };

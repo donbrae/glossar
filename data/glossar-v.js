@@ -133,7 +133,13 @@ G.v.gie = {
         sc: 'giena',
         en: [
             ['do not give', 'give not']
-        ]
+        ],
+        tps: { // > Third person singular
+            sc: 'giesna',
+            en: [
+                ['does not give', 'gives not']
+            ]
+        }
     },
     pt: {
         sc: 'gied',
@@ -163,6 +169,7 @@ G.v.gie.trigs = [].concat( // Control display of conjugated 'gie'
     G.v.gie.sc, G.v.gie.en, // gie
     G.v.gie.pr, // gie pr
     G.v.gie.neg.sc, G.v.gie.neg.en, // gie neg
+    G.v.gie.neg.tps.sc, G.v.gie.neg.tps.en, G.v.gie.neg.tps.tr, // gie neg third person singular
     G.v.gie.pt.sc, G.v.gie.pt.en, // gie pt
     G.v.gie.pt.neg.sc, G.v.gie.pt.neg.en, // gie pt neg
     G.v.gie.pp.sc, G.v.gie.pp.en, // gie pp
@@ -275,6 +282,62 @@ G.v.war.trigs = [].concat(
 );
 // wis end
 
+// v dae
+G.v.dae = {
+    sc: ['dae', 'div'],
+    en: 'do',
+    pr: ['day', 'dee', 'doo'],
+    tr: 'duv',
+    neg: {
+        sc: ['daena', 'dinna', 'dae', 'divna'],
+        sc_alt: ['dinnae', 'divnae'],
+        en: [
+            ['do not', 'don\'t']
+        ],
+        tr: ['daenae', 'deh', 'duvnae', 'duvna']
+    },
+    ps: { // Present singular
+        sc: ['daes', 'dis'],
+        en: 'does',
+        tr: 'dus',
+        neg: {
+            sc: ['daesna', 'disna'],
+            sc_alt: ['daesnae', 'disnae'],
+            en: [
+                ['does not', 'doesn\'t']
+            ],
+            tr: ['duznae', 'dusnae', 'doesnae', 'doesna']
+        }
+    },
+    pt: {
+        sc: ['daed', 'did'],
+        en: 'did',
+        pr: ['did', 'daid', 'dood'],
+        neg: {
+            sc: ['daedna', 'didna'],
+            sc_alt: ['daednae', 'didnae'],
+            en: [
+                ['did not', 'didn\'t']
+            ]
+        }
+    },
+    ptp: {
+        sc: ['duin', 'daen'],
+        en: 'done',
+        pr: ['din', 'deen', 'dayn', 'doon']
+    }
+};
+G.v.dae.trigs = [].concat( // Control display of conjugated 'hae'
+    G.v.dae.sc, G.v.dae.en, G.v.dae.pr, // dae
+    G.v.dae.neg.sc, G.v.dae.neg.sc_alt, G.v.dae.neg.en, G.v.dae.neg.tr, // dae neg
+    G.v.dae.ps.sc, G.v.dae.ps.sc_alt, G.v.dae.ps.en, G.v.dae.ps.tr, // dae present singular
+    G.v.dae.ps.neg.sc, G.v.dae.ps.neg.sc_alt, G.v.dae.ps.neg.en, G.v.dae.ps.neg.tr, // dae neg present singular
+    G.v.dae.pt.sc, G.v.dae.pt.en, G.v.dae.pt.pr, // dae past tense
+    G.v.dae.pt.neg.sc, G.v.dae.pt.neg.sc_alt, G.v.dae.pt.neg.en, // dae neg past tense
+    G.v.dae.ptp.sc, G.v.dae.ptp.sc_alt, G.v.dae.ptp.pr // dae past participle
+);
+// dae end
+
 // v hae
 G.v.hae = {
     sc: ['hae', 'hiv'],
@@ -286,7 +349,7 @@ G.v.hae = {
         en: [
             ['have not', 'haven\'t']
         ],
-        tr: ['huvnae', 'huvna', 'havenae']
+        tr: ['huvnae', 'huvna', 'havena', 'havenae']
     },
     ps: { // Present singular
         sc: 'haes',
@@ -707,6 +770,12 @@ G.dict.push({
         tr: G.v.gie.trigs,
         hl: G.v.gie.neg.sc,
         gr: 'neg o ' + G.v.gie.meta.gr_hw
+    }, { // v gae neg third person singular
+        sc: G.v.gie.neg.tps.sc,
+        en: G.v.gie.neg.tps.en,
+        tr: G.v.gie.trigs,
+        hl: [].concat(G.v.gie.neg.tps.sc, G.v.gie.neg.tps.tr),
+        gr: 'neg third person singular o ' + G.v.gie.sc
     }, { // v gie pt
         sc: G.v.gie.pt.sc,
         en: G.v.gie.pt.en,
@@ -772,7 +841,61 @@ G.dict.push({
             'pairt archaism, pairt protologism, frae the ' + G.notes.or.as + ' <span>compone</span> ‘tae mak by pittin thegither, tae compose; create in speak or writin.’ Henryson wrate: ‘Of thir sex … fyve hevynly symphonyis Componyt ar,’ whaur <span>symphonyis</span> = ‘a harmonious muisical sound’',
             [G.notes.or.l, 'compōnere']
         ]
-    }, {
+    },
+    { // dae
+        sc: G.v.dae.sc,
+        pr: G.v.dae.pr,
+        en: G.v.dae.en,
+        tr: G.v.dae.trigs,
+        hl: G.v.dae.sc,
+        gr: 'v'
+    }, { // dae neg
+        sc: G.v.dae.neg.sc,
+        sc_alt: G.v.dae.neg.sc_alt,
+        pr: G.v.dae.neg.pr,
+        en: G.v.dae.neg.en,
+        tr: G.v.dae.trigs,
+        hl: [].concat(G.v.dae.neg.sc, G.v.dae.neg.tr),
+        gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
+        ex: 'I dae ken'
+    }, { // dae present singular
+        sc: G.v.dae.ps.sc,
+        en: G.v.dae.ps.en,
+        pr: G.v.dae.ps.pr,
+        tr: G.v.dae.trigs,
+        hl: [].concat(G.v.dae.ps.sc, G.v.dae.ps.tr),
+        gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    }, { // dae present singular neg
+        sc: G.v.dae.ps.neg.sc,
+        sc_alt: G.v.dae.ps.neg.sc_alt,
+        en: G.v.dae.ps.neg.en,
+        tr: G.v.dae.trigs,
+        hl: [].concat(G.v.dae.ps.neg.sc, G.v.dae.ps.neg.tr),
+        gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    }, { // dae past tense
+        sc: G.v.dae.pt.sc,
+        pr: G.v.dae.pt.pr,
+        en: G.v.dae.pt.en,
+        tr: G.v.dae.trigs,
+        hl: [].concat(G.v.dae.pt.sc),
+        gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    }, { // dae neg past tense
+        sc: G.v.dae.pt.neg.sc,
+        sc_alt: G.v.dae.pt.neg.sc_alt,
+        en: G.v.dae.pt.neg.en,
+        tr: G.v.dae.trigs,
+        hl: [].concat(G.v.dae.pt.neg.sc, G.v.dae.pt.neg.tr),
+        gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    }, { // dae past par
+        sc: G.v.dae.ptp.sc,
+        sc_alt: G.v.dae.ptp.sc_alt,
+        en: G.v.dae.ptp.en,
+        pr: G.v.dae.ptp.pr,
+        tr: G.v.dae.trigs,
+        hl: [].concat(G.v.dae.ptp.sc, G.v.dae.ptp.pr),
+        gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    },
+    {
         sc: 'jalouse',
         en: ['suspect', ['suppose', 'guess', 'surmise']],
         pr: 'jaLooz',
