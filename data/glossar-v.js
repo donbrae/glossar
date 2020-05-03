@@ -294,7 +294,7 @@ G.v.dae = {
         en: [
             ['do not', 'don\'t']
         ],
-        tr: ['daenae', 'deh', 'duvnae', 'duvna']
+        tr: ['daenae', 'deh', 'duvnae', 'duvna', 'dinny', 'dinnay']
     },
     ps: { // Present singular
         sc: ['daes', 'dis'],
@@ -407,7 +407,7 @@ G.v.lat.trigs = ['allow', 'permit', 'cause', 'make happen', 'luit', 'latten', 'l
  * Add verbs (both complex and more simple) to dictionary object
  */
 
-G.dict.push({
+G.dict.push({ // A
         sc: 'accress',
         pt_pp: {
             sc: 'accressed',
@@ -421,7 +421,7 @@ G.dict.push({
             [G.notes.or.as, 'accress, accresce'],
             ['frae the ' + G.notes.or.rl + ' term', 'accrescere']
         ]
-    }, { // A
+    }, {
         sc: 'adduce',
         en: ['cite as pertinent, quote as evidence'],
         tr: 'pertain',
@@ -431,9 +431,27 @@ G.dict.push({
             [G.notes.or.as, 'adduce'],
             [G.notes.or.l, 'adūcere']
         ]
+    }, {
+        sc: 'allocate',
+        def: 'tae assign',
+        pt: {
+            sc: 'allocatit',
+            tr: ['allocated', 'assigned']
+        },
+        pp: {
+            sc: 'allocate',
+            tr: ['allocated', 'allocatit', 'assigned']
+        },
+        tr: ['assign', 'appoint'],
+        hl: 'assign',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'allocat'],
+            [G.notes.or.l, 'allocāt-, <span>ptp stem o</span> allocāre']
+        ],
+        ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', 'Resources haes been allocate tae them that’s maist in need']
     },
-    // v be
-    {
+    { // v be
         sc: G.v.be.sc,
         en: G.v.be.en,
         tr: G.v.be.trigs, // Highlighted by default
@@ -1231,6 +1249,7 @@ G.dict.push({
             tr: ['taught', 'instructed', 'educated']
         },
         gr: 'v',
+        au: 'learn'
     }, {
         sc: 'licht',
         en: 'light',
@@ -1369,7 +1388,8 @@ G.dict.push({
         tr: G.v.hae.trigs,
         hl: G.v.hae.sc,
         gr: 'v',
-        ex: [G.ex.a1, G.ex.c1]
+        ex: [G.ex.a1, G.ex.c1],
+        au: 'hae'
     }, { // hae neg
         sc: G.v.hae.neg.sc,
         sc_alt: G.v.hae.neg.sc_alt,
@@ -1598,6 +1618,15 @@ G.dict.push({
             ['clear', 'rid'], 'clarify'
         ],
         gr: 'v'
+    }, {
+        sc: 'remeid',
+        en: [['remedy', 'redress']],
+        tr: ['remeed', 'rectify', 'cure'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'remed(e)'],
+            ['frae the noun or a reduced mak o ' + G.notes.or.an, 'remedier']
+        ]
     }, {
         sc: ['set furth', 'furthset'],
         pt: {

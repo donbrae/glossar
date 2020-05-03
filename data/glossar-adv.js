@@ -434,6 +434,14 @@ G.dict.push({ // A
     tr: ['the-nou', 'the-noo', 'the noo', 'the now', 'at the moment', 'suin', 'sin', 'seen', 'momentarily', 'a moment ago'],
     ex: ['Haud on; I’ll be there the nou', 'I cawed her the nou but she wisna answerin'],
     or: 'first kythes in ' + G.notes.or.mods
+}, {
+    sc: 'timeously',
+    def: 'in a timeous mainer, promptly',
+    tr: ['promptly', 'expeditiously', 'opportunely', 'in good time', 'early', 'in guid time'],
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'tymously']
+    ]
 }, { // U
     sc: 'unco',
     en: [

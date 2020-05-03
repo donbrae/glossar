@@ -15,9 +15,16 @@ var GLOSSAR = (function() {
             word_lc: '', // Value of search text box in lower case
             timeout: null,
             highlight: 0, // True if at least one word is highlighted in results set
-            random: [] // Indexes of which random entries have already been selected
+            random: [], // Indexes of which random entries have already been selected
+            audio: null,
+            $audio_button: null
         },
         fuse;
+
+        HTMLAudioElement.prototype.stop = function() {
+            this.pause();
+            this.currentTime = 0.0;
+        }
 
     function init() {
         const options = {
@@ -88,6 +95,12 @@ var GLOSSAR = (function() {
                 $field = $('#searchTextbox');
 
             function goSearch() {
+
+                // Stop any audio, important especially if the connection is slow and audio file ends up loading later and playing 'randomly'
+                if (state.audio) {
+                    state.audio.stop();
+                }
+
                 if (state.word.length) {
                     $('#result').removeClass('show');
                     print(fuse.search(state.word));
@@ -191,19 +204,25 @@ var GLOSSAR = (function() {
 
         $(document).on('click', '.play-audio', function(e) {
 
-            // Unique variables for click event
-            var $button = $(this),
-                audio;
+            if (!$(this).prop('disabled')) {
+                if (state.audio) { // If audio is currently being played
+                    state.audio.stop();
+                    state.audio.dispatchEvent(new Event('ended')); // Prompt 'ended' event (see below)
+                }
 
-            $button.prop('disabled', true);
-            audio = document.getElementById($button.data('file'));
+                state.$audio_button = $(this);
+                state.$audio_button.prop('disabled', true);
 
-            $(audio).bind('ended', function() {
-                $(this).unbind('ended');
-                $button.prop('disabled', false);
-            });
+                state.audio = document.getElementById(state.$audio_button.data('file'));
 
-            audio.play();
+                $(state.audio).bind('ended', function() {
+                    $(this).unbind('ended');
+                    state.$audio_button.prop('disabled', false);
+                    state.audio = null;
+                });
+
+                state.audio.play();
+            }
 
             e.preventDefault();
         });

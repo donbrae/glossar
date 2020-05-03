@@ -506,7 +506,8 @@ G.dict.push({
     ex: [
         ['They’d juist aboot pit by eneuch siller for a deposit on a hoose'],
         ['It’s yersel! Come awa ben the hoose'],
-    ]
+    ],
+    au: 'hoose'
 }, {
     sc: 'maet',
     sc_alt: 'meat',
@@ -624,7 +625,7 @@ G.dict.push({
 }, {
     sc: 'loch',
     def: [
-        ['a naitural formt area o watter surroundit by laund (rangin in bouk frae muckle doun til lairge pownds); aft-times in street names', 'an inlat o the sea'], 'a dub'
+        ['a natural-formed area o watter surroundit by laund (rangin in bouk frae muckle doun til lairge pownds); aft-times in street names', 'an inlat o the sea'], 'a dub'
     ],
     tr: ['lake', 'pond', 'puddle', 'pool', 'inlet', 'inlat', 'watter', 'dub'],
     hl: ['lake', 'pond', 'puddle', 'pool', 'dub'],
@@ -689,6 +690,15 @@ G.dict.push({
     tr: ['memory', 'recollection', 'mynd'],
     gr: 'n'
 }, { // N
+    sc: 'narrative',
+    def: [['an accoont o events', 'the action o relatin']],
+    tr: ['account', 'accoont', 'recital', 'statement'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'narrative'],
+        [G.notes.or.mf, 'narrative']
+    ]
+}, {
     sc: 'naturality',
     en: [
         ['innate ability or intelligence', 'talent']
@@ -714,6 +724,15 @@ G.dict.push({
     en: 'anybody',
     tr: ['oniebody', 'emdie', 'emdy'],
     gr: 'n'
+}, {
+    sc: 'oot',
+    en: 'out',
+    gr: ['n', 'v', 'adj', 'adv', 'prep', 'interj'],
+    or: [
+        [G.notes.or.as, 'out, owt'],
+        [G.notes.or.ae, 'ūt']
+    ],
+    au: 'oot'
 }, {
     sc: 'ordinar',
     en: [
@@ -832,6 +851,16 @@ G.dict.push({
     gr: 'n',
     or: 'see verb'
 }, { // R
+    sc: 'remeid',
+    en: [['remedy', 'redress']],
+    tr: ['remeed', 'relief', 'cure'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'remed(e)'],
+        [G.notes.or.an, 'remeide'],
+        [G.notes.or.an + ', ' + G.notes.or.mf, 'remede']
+    ]
+}, {
     sc: 'rhetoric',
     pr: 'rEtorik',
     en: 'rhetoric',
@@ -942,6 +971,7 @@ G.dict.push({
     pr: ['wabsteed', 'wabsyt'],
     tr: ['websteid'],
     gr: 'n',
+    au: ['wabsite', 'wabsteid']
 }, {
     sc: 'wark',
     en: 'work',
@@ -956,6 +986,15 @@ G.dict.push({
         ['He gaed intae wark early for tae set furth a saftware update'],
         G.ex.w
     ]
+}, {
+    sc: 'watter',
+    en: 'water',
+    gr: ['n', 'v'],
+    or: [
+        [G.notes.or.as, 'watter, wattir'],
+        [G.notes.or.ae, 'wæter <span>(noun)</span>, wæterian <span>(verb)</span>']
+    ],
+    au: 'watter'
 }, {
     sc: 'wirker',
     sc_alt: 'warker',
@@ -980,7 +1019,8 @@ G.dict.push({
         [G.notes.or.as, 'woman, weman'],
         ['(plural)', 'wemen, weimen, weemen'],
         [G.notes.or.ae, 'wīfmann']
-    ]
+    ],
+    au: 'wuman'
 }, {
     sc: 'wynd',
     def: '<em>mainly fund in street names</em> a nairae, aft-times windin street or pass, maist aften in touns an cíties',

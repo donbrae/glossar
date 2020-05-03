@@ -84,7 +84,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'braw, bra, brawf'],
         ['variant o the ' + G.notes.or.mf, 'brave']
-    ]
+    ],
+    au: 'braw'
 }, {
     sc: 'brawlike',
     en: [
@@ -568,6 +569,14 @@ G.dict.push({ // A
     tr: 'laith',
     gr: 'adj',
     or: 'see adj <span>sweir</span>'
+}, {
+    sc: 'timeous',
+    en: 'timely',
+    tr: ['in good time', 'in guid time', 'early', 'prompt', 'opportune'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'tymous']
+    ]
 }, { // T
     sc: 'tuim',
     pr: ['tim', 'teem', 'toom', 'taim'],
