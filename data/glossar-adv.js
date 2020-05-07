@@ -92,6 +92,14 @@ G.dict.push({ // A
     gr: 'adv',
     or: 'see n',
     ex: 'He chynged the contents o the file ’ithout takkin a backup, contrair til best prattick'
+}, { // D
+    sc: 'doun',
+    pr: 'doon',
+    en: 'down',
+    gr: ['adv', 'prep', 'adj'],
+    or: [
+        [G.notes.or.as, 'doun, down']
+    ]
 }, { // E
     sc: 'evendoun',
     en: [
@@ -449,6 +457,13 @@ G.dict.push({ // A
     ],
     gr: 'adv',
     or: 'see adj'
+}, {
+    sc: 'up',
+    en: 'up',
+    gr: ['adv', 'prep', 'adj'],
+    or: [
+        [G.notes.or.as, 'up, upe']
+    ]
 }, {
     sc: 'up the stair',
     en: 'upstairs',

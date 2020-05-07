@@ -204,7 +204,7 @@ G.v.be = {
             en: [
                 ['am not', 'amn\'t']
             ],
-            tr: ['umna', 'umnae']
+            tr: ['umna', 'umnae', 'ament']
         }
     },
     psp: { // Present singular and plural
@@ -935,12 +935,12 @@ G.dict.push({ // A
             en: 'downloaded',
             tr: 'doonloadit'
         },
-        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
+        def: '<em>v</em> copy data frae ae computer system til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
         pr: 'doonlaid',
         gr: ['v', 'n'],
         tr: ['doonload', 'download'],
         or: [
-            [G.notes.or.mode, 'download']
+            ['Scots <em>doun</em> + Scots <em>laid</em>, efter ' + G.notes.or.mode, 'download']
         ]
     }, {
         sc: 'edifee',
@@ -1207,6 +1207,13 @@ G.dict.push({ // A
         hl: 'knaw',
         gr: 'v'
     }, { // L
+        sc: 'laid',
+        en: 'load',
+        gr: ['v', 'n'],
+        or: [
+            [G.notes.or.as, 'laid, lade']
+        ]
+    }, {
         sc: 'lat',
         en: 'let',
         pr: ['lat', 'lit'],
@@ -1327,10 +1334,10 @@ G.dict.push({ // A
             en: 'uploaded',
             tr: 'uploadit'
         },
-        def: '<em>v</em> copy data frae ae computer sýstem til anither, for ordinar til a server, an aften ower the internet; <em>n</em> the data (file) uplaidit',
+        def: '<em>v</em> copy data frae ae computer system til anither, for ordinar til a server, an aften ower the internet; <em>n</em> the data (file) uplaidit',
         gr: ['v', 'n'],
         or: [
-            [G.notes.or.mode, 'upload']
+            ['Scots <em>up</em> + Scots <em>laid</em>, efter ' + G.notes.or.mode, 'upload']
         ]
     }, { // F
         sc: 'fankle',
@@ -1634,13 +1641,13 @@ G.dict.push({ // A
             tr: 'published'
         },
         pp: {
-            sc: 'setten furth',
+            sc: ['set furth', 'setten furth'],
             tr: 'published'
         },
         en: 'publish',
         gr: 'v phr, v',
         or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],
-        ex: 'She haes setten furth a pose o onco bonnie poetry'
+        ex: 'She haes setten furth a pose o unco bonnie poetry'
     }, { // S
         sc: 'skair',
         en: 'share',

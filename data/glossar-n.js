@@ -68,6 +68,13 @@ G.dict.push({
         [G.notes.or.anor, 'brá'],
         [G.notes.or.ga, 'bràighe']
     ]
+}, {
+    sc: ['brur', 'brither'],
+    en: 'brother',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'brother, bruthir, broder']
+    ]
 }, { // C
     sc: 'cairt',
     en: ['cart', ['chart, map']],
@@ -765,7 +772,7 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'ourance, owrance, overance']
     ],
-    ex: 'The Labour Pairty tyned owerance o the council'
+    ex: 'The Labour Pairty tyned owerance o the cooncil'
 }, {
     sc: 'pairlament',
     en: 'parliament',
@@ -780,6 +787,14 @@ G.dict.push({
     en: ['stakeholder', 'supporter'],
     gr: 'n',
     ex: G.ex.k
+}, {
+    sc: 'paven',
+    en: 'pavane',
+    tr: ['pavene', 'paven'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'paven, pavin, pavane']
+    ]
 }, {
     sc: 'pneumonie',
     en: 'pneumonia',
@@ -861,6 +876,16 @@ G.dict.push({
         [G.notes.or.an + ', ' + G.notes.or.mf, 'remede']
     ]
 }, {
+    sc: 'retiral',
+    pr: 'reteeral',
+    en: 'retirement',
+    tr: 'demit',
+    hl: 'retiral',
+    gr: 'n',
+    or: [
+        ['a Modren Scots coinage; Aulder Scots haes the verb <em>retere, reteir</em>, frae the ' + G.notes.or.mf, 'retirer']
+    ]
+}, {
     sc: 'rhetoric',
     pr: 'rEtorik',
     en: 'rhetoric',
@@ -883,7 +908,7 @@ G.dict.push({
     or: 'SND states that the mak <em>road</em> (frae Auld English <em>rād</em>) is a 16t century borraein frae English, the historical Scots mak bein <em>raid</em>'
 }, {
     sc: 'roaster',
-    def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o thaimsels',
+    def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o theirsels',
     gr: ['n', 'informal', 'derogatory']
 }, { // S
     sc: 'sel-law',
@@ -1023,7 +1048,7 @@ G.dict.push({
     au: 'wuman'
 }, {
     sc: 'wynd',
-    def: '<em>mainly fund in street names</em> a nairae, aft-times windin street or pass, maist aften in touns an cíties',
+    def: '<em>fund mainly in street names</em> a nairae, aft-times windin street or pass, maist aften in touns an cíties',
     tr: ['street', 'alley', 'road', 'gate', 'gait'],
     gr: 'n',
     or: [

@@ -5,8 +5,7 @@
 G.dict.push({
     sc: 'Catalonie',
     en: 'Catalonia',
-    gr: 'pn',
-    or: G.notes.a
+    gr: 'pn'
 }, {
     sc: 'Africae',
     en: 'Africa',
@@ -22,8 +21,7 @@ G.dict.push({
 }, {
     sc: 'Albainie',
     en: 'Albania',
-    gr: 'pn',
-    or: '?' + G.notes.a
+    gr: 'pn'
 }, {
     sc: 'Albainian',
     en: 'Albanian',
@@ -96,15 +94,13 @@ G.dict.push({
 }, {
     sc: 'Bosnie',
     en: 'Bosnia',
-    gr: ['pn', 'adj'],
-    or: '?' + G.notes.a
+    gr: ['pn', 'adj']
 }, {
     sc: 'Bulgairie',
     pr: 'bulGairae',
     en: 'Bulgaria',
     tr: ['Bulgars', 'Bulgarie'],
     hl: ['Bulgairie', 'Bulgarie'],
-    or: '?' + G.notes.a,
     gr: 'pn'
 }, {
     sc: 'Bulgars',
@@ -132,13 +128,11 @@ G.dict.push({
 }, {
     sc: 'Corsicae',
     en: 'Corsica',
-    gr: 'pn',
-    or: '?' + G.notes.a
+    gr: 'pn'
 }, {
     sc: 'Croaitie',
     en: 'Croatia',
-    gr: 'pn',
-    or: '?' + G.notes.a
+    gr: 'pn'
 }, {
     sc: ['Czechie', 'Czechland'],
     en: ['Czech Republic, Czechia'],
@@ -154,7 +148,7 @@ G.dict.push({
     ]
 }, {
     sc: 'Dens',
-    def: ['the Scandinaivie leid spoken in Denmark an in pairts o Greenland an the Faerae Isles', ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']],
+    def: ['the Scandinaivie leid spoken in Denmark and in pairts o Greenland and the Faerae Isles', ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']],
     tr: ['dane', 'danish'],
     gr: ['n'],
     or: 'see adj'
@@ -199,8 +193,7 @@ G.dict.push({
 }, {
     sc: 'Faerae Isles',
     en: 'Faroe Isles',
-    gr: 'pn',
-    or: '?' + G.notes.a
+    gr: 'pn'
 }, {
     sc: 'Finland',
     gr: 'pn',
@@ -225,13 +218,15 @@ G.dict.push({
 }, {
     sc: 'Galicie',
     en: 'Galicia',
+    tr: 'Galice',
     gr: 'pn',
-    or: G.notes.b
+    or: [
+        [G.notes.or.as, 'Galice']
+    ]
 }, {
     sc: 'Georgie',
     en: 'Georgia',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Germany',
     en: 'Germany',
@@ -251,7 +246,11 @@ G.dict.push({
 }, {
     sc: 'Indie',
     en: 'India',
-    gr: 'pn'
+    gr: 'pn',
+    or: [
+        [G.notes.or.as, 'Inde, Ynde'],
+        'likely frae the ' + G.notes.or.f + ' <em>Inde</em> (direct or by wey o ' + G.notes.or.me + ')'
+    ]
 }, {
     sc: ['Ireland', 'Irland'],
     def: ['a country comprisin aboot fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, tae the wast o Great Brítain'],
@@ -264,8 +263,7 @@ G.dict.push({
 }, {
     sc: 'Jamaicae',
     en: 'Jamaica',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Japan',
     en: 'Japan',
@@ -292,18 +290,18 @@ G.dict.push({
     en: 'Luxembourg',
     gr: 'pn'
 }, {
-    sc: 'North Macedonie',
-    en: 'North Macedonia',
-    gr: 'pn'
-}, {
     sc: 'Malaysie',
     en: 'Malaysia',
     gr: 'pn',
-    or: G.notes.b
 }, {
-    sc: 'Meditterane Sea',
-    en: 'Mediterranean Sea',
-    gr: 'pn'
+    sc: 'Mediterrane',
+    en: 'Mediterranean',
+    tr: ['Meditterane', 'Mediterane'],
+    gr: ['pn', 'adj'],
+    or: [
+        [G.notes.or.as, 'Mediterrane'],
+        [G.notes.or.l, 'mediterrān -us']
+    ]
 }, {
     sc: 'Netherlands',
     en: 'Netherlands',
@@ -348,23 +346,19 @@ G.dict.push({
 }, {
     sc: 'Roumainie',
     en: 'Romania',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Roushie',
     en: 'Russia',
-    gr: ['pn', 'adj'],
-    or: G.notes.b
+    gr: ['pn', 'adj']
 }, {
     sc: 'Sardinie',
     en: 'Sardinia',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Scandinaivie',
     en: 'Scandinavia',
-    gr: 'pn',
-    or: G.notes.b
+    gr: ['pn', 'adj']
 }, {
     sc: 'Scotland',
     gr: 'pn',
@@ -372,8 +366,7 @@ G.dict.push({
 }, {
     sc: 'Serbie',
     en: 'Serbia',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Sicilie',
     en: 'Sicilly',
@@ -381,18 +374,15 @@ G.dict.push({
 }, {
     sc: 'Slovakie',
     en: 'Slovakia',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Sloveinie',
     en: 'Slovenia',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Sooth Africae',
     en: 'South Africa',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Sooth Americae',
     en: 'South America',
@@ -408,8 +398,7 @@ G.dict.push({
     sc: 'Spaingie',
     tr: 'Spainie',
     en: 'Spain',
-    gr: 'pn',
-    or: G.notes.b
+    gr: 'pn'
 }, {
     sc: 'Swaiden',
     def: 'a country in Scandinaivie',
@@ -459,7 +448,15 @@ G.dict.push({
     sc: 'Ungairy',
     pr: 'unGairae',
     en: 'Hungary',
-    gr: 'pn'
+    gr: 'pn',
+    or: [
+        [G.notes.or.as, 'Ungarie, Ungary'],
+    ]
+}, {
+    sc: 'Ungairian',
+    pr: 'unGairian',
+    en: 'Hungarian',
+    gr: 'adj'
 }, {
     sc: 'Wales',
     def: 'a country in Great Brítain that is pairt o the Unitit Kinrick',
@@ -602,6 +599,14 @@ G.dict.push({
     gr: 'pn',
     def: 'a cíty in the Netherlands'
 }, {
+    sc: 'North Macedonie',
+    en: 'North Macedonia',
+    tr: ['Macedonia', 'Macedonie', 'Macedone'],
+    gr: 'pn',
+    or: [
+        [G.notes.or.as, 'Macedone']
+    ]
+}, {
     sc: 'Norridge',
     en: 'Norwich',
     gr: 'pn',
@@ -622,14 +627,17 @@ G.dict.push({
     gr: 'pn',
     def: 'a cíty in wast-central Fraunce'
 }, {
-    sc: 'Queensbrig',
-    en: 'Kaliningrad',
-    gr: 'pn'
-}, {
     sc: 'The Rotchell',
     en: 'La Rochelle',
     gr: 'pn',
     def: 'a cíty in waster Fraunce'
+}, {
+    sc: 'Reid Sea',
+    en: 'Red Sea',
+    gr: 'pn',
+    or: [
+        [G.notes.or.as, 'Reid Se']
+    ]
 }, {
     sc: 'Roterdame',
     en: 'Rotterdam',

@@ -409,7 +409,7 @@ G.dict.push({ // A
         [G.notes.or.me, 'aquointe'],
         [G.notes.or.mf, 'accointe']
     ],
-    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the mínister’s view on the said maiter']
+    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the mínister’s view anent the maiter']
 }, {
     sc: ['leart', 'leared'],
     en: [['learned', 'educated']],
@@ -435,6 +435,14 @@ G.dict.push({ // A
     tr: ['most', 'maste'],
     gr: 'adj',
     or: 'see pron'
+}, {
+    sc: 'mony',
+    en: 'many',
+    gr: ['adj', 'n'],
+    or: [
+        [G.notes.or.as, 'mony, monie'],
+        [G.notes.or.ae, 'mǫniᵹ']
+    ]
 }, {
     sc: 'muckle',
     pr: ['muckl', 'meekl'],

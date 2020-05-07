@@ -7,13 +7,6 @@
  */
 
 G.dict.push({
-    sc: ['gie a kythin tae/til'],
-    en: 'demonstrate',
-    tr: ['gie a kythin tae', 'gie a kythin til'],
-    gr: 'v phr',
-    ex: 'The transcription gies a kythin tae the wey fowk spak in the bygane',
-    ph: true
-}, {
     sc: 'at that',
     en: 'with that',
     ex: 'At that, Jamie teuk the gate hame',
