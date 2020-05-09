@@ -33,6 +33,15 @@ G.dict.push({
     ],
     au: 'aipple'
 }, {
+    sc: 'airmy',
+    en: 'army',
+    tr: 'ermy',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'airmie, erme, armie'],
+        [G.notes.or.af, 'armee']
+    ]
+}, {
     sc: 'associe',
     pr: 'aSosee',
     en: 'association',
@@ -139,6 +148,26 @@ G.dict.push({
         [G.notes.or.as, 'claise, claes, clathis'],
         [G.notes.or.ae, 'claðas']
     ],
+}, {
+    sc: 'coo',
+    en: 'cow',
+    tr: 'cou',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'cow, cou'],
+        [G.notes.or.ae, 'cū']
+    ],
+    au: 'coo'
+}, {
+    sc: 'cloot',
+    def: ['a bit claith, rag, dishclaith, patch'],
+    tr: ['cloth', 'clout', 'cloth', 'rag', 'patch', 'dishclaith', 'dishcloth'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'clout, clowt'],
+        [G.notes.or.ae, 'clūt']
+    ],
+    au: 'cloot'
 }, {
     sc: 'close',
     def: ['an enclosed area neist til a biggin; a courtyaird', ['a passage atween biggins', 'a nairae loan wi hoosees on ilka side'], 'a fermyaird', 'the passage gien ingate til a common stair; the mean area in a block o flats', 'a tenement biggin'],

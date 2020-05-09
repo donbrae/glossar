@@ -13,7 +13,7 @@ $years = array(
 $last_updatit = str_replace(
   array_keys($years),
   array_values($years),
-  date("j F Y", filemtime("glossar-bundle.1589038012.min.js"))
+  date("j F Y", filemtime("glossar-bundle.1589057072.min.js"))
 );
 
 ?>
@@ -52,7 +52,7 @@ $last_updatit = str_replace(
     <script src="fuse.basic.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.1589038012.min.js" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.1589057072.min.js" onload="GLOSSAR.init()"></script>
 
 </head>
 

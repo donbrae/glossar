@@ -379,6 +379,7 @@ G.dict.push({ // A
         ['from then', 'since', 'thereafter', 'as a result', 'consequently'],
         ['in that case', 'so', 'then']
     ],
+    tr: 'than',
     gr: 'adv',
     or: [
         [G.notes.or.as, 'syn(e), sin, sen, sene'],

@@ -123,6 +123,17 @@ G.dict = [{
     sc: ['because', 'acause'],
     en: 'because',
     gr: ['conj']
+}, { // E
+    sc: 'efter',
+    en: ['after', 'later'],
+    tr: ['aifter', 'syne'],
+    gr: ['adv', 'prep', 'conj'],
+    or: [
+        [G.notes.or.as, 'efter, eftir'],
+        [G.notes.or.ae, 'æfter']
+    ],
+    ex: 'I’ll see ye efter!',
+    au: 'efter'
 }, { // F
     sc: 'forby',
     sc_alt: 'forbye',
@@ -232,7 +243,7 @@ G.dict = [{
     sc: 'o',
     pr: ['oh', 'ae', 'uh'], // Eikit to tr[] due to word-length threshold
     en: 'of',
-    tr: ['ey', 'ay', 'u', 'o\'', 'ae', 'uh', 'oh'],
+    tr: ['ey', 'ay', 'y', 'u', 'o\'', 'ae', 'uh', 'oh'],
     gr: 'prep',
     or: [
         [G.notes.or.as, 'of, off'],

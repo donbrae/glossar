@@ -181,6 +181,37 @@ G.v.gie.meta = { // Metadata
 };
 // gie end
 
+// v will
+G.v.will = {
+    sc: 'will',
+    en: 'will',
+    pr: ['will', 'wull'],
+    neg: {
+        sc: ['winna', 'winnae', 'willna', 'willnae'],
+        tr: ['wullna', 'wullnae', 'wunna', 'wunnae'],
+        en: 'will not'
+    },
+    pt_pp: {
+        sc: 'wad',
+        pr: ['wid', 'wad', 'wud'],
+        en: 'would',
+        neg: {
+            sc: 'wadna',
+            en: [
+                ['wouldn\'t', 'would not']
+            ],
+            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna'],
+        }
+    }
+};
+G.v.will.trigs = [].concat( // Control display of conjugated 'will'
+    G.v.will.sc, G.v.will.en, // will
+    G.v.will.pr, // will pr
+    G.v.will.neg.sc, G.v.will.neg.tr, G.v.will.neg.en, // will neg
+    G.v.will.pt_pp.sc, G.v.will.pt_pp.pr, // will pt_pp
+    G.v.will.pt_pp.neg.sc, G.v.will.pt_pp.neg.tr, G.v.will.pt_pp.neg.en // will pt_pp neg
+)
+// will end
 // v be
 G.v.be = {
     sc: 'be',
@@ -799,7 +830,10 @@ G.dict.push({ // A
         tr: G.v.gie.trigs,
         hl: [].concat(G.v.gie.sc, G.v.gie.pr),
         gr: 'v',
-        au: 'gie'
+        au: 'gie',
+        or: [
+            [G.notes.or.as, 'give, gyve']
+        ]
     }, { // v gie neg
         sc: G.v.gie.neg.sc,
         en: G.v.gie.neg.en,
@@ -1707,7 +1741,7 @@ G.dict.push({ // A
         ],
         tr: 'rouse',
         gr: 'v'
-    }, { // W
+    }, {
         sc: 'wirk',
         pr: 'wirk, wurk',
         pt_pp: {
@@ -1755,6 +1789,41 @@ G.dict.push({ // A
         tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
         hl: [].concat(G.v.war.neg.sc, G.v.war.neg.tr),
         gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)]
+    },
+    { // will
+        sc: G.v.will.sc,
+        pr: G.v.will.pr,
+        en: G.v.will.en,
+        tr: G.v.will.trigs,
+        hl: [].concat(G.v.will.sc, G.v.will.pr),
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'will'],
+            [G.notes.or.ae, 'willan']
+        ]
+    }, { // will neg
+        sc: G.v.will.neg.sc,
+        en: G.v.will.neg.en,
+        tr: G.v.will.trigs,
+        hl: [].concat(G.v.will.neg.sc, G.v.will.neg.tr),
+        gr: ['neg o v ' + G.utils.addSpan(G.v.will.sc)]
+    }, { // will pt and pp
+        sc: G.v.will.pt_pp.sc,
+        en: G.v.will.pt_pp.en,
+        tr: G.v.will.trigs,
+        hl: [].concat(G.v.will.pt_pp.sc, G.v.will.pt_pp.pr),
+        gr: ['pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
+        or: [
+            [G.notes.or.as, 'wald'],
+            [G.notes.or.ae, 'wolde']
+        ]
+    }, { // will pt and pp neg
+        sc: G.v.will.pt_pp.neg.sc,
+        en: G.v.will.pt_pp.neg.en,
+        tr: G.v.will.trigs,
+        hl: [].concat(G.v.will.pt_pp.neg.sc, G.v.will.pt_pp.neg.tr),
+        gr: ['neg pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
+        ex: 'Ye wadna could tell he uised tae be in the airmy'
     }
     // v war end
     // Template
