@@ -168,6 +168,14 @@ ol.inf li::before, div.inf::before {
 h1 {
     font-weight: 600;
 }
+h1 sup {
+    font-size: 30%;
+    top: -1.9em;
+    border: 1px dotted #212529;
+    padding: 1px 4px 1px 4px;
+    border-radius: 21px;
+    margin-left: 3px;
+}
 .sc {
     padding: 1px 4px;
 }
@@ -346,5 +354,8 @@ button.play-audio i {
     }
     .h1, h1 {
         font-size: 2.5rem;
+    }
+    h1 sup {
+        padding: 1px 5px 2px 5px;
     }
 }

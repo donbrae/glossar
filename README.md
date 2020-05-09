@@ -28,7 +28,7 @@ Anent highlighting in verbs, *haud* is a guid example tae leuk at (tak tent o *h
 
 # Biggin
 
-Rin **build.sh** for tae big JS bundle and update refs in **index.php** and **local-test.html**. Add optional argument *css* to do likewise with the CSS file.
+Rin **build.sh** for tae big JS bundle and update refs in **index.php** and **local-test.html**. Eik optional argument *css* tae dae the like wi the CSS file.
 
 * https://glossar.makforrit.scot/
 * (non-local) dev URL: https://glossar.makforrit.scot/index-dev.html
