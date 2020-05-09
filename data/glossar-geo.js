@@ -261,6 +261,11 @@ G.dict.push({
     en: 'Italy',
     gr: 'pn'
 }, {
+    sc: 'Italians',
+    tr: 'italian',
+    def: 'anent Italy, its fowk, or their leid',
+    gr: ['adj']
+}, {
     sc: 'Jamaicae',
     en: 'Jamaica',
     gr: 'pn'

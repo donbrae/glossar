@@ -501,7 +501,25 @@ G.dict.push({ // A
         gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; líterar'
     },
     // v be end
-    { // C
+    {
+        sc: 'big',
+        en: 'build',
+        pt: {
+            sc: ['biggit', 'bug'],
+            tr: ['built', 'bigget']
+        },
+        pp: {
+            sc: ['biggit', 'buggen'],
+            tr: ['built', 'bigget']
+        },
+        tr: 'bigg',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'big'],
+            [G.notes.or.anor, 'byggja']
+        ],
+        au: 'big'
+    }, { // C
         sc: 'cast-ower',
         en: 'review',
         tr: ['cast ower'],

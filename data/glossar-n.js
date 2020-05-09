@@ -23,6 +23,16 @@ G.dict.push({
         [G.notes.or.as, 'annualrent, annual rent']
     ]
 }, {
+    sc: 'aipple',
+    en: 'apple',
+    tr: 'epple',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'appil, aipill'],
+        [G.notes.or.ae, 'æppel']
+    ],
+    au: 'aipple'
+}, {
     sc: 'associe',
     pr: 'aSosee',
     en: 'association',
@@ -31,6 +41,17 @@ G.dict.push({
         ['?' + G.notes.or.f, 'associé']
     ]
 }, { // B
+    sc: 'bairn',
+    def: [['a child', 'a baby', 'a young person', 'a son or dochter']],
+    tr: ['wean', 'child', 'son', 'daughter', 'dochter', 'baby', 'infant'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'barne, bairn, bern'],
+        [G.notes.or.ae, 'bearn'],
+        [G.notes.or.anor, 'barn']
+    ],
+    au: 'bairn'
+}, {
     sc: 'bittie',
     en: [
         ['a small piece', 'a little bit'],
@@ -69,12 +90,34 @@ G.dict.push({
         [G.notes.or.ga, 'bràighe']
     ]
 }, {
+    sc: 'breeks',
+    pr: ['breeks', 'briks'],
+    en: ['trousers', ['underpants', 'knickers']],
+    tr: ['breeches', 'troosers', 'bricks'],
+    gr: 'n pl',
+    or: [
+        [G.notes.or.as, 'brekis, breikis'],
+        [G.notes.or.ae, 'brōc']
+    ],
+    au: 'breeks'
+}, {
     sc: ['brur', 'brither'],
     en: 'brother',
     gr: 'n',
     or: [
         [G.notes.or.as, 'brother, bruthir, broder']
-    ]
+    ],
+    au: 'brur'
+}, {
+    sc: 'broun',
+    pr: 'broon',
+    en: 'brown',
+    gr: ['adj, n'],
+    or: [
+        [G.notes.or.as, 'broun(e)'],
+        [G.notes.or.ae, 'brūn']
+    ],
+    au: 'broun'
 }, { // C
     sc: 'cairt',
     en: ['cart', ['chart, map']],
@@ -649,8 +692,8 @@ G.dict.push({
         ['a young farm worker'],
         ['a male child', 'son', 'baby boy']
     ],
-    tr: ['young man', 'farm-boy', 'farm boy', 'lad', 'laddie', 'man'],
-    hl: ['young man', 'farm-boy', 'farm boy'],
+    tr: ['young man', 'farm-boy', 'farm boy', 'lad', 'laddie', 'man', 'son', 'child', 'bairn', 'wean', 'baby'],
+    hl: ['young man', 'farm-boy', 'farm boy', 'son'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'loun']
