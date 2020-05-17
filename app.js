@@ -21,70 +21,70 @@ var GLOSSAR = (function() {
         },
         fuse;
 
-        HTMLAudioElement.prototype.stop = function() {
-            this.pause();
-            this.currentTime = 0.0;
-        }
+    HTMLAudioElement.prototype.stop = function() {
+        this.pause();
+        this.currentTime = 0.0;
+    }
 
     function init() {
         const options = {
-                shouldSort: true,
-                includeScore: false,
-                findAllMatches: false,
-                threshold: 0.05,
-                location: 0,
-                distance: 15,
-                minMatchCharLength: 1,
-                keys: [{
-                    name: 'sc',
-                    weight: 0.43
-                }, {
-                    name: 'pl.sc',
-                    weight: 0.03
-                }, {
-                    name: 'pl.en',
-                    weight: 0.02
-                }, {
-                    name: 'pl.tr',
-                    weight: 0.02
-                }, {
-                    name: 'pt.sc',
-                    weight: 0.05
-                }, {
-                    name: 'pt.tr',
-                    weight: 0.005
-                }, {
-                    name: 'pp.sc',
-                    weight: 0.01
-                }, {
-                    name: 'pp.tr',
-                    weight: 0.01
-                }, {
-                    name: 'pt_pp.sc',
-                    weight: 0.01
-                }, {
-                    name: 'pt_pp.tr',
-                    weight: 0.005
-                }, {
-                    name: 'neg.sc',
-                    weight: 0.03
-                }, {
-                    name: 'neg.tr',
-                    weight: 0.03
-                }, {
-                    name: 'sc_alt',
-                    weight: 0.05
-                }, {
-                    name: 'pr',
-                    weight: 0.05
-                }, {
-                    name: 'en',
-                    weight: 0.05
-                }, {
-                    name: 'tr',
-                    weight: 0.2
-                }]
-            };
+            shouldSort: true,
+            includeScore: false,
+            findAllMatches: false,
+            threshold: 0.05,
+            location: 0,
+            distance: 15,
+            minMatchCharLength: 1,
+            keys: [{
+                name: 'sc',
+                weight: 0.43
+            }, {
+                name: 'pl.sc',
+                weight: 0.03
+            }, {
+                name: 'pl.en',
+                weight: 0.02
+            }, {
+                name: 'pl.tr',
+                weight: 0.02
+            }, {
+                name: 'pt.sc',
+                weight: 0.05
+            }, {
+                name: 'pt.tr',
+                weight: 0.005
+            }, {
+                name: 'pp.sc',
+                weight: 0.01
+            }, {
+                name: 'pp.tr',
+                weight: 0.01
+            }, {
+                name: 'pt_pp.sc',
+                weight: 0.01
+            }, {
+                name: 'pt_pp.tr',
+                weight: 0.005
+            }, {
+                name: 'neg.sc',
+                weight: 0.03
+            }, {
+                name: 'neg.tr',
+                weight: 0.03
+            }, {
+                name: 'sc_alt',
+                weight: 0.05
+            }, {
+                name: 'pr',
+                weight: 0.05
+            }, {
+                name: 'en',
+                weight: 0.05
+            }, {
+                name: 'tr',
+                weight: 0.2
+            }]
+        };
 
         const fuse = new Fuse(GLOSSAR.dict, options);
 
@@ -268,7 +268,10 @@ var GLOSSAR = (function() {
                     arrayToLowerCase([].concat(item.sc)).indexOf(state.word_lc) > -1 || // Exact match (Scots)
                     arrayToLowerCase([].concat(item.en)).indexOf(state.word_lc) > -1 || // Exact match (English)
                     (item.tr && arrayToLowerCase([].concat(item.tr)).indexOf(state.word_lc) > -1) || // Length of this word (returned by results) is below threshold but user input is a trigger for this word
-                    item.pr && arrayToLowerCase([].concat(item.pr)).indexOf(state.word_lc) > -1 // Same as above but pertains to pronunciation
+                    (item.pr && arrayToLowerCase([].concat(item.pr)).indexOf(state.word_lc) > -1) || // As per previous but pertains to pronunciation
+                    (item.pl && item.pl.sc && arrayToLowerCase([].concat(item.pl.sc)).indexOf(state.word_lc) > -1) || // As per previous but pertains to Scots plural
+                    (item.pl && item.pl.en && arrayToLowerCase([].concat(item.pl.en)).indexOf(state.word_lc) > -1) || // As per previous but pertains to English plural
+                    (item.pl && item.pl.tr && arrayToLowerCase([].concat(item.pl.tr)).indexOf(state.word_lc) > -1) // As per previous but pertains to plural trigger
                 ) {
                     results_filtered.push(item);
 

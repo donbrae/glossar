@@ -362,6 +362,21 @@ G.dict.push({
     en: 'documentary',
     gr: ['n', 'adj']
 }, { // E
+    sc: 'ee',
+    en: 'eye',
+    tr: 'e',
+    pl: {
+        sc: 'een',
+        en: 'eyes',
+        tr: ['ees', 'e\'en'],
+    },
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'ee'],
+        ['(plural)', 'een(e), eeis'],
+        [G.notes.or.ae, 'ēage']
+    ]
+}, {
     sc: 'eneuch',
     pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
     tr: 'sufficient',
@@ -464,6 +479,33 @@ G.dict.push({
     en: 'coward',
     gr: ['n', 'informal']
 }, {
+    sc: 'fecht',
+    en: 'fight',
+    tr: ['ficht', 'struggle', 'battle'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'fecht, feicht'],
+        [G.notes.or.ae, 'feoht']
+    ]
+}, {
+    sc: 'fechter',
+    en: 'a fighter',
+    tr: 'fighter',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'fichter, fechtar']
+    ],
+    ex: 'She’s a bonnie fechter, that ane!'
+}, {
+    sc: 'fechtin',
+    en: 'fighting',
+    tr: 'fechting',
+    gr: 'vbl n',
+    or: [
+        [G.notes.or.as, 'fechting']
+    ],
+    ex: 'He wis liftit by the polis for fechtin'
+}, {
     sc: 'film-makar',
     en: 'film-maker',
     tr: ['filmmaker', 'filmmakar'],
@@ -541,9 +583,18 @@ G.dict.push({
         [G.notes.or.mf, 'glorieuseté']
     ]
 }, {
+    sc: 'greet',
+    en: 'a fit of weeping',
+    tr: 'tears',
+    hl: 'greet',
+    gr: 'n',
+    or: 'see v',
+    ex: 'She felt better for hivin haed a guid greet'
+}, {
     sc: 'guids',
     en: 'goods',
-    gr: 'n'
+    gr: 'n',
+    ex: 'The guids wis delivert in the efternuin'
 }, { // H
     sc: 'haik',
     en: ['a person or animal given to roaming about', ['a trek', 'journey']],
@@ -732,7 +783,7 @@ G.dict.push({
 }, { // M
     sc: 'maiter',
     en: 'matter',
-    tr: ['material', 'substance', 'subject', 'theme', 'undertaking', 'concern', 'business', 'issue'],
+    tr: ['maitter', 'metter', 'material', 'substance', 'subject', 'theme', 'undertaking', 'concern', 'business', 'issue'],
     gr: ['n', 'v'],
     or: [
         [G.notes.or.as, 'mater(e)'],

@@ -417,7 +417,7 @@ G.dict.push({ // A
     en: 'today',
     gr: 'adv, n',
     ex: [G.ex.n, G.ex.o, G.ex.p],
-    or: '<span>the day</span> first kythes in scrievit form in ' + G.notes.or.as + ' frae aboot 1500'
+    or: '<span>the day</span> first appears in scrievit form in ' + G.notes.or.as + ' frae aboot 1500'
 }, {
     sc: 'the morn',
     en: [
@@ -430,7 +430,8 @@ G.dict.push({ // A
     sc: 'the morra',
     en: 'tomorrow',
     gr: 'adv, n',
-    or: G.notes.or.as + ' haes <em>the morrow</em>'
+    or: G.notes.or.as + ' haes <em>the morrow</em>',
+    ex: 'Gie me a call the morra'
 }, {
     sc: 'the nicht',
     en: 'tonight',

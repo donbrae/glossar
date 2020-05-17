@@ -482,8 +482,7 @@ G.dict.push({ // A
             [G.notes.or.l, 'allocāt-, <span>ptp stem o</span> allocāre']
         ],
         ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', 'Resources haes been allocate tae them that’s maist in need']
-    },
-    { // v be
+    }, { // v be
         sc: G.v.be.sc,
         en: G.v.be.en,
         tr: G.v.be.trigs, // Highlighted by default
@@ -914,8 +913,7 @@ G.dict.push({ // A
             'pairt archaism, pairt protologism, frae the ' + G.notes.or.as + ' <span>compone</span> ‘tae mak by pittin thegither, tae compose; create in speak or writin.’ Henryson wrate: ‘Of thir sex … fyve hevynly symphonyis Componyt ar,’ whaur <span>symphonyis</span> = ‘a harmonious muisical sound’',
             [G.notes.or.l, 'compōnere']
         ]
-    },
-    { // dae
+    }, { // dae
         sc: G.v.dae.sc,
         pr: G.v.dae.pr,
         en: G.v.dae.en,
@@ -967,8 +965,7 @@ G.dict.push({ // A
         tr: G.v.dae.trigs,
         hl: [].concat(G.v.dae.ptp.sc, G.v.dae.ptp.pr),
         gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
-    },
-    {
+    }, {
         sc: 'jalouse',
         en: ['suspect', ['suppose', 'guess', 'surmise']],
         pr: 'jaLooz',
@@ -980,7 +977,7 @@ G.dict.push({ // A
         tr: ['jaloose', 'assume', 'assumed', 'figure'],
         hl: ['jalouse', 'jaloose', 'figure'],
         or: [
-            'this uissage first kythes in ' + G.notes.or.lms, [G.notes.or.f, 'jalouser']
+            'this uissage first appears in ' + G.notes.or.lms, [G.notes.or.f, 'jalouser']
         ],
         ex: [G.ex.y, G.ex.z]
     }, {
@@ -1303,7 +1300,9 @@ G.dict.push({ // A
         }
     }, {
         sc: 'learn',
-        en: [['teach', 'instruct']],
+        en: [
+            ['teach', 'instruct']
+        ],
         tr: ['lair', 'lear'],
         hl: ['learn', 'lair', 'lear'],
         pt_pp: {
@@ -1431,6 +1430,19 @@ G.dict.push({ // A
         ],
         ex: ['Dinna fash yersel', 'I wis sair fasht aboot the job interview', G.ex.d]
     }, {
+        sc: 'fecht',
+        en: 'fight',
+        tr: ['ficht', 'struggle', 'battle'],
+        pt_pp: {
+            sc: 'focht',
+            tr: ['fought', 'fechtit']
+        },
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'fecht, feicht'],
+            [G.notes.or.ae, 'feohtan']
+        ]
+    }, {
         sc: 'fesh-on',
         en: [
             ['bring forward', 'advance', 'bring to maturity', 'develop']
@@ -1442,7 +1454,36 @@ G.dict.push({ // A
         tr: 'fesh on',
         gr: 'v',
         ex: 'The report recommendit we fesh-on a national policy'
-    }, // H
+    }, { // G
+        sc: 'greet',
+        en: ['cry', ['lament', 'complain']],
+        tr: ['howl, sob', 'weep', 'whine', 'grumble', 'wheenge'],
+        pt: {
+            sc: ['grat', 'gret'],
+            tr: ['cried', 'sobbed', 'wept', 'howled', 'wheenged', 'lamented', 'complained']
+        },
+        pp: {
+            sc: ['grat', 'gret', 'grutten'],
+            tr: ['cried', 'sobbed', 'wept', 'howled', 'wheenged', 'lamented', 'complained']
+        },
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'grete, greit'],
+            [G.notes.or.ae, 'grētan']
+        ],
+        ex: 'Ye dinna need tae greet aboot it!',
+        au: 'greet'
+    }, { // Tak -ing ending
+        sc: 'greetin',
+        en: 'crying',
+        tr: ['greeting', 'weeping'],
+        ex: 'The film haed me greetin',
+        gr: 'pres pple o the v <span>tae greet</span>',
+        or: [
+            [G.notes.or.as, 'gretand']
+        ]
+    },
+    // H
     { // hae
         sc: G.v.hae.sc,
         pr: G.v.hae.pr,
@@ -1615,7 +1656,7 @@ G.dict.push({ // A
         en: 'taking',
         tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'takkin', 'tooken', 'tookin'],
         ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
-        gr: 'pres pt o the v <span>tae tak</span>'
+        gr: 'pres pple o the v <span>tae tak</span>'
     }, {
         sc: 'tak on',
         en: 'adopt',
@@ -1677,7 +1718,9 @@ G.dict.push({ // A
         gr: 'v'
     }, {
         sc: 'remeid',
-        en: [['remedy', 'redress']],
+        en: [
+            ['remedy', 'redress']
+        ],
         tr: ['remeed', 'rectify', 'cure'],
         gr: 'v',
         or: [
@@ -1787,8 +1830,7 @@ G.dict.push({ // A
         tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
         hl: [].concat(G.v.war.neg.sc, G.v.war.neg.tr),
         gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)]
-    },
-    { // will
+    }, { // will
         sc: G.v.will.sc,
         pr: G.v.will.pr,
         en: G.v.will.en,
