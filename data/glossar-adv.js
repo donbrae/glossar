@@ -187,9 +187,19 @@ G.dict.push({ // A
     en: [
         ['besides', 'over and above', 'moreover', 'in addition']
     ],
-    tr: ['attour', 'further', 'as well', 'too', 'additionally'],
-    hl: ['attour', 'further', 'atour', 'additionally'],
+    tr: ['attour', 'further', 'as well', 'too', 'additionally', 'mairower', 'mairowre'],
+    hl: ['attour', 'further', 'atour', 'additionally', 'mairower', 'mairowre'],
     gr: ['adv', 'prep']
+}, {
+    sc: 'mairower',
+    en: 'moreover',
+    tr: 'mairowre',
+    gr: 'adv',
+    tr: ['besides', 'further'],
+    hl: 'besides',
+    or: [
+        [G.notes.or.as, 'mar(e)over, mairower']
+    ]
 }, {
     sc: ['certie', 'certes'],
     pr: ['certie', 'certis'],
@@ -212,7 +222,7 @@ G.dict.push({ // A
     tr: ['most', 'maste'],
     gr: 'adv',
     or: 'see pron',
-    ex: ['It wis maist kind o ye', 'Whit she wantit maist o aw wis a vacance']
+    ex: ['It wis maist kind o ye', 'What she wantit maist o aw wis a vacance']
 }, {
     sc: 'maist',
     def: 'aphetic mak o <em>awmaist</em>',
@@ -482,4 +492,9 @@ G.dict.push({ // A
         ['sometimes', 'at times', 'occasionally']
     ],
     gr: ['adv']
+}, {
+    sc: ['what for', 'fat for'],
+    sc_alt: ['whit for', 'fit for'],
+    en: 'why',
+    gr: 'adv'
 });

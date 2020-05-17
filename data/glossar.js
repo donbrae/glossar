@@ -39,13 +39,13 @@ G.notes = {
 G.ex = {
     a: "Alasdair and Ashley wis feart they wadna win at the kirk in time tae be mairit",
     b: "It wis that thrang Isobel didna ken whan she wad get oot o wark",
-    c: "I kenna whit ye mean — ye’r haiverin, mun!",
+    c: "I kenna what ye mean — ye’r haiverin, mun!",
     d: "I wadna lat it fash ye",
     e: "The CEO luit skairhauders speir at him efter the meetin",
     f: "Her depute gree’d tae tak in haund the airtin o the policy and its pittin intil effect",
     g: "It wis a gey and braw day",
     h: "I ken brawly richt bi wrang!",
-    i: "Jamie wis in a swither aboot whit Hogmanay perty tae gang til",
+    i: "Jamie wis in a swither aboot what Hogmanay perty tae gang til",
     j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid bield, and mak namely its pairt in Scotland’s identity nou and in time tae come",
     k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
     l: "In terms o tred, o the guids and services Scotland inbrings, aroond 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
@@ -60,7 +60,7 @@ G.ex = {
     u: "The heezin up o hoose prices and financial mercat speculation thegither wis aye mair like tae gar the economy clyte",
     v: "He gied an unco braw performance",
     w: "The new symphony is a stuir and sonsie wark, if a bittie wrocht-up in pairts",
-    x: "Shuirly there’s mair tae the story than that",
+    x: "Shuirly the’r mair tae the story than that",
     y: "The pub wis mair thrang than they’d jaloused it wad be",
     z: "I jaloused I’d better haud ma tongue!",
     a1: "Dae ye hae anither ane o thir?",
@@ -69,7 +69,7 @@ G.ex = {
     d1: "Stewart haed aboot fower hunder poond in his bank accoont; Ruth haed mair",
     e1: "Oot o the lot o us I’d haen the maist beers",
     f1: "Rax me ane o thae ile filters, wad ye?",
-    g1: "The app’s uiser interface is juist whit the client’s ettlin efter",
+    g1: "The app’s uiser interface is juist what the client’s ettlin efter",
     h1: "I’v juist gotten stertit the nou sae ye’ll hae tae gie me a bit mair time",
     i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer"
 };
@@ -180,6 +180,8 @@ G.dict = [{
     en: [
         ['each one', 'every one']
     ],
+    tr: 'ilka',
+    hl: 'ilk',
     gr: ['pron']
 }, {
     sc: ['ilka ane', 'ilkane'],
@@ -231,7 +233,8 @@ G.dict = [{
     en: 'one',
     gr: 'cardinal number',
     tr: ['ae', 'ain', 'ann', 'yae', 'yay'],
-    hl: ['ane', 'ain', 'yin', 'wan', 'een', 'ann']
+    hl: ['ane', 'ain', 'yin', 'wan', 'een', 'ann'],
+    inf: '<span>Ane</span> is aften uised the day as an adjective, tae, whaur in tradítional spoken Modren Scots ye’r mair like tae hear <span>ae</span> (also pronounced ‘yae’). <span>Ane</span> wis typically the adjective in Aulder Scots'
 }, {
     sc: 'ony',
     en: [
@@ -283,8 +286,9 @@ G.dict = [{
     en: 'whenever',
     tr: ['wheniver', 'fanever']
 }, {
-    sc: ['whit', 'fit', 'what'],
-    pr: ['whit', 'whut', 'what', 'whaut', 'fit', 'fut', 'fat', 'ut'],
+    sc: ['what', 'fat'],
+    sc_alt: ['whit', 'fit'],
+    pr: ['what', 'whaut', 'whit', 'whut', 'fit', 'fut', 'fat', 'ut'],
     en: 'what',
     gr: ['adj', 'adv', 'pron', 'conj']
 }, {

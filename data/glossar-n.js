@@ -588,14 +588,15 @@ G.dict.push({
     ],
     au: 'hoose'
 }, {
-    sc: 'maet',
-    sc_alt: 'meat',
+    sc: 'meat',
+    sc_alt: 'mait',
+    pr: 'mait',
     en: [
         ['food', 'sustenance'],
         'a meal',
         'meat'
     ],
-    tr: ['meal', 'mait'],
+    tr: ['meal', 'maet'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'mete, meit, met, mait, meat'],
@@ -606,7 +607,8 @@ G.dict.push({
     en: [
         ['a family', 'a race', 'a kind', 'a type']
     ],
-    tr: ['family', 'race', 'kind', 'type'],
+    tr: ['family', 'race', 'kind', 'type', 'ilka'],
+    hl: ['family', 'race', 'kind', 'type'],
     gr: 'n'
 }, {
     sc: ['ilkane', 'ilk ane'],

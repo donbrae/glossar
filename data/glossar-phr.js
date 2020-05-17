@@ -21,11 +21,6 @@ G.dict.push({
     ex: G.ex.j,
     ph: true
 }, {
-    sc: 'it faws til us',
-    en: 'we have a duty to',
-    ex: G.ex.j,
-    ph: true
-}, {
     sc: ['nae bother', 'nae bather'],
     en: 'no problem',
     ph: true

@@ -267,7 +267,8 @@ var GLOSSAR = (function() {
                     state.word.length >= cfg.threshold_non_hl || // Length of word user has input is equal to or greater than threshold
                     arrayToLowerCase([].concat(item.sc)).indexOf(state.word_lc) > -1 || // Exact match (Scots)
                     arrayToLowerCase([].concat(item.en)).indexOf(state.word_lc) > -1 || // Exact match (English)
-                    item.tr && arrayToLowerCase([].concat(item.tr)).indexOf(state.word_lc) > -1 // Length of this word (returned by results) is below threshold but user input is a trigger for this word
+                    (item.tr && arrayToLowerCase([].concat(item.tr)).indexOf(state.word_lc) > -1) || // Length of this word (returned by results) is below threshold but user input is a trigger for this word
+                    item.pr && arrayToLowerCase([].concat(item.pr)).indexOf(state.word_lc) > -1 // Same as above but pertains to pronunciation
                 ) {
                     results_filtered.push(item);
 

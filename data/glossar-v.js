@@ -187,8 +187,9 @@ G.v.will = {
     en: 'will',
     pr: ['will', 'wull'],
     neg: {
-        sc: ['winna', 'winnae', 'willna', 'willnae'],
-        tr: ['wullna', 'wullnae', 'wunna', 'wunnae'],
+        sc: ['winna', 'willna'],
+        sc_alt: ['winnae', 'willnae'],
+        tr: ['wullna', 'wullnae', 'wunna', 'wunnae', 'winny', 'wunny'],
         en: 'will not'
     },
     pt_pp: {
@@ -200,14 +201,14 @@ G.v.will = {
             en: [
                 ['wouldn\'t', 'would not']
             ],
-            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna'],
+            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'widny', 'wudny'],
         }
     }
 };
 G.v.will.trigs = [].concat( // Control display of conjugated 'will'
     G.v.will.sc, G.v.will.en, // will
     G.v.will.pr, // will pr
-    G.v.will.neg.sc, G.v.will.neg.tr, G.v.will.neg.en, // will neg
+    G.v.will.neg.sc, G.v.will.neg.sc_alt, G.v.will.neg.tr, G.v.will.neg.en, // will neg
     G.v.will.pt_pp.sc, G.v.will.pt_pp.pr, // will pt_pp
     G.v.will.pt_pp.neg.sc, G.v.will.pt_pp.neg.tr, G.v.will.pt_pp.neg.en // will pt_pp neg
 )
@@ -672,6 +673,8 @@ G.dict.push({ // A
             sc: 'developit',
             tr: 'developed'
         },
+        tr: 'mak',
+        hl: 'develop',
         gr: 'v'
     }, {
         sc: 'descrive',
@@ -881,7 +884,7 @@ G.dict.push({ // A
     {
         sc: 'compone',
         pt_pp: {
-            sc: ['compone’t', 'componed'],
+            sc: 'componed',
             tr: ['composed', 'componit', 'compounded', 'combined', 'settled', 'calmed']
         },
         en: [
@@ -900,10 +903,10 @@ G.dict.push({ // A
     }, {
         sc: 'compone',
         pt_pp: {
-            sc: ['compone’t', 'componed'],
+            sc: 'componed',
             tr: ['composed', 'componit']
         },
-        def: 'write or create (a wark o airt, inspecially muisic or poetry)',
+        def: 'write or create (a wark o airt, inspecially muisic or poyetry)',
         tr: ['compose', 'write'],
         hl: 'compose',
         gr: ['v'],
@@ -1078,7 +1081,7 @@ G.dict.push({ // A
         tr: ['hauden', 'hold'],
         hl: ['haud', 'hold'],
         gr: 'v',
-        ex: ['I div haud that ye’r wrang', G.ex.z, 'The neist comatee meetin will be hauden in Mey']
+        ex: [G.ex.z, 'The neist comatee meetin will be hauden in Mey']
     }, {
         sc: 'hauden',
         en: 'be obliged or required to do something',
@@ -1235,7 +1238,7 @@ G.dict.push({ // A
         tr: G.v.ken_knaw.trigs,
         hl: ['kent', 'kenned'],
         gr: 'pt o v ' + G.utils.addSpan('tae ken'),
-        ex: 'Tammas kentna whit tae dae'
+        ex: 'Tammas kentna what tae dae'
     }, {
         sc: 'kent',
         en: 'known',
@@ -1640,17 +1643,12 @@ G.dict.push({ // A
         pr: ['tim', 'teem', 'toom', 'taim'],
         pt_pp: {
             sc: 'tuimt',
-            tr: ['emptied', 'emptied out',
-                'discharge', 'drained', 'gushed', 'poured'
+            tr: ['tuimed', 'emptied', 'emptied out',
+                'discharged', 'drained', 'gushed', 'poured'
             ]
         },
-        en: [
-            'empty a container', ['pour', 'empty out'],
-            'discharge (a gun or shot)',
-            'drain water from (potatoes)',
-            '<span>(of water)</span> flow or gush copiously', ['<span>(of rain)</span> to pour', 'come down in torrents']
-        ],
-        tr: ['empty', 'gush'],
+        en: 'empty',
+        tr: ['empty', 'gush', 'discharge', 'drain'],
         gr: 'v',
         or: 'frae the adj',
         ex: 'He tuimt the watter doun the cundie',
@@ -1699,7 +1697,7 @@ G.dict.push({ // A
         en: 'publish',
         gr: 'v phr, v',
         or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],
-        ex: 'She haes setten furth a pose o unco bonnie poetry'
+        ex: 'She haes setten furth a pose o unco bonnie poyetry'
     }, { // S
         sc: 'skair',
         en: 'share',
@@ -1803,6 +1801,7 @@ G.dict.push({ // A
         ]
     }, { // will neg
         sc: G.v.will.neg.sc,
+        sc_alt: G.v.will.neg.sc_alt,
         en: G.v.will.neg.en,
         tr: G.v.will.trigs,
         hl: [].concat(G.v.will.neg.sc, G.v.will.neg.tr),

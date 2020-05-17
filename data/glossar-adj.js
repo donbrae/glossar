@@ -18,7 +18,8 @@ G.dict.push({ // A
     pr: ['ae', 'yae'],
     en: ['one', 'only'],
     gr: 'adj',
-    tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann']
+    tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
+    ex: ['I haed ae last beer syne taen the gate hame', 'Fowk bein full o theirsels wis the ae thing I couldna staund']
 }, {
     sc: 'aesome',
     en: [
@@ -45,7 +46,7 @@ G.dict.push({ // A
     en: [
         ['giddy', 'volatile']
     ],
-    gr: ['adj'],
+    gr: 'adj',
     tr: ['alevoly', 'alevolie'],
     or: [
         [G.notes.or.ms, 'alla-volie'],
@@ -79,7 +80,7 @@ G.dict.push({ // A
         'pleasant (of the weather)'
     ],
     tr: ['well dressed', 'able bodied', 'considerable', 'pleasant', 'bra', 'braa', 'brow', 'good'],
-    gr: ['adj'],
+    gr: 'adj',
     ex: [G.ex.g, G.ex.v],
     or: [
         [G.notes.or.as, 'braw, bra, brawf'],
@@ -92,7 +93,7 @@ G.dict.push({ // A
         ['fine', 'splendid', 'nice']
     ],
     tr: ['braw like', 'braw-like'],
-    gr: ['adj']
+    gr: 'adj'
 }, {
     sc: 'byous',
     en: [
@@ -120,7 +121,7 @@ G.dict.push({ // A
     en: 'cold',
     tr: ['chanking', 'chankin', 'baltic', 'cold', 'cauld'],
     hl: 'cauld',
-    gr: ['adj']
+    gr: 'adj'
 }, {
     sc: 'contigue',
     en: [
@@ -190,13 +191,13 @@ G.dict.push({ // A
     en: [
         ['doubtful', 'undecided', 'ambiguous', 'uncertain']
     ],
-    gr: ['adj']
+    gr: 'adj'
 }, { // E
     sc: 'easter',
     en: ['eastern', 'the more easterly of two places'],
     tr: ['wester', 'wastern', 'western'],
     hl: 'easter',
-    gr: ['adj'],
+    gr: 'adj',
     def: 'locatit tae the east; the mair easter o twa steids, biggins or ither things; kythes in steid names, e.g. Easter Road'
 }, {
     sc: 'elementar',
@@ -266,7 +267,7 @@ G.dict.push({ // A
         ['fractious', 'peevish']
     ],
     gr: 'adj',
-    ex: 'Whit wi aw the snaw, drivin intae wark wis awfu fashious'
+    ex: 'What wi aw the snaw, drivin intae wark wis awfu fashious'
 }, {
     sc: 'feart',
     en: [
@@ -296,18 +297,18 @@ G.dict.push({ // A
     en: [
         ['extraordinary', 'strange', 'unusually good'],
     ],
-    gr: ['adj']
+    gr: 'adj'
 }, {
     sc: ['forementioned', 'forementiont'],
     en: 'aforementioned',
     tr: 'aforementiont',
-    gr: ['adj'],
+    gr: 'adj',
     or: ['?' + G.notes.or.eme + '; <span>forementioned</span> kythes in ' + G.notes.or.lms + ' an ' + G.notes.or.emods],
     ex: G.ex.m
 }, {
     sc: 'foresaid',
     en: 'aforesaid',
-    gr: ['adj'],
+    gr: 'adj',
     tr: 'mention',
     hl: 'foresaid',
     or: [
@@ -319,7 +320,7 @@ G.dict.push({ // A
     en: [
         ['foreign', 'abroad']
     ],
-    gr: ['adj'],
+    gr: 'adj',
     tr: ['forrin', 'forain'],
     or: [
         [G.notes.or.as + ' haes ', 'forain(e), forayne, forane'],
@@ -346,7 +347,7 @@ G.dict.push({ // A
         ['disreputable', 'wild']
     ],
     tr: ['guy', 'giy'],
-    gr: ['adj'],
+    gr: 'adj',
     or: 'see adv',
     ex: ['It wis a gey trauchle winnin at the tap o Lee Pen', 'It’s gey cauld the nicht']
 }, {
@@ -363,13 +364,17 @@ G.dict.push({ // A
 }, { // I
     sc: 'ilk',
     en: 'same',
-    gr: ['adj']
+    tr: 'ilka',
+    hl: 'ilk',
+    gr: 'adj'
 }, {
     sc: 'ilka',
     en: [
         ['each', 'every']
     ],
-    gr: ['adj'],
+    tr: 'ilk',
+    hl: 'ilka',
+    gr: 'adj',
     au: 'ilka'
 }, { // J
     sc: 'juist',
@@ -379,14 +384,14 @@ G.dict.push({ // A
         ['exact', 'precise', 'correct', 'accurate']
     ],
     tr: ['just', 'jist', 'exackly', 'exack'],
-    gr: ['adj'],
+    gr: 'adj',
     or: [
         [G.notes.or.as, 'just, juist'],
         [G.notes.or.me, 'just']
     ]
 }, {
     sc: 'depute',
-    gr: ['adj'],
+    gr: 'adj',
     tr: ['deputy', 'vice'],
     hl: ['depute', 'deputy', 'vice'],
     def: 'apointit as, or exercein the duties o, depute',
@@ -463,18 +468,18 @@ G.dict.push({ // A
 }, { // O
     sc: 'ocht',
     en: 'any',
-    gr: ['adj']
+    gr: 'adj'
 }, {
     sc: ['ongaun', 'ongaein'],
     en: [
         ['ongoing', 'continuing']
     ],
-    gr: ['adj']
+    gr: 'adj'
 }, {
     sc: 'ony',
     en: 'any',
     tr: 'onie',
-    gr: ['adj'],
+    gr: 'adj',
     or: [
         [G.notes.or.as, 'ony'],
         [G.notes.or.ae, 'ǽniᵹ']
@@ -510,7 +515,7 @@ G.dict.push({ // A
     ],
     tr: ['belonging to', 'relevant to', 'relevant', 'pertain'],
     hl: ['belonging to', 'relevant to', 'relevant', 'pertinent'],
-    gr: ['adj'],
+    gr: 'adj',
     or: [
         [G.notes.or.as, 'pertinent'],
         [G.notes.or.me, 'pertinent'],
@@ -539,7 +544,7 @@ G.dict.push({ // A
         ['<span>of weather</span> boisterous, uncertain, gusty with rain']
     ],
     tr: ['boisterous', 'uncertain'],
-    gr: ['adj']
+    gr: 'adj'
 }, { // S
     sc: 'shuir',
     pr: ['shair', 'shör', 'shür', 'sheer', 'seer'],
@@ -588,13 +593,8 @@ G.dict.push({ // A
 }, { // T
     sc: 'tuim',
     pr: ['tim', 'teem', 'toom', 'taim'],
-    en: [
-        ['empty', 'vacant'],
-        'hungry', ['<span>(of a place)</span> unoccupied'],
-        ['<span>(of people)</span> thin', 'lean', 'lank'],
-        ['<span>(of a machine)</span> idling', 'not processing material']
-    ],
-    tr: ['lanky', 'thin', 'lean', 'unoccupied', 'idling', 'idle'],
+    en: 'empty',
+    tr: ['lanky', 'vacant', 'thin', 'lean', 'unoccupied', 'idling', 'idle'],
     gr: 'adj',
     or: [
         [G.notes.or.as, 'tome, tume'],
@@ -617,7 +617,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'uncow'],
         [G.notes.or.ae, 'uncūð']
     ],
-    ex: [G.ex.r, 'He fand hissel in a unco pairt o toun', 'An unco thrang bourached ootside the pairlament biggin', G.ex.v, 'The mechanic haed an unco job sortin the electrics']
+    ex: [G.ex.r, 'He fand hissel in an unco pairt o toun', 'An unco thrang bourached ootside the pairlament biggin', G.ex.v, 'The mechanic haed an unco job sortin the electrics']
 }, { // V
     sc: 'versant',
     en: [
@@ -635,7 +635,7 @@ G.dict.push({ // A
     en: ['western', 'the more westerly of two places'],
     tr: ['easter', 'eastern'],
     hl: 'wester',
-    gr: ['adj'],
+    gr: 'adj',
     def: 'locatit tae the wast; the mair waster o twa steids, biggins or ither things; aft-times in steid names, e.g. Wester Hailes'
 }, {
     sc: 'wastren',
@@ -652,6 +652,7 @@ G.dict.push({ // A
 }, {
     sc: 'wrocht-up',
     en: 'overwrought',
-    tr: 'over-wrought',
-    gr: 'adj'
+    tr: ['over-wrought', 'wrocht up', 'wrochtup'],
+    gr: 'adj',
+    ex: G.ex.w
 });

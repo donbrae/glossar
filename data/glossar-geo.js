@@ -33,7 +33,7 @@ G.dict.push({
     gr: 'pn',
     tr: 'Ameriky',
     or: [
-        [G.notes.or.mods + ' haes haed ', 'Ameriky <em>syne at least the 19t century</em>']
+        [G.notes.or.mods + ' haes haed ', 'Ameriky <span>syne at least the 19t century</span>']
     ]
 }, {
     sc: 'American',
@@ -56,7 +56,7 @@ G.dict.push({
     gr: ['pn', 'adj'],
     tr: ['Australie', 'Australy'],
     or: [
-        [G.notes.or.mods + ' haes haed ', 'Australy, Austraily <em>syne the 19t century</em>']
+        [G.notes.or.mods + ' haes haed ', 'Australy, Austraily <span>syne the 19t century</span>']
     ]
 }, {
     sc: 'Austrik',
@@ -119,12 +119,16 @@ G.dict.push({
     en: 'Canada',
     gr: 'pn',
     or: [
-        [G.notes.or.mods + ' haes haed ', 'Canady, Canadie <em>syne at least the 19t century</em>']
+        [G.notes.or.mods + ' haes haed ', 'Canady, Canadie <span>syne at least the 19t century</span>']
     ]
 }, {
-    sc: 'China',
+    sc: 'Cheena',
     en: 'China',
+    tr: ['cheenae', 'cheeny'],
     gr: 'pn',
+    or: [
+        [G.notes.or.mods + ' haes haed ', 'Cheena <span>syne at least the mid-19t century</span>']
+    ]
 }, {
     sc: 'Corsicae',
     en: 'Corsica',
