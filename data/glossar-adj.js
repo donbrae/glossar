@@ -561,6 +561,25 @@ G.dict.push({ // A
     ],
     ex: 'He wis shuir he’d seen the fellae somewhaur afore'
 }, {
+    sc: 'sib',
+    def: ['relatit by bluid, strynd or mairiage', 'símilar'],
+    tr: ['related', 'relatit', 'similar', 'seemilar', 'alike', 'close', 'familiar', 'like'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'sib'],
+        [G.notes.or.ae, 'sibb']
+    ]
+}, {
+    sc: 'sleekit',
+    en: [['sly', 'cunning'], 'smooth'],
+    tr: ['untrustworthy', 'specious'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'slekit, sleikit'],
+        [G.notes.or.me, 'sliken, sleken']
+    ],
+    ex: 'Ay, I wadna trust the sleekit bastart!'
+}, {
     sc: 'sweir',
     pr: 'sweer',
     en: [

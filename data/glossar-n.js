@@ -61,6 +61,15 @@ G.dict.push({
     ],
     au: 'bairn'
 }, {
+    sc: ['baw', 'baa'],
+    en: 'ball',
+    tr: ['ba', 'ba\''],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'ball, baw, baa'],
+        ['likely ' + G.notes.or.me, 'bale']
+    ]
+}, {
     sc: 'bittie',
     en: [
         ['a small piece', 'a little bit'],
@@ -606,6 +615,15 @@ G.dict.push({
     en: 'continuation',
     gr: 'n'
 }, {
+    sc: 'heid',
+    pr: 'heed',
+    en: 'head',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'heid, hede'],
+        [G.notes.or.ae, 'hēafod']
+    ]
+}, {
     sc: 'horse',
     def: 'a huift, plant-eatin domesticatit mammal',
     tr: 'hors',
@@ -913,6 +931,16 @@ G.dict.push({
     gr: 'n',
     ex: G.ex.k
 }, {
+    sc: 'parrock',
+    def: ['an enclosure or pen', 'a pen for sheep', 'a boorach o fowk, bease or objects croudelt close thegither'],
+    tr: ['enclosure', 'pen', 'paddock', 'sheep pen', 'boorach', 'bourach', 'parreck', 'parroch'],
+    hl: ['enclosure', 'paddock', 'sheep pen', 'pen'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'parrok'],
+        [G.notes.or.ae, 'pearroc']
+    ]
+}, {
     sc: 'paven',
     en: 'pavane',
     tr: ['pavene', 'paven'],
@@ -1042,9 +1070,34 @@ G.dict.push({
     gr: 'n',
     or: 'protologism'
 }, {
+    sc: 'sib',
+    en: 'a relative, or kinsman or kinswoman',
+    tr: ['relative', 'kinsman', 'kinswoman'],
+    gr: 'n',
+    or: 'see adj'
+}, {
     sc: 'signatur',
     en: 'signature',
     gr: 'n'
+}, {
+    sc: 'siller',
+    en: ['money', 'silver'],
+    tr: ['funds', 'cash', 'wealth'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'silver, siller'],
+        [G.notes.or.ae, 'seolfor']
+    ],
+    ex: 'I’ll send ye the siller'
+}, {
+    sc: ['snaw', 'snaa'],
+    en: 'snow',
+    tr: 'sna',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'snaw'],
+        [G.notes.or.xx, 'snāw']
+    ]
 }, {
     sc: 'springheid',
     pr: 'springheed',

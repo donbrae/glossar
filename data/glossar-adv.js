@@ -359,6 +359,16 @@ G.dict.push({ // A
         [G.notes.or.ae, 'ofer']
     ]
 }, { // S
+    sc: 'sae',
+    en: 'so',
+    tr: ['thus', 'therefore', 'as', 'actually', 'indeed', 'in order that', 'for tae'],
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'sa, swa, sua'],
+        [G.notes.or.ae, 'swā']
+    ],
+    ex: ['I wis gey forfauchelt sae didna bather gaun oot', 'The wather’s no sae nice the day', 'He haed tae pit mair siller in the pairkin meter sae as tae evite gettin a ticket', 'Ye’r a bonnie fechter, sae ye ar!']
+}, {
     sc: 'shuir',
     en: [
         ['surely', 'indeed', 'for certain']
