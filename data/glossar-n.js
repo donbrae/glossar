@@ -120,6 +120,7 @@ G.dict.push({
     au: 'breeks'
 }, {
     sc: ['brur', 'brither'],
+    tr: 'brer',
     en: 'brother',
     gr: 'n',
     or: [

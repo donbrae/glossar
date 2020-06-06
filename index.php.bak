@@ -13,7 +13,7 @@ $years = array(
 $last_updatit = str_replace(
   array_keys($years),
   array_values($years),
-  date("j F Y", filemtime("glossar-bundle.1590156333.min.js"))
+  date("j F Y", filemtime("glossar-bundle.1590833652.min.js"))
 );
 
 ?>
@@ -22,22 +22,22 @@ $last_updatit = str_replace(
 <html lang="sco">
 
 <head>
-    <title>Glossar</title>
+    <title>Scots.app</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- opengraph url tag -->
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Scots Glossar"/>
-    <meta property="og:description" content="Mak Forrit Scots glossar. Translate atween Scots an English."/>
-    <meta property="og:image" content="https://glossar.makforrit.scot/social_image.jpg"/>
+    <meta property="og:title" content="Scots.sp"/>
+    <meta property="og:description" content="Scots.app: translate atween Scots an English."/>
+    <meta property="og:image" content=""/>
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@makforrit" />
-    <meta name="twitter:title" content="Scots Glossar" />
-    <meta name="twitter:description" content="Mak Forrit Scots glossar. Translate atween Scots an English." />
-    <meta name="twitter:image" content="https://glossar.makforrit.scot/social_image.jpg" />
+    <meta name="twitter:title" content="Scots.app" />
+    <meta name="twitter:description" content="Scots.app: translate atween Scots an English." />
+    <meta name="twitter:image" content="" />
 
     <link rel="icon" href="https://www.makforrit.scot/wp-content/uploads/2017/08/FAK_FORRIT_logo_full_small-100x100.png" sizes="32x32" />
     <link rel="icon" href="https://www.makforrit.scot/wp-content/uploads/2017/08/FAK_FORRIT_logo_full_small.png" sizes="192x192" />
@@ -46,20 +46,20 @@ $last_updatit = str_replace(
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.1589021342.css">
+    <link rel="stylesheet" href="app.1591453056.css">
 
     <script src="zepto.min.js"></script>
     <script src="fuse.basic.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.1590156333.min.js" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.1590833652.min.js" onload="GLOSSAR.init()"></script>
 
 </head>
 
 <body>
     <!-- Begin page content -->
     <main role="main" class="container">
-        <h1 class="mt-5 text-center"><label for="searchTextbox">Scots glossar<sup>beta</sup></label></h1>
+        <h1 class="mt-5 text-center"><label for="searchTextbox">Scots.app<sup>beta</sup></label></h1>
         <section id="search">
             <div class="form-group form-inline justify-content-center">
                 <div class="input-group w-75">
@@ -80,7 +80,7 @@ $last_updatit = str_replace(
 
     <footer class="footer">
         <div class="container">
-            <span class="text-muted"><a href="https://makforrit.scot">Mak Forrit</a> glossar tuil (prototype). <?php echo "Last updatit: $last_updatit"; ?>. Nae cookies.</span>
+            <span class="text-muted">Scots.app. <?php echo "Last updatit: $last_updatit"; ?>. Nae cookies.</span>
         </div>
     </footer>
 </body>
