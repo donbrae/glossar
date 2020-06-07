@@ -252,7 +252,7 @@ div.en, div.def, div.ex, div.inf {
     font-style: normal;
 }
 .hl {
-    background-color: #a1ff95c2;
+    background-color: #a1ff9594;
 }
 .sc-alt, .or-container, .grammar, .pr {
     color: #9e9e9e;
@@ -324,7 +324,7 @@ button.play-audio {
 }
 button.play-audio i {
     color: #404040;
-    background-color: #fffc5aad;
+    background-color: #fffc5a80;
     border-radius: 50%;
     padding: 1px;
 }

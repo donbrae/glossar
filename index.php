@@ -46,7 +46,7 @@ $last_updatit = str_replace(
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.1591453056.css">
+    <link rel="stylesheet" href="app.1591519109.css">
 
     <script src="zepto.min.js"></script>
     <script src="fuse.basic.min.js"></script>
