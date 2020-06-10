@@ -18,7 +18,7 @@ Audience: Scots speakers, scrievers and learners.
 
 # Dev
 
-Mak chynges tae template index.php.
+Mak chynges tae template **index.php** and **app.*.css**
 
 Trigger wirds (`tr`), pronunciations (`pr`) and alternative spellins (`sc_alt`) will be highlichtit in the UI by defaut. Ye can uise the *highlight* property (`hl`) tae owerride this. Note how typin *depute* (Scots) vs *deputy* (English) is haundelt. For a mair complex example, tak tent of the verbs *tae gae* and *tae gie*.
 

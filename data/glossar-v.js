@@ -1478,7 +1478,7 @@ G.dict.push({ // A
         en: 'crying',
         tr: ['greeting', 'weeping'],
         ex: 'The film haed me greetin',
-        gr: 'pres pple o the v <span>tae greet</span>',
+        gr: 'pres participle o the v <span>tae greet</span>',
         or: [
             [G.notes.or.as, 'gretand']
         ]
@@ -1656,7 +1656,7 @@ G.dict.push({ // A
         en: 'taking',
         tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'takkin', 'tooken', 'tookin'],
         ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
-        gr: 'pres pple o the v <span>tae tak</span>'
+        gr: 'pres participle o the v <span>tae tak</span>'
     }, {
         sc: 'tak on',
         en: 'adopt',

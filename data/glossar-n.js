@@ -808,7 +808,8 @@ G.dict.push({
         [G.notes.or.as, 'mater(e)'],
         [G.notes.or.me, 'mater'],
         [G.notes.or.l, 'māteria']
-    ]
+    ],
+    ex: 'That’s aa I hiv tae sae aboot the maiter!'
 }, {
     sc: 'mak',
     en: [

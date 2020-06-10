@@ -1,13 +1,7 @@
+
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^glossary\.makforrit\.scot$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.glossary\.makforrit\.scot$
+RewriteCond %{HTTP_HOST} ^glossar\.makforrit\.scot$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.glossar\.makforrit\.scot$
 RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
 RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-RewriteRule ^/?$ "https\:\/\/glossar\.makforrit\.scot" [R=301,L]
-
-# Prevent HTML and PHP pages from being cached
-<FilesMatch "\.(htm|html|php)$">
-  ExpiresActive On
-  ExpiresDefault A1
-  Header append Cache-Control must-revalidate
-</FilesMatch>
+RewriteRule ^/?$ "https\:\/\/scots\.app\/" [R=301,L]
