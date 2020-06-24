@@ -429,7 +429,7 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
 
 // ken and knaw triggers
 G.v.ken_knaw = {};
-G.v.ken_knaw.trigs = ['ken', 'know', 'kenna', 'know not', 'kent', 'kenned', 'knew', 'kentna', 'knew not', 'known', 'knaw', 'knawed', 'knawn'];
+G.v.ken_knaw.trigs = ['ken', 'know', 'kenna', 'know not', 'kent', 'kenned', 'kend', 'knew', 'kentna', 'knew not', 'did not know', 'didn\'t know', 'known', 'knaw', 'knawed', 'knawn'];
 
 // lat triggers
 G.v.lat = {};
@@ -1227,13 +1227,14 @@ G.dict.push({ // A
         ex: [G.ex.h, G.ex.c]
     }, {
         sc: ['kent', 'kenned'],
-        en: ['knew'],
+        en: 'knew',
+        tr: G.v.ken_knaw.trigs,
         neg: {
             sc: 'kentna',
-            tr: G.v.ken_knaw.trigs
+            tr: ['did not know', 'didn\'t know']
         },
         tr: G.v.ken_knaw.trigs,
-        hl: ['kent', 'kenned'],
+        hl: ['kent', 'kenned', 'kend'],
         gr: 'pt o v ' + G.utils.addSpan('tae ken'),
         ex: 'Tammas kentna what tae dae'
     }, {

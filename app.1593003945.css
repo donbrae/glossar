@@ -86,7 +86,7 @@ body {
     /* Set the fixed height of the footer here */
     line-height: 20px;
     /* Vertically center the text there */
-    background-color: #fff;
+    background-color: inherit;
 }
 /* Custom page CSS
 -------------------------------------------------- */
@@ -141,9 +141,10 @@ ul {
 }
 ul>li:not(.no-results) {
     margin-bottom: 10px;
-    background-color: inherit;
-    padding: 5px 5px;
+    padding: 9px 12px;
     line-height: 1.4;
+    background-color: #ffffffeb;
+    border-radius: 11px;
 }
 ul>li.phrase {
     background-color: inherit;
@@ -277,6 +278,9 @@ div.en, div.def, div.ex, div.inf {
 }
 .hl {
     background-color: #a1ff9594;
+    padding: 1px 7px 3px 7px;
+    border-radius: 7px;
+    margin-left: -3.2px;
 }
 .sc-alt, .or-container, .grammar, .pr {
     color: #9e9e9e;
@@ -287,7 +291,7 @@ div.en, div.def, div.ex, div.inf {
 }
 #result {
     padding-bottom: 30px;
-    padding-top: 15px;
+    padding-top: 26px;
 }
 #result a {
     color: inherit;
@@ -315,7 +319,7 @@ div.en, div.def, div.ex, div.inf {
 #searchTextbox:focus, .form-control-pseudo-focus {
     color: #212529;
     border-color: #7777771a;
-    box-shadow: 0px 2px 9px 0rem rgba(148, 148, 148, 0.29);
+    box-shadow: 0px 2px 9px 0rem rgba(148, 148, 148, 0.14);
     outline: 0;
 }
 .form-control::placeholder {
@@ -344,7 +348,7 @@ button.btn.bg-transparent:focus {
 }
 button.play-audio {
     padding: 0;
-    margin: -3px 0 0 0;
+    margin: -3px -1px 0 -1px;
 }
 button.play-audio i {
     color: #404040;

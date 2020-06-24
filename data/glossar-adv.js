@@ -407,6 +407,7 @@ G.dict.push({ // A
     ]
 }, {
     sc: 'aefauldly',
+    tr: 'aefauldlie',
     en: [
         ['sincerely', 'honestly', 'faithfully']
     ],

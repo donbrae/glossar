@@ -247,8 +247,7 @@ G.dict.push({
     ],
     ex: ['Her client haed naething tae say in the contrair', 'Na, na; I dinna haud wi that — I ken tae the contrair!', 'I wis expectin the play tae be awfu dreich, but it turnt oot the contrair wis true']
 }, {
-    sc: 'council',
-    pr: 'cooncil',
+    sc: 'cooncil',
     en: 'council',
     gr: 'n',
     or: [
