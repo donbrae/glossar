@@ -392,3 +392,8 @@ button:disabled {
         padding: 1px 5px 2px 5px;
     }
 }
+@media (max-width: 575px) {
+    .hl+span+span.grammar, .hl+span.grammar {
+        margin-top: 0.15rem;
+    }
+}

@@ -13,7 +13,7 @@ $years = array(
 $last_updatit = str_replace(
   array_keys($years),
   array_values($years),
-  date("j F Y", filemtime("glossar-bundle.1593003057.min.js"))
+  date("j F Y", filemtime("glossar-bundle.1593033957.min.js"))
 );
 
 ?>
@@ -51,13 +51,13 @@ $last_updatit = str_replace(
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.1593003945.css">
+    <link rel="stylesheet" href="app.1593033312.css">
 
     <script src="zepto.min.js"></script>
     <script src="fuse.basic.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.1593003057.min.js" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.1593033957.min.js" onload="GLOSSAR.init()"></script>
 
 </head>
 

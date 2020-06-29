@@ -70,6 +70,15 @@ G.dict.push({
         ['likely ' + G.notes.or.me, 'bale']
     ]
 }, {
+    sc: 'breid',
+    en: 'bread',
+    pr: ['breed', 'bred'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'breid, brede, braid'],
+        [G.notes.or.ae, 'brēad']
+    ]
+}, {
     sc: 'bittie',
     en: [
         ['a small piece', 'a little bit'],
@@ -964,18 +973,21 @@ G.dict.push({
     en: 'poet',
     gr: 'n',
     or: [
-        [G.notes.or.as, 'poet, poiet, poyet'],
-        // ['?' + G.notes.or.me, 'poet(e), poyet(e)'],
-        // ['?' + G.notes.or.af, 'poete'],
-        // [G.notes.or.l, 'poēta'],
-        // [G.notes.or.gk, 'poētēs']
+        [G.notes.or.as, 'poet, poiet, poyet']
+    ]
+}, {
+    sc: 'poyem',
+    en: 'poem',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'poyeme, poyam']
     ]
 }, {
     sc: 'poyetry',
     en: 'poetry',
     gr: 'n',
     or: [
-        [G.notes.or.as, 'poetry, poetrie, poyetrie'],
+        [G.notes.or.as, 'poetry, poetrie, poyetrie']
     ]
 }, { // Q
     sc: ['quine', 'quinie'],
