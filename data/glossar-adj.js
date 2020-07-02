@@ -428,7 +428,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'mair, mare, mar'],
         [G.notes.or.ae, 'māre']
     ],
-    ex: ['We steyed in Milan twa mair days', 'He’s mair aulder nor me', 'She wis mair fasht aboot it than he wis', G.ex.d1, 'Moyen daes muckle but money daes mair'],
+    ex: ['We steyed in Milan twa mair days', 'He’s mair aulder nor mysel', 'She wis mair fasht aboot it than he wis', G.ex.d1, 'Moyen daes muckle but money daes mair'],
     au: 'mair'
 }, {
     sc: 'maist',
@@ -545,6 +545,10 @@ G.dict.push({ // A
     ],
     tr: ['boisterous', 'uncertain'],
     gr: 'adj'
+}, {
+    sc: 'richt',
+    en: 'right',
+    gr: ['adj', 'adv', 'n', 'v', 'exclamation']
 }, { // S
     sc: 'shuir',
     pr: ['shair', 'shör', 'shür', 'sheer', 'seer'],

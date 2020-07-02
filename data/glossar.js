@@ -125,8 +125,9 @@ G.dict = [{
     gr: ['conj']
 }, { // E
     sc: 'efter',
+    pr: ['efter', 'aifter'],
     en: ['after', 'later'],
-    tr: ['aifter', 'syne'],
+    tr: 'syne',
     gr: ['adv', 'prep', 'conj'],
     or: [
         [G.notes.or.as, 'efter, eftir'],

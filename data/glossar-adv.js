@@ -426,7 +426,7 @@ G.dict.push({ // A
 }, {
     sc: 'the day',
     en: 'today',
-    gr: 'adv, n',
+    gr: ['adv', 'n'],
     ex: [G.ex.n, G.ex.o, G.ex.p],
     or: '<span>the day</span> first appears in scrievit form in ' + G.notes.or.as + ' frae aboot 1500'
 }, {
@@ -434,20 +434,20 @@ G.dict.push({ // A
     en: [
         ['tomorrow', 'the following morning or day']
     ],
-    gr: 'adv, n',
-    or: '<span>the morne</span> ‘the follaein day’ dates back til aboot 1470',
+    gr: ['adv', 'n'],
+    or: '<span>the morn(e)</span> ‘the follaein day’ dates back til aboot 1470',
     ex: 'I\'ll see ye the morn!'
 }, {
     sc: 'the morra',
     en: 'tomorrow',
-    gr: 'adv, n',
+    gr: ['adv', 'n'],
     or: G.notes.or.as + ' haes <em>the morrow</em>',
     ex: 'Gie me a call the morra'
 }, {
     sc: 'the nicht',
     en: 'tonight',
     tr: 'the night',
-    gr: 'adv, n',
+    gr: ['adv', 'n'],
     ex: ['Are ye gaun oot the nicht?', 'It’s awfu cauld the nicht'],
     or: 'first kythin DOST haes o <span>the nicht</span> (in the mak <em>the nycht</em>) ‘the present or approachin nicht’ is frae 1475'
 }, {

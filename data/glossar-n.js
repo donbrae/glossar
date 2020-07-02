@@ -415,6 +415,11 @@ G.dict.push({
         [G.notes.or.af, 'environner']
     ]
 }, {
+    sc: 'erse',
+    pr: ['erse', 'airse'],
+    en: 'arse',
+    gr: 'n'
+}, {
     sc: 'ettle',
     en: [
         ['one\'s aim or purpose', 'one\'s design or object'],
@@ -875,6 +880,10 @@ G.dict.push({
     en: 'network',
     gr: 'n',
     ex: [G.ex.s, G.ex.t]
+}, {
+    sc: 'nicht',
+    en: 'night',
+    gr: ['n']
 }, { // O
     sc: 'onhaudin',
     en: 'continuation',
