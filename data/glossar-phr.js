@@ -10,44 +10,71 @@ G.dict.push({
     sc: 'at that',
     en: 'with that',
     ex: 'At that, Jamie teuk the gate hame',
-    ph: true
+    gr: 'phr'
 }, {
     sc: 'be on the haik for',
     en: 'be on the lookout for',
-    ph: true
+    gr: 'phr'
 }, {
     sc: 'mak namely its pairt in',
     en: 'celebrate its contribution to',
     ex: G.ex.j,
-    ph: true
+    gr: 'phr'
 }, {
     sc: ['nae bother', 'nae bather'],
     en: 'no problem',
-    ph: true
+    gr: 'phr'
 }, {
     sc: 'for tae',
     en: 'in order to',
     gr: 'subordinatin conj',
-    ex: G.ex.k,
-    ph: true
+    ex: G.ex.k
 }, {
     sc: 'ower and abuin',
     en: 'over and above',
-    ph: true
+    gr: 'phr'
 }, {
     sc: 'pit intil effect',
     en: 'implement',
-    gr: 'v phr',
+    gr: 'phrasal v',
     ex: G.ex.f,
-    ph: true
 }, {
     sc: 'douce and wicelike',
     en: 'constructively',
-    gr: 'adv phr',
+    gr: 'adphrasal v',
     ex: 'The twa governments is committit tae haud gaun douce and wicelike',
-    ph: true
+    gr: 'phr'
+}, {
+    sc: 'tak the maiter throu haunds',
+    en: [['discuss', 'debate']],
+    gr: 'phr'
+}, {
+    sc: 'like as it wis',
+    en: 'as if it wis',
+    ph: true,
+    ex: 'It wis daurk like as it wis the nicht, but it wis juist three in the efternuin'
+}, {
+    sc: 'muckle the mair',
+    en: 'all the more',
+    gr: 'phr'
+}, {
+    sc: 'gae aboot the buss',
+    en: 'beat around the bush',
+    tr: 'beat about the bush',
+    ex: 'He spak fair oot, no gaein aboot the buss wi it',
+    gr: 'phr'
 }, {
     sc: 'gie\'s',
-    tr: ['gies', 'gie me', 'gie us', 'give me', 'give us'],
+    tr: ['gies', 'geez', 'gie me', 'gie us', 'give me', 'give us'],
     def: 'Gie me, gie us (contraction o ‘gie us’)'
+}, {
+    sc: 'afore aa is duin',
+    tr: 'afore aw is duin',
+    en: 'eventually',
+    gr: 'phr'
+}, {
+    sc: 'aabody ither',
+    tr: ['awbody ither', 'everybody else'],
+    en: 'everyone else',
+    gr: 'phr'
 });

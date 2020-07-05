@@ -147,8 +147,7 @@ ul>li:not(.no-results) {
     border-radius: 11px;
 }
 ul>li.phrase {
-    background-color: inherit;
-    border: 1px dotted #dcdcdc;
+    border: 1px dotted #212529;
 }
 ul.or {
     display: inline;
@@ -202,7 +201,10 @@ h1 sup {
     margin-left: 3px;
 }
 .sc {
-    padding: 0px 4px 1px 4px;
+    padding: 0 6px 1px 4px;
+}
+.sc.hl {
+    /* margin-right: 4px; */
 }
 .or-container {
     padding: 5px 0 0 4px;
@@ -243,14 +245,17 @@ div.en, div.def, div.ex, div.inf {
 }
 .pt, .pp, .pt-pp, .neg, .pl {
     padding-left: 4px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 .or {
     padding-left: 0;
     line-height: 1.4;
 }
 .pt span, .pp span, .pt-pp span, .neg span, .pl span {
-    padding: 1px 4px;
+    margin: 1px 5px;
+}
+.pt span.hl, .pp span.hl, .pt-pp span.hl, .neg span.hl, .pl span.hl {
+    margin: 1px -2px;
 }
 .pt, .pp, .pt-pp, .neg, .pl {
     display: block;
@@ -278,7 +283,7 @@ div.en, div.def, div.ex, div.inf {
 }
 .hl {
     background-color: #a1ff9594;
-    padding: 1px 7px 3px 7px;
+    padding: 1px 6px 3px 7px;
     border-radius: 7px;
     margin-left: -3.2px;
 }
@@ -302,7 +307,7 @@ div.en, div.def, div.ex, div.inf {
     text-decoration: none;
 }
 .fade {
-    transition: opacity 0.05s linear;
+    transition: opacity 0.075s linear;
 }
 .mt-5, .my-5 {
     margin-top: 1.7rem !important;
@@ -393,7 +398,7 @@ button:disabled {
     }
 }
 @media (max-width: 575px) {
-    .hl+span+span.grammar, .hl+span.grammar {
+    /* .hl+span+span.grammar, .hl+span.grammar {
         margin-top: 0.15rem;
-    }
+    } */
 }

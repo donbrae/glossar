@@ -554,7 +554,7 @@ G.dict.push({ // A
         sc: 'cast-ower',
         en: 'review',
         tr: ['cast ower'],
-        gr: 'v phr',
+        gr: 'phrasal v',
         ex: 'Whiles we will cast-ower the policy an mak mair recommends'
     }, {
         sc: 'complouther',
@@ -737,7 +737,7 @@ G.dict.push({ // A
             sc: 'ettelt sair',
             tr: ['tried hard', 'strove', 'striven', 'strived']
         },
-        gr: 'v phr',
+        gr: 'phrasal v',
         ex: 'She’d ettelt sair tae pass aw her exams',
         ph: true
     }, {
@@ -1028,7 +1028,7 @@ G.dict.push({ // A
             ['pertaining to', 'belonging to'],
             ['in relation to', 'in proportion to', 'corresponding to']
         ],
-        gr: ['v phr', 'formal'],
+        gr: ['phrasal v', 'formal'],
         tr: ['effeir', 'relating to', 'according to', 'applicable to', 'concerning', 'about', 'referring to'],
         hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to', 'concerning', 'referring to'],
         or: 'see v <span>effeir</span>',
@@ -1052,7 +1052,7 @@ G.dict.push({ // A
         sc: 'gie bield tae/til',
         en: 'protect',
         tr: ['gie bield tae', 'gie bield til'],
-        gr: 'v phr',
+        gr: 'phrasal v',
         ex: 'The 1992 Chairter gies bield til Europe’s regional or smaw leids',
         ph: true
     }, {
@@ -1078,7 +1078,11 @@ G.dict.push({ // A
         tr: ['hauden', 'hold'],
         hl: ['haud', 'hold'],
         gr: 'v',
-        ex: [G.ex.z, 'The neist comatee meetin will be hauden in Mey']
+        ex: [G.ex.z, 'The neist comatee meetin will be hauden in Mey'],
+        or: [
+            [G.notes.or.as, 'hald, had, hauld, haud'],
+            [G.notes.or.ae, 'healdan']
+        ]
     }, {
         sc: 'hauden',
         en: 'be obliged or required to do something',
@@ -1108,6 +1112,7 @@ G.dict.push({ // A
         en: [
             ['aim at', 'make for']
         ],
+        tr: 'aim for',
         gr: 'phrasal v'
     }, {
         sc: 'haud forrit',
@@ -1168,6 +1173,7 @@ G.dict.push({ // A
         tr: ['bring to a place', 'bring into a place'],
         gr: 'v',
         or: [
+            [G.notes.or.as, 'inbring, imbring'],
             [G.notes.or.ae, 'inbrengan']
         ],
         ex: [G.ex.l, G.ex.s]
@@ -1260,6 +1266,14 @@ G.dict.push({ // A
         hl: 'knaw',
         gr: 'v'
     }, { // L
+        sc: 'lead ajee',
+        pt: {
+            sc: 'led ajee',
+            tr: 'deceived'
+        },
+        en: 'deceive',
+        gr: 'phrasal v'
+    }, {
         sc: 'laid',
         en: 'load',
         gr: ['v', 'n'],
@@ -1343,7 +1357,7 @@ G.dict.push({ // A
     }, {
         sc: 'lat see',
         en: 'produce',
-        gr: 'v phr',
+        gr: 'phrasal v',
         ph: true
     }, {
         sc: 'mak',
@@ -1493,6 +1507,10 @@ G.dict.push({ // A
         hl: G.v.hae.sc,
         gr: 'v',
         ex: [G.ex.a1, G.ex.c1],
+        or: [
+            [G.notes.or.as, 'hafe, haif(f), ha, hae'],
+            [G.notes.or.ae, 'habban']
+        ],
         au: 'hae'
     }, { // hae neg
         sc: G.v.hae.neg.sc,
@@ -1548,6 +1566,21 @@ G.dict.push({ // A
         or: [
             [G.notes.or.ms, 'haik']
         ]
+    }, {
+        sc: 'haud oot',
+        pt: {
+            sc: ['held oot', 'haudit oot'],
+            tr: ['maintained', 'claimed']
+        },
+        pp: {
+            sc: ['hauden oot', 'held oot'],
+            tr: ['maintained', 'claimed']
+        },
+        en: [
+            ['maintain', 'claim']
+        ],
+        gr: 'phrasal v',
+        ex: 'He’d aye hauden oot tae be a millionaire, but fowk didna trew it'
     }, {
         sc: 'hoose',
         def: ['tae provide wi a hoose', 'tae bouk guids or craps'],
@@ -1605,7 +1638,7 @@ G.dict.push({ // A
     }, {
         sc: 'pit forrit',
         en: 'introduce',
-        gr: 'v phr'
+        gr: 'phrasal v'
     }, {
         sc: 'proceed',
         en: 'proceed',
@@ -1669,7 +1702,7 @@ G.dict.push({ // A
             sc: ['taen on', 'takken on', 'teuken on'],
             tr: 'adopted'
         },
-        gr: 'v phr',
+        gr: 'phrasal v',
         ex: 'The Chairter wis taen on in 1992',
         ph: true
     }, {
@@ -1739,7 +1772,7 @@ G.dict.push({ // A
             tr: 'published'
         },
         en: 'publish',
-        gr: 'v phr, v',
+        gr: 'phrasal v, v',
         or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],
         ex: 'She haes setten furth a pose o unco bonnie poyetry'
     }, { // S

@@ -360,7 +360,11 @@ G.dict.push({ // A
     en: 'good',
     tr: G.adj.guid.trigs,
     pr: G.adj.guid.pr,
-    gr: 'adj'
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'gud(e), guid'],
+        [G.notes.or.ae, 'gōd']
+    ]
 }, { // I
     sc: 'ilk',
     en: 'same',

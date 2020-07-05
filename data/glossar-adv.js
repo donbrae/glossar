@@ -155,7 +155,7 @@ G.dict.push({ // A
 }, {
     sc: 'hinderly',
     en: 'eventually',
-    gr: ['adv']
+    gr: 'adv'
 }, { // J
     sc: 'juist',
     pr: G.pr.juist,
@@ -175,7 +175,8 @@ G.dict.push({ // A
     ],
     tr: G.adj.guid.trigs,
     pr: G.adj.guid.pr,
-    gr: 'adv'
+    gr: 'adv',
+    or: 'see adj'
 }, {
     sc: 'atweel',
     en: [

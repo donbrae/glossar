@@ -108,7 +108,7 @@ var GLOSSAR = (function() {
                     $('#result').removeClass('show');
                     t = setTimeout(function() {
                         $('#result').html('');
-                    }, 100);
+                    }, 250);
                 }
             }
 
@@ -190,11 +190,12 @@ var GLOSSAR = (function() {
 
         $('#clear-value').click(function() {
             $(this).prev('input').val('').focus();
-            $(this, '#result').removeClass('show');
+            $(this).removeClass('show');
+            $('#result').removeClass('show');
 
             var t = setTimeout(function() {
                 $('#result').html('');
-            }, 100);
+            }, 250);
 
             // Cancel any timeout
             if (state.timeout) {
