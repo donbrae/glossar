@@ -17,6 +17,7 @@ html { font-family: 'Inter', sans-serif; }
        url('./fonts/fontello.svg?70815016#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
  [class^="icon-"]:before, [class*=" icon-"]:before {

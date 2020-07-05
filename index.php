@@ -13,7 +13,7 @@ $years = array(
 $last_updatit = str_replace(
   array_keys($years),
   array_values($years),
-  date("j F Y", filemtime("glossar-bundle.1593963383.min.js"))
+  date("j F Y", filemtime("glossar-bundle.min.js"))
 );
 
 ?>
@@ -26,6 +26,7 @@ $last_updatit = str_replace(
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Scots dictionary app: translate words between Scots and English.">
 
     <!-- opengraph url tag -->
     <meta property="og:type" content="website"/>
@@ -51,13 +52,13 @@ $last_updatit = str_replace(
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.1593963435.css">
+    <link rel="stylesheet" href="app.css?_=1593966936">
 
     <script src="zepto.min.js"></script>
     <script src="fuse.basic.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.1593963383.min.js" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?_=1593966935" onload="GLOSSAR.init()"></script>
 
 </head>
 
@@ -65,7 +66,7 @@ $last_updatit = str_replace(
     <!-- Begin page content -->
     <main role="main" class="container">
         <header>
-            <img src="favicon-ui.png">
+            <img src="favicon-ui.png" alt="Robot icon with speech bubbles">
             <h1 class="mt-5"><label for="searchTextbox">Scots glossar<sup>beta</sup></label></h1>
         </header>
         <section id="search">
@@ -74,6 +75,7 @@ $last_updatit = str_replace(
                     <input type="text" class="form-control mx-auto" id="searchTextbox" placeholder="Inpit Scots or English…" spellcheck="false">
                     <button class="btn bg-transparent fade" id="clear-value">
                         <i class="demo-icon icon-cancel"></i>
+                        <span class="sr-only">Clear value of field</span>
                     </button>
                 </div>
             </div>

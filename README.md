@@ -18,7 +18,7 @@ Audience: Scots speakers, scrievers and learners.
 
 # Dev
 
-Mak chynges tae template **index.php** and **app.*.css**
+Mak chynges tae template **index.dev.php** and **app.css**. For tae big, see section *Biggin* ablo.
 
 Trigger wirds (`tr`), pronunciations (`pr`) and alternative spellins (`sc_alt`) will be highlichtit in the UI by defaut. Ye can uise the *highlight* property (`hl`) tae owerride this. Note how typin *depute* (Scots) vs *deputy* (English) is haundelt. For a mair complex example, tak tent of the verbs *tae gae* and *tae gie*.
 
@@ -28,7 +28,9 @@ Anent highlighting in verbs, *haud* is a guid example tae leuk at (tak tent o *h
 
 # Biggin
 
-Rin **build.sh** for tae big JS bundle and update refs in **index.php** and **local-test.html**. Eik optional argument *css* tae dae the like wi the CSS file.
+Rin **build.sh** for tae big JS bundle (**glossar-bundle.min.js**) and **index.php** and **index.local.html**. Eik optional argument *css* tae update query string when calling CSS (in all version of the index file).
+
+**index.php**, **glossar-bundle.min.js** and **app.css** should be uploaded.
 
 * https://glossar.makforrit.scot/
 * (non-local) dev URL: https://glossar.makforrit.scot/index-dev.html

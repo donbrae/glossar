@@ -1,4 +1,6 @@
 #!/bin/bash
+
+#!/bin/bash
 shopt -s extglob
 
 timestamp() {
@@ -9,20 +11,16 @@ timestamp # Generate timestamp
 
 if [ "$1" == "css" ]
 then
-	mv app.*.css app.$TS.css # Rename CSS file
-
-    # Update ref to CSS file in template
-    sed -i '.bak' -e "s/app.*.css/app.$TS.css/" index.php
-    cp index.php local-test.html # Update local test template
+    # Update all versions of index file
+    sed -i '' "s/app.css\?\_\=[0-9]*/app.css\?\_\=$TS/" index.dev.php
+    sed -i '' "s/app.css\?\_\=[0-9]*/app.css\?\_\=$TS/" index.local.html
+    sed -i '' "s/app.css\?\_\=[0-9]*/app.css\?\_\=$TS/" index.php
 else
-    rm glossar-bundle.*.min.js # Delete old file
-
-    # Build new file
-    cat ./app.js ./data/glossar.js ./data/glossar-v.js ./data/glossar-adj.js ./data/glossar-adv.js ./data/glossar-n.js ./data/glossar-geo.js ./data/glossar-phr.js > glossar-bundle.$TS.min.js
-
-    # Update ref to JS file in templates
-    sed -i '.bak' -e "s/glossar-bundle.*.min.js/glossar-bundle.$TS.min.js/" index.php
-    cp index.php local-test.html
+    cat ./app.js ./data/glossar.js ./data/glossar-v.js ./data/glossar-adj.js ./data/glossar-adv.js ./data/glossar-n.js ./data/glossar-geo.js ./data/glossar-phr.js > glossar-bundle.min.js
+    sed "s/{{ TIMESTAMP JS }}/$TS/" index.dev.php > index.php
+    cp index.php index.local.html
 fi
 
 shopt -u extglob
+
+# ...
