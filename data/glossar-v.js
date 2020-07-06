@@ -616,6 +616,10 @@ G.dict.push({ // A
             [G.notes.or.af, 'defaillir']
         ]
     }, {
+        sc: 'depone agin',
+        en: 'accuse',
+        gr: 'phrasal v'
+    }, {
         sc: 'defeat',
         pr: ['defait', 'defeet'],
         en: 'defeat',
@@ -1672,7 +1676,7 @@ G.dict.push({ // A
         en: 'take',
         pt: {
             sc: 'teuk',
-            tr: 'took'
+            tr: ['took', 'tuik']
         },
         pp: {
             sc: ['taen', 'takken', 'teuken'],
@@ -1688,7 +1692,8 @@ G.dict.push({ // A
     }, { // Tak -ing ending
         sc: ['takkin', 'taein'],
         en: 'taking',
-        tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'takkin', 'tooken', 'tookin'],
+        tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'tooken', 'tookin', 'tak'],
+        hl: 'takken', // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw
         ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
         gr: 'pres participle o the v <span>tae tak</span>'
     }, {
@@ -1700,7 +1705,7 @@ G.dict.push({ // A
         },
         pp: {
             sc: ['taen on', 'takken on', 'teuken on'],
-            tr: 'adopted'
+            tr: ['adopted', 'took on', 'adoptit']
         },
         gr: 'phrasal v',
         ex: 'The Chairter wis taen on in 1992',
@@ -1734,7 +1739,7 @@ G.dict.push({ // A
             'stretch', ['make a great effort', 'overexert', 'strain a part of yourself', 'rouse yourself'], 'deal (a person) a blow', ['lengthen by stretching', 'pull out', 'extend something to its full reach or capacity', 'be flexible or accommodating'], 'hang a person', ['reach out or over the hand or arm', 'give a person your hand'], 'extend, raise up the head or eyes in order to look or listen', 'hand a person an object', 'sprain a limb', 'reach for, stretch out to take or grasp something'
         ],
         gr: 'v',
-        tr: ['hit', 'lengthen', 'rouse', 'reach', 'hand', 'sprain', 'hang'],
+        tr: ['hit', 'lengthen', 'rouse', 'reach', 'hand', 'sprain', 'hang', 'pass'],
         pt_pp: {
             sc: ['raxed', 'raxt'],
             tr: ['hit', 'handed', 'reached', 'stretched', 'overexterted', 'strained', 'sprained', 'roused', 'lengthened', 'extended', 'accomodated', 'hanged']
@@ -1801,6 +1806,10 @@ G.dict.push({ // A
         en: 'use',
         tr: ['yaise', 'uiss', 'yiss', 'yaize'],
         hl: ['yaise', 'yaize', 'uise', 'yaiz', 'ees'],
+        gr: 'v'
+    }, {
+        sc: 'unsteek',
+        en: 'open',
         gr: 'v'
     }, {
         sc: 'upcast',

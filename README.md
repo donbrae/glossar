@@ -16,6 +16,17 @@ Presently at prototype stage.
 
 Audience: Scots speakers, scrievers and learners.
 
+# Highlichtin example
+
+	{
+	    sc: ['takkin', 'taein'],
+	    en: 'taking',
+	    tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'tooken', 'tookin'],
+	    hl: ['takken', 'tane', 'taen'], // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw
+	    ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
+	    gr: 'pres participle o the v <span>tae tak</span>'
+	}
+
 # Dev
 
 Mak chynges tae template **index.dev.php** and **app.css**. For tae big, see section *Biggin* ablo.

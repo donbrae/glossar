@@ -77,4 +77,19 @@ G.dict.push({
     tr: ['awbody ither', 'everybody else'],
     en: 'everyone else',
     gr: 'phr'
+}, {
+    sc: 'frae this forrit',
+    en: 'from now on',
+    gr: 'phr'
+}, {
+    sc: 'pit in an unco flutter',
+    en: 'amaze',
+    tr: 'amazed',
+    hl: 'amaze',
+    gr: 'phrasal v',
+    ex: 'I wis fair pitten in an unco flutter!'
+}, {
+    sc: 'nae faurer gane than',
+    en: 'as recently as',
+    gr: 'phr'
 });

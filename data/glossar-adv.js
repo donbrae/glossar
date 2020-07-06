@@ -50,6 +50,16 @@ G.dict.push({ // A
     sc: 'awmaist',
     en: 'almost',
     gr: 'adv'
+}, {
+    sc: 'aye',
+    en: ['always', 'still'],
+    tr: ['ay', 'ey', 'continually', 'at all times', 'ayewis', 'ayeweys'],
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'ay, aye'],
+        [G.notes.or.anor, 'ei']
+    ],
+    ex: ['It’s aye been!', 'Dis he aye bide in Aiberdeen?']
 }, { // B
     sc: 'a bittie',
     en: [
@@ -252,6 +262,10 @@ G.dict.push({ // A
     tr: ['much', 'greatly', 'very', 'exceedingly', 'mukkil'],
     gr: 'adv',
     or: 'see adj'
+}, {
+    sc: ['no lang syne', 'nae lang syne'],
+    en: 'recently',
+    gr: 'phrasal adv'
 }, {
     sc: 'no',
     en: 'not',

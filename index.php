@@ -52,13 +52,13 @@ $last_updatit = str_replace(
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.css?_=1593966936">
+    <link rel="stylesheet" href="app.css?_=1594064612">
 
     <script src="zepto.min.js"></script>
     <script src="fuse.basic.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?_=1593966935" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?_=1594066180" onload="GLOSSAR.init()"></script>
 
 </head>
 

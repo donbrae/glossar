@@ -147,9 +147,9 @@ ul>li:not(.no-results) {
     background-color: #ffffffeb;
     border-radius: 11px;
 }
-ul>li.phrase {
+/* ul>li.phrase {
     border: 1px dotted #212529;
-}
+} */
 ul.or {
     display: inline;
 }
