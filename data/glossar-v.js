@@ -1588,7 +1588,7 @@ G.dict.push({ // A
     }, {
         sc: 'hoose',
         def: ['tae provide wi a hoose', 'tae bouk guids or craps'],
-        tr: ['houss', 'hoose', 'house'],
+        tr: ['houss', 'hoose', 'house', 'hous'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'hous, huse, hows'],

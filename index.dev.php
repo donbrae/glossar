@@ -32,13 +32,13 @@ $last_updatit = str_replace(
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Scots glossar"/>
     <meta property="og:description" content="Scots glossar (beta): translate atween Scots an English."/>
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content="https://scots.app/social.jpg"/>
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@makforrit" />
     <meta name="twitter:title" content="Scots glossar" />
     <meta name="twitter:description" content="Scots glossar (beta): translate atween Scots an English." />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:image" content="https://scots.app/social.jpg" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -52,7 +52,7 @@ $last_updatit = str_replace(
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.css?_=1594119714">
+    <link rel="stylesheet" href="app.css?_=1594159824">
 
     <script src="zepto.min.js"></script>
     <script src="fuse.basic.min.js"></script>
