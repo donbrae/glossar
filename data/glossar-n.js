@@ -385,8 +385,7 @@ G.dict.push({
     tr: 'e',
     pl: {
         sc: 'een',
-        en: 'eyes',
-        tr: ['ees', 'e\'en'],
+        tr: ['ees', 'e\'en', 'eyes'],
     },
     gr: 'n',
     or: [
@@ -1235,8 +1234,7 @@ G.dict.push({
     en: 'woman',
     pl: {
         sc: 'wemen',
-        en: 'women',
-        tr: ['weemen', 'weemin', 'weimen', 'wimmen', 'wimen']
+        tr: ['weemen', 'weemin', 'weimen', 'wimmen', 'wimen', 'women']
     },
     gr: 'n',
     tr: ['wummin', 'wumman'],

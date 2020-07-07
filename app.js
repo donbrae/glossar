@@ -40,13 +40,10 @@ var GLOSSAR = (function() {
                 weight: 0.43
             }, {
                 name: 'pl.sc',
-                weight: 0.03
-            }, {
-                name: 'pl.en',
-                weight: 0.02
+                weight: 0.04
             }, {
                 name: 'pl.tr',
-                weight: 0.02
+                weight: 0.03
             }, {
                 name: 'pt.sc',
                 weight: 0.05
@@ -270,9 +267,14 @@ var GLOSSAR = (function() {
                     arrayToLowerCase([].concat(item.en)).indexOf(state.word_lc) > -1 || // Exact match (English)
                     (item.tr && arrayToLowerCase([].concat(item.tr)).indexOf(state.word_lc) > -1) || // Length of this word (returned by results) is below threshold but user input is a trigger for this word
                     (item.pr && arrayToLowerCase([].concat(item.pr)).indexOf(state.word_lc) > -1) || // As per previous but pertains to pronunciation
-                    (item.pl && item.pl.sc && arrayToLowerCase([].concat(item.pl.sc)).indexOf(state.word_lc) > -1) || // As per previous but pertains to Scots plural
-                    (item.pl && item.pl.en && arrayToLowerCase([].concat(item.pl.en)).indexOf(state.word_lc) > -1) || // As per previous but pertains to English plural
-                    (item.pl && item.pl.tr && arrayToLowerCase([].concat(item.pl.tr)).indexOf(state.word_lc) > -1) // As per previous but pertains to plural trigger
+                    (item.pl && item.pl.sc && arrayToLowerCase([].concat(item.pl.sc)).indexOf(state.word_lc) > -1) || // Scots plural
+                    (item.pl && item.pl.tr && arrayToLowerCase([].concat(item.pl.tr)).indexOf(state.word_lc) > -1) || // Plural trigger
+                    (item.pt && item.pt.sc && arrayToLowerCase([].concat(item.pt.sc)).indexOf(state.word_lc) > -1) || // Past tense Scots
+                    (item.pt && item.pt.tr && arrayToLowerCase([].concat(item.pt.tr)).indexOf(state.word_lc) > -1) || // Past tense trigger
+                    (item.pp && item.pp.sc && arrayToLowerCase([].concat(item.pp.sc)).indexOf(state.word_lc) > -1) || // Past participle Scots
+                    (item.pp && item.pp.tr && arrayToLowerCase([].concat(item.pp.tr)).indexOf(state.word_lc) > -1) || // Past participle trigger
+                    (item.pt_pp && item.pt_pp.sc && arrayToLowerCase([].concat(item.pt_pp.sc)).indexOf(state.word_lc) > -1) || // Past tense/participle (when they're the same) Scots
+                    (item.pt_pp && item.pt_pp.tr && arrayToLowerCase([].concat(item.pt_pp.tr)).indexOf(state.word_lc) > -1) // Past tense/participle (when they're the same) trigger
                 ) {
                     results_filtered.push(item);
 
@@ -546,7 +548,7 @@ var GLOSSAR = (function() {
                 hielicht(
                     $('.pl span', this),
                     items,
-                    r[i].pl && r[i].pl.en ? makeSingleArray(r[i].pl.en) : null
+                    r[i].pl && r[i].pl.tr ? makeSingleArray(r[i].pl.tr) : null
                 );
             }
 

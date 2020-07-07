@@ -142,7 +142,7 @@ ul {
 }
 ul>li:not(.no-results) {
     margin-bottom: 10px;
-    padding: 9px 12px;
+    padding: 9px 11px 11px 11px;
     line-height: 1.4;
     background-color: #ffffffeb;
     border-radius: 11px;
@@ -202,7 +202,8 @@ h1 sup {
     margin-left: 3px;
 }
 .sc {
-    padding: 0 6px 1px 4px;
+    padding: 1px 6px 3px 4px;
+    display: inline-block;
 }
 .sc.hl {
     /* margin-right: 4px; */
@@ -284,9 +285,9 @@ div.en, div.def, div.ex, div.inf {
 }
 .hl {
     background-color: #a1ff9594;
-    padding: 1px 6px 3px 7px;
+    padding: 1px 6px 3px 6px;
     border-radius: 7px;
-    margin-left: -3.2px;
+    margin-left: -2.1px;
 }
 .sc-alt, .or-container, .grammar, .pr {
     color: #9e9e9e;
@@ -346,11 +347,11 @@ button.btn.bg-transparent:focus {
     box-shadow: none;
 }
 .audio {
-    margin-left: -6px;
-    margin-right: -3px;
+    margin-left: -5px;
+    margin-right: -1px;
 }
 .hl + .audio {
-    margin-left: -1px;
+    margin-left: -5px;
 }
 button.play-audio {
     padding: 0;
