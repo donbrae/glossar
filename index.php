@@ -22,7 +22,7 @@ $last_updatit = str_replace(
 <html lang="sco">
 
 <head>
-    <title>Scots glossar (beta)</title>
+    <title>Scots.app (beta)</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@ $last_updatit = str_replace(
     <script src="fuse.basic.min.js"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?_=1594145112" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?_=1594232102" onload="GLOSSAR.init()"></script>
 
 </head>
 
@@ -66,7 +66,7 @@ $last_updatit = str_replace(
     <!-- Begin page content -->
     <main role="main" class="container">
         <header>
-            <img src="favicon-ui.png" alt="Robot icon with speech bubbles">
+            <img src="avatar.png" alt="Robot icon with speech bubbles">
             <h1 class="mt-5"><label for="searchTextbox">Scots glossar<sup>beta</sup></label></h1>
         </header>
         <section id="search">
