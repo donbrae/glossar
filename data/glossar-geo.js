@@ -70,7 +70,7 @@ G.dict.push({
 }, {
     sc: 'Baliaries',
     en: 'Balearics',
-    gr: ['pn', 'adj'],
+    gr: ['pn', 'adj']
 }, {
     sc: 'Belgium',
     en: 'Belgium',
@@ -214,7 +214,7 @@ G.dict.push({
 }, {
     sc: 'Freishland',
     en: 'Frisia',
-    gr: 'pn',
+    gr: 'pn'
 }, {
     sc: 'Frisie',
     en: 'Frisian',
@@ -278,7 +278,7 @@ G.dict.push({
     sc: 'Japan',
     en: 'Japan',
     gr: 'pn',
-    def: 'A country East Asie',
+    def: 'A country East Asie'
 }, {
     sc: 'Lappland',
     en: 'Lappland',
@@ -302,7 +302,7 @@ G.dict.push({
 }, {
     sc: 'Malaysie',
     en: 'Malaysia',
-    gr: 'pn',
+    gr: 'pn'
 }, {
     sc: 'Mediterrane',
     en: 'Mediterranean',
@@ -460,7 +460,7 @@ G.dict.push({
     en: 'Hungary',
     gr: 'pn',
     or: [
-        [G.notes.or.as, 'Ungarie, Ungary'],
+        [G.notes.or.as, 'Ungarie, Ungary']
     ]
 }, {
     sc: 'Ungairian',

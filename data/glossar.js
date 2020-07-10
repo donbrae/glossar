@@ -91,7 +91,7 @@ G.dict = [{
     sc: 'anent',
     en: [
         ['opposite', 'in front of', 'before'],
-        ['concerning', 'about', 'in view of'],
+        ['concerning', 'about', 'in view of']
 
     ],
     gr: ['prep', 'formal'],

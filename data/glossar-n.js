@@ -158,7 +158,7 @@ G.dict.push({
     or: [
         [G.notes.or.ms, 'certificat'],
         [G.notes.or.mf, 'certificat']
-    ],
+    ]
 }, {
     sc: 'claes',
     en: 'clothes',
@@ -166,7 +166,7 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'claise, claes, clathis'],
         [G.notes.or.ae, 'claðas']
-    ],
+    ]
 }, {
     sc: 'coo',
     en: 'cow',

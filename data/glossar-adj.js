@@ -295,7 +295,7 @@ G.dict.push({ // A
     sc_alt: 'forbye',
     pr: 'forBye',
     en: [
-        ['extraordinary', 'strange', 'unusually good'],
+        ['extraordinary', 'strange', 'unusually good']
     ],
     gr: 'adj'
 }, {

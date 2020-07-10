@@ -45,3 +45,9 @@ Rin **build.sh** for tae big JS bundle (**glossar-bundle.min.js**) and **index.p
 
 * https://glossar.makforrit.scot/
 * (non-local) dev URL: https://glossar.makforrit.scot/index-dev.html
+
+# Error messages
+
+`fuse.basic.min.js:9 Uncaught TypeError: e.trim is not a function`
+
+Undefined property (e.g. relatit tae `tr`) (check complex verbs first). Stert by remuivin individual data files frae biggin process.

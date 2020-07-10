@@ -147,7 +147,7 @@ G.dict.push({ // A
     sc: 'gey',
     pr: 'guyee',
     en: [
-        ['considerably', 'very', 'rather'],
+        ['considerably', 'very', 'rather']
     ],
     tr: ['guy', 'giy'],
     gr: ['adv'],
@@ -158,7 +158,7 @@ G.dict.push({ // A
 }, {
     sc: ['gey an', 'gey and'],
     en: [
-        ['rather', 'very'],
+        ['rather', 'very']
     ],
     gr: 'adv',
     ex: [G.ex.g, 'The band’s new album wis gey and listenable']
@@ -204,9 +204,8 @@ G.dict.push({ // A
 }, {
     sc: 'mairower',
     en: 'moreover',
-    tr: 'mairowre',
+    tr: ['besides', 'further', 'mairowre'],
     gr: 'adv',
-    tr: ['besides', 'further'],
     hl: 'besides',
     or: [
         [G.notes.or.as, 'mar(e)over, mairower']
@@ -376,7 +375,7 @@ G.dict.push({ // A
 }, { // S
     sc: 'sae',
     en: 'so',
-    tr: ['thus', 'therefore', 'as', 'actually', 'indeed', 'in order that', 'for tae'],
+    tr: ['thus', 'therefore', 'actually', 'indeed', 'in order that', 'for tae'],
     gr: 'adv',
     or: [
         [G.notes.or.as, 'sa, swa, sua'],

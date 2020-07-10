@@ -37,13 +37,12 @@ G.dict.push({
     sc: 'pit intil effect',
     en: 'implement',
     gr: 'phrasal v',
-    ex: G.ex.f,
+    ex: G.ex.f
 }, {
     sc: 'douce and wicelike',
     en: 'constructively',
-    gr: 'adphrasal v',
     ex: 'The twa governments is committit tae haud gaun douce and wicelike',
-    gr: 'phr'
+    gr: 'phrasal v'
 }, {
     sc: 'tak the maiter throu haunds',
     en: [['discuss', 'debate']],

@@ -27,60 +27,37 @@ var GLOSSAR = (function() {
     }
 
     function init() {
+        // // options{} defaults in comments. See also https://fusejs.io/api/options.html#advanced-options
         const options = {
-            shouldSort: true,
-            includeScore: false,
-            findAllMatches: false,
-            threshold: 0.05,
-            location: 0,
-            distance: 15,
-            minMatchCharLength: 1,
-            keys: [{
-                name: 'sc',
-                weight: 0.43
-            }, {
-                name: 'pl.sc',
-                weight: 0.04
-            }, {
-                name: 'pl.tr',
-                weight: 0.03
-            }, {
-                name: 'pt.sc',
-                weight: 0.05
-            }, {
-                name: 'pt.tr',
-                weight: 0.005
-            }, {
-                name: 'pp.sc',
-                weight: 0.01
-            }, {
-                name: 'pp.tr',
-                weight: 0.01
-            }, {
-                name: 'pt_pp.sc',
-                weight: 0.01
-            }, {
-                name: 'pt_pp.tr',
-                weight: 0.005
-            }, {
-                name: 'neg.sc',
-                weight: 0.03
-            }, {
-                name: 'neg.tr',
-                weight: 0.03
-            }, {
-                name: 'sc_alt',
-                weight: 0.05
-            }, {
-                name: 'pr',
-                weight: 0.05
-            }, {
-                name: 'en',
-                weight: 0.05
-            }, {
-                name: 'tr',
-                weight: 0.2
-            }]
+            // shouldSort: true, // true
+            // isCaseSensitive: false, // false
+            // includeScore: false, // false
+            // findAllMatches: false, // false
+            // includeMatches: false, // false
+            threshold: 0.1, // 0.6
+            // location: 0, // 0
+            // distance: 100, // 100
+            // ignoreLocation: false, // false
+            // minMatchCharLength: 1, // Using cfg.threshold_non_hl instead
+            keys: [{ // Boost certain keys
+                    name: 'sc',
+                    weight: 10
+                },
+                'pl.sc',
+                'tr',
+                'pl.tr',
+                'pt.sc',
+                'pt.tr',
+                'pp.sc',
+                'pp.tr',
+                'pt_pp.sc',
+                'pt_pp.tr',
+                'neg.sc',
+                'neg.tr',
+                'sc_alt',
+                'pr',
+                'en'
+            ]
         };
 
         const fuse = new Fuse(GLOSSAR.dict, options);

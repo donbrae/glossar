@@ -96,17 +96,16 @@ G.v.gae = {
     pp: {
         sc: 'gane',
         en: 'gone',
-        tr: ['ganed', 'goan', 'gaen'],
+        tr: ['ganed', 'goan', 'gaen']
     },
     ing: {
         sc: ['gaun', 'gangin', 'gaein', 'gingin'],
         en: 'going',
-        tr: ['goin', 'gawn', 'gawin', 'gauin'],
+        tr: ['goin', 'gawn', 'gawin', 'gauin']
     },
     tps: {
         sc: ['gaes', 'gangs', 'gans', 'gings'],
-        en: 'goes',
-        tr: ['gings'],
+        en: 'goes'
     }
 };
 G.v.gae.trigs = [].concat( // Control display of conjugated 'gae'
@@ -201,7 +200,7 @@ G.v.will = {
             en: [
                 ['wouldn\'t', 'would not']
             ],
-            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'widny', 'wudny'],
+            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'widny', 'wudny']
         }
     }
 };
@@ -309,7 +308,7 @@ G.v.war = {
     }
 };
 G.v.war.trigs = [].concat(
-    G.v.war.sc, G.v.war.pr, G.v.war.en, G.v.war.tr, // war
+    G.v.war.sc, G.v.war.pr, G.v.war.en, // war
     G.v.war.neg.sc, G.v.war.neg.en, G.v.war.neg.tr // neg
 );
 // wis end
@@ -362,11 +361,11 @@ G.v.dae = {
 G.v.dae.trigs = [].concat( // Control display of conjugated 'hae'
     G.v.dae.sc, G.v.dae.en, G.v.dae.pr, // dae
     G.v.dae.neg.sc, G.v.dae.neg.sc_alt, G.v.dae.neg.en, G.v.dae.neg.tr, // dae neg
-    G.v.dae.ps.sc, G.v.dae.ps.sc_alt, G.v.dae.ps.en, G.v.dae.ps.tr, // dae present singular
+    G.v.dae.ps.sc, G.v.dae.ps.en, G.v.dae.ps.tr, // dae present singular
     G.v.dae.ps.neg.sc, G.v.dae.ps.neg.sc_alt, G.v.dae.ps.neg.en, G.v.dae.ps.neg.tr, // dae neg present singular
     G.v.dae.pt.sc, G.v.dae.pt.en, G.v.dae.pt.pr, // dae past tense
     G.v.dae.pt.neg.sc, G.v.dae.pt.neg.sc_alt, G.v.dae.pt.neg.en, // dae neg past tense
-    G.v.dae.ptp.sc, G.v.dae.ptp.sc_alt, G.v.dae.ptp.pr // dae past participle
+    G.v.dae.ptp.sc, G.v.dae.ptp.pr // dae past participle
 );
 // dae end
 
@@ -1699,10 +1698,7 @@ G.dict.push({ // A
     }, {
         sc: 'tak on',
         en: 'adopt',
-        tr: {
-            sc: 'teuk on',
-            tr: 'adopted'
-        },
+        tr: ['teuk on', 'adopted'],
         pp: {
             sc: ['taen on', 'takken on', 'teuken on'],
             tr: ['adopted', 'took on', 'adoptit']
