@@ -16,6 +16,8 @@ $last_updatit = str_replace(
   date("j F Y", filemtime("glossar-bundle.min.js"))
 );
 
+$last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
+
 ?>
 
 <!DOCTYPE html>
@@ -52,10 +54,10 @@ $last_updatit = str_replace(
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.css?_=1594159824">
+    <link rel="stylesheet" href="app.css?_=1594403439">
 
-    <script src="zepto.min.js"></script>
-    <script src="fuse.basic.min.js"></script>
+    <script src="./zepto.min.js?v=1.2.0"></script>
+    <script src="./fuse.basic.min.js?v=6.4.0"></script>
 
     <!-- Production JS bundle -->
     <script defer src="glossar-bundle.min.js?_={{ TIMESTAMP JS }}" onload="GLOSSAR.init()"></script>
@@ -90,7 +92,7 @@ $last_updatit = str_replace(
 
     <footer class="footer">
         <div class="container">
-            <span class="text-muted">Scots glossar (beta). <?php echo "Last updatit: $last_updatit"; ?>. Nae cookies.</span>
+            <span class="text-muted">Scots glossar (beta). Last updatit: <span class="last-updatit" data-updatit="<?php echo $last_updatit_unix; ?>"><?php echo $last_updatit; ?></span>.<span class="update-link d-none"> <button class="btn-link-gray get-update">Update available</button>.</span><br>Nae trackin cookies.</span>
         </div>
     </footer>
 </body>

@@ -50,8 +50,22 @@ G.dict.push({
         ['?' + G.notes.or.f, 'associé']
     ]
 }, { // B
+    sc: ['bam', 'bammer', 'bampot', 'bamstick'],
+    def: 'a fuil, eejit, stupit person; a nutcase',
+    tr: ['stupit', 'stupid', 'idiot', 'fool', 'fuil', 'feel', 'eejit', 'nutcase', 'eediot', 'nutter', 'nutcase', 'numpty'],
+    hl: ['idiot', 'fool', 'fuil', 'feel', 'eejit', 'nutcase', 'eediot', 'nutter', 'nutcase'],
+    gr: 'n, informal',
+    ex: 'He’s a richt bam'
+}, {
+    sc: 'bam',
+    def: 'petty criminal, delinquent; a ned',
+    tr: ['numpty', 'ned', 'criminal', 'delinquent'],
+    gr: 'n'
+}, {
     sc: 'bairn',
-    def: [['a child', 'a baby', 'a young person', 'a son or dochter']],
+    def: [
+        ['a child', 'a baby', 'a young person', 'a son or dochter']
+    ],
     tr: ['wean', 'child', 'son', 'daughter', 'dochter', 'baby', 'infant'],
     gr: 'n',
     or: [
@@ -392,6 +406,15 @@ G.dict.push({
         [G.notes.or.as, 'ee'],
         ['(plural)', 'een(e), eeis'],
         [G.notes.or.ae, 'ēage']
+    ]
+}, {
+    sc: ['eediot', 'eejit'],
+    en: 'idiot',
+    tr: ['fool', 'fuil', 'feel', 'eedyit', 'idiwut'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'idiot'],
+        [G.notes.or.me, 'idiot']
     ]
 }, {
     sc: 'eneuch',
@@ -856,7 +879,9 @@ G.dict.push({
     gr: 'n'
 }, { // N
     sc: 'narrative',
-    def: [['an accoont o events', 'the action o relatin']],
+    def: [
+        ['an accoont o events', 'the action o relatin']
+    ],
     tr: ['account', 'accoont', 'recital', 'statement'],
     gr: 'n',
     or: [
@@ -1042,7 +1067,9 @@ G.dict.push({
     or: 'see verb'
 }, { // R
     sc: 'remeid',
-    en: [['remedy', 'redress']],
+    en: [
+        ['remedy', 'redress']
+    ],
     tr: ['remeed', 'relief', 'cure'],
     gr: 'n',
     or: [

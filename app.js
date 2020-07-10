@@ -64,6 +64,8 @@ var GLOSSAR = (function() {
 
         var t;
 
+        checkForUpdate();
+
         function searchInit(e) {
             var t,
                 $field = $('#searchTextbox');
@@ -200,6 +202,37 @@ var GLOSSAR = (function() {
             }
 
             e.preventDefault();
+        });
+
+        $(document).on('click', '.get-update', function() {
+            location.reload();
+        });
+    }
+
+    // XHR check to see whether data file is newer than what is printed in the UI (XHR requests seem to be better at bypassing the cache)
+    function checkForUpdate() {
+        $.ajax({
+            type: 'GET',
+            url: './update-check.php',
+            dataType: 'text',
+            cache: false,
+            success: function(d) {
+                var date_ui = parseInt(
+                    $('.last-updatit').data('updatit')
+                );
+
+                if (parseInt(d) > date_ui) {
+                    $('.update-link').removeClass('d-none');
+                    console.log('Update available');
+                } else {
+                    console.log('Data should be up tae date');
+                }
+            },
+            error: function(xhr, type) {
+                console.log('Error when checking for update');
+                console.log(xhr);
+                console.log(type);
+            }
         });
     }
 
