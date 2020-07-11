@@ -1,13 +1,7 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url('./fonts/inter/inter.css?_=1594474803');
 
 html {
     font-family: 'Inter', sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-    html {
-        font-family: 'Inter var', sans-serif;
-    }
 }
 
 /* Icons
@@ -270,7 +264,14 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     padding: 1px 0 0 4px;
 } */
 .sc-alt {
-    /* padding: 3px 4px 0 4px; */
+    padding-top: 0.3rem;
+}
+
+@media (min-width: 576px) {
+    .sc-alt {
+        padding-top: 0;
+        padding-bottom: 0.3rem;
+    }
 }
 
 .grammar {
@@ -306,7 +307,7 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     }
 }
 
-.en+.or-container, .def+.or-container, .ex+.or-container, .inf+.or-container {
+.en+.or-container, .def+.or-container, .def+.en, .ex+.or-container, .inf+.or-container {
     padding-top: 0.3rem;
 }
 
@@ -378,8 +379,18 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     font-size: .8rem;
 }
 
+.sc-alt span {
+    color: #212529;
+}
+
 #search {
-    padding-top: 15px;
+    padding-top: 0.8rem;
+}
+
+@media (min-width: 576px) {
+    #search {
+        padding-top: 1rem;
+    }
 }
 
 #result {
@@ -467,6 +478,33 @@ button.play-audio i {
 button:disabled {
     color: inherit !important;
     opacity: .75 !important;
+}
+
+.get-update {
+    margin: 0.3rem 0;
+}
+
+@media (min-width: 576px) {
+    .get-update {
+        margin: 0.5rem 0;
+    }
+}
+
+.btn-primary {
+    background-color: #34aeff;
+    border-color: #34aeff;
+    font-size: inherit;
+    padding: 0.2rem 0.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #2c99e2;
+    border-color: #2c99e2;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #2279b3;
+    border-color: #2279b3;
 }
 
 .btn-link-gray {

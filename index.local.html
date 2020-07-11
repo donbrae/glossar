@@ -54,13 +54,13 @@ $last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.css?_=1594403439">
+    <link rel="stylesheet" href="app.css?_=1594474911">
 
     <script src="./zepto.min.js?v=1.2.0"></script>
     <script src="./fuse.basic.min.js?v=6.4.0"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?_=1594408355" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?_=1594475041" onload="GLOSSAR.init()"></script>
 
 </head>
 
@@ -92,7 +92,10 @@ $last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
 
     <footer class="footer">
         <div class="container">
-            <span class="text-muted">Scots glossar (beta). Last updatit: <span class="last-updatit" data-updatit="<?php echo $last_updatit_unix; ?>"><?php echo $last_updatit; ?></span>.<span class="update-link d-none"> <button class="btn-link-gray get-update">Update available</button>.</span><br>Nae trackin cookies.</span>
+            <div class="text-muted">Scots glossar (beta). Last updatit: <span class="last-updatit" data-updatit="<?php echo $last_updatit_unix; ?>"><?php echo $last_updatit; ?></span>.<br>Nae trackin cookies.</div>
+            <div class="update-link d-none">
+                <button class="btn btn-primary get-update">Update available. Dounlaid noo!</button>
+            </div>
         </div>
     </footer>
 </body>

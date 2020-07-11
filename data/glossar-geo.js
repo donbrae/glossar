@@ -323,7 +323,7 @@ G.dict.push({
 }, {
     sc: 'Norrowa',
     sc_alt: 'Norroway',
-    tr: 'Norrawa',
+    tr: ['norrawa', 'norawa', 'norowa'],
     en: 'Norway',
     def: 'a country in Scandinaivie',
     gr: 'pn'

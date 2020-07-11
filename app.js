@@ -289,7 +289,7 @@ var GLOSSAR = (function() {
                     results_filtered.push(item);
 
                     grammar = item.gr ? '<span class="grammar">' + [].concat(item.gr).join('; ') + '</span> ' : ''; // Grammar
-                    sc_alt = item.sc_alt ? '<div class="sc-alt">(alt. Scots maks: <span>' + [].concat(item.sc_alt).join(', ') + '</span>)</div> ' : ''; // Alternative Scots spellings
+                    sc_alt = item.sc_alt ? '<div class="sc-alt">Or: <span>' + [].concat(item.sc_alt).join(', ') + '</span></div> ' : ''; // Alternative Scots spellings
                     en = item.en ? formatMultiple(item.en, ',', 'en') : ''; // English
                     pr = item.pr ? '<span class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
                     def = item.def ? formatMultiple(item.def, ';', 'def') : ''; // Definition
