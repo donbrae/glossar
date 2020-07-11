@@ -37,11 +37,23 @@ Whan pushin past tenses and past participles tae `G.dict` (by gate of properties
 
 Anent highlighting in verbs, *haud* is a guid example tae leuk at (tak tent o *haud* and *hold* bein in the `tr` property). That wey, if uiser enters *hauden*, only *hauden* will be hielichtit, and no *haud* an-aw.
 
+# JS minification (includin source cairte)
+
+`sh build.sh min`
+
+Requires `terser`:
+
+`npm install terser -g`
+
 # Biggin
 
 Rin **build.sh** for tae big JS bundle (**glossar-bundle.min.js**) and **index.php** and **index.local.html**. Eik optional argument *css* tae update query string when calling CSS (in all version of the index file).
 
-**index.php**, **glossar-bundle.min.js** and **app.css** should be uploaded.
+**index.php**, **glossar-bundle.min.js** and **app.css** should be uploaded, as weel as **app.js** and **./data** (sae as the source mappin wirks).
+
+Whan uplaidin, mak siccar the ruit is pyntit at either live or dev:
+
+`--source-map "root='https://scots.app/dev/src',url='glossar-bundle.min.js.map'"`
 
 * https://glossar.makforrit.scot/
 * (non-local) dev URL: https://glossar.makforrit.scot/index-dev.html
