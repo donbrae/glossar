@@ -426,6 +426,7 @@ G.dict.push({ // A
 }, {
     sc: ['leart', 'leared'],
     en: [['learned', 'educated']],
+    tr: 'educatit',
     gr: 'adj'
 }, { // M
     sc: 'mair',

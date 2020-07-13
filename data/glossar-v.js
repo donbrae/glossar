@@ -1242,7 +1242,6 @@ G.dict.push({ // A
             sc: 'kentna',
             tr: ['did not know', 'didn\'t know']
         },
-        tr: G.v.ken_knaw.trigs,
         hl: ['kent', 'kenned', 'kend'],
         gr: 'pt o v ' + G.utils.addSpan('tae ken'),
         ex: 'Tammas kentna what tae dae'
@@ -1325,7 +1324,7 @@ G.dict.push({ // A
         hl: ['learn', 'lair', 'lear'],
         pt_pp: {
             sc: 'learnt',
-            tr: ['taught', 'instructed', 'educated']
+            tr: ['taught', 'instructed']
         },
         gr: 'v',
         au: 'learn'

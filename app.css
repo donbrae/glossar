@@ -145,11 +145,12 @@ ul {
 }
 
 ul.result>li:not(.no-results) {
-    margin-bottom: 10px;
-    padding: 0.6rem 1.02rem 0.7rem 1.02rem;
+    margin-bottom: 0.9rem;
+    padding: 0.65rem 1.02rem 0.75rem 1.02rem;
     line-height: 1.4;
     background-color: #ffffffeb;
     border-radius: 11px;
+    box-shadow: 0px 2px 9px 0rem rgba(148, 148, 148, 0.08);
 }
 
 /* ul>li.phrase {
@@ -222,6 +223,7 @@ h1 sup {
 
 .sc {
     /* padding: 0.04rem 0.4rem 0.14rem 0.4rem; */
+    font-size: 1.1rem;
     margin-right: 0.3rem;
     margin-bottom: 0.2rem;
 }
@@ -231,15 +233,15 @@ h1 sup {
     margin-bottom: 0.1rem;
 }
 
-.sc, .pt>span, .pp>span {
+.sc, .pt>span, .pp>span, .pt-pp>span {
     display: inline-block;
 }
 
-.pt>span, .pp>span {
+.pt>span, .pp>span, .pt-pp>span {
     margin-bottom: 0.3rem;
 }
 
-.pt>span.hl, .pp>span.hl {
+.pt>span.hl, .pp>span.hl, .pt-pp>span.hl {
     margin-bottom: 0.2rem;
 }
 
@@ -274,8 +276,12 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     }
 }
 
-.grammar {
-    /* padding: 0 4px; */
+.audio+.grammar {
+    margin-left: -0.1rem;
+}
+
+.audio+.pr {
+    margin-left: -0.2rem;
 }
 
 .ex {
@@ -286,8 +292,12 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     padding: 0;
 }
 
-.en, .def, .ex, .inf {
+.def, .ex, .inf {
     padding-top: 0.3rem;
+}
+
+.en {
+    padding-top: 0.4rem;
 }
 
 .pt+.en, .pp+.en {
@@ -307,8 +317,12 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     }
 }
 
-.en+.or-container, .def+.or-container, .def+.en, .ex+.or-container, .inf+.or-container {
+.en+.or-container, .def+.or-container, .ex+.or-container, .inf+.or-container {
     padding-top: 0.3rem;
+}
+
+.def+.en {
+    padding-top: 0.2rem;
 }
 
 .en, .def {
@@ -412,6 +426,10 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     transition: opacity 0.075s linear;
 }
 
+.fade.show {
+  opacity: 1;
+}
+
 .mt-5, .my-5 {
     margin-top: 1.7rem !important;
 }
@@ -456,7 +474,7 @@ button.btn.bg-transparent:focus {
 }
 
 .audio {
-    margin-left: -0.2rem;
+    margin-left: -0.3rem;
     /* margin-right: -1px; */
 }
 
@@ -472,7 +490,7 @@ button.play-audio {
 
 button.play-audio i {
     color: #404040;
-    /* padding: 1px; */
+    font-size: 1.15rem;
 }
 
 button:disabled {

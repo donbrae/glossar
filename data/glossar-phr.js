@@ -91,4 +91,15 @@ G.dict.push({
     sc: 'nae faurer gane than',
     en: 'as recently as',
     gr: 'phr'
+}, {
+    sc: 'conform tae',
+    sc_alt: 'conform til',
+    en: 'in accordance with',
+    tr: ['in conformity with', 'conform to'],
+    gr: 'phr',
+    or: [
+        [G.notes.or.as, 'conform to/till'],
+        [G.notes.or.l, 'conformis']
+    ],
+    ex: 'The app haes been designed and biggit conform tae GDPR regulations'
 });
