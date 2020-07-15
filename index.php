@@ -55,7 +55,7 @@ $last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
     <script src="./fuse.basic.min.js?v=6.4.0"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?_=1594653936" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?_=1594725082" onload="GLOSSAR.init()"></script>
 
 </head>
 

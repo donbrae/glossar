@@ -1208,6 +1208,11 @@ G.dict.push({
     gr: 'n',
     ex: ['He\'s a jyner tae tred', G.ex.l]
 }, {
+    sc: 'troosers',
+    en: 'trousers',
+    tr: 'breeks',
+    gr: 'n'
+}, {
     sc: 'unco',
     en: [
         ['<span>mainly pl</span> strange or unusual things, rarites, novelties, curiosities'],
