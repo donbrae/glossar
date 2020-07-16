@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 $years = array(
   'January' => 'Januar',
@@ -18,7 +18,7 @@ $last_updatit = str_replace(
 
 $last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="sco">
@@ -49,13 +49,13 @@ $last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./bootstrap.pure.css?_=1594651064">
-    <link rel="stylesheet" href="app.css?_=1594653116">
+    <link rel="stylesheet" href="app.css?_=1594926991">
 
     <script src="./zepto.min.js?v=1.2.0"></script>
     <script src="./fuse.basic.min.js?v=6.4.0"></script>
 
     <!-- Production JS bundle -->
-    <script defer src="glossar-bundle.min.js?_=1594725082" onload="GLOSSAR.init()"></script>
+    <script defer src="glossar-bundle.min.js?_=1594926646" onload="GLOSSAR.init()"></script>
 
 </head>
 
@@ -63,7 +63,6 @@ $last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
     <!-- Begin page content -->
     <main role="main" class="container">
         <header>
-            <img src="avatar.png" alt="Robot icon with speech bubbles">
             <h1 class="mt-5"><label for="searchTextbox">Scots glossar<sup>beta</sup></label></h1>
         </header>
         <section id="search">
