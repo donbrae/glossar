@@ -115,10 +115,6 @@ var GLOSSAR = (function() {
             }
         }, 500);
 
-        if ('ontouchstart' in window === false) {
-            $('#searchTextbox').focus();
-        }
-
         $('#searchTextbox').on('keyup', searchInit);
 
         // Text field pseudo-focus state on clear button focus
@@ -289,7 +285,7 @@ var GLOSSAR = (function() {
                     results_filtered.push(item);
 
                     grammar = item.gr ? '<span class="grammar">' + [].concat(item.gr).join('; ') + '</span> ' : ''; // Grammar
-                    sc_alt = item.sc_alt ? '<div class="sc-alt">Or: <span>' + [].concat(item.sc_alt).join(', ') + '</span></div> ' : ''; // Alternative Scots spellings
+                    sc_alt = item.sc_alt ? '<span class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</span> ' : ''; // Alternative Scots spellings
                     en = item.en ? formatMultiple(item.en, ',', 'en') : ''; // English
                     pr = item.pr ? '<span class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</span> ' : ''; // Pronunciation
                     def = item.def ? formatMultiple(item.def, ';', 'def') : ''; // Definition
@@ -350,11 +346,10 @@ var GLOSSAR = (function() {
 
                     pl = pl_arr.length ? '<span class="pl">pl <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></span>' : ''; // Noun plurals
 
-                    $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</span> ' +
+                    $('#result').append('<li' + ph + '><span class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + sc_alt + '</span> ' +
                         audio +
                         pr +
                         grammar +
-                        sc_alt +
                         pl +
                         pt +
                         pp +

@@ -19,7 +19,7 @@ elif [ "$1" == "min" ]
 then
     terser app.js data/glossar.js data/glossar-v.js data/glossar-adj.js data/glossar-adv.js data/glossar-n.js data/glossar-geo.js data/glossar-phr.js \
         -o glossar-bundle.min.js -c -m \
-        --source-map "root='https://scots.app/dev/src',url='glossar-bundle.min.js.map'"
+        --source-map "root='https://scots.app/src',url='glossar-bundle.min.js.map'"
 
     sed "s/{{ TIMESTAMP JS }}/$TS/" index.dev.php > index.php
     cp index.php index.local.html

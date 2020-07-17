@@ -16,11 +16,6 @@ G.dict.push({
     en: 'be on the lookout for',
     gr: 'phr'
 }, {
-    sc: 'mak namely its pairt in',
-    en: 'celebrate its contribution to',
-    ex: G.ex.j,
-    gr: 'phr'
-}, {
     sc: ['nae bother', 'nae bather'],
     en: 'no problem',
     gr: 'phr'

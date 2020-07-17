@@ -200,7 +200,7 @@ G.v.will = {
             en: [
                 ['wouldn\'t', 'would not']
             ],
-            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'widny', 'wudny']
+            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'widny', 'wudny', 'wouldna', 'wouldnae']
         }
     }
 };

@@ -176,11 +176,6 @@ ul.or .list-inline-item:last-child {
     /* padding-right: 0; */
 }
 
-ol {
-    /* margin-top: 3px; */
-    line-height: 1.5;
-}
-
 ol>li {
     list-style-position: inside;
 }
@@ -265,14 +260,8 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     padding: 1px 0 0 4px;
 } */
 .sc-alt {
-    padding-top: 0.3rem;
-}
-
-@media (min-width: 576px) {
-    .sc-alt {
-        padding-top: 0;
-        padding-bottom: 0.3rem;
-    }
+    padding-left: 0.45rem;
+    display: inline-block;
 }
 
 .audio+.grammar {
@@ -347,7 +336,7 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .or {
-    /* padding-left: 0; */
+    padding-left: 0;
     line-height: 1.4;
 }
 
@@ -363,7 +352,7 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     display: block;
 }
 
-.sc, .sc-alt span, .pt span, .pp span, .pt-pp span, .neg span, .pl span {
+.sc, .sc-alt, .pt span, .pp span, .pt-pp span, .neg span, .pl span {
     font-weight: 600;
 }
 
@@ -398,12 +387,11 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .sc-alt, .or-container, .grammar, .pr {
-    color: #8c8c8c;
     font-size: .8rem;
 }
 
-.sc-alt span {
-    color: #212529;
+.or-container, .grammar, .pr {
+    color: #8c8c8c;
 }
 
 .text-muted {
@@ -421,8 +409,14 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 #result {
-    padding-bottom: 30px;
-    padding-top: 26px;
+    padding-bottom: 1.1rem;
+    padding-top: 1.8rem;
+}
+
+@media (min-width: 576px) {
+    #result {
+        padding-bottom: 1.8rem;
+    }
 }
 
 #result a {
@@ -453,7 +447,8 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 
 #searchTextbox {
     border-radius: 2rem;
-    padding: .58rem 2.3rem .54rem 1.1rem;
+    padding-left: 1.1rem;
+    padding-right: 2.3rem;
     color: #212529;
     font-weight: 400;
 }
@@ -466,13 +461,16 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .form-control {
-    line-height: 1.7;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .form-control::placeholder {
     font-weight: 400;
     color: #2125298c;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
 }
 
 .input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
