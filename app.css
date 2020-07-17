@@ -264,8 +264,10 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     display: inline-block;
 }
 
-.audio+.grammar {
-    margin-left: -0.1rem;
+@media (min-width: 576px) {
+    .audio+.grammar {
+        margin-left: -0.1rem;
+    }
 }
 
 .audio+.pr {
@@ -285,10 +287,10 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .en {
-    padding-top: 0.4rem;
+    padding-top: 0.3rem;
 }
 
-.pt+.en, .pp+.en {
+.pt+.en, .pp+.en, .pl+.en {
     padding-top: 0.1rem;
 }
 

@@ -71,7 +71,8 @@ G.ex = {
     f1: "Rax me ane o thae ile filters, wad ye?",
     g1: "The app’s uiser interface is juist what the client’s ettlin efter",
     h1: "I’v juist gotten stertit the nou sae ye’ll hae tae gie me a bit mair time",
-    i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer"
+    i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer",
+    j1: "Mind and steek the yett ahint ye"
 };
 
 G.pr = {
@@ -196,7 +197,7 @@ G.dict = [{
     en: 'who',
     tr: ['whae', 'whay', 'whey'],
     gr: 'pron'
-}, {
+}, { // M
     sc: 'maist',
     def: [
         ['the mucklest amount, the lairgest nummer, the majority']
@@ -208,6 +209,11 @@ G.dict = [{
         [G.notes.or.ae, 'mǣst, māst']
     ],
     ex: [G.ex.e1, 'Maist o the dishes wis duin']
+}, {
+    sc: 'michty',
+    def: 'for tae shaw surprise or that ye’r aw het up anent something',
+    gr: 'interj',
+    ex: ['Michty me!', 'Michty, what a weather!']
 }, { // N
     sc: 'naewey',
     en: [

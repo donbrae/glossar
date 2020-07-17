@@ -450,6 +450,15 @@ G.dict.push({ // A
     gr: 'adj',
     or: 'see pron'
 }, {
+    sc: 'michty',
+    en: 'mighty',
+    tr: ['powerful', 'important', 'rich', 'strong', 'big', 'muckle', 'sumptuous', 'loud'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'mychty, mychti, michty'],
+        [G.notes.or.ae, 'mihtig']
+    ]
+}, {
     sc: 'mony',
     en: 'many',
     gr: ['adj', 'n'],

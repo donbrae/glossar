@@ -253,6 +253,22 @@ G.dict.push({ // A
     gr: 'adv',
     tr: 'mostly'
 }, {
+    sc: 'michty',
+    en: [['greatly', 'thoroughly', 'drastically']],
+    tr: 'significantly',
+    gr: 'adv',
+    or: 'see adj'
+}, {
+    sc: 'michtily',
+    en: [['powerfully', 'abundantly', 'greatly']],
+    tr: ['vigorously', 'strongly', 'forcefully', 'loudly', 'vehemently', 'abundantly', 'deeply', 'extremely'],
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'michtily, mychtyly'],
+        [G.notes.or.ae, 'mihtiᵹlíce']
+    ],
+    ex: ['He wis michtily offendit', 'They focht michtily']
+}, {
     sc: 'muckle',
     pr: ['muckl', 'meekl'],
     en: [

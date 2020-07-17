@@ -662,6 +662,10 @@ G.dict.push({
 }, {
     sc: 'horse',
     def: 'a huift, plant-eatin domesticatit mammal',
+    pl: {
+        sc: 'horse',
+        tr: 'horses'
+    },
     tr: 'hors',
     gr: 'n',
     or: [
@@ -864,6 +868,16 @@ G.dict.push({
     tr: 'must',
     gr: 'n',
     or: 'see v'
+}, {
+    sc: 'micht',
+    en: 'might',
+    tr: ['ability', 'capacity', 'strength', 'strenth', 'power', 'pouer', 'authority', 'wealth', 'violence', 'force'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'mycht, micht'],
+        [G.notes.or.ae, 'meaht']
+    ],
+    ex: 'He poued the pleuch wi aw his micht'
 }, {
     sc: 'mind',
     tr: 'mynd',
@@ -1286,9 +1300,14 @@ G.dict.push({
         [G.notes.or.as, 'wynd, wyne, wind, weynd'],
         [G.notes.or.ae, 'gewind']
     ]
+}, {
+    sc: 'yett',
+    en: 'gate',
+    gr: 'n',
+    ex: G.ex.j1
 }, { // Y
     sc: 'yoon',
-    def: 'a derogatory term for unionist',
+    def: 'a derogatory term for unionist; a body that’s in favours o the union atween Scotland and England',
     gr: ['n', 'informal', 'derogatory']
 }, { // Z
     sc: 'zoomer',

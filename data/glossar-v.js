@@ -1786,6 +1786,21 @@ G.dict.push({ // A
             ['?' + G.notes.or.md, 'scare, scaer']
         ]
     }, {
+        sc: 'steek',
+        en: [
+            ['close', 'fasten', 'lock']
+        ],
+        tr: 'shut',
+        pt_pp: {
+            sc: 'steekit',
+            tr: ['closed', 'shut', 'fastened', 'locked']
+        },
+        gr: 'v',
+        ex: [G.ex.j1, 'She steekit her nieve', 'Steek yer gab!'],
+        or: [
+            [G.notes.or.as, 'steik, steek, steke']
+        ]
+    }, {
         sc: 'swither',
         en: [
             ['doubt', 'falter', 'hesitate', 'dither']
@@ -1805,6 +1820,11 @@ G.dict.push({ // A
     }, {
         sc: 'unsteek',
         en: 'open',
+        tr: ['unlock', 'unfasten'],
+        pt_pp: {
+            sc: 'unsteekit',
+            tr: ['opened', 'unfastened', 'unlocked']
+        },
         gr: 'v'
     }, {
         sc: 'upcast',
