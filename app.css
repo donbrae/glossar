@@ -94,7 +94,6 @@ header {
 }
 
 /* Header image styles no longer required */
-
 header img {
     height: 34px;
     margin-top: -11px;
@@ -142,7 +141,7 @@ ul {
     -webkit-padding-start: 0;
 }
 
-#results > dl {
+#results>dl {
     margin-bottom: 0.9rem;
     padding: 0.6rem 0.55rem;
     line-height: 1.6;
@@ -151,7 +150,7 @@ ul {
     box-shadow: 0px 2px 9px 0rem rgba(148, 148, 148, 0.08);
 }
 
-#results > dl:first-of-type {
+#results>dl:first-of-type {
     margin-top: 0rem;
 }
 
@@ -159,7 +158,7 @@ ul {
     display: none;
 }
 
-#results dd, #results dd > span {
+#results dd, #results dd>span {
     margin-left: 0;
     padding: 0 0.4rem;
 }
@@ -171,21 +170,12 @@ ul {
     left: -0.2rem;
 }
 
-#results ul, #results ol {
-    margin: 0.3rem 0;
+#results ul, #results ol, .inf {
     line-height: 1.5;
 }
 
-#results ul span, #results ol span {
-    /* padding: 0; */
-}
-
-ul.or {
-    /* display: inline; */
-}
-
-ul.or .list-inline-item {
-    /* margin: 0; */
+#results ul, #results ol {
+    margin: 0.3rem 0;
 }
 
 ul.or .list-inline-item span, div.or-container span {
@@ -241,25 +231,16 @@ h1 sup {
 
 .sc {
     font-size: 1.1rem;
-    /* margin-right: 0.3rem;
-    margin-bottom: 0.2rem; */
+    margin-bottom: -0.2rem;
 }
 
-.sc.hl {
-    /* margin-right: -0.1rem;
-    margin-bottom: 0.1rem; */
+.sc, .pt>span, .pp>span, .pt-pp>span, .pl>span {
+    min-height: 1.7rem;
+    line-height: 1.45;
 }
 
 .sc, .pt>span, .pp>span, .pt-pp>span, .neg>span, .pl>span {
     display: inline-block;
-}
-
-.pt>span, .pp>span, .pt-pp>span {
-    /* margin-bottom: 0.3rem; */
-}
-
-.pt>span.hl, .pp>span.hl, .pt-pp>span.hl {
-    /* margin-bottom: 0.2rem; */
 }
 
 .or-container ul, .or-container ul li, ol.ex li, ol.inf li {
@@ -268,6 +249,9 @@ h1 sup {
 
 ol.ex, div.ex, ol.inf, div.inf {
     color: #676767;
+}
+
+div.ex, div.inf {
     margin-bottom: 0.2rem;
 }
 
@@ -278,67 +262,20 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 .sc-alt {
     position: relative;
     top: -0.2rem;
+    margin-top: 0.1rem;
 }
 
 @media (min-width: 576px) {
     .sc-alt {
         padding-left: 0.45rem;
         display: inline-block;
+        margin-top: 0;
         top: 0;
     }
-
-}
-
-.audio+.pr {
-    /* margin-left: -0.2rem; */
 }
 
 .ex {
     font-style: italic;
-}
-
-.en, .def, .ex, .inf {
-    /* padding: 0; */
-}
-
-.def, .ex, .inf {
-    /* padding-top: 0.3rem; */
-}
-
-.en {
-    /* padding-top: 0.3rem; */
-}
-
-.pt+.en, .pp+.en, .pl+.en {
-    /* padding-top: 0.1rem; */
-}
-
-.neg+.en {
-    /* padding-top: 0.2rem; */
-}
-
-.sc+span+span.pt {
-    /* margin-top: 0.1rem; */
-}
-
-@media (max-width: 575px) {
-    .sc+span+span.pt, .sc+span+span.neg {
-        /* margin-top: 0.25rem; */
-    }
-}
-
-@media (min-width: 576px) {
-    .def, .en {
-        /* padding-top: 0; */
-    }
-}
-
-.en+.or-container, .def+.or-container, .ex+.or-container, .inf+.or-container {
-    /* padding-top: 0.3rem; */
-}
-
-.def+.en {
-    /* padding-top: 0.2rem; */
 }
 
 .en, .def {
@@ -349,21 +286,16 @@ ol.en, ol.def {
     line-height: 1.7;
 }
 
+dt.dd-def+dd+dt.dd-ex+dd>.ex {
+    margin: 0.2rem 0 0.3rem 0 !important;
+}
+
 .ex, .inf {
     font-size: .85rem;
 }
 
 .or {
     padding-left: 0;
-    /* line-height: 1.4; */
-}
-
-.pt span, .pp span, .pt-pp span, .neg span, .pl span {
-    /* margin-left: 0.4rem; */
-}
-
-.pt span.hl, .pp span.hl, .pt-pp span.hl, .neg span.hl, .pl span.hl {
-    /* margin-left: 0; */
 }
 
 .pt, .pp, .pt-pp, .neg, .pl {
@@ -385,7 +317,7 @@ ol.en, ol.def {
 
 .def span, .def em {
     font-style: italic;
-    color: #9e9e9e;
+    color: #808080;
 }
 
 .grammar {
@@ -399,9 +331,7 @@ ol.en, ol.def {
 
 .hl {
     background-color: #a1ff9594;
-    /* padding: 0 0.4rem 0.1rem 0.4rem; */
     border-radius: 7px;
-    /* margin-left: -0.4rem; */
 }
 
 .sc-alt, .or-container, .grammar, .pr {
@@ -452,7 +382,7 @@ ol.en, ol.def {
 }
 
 .fade.show {
-  opacity: 1;
+    opacity: 1;
 }
 
 .mt-5, .my-5 {
@@ -507,10 +437,6 @@ button.btn.bg-transparent:focus {
     box-shadow: none;
 }
 
-.audio {
-    /* margin-left: -0.3rem; */
-}
-
 button.play-audio {
     padding: 0;
     top: -0.1rem;
@@ -519,7 +445,6 @@ button.play-audio {
 
 button.play-audio i {
     color: #404040;
-    /* font-size: 1.15rem; */
 }
 
 button:disabled {

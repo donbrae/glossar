@@ -242,7 +242,7 @@ var GLOSSAR = (function() {
 
         $.each([].concat(s), function() {
             if (!$('#' + this).length) {
-                $('body').prepend('<audio id="' + this + '" class="audio d-none" src="./audio/' + this.charAt(0) + '/' + this + '.mp3" preload="none"></audio>'); // Eik audio element
+                $('body').prepend('<audio id="' + this + '" class="audio d-none" src="./audio/' + this.charAt(0) + '/' + this + '.mp3" preload="auto"></audio>'); // Eik audio element
             }
             buttons.push('<button class="play-audio btn bg-transparent" data-file="' + this + '"><i class="demo-icon icon-sound"></i></button>'); // Eik button
         });
@@ -288,8 +288,8 @@ var GLOSSAR = (function() {
                     sc_alt = item.sc_alt ? '<div class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</div> ' : ''; // Alternative Scots spellings
                     en = item.en ? '<dt>English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
                     pr = item.pr ? '<dt>Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
-                    def = item.def ? '<dt>Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
-                    ex = item.ex ? '<dt>Examples</dt><dd>' + formatMultiple(item.ex, ';', 'ex') + '</dd>' : ''; // Examples
+                    def = item.def ? '<dt class="dd-def">Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
+                    ex = item.ex ? '<dt class="dd-ex">Examples</dt><dd>' + formatMultiple(item.ex, ';', 'ex') + '</dd>' : ''; // Examples
                     ph = item.ph ? ' class="phrase"' : ''; // Phrases, idioms
                     inf = item.inf ? '<dt>Information</dt><dd>' + formatMultiple(item.inf, ';', 'inf') + '</dd>' : ''; // Additional information
                     or = item.or ? '<dt>Origin</dt><dd>' + formatOrigin(item.or) + '</dd>' : ''; // Origin
