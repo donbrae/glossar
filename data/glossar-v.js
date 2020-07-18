@@ -1089,7 +1089,7 @@ G.dict.push({ // A
     }, {
         sc: 'hauden',
         en: 'be obliged or required to do something',
-        tr: ['obliged', 'required'],
+        tr: ['obliged', 'required']
     }, {
         sc: 'haud aff',
         en: 'keep off or away',

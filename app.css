@@ -142,17 +142,31 @@ ul {
     -webkit-padding-start: 0;
 }
 
-ul.result>li:not(.no-results) {
+#results > dl {
     margin-bottom: 0.9rem;
-    padding: 0.65rem 1.02rem 0.75rem 1.02rem;
-    /* line-height: 1.4; */
+    padding: 0.6rem 0.55rem;
+    line-height: 1.6;
     background-color: #ffffffeb;
     border-radius: 11px;
     box-shadow: 0px 2px 9px 0rem rgba(148, 148, 148, 0.08);
 }
 
+#results dt {
+    display: none;
+}
+
+#results dd {
+    margin-left: 0;
+    padding: 0 0.4rem;
+}
+
+#results ul, #results ol {
+    margin: 0.3rem 0;
+    line-height: 1.4;
+}
+
 ul.or {
-    display: inline;
+    /* display: inline; */
 }
 
 ul.or .list-inline-item {
@@ -211,7 +225,7 @@ h1 sup {
 }
 
 .sc {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     /* margin-right: 0.3rem;
     margin-bottom: 0.2rem; */
 }
@@ -247,7 +261,7 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 
 .sc-alt {
     /* padding-left: 0.45rem; */
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 @media (min-width: 576px) {
@@ -309,16 +323,16 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .en, .def {
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 .ex, .inf {
-    font-size: .85rem;
+    /* font-size: .85rem; */
 }
 
 .or {
     padding-left: 0;
-    line-height: 1.4;
+    /* line-height: 1.4; */
 }
 
 .pt span, .pp span, .pt-pp span, .neg span, .pl span {
@@ -368,7 +382,7 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .sc-alt, .or-container, .grammar, .pr {
-    font-size: .8rem;
+    /* font-size: .8rem; */
 }
 
 .or-container, .grammar, .pr {
@@ -389,23 +403,23 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
     }
 }
 
-#result {
+#results {
     padding-bottom: 1.1rem;
     padding-top: 1.8rem;
 }
 
 @media (min-width: 576px) {
-    #result {
+    #results {
         padding-bottom: 1.8rem;
     }
 }
 
-#result a {
+#results a {
     color: inherit;
     border-bottom: 1px dotted #212529;
 }
 
-#result a:hover {
+#results a:hover {
     border-bottom-style: solid;
     text-decoration: none;
 }
@@ -482,7 +496,7 @@ button.play-audio {
 
 button.play-audio i {
     color: #404040;
-    font-size: 1.15rem;
+    /* font-size: 1.15rem; */
 }
 
 button:disabled {
@@ -540,7 +554,7 @@ button:disabled {
 
 @media (min-width: 576px) {
     .grammar {
-        display: inline;
+        /* display: inline; */
     }
 
     .footer {
