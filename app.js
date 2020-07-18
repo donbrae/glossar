@@ -285,7 +285,7 @@ var GLOSSAR = (function() {
                     results_filtered.push(item);
 
                     grammar = item.gr ? '<dt>Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd> ' : ''; // Grammar
-                    sc_alt = item.sc_alt ? '<dt>Ither Scots spellins</td><dd class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</dd> ' : ''; // Alternative Scots spellings
+                    sc_alt = item.sc_alt ? '<div class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</div> ' : ''; // Alternative Scots spellings
                     en = item.en ? '<dt>English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
                     pr = item.pr ? '<dt>Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
                     def = item.def ? '<dt>Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
@@ -310,7 +310,7 @@ var GLOSSAR = (function() {
                     pt_pp_arr = item.pt_pp && item.pt_pp.sc ? [].concat(item.pt_pp.sc) : []; // Where Scots past tense and past participle are the same
                     pt_pp_arr = item.pt_pp && item.pt_pp.tr ? pt_pp_arr.concat(item.pt_pp.tr) : pt_pp_arr; // triggers
 
-                    neg = item.neg ? '<dt>Negative</dt><dd class="neg">neg. <span>' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // Any Scots negative
+                    neg = item.neg ? '<dt>Negative</dt><dd class="neg"><label>neg.</label> <span>' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // Any Scots negative
 
                     // Noun plurals
                     pl_arr = item.pl && item.pl.sc ? [].concat(item.pl.sc) : [];
@@ -338,13 +338,13 @@ var GLOSSAR = (function() {
                         hl = ''; // No trigger words
                     }
 
-                    pt = pt_arr.length ? '<dt>Past tense</dt><dd class="pt">pt <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span></dd>' : ''; // Past tense (simpler verbs)
+                    pt = pt_arr.length ? '<dt>Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span></dd>' : ''; // Past tense (simpler verbs)
 
-                    pp = pp_arr.length ? '<dt>Past participle</dt><dd class="pp">ptp <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span></dd>' : ''; // Past participle (simpler verbs)
+                    pp = pp_arr.length ? '<dt>Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span></dd>' : ''; // Past participle (simpler verbs)
 
-                    pt_pp = pt_pp_arr.length ? '<dt>Past tense and past participle</dt><dd class="pt-pp">pt ptp <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span></dd>' : ''; // Identical past tense and past participle (simpler verbs)
+                    pt_pp = pt_pp_arr.length ? '<dt>Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span></dd>' : ''; // Identical past tense and past participle (simpler verbs)
 
-                    pl = pl_arr.length ? '<dt>Plural</dt><dd class="pl">pl <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></dd>' : ''; // Noun plurals
+                    pl = pl_arr.length ? '<dt>Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></dd>' : ''; // Noun plurals
 
                     $('#results').append('<dl' + ph + '><dt>Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + sc_alt + '</dd> ' +
                         audio +
@@ -369,7 +369,7 @@ var GLOSSAR = (function() {
                     if (state.highlight) {
                         $($('#results > dl').get().reverse()).each(function() { // Move highlighted entries to the top
                             $dl = $(this);
-                            if ($dl.find('span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                            if ($dl.find('dd').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
                                 $dl.parent().prepend($dl);
                             }
                         });

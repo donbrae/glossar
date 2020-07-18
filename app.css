@@ -151,18 +151,33 @@ ul {
     box-shadow: 0px 2px 9px 0rem rgba(148, 148, 148, 0.08);
 }
 
+#results > dl:first-of-type {
+    margin-top: 0rem;
+}
+
 #results dt {
     display: none;
 }
 
-#results dd {
+#results dd, #results dd > span {
     margin-left: 0;
     padding: 0 0.4rem;
 }
 
+#results dd.audio, #results dd.pr {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    left: -0.2rem;
+}
+
 #results ul, #results ol {
     margin: 0.3rem 0;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+#results ul span, #results ol span {
+    /* padding: 0; */
 }
 
 ul.or {
@@ -225,7 +240,7 @@ h1 sup {
 }
 
 .sc {
-    /* font-size: 1.1rem; */
+    font-size: 1.1rem;
     /* margin-right: 0.3rem;
     margin-bottom: 0.2rem; */
 }
@@ -235,7 +250,7 @@ h1 sup {
     margin-bottom: 0.1rem; */
 }
 
-.sc, .pt>span, .pp>span, .pt-pp>span {
+.sc, .pt>span, .pp>span, .pt-pp>span, .neg>span, .pl>span {
     display: inline-block;
 }
 
@@ -253,6 +268,7 @@ h1 sup {
 
 ol.ex, div.ex, ol.inf, div.inf {
     color: #676767;
+    margin-bottom: 0.2rem;
 }
 
 ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
@@ -260,14 +276,17 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .sc-alt {
-    /* padding-left: 0.45rem; */
-    /* display: inline-block; */
+    position: relative;
+    top: -0.2rem;
 }
 
 @media (min-width: 576px) {
-    .audio+.grammar {
-        /* margin-left: -0.1rem; */
+    .sc-alt {
+        padding-left: 0.45rem;
+        display: inline-block;
+        top: 0;
     }
+
 }
 
 .audio+.pr {
@@ -323,11 +342,15 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .en, .def {
-    /* font-size: 1rem; */
+    font-size: 1rem;
+}
+
+ol.en, ol.def {
+    line-height: 1.7;
 }
 
 .ex, .inf {
-    /* font-size: .85rem; */
+    font-size: .85rem;
 }
 
 .or {
@@ -382,7 +405,7 @@ ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
 }
 
 .sc-alt, .or-container, .grammar, .pr {
-    /* font-size: .8rem; */
+    font-size: .8rem;
 }
 
 .or-container, .grammar, .pr {
