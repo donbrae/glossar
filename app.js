@@ -284,17 +284,17 @@ var GLOSSAR = (function() {
                 ) {
                     results_filtered.push(item);
 
-                    grammar = item.gr ? '<dt>Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd> ' : ''; // Grammar
+                    grammar = item.gr ? '<dt class="dt-grammar">Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd> ' : ''; // Grammar
                     sc_alt = item.sc_alt ? '<div class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</div> ' : ''; // Alternative Scots spellings
-                    en = item.en ? '<dt>English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
-                    pr = item.pr ? '<dt>Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
-                    def = item.def ? '<dt class="dd-def">Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
-                    ex = item.ex ? '<dt class="dd-ex">Examples</dt><dd>' + formatMultiple(item.ex, ';', 'ex') + '</dd>' : ''; // Examples
+                    en = item.en ? '<dt class="dt-en">English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
+                    pr = item.pr ? '<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
+                    def = item.def ? '<dt class="dt-def">Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
+                    ex = item.ex ? '<dt class="dt-ex">Examples</dt><dd>' + formatMultiple(item.ex, ';', 'ex') + '</dd>' : ''; // Examples
                     ph = item.ph ? ' class="phrase"' : ''; // Phrases, idioms
-                    inf = item.inf ? '<dt>Information</dt><dd>' + formatMultiple(item.inf, ';', 'inf') + '</dd>' : ''; // Additional information
-                    or = item.or ? '<dt>Origin</dt><dd>' + formatOrigin(item.or) + '</dd>' : ''; // Origin
+                    inf = item.inf ? '<dt class="dt-inf">Information</dt><dd>' + formatMultiple(item.inf, ';', 'inf') + '</dd>' : ''; // Additional information
+                    or = item.or ? '<dt class="dt-or">Origin</dt><dd>' + formatOrigin(item.or) + '</dd>' : ''; // Origin
                     hl_sc_alt = item.sc_alt ? [].concat(item.sc_alt) : []; // Make sure to highlight any alternative Scots words
-                    audio = item.au ? '<dt>Audio</dt><dd class="audio">' + addAudio(item.au) + '</dd> ' : ''; // Audio
+                    audio = item.au ? '<dt class="dt-au">Audio</dt><dd class="audio">' + addAudio(item.au) + '</dd> ' : ''; // Audio
 
                     /**
                      * Highlight based on trigger words by default; if not, use the specific highlight words
@@ -310,7 +310,7 @@ var GLOSSAR = (function() {
                     pt_pp_arr = item.pt_pp && item.pt_pp.sc ? [].concat(item.pt_pp.sc) : []; // Where Scots past tense and past participle are the same
                     pt_pp_arr = item.pt_pp && item.pt_pp.tr ? pt_pp_arr.concat(item.pt_pp.tr) : pt_pp_arr; // triggers
 
-                    neg = item.neg ? '<dt>Negative</dt><dd class="neg"><label>neg.</label> <span>' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // Any Scots negative
+                    neg = item.neg ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span>' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // Any Scots negative
 
                     // Noun plurals
                     pl_arr = item.pl && item.pl.sc ? [].concat(item.pl.sc) : [];
@@ -338,15 +338,15 @@ var GLOSSAR = (function() {
                         hl = ''; // No trigger words
                     }
 
-                    pt = pt_arr.length ? '<dt>Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span></dd>' : ''; // Past tense (simpler verbs)
+                    pt = pt_arr.length ? '<dt class="dt-pt">Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span></dd>' : ''; // Past tense (simpler verbs)
 
-                    pp = pp_arr.length ? '<dt>Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span></dd>' : ''; // Past participle (simpler verbs)
+                    pp = pp_arr.length ? '<dt class="dt-pp">Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span></dd>' : ''; // Past participle (simpler verbs)
 
-                    pt_pp = pt_pp_arr.length ? '<dt>Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span></dd>' : ''; // Identical past tense and past participle (simpler verbs)
+                    pt_pp = pt_pp_arr.length ? '<dt class="dt-pt_pp">Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span></dd>' : ''; // Identical past tense and past participle (simpler verbs)
 
-                    pl = pl_arr.length ? '<dt>Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></dd>' : ''; // Noun plurals
+                    pl = pl_arr.length ? '<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></dd>' : ''; // Noun plurals
 
-                    $('#results').append('<dl' + ph + '><dt>Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + sc_alt + '</dd> ' +
+                    $('#results').append('<dl' + ph + '><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + sc_alt + '</dd> ' +
                         audio +
                         pr +
                         grammar +

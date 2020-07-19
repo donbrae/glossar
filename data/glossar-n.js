@@ -650,7 +650,7 @@ G.dict.push({
     sc: 'haudin gaun',
     en: 'continuation',
     gr: 'n'
-},  {
+}, {
     sc: 'heat',
     pr: ['heet', 'hait'],
     en: 'heat',
@@ -1138,6 +1138,27 @@ G.dict.push({
     def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o theirsels',
     gr: ['n', 'informal', 'derogatory']
 }, { // S
+    sc: 'sair',
+    en: [
+        ['an injury', 'wound', 'disease'],
+        ['sorrow', 'grief', 'anguish']
+    ],
+    tr: ['injury', 'affliction', 'sadness', 'suffering'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'sar(e), sair'],
+        [G.notes.or.ae, 'sār']
+    ],
+    ex: ['He wis saufed frae seekness and frae sair'],
+}, {
+    sc: 'sair heid',
+    en: 'headache',
+    tr: ['sore head', 'sore heed', 'sair heed', 'sore heid', 'sair head'],
+    gr: 'comp. n',
+    or: [
+        [G.notes.or.as, 'sair hede']
+    ]
+}, {
     sc: 'sel-law',
     en: 'self-governance',
     tr: ['sel law', 'self governance'],

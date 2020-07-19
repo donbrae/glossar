@@ -175,7 +175,7 @@ ul {
 }
 
 #results ul, #results ol {
-    margin: 0.3rem 0;
+    margin: 0 0 0.3rem 0;
 }
 
 #results ol.def {
@@ -290,7 +290,7 @@ ol.en, ol.def {
     line-height: 1.7;
 }
 
-dt.dd-def+dd+dt.dd-ex+dd>.ex {
+dt.dt-def+dd+dt.dt-ex+dd>.ex {
     margin: 0.2rem 0 0.3rem 0 !important;
 }
 
@@ -307,7 +307,7 @@ dt.dd-def+dd+dt.dd-ex+dd>.ex {
 }
 
 .pt, .pp, .pt-pp {
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.05rem;
     line-height: 1;
 }
 
@@ -330,7 +330,7 @@ dt.dd-def+dd+dt.dd-ex+dd>.ex {
 }
 
 div.en {
-    margin: 0.1rem 0 0.2rem 0;
+    margin: 0rem 0 0.2rem 0;
 }
 
 div.def {

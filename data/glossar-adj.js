@@ -346,7 +346,7 @@ G.dict.push({ // A
         ['considerable', 'good-sized', 'great'],
         ['disreputable', 'wild']
     ],
-    tr: ['guy', 'giy'],
+    tr: ['guy', 'giy', 'gye'],
     gr: 'adj',
     or: 'see adv',
     ex: ['It wis a gey trauchle winnin at the tap o Lee Pen', 'It’s gey cauld the nicht']
@@ -368,7 +368,9 @@ G.dict.push({ // A
 }, { // H
     sc: 'het',
     pr: ['heht', 'hait'],
-    en: [['hot', 'heated', 'warm']],
+    en: [
+        ['hot', 'heated', 'warm']
+    ],
     gr: 'adj',
     tr: ['hate', 'haet'],
     or: [
@@ -436,7 +438,9 @@ G.dict.push({ // A
     gr: 'adj'
 }, {
     sc: ['leart', 'leared'],
-    en: [['learned', 'educated']],
+    en: [
+        ['learned', 'educated']
+    ],
     tr: 'educatit',
     gr: 'adj'
 }, { // M
@@ -579,6 +583,25 @@ G.dict.push({ // A
     en: 'right',
     gr: ['adj', 'adv', 'n', 'v', 'exclamation']
 }, { // S
+    sc: 'sair',
+    en: [
+        ['sore', 'painful'],
+        ['sorrowful', 'sad'],
+        ['harsh', 'severe'],
+        ['involving distress or grief', 'unfortunate'],
+        ['<span>of hardship or difficulty</span> hard', 'fierce'],
+        ['oppresive', 'hard to bear'],
+        ['<span>of a task</span> physically difficult']
+    ],
+    tr: ['sare', 'aching', 'difficult', 'hard', 'fell', 'dowie', 'melancholic', 'intense'],
+    hl: ['sare', 'aching', 'difficult', 'hard', 'fell', 'dowie', 'melancholic'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'sar(e), sair, sore'],
+        [G.notes.or.ae, 'sār']
+    ],
+    ex: ['She’s sair on her feet!', 'My back’s been sair for a week noo', 'It’s a sair fecht, sae it is'],
+}, {
     sc: 'shuir',
     pr: ['shair', 'shör', 'shür', 'sheer', 'seer'],
     en: [
@@ -604,7 +627,9 @@ G.dict.push({ // A
     ]
 }, {
     sc: 'sleekit',
-    en: [['sly', 'cunning'], 'smooth'],
+    en: [
+        ['sly', 'cunning'], 'smooth'
+    ],
     tr: ['untrustworthy', 'specious'],
     gr: 'adj',
     or: [

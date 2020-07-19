@@ -47,7 +47,7 @@ G.ex = {
     h: "I ken brawly richt bi wrang!",
     i: "Jamie wis in a swither aboot what Hogmanay perty tae gang til",
     j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid bield, and mak namely its pairt in Scotland’s identity nou and in time tae come",
-    k: "We are wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
+    k: "We ar wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
     l: "In terms o tred, o the guids and services Scotland inbrings, aroond 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
     m: "The First Mínister wrate til her cabinet secretar anent the forementiont policy",
     n: "I’m meetin up wi an auld freend the day",
@@ -72,7 +72,8 @@ G.ex = {
     g1: "The app’s uiser interface is juist what the client’s ettlin efter",
     h1: "I’v juist gotten stertit the nou sae ye’ll hae tae gie me a bit mair time",
     i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer",
-    j1: "Mind and steek the yett ahint ye"
+    j1: "Mind and steek the yett ahint ye",
+    k1: "I wis in an awfie raivel"
 };
 
 G.pr = {
@@ -137,6 +138,16 @@ G.dict = [{
     ex: 'I’ll see ye efter!',
     au: 'efter'
 }, { // F
+    sc: 'for',
+    pr: ['faur', 'fur', 'fir', 'fer'],
+    en: 'for',
+    gr: ['prep', 'conj'],
+    or: [
+        [G.notes.or.as, 'for, fore, foir'],
+        [G.notes.or.ae, 'for']
+    ],
+    ex: ['Ar ye for gaun oot efter?', G.ex.k]
+}, {
     sc: 'forby',
     sc_alt: 'forbye',
     pr: 'forBye',

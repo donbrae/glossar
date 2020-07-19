@@ -22,6 +22,7 @@ G.dict.push({
 }, {
     sc: 'for tae',
     en: 'in order to',
+    tr: 'for to',
     gr: 'subordinatin conj',
     ex: G.ex.k
 }, {
@@ -97,4 +98,10 @@ G.dict.push({
         [G.notes.or.l, 'conformis']
     ],
     ex: 'The app haes been designed and biggit conform tae GDPR regulations'
+}, {
+    sc: 'at his ain haund',
+    en: 'by his own initiative',
+    tr: ['initiative', 'by his ain hand'],
+    hl: ['at his ain haund', 'by his own initiative'],
+    gr: 'phr'
 });

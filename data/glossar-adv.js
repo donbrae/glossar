@@ -146,6 +146,7 @@ G.dict.push({ // A
 }, { // G
     sc: 'gey',
     pr: 'guyee',
+    tr: ['guy', 'giy', 'gye'],
     en: [
         ['considerably', 'very', 'rather']
     ],
@@ -254,13 +255,17 @@ G.dict.push({ // A
     tr: 'mostly'
 }, {
     sc: 'michty',
-    en: [['greatly', 'thoroughly', 'drastically']],
+    en: [
+        ['greatly', 'thoroughly', 'drastically']
+    ],
     tr: 'significantly',
     gr: 'adv',
     or: 'see adj'
 }, {
     sc: 'michtily',
-    en: [['powerfully', 'abundantly', 'greatly']],
+    en: [
+        ['powerfully', 'abundantly', 'greatly']
+    ],
     tr: ['vigorously', 'strongly', 'forcefully', 'loudly', 'vehemently', 'abundantly', 'deeply', 'extremely'],
     gr: 'adv',
     or: [
@@ -398,6 +403,22 @@ G.dict.push({ // A
         [G.notes.or.ae, 'swā']
     ],
     ex: ['I wis gey forfauchelt sae didna bather gaun oot', 'The wather’s no sae nice the day', 'He haed tae pit mair siller in the pairkin meter sae as tae evite gettin a ticket', 'Ye’r a bonnie fechter, sae ye ar!']
+}, {
+    sc: 'sair',
+    en: [
+        ['severely', 'harshly'],
+        ['<span>of being distressed</span> intensely', 'bitterly'],
+        ['vehemently', 'intensely'],
+        ['very much', 'greatly', 'extremely'],
+        ['laboriously', 'with great exertion']
+    ],
+    tr: ['very', 'hard'],
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'sar(e), sair, sore'],
+        [G.notes.or.ae, 'sāre']
+    ],
+    ex: ['She grat hersel sair', 'He ettelt sair tae feenish the essay on time'],
 }, {
     sc: 'shuir',
     en: [
