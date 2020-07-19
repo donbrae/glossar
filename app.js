@@ -577,11 +577,21 @@ var GLOSSAR = (function() {
         }
     }
 
-    // Returns array where each item is in lower case
-    function arrayToLowerCase(array) {
+    // Consider using https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat. See also https://stackoverflow.com/a/27267762/4667710. Nae IE support
+    function flattenArray(arr) {
+        return arr.reduce(function(a, b) {
+            if (Array.isArray(b)) {
+                return a.concat(flattenArray(b))
+            }
+            return a.concat(b)
+        }, []);
+    }
+
+    // Returns array where each item is in lower case.
+    function arrayToLowerCase(arr) {
         var a = [];
 
-        $.each(array, function() {
+        $.each(flattenArray(arr), function() {
             a.push(this.toString().toLowerCase());
         });
 

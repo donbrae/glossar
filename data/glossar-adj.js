@@ -365,6 +365,17 @@ G.dict.push({ // A
         [G.notes.or.as, 'gud(e), guid'],
         [G.notes.or.ae, 'gōd']
     ]
+}, { // H
+    sc: 'het',
+    pr: ['heht', 'hait'],
+    en: [['hot', 'heated', 'warm']],
+    gr: 'adj',
+    tr: ['hate', 'haet'],
+    or: [
+        [G.notes.or.as, 'heit, heyt'],
+        [G.notes.or.ae, 'hāt']
+    ],
+    ex: 'It’s gey het ootside',
 }, { // I
     sc: 'ilk',
     en: 'same',

@@ -1584,6 +1584,25 @@ G.dict.push({ // A
         gr: 'phrasal v',
         ex: 'He’d aye hauden oot tae be a millionaire, but fowk didna trew it'
     }, {
+        sc: ['heat', 'het'],
+        pr: ['heet', 'hait', 'heht'],
+        en: 'heat',
+        tr: 'hate',
+        pt: {
+            sc: ['het', 'hat', 'heatit'],
+            tr: 'heated'
+        },
+        pp: {
+            sc: ['het', 'heatit', 'hetten'],
+            tr: 'heated'
+        },
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'hete, hett, heit, heat'],
+            [G.notes.or.ae, 'hǽtan']
+        ],
+        ex: ['He’d hetten up the car for a bit afore settin aff', 'The fitba haed him aw het up']
+    }, {
         sc: 'hoose',
         def: ['tae provide wi a hoose', 'tae bouk guids or craps'],
         tr: ['houss', 'hoose', 'house', 'hous'],

@@ -200,7 +200,7 @@ G.dict = [{
 }, { // M
     sc: 'maist',
     def: [
-        ['the mucklest amount, the lairgest nummer, the majority']
+        ['the mucklest amoont, the lairgest nummer, the majority']
     ],
     tr: ['most', 'majority', 'maste'],
     gr: 'determiner and pronoun',

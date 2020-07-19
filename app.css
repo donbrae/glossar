@@ -307,7 +307,7 @@ dt.dd-def+dd+dt.dd-ex+dd>.ex {
 }
 
 .pt, .pp, .pt-pp {
-    margin-bottom: -0.1rem;
+    margin-bottom: 0.15rem;
     line-height: 1;
 }
 

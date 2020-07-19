@@ -63,3 +63,49 @@ Rin **build.sh** for tae big JS bundle (**glossar-bundle.min.js**) and **index.p
 `fuse.basic.min.js:9 Uncaught TypeError: e.trim is not a function`
 
 Undefined property (e.g. relatit tae `tr`) (check complex verbs first). Stert by remuivin individual data files frae biggin process.
+
+# Reference
+
+## Full template:
+
+	{
+	    sc: '',
+	    sc_alt: '',
+	    pr: '',
+	    def: '',
+	    en: '',
+	    pt: {
+	        sc: '',
+	        tr: ''
+	    },
+	    pp: {
+	        sc: '',
+	        tr: ''
+	    },
+	    pt_pp: {
+	        sc: '',
+	        tr: ''
+	    },
+	    tr: '',
+	    hl: '',
+	    gr: '',
+	    or: [
+	        [G.notes.or.as, ''],
+	        [G.notes.or.xx, '']
+	    ],
+	    ex: G.ex.,
+	    au: ''
+	}
+
+## Basic template
+
+	{
+	    sc: '',
+	    en: '',
+	    gr: '',
+	    or: [
+	        [G.notes.or.as, ''],
+	        [G.notes.or.xx, '']
+	    ],
+	    ex: G.ex.,
+	}

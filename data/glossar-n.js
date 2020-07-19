@@ -650,6 +650,17 @@ G.dict.push({
     sc: 'haudin gaun',
     en: 'continuation',
     gr: 'n'
+},  {
+    sc: 'heat',
+    pr: ['heet', 'hait'],
+    en: 'heat',
+    tr: ['warmth', 'hotness', 'hate'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'hete, heit, het, heyt'],
+        [G.notes.or.ae, 'hǽtu']
+    ],
+    ex: 'Fit a heat!'
 }, {
     sc: 'heid',
     pr: 'heed',
@@ -1302,9 +1313,14 @@ G.dict.push({
     ]
 }, {
     sc: 'yett',
-    en: 'gate',
+    en: ['gate', 'a pass between hills'],
+    tr: ['yate', 'entrance', 'pass'],
     gr: 'n',
-    ex: G.ex.j1
+    ex: [G.ex.j1, 'He’s as daft as a yett in a windy day'],
+    or: [
+        [G.notes.or.as, 'yett, Ȝet(t), yate'],
+        [G.notes.or.ae, 'geat']
+    ]
 }, { // Y
     sc: 'yoon',
     def: 'a derogatory term for unionist; a body that’s in favours o the union atween Scotland and England',
