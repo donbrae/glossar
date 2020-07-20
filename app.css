@@ -103,6 +103,7 @@ header h1 sup {
   width: 100%;
   text-align: center;
   padding: 8px 0;
+  font-size: 0.8rem;
   /* Set the fixed height of the footer here */
   line-height: 20px;
   /* Vertically center the text there */
@@ -143,9 +144,7 @@ ul {
   text-decoration: none;
 }
 #results > dl {
-  margin-bottom: 0.9rem;
   padding: 0.6rem 0.55rem;
-  line-height: 1.6;
   background-color: #ffffffeb;
   border-radius: 11px;
   box-shadow: 0 2px 9px 0 rgba(148, 148, 148, 0.08);
@@ -169,10 +168,7 @@ ul {
 }
 #results ol,
 #results ul {
-  margin: 0 0 0.3rem;
-}
-#results ol.def {
-  margin-top: 0.15rem;
+  margin: 0;
 }
 #results div.or-container span,
 #results ul.or .list-inline-item span {
@@ -195,6 +191,14 @@ ul {
 #results ol.inf span {
   font-style: italic;
 }
+#results .ex,
+#results .inf,
+#results .or-container {
+  margin-top: 0.2rem;
+}
+#results .dt-def + dd + .dt-ex + dd .ex {
+  margin-top: 0.2rem;
+}
 #results div.ex::before,
 #results div.inf::before,
 #results ol.ex li::before,
@@ -212,15 +216,13 @@ ul {
 }
 #results .sc {
   font-size: 1.15rem;
-  margin-bottom: -0.2rem;
+  min-height: 1.5rem;
 }
 #results .pl > span,
 #results .pp > span,
 #results .pt > span,
-#results .pt-pp > span,
-#results .sc {
-  min-height: 1.7rem;
-  line-height: 1.45;
+#results .pt-pp > span {
+  min-height: 1.4rem;
 }
 #results .neg > span,
 #results .pl > span,
@@ -241,10 +243,6 @@ ul {
   color: #676767;
   font-size: 0.85rem;
 }
-#results div.ex,
-#results div.inf {
-  margin-bottom: 0.2rem;
-}
 #results ol.ex li:not(:last-child),
 #results ol.inf li:not(:last-child) {
   padding-right: 0.25rem;
@@ -252,13 +250,10 @@ ul {
 #results .sc-alt {
   position: relative;
   top: -0.2rem;
-  margin-top: 0.1rem;
 }
 @media (min-width: 576px) {
   #results .sc-alt {
-    padding-left: 0.45rem;
     display: inline-block;
-    margin-top: 0;
     top: 0;
   }
 }
@@ -269,20 +264,6 @@ ul {
 #results .en {
   font-size: 1rem;
 }
-#results ol.def,
-#results ol.en {
-  line-height: 1.7;
-}
-#results .inf,
-#results .or-container span,
-#results ol.def,
-#results ol.en,
-#results ul {
-  line-height: 1.5;
-}
-#results dt.dt-def + dd + dt.dt-ex + dd > .ex {
-  margin: 0.2rem 0 0.3rem 0 !important;
-}
 #results .or {
   padding-left: 0;
 }
@@ -292,12 +273,6 @@ ul {
 #results .pt,
 #results .pt-pp {
   display: block;
-}
-#results .pp,
-#results .pt,
-#results .pt-pp {
-  margin-bottom: 0.05rem;
-  line-height: 1;
 }
 #results .neg span,
 #results .pl span,
@@ -310,6 +285,7 @@ ul {
 }
 #results .en {
   font-style: italic;
+  padding-top: 0.1rem;
 }
 #results .en em,
 #results .en span {
@@ -321,19 +297,10 @@ ul {
   font-style: italic;
   color: #808080;
 }
-#results div.def,
-#results div.en {
-  line-height: 1.4;
-}
-#results div.en {
-  margin: 0 0 0.2rem;
-}
-#results div.def {
-  margin: 0.1rem 0 0.3rem;
-}
 #results .grammar {
   font-style: italic;
   display: block;
+  padding-top: 0.1rem;
 }
 @media (min-width: 576px) {
   #results .grammar {
@@ -349,7 +316,6 @@ ul {
   background-color: #a1ff9594;
   border-radius: 7px;
 }
-#results .footer,
 #results .grammar,
 #results .or-container,
 #results .pr,
