@@ -565,8 +565,9 @@ G.dict.push({
     pr: ['fitbaw', 'fitbaa'],
     en: 'football',
     gr: 'n',
+    inf: 'The ‘l’ at the end o the Aulder Scots spellins (sic as ‘futebal’) is what’s kent as a ‘vouel lenth merker’ and wadna aye hae been soondit',
     or: [
-        G.notes.or.as + ' <span>futebal(l), fuitbal, futbaw</span>.' + ' The last letter (‘l’) in the Aulder Scots maks is what’s kent as a ‘vouel lenth merker’ and wadna aye hae been soondit', [G.notes.or.lme, 'fotebal']
+        G.notes.or.as + ' <span>futebal(l), fuitbal, futbaw</span>', [G.notes.or.lme, 'fotebal']
     ]
 }, {
     sc: 'fowk',
@@ -1143,7 +1144,7 @@ G.dict.push({
         ['an injury', 'wound', 'disease'],
         ['sorrow', 'grief', 'anguish']
     ],
-    tr: ['injury', 'affliction', 'sadness', 'suffering'],
+    tr: ['injury', 'affliction', 'sadness', 'suffering', 'sare'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'sar(e), sair'],

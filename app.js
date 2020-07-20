@@ -409,7 +409,7 @@ var GLOSSAR = (function() {
 
             return '<div class="or-container">Origin: <ul class="or"><li class="list-inline-item">' + ul.join('<i>;</i> </li><li class="list-inline-item">') + '</li></ul></div>';
         } else { // If there is just one origin
-            return '<div class="or-container"><span>Origin: ' + ul[0] + '</span></div>';
+            return '<div class="or-container">Origin: ' + ul[0] + '</div>';
         }
     }
 

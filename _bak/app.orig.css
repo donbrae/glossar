@@ -1,0 +1,544 @@
+/* Icons
+-------------------------------------------------- */
+@font-face {
+    font-family: 'fontello';
+    src: url('./fonts/fontello.eot?70815016');
+    src: url('./fonts/fontello.eot?70815016#iefix') format('embedded-opentype'),
+        url('./fonts/fontello.woff2?70815016') format('woff2'),
+        url('./fonts/fontello.woff?70815016') format('woff'),
+        url('./fonts/fontello.ttf?70815016') format('truetype'),
+        url('./fonts/fontello.svg?70815016#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-cancel {
+    font-size: 20px;
+    color: #8f959a;
+}
+
+.icon-sound:before {
+    content: '\e800';
+}
+
+.icon-cancel:before {
+    content: '\e801';
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #f5f5f5;
+    font-size: 1.05rem;
+    /* Margin bottom by footer height */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    font-size: .8rem;
+    /* Set the fixed height of the footer here */
+    line-height: 20px;
+    /* Vertically center the text there */
+    background-color: inherit;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header image styles no longer required */
+header img {
+    height: 34px;
+    margin-top: -11px;
+    margin-right: 6px;
+}
+
+@media (min-width: 576px) {
+    header img {
+        margin-top: -19px;
+    }
+
+    header img {
+        height: 38px;
+    }
+}
+
+header h1 {
+    display: inline-block;
+    letter-spacing: 0.02rem;
+}
+
+.container {
+    width: auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: auto;
+        max-width: 960px;
+        padding: 0 15px;
+    }
+}
+
+main.container {
+    max-width: 650px;
+}
+
+ul {
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
+#results>dl {
+    margin-bottom: 0.9rem;
+    padding: 0.6rem 0.55rem;
+    line-height: 1.6;
+    background-color: #ffffffeb;
+    border-radius: 11px;
+    box-shadow: 0px 2px 9px 0rem rgba(148, 148, 148, 0.08);
+}
+
+#results>dl:first-of-type {
+    margin-top: 0rem;
+}
+
+#results dt {
+    display: none;
+}
+
+#results dd, #results dd>span {
+    margin-left: 0;
+    padding: 0 0.4rem;
+}
+
+#results dd.audio, #results dd.pr {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    left: -0.2rem;
+}
+
+#results ul, #results ol, #results .inf, #results .or-container span {
+    line-height: 1.5;
+}
+
+#results ul, #results ol {
+    margin: 0 0 0.3rem 0;
+}
+
+#results ol.def {
+    margin-top: 0.15rem;
+}
+
+ul.or .list-inline-item span, div.or-container span {
+    font-style: italic;
+}
+
+ul.or .list-inline-item span span, div.or-container span span {
+    font-style: normal;
+}
+
+ol {
+    padding: 0;
+}
+
+ol>li {
+    list-style-position: inside;
+}
+
+ol.ex, ol.inf {
+    list-style-type: none;
+}
+
+ol.inf span, div.inf span {
+    font-style: italic;
+}
+
+ol.ex li::before, div.ex::before, ol.inf li::before, div.inf::before {
+    padding-right: 0.2rem;
+}
+
+ol.ex li::before, div.ex::before {
+    font-style: normal;
+    content: '\25c7';
+}
+
+ol.inf li::before, div.inf::before {
+    content: '\25CC';
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h1 sup {
+    font-size: 30%;
+    top: -1.9em;
+    border: 1px dotted #212529;
+    padding: 1px 4px 1px 4px;
+    border-radius: 21px;
+    margin-left: 3px;
+    letter-spacing: 0;
+}
+
+.sc {
+    font-size: 1.15rem;
+    margin-bottom: -0.2rem;
+}
+
+.sc, .pt>span, .pp>span, .pt-pp>span, .pl>span {
+    min-height: 1.7rem;
+    line-height: 1.45;
+}
+
+.sc, .pt>span, .pp>span, .pt-pp>span, .neg>span, .pl>span {
+    display: inline-block;
+}
+
+.or-container ul, .or-container ul li, ol.ex li, ol.inf li {
+    display: inline;
+}
+
+ol.ex, div.ex, ol.inf, div.inf {
+    color: #676767;
+}
+
+div.ex, div.inf {
+    margin-bottom: 0.2rem;
+}
+
+ol.ex li:not(:last-child), ol.inf li:not(:last-child) {
+    padding-right: 0.25rem;
+}
+
+.sc-alt {
+    position: relative;
+    top: -0.2rem;
+    margin-top: 0.1rem;
+}
+
+@media (min-width: 576px) {
+    .sc-alt {
+        padding-left: 0.45rem;
+        display: inline-block;
+        margin-top: 0;
+        top: 0;
+    }
+}
+
+.ex {
+    font-style: italic;
+}
+
+.en, .def {
+    font-size: 1rem;
+}
+
+ol.en, ol.def {
+    line-height: 1.7;
+}
+
+dt.dt-def+dd+dt.dt-ex+dd>.ex {
+    margin: 0.2rem 0 0.3rem 0 !important;
+}
+
+.ex, .inf {
+    font-size: .85rem;
+}
+
+.or {
+    padding-left: 0;
+}
+
+.pt, .pp, .pt-pp, .neg, .pl {
+    display: block;
+}
+
+.pt, .pp, .pt-pp {
+    margin-bottom: 0.05rem;
+    line-height: 1;
+}
+
+.sc, .sc-alt, .pt span, .pp span, .pt-pp span, .neg span, .pl span {
+    font-weight: 600;
+}
+
+.en {
+    font-style: italic;
+}
+
+.en span, .en em {
+    font-style: normal;
+    color: #9e9e9e;
+}
+
+.def span, .def em {
+    font-style: italic;
+    color: #808080;
+}
+
+div.en {
+    margin: 0rem 0 0.2rem 0;
+}
+
+div.def {
+    margin: 0.1rem 0 0.3rem 0;
+}
+
+div.en, div.def {
+    line-height: 1.4;
+}
+
+.grammar {
+    font-style: italic;
+    display: block;
+}
+
+.grammar span {
+    font-style: normal;
+    padding: 0 !important;
+}
+
+.hl {
+    background-color: #a1ff9594;
+    border-radius: 7px;
+}
+
+.sc-alt, .or-container, .grammar, .pr {
+    font-size: .8rem;
+}
+
+.or-container, .grammar, .pr {
+    color: #8c8c8c;
+}
+
+.text-muted {
+    color: #595e63 !important;
+}
+
+#search {
+    padding-top: 0.8rem;
+}
+
+@media (min-width: 576px) {
+    #search {
+        padding-top: 1rem;
+    }
+}
+
+#results {
+    padding-bottom: 1.1rem;
+    padding-top: 1.8rem;
+}
+
+@media (min-width: 576px) {
+    #results {
+        padding-bottom: 1.8rem;
+    }
+}
+
+#results a {
+    color: inherit;
+    border-bottom: 1px dotted #212529;
+}
+
+#results a:hover {
+    border-bottom-style: solid;
+    text-decoration: none;
+}
+
+.fade {
+    transition: opacity 0.075s linear;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+.mt-5, .my-5 {
+    margin-top: 1.7rem !important;
+}
+
+.h1, h1 {
+    font-size: 2.3rem;
+}
+
+#searchTextbox {
+    border-radius: 2rem;
+    padding-left: 1.1rem;
+    padding-right: 2.3rem;
+    color: #212529;
+    font-weight: 400;
+}
+
+#searchTextbox:focus, .form-control-pseudo-focus {
+    color: #212529;
+    border-color: #7777771a;
+    box-shadow: 0px 2px 9px 0rem rgba(148, 148, 148, 0.14);
+    outline: 0;
+}
+
+.form-control {
+    font-size: 1.1rem;
+}
+
+.form-control::placeholder {
+    font-weight: 400;
+    color: #2125298c;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.input-group button.btn.bg-transparent {
+    margin-left: -49px;
+    z-index: 100;
+}
+
+button.btn.bg-transparent:focus {
+    outline: 0;
+    opacity: .8;
+    box-shadow: none;
+}
+
+button.play-audio {
+    padding: 0;
+    top: -0.1rem;
+    position: relative;
+}
+
+button.play-audio i {
+    color: #404040;
+}
+
+button:disabled {
+    color: inherit !important;
+    opacity: .75 !important;
+}
+
+.get-update {
+    margin: 0.3rem 0;
+}
+
+@media (min-width: 576px) {
+    .get-update {
+        margin: 0.5rem 0;
+    }
+}
+
+.btn-primary {
+    background-color: #005eb8;
+    border-color: #005eb8;
+    font-size: inherit;
+    padding: 0.3rem 0.7rem 0.35rem 0.7rem;
+}
+
+.btn-primary:hover {
+    background-color: #0068cb;
+    border-color: #0068cb;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #0057a9;
+    border-color: #0057a9;
+}
+
+.btn-link-gray {
+    border: 0;
+    border-bottom: 1px dotted #212529;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-link-gray:hover {
+    border-bottom-style: solid;
+    cursor: pointer;
+}
+
+.btn-link-gray:focus {
+    outline: 0;
+}
+
+.btn-link-gray:active {
+    color: inherit;
+}
+
+@media (min-width: 576px) {
+    .grammar {
+        display: inline;
+        padding: 0 !important;
+    }
+
+    .footer {
+        font-size: .85rem;
+        line-height: 1.7;
+        padding: 17px 0;
+    }
+
+    .h1, h1 {
+        font-size: 2.6rem;
+    }
+
+    h1 sup {
+        padding: 1px 5px 2px 5px;
+    }
+}

@@ -11,6 +11,7 @@ timestamp # Generate timestamp
 
 if [ "$1" == "css" ]
 then
+    sass app.scss app.css
     # Update all versions of index file
     sed -i '' "s/app.css\?\_\=[0-9]*/app.css\?\_\=$TS/" index.dev.php
     sed -i '' "s/app.css\?\_\=[0-9]*/app.css\?\_\=$TS/" index.local.html
@@ -30,5 +31,3 @@ else
 fi
 
 shopt -u extglob
-
-# ...

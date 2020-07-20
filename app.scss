@@ -1,0 +1,542 @@
+/* Icons
+-------------------------------------------------- */
+@font-face {
+    font-family: 'fontello';
+    src: url("./fonts/fontello.eot?70815016");
+    src: url("./fonts/fontello.eot?70815016#iefix") format('embedded-opentype'), url("./fonts/fontello.woff2?70815016") format('woff2'), url("./fonts/fontello.woff?70815016") format('woff'), url("./fonts/fontello.ttf?70815016") format('truetype'), url("./fonts/fontello.svg?70815016#fontello") format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: 0.2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    margin-left: 0.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cancel {
+    font-size: 20px;
+    color: #8f959a;
+
+    &:before {
+        content: '\e801';
+    }
+}
+
+.icon-sound:before {
+    content: '\e800';
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #f5f5f5;
+    font-size: 1.05rem;
+    /* Margin bottom by footer height */
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+        display: inline-block;
+        letter-spacing: 0.02rem;
+        font-weight: 600;
+        @media (min-width: 576px) {
+            font-size: 2.6rem;
+        }
+
+        sup {
+            font-size: 30%;
+            top: -1.9em;
+            border: 1px dotted #212529;
+            padding: 1px 4px;
+            border-radius: 21px;
+            margin-left: 3px;
+            letter-spacing: 0;
+            @media (min-width: 576px) {
+                padding: 1px 5px 2px;
+            }
+        }
+    }
+}
+
+.container {
+    width: auto;
+    padding: 0 15px;
+    max-width: 650px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    /* Set the fixed height of the footer here */
+    line-height: 20px;
+    /* Vertically center the text there */
+    background-color: inherit;
+    @media (min-width: 576px) {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        padding: 17px 0;
+    }
+}
+
+ul {
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
+#results {
+    padding-bottom: 1.1rem;
+    padding-top: 1.8rem;
+    @media (min-width: 576px) {
+        padding-bottom: 1.8rem;
+    }
+
+    a {
+        color: inherit;
+        border-bottom: 1px dotted #212529;
+
+        &:hover {
+            border-bottom-style: solid;
+            text-decoration: none;
+        }
+    }
+
+    > dl {
+        margin-bottom: 0.9rem;
+        padding: 0.6rem 0.55rem;
+        line-height: 1.6;
+        background-color: #ffffffeb;
+        border-radius: 11px;
+        box-shadow: 0 2px 9px 0 rgba(148, 148, 148, 0.08);
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    dt {
+        display: none;
+    }
+
+    dd,
+    dd > span {
+        margin-left: 0;
+        padding: 0 0.4rem;
+    }
+
+    dd {
+        &.audio,
+        &.pr {
+            display: inline-block;
+            position: relative;
+            padding: 0;
+            left: -0.2rem;
+        }
+    }
+
+    ol,
+    ul {
+        margin: 0 0 0.3rem;
+    }
+
+    ol.def {
+        margin-top: 0.15rem;
+    }
+
+    div.or-container span,
+    ul.or .list-inline-item span {
+        font-style: italic;
+    }
+
+    div.or-container span span,
+    ul.or .list-inline-item span span {
+        font-style: normal;
+    }
+
+    ol {
+        padding: 0;
+
+        &.ex,
+        &.inf {
+            list-style-type: none;
+        }
+
+        > li {
+            list-style-position: inside;
+        }
+    }
+
+    div.inf span,
+    ol.inf span {
+        font-style: italic;
+    }
+
+    div.ex::before,
+    div.inf::before,
+    ol.ex li::before,
+    ol.inf li::before {
+        padding-right: 0.2rem;
+    }
+
+    div.ex::before,
+    ol.ex li::before {
+        font-style: normal;
+        content: '\25c7';
+    }
+
+    div.inf::before,
+    ol.inf li::before {
+        content: '\25CC';
+    }
+
+    .sc {
+        font-size: 1.15rem;
+        margin-bottom: -0.2rem;
+    }
+
+    .pl > span,
+    .pp > span,
+    .pt > span,
+    .pt-pp > span,
+    .sc {
+        min-height: 1.7rem;
+        line-height: 1.45;
+    }
+
+    .neg > span,
+    .pl > span,
+    .pp > span,
+    .pt > span,
+    .pt-pp > span,
+    .sc {
+        display: inline-block;
+    }
+
+    .or-container ul,
+    .or-container ul li,
+    ol.ex li,
+    ol.inf li {
+        display: inline;
+    }
+
+    .ex,
+    .inf {
+        color: #676767;
+        font-size: 0.85rem;
+    }
+
+    div.ex,
+    div.inf {
+        margin-bottom: 0.2rem;
+    }
+
+    ol.ex li:not(:last-child),
+    ol.inf li:not(:last-child) {
+        padding-right: 0.25rem;
+    }
+
+    .sc-alt {
+        position: relative;
+        top: -0.2rem;
+        margin-top: 0.1rem;
+        @media (min-width: 576px) {
+            padding-left: 0.45rem;
+            display: inline-block;
+            margin-top: 0;
+            top: 0;
+        }
+    }
+
+    .ex {
+        font-style: italic;
+    }
+
+    .def,
+    .en {
+        font-size: 1rem;
+    }
+
+    ol.def,
+    ol.en {
+        line-height: 1.7;
+    }
+
+    .inf,
+    .or-container span,
+    ol.def,
+    ol.en,
+    ul {
+        line-height: 1.5;
+    }
+
+    dt.dt-def+dd+dt.dt-ex+dd > .ex {
+        margin: 0.2rem 0 0.3rem 0 !important;
+    }
+
+    .or {
+        padding-left: 0;
+    }
+
+    .neg,
+    .pl,
+    .pp,
+    .pt,
+    .pt-pp {
+        display: block;
+    }
+
+    .pp,
+    .pt,
+    .pt-pp {
+        margin-bottom: 0.05rem;
+        line-height: 1;
+    }
+
+    .neg span,
+    .pl span,
+    .pp span,
+    .pt span,
+    .pt-pp span,
+    .sc,
+    .sc-alt {
+        font-weight: 600;
+    }
+
+    .en {
+        font-style: italic;
+
+        em,
+        span {
+            font-style: normal;
+            color: #9e9e9e;
+        }
+    }
+
+    .def em,
+    .def span {
+        font-style: italic;
+        color: #808080;
+    }
+
+    div.def,
+    div.en {
+        line-height: 1.4;
+    }
+
+    div.en {
+        margin: 0 0 0.2rem;
+    }
+
+    div.def {
+        margin: 0.1rem 0 0.3rem;
+    }
+
+    .grammar {
+        font-style: italic;
+        display: block;
+        @media (min-width: 576px) {
+            display: inline;
+            padding: 0 !important;
+        }
+
+        span {
+            font-style: normal;
+            padding: 0 !important;
+        }
+    }
+
+    .hl {
+        background-color: #a1ff9594;
+        border-radius: 7px;
+    }
+
+    .footer,
+    .grammar,
+    .or-container,
+    .pr,
+    .sc-alt {
+        font-size: 0.8rem;
+    }
+
+    .grammar,
+    .or-container,
+    .pr {
+        color: #8c8c8c;
+    }
+}
+
+.text-muted {
+    color: #595e63 !important;
+}
+
+#search {
+    padding-top: 0.8rem;
+    @media (min-width: 576px) {
+        padding-top: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+
+    .form-control {
+        font-size: 1.1rem;
+
+        &::placeholder {
+            font-weight: 400;
+            color: #2125298c;
+        }
+    }
+
+    .input-group {
+        > .form-control:not(:last-child),
+        > .custom-select:not(:last-child) {
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+
+        button.btn.bg-transparent {
+            margin-left: -49px;
+            z-index: 100;
+        }
+    }
+
+    #searchTextbox {
+        border-radius: 2rem;
+        padding-left: 1.1rem;
+        padding-right: 2.3rem;
+        color: #212529;
+        font-weight: 400;
+
+        &.form-control-pseudo-focus,
+        &:focus {
+            color: #212529;
+            border-color: #7777771a;
+            box-shadow: 0 2px 9px 0 rgba(148, 148, 148, 0.14);
+            outline: 0;
+        }
+    }
+}
+
+.fade {
+    transition: opacity 0.075s linear;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+.mt-5,
+.my-5 {
+    margin-top: 1.7rem !important;
+}
+
+.h1,
+h1 {
+    font-size: 2.3rem;
+}
+
+button {
+    &.btn.bg-transparent:focus {
+        outline: 0;
+        opacity: 0.8;
+        box-shadow: none;
+    }
+
+    &.play-audio {
+        padding: 0;
+        top: -0.1rem;
+        position: relative;
+
+        i {
+            color: #404040;
+        }
+    }
+
+    &:disabled {
+        color: inherit !important;
+        opacity: 0.75 !important;
+    }
+}
+
+.get-update {
+    margin: 0.3rem 0;
+    @media (min-width: 576px) {
+        margin: 0.5rem 0;
+    }
+}
+
+.btn-primary {
+    background-color: #005eb8;
+    border-color: #005eb8;
+    font-size: inherit;
+    padding: 0.3rem 0.7rem 0.35rem;
+
+    &:hover {
+        background-color: #0068cb;
+        border-color: #0068cb;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+        background-color: #0057a9;
+        border-color: #0057a9;
+    }
+}
+
+.btn-link-gray {
+    border: 0;
+    border-bottom: 1px dotted #212529;
+    background: none;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+        border-bottom-style: solid;
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn-link-gray .btn-link-gray .btn-link-gray:active {
+    color: inherit;
+}

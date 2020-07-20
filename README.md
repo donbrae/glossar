@@ -51,9 +51,11 @@ Mak siccar the ruit is pyntit at either live or dev as relevant:
 
 # Biggin
 
-Rin **build.sh** for tae big JS bundle (**glossar-bundle.min.js**) and **index.php** and **index.local.html**. Eik optional argument *css* tae update query string when calling CSS (in all version of the index file), or *min* for tae minifee (see abuin).
+Rin **build.sh** for tae big JS bundle (**glossar-bundle.min.js**) and **index.php** and **index.local.html**. Eik optional argument *css* tae update query string when calling CSS (in all version of the index file), or *min* for tae minifee.
 
-**index.php**, **glossar-bundle.min.js**, **glossar-bundle.min.js.map** and **app.css** should be uplaidit, as weel as **app.js** and **./data** (sae as the source mappin wirks).
+**build.sh** requires `sass` (`brew install sass/sass/sass`) and, optionally, `terser` (for minification; see abuin).
+
+**index.php**, **glossar-bundle.min.js**, **glossar-bundle.min.js.map**, **app.css** and **app.css.map** should be uplaidit, as weel as **app.js** and **./data** (sae as the source mappin wirks).
 
 * https://glossar.makforrit.scot/
 * (non-local) dev URL: https://glossar.makforrit.scot/index-dev.html
@@ -109,3 +111,8 @@ Undefined property (e.g. relatit tae `tr`) (check complex verbs first). Stert by
 	    ],
 	    ex: G.ex.,
 	}
+
+## Dependencies
+
+* `terser` (optional; for JS minification)
+* `sass`

@@ -412,7 +412,7 @@ G.dict.push({ // A
         ['very much', 'greatly', 'extremely'],
         ['laboriously', 'with great exertion']
     ],
-    tr: ['very', 'hard'],
+    tr: ['very', 'hard', 'sare'],
     gr: 'adv',
     or: [
         [G.notes.or.as, 'sar(e), sair, sore'],
@@ -499,8 +499,8 @@ G.dict.push({ // A
     en: 'tonight',
     tr: 'the night',
     gr: ['adv', 'n'],
-    ex: ['Are ye gaun oot the nicht?', 'It’s awfu cauld the nicht'],
-    or: 'first kythin DOST haes o <span>the nicht</span> (in the mak <em>the nycht</em>) ‘the present or approachin nicht’ is frae 1475'
+    ex: ['Ar ye gaun oot the nicht?', 'It’s affa cauld the nicht'],
+    or: 'the earliest kent kythin o <span>the nicht</span> (as <em>the nycht</em>) ‘the present or approachin nicht’ is frae 1475'
 }, {
     sc: 'the year',
     en: 'this year',
