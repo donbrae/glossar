@@ -675,7 +675,7 @@ G.dict.push({ // A
             sc: 'developit',
             tr: 'developed'
         },
-        tr: 'mak',
+        tr: ['mak', 'make'],
         hl: 'develop',
         gr: 'v'
     }, {
@@ -1041,10 +1041,13 @@ G.dict.push({ // A
         sc: 'gar',
         pt_pp: {
             sc: ['gart', 'garred'],
-            tr: ['made', 'caused', 'forced', 'compelled', 'required', 'makkit']
+            // tr: ['made', 'caused', 'forced', 'compelled', 'required'],
+            tr: ['made', 'caused', 'forced', 'compelled', 'required', 'makkit'],
+            hl: ['made', 'caused', 'forced', 'compelled', 'required']
         },
         def: ['cause something tae be duin', 'mak a body or thing dae something'],
         tr: ['make', 'mak', 'cause', 'force', 'compel', 'require'],
+        hl: ['make', 'cause', 'force', 'compel', 'require'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'ger, gar'],
@@ -1364,7 +1367,8 @@ G.dict.push({ // A
     }, {
         sc: 'mak',
         en: 'make',
-        tr: ['manufacture', 'create', 'compose', 'compel'],
+        tr: ['manufacture', 'create', 'compose', 'compel', 'develop', 'fashion'],
+        hl: ['manufacture', 'create', 'compel'],
         gr: 'v',
         or: [
             [G.notes.or.as, 'mak'],
@@ -1861,10 +1865,11 @@ G.dict.push({ // A
         gr: 'v'
     }, {
         sc: 'wirk',
-        pr: 'wirk, wurk',
+        pr: ['wirk, wurk'],
         pt_pp: {
             sc: 'wrocht',
-            tr: ['worked', 'workit', 'made', 'built', 'manufactured', 'biggit']
+            tr: ['worked', 'workit', 'made', 'built', 'manufactured', 'biggit', 'makkit'],
+            hl: ['worked', 'workit', 'made', 'built', 'manufactured']
         },
         tr: ['labour', 'labor', 'toil', 'wark'],
         hl: 'wirk',

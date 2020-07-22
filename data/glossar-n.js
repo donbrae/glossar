@@ -122,8 +122,8 @@ G.dict.push({
 }, {
     sc: 'brae',
     def: ['the (stey or sclentin) banks o a river, loch or seashore', 'a bank or lenth o grund wi a fairly strait upwart sclent til it', 'a gate wi a stey upcome (aft-times in street names)', 'the brou o a hill'],
-    tr: ['hillside', 'slope', 'road', 'street', 'bank', 'knowe', 'brow', 'brou', 'gate', 'gait'],
-    hl: ['brae', 'hillside', 'brow', 'bank', 'street', 'road', 'brow', 'brou', 'gate', 'gait'],
+    tr: ['hillside', 'hill', 'slope', 'road', 'street', 'bank', 'knowe', 'brow', 'brou', 'gate', 'gait'],
+    hl: ['brae', 'hillside', 'brow', 'bank', 'street', 'road'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'bra', 'bray', 'brae'],
@@ -820,6 +820,7 @@ G.dict.push({
     sc: 'loan',
     def: ['an unpedmentit or girssie track for cattle; aft-times in steid names', 'a througate, street or road', ['the ferm gate airtin til the fermhoose', 'the grund adjynin a fermhoose', 'the causey']],
     tr: ['lane', 'track', 'street', 'road', 'path', 'causey', 'gate', 'gait', 'througate'],
+    hl: ['lane', 'track', 'street', 'road', 'path'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'lone, loan, loyne'],
@@ -868,7 +869,8 @@ G.dict.push({
         ['form', 'shape', 'a (distinctive) style of manufacture'],
         ['the action or process of manufacturing (an object) or developing (a character)']
     ],
-    tr: ['style', 'manufacturing', 'developing', 'build', 'appearance', 'fashion', 'manufacturing'],
+    tr: ['style', 'build', 'appearance'],
+    hl: [],
     gr: 'n',
     or: 'see v'
 }, {
@@ -1130,8 +1132,8 @@ G.dict.push({
     def: [
         ['a braid route atween twa steids', 'a gate']
     ],
-    tr: ['gate', 'gait', 'route', 'raid'],
-    hl: ['gate', 'gait', 'route'],
+    tr: ['gate', 'gait', 'route', 'raid', 'street'],
+    hl: ['route', 'street'],
     gr: 'n',
     or: 'SND states that the mak <em>road</em> (frae Auld English <em>rād</em>) is a 16t century borraein frae English, the historical Scots mak bein <em>raid</em>'
 }, {
@@ -1207,6 +1209,15 @@ G.dict.push({
     en: 'activist',
     gr: 'n',
     or: '<span>steer</span> ‘tae steer, gie airt til’ wi <span>-ar</span> suffix. Baith <span>-ar</span> an <span>-er</span> kythe on the SLC wabsite. Waled <span>-ar</span> here by analogy wi <span>co-airtar</span>, <span>pairt-takar</span> and <span>lawmakar</span>'
+}, {
+    sc: 'street',
+    en: 'a street',
+    tr: 'street',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'streit, stret(e), street, streyt'],
+        [G.notes.or.ae, 'strǣt']
+    ]
 }, {
     sc: 'swither',
     en: [
@@ -1328,6 +1339,7 @@ G.dict.push({
     sc: 'wynd',
     def: '<em>fund mainly in street names</em> a nairae, aft-times windin street or pass, maist aften in touns an cíties',
     tr: ['street', 'alley', 'road', 'gate', 'gait'],
+    hl: ['street', 'alley', 'road'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'wynd, wyne, wind, weynd'],

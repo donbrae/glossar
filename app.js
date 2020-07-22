@@ -8,7 +8,7 @@ var GLOSSAR = (function() {
 
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_non_hl: 4 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for
+            threshold_non_hl: 4 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
         },
         state = {
             word: '', // Value of search text box
@@ -114,6 +114,10 @@ var GLOSSAR = (function() {
                 searchInit();
             }
         }, 500);
+
+        if ('ontouchstart' in window === false) {
+            $('#searchTextbox').focus();
+        }
 
         $('#searchTextbox').on('keyup', searchInit);
 
@@ -237,6 +241,24 @@ var GLOSSAR = (function() {
         $('#results').addClass('show');
     }
 
+    /**
+     * Checks whether the currently searched for word matches any of the items' 'tr' property
+     * @param {Array} items - Array of objects
+     * @returns {Boolean}
+     */
+    function checkForTriggers(items) {
+        var trigger_found = false;
+
+        $.each(items, function() {
+            if (this.tr && this.tr.indexOf(state.word_lc) > -1) {
+                trigger_found = true;
+                return;
+            }
+        });
+
+        return trigger_found;
+    }
+
     function addAudio(s) {
         var buttons = []; // HTML
 
@@ -270,6 +292,7 @@ var GLOSSAR = (function() {
                 if (
                     state.word.length >= cfg.threshold_non_hl || // Length of word user has input is equal to or greater than threshold
                     arrayToLowerCase([].concat(item.sc)).indexOf(state.word_lc) > -1 || // Exact match (Scots)
+                    arrayToLowerCase([].concat(item.sc_alt)).indexOf(state.word_lc) > -1 || // Alternative Scots spelling
                     arrayToLowerCase([].concat(item.en)).indexOf(state.word_lc) > -1 || // Exact match (English)
                     (item.tr && arrayToLowerCase([].concat(item.tr)).indexOf(state.word_lc) > -1) || // Length of this word (returned by results) is below threshold but user input is a trigger for this word
                     (item.pr && arrayToLowerCase([].concat(item.pr)).indexOf(state.word_lc) > -1) || // As per previous but pertains to pronunciation
@@ -284,8 +307,8 @@ var GLOSSAR = (function() {
                 ) {
                     results_filtered.push(item);
 
-                    grammar = item.gr ? '<dt class="dt-grammar">Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd> ' : ''; // Grammar
-                    sc_alt = item.sc_alt ? '<div class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</div> ' : ''; // Alternative Scots spellings
+                    grammar = item.gr ? '<dt class="dt-grammar">Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd>' : ''; // Grammar
+                    sc_alt = item.sc_alt ? '<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">' + [].concat(item.sc_alt).join(' ') + '</dd>' : ''; // Alternative Scots spellings
                     en = item.en ? '<dt class="dt-en">English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
                     pr = item.pr ? '<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
                     def = item.def ? '<dt class="dt-def">Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
@@ -297,18 +320,43 @@ var GLOSSAR = (function() {
                     audio = item.au ? '<dt class="dt-au">Audio</dt><dd class="audio">' + addAudio(item.au) + '</dd> ' : ''; // Audio
 
                     /**
-                     * Highlight based on trigger words by default; if not, use the specific highlight words
+                     * Highlight based on trigger words
+                     * by default; if not, use the
+                     * specific highlight override words
                      */
 
-                    // Simpler (Scots) verbs
-                    pt_arr = item.pt && item.pt.sc ? [].concat(item.pt.sc) : []; // Any past tense
-                    pt_arr = item.pt && item.pt.tr ? pt_arr.concat(item.pt.tr) : pt_arr; // Any past tense triggers
+                    // Past tense
+                    pt_arr = item.pt && item.pt.sc ? [].concat(item.pt.sc) : []; // Scots past tense
 
-                    pp_arr = item.pp && item.pp.sc ? [].concat(item.pp.sc) : []; // Any past participle
-                    pp_arr = item.pp && item.pp.tr ? pp_arr.concat(item.pp.tr) : pp_arr; // Any past tense triggers
+                    if (pt_arr.length) {
+                        if (item.pt && item.pt.hl) { // Highlighting override words
+                            pt_arr = pt_arr.concat(item.pt.hl);
+                        } else if (item.pt && item.pt.tr) { // Standard triggers
+                            pt_arr = pt_arr.concat(item.pt.tr)
+                        }
+                    }
 
-                    pt_pp_arr = item.pt_pp && item.pt_pp.sc ? [].concat(item.pt_pp.sc) : []; // Where Scots past tense and past participle are the same
-                    pt_pp_arr = item.pt_pp && item.pt_pp.tr ? pt_pp_arr.concat(item.pt_pp.tr) : pt_pp_arr; // triggers
+                    // Past participle
+                    pp_arr = item.pp && item.pp.sc ? [].concat(item.pp.sc) : [];
+
+                    if (pp_arr.length) {
+                        if (item.pp && item.pp.hl) {
+                            pp_arr = pp_arr.concat(item.pp.hl);
+                        } else if (item.pp && item.pp.tr) {
+                            pp_arr = pp_arr.concat(item.pp.tr)
+                        }
+                    }
+
+                    // Where Scots past tense and past participles are the same
+                    pt_pp_arr = item.pt_pp && item.pt_pp.sc ? [].concat(item.pt_pp.sc) : [];
+
+                    if (pt_pp_arr.length) {
+                        if (item.pt_pp && item.pt_pp.hl) {
+                            pt_pp_arr = pt_pp_arr.concat(item.pt_pp.hl);
+                        } else if (item.pt_pp && item.pt_pp.tr) {
+                            pt_pp_arr = pt_pp_arr.concat(item.pt_pp.tr)
+                        }
+                    }
 
                     neg = item.neg ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span>' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // Any Scots negative
 
@@ -346,7 +394,8 @@ var GLOSSAR = (function() {
 
                     pl = pl_arr.length ? '<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></dd>' : ''; // Noun plurals
 
-                    $('#results').append('<dl' + ph + '><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + sc_alt + '</dd> ' +
+                    $('#results').append('<dl' + ph + '><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</dd> ' +
+                        sc_alt +
                         audio +
                         pr +
                         grammar +
@@ -375,7 +424,7 @@ var GLOSSAR = (function() {
                         });
                     }
 
-                    if (!state.highlight && state.word.length < cfg.threshold_non_hl) { // If nothing in the UI has been highlighted and the length of user input is below the threshold
+                    if (!state.highlight && !checkForTriggers(results_filtered) && state.word.length < cfg.threshold_non_hl) { // If nothing in the UI has been highlighted, the word search for does not match any non-highlighting trigger, and the length of user input is below the threshold
                         noResults();
                     } else {
                         $('#results').addClass('show');
@@ -475,14 +524,14 @@ var GLOSSAR = (function() {
 
         state.highlight = 0;
 
-        function hielicht($el, items, en) {
+        function hielicht($el, items, other) {
             if ($el.data('hl')) { // Add any highlight words to the items array
                 items = items.concat($el.data('hl').split(','));
             }
             $.each(items, function() {
                 if (this &&
                     (this.toLowerCase() === state.word_lc ||
-                        (en && en.indexOf(state.word_lc) > -1))
+                        (other && other.indexOf(state.word_lc) > -1))
                 ) {
                     $el.addClass('hl');
                     state.highlight = state.highlight + 1;
@@ -499,6 +548,8 @@ var GLOSSAR = (function() {
         // Add any new highlights
         $($('#results > dl').get().reverse()).each(function() {
 
+            var hl; // Trigger words to cause highlighting
+
             // Head word(s)
             items = $('.sc', this).text().split(', ');
             hielicht(
@@ -510,30 +561,45 @@ var GLOSSAR = (function() {
             // Past tense
             if ($('.pt', this).length) {
                 items = $('.pt span', this).text().split(', ');
+
+                hl = r[i].pt && r[i].pt.hl ? makeSingleArray(r[i].pt.hl) : null; // Highlight overrides
+
+                hl = !hl && r[i].pt && r[i].pt.tr ? makeSingleArray(r[i].pt.tr) : hl; // No highlight overrides
+
                 hielicht(
                     $('.pt span', this),
                     items, // Scots words
-                    r[i].pt && r[i].pt.tr ? makeSingleArray(r[i].pt.tr) : null // Corresponding trigger words to cause highlighting
+                    hl // Other words to cause highlighting
                 );
             }
 
             // Past participle
             if ($('.pp', this).length) {
                 items = $('.pp span', this).text().split(', ');
+
+                hl = r[i].pp && r[i].pp.hl ? makeSingleArray(r[i].pp.hl) : null; // Highlight overrides
+
+                hl = !hl && r[i].pp && r[i].pp.tr ? makeSingleArray(r[i].pp.tr) : hl; // No highlight overrides
+
                 hielicht(
                     $('.pp span', this),
-                    items, // Scots words
-                    r[i].pp && r[i].pp.tr ? makeSingleArray(r[i].pp.tr) : null
+                    items,
+                    hl
                 );
             }
 
             // Identical past tense and past participle
             if ($('.pt-pp', this).length) {
                 items = $('.pt-pp span', this).text().split(', ');
+
+                hl = r[i].pt_pp && r[i].pt_pp.hl ? makeSingleArray(r[i].pt_pp.hl) : null;
+
+                hl = !hl && r[i].pt_pp && r[i].pt_pp.tr ? makeSingleArray(r[i].pt_pp.tr) : hl;
+
                 hielicht(
                     $('.pt-pp span', this),
-                    items, // Scots words
-                    r[i].pt_pp && r[i].pt_pp.tr ? makeSingleArray(r[i].pt_pp.tr) : null
+                    items,
+                    hl
                 );
             }
 

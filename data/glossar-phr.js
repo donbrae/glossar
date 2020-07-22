@@ -82,7 +82,7 @@ G.dict.push({
     tr: 'amazed',
     hl: 'amaze',
     gr: 'phrasal v',
-    ex: 'I wis fair pitten in an unco flutter!'
+    ex: 'I wis pitten in an unco flutter'
 }, {
     sc: 'nae faurer gane than',
     en: 'as recently as',

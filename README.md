@@ -22,14 +22,14 @@ Audience: Scots speakers, scrievers and learners.
 	    sc: ['takkin', 'taein'],
 	    en: 'taking',
 	    tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'tooken', 'tookin'],
-	    hl: ['takken', 'tane', 'taen'], // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw
+	    hl: ['takken', 'tane', 'taen'], // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw. Assign an empty array if you want none of the 'tr' items to cause highlighting
 	    ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
 	    gr: 'pres participle o the v <span>tae tak</span>'
 	}
 
 # Dev
 
-Mak chynges tae template **index.dev.php** and **app.css**. For tae big, see section *Biggin* ablo.
+Mak chynges tae template **index.dev.php** and **app.scss**. For tae big, see section *Biggin* ablo.
 
 Trigger wirds (`tr`), pronunciations (`pr`) and alternative spellins (`sc_alt`) will be highlichtit in the UI by defaut. Ye can uise the *highlight* property (`hl`) tae owerride this. Note how typin *depute* (Scots) vs *deputy* (English) is haundelt. For a mair complex example, tak tent of the verbs *tae gae* and *tae gie*.
 
