@@ -278,7 +278,7 @@ G.dict.push({
         [G.notes.or.me, 'counseil'],
         [G.notes.or.l, 'concilium']
     ],
-    ex: 'Edinburgh Cíty Council the day set furth new wittins anent the raxin oot o the tram netwark til Newhaven'
+    ex: 'Edinburgh City Council the day set furth new wittins anent the raxin oot o the tram netwark til Newhaven'
 }, { // D
     sc: 'daeins',
     en: 'activity',
@@ -742,7 +742,7 @@ G.dict.push({
     sc: 'innovation',
     def: [
         ['the chyngin o an estaiblisht mak, wey o daein things or institution'],
-        ['<em>law</em> the chyngin or replacement o a legal servitude or provísion'],
+        ['<em>law</em> the chyngin or replacement o a legal servitude or provision'],
         ['something new introduce’t']
     ],
     gr: 'n',
@@ -1138,7 +1138,7 @@ G.dict.push({
     or: 'SND states that the mak <em>road</em> (frae Auld English <em>rād</em>) is a 16t century borraein frae English, the historical Scots mak bein <em>raid</em>'
 }, {
     sc: 'roaster',
-    def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an ídiot o theirsels',
+    def: 'a body that haivers, fashes fowk wi their ill laits, or is thocht tae be makkin an idiot o theirsels',
     gr: ['n', 'informal', 'derogatory']
 }, { // S
     sc: 'sair',
@@ -1243,7 +1243,7 @@ G.dict.push({
     ],
     tr: 'then',
     gr: 'n',
-    ex: 'We shoud hae it fínisht by than',
+    ex: 'We shoud hae it finisht by than',
     or: [
         [G.notes.or.as, 'than, thyne'],
         [G.notes.or.ae, 'ðanne']
@@ -1252,7 +1252,7 @@ G.dict.push({
     sc: 'toun',
     pr: 'toon',
     def: [
-        ['an area wi a name and boonds whaur fowk haes sattelt', 'a burgh', 'a cíty']
+        ['an area wi a name and boonds whaur fowk haes sattelt', 'a burgh', 'a city']
     ],
     en: 'town',
     gr: 'n',
@@ -1337,7 +1337,7 @@ G.dict.push({
     au: 'wuman'
 }, {
     sc: 'wynd',
-    def: '<em>fund mainly in street names</em> a nairae, aft-times windin street or pass, maist aften in touns an cíties',
+    def: '<em>fund mainly in street names</em> a nairae, aft-times windin street or pass, maist aften in touns an cities',
     tr: ['street', 'alley', 'road', 'gate', 'gait'],
     hl: ['street', 'alley', 'road'],
     gr: 'n',

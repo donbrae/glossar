@@ -270,7 +270,7 @@ G.dict.push({ // A
     gr: 'adv',
     or: [
         [G.notes.or.as, 'michtily, mychtyly'],
-        [G.notes.or.ae, 'mihtiᵹlíce']
+        [G.notes.or.ae, 'mihtiᵹlice']
     ],
     ex: ['He wis michtily offendit', 'They focht michtily']
 }, {

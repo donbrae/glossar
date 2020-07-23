@@ -528,7 +528,7 @@ G.dict.push({ // A
         en: G.v.be.neg.en,
         tr: G.v.be.trigs,
         hl: [].concat(G.v.be.neg.en, G.v.be.neg.tr),
-        gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; líterar'
+        gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; literar'
     },
     // v be end
     {
@@ -581,11 +581,11 @@ G.dict.push({ // A
             [G.notes.or.mf, 'compris']
         ]
     }, {
-        sc: 'consíder',
+        sc: 'consider',
         pr: 'conseeder',
         def: 'tae think on, tak intil accoont',
         pt_pp: {
-            sc: ['consídert', 'consídered'],
+            sc: ['considert', 'considered'],
             tr: 'considered'
         },
         tr: ['think on', 'consider'],
@@ -1081,7 +1081,7 @@ G.dict.push({ // A
             sc: 'hauden',
             tr: 'held'
         },
-        tr: ['hauden', 'hold'],
+        tr: ['hauden', 'hold', 'hae', 'hiv'],
         hl: ['haud', 'hold'],
         gr: 'v',
         ex: [G.ex.z, 'The neist comatee meetin will be hauden in Mey'],
@@ -1682,7 +1682,7 @@ G.dict.push({ // A
             tr: ['suggested', 'proposed', 'put forward']
         },
         def: [
-            ['pit forrit for consíderation', 'suggest'],
+            ['pit forrit for consideration', 'suggest'],
             ['<span>law</span> pit forrit or state (a plea) in a court']
         ],
         en: 'propose',

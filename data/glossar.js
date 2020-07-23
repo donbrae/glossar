@@ -49,7 +49,7 @@ G.ex = {
     j: "As the ae guardian o Scots it faws til us tae gie this hamelt leid bield, and mak namely its pairt in Scotland’s identity nou and in time tae come",
     k: "We ar wirkin nou wi aw pairt-takars for tae deliver on the ettles that’s intil the policy",
     l: "In terms o tred, o the guids and services Scotland inbrings, aroond 60 per cent is thocht tae be frae the lave o the Unitit Kinrick",
-    m: "The First Mínister wrate til her cabinet secretar anent the forementiont policy",
+    m: "The First Minister wrate til her cabinet secretar anent the forementiont policy",
     n: "I’m meetin up wi an auld freend the day",
     o: "The Fisk Secretar-depute will the day set furth new wittins anent the proponed tax exemptions",
     p: "The day’s gemm agin Aiberdeen will be played at hame",
@@ -120,7 +120,7 @@ G.dict = [{
     sc: 'binna',
     en: 'except for',
     tr: 'binnae',
-    gr: ['prep', 'líterar']
+    gr: ['prep', 'literar']
 }, {
     sc: ['because', 'acause'],
     en: 'because',
@@ -252,7 +252,7 @@ G.dict = [{
     gr: 'cardinal number',
     tr: ['ae', 'ain', 'ann', 'yae', 'yay'],
     hl: ['ane', 'ain', 'yin', 'wan', 'een', 'ann'],
-    inf: '<span>Ane</span> is aften uised the day as an adjective, tae, whaur in tradítional spoken Modren Scots ye’r mair like tae hear <span>ae</span> (also pronounced ‘yae’). <span>Ane</span> wis typically the adjective in Aulder Scots'
+    inf: '<span>Ane</span> is aften uised the day as an adjective (as weel as bein the cardinal nummer <span>ane</span>), whauras in traditional spoken Modren Scots ye’r mair likely tae hear <span>ae</span> (also pronounced ‘yae’) as the adjective. <span>Ane</span> wis typically the written adjective in Aulder Scots'
 }, {
     sc: 'ony',
     en: [
@@ -343,7 +343,7 @@ G.dict = [{
     sc: ['thare', 'there'],
     en: 'there'
 }, {
-    sc: 'partícular',
+    sc: 'particular',
     pr: ['purTikyulur', 'purTiklur', 'parTeekyulur', 'parTeeklur'],
     sc_alt: ['parteecular'],
     en: 'particular',

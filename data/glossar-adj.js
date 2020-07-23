@@ -19,6 +19,7 @@ G.dict.push({ // A
     en: ['one', 'only'],
     gr: 'adj',
     tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
+    hl: [],
     ex: ['I haed ae last beer syne taen the gate hame', 'Fowk bein full o theirsels wis the ae thing I couldna staund']
 }, {
     sc: 'aesome',
@@ -61,7 +62,7 @@ G.dict.push({ // A
 }, {
     sc: 'bittie',
     en: 'a bit of',
-    gr: 'adj (quasi), by omíssion o prep <span>o</span>',
+    gr: 'adj (quasi), by omission o prep <span>o</span>',
     ex: 'I wadna mind a wee bittie cake',
     or: 'see n'
 }, {
@@ -337,7 +338,7 @@ G.dict.push({ // A
     tr: ['friendly', 'affable', 'outgoing', 'forward', 'forrit', 'bauld'],
     hl: ['furthie', 'outgoing', 'forward', 'forrit', 'bauld'],
     gr: 'adj',
-    or: [G.notes.or.as + ' haes <span>forthy</span> an later <span>furthy</span> ‘forrit, bauld, enterprísin’'],
+    or: [G.notes.or.as + ' haes <span>forthy</span> an later <span>furthy</span> ‘forrit, bauld, enterprisin’'],
     ex: G.ex.r
 }, { // G
     sc: 'gey',
@@ -432,7 +433,7 @@ G.dict.push({ // A
         [G.notes.or.me, 'aquointe'],
         [G.notes.or.mf, 'accointe']
     ],
-    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the mínister’s view anent the maiter']
+    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the minister’s view anent the maiter']
 }, { // L
     sc: 'laident',
     en: 'burdened',
@@ -469,6 +470,7 @@ G.dict.push({ // A
     sc: 'michty',
     en: 'mighty',
     tr: ['powerful', 'important', 'rich', 'strong', 'big', 'muckle', 'sumptuous', 'loud'],
+    hl: ['powerful', 'important', 'rich', 'strong', 'big', 'sumptuous', 'loud'],
     gr: 'adj',
     or: [
         [G.notes.or.as, 'mychty, mychti, michty'],
@@ -619,7 +621,7 @@ G.dict.push({ // A
     ex: 'He wis shuir he’d seen the fellae somewhaur afore'
 }, {
     sc: 'sib',
-    def: ['relatit by bluid, strynd or mairiage', 'símilar'],
+    def: ['relatit by bluid, strynd or mairiage', 'similar'],
     tr: ['related', 'relatit', 'similar', 'seemilar', 'alike', 'close', 'familiar', 'like'],
     gr: 'adj',
     or: [
