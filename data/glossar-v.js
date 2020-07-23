@@ -1871,7 +1871,7 @@ G.dict.push({ // A
             tr: ['worked', 'workit', 'made', 'built', 'manufactured', 'biggit', 'makkit'],
             hl: ['worked', 'workit', 'made', 'built', 'manufactured']
         },
-        tr: ['labour', 'labor', 'toil', 'wark'],
+        tr: ['labour', 'labor', 'toil', 'wark', 'big', 'build', 'make', 'mak'],
         hl: 'wirk',
         en: 'work',
         gr: 'v',

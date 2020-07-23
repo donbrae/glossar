@@ -8,7 +8,7 @@ var GLOSSAR = (function() {
 
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_non_hl: 4 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
+            threshold_non_hl: 5 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
         },
         state = {
             word: '', // Value of search text box
@@ -96,9 +96,9 @@ var GLOSSAR = (function() {
             state.word_lc = state.word.toLowerCase();
 
             if ($field.val().length) {
-                $('#clear-value').addClass('show');
+                $('#clear-value').addClass('show').prop('disabled', false);
             } else {
-                $('#clear-value').removeClass('show');
+                $('#clear-value').removeClass('show').prop('disabled', true);
             }
 
             if (e && e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
@@ -157,7 +157,7 @@ var GLOSSAR = (function() {
             state.word_lc = state.word.toLowerCase();
             $('#searchTextbox').val(word);
             $('#results').removeClass('show');
-            $('#clear-value').addClass('show');
+            $('#clear-value').addClass('show').prop('disabled', true);
             print(fuse.search(state.word), function() {
                 state.random.push(num);
                 $btn.prop('disabled', false);
@@ -166,7 +166,7 @@ var GLOSSAR = (function() {
 
         $('#clear-value').click(function() {
             $(this).prev('input').val('').focus();
-            $(this).removeClass('show');
+            $(this).removeClass('show').prop('disabled', true);
             $('#results').removeClass('show');
 
             var t = setTimeout(function() {

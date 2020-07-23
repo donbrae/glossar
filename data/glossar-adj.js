@@ -273,6 +273,7 @@ G.dict.push({ // A
     en: [
         ['afraid', 'anxious']
     ],
+    tr: ['scared', 'frightened'],
     gr: 'adj',
     ex: G.ex.a
 }, {
