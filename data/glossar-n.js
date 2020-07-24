@@ -75,6 +75,20 @@ G.dict.push({
     ],
     au: 'bairn'
 }, {
+    sc: 'but',
+    en: 'the kitchen or outer room, e.g. in a but and ben',
+    tr: ['kitchen', 'outer room'],
+    gr: 'n',
+    or: 'see adv',
+}, {
+    sc: 'but and ben',
+    def: 'a twa-roomed cottage',
+    tr: ['but', 'ben'],
+    hl: [],
+    or: [
+        [G.notes.or.as, 'but and ben']
+    ]
+}, {
     sc: ['baw', 'baa'],
     en: 'ball',
     tr: ['ba', 'ba\''],
@@ -83,6 +97,11 @@ G.dict.push({
         [G.notes.or.as, 'ball, baw, baa'],
         ['likely ' + G.notes.or.me, 'bale']
     ]
+}, {
+    sc: 'ben',
+    en: 'the inner room in a house',
+    gr: 'n',
+    or: 'see prep',
 }, {
     sc: 'breid',
     en: 'bread',
@@ -706,7 +725,7 @@ G.dict.push({
     ],
     ex: [
         ['They’d juist aboot pit by eneuch siller for a deposit on a hoose'],
-        ['It’s yersel! Come awa ben the hoose'],
+        G.ex.l1,
     ],
     au: 'hoose'
 }, {

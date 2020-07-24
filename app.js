@@ -15,7 +15,7 @@ var GLOSSAR = (function() {
             word_lc: '', // Value of search text box in lower case
             timeout: null,
             highlight: 0, // True if at least one word is highlighted in results set
-            random: [], // Indexes of which random entries have already been selected
+            random: [], // Indices of which random entries have already been selected
             audio: null,
             $audio_button: null
         },
@@ -39,6 +39,7 @@ var GLOSSAR = (function() {
             // distance: 100, // 100
             // ignoreLocation: false, // false
             // minMatchCharLength: 1, // Using cfg.threshold_non_hl instead
+            // useExtendedSearch: false, // false https://fusejs.io/examples.html#weighted-search. Requires fuse.min.js (i.e. non-basic)
             keys: [{ // Boost certain keys
                     name: 'sc',
                     weight: 10
@@ -157,7 +158,7 @@ var GLOSSAR = (function() {
             state.word_lc = state.word.toLowerCase();
             $('#searchTextbox').val(word);
             $('#results').removeClass('show');
-            $('#clear-value').addClass('show').prop('disabled', true);
+            $('#clear-value').addClass('show').prop('disabled', false);
             print(fuse.search(state.word), function() {
                 state.random.push(num);
                 $btn.prop('disabled', false);
@@ -309,7 +310,7 @@ var GLOSSAR = (function() {
 
                     grammar = item.gr ? '<dt class="dt-grammar">Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd>' : ''; // Grammar
                     sc_alt = item.sc_alt ? '<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">' + [].concat(item.sc_alt).join(' ') + '</dd>' : ''; // Alternative Scots spellings
-                    en = item.en ? '<dt class="dt-en">English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
+                    en = item.en ? '<dt class="dt-en">English</dt><dd>' + formatMultiple(item.en, ';', 'en') + '</dd>' : ''; // English
                     pr = item.pr ? '<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
                     def = item.def ? '<dt class="dt-def">Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
                     ex = item.ex ? '<dt class="dt-ex">Examples</dt><dd>' + formatMultiple(item.ex, ';', 'ex') + '</dd>' : ''; // Examples

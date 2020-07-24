@@ -324,6 +324,15 @@ G.dict.push({
         [G.notes.or.l, 'mediterrān -us']
     ]
 }, {
+    sc: 'Moroccae',
+    en: 'Morocco',
+    tr: 'moroco',
+    gr: ['pn', 'adj'],
+    or: [
+        [G.notes.or.mods, 'Moroccy'],
+        [G.notes.or.as, 'Marrok']
+    ]
+}, {
     sc: 'Netherlands',
     en: 'Netherlands',
     gr: 'pn'
@@ -557,11 +566,6 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'Reid Se']
     ]
-}, {
-    sc: 'Turing',
-    en: 'Touraine',
-    gr: 'pn',
-    def: 'ane o the traditional stewartries o Fraunce'
 }, {
     sc: 'Upslo',
     en: 'Oslo',

@@ -41,7 +41,7 @@ G.dict.push({ // A
     en: [
         ['previous', 'prior', 'antecedent']
     ],
-    gr: 'adj phr'
+    gr: 'phrasal adj'
 }, {
     sc: 'allevolie',
     en: [
@@ -59,6 +59,31 @@ G.dict.push({ // A
     tr: ['chankin', 'cold', 'cauld'],
     hl: ['baltic', 'cold', 'cauld'],
     gr: ['adj', 'informal']
+}, {
+    sc: 'ben',
+    en: [
+        ['inner', 'interior']
+    ],
+    gr: 'adj',
+    or: 'see prep',
+}, {
+    sc: 'benmaist',
+    en: [
+        ['furthest in', 'in the inner room'],
+        'innermost'
+    ],
+    tr: ['ben', 'innermaist'],
+    hl: 'innermost',
+    gr: 'adj'
+}, {
+    sc: 'benner',
+    en: [
+        ['inner', 'further in']
+    ],
+    tr: 'ben',
+    hl: [],
+    gr: 'adj',
+    ex: 'The benner room wis buskit sae braw'
 }, {
     sc: 'bittie',
     en: 'a bit of',
@@ -95,6 +120,15 @@ G.dict.push({ // A
     ],
     tr: ['braw like', 'braw-like'],
     gr: 'adj'
+}, {
+    sc: 'but',
+    en: [
+        ['outer', 'outside', 'the kitchen', 'the outer room'],
+        'relating to the parlour or best room'
+    ],
+    gr: 'adj',
+    tr: ['ootside', 'kitchen', 'parlour', 'best room', 'outer room'],
+    or: 'see adv'
 }, {
     sc: 'byous',
     en: [
@@ -269,6 +303,14 @@ G.dict.push({ // A
     ],
     gr: 'adj',
     ex: 'What wi aw the snaw, drivin intae wark wis awfu fashious'
+}, {
+    sc: 'faur kent',
+    en: [
+        ['widely known', 'famous']
+    ],
+    tr: ['far kent', 'well known', 'weel kent'],
+    hl: 'far kent',
+    gr: 'phrasal adj'
 }, {
     sc: 'feart',
     en: [
@@ -648,6 +690,7 @@ G.dict.push({ // A
         ['unwilling', 'reluctant', 'loath'],
     ],
     tr: 'laith',
+    hl: [],
     gr: 'adj',
     or: [
         [G.notes.or.as, 'swer(e), sweir(e), sweer'],
@@ -660,6 +703,7 @@ G.dict.push({ // A
         ['sluggish', 'loath', 'reluctant']
     ],
     tr: 'laith',
+    hl: [],
     gr: 'adj',
     or: 'see adj <span>sweir</span>'
 }, {

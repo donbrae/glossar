@@ -20,6 +20,15 @@ G.dict.push({
     en: 'no problem',
     gr: 'phr'
 }, {
+    sc: 'faur ben',
+    en: [['in great favour', 'on good terms', 'friendly', 'popular']],
+    gr: 'phr',
+    tr: ['far ben', 'intimate'],
+    or: [
+        [G.notes.or.as, 'far ben']
+    ],
+    ex: ['He wis gey faur ben wi his warkmates'],
+}, {
     sc: 'for tae',
     en: 'in order to',
     tr: 'for to',
@@ -29,6 +38,12 @@ G.dict.push({
     sc: 'ower and abuin',
     en: 'over and above',
     gr: 'phr'
+}, {
+    sc: 'ower muckle',
+    en: 'too much',
+    gr: 'phr',
+    tr: ['tae muckle', 'tae much', 'owre muckle'],
+    hl: 'owre muckle'
 }, {
     sc: 'pit intil effect',
     en: 'implement',
@@ -86,6 +101,7 @@ G.dict.push({
 }, {
     sc: 'nae faurer gane than',
     en: 'as recently as',
+    tr: 'nae farrer gane than',
     gr: 'phr'
 }, {
     sc: 'conform tae',

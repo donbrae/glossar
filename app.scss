@@ -170,6 +170,7 @@ ul {
             left: -0.2rem;
         }
 
+        &.sc,
         &.sc > span {
             padding-left: 0.38rem;
         }
@@ -395,8 +396,8 @@ ul {
     }
 
     .input-group {
-        > .custom-select:not(:last-child),
-        > .form-control:not(:last-child) {
+        > .form-control:not(:last-child),
+        > .custom-select:not(:last-child) {
             border-top-right-radius: 2rem;
             border-bottom-right-radius: 2rem;
         }

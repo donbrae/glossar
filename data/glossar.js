@@ -73,7 +73,8 @@ G.ex = {
     h1: "I’v juist gotten stertit the nou sae ye’ll hae tae gie me a bit mair time",
     i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer",
     j1: "Mind and steek the yett ahint ye",
-    k1: "I wis in an awfie raivel"
+    k1: "I wis in an awfie raivel",
+    l1: "It’s yersel! Come awa ben the hoose"
 };
 
 G.pr = {
@@ -104,6 +105,15 @@ G.dict = [{
         [G.notes.or.ae, 'on efen']
     ],
     ex: [G.ex.q, G.ex.o]
+}, { // B
+    sc: 'ben',
+    en: 'through the house, towards the inner part',
+    gr: 'prep',
+    or: [
+        [G.notes.or.as, 'ben(n), bene'],
+        [G.notes.or.ae, 'binnan']
+    ],
+    ex: G.ex.l1
 }, {
     sc: 'binna',
     en: 'don\'t be',
@@ -125,6 +135,15 @@ G.dict = [{
     sc: ['because', 'acause'],
     en: 'because',
     gr: ['conj']
+}, {
+    sc: 'but',
+    en: [
+        ['out or away from', 'over', 'across', 'through toward the outer part of the house']
+    ],
+    tr: ['oot', 'out', 'awa frae', 'ower', 'athort'],
+    hl: ['oot', 'out', 'awa frae', 'ower'],
+    gr: 'prep',
+    or: 'see adv'
 }, { // E
     sc: 'efter',
     pr: ['efter', 'aifter'],

@@ -61,6 +61,19 @@ G.dict.push({ // A
     ],
     ex: ['It’s aye been!', 'Dis he aye bide in Aiberdeen?']
 }, { // B
+    sc: 'ben',
+    en: ['in or towards the inner part of a house'],
+    gr: 'adv',
+    tr: ['inside', 'indoors', 'in'],
+    hl: ['inside', 'indoors'],
+    or: 'see prep',
+    ex: 'She gaed ben for tae fesh some newspaper'
+}, {
+    sc: 'benwart',
+    en: 'inward',
+    tr: ['benward', 'inwards'],
+    gr: ['adv', 'adj']
+}, {
     sc: 'a bittie',
     en: [
         ['somewhat', 'to a small extent', 'a little too']
@@ -86,6 +99,29 @@ G.dict.push({ // A
     ],
     gr: ['adv'],
     ex: ['I\'m braw and weel, thanks', 'Hae yoursels a braw and cantie Christmas']
+}, {
+    sc: 'but',
+    en: [
+        'in or towards the outer part of a house, kitchen or outer room',
+        'out'
+    ],
+    gr: 'adv',
+    tr: 'oot',
+    or: [
+        [G.notes.or.as, 'but(t)'],
+        [G.notes.or.ae, 'būtan']
+    ]
+}, {
+    sc: 'but and ben',
+    en: [
+        ['in (or to) both the outer and inner parts', 'backwards and forwards', 'to and fro', 'everywhere', 'home and abroad']
+    ],
+    tr: ['back and fore', 'but', 'ben'],
+    hl: [],
+    gr: 'phrasal adv',
+    or: [
+        [G.notes.or.as, 'but and ben'],
+    ]
 }, {
     sc: 'byous',
     en: [
@@ -205,7 +241,7 @@ G.dict.push({ // A
 }, {
     sc: 'mairower',
     en: 'moreover',
-    tr: ['besides', 'further', 'mairowre'],
+    tr: ['besides', 'further', 'furthermore', 'mairowre'],
     gr: 'adv',
     hl: 'besides',
     or: [
