@@ -671,6 +671,10 @@ G.dict.push({ // A
         [G.notes.or.ae, 'sibb']
     ]
 }, {
+    sc: 'sklenty',
+    en: '{{ Squint }}',
+    gr: 'adj'
+}, {
     sc: 'sleekit',
     en: [
         ['sly', 'cunning'], 'smooth'

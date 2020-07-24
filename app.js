@@ -9,7 +9,7 @@ var GLOSSAR = (function() {
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
             threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
-            variants: ['frae|fae|thrae', '-ie|-y|-ae'] // Must denote variants via '|'
+            variants: ['sk|sc', 'frae|fae|thrae', '-ie|-y|-ae'] // Must denote variants via '|'
         },
         state = {
             word: '', // Value of search text box
@@ -280,14 +280,8 @@ var GLOSSAR = (function() {
             if (this.indexOf('|') > -1) { // Each test must use | character
                 tests = this.toLowerCase().split('|');
 
-                console.log('*** About to loop through:');
-                console.log(tests);
-
                 $.each(tests, function() {
-                    console.log('.');
                     if (this.charAt(0) === '-' && user_input.substring(user_input.length - this.length + 1) == this.substring(1, this.length)) { // This test matches ending of user input
-
-                        console.log('Ending match');
 
                         common_word_part = user_input.substring(0, user_input.length - this.length + 1); // Get common (leading) part of word, to which we'll append the other endings (this.length - 1 to account for the leading '-')
 

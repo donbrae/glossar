@@ -40,18 +40,25 @@ function processVariants(input, test) {
                     match_found = false; // Flag
 
                     $.each(tests, function() {
-                        if (user_input.indexOf(this) > -1) { // Word that needs replaced found
 
-                            match_found = true;
-                            replace_word = this;
+                        var test = this;
 
-                            $.each(tests, function() {
+                        $.each(variants, function() {
+                            var variant = this;
 
-                                if (this.toString() != replace_word) {
-                                    variants.push(user_input.replace(replace_word, this));
-                                }
-                            });
-                        }
+                            if (user_input.indexOf(test) > -1) { // Word that needs replaced found
+
+                                match_found = true;
+                                replace_word = this;
+
+                                $.each(tests, function() {
+
+                                    if (this.toString() != replace_word) {
+                                        variants.push(variant.replace(replace_word, this));
+                                    }
+                                });
+                            }
+                        });
                     });
 
                     if (match_found) return false; // Exit tests loop for this variant
@@ -65,5 +72,5 @@ function processVariants(input, test) {
 }
 
 console.log(
-    processVariants('thrae this forrit', ['frae|fae|thrae', '-ie|-y|-ae', '-it|-et'])
+    processVariants('sklentie', ['-ie|-y|-ae', 'sc|sk'])
 );
