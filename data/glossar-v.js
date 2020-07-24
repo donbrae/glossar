@@ -325,7 +325,7 @@ G.v.dae = {
         en: [
             ['do not', 'don\'t']
         ],
-        tr: ['daenae', 'deh', 'duvnae', 'duvna', 'dinny', 'dinnay']
+        tr: ['daenae', 'deh', 'duvnae', 'duvna', 'dinnay']
     },
     ps: { // Present singular
         sc: ['daes', 'dis'],
