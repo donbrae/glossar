@@ -272,49 +272,58 @@ var GLOSSAR = (function() {
      */
     function processVariants(input, test) {
         var user_input = input.toLowerCase(),
-            variants = [user_input], // Add original user input as first array item
-            tests, common_word_part, variant, replace_word, match_found;
+            variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
+            tests, common_word_part, variant, replace_string, match_found;
 
-        $.each([].concat(test), function() { // Each variant
+        $.each([].concat(test), function() { // Loop through array of groups of variant strings, e.g. 'fae|frae|thrae', 'sc|sk' or '-ie|-y|-ae'
 
             if (this.indexOf('|') > -1) { // Each test must use | character
                 tests = this.toLowerCase().split('|');
 
-                $.each(tests, function() {
-                    if (this.charAt(0) === '-' && user_input.substring(user_input.length - this.length + 1) == this.substring(1, this.length)) { // This test matches ending of user input
+                $.each(tests, function() { // Each variant string, e.g 'frae', 'sc' or '-ie'
+
+                    // Does this varient string affect word ending, e.g. '-ie'?
+                    if (this.charAt(0) === '-' && user_input.substring(user_input.length - this.length + 1) == this.substring(1, this.length)) {
 
                         common_word_part = user_input.substring(0, user_input.length - this.length + 1); // Get common (leading) part of word, to which we'll append the other endings (this.length - 1 to account for the leading '-')
 
-                        $.each(tests, function() { // Loop through tests again
+                        $.each(tests, function() { // Loop through each variant string in this group again (e.g. 'frae' or 'sc')
 
                             variant = common_word_part + this.substring(1, this.length);
 
                             if (variants.indexOf(variant) == -1) { // If this variant isn't already in 'variants' array
-                                variants.push(variant);
+                                variants.push(variant); // Add it
                             }
                         });
 
-                        return false; // Exit tests loop for this variant
+                        return false; // Exit tests loop for this variant string
                     } else {
+
+                        // Non-word-ending string. Standard string replace at any index in the user input
 
                         match_found = false; // Flag
 
-                        $.each(tests, function() {
-                            if (user_input.indexOf(this) > -1) { // Word that needs replaced found
+                        $.each(tests, function() { // Each variant string, e.g 'frae' or 'sc'
+                            // > str = this;
+                            // > Loop through [variants] with the below code
+                                // > At the start of loop store current variant in 'v'
+                            // > ('user_input' will be replaced by 'this', 'this' with 'str', 'user_input' with 'v' in the inner loop etc.)
+
+                            if (user_input.indexOf(this) > -1) { // String that needs replaced found
 
                                 match_found = true;
-                                replace_word = this;
+                                replace_string = this;
 
                                 $.each(tests, function() {
 
-                                    if (this.toString() != replace_word) {
-                                        variants.push(user_input.replace(replace_word, this));
+                                    if (this.toString() != replace_string) {
+                                        variants.push(user_input.replace(replace_string, this));
                                     }
                                 });
                             }
                         });
 
-                        if (match_found) return false; // Exit tests loop for this variant
+                        if (match_found) return false; // Exit tests loop for this variant string
                     }
                 });
             }
