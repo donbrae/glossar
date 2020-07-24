@@ -9,7 +9,7 @@ G.dict.push({
 }, {
     sc: 'Africae',
     en: 'Africa',
-    tr: 'Afriky',
+    // tr: 'Afriky',
     gr: 'pn',
     or: [
         [G.notes.or.mods, 'Africy'],

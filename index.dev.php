@@ -60,7 +60,7 @@ $last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
     <link rel="stylesheet" href="app.css?_=1595539710">
 
     <script defer src="./zepto.min.js?v=1.2.0"></script>
-    <script defer src="./fuse.basic.min.js?v=6.4.0"></script>
+    <script defer src="./fuse.min.js?v=6.4.0"></script>
 
     <!-- Production JS bundle -->
     <script defer src="glossar-bundle.min.js?_={{ TIMESTAMP JS }}" onload="GLOSSAR.init()"></script>

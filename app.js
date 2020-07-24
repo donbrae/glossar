@@ -8,11 +8,13 @@ var GLOSSAR = (function() {
 
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_non_hl: 5 // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
+            threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
+            variants: ['frae|fae', '-ie|-y|-ae', 'the |'] // Must denote variants via '|'
         },
         state = {
             word: '', // Value of search text box
             word_lc: '', // Value of search text box in lower case
+            query: '', // The query we're passing to Fuse.js
             timeout: null,
             highlight: 0, // True if at least one word is highlighted in results set
             random: [], // Indices of which random entries have already been selected
@@ -39,7 +41,7 @@ var GLOSSAR = (function() {
             // distance: 100, // 100
             // ignoreLocation: false, // false
             // minMatchCharLength: 1, // Using cfg.threshold_non_hl instead
-            // useExtendedSearch: false, // false https://fusejs.io/examples.html#weighted-search. Requires fuse.min.js (i.e. non-basic)
+            useExtendedSearch: true, // false https://fusejs.io/examples.html#extended-search. Requires fuse.min.js (i.e. non-basic)
             keys: [{ // Boost certain keys
                     name: 'sc',
                     weight: 10
@@ -78,9 +80,11 @@ var GLOSSAR = (function() {
                     state.audio.stop();
                 }
 
+                state.query = processVariants(state.word, cfg.variants);
+
                 if (state.word.length) {
                     $('#results').removeClass('show');
-                    print(fuse.search(state.word));
+                    print(fuse.search(state.query));
                 } else {
                     $('#results').removeClass('show');
                     t = setTimeout(function() {
@@ -258,6 +262,46 @@ var GLOSSAR = (function() {
         });
 
         return trigger_found;
+    }
+
+    /**
+     * Process any variants based on user input
+     * @param {String} inputs - The string the user types in the search field
+     * @param {Array|String} inputs - The value(s) to test against, each item delimited with a '|'
+     * @returns {String}
+     */
+    function processVariants(input, test) {
+        var variants = [input.toLowerCase()], // Add original user input as first array item
+            tests, common_word_part, variant;
+
+        $.each([].concat(test), function() {
+            if (this.indexOf('|') > -1) { // Each test must use | character
+                tests = this.split('|');
+                $.each(tests, function() {
+                    if (this.charAt(0) === '-' && input.substring(input.length - this.length + 1).toLowerCase() == this.substring(1, this.length).toLowerCase()) { // This test matches ending of user input
+
+                        common_word_part = input.substring(0, input.length - this.length + 1).toLowerCase(); // Get common (leading) part of word, to which we'll append the other endings (this.length - 1 to account for the leading '-')
+
+                        $.each(tests, function() { // Loop through tests again
+
+                            variant = common_word_part + this.substring(1, this.length).toLowerCase();
+
+                            if (variants.indexOf(variant) == -1) { // If this variant isn't already in 'variants' array
+                                variants.push(variant);
+                            }
+                        });
+
+                        return; // Exit tests loop
+                    }
+                });
+            }
+        });
+
+        if (variants.length > 1) {
+            return variants.join('|'); // Fuse.js OR syntax
+        } else {
+            return input;
+        }
     }
 
     function addAudio(s) {
@@ -531,8 +575,11 @@ var GLOSSAR = (function() {
             }
             $.each(items, function() {
                 if (this &&
-                    (this.toLowerCase() === state.word_lc ||
-                        (other && other.indexOf(state.word_lc) > -1))
+                    (
+                        this.toLowerCase() === state.word_lc || // Direct match
+                        state.query.split('|').indexOf(this.toLowerCase()) > -1 || // Match on one of any variants
+                        (other && other.indexOf(state.word_lc) > -1) // Other values which should trigger highlighting
+                    )
                 ) {
                     $el.addClass('hl');
                     state.highlight = state.highlight + 1;
