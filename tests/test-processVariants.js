@@ -34,6 +34,23 @@ function processVariants(input, test) {
                              }
                          });
                     });
+                } else if (str.charAt(0) === '-' && user_input.substring(user_input.length - str.length + 1) == str.substring(1, str.length)) {
+
+                    // Does this variant string affect word beginnings, e.g. 'sk-'?
+
+                    $.each(variants, function() { // Each variant currently in [variants] array
+
+                         common_word_part = this.substring(0, this.length - str.length + 1); // Get common (leading) part of word, to which we'll append the other endings (str.length - 1 to account for the leading '-')
+
+                         $.each(tests, function() { // Loop through each variant string (e.g. '-ie') in this group again
+
+                             variant = common_word_part + this.substring(1, this.length);
+
+                             if (variants.indexOf(variant) == -1) { // If this variant isn't already in [variants]
+                                 variants.push(variant); // Add it
+                             }
+                         });
+                    });
                 } else {
                     // Non-word-ending string. Standard string replace at any index in the user input
 
@@ -63,5 +80,5 @@ function processVariants(input, test) {
 }
 
 console.log(
-    processVariants('sclenty', ['sc|sk', '-ie|-y|-ae'])
+    processVariants('scrivet', ['fae|thrae|frae', '-it|-et', '-ie|-y|-ae', '-sc|-sk'])
 );
