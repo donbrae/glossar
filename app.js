@@ -9,7 +9,8 @@ var GLOSSAR = (function() {
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
             threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
-            variants: ['fae|thrae|frae', 'sc|sk', '-it|-et', '-ie|-y|-ae'] // Must denote variants via '|'
+            variants: ['fae|thrae|frae', 'sc|sk', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
+            threshold_variants: 4 // Minimum number of characters for processVariants() to be called. processVariants() doesn't make much sense for words with few characters
         },
         state = {
             word: '', // Value of search text box
@@ -38,7 +39,7 @@ var GLOSSAR = (function() {
             // includeMatches: false, // false
             threshold: 0.1, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
             // location: 0, // 0
-            distance: 8, // 100
+            distance: 150, // 100 // 'The Muckle Dub' wasn't appearing with value set to 100
             // ignoreLocation: false, // false
             // minMatchCharLength: 1, // Using cfg.threshold_non_hl instead
             useExtendedSearch: true, // false https://fusejs.io/examples.html#extended-search. Requires fuse.min.js (i.e. non-basic)
@@ -63,71 +64,25 @@ var GLOSSAR = (function() {
             ]
         };
 
-        const fuse = new Fuse(GLOSSAR.dict, options);
-
-        var t;
+        fuse = new Fuse(GLOSSAR.dict, options);
 
         checkForUpdate();
 
-        function searchInit(e) {
-            var t,
-                $field = $('#searchTextbox');
-
-            function goSearch() {
-
-                // Stop any audio, important especially if the connection is slow and audio file ends up loading later and playing 'randomly'
-                if (state.audio) {
-                    state.audio.stop();
-                }
-
-                if (state.word.length) {
-                    if (state.word.length >= cfg.threshold_non_hl) { // processVariants() doesn't make much sense for words with few characters
-                        state.query = processVariants(state.word, cfg.variants);
-                    } else {
-                        state.query = state.word;
-                    }
-
-                    $('#results').removeClass('show');
-                    print(fuse.search(state.query));
-                } else {
-                    $('#results').removeClass('show');
-                    t = setTimeout(function() {
-                        $('#results').html('');
-                    }, 250);
-                }
-            }
-
-            state.word = G.utils.replaceQo( // Replace ‘ and ’ with '
-                $.trim(
-                    $field.val().replace(/(<([^>]+)>)/ig, ' ') // Strip any HTML
-                )
-            );
-            state.word_lc = state.word.toLowerCase();
-
-            if ($field.val().length) {
-                $('#clear-value').addClass('show').prop('disabled', false);
-            } else {
-                $('#clear-value').removeClass('show').prop('disabled', true);
-            }
-
-            if (e && e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
-                goSearch();
-            } else {
-                timeoutStart(goSearch);
-            }
-        }
-
         // Check for value on page load (after back button or not-yet-implemented GET variable). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
-        t = setTimeout(function() {
+        var t = setTimeout(function() {
             if ($.trim($('#searchTextbox').val()).length) {
                 searchInit();
             }
         }, 500);
 
+        addListeners();
+
         if ('ontouchstart' in window === false) {
             $('#searchTextbox').focus();
         }
+    }
 
+    function addListeners() {
         $('#searchTextbox').on('keyup', searchInit);
 
         // Text field pseudo-focus state on clear button focus
@@ -216,6 +171,57 @@ var GLOSSAR = (function() {
         $(document).on('click', '.get-update', function() {
             location.reload();
         });
+    }
+
+    function getState() {
+        console.log(state);
+    }
+
+    function searchInit(e) {
+        var $field = $('#searchTextbox');
+
+        function goSearch() {
+
+            // Stop any audio, important especially if the connection is slow and audio file ends up loading later and playing 'randomly'
+            if (state.audio) {
+                state.audio.stop();
+            }
+
+            if (state.word.length) {
+                if (state.word.length >= cfg.threshold_variants) {
+                    state.query = processVariants(state.word, cfg.variants);
+                } else {
+                    state.query = state.word;
+                }
+
+                $('#results').removeClass('show');
+                print(fuse.search(state.query));
+            } else {
+                $('#results').removeClass('show');
+                var t = setTimeout(function() {
+                    $('#results').html('');
+                }, 250);
+            }
+        }
+
+        state.word = G.utils.replaceQo( // Replace ‘ and ’ with '
+            $.trim(
+                $field.val().replace(/(<([^>]+)>)/ig, ' ') // Strip any HTML
+            )
+        );
+        state.word_lc = state.word.toLowerCase();
+
+        if ($field.val().length) {
+            $('#clear-value').addClass('show').prop('disabled', false);
+        } else {
+            $('#clear-value').removeClass('show').prop('disabled', true);
+        }
+
+        if (e && e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
+            goSearch();
+        } else {
+            timeoutStart(goSearch);
+        }
     }
 
     // XHR check to see whether data file is newer than what is printed in the UI (XHR requests seem to be better at bypassing the cache)
@@ -747,7 +753,7 @@ var GLOSSAR = (function() {
 
     return {
         init: init,
-        state: state
+        getState: getState
     };
 
 }());

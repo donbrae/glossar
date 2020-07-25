@@ -162,8 +162,7 @@ ul {
     }
 
     dd {
-        &.audio,
-        &.pr {
+        &.audio {
             display: inline-block;
             position: relative;
             padding: 0;
@@ -283,11 +282,11 @@ ul {
             padding-left: 0;
         }
 
-        &+.dt-pr+.pr {
-            @media (max-width: 575px) {
-                padding-left: 0.5rem;
-            }
-        }
+        // &+.dt-pr+.pr {
+        //     @media (max-width: 575px) {
+        //         padding-left: 0.5rem;
+        //     }
+        // }
     }
 
     .ex {
@@ -340,15 +339,18 @@ ul {
 
     .grammar {
         font-style: italic;
-        display: block;
         padding-top: 0.1rem;
-        @media (min-width: 576px) {
-            display: inline;
-            padding: 0 !important;
-        }
 
         span {
             font-style: normal;
+            padding: 0 !important;
+        }
+    }
+
+    .grammar, .pr {
+        display: block;
+        @media (min-width: 576px) {
+            display: inline;
             padding: 0 !important;
         }
     }

@@ -378,7 +378,7 @@ G.dict.push({ // A
         ['generous', 'hospitable', 'liberal']
     ],
     tr: ['friendly', 'affable', 'outgoing', 'forward', 'forrit', 'bauld'],
-    hl: ['furthie', 'outgoing', 'forward', 'forrit', 'bauld'],
+    hl: ['furthie', 'outgoing', 'forward'],
     gr: 'adj',
     or: [G.notes.or.as + ' haes <span>forthy</span> an later <span>furthy</span> ‘forrit, bauld, enterprisin’'],
     ex: G.ex.r
