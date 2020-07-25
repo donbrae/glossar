@@ -6,68 +6,66 @@
  */
 function processVariants(input, test) {
     var user_input = input.toLowerCase(),
-        variants = [user_input], // Add original user input as first array item
-        tests, common_word_part, variant, replace_word, match_found;
+        variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
+        tests, common_word_part, variant, replace_string, match_found;
 
-    $.each([].concat(test), function() { // Each variant
+    $.each([].concat(test), function() { // Loop through array of groups of variant strings, e.g. 'fae|frae|thrae', 'sc|sk' or '-ie|-y|-ae'
 
         if (this.indexOf('|') > -1) { // Each test must use | character
             tests = this.toLowerCase().split('|');
 
-            console.log('*** About to loop through:');
-            console.log(tests);
+            $.each(tests, function() { // Each variant string, e.g 'frae', 'sc' or '-ie'
 
-            $.each(tests, function() {
-                console.log('.');
-                if (this.charAt(0) === '-' && user_input.substring(user_input.length - this.length + 1) == this.substring(1, this.length)) { // This test matches ending of user input
-
-                    console.log('Ending match');
+                // Does this varient string affect word ending, e.g. '-ie'?
+                if (this.charAt(0) === '-' && user_input.substring(user_input.length - this.length + 1) == this.substring(1, this.length)) {
 
                     common_word_part = user_input.substring(0, user_input.length - this.length + 1); // Get common (leading) part of word, to which we'll append the other endings (this.length - 1 to account for the leading '-')
 
-                    $.each(tests, function() { // Loop through tests again
+                    $.each(tests, function() { // Loop through each variant string in this group again (e.g. 'frae' or 'sc')
 
                         variant = common_word_part + this.substring(1, this.length);
 
                         if (variants.indexOf(variant) == -1) { // If this variant isn't already in 'variants' array
-                            variants.push(variant);
+                            variants.push(variant); // Add it
                         }
                     });
 
-                    return false; // Exit tests loop for this variant
+                    return false; // Exit tests loop for this variant string
                 } else {
 
-                    match_found = false; // Flag
+                    // Non-word-ending string. Standard string replace at any index in the user input
 
-                    $.each(tests, function() {
+                    // match_found = false; // Flag
 
-                        var test = this;
+                    $.each(tests, function() { // Each variant string, e.g 'frae' or 'sc'
 
+                        var str = this;
                         $.each(variants, function() {
-                            var variant = this;
+                            var v = this;
 
-                            if (user_input.indexOf(test) > -1) { // Word that needs replaced found
+                            if (this.indexOf(str) > -1) { // Does this variant contain a string that needs replaced?
 
-                                match_found = true;
-                                replace_word = this;
+                                // match_found = true;
+                                replace_string = str;
 
-                                $.each(tests, function() {
+                                $.each(tests, function() { // (e.g. 'frae' or 'sc')
 
-                                    if (this.toString() != replace_word) {
-                                        variants.push(variant.replace(replace_word, this));
+                                    if (this.toString() != replace_string && variants.indexOf(v.replace(replace_string, this)) == -1) {
+                                        variants.push(v.replace(replace_string, this));
                                     }
                                 });
                             }
                         });
                     });
 
-                    if (match_found) return false; // Exit tests loop for this variant
+                    // if (match_found) return false; // Exit tests loop for this variant string
                 }
             });
         }
     });
 
     if (variants.length > 1) return variants.join('|'); // Fuse.js OR syntax
+
     return input;
 }
 

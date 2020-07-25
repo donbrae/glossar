@@ -120,4 +120,8 @@ G.dict.push({
     tr: ['initiative', 'by his ain hand'],
     hl: ['at his ain haund', 'by his own initiative'],
     gr: 'phr'
+}, {
+    sc: 'faur-oot-aboot',
+    en: 'remote',
+    gr: 'phrasal adj'
 });

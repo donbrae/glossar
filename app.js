@@ -38,7 +38,7 @@ var GLOSSAR = (function() {
             // includeMatches: false, // false
             threshold: 0.1, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
             // location: 0, // 0
-            // distance: 100, // 100
+            distance: 8, // 100
             // ignoreLocation: false, // false
             // minMatchCharLength: 1, // Using cfg.threshold_non_hl instead
             useExtendedSearch: true, // false https://fusejs.io/examples.html#extended-search. Requires fuse.min.js (i.e. non-basic)
