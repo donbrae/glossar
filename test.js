@@ -16,21 +16,30 @@ function processVariants(input, test) {
 
             $.each(tests, function() { // Each variant string, e.g 'frae', 'sc' or '-ie'
 
+                var str = this;
+
                 // Does this varient string affect word ending, e.g. '-ie'?
-                if (this.charAt(0) === '-' && user_input.substring(user_input.length - this.length + 1) == this.substring(1, this.length)) {
+                if (str.charAt(0) === '-' && user_input.substring(user_input.length - str.length + 1) == str.substring(1, str.length)) {
 
-                    common_word_part = user_input.substring(0, user_input.length - this.length + 1); // Get common (leading) part of word, to which we'll append the other endings (this.length - 1 to account for the leading '-')
+                    $.each(variants, function() { // Each variant string, e.g '-ie'
+                         // >
+                         var v = this;
 
-                    $.each(tests, function() { // Loop through each variant string in this group again (e.g. 'frae' or 'sc')
+                         common_word_part = v.substring(0, v.length - str.length + 1); // Get common (leading) part of word, to which we'll append the other endings (str.length - 1 to account for the leading '-')
 
-                        variant = common_word_part + this.substring(1, this.length);
+                         $.each(tests, function() { // Loop through each variant string (e.g. '-ie') in this group again
 
-                        if (variants.indexOf(variant) == -1) { // If this variant isn't already in 'variants' array
-                            variants.push(variant); // Add it
-                        }
+                             variant = common_word_part + this.substring(1, this.length);
+
+                             if (variants.indexOf(variant) == -1) { // If this variant isn't already in 'variants' array
+                                 variants.push(variant); // Add it
+                             }
+                         });
                     });
 
-                    return false; // Exit tests loop for this variant string
+
+
+                    // return false; // Exit tests loop for this variant string
                 } else {
 
                     // Non-word-ending string. Standard string replace at any index in the user input
@@ -70,5 +79,5 @@ function processVariants(input, test) {
 }
 
 console.log(
-    processVariants('sklentie', ['-ie|-y|-ae', 'sc|sk'])
+    processVariants('sclenty', ['sc|sk', '-ie|-y|-ae'])
 );
