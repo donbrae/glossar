@@ -9,7 +9,7 @@ var GLOSSAR = (function() {
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
             threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
-            variants: ['sk|sc', 'frae|fae|thrae', '-ie|-y|-ae'] // Must denote variants via '|'
+            variants: ['fae|thrae|frae', 'sc-|sk-', '-it|-et', '-ie|-y|-ae'] // Must denote variants via '|'
         },
         state = {
             word: '', // Value of search text box
@@ -80,11 +80,12 @@ var GLOSSAR = (function() {
                     state.audio.stop();
                 }
 
-                state.query = processVariants(state.word, cfg.variants);
-
                 if (state.word.length) {
+
+                    // state.query = processVariants(state.word, cfg.variants);
+
                     $('#results').removeClass('show');
-                    print(fuse.search(state.query));
+                    print(fuse.search(state.word));
                 } else {
                     $('#results').removeClass('show');
                     t = setTimeout(function() {
@@ -262,76 +263,6 @@ var GLOSSAR = (function() {
         });
 
         return trigger_found;
-    }
-
-    /**
-     * Process any variants based on user input
-     * @param {String} inputs - The string the user types in the search field
-     * @param {Array|String} test - The value(s) to test against, each item delimited with a '|'
-     * @returns {String}
-     */
-    function processVariants(input, test) {
-        var user_input = input.toLowerCase(),
-            variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
-            tests, common_word_part, variant, replace_string, match_found;
-
-        $.each([].concat(test), function() { // Loop through array of groups of variant strings, e.g. 'fae|frae|thrae', 'sc|sk' or '-ie|-y|-ae'
-
-            if (this.indexOf('|') > -1) { // Each test must use | character
-                tests = this.toLowerCase().split('|');
-
-                $.each(tests, function() { // Each variant string, e.g 'frae', 'sc' or '-ie'
-
-                    // Does this varient string affect word ending, e.g. '-ie'?
-                    if (this.charAt(0) === '-' && user_input.substring(user_input.length - this.length + 1) == this.substring(1, this.length)) {
-
-                        common_word_part = user_input.substring(0, user_input.length - this.length + 1); // Get common (leading) part of word, to which we'll append the other endings (this.length - 1 to account for the leading '-')
-
-                        $.each(tests, function() { // Loop through each variant string in this group again (e.g. 'frae' or 'sc')
-
-                            variant = common_word_part + this.substring(1, this.length);
-
-                            if (variants.indexOf(variant) == -1) { // If this variant isn't already in 'variants' array
-                                variants.push(variant); // Add it
-                            }
-                        });
-
-                        return false; // Exit tests loop for this variant string
-                    } else {
-
-                        // Non-word-ending string. Standard string replace at any index in the user input
-
-                        match_found = false; // Flag
-
-                        $.each(tests, function() { // Each variant string, e.g 'frae' or 'sc'
-                            // > str = this;
-                            // > Loop through [variants] with the below code
-                                // > At the start of loop store current variant in 'v'
-                            // > ('user_input' will be replaced by 'this', 'this' with 'str', 'user_input' with 'v' in the inner loop etc.)
-
-                            if (user_input.indexOf(this) > -1) { // String that needs replaced found
-
-                                match_found = true;
-                                replace_string = this;
-
-                                $.each(tests, function() {
-
-                                    if (this.toString() != replace_string) {
-                                        variants.push(user_input.replace(replace_string, this));
-                                    }
-                                });
-                            }
-                        });
-
-                        if (match_found) return false; // Exit tests loop for this variant string
-                    }
-                });
-            }
-        });
-
-        if (variants.length > 1) return variants.join('|'); // Fuse.js OR syntax
-
-        return input;
     }
 
     function addAudio(s) {

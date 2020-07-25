@@ -18,8 +18,7 @@ function processVariants(input, test) {
 
                 str = this;
 
-                // Does this variant string affect word ending, e.g. '-ie'?
-                if (str.charAt(0) === '-' && user_input.substring(user_input.length - str.length + 1) == str.substring(1, str.length)) {
+                if (str.charAt(0) === '-' && user_input.substring(user_input.length - str.length + 1) == str.substring(1, str.length)) { // Does this variant string affect word ending, e.g. '-ie'?
 
                     $.each(variants, function() { // Each variant currently in [variants] array
 
@@ -34,9 +33,7 @@ function processVariants(input, test) {
                              }
                          });
                     });
-                } else if (str.charAt(str.length - 1) === '-' && user_input.substring(0, str.length - 1) == str.substring(0, str.length - 1)) {
-
-                    // Does this variant string affect word beginnings, e.g. 'sk-'?
+                } else if (str.charAt(str.length - 1) === '-' && user_input.substring(0, str.length - 1) == str.substring(0, str.length - 1)) { // Does this variant string affect word beginnings, e.g. 'sk-'?
 
                     $.each(variants, function() { // Each variant currently in [variants] array
 
@@ -51,9 +48,7 @@ function processVariants(input, test) {
                              }
                          });
                     });
-                } else {
-                    // Non-word-ending string. Standard string replace at any index in the user input
-
+                } else { // Non-word-ending string. Standard string replace at any index in the user input
                     $.each(variants, function() { // Each variant currently in [variants] array
                         v = this;
 
@@ -80,5 +75,5 @@ function processVariants(input, test) {
 }
 
 console.log(
-    processVariants('sklenty', ['fae|thrae|frae', 'sc-|sk-', '-it|-et', '-ie|-y|-ae'])
+    processVariants('maistly', ['-ie|-y|-ae'])
 );
