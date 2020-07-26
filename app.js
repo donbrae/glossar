@@ -9,7 +9,7 @@ var GLOSSAR = (function() {
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
             threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
-            variants: ['fae|thrae|frae', 'sc|sk', 'ch|gh', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
+            variants: ['fae|thrae|frae', 'sc|sk', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
             threshold_variants: 4 // Minimum number of characters for processVariants() to be called. processVariants() doesn't make much sense for words with few characters
         },
         state = {
@@ -263,7 +263,7 @@ var GLOSSAR = (function() {
      * @returns {String}
      */
     function processVariants(input, test) {
-        console.log('*** processVariants()');
+        
         var user_input = input.toLowerCase(),
             variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
             tests, common_word_part, variant;
@@ -395,7 +395,7 @@ var GLOSSAR = (function() {
 
                     grammar = item.gr ? '<dt class="dt-grammar">Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd>' : ''; // Grammar
                     sc_alt = item.sc_alt ? '<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">' + [].concat(item.sc_alt).join(' ') + '</dd>' : ''; // Alternative Scots spellings
-                    en = item.en ? '<dt class="dt-en">English</dt><dd>' + formatMultiple(item.en, ';', 'en') + '</dd>' : ''; // English
+                    en = item.en ? '<dt class="dt-en">English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
                     pr = item.pr ? '<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
                     def = item.def ? '<dt class="dt-def">Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
                     ex = item.ex ? '<dt class="dt-ex">Examples</dt><dd>' + formatMultiple(item.ex, ';', 'ex') + '</dd>' : ''; // Examples

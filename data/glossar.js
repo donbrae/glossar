@@ -140,8 +140,8 @@ G.dict = [{
     en: [
         ['out or away from', 'over', 'across', 'through toward the outer part of the house']
     ],
-    tr: ['oot', 'out', 'awa frae', 'ower', 'athort'],
-    hl: ['oot', 'out', 'awa frae', 'ower'],
+    tr: ['oot', 'out', 'awa frae', 'ower', 'athort', 'athwart'],
+    hl: ['oot', 'out', 'awa frae', 'ower', 'athwart'],
     gr: 'prep',
     or: 'see adv'
 }, { // E
@@ -421,6 +421,12 @@ G.dict = [{
         [G.notes.or.as, 'thir']
     ],
     ex: [G.ex.a1, G.ex.b1]
+}, {
+    sc: 'sklent',
+    en: 'across',
+    tr: ['athwart', 'athort'],
+    hl: 'athwart',
+    gr: 'prep'
 }];
 
 G.utils = {

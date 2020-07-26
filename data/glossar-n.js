@@ -141,7 +141,7 @@ G.dict.push({
 }, {
     sc: 'brae',
     def: ['the (stey or sclentin) banks o a river, loch or seashore', 'a bank or lenth o grund wi a fairly strait upwart sclent til it', 'a gate wi a stey upcome (aft-times in street names)', 'the brou o a hill'],
-    tr: ['hillside', 'hill', 'slope', 'road', 'street', 'bank', 'knowe', 'brow', 'brou', 'gate', 'gait'],
+    tr: ['hillside', 'hill', 'slope', 'incline', 'road', 'street', 'bank', 'knowe', 'brow', 'brou', 'gate', 'gait'],
     hl: ['brae', 'hillside', 'brow', 'bank', 'street', 'road'],
     gr: 'n',
     or: [
@@ -437,10 +437,10 @@ G.dict.push({
     ]
 }, {
     sc: 'eneuch',
-    pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch'],
-    tr: 'sufficient',
-    hl: 'eneuch',
     en: 'enough',
+    pr: ['inyuch', 'inyooch', 'unyooch', 'unooch', 'unyoch', 'eneugh'],
+    tr: 'sufficient',
+    hl: [],
     gr: ['n', 'adj', 'adv'],
     ex: 'I’v haed juist aboot eneuch o your haiverin'
 }, {
@@ -690,6 +690,13 @@ G.dict.push({
         [G.notes.or.as, 'heid, hede'],
         [G.notes.or.ae, 'hēafod']
     ]
+}, {
+    sc: 'hirple',
+    en: [
+        ['a limp', 'the act of limping']
+    ],
+    tr: 'limp',
+    gr: 'n'
 }, {
     sc: 'horse',
     def: 'a huift, plant-eatin domesticatit mammal',
@@ -1206,6 +1213,22 @@ G.dict.push({
         [G.notes.or.ae, 'seolfor']
     ],
     ex: 'I’ll send ye the siller'
+}, {
+    sc: 'sklent',
+    en: [
+        ['a slope', 'an incline'],
+        ['a sidelong glance', 'a squint']
+    ],
+    tr: ['brae', 'slope', 'incline', 'glance', 'squint'],
+    hl: ['slope', 'incline', 'glance', 'squint'],
+    gr: 'n'
+}, {
+    sc: 'sklent',
+    en: [
+        ['a rip', 'a tear']
+    ],
+    tr: ['rip', 'tear'],
+    gr: 'n'
 }, {
     sc: ['snaw', 'snaa'],
     en: 'snow',

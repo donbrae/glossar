@@ -29,16 +29,29 @@ G.dict.push({ // A
     en: [
         ['often', 'oft']
     ],
+    tr: ['aften', 'frequently'],
+    hl: 'frequently',
     gr: ['adv'],
     or: [
+        [G.notes.or.as, 'aft, oft'],
         [G.notes.or.ae, 'oft']
     ]
 }, {
+    sc: 'aften',
+    en: 'often',
+    pr: ['affen', 'aften'],
+    tr: 'frequently',
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'aften, aft, often']
+    ]
+}, {
     sc: 'aft-times',
-    tr: 'afttimes',
     en: [
         ['often', 'frequently']
     ],
+    tr: ['afttimes', 'aften'],
+    hl: [],
     gr: ['adv']
 }, {
     sc: 'allevolie',
@@ -179,6 +192,16 @@ G.dict.push({ // A
     tr: ['also', 'too', 'additionally'],
     hl: ['forby', 'also', 'additionally'],
     gr: ['adv']
+}, {
+    sc: 'frequently',
+    en: 'frequently',
+    tr: ['often', 'repeatedly', 'regularly', 'aften', 'aft-times'],
+    hl: ['often', 'repeatedly', 'regularly'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'frequentlie'],
+        [G.notes.or.l, 'frequens']
+    ]
 }, { // G
     sc: 'gey',
     pr: 'guyee',
@@ -273,7 +296,7 @@ G.dict.push({ // A
 }, {
     sc: 'maist',
     def: 'aphetic mak o <em>awmaist</em>',
-    tr: ['almost', 'aamaist', 'awmaist'],
+    tr: ['almost', 'awmaist'],
     gr: 'adv'
 }, {
     sc: 'maistlins',
@@ -423,7 +446,8 @@ G.dict.push({ // A
         ['from beginning to end', 'throughout'],
         ['off to sleep']
     ],
-    tr: ['owre', 'ootthrou', 'overly', 'abuin', 'over', 'too'],
+    tr: ['owre', 'ootthrou', 'overly', 'abuin', 'over', 'too', 'athort', 'athwart'],
+    hl: ['overly', 'over', 'too', 'athwart'],
     gr: 'adv',
     or: [
         [G.notes.or.as, 'over, ouer, ower'],
@@ -477,6 +501,12 @@ G.dict.push({ // A
     sc: 'sicweys',
     en: 'thus',
     gr: ['adv']
+}, {
+    sc: 'sklent',
+    en: [
+        ['at a slant', 'obliquely']
+    ],
+    gr: 'adv'
 }, {
     sc: 'syne',
     pr: ['sine', 'seen'],

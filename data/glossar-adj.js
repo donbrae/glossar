@@ -360,6 +360,15 @@ G.dict.push({ // A
         [G.notes.or.ae, 'foresæᵹd, foresǽd']
     ]
 }, {
+    sc: 'frequent',
+    en: 'frequent',
+    tr: ['repeated', 'recurring', 'habitual', 'abundant', 'numerous', 'regular'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'frequent'],
+        [G.notes.or.l, 'frequens']
+    ]
+}, {
     sc: 'furrin',
     en: [
         ['foreign', 'abroad']
@@ -671,8 +680,12 @@ G.dict.push({ // A
         [G.notes.or.ae, 'sibb']
     ]
 }, {
-    sc: 'sklenty',
-    en: '{{ Squint }}',
+    sc: 'sklent',
+    en: [
+        ['slanting', 'to one side'],
+        'sidelong <span>of look or glance</span>'
+    ],
+    tr: ['oblique', 'sidelong'],
     gr: 'adj'
 }, {
     sc: 'sleekit',

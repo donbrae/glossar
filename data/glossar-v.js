@@ -463,6 +463,16 @@ G.dict.push({ // A
             [G.notes.or.l, 'adūcere']
         ]
     }, {
+        sc: 'aff',
+        en: 'off',
+        gr: ['v', 'adj', 'adv', 'prep'],
+        tr: ['depart', 'departing', 'take off', 'remove', 'away from', 'aside', 'farther off', 'away'],
+        or: [
+            [G.notes.or.as, 'af, aff, affe'],
+            [G.notes.or.ae, 'of']
+        ],
+        ex: ['Richt, I’m aff!', 'Ye’ll nae tae tak the hub caps aff', 'I’m a lang gate aff yet', 'He parked the car aff tae the side']
+    }, {
         sc: 'allocate',
         def: 'tae assign',
         pt: {
@@ -557,6 +567,7 @@ G.dict.push({ // A
         ex: 'Whiles we will cast-ower the policy an mak mair recommends'
     }, {
         sc: 'complouther',
+        pr: 'comploother',
         en: [
             ['mix or associate with'],
             ['agree, coincide or fit in with']
@@ -564,7 +575,7 @@ G.dict.push({ // A
         pt_pp: {
             sc: 'complouthert'
         },
-        tr: ['compluter', 'compluther', 'comploother', 'agree', 'coincide', 'fit in'],
+        tr: ['agree', 'coincide', 'fit in', 'mix with', 'associate with'],
         gr: 'v',
         or: 'see n'
     }, {
@@ -1475,6 +1486,21 @@ G.dict.push({ // A
         tr: 'fesh on',
         gr: 'v',
         ex: 'The report recommendit we fesh-on a national policy'
+    }, {
+        sc: 'frequent',
+        pt_pp: {
+            sc: 'frequentit',
+            tr: ['frequented', 'frequented']
+        },
+        en: 'frequent',
+        def: ['tae visit aften or oot o habit', 'tae associate wi, meet up wi'],
+        tr: ['associate with', 'meet up with', 'visit'],
+        hl: ['associate with', 'meet up with'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'frequent'],
+            [G.notes.or.l, 'frequentāre']
+        ]
     }, { // G
         sc: 'greet',
         en: ['cry', ['lament', 'complain']],
@@ -1606,6 +1632,14 @@ G.dict.push({ // A
             [G.notes.or.ae, 'hǽtan']
         ],
         ex: ['He’d hetten up the car for a bit afore settin aff', 'The fitba haed him aw het up']
+    }, {
+        sc: 'hirple',
+        en: [
+            ['limp', 'hobble']
+        ],
+        tr: ['skleush', 'lame'],
+        hl: [],
+        gr: 'v'
     }, {
         sc: 'hoose',
         def: ['tae provide wi a hoose', 'tae bouk guids or craps'],
@@ -1809,6 +1843,28 @@ G.dict.push({ // A
             ['?' + G.notes.or.anor, 'skera'],
             ['?' + G.notes.or.md, 'scare, scaer']
         ]
+    }, {
+        sc: 'sklent',
+        en: [
+            ['turn sideways', 'curve', 'zigzag'],
+            ['slope', 'slant'],
+            ['glance sideways', 'look askance', 'squint']
+        ],
+        gr: 'v'
+    }, {
+        sc: 'sklent',
+        en: [
+            ['split', 'tear']
+        ],
+        tr: 'rip',
+        hl: [],
+        gr: 'v'
+    }, {
+        sc: 'skleush',
+        en: 'walk in a clumsy or shuffling manner',
+        tr: ['shuffle', 'hirple', 'limp'],
+        hl: 'shuffle',
+        gr: 'v'
     }, {
         sc: 'steek',
         en: [
