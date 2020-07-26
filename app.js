@@ -9,7 +9,7 @@ var GLOSSAR = (function() {
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
             threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
-            variants: ['fae|thrae|frae', 'sc|sk', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
+            variants: ['fae|thrae|frae', 'sc|sk', 'ch|gh', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
             threshold_variants: 4 // Minimum number of characters for processVariants() to be called. processVariants() doesn't make much sense for words with few characters
         },
         state = {
@@ -363,7 +363,7 @@ var GLOSSAR = (function() {
      */
     function print(r, callback) {
         var grammar, sc_alt, hl_sc_alt, audio, item,
-            hl, hl_all, $dl, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, pl, pl_arr, or,
+            hl, hl_all, $dl, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, neg_arr, pl, pl_arr, or,
             results_filtered = [];
 
         if (r && r.length) {
@@ -387,7 +387,9 @@ var GLOSSAR = (function() {
                     (item.pp && item.pp.sc && arrayToLowerCase([].concat(item.pp.sc)).indexOf(state.word_lc) > -1) || // Past participle Scots
                     (item.pp && item.pp.tr && arrayToLowerCase([].concat(item.pp.tr)).indexOf(state.word_lc) > -1) || // Past participle trigger
                     (item.pt_pp && item.pt_pp.sc && arrayToLowerCase([].concat(item.pt_pp.sc)).indexOf(state.word_lc) > -1) || // Past tense/participle (when they're the same) Scots
-                    (item.pt_pp && item.pt_pp.tr && arrayToLowerCase([].concat(item.pt_pp.tr)).indexOf(state.word_lc) > -1) // Past tense/participle (when they're the same) trigger
+                    (item.pt_pp && item.pt_pp.tr && arrayToLowerCase([].concat(item.pt_pp.tr)).indexOf(state.word_lc) > -1) || // Past tense/participle (when they're the same) trigger
+                    (item.neg && item.neg.sc && arrayToLowerCase([].concat(item.neg.sc)).indexOf(state.word_lc) > -1) || // (Modal) verb negative
+                    (item.neg && item.neg.tr && arrayToLowerCase([].concat(item.neg.tr)).indexOf(state.word_lc) > -1) // (Modal) verb negative trigger
                 ) {
                     results_filtered.push(item);
 
@@ -409,13 +411,24 @@ var GLOSSAR = (function() {
                      * specific highlight override words
                      */
 
+                    // Noun plural
+                    pl_arr = item.pl && item.pl.sc ? [].concat(item.pl.sc) : []; // Scots plural
+
+                    if (pl_arr.length) {
+                        if (item.pl && item.pl.hl) { // Highlighting override words
+                            pl_arr = pl_arr.concat(item.pl.hl);
+                        } else if (item.pl && item.pl.tr) { // Standard triggers
+                            pl_arr = pl_arr.concat(item.pl.tr)
+                        }
+                    }
+
                     // Past tense
-                    pt_arr = item.pt && item.pt.sc ? [].concat(item.pt.sc) : []; // Scots past tense
+                    pt_arr = item.pt && item.pt.sc ? [].concat(item.pt.sc) : [];
 
                     if (pt_arr.length) {
-                        if (item.pt && item.pt.hl) { // Highlighting override words
+                        if (item.pt && item.pt.hl) {
                             pt_arr = pt_arr.concat(item.pt.hl);
-                        } else if (item.pt && item.pt.tr) { // Standard triggers
+                        } else if (item.pt && item.pt.tr) {
                             pt_arr = pt_arr.concat(item.pt.tr)
                         }
                     }
@@ -442,11 +455,16 @@ var GLOSSAR = (function() {
                         }
                     }
 
-                    neg = item.neg ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span>' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // Any Scots negative
+                    // (Modal) verb negative
+                    neg_arr = item.neg && item.neg.sc ? [].concat(item.neg.sc) : [];
 
-                    // Noun plurals
-                    pl_arr = item.pl && item.pl.sc ? [].concat(item.pl.sc) : [];
-                    pl_arr = item.pl && item.pl.tr ? pl_arr.concat(item.pl.tr) : pl_arr; // Triggers
+                    if (neg_arr.length) {
+                        if (item.neg && item.neg.hl) {
+                            neg_arr = neg_arr.concat(item.neg.hl);
+                        } else if (item.neg && item.neg.tr) {
+                            neg_arr = neg_arr.concat(item.neg.tr)
+                        }
+                    }
 
                     if (item.hl) { // Specific trigger highlight words
                         hl_all = [].concat(item.hl);
@@ -470,13 +488,15 @@ var GLOSSAR = (function() {
                         hl = ''; // No trigger words
                     }
 
+                    pl = pl_arr.length ? '<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></dd>' : ''; // Noun plurals
+
                     pt = pt_arr.length ? '<dt class="dt-pt">Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span></dd>' : ''; // Past tense (simpler verbs)
 
                     pp = pp_arr.length ? '<dt class="dt-pp">Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span></dd>' : ''; // Past participle (simpler verbs)
 
                     pt_pp = pt_pp_arr.length ? '<dt class="dt-pt_pp">Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span></dd>' : ''; // Identical past tense and past participle (simpler verbs)
 
-                    pl = pl_arr.length ? '<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></dd>' : ''; // Noun plurals
+                    neg = neg_arr.length ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="' + neg_arr.join(',') + '">' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // (Modal) verb negative
 
                     $('#results').append('<dl' + ph + '><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</dd> ' +
                         sc_alt +
@@ -693,20 +713,30 @@ var GLOSSAR = (function() {
             // Negative
             if ($('.neg', this).length) {
                 items = $('.neg span', this).text().split(', ');
+
+                hl = r[i].neg && r[i].neg.hl ? makeSingleArray(r[i].neg.hl) : null;
+
+                hl = !hl && r[i].neg && r[i].neg.tr ? makeSingleArray(r[i].neg.tr) : hl;
+
                 hielicht(
                     $('.neg span', this),
                     items,
-                    r[i].neg && r[i].neg.tr ? makeSingleArray(r[i].neg.tr) : null
+                    hl
                 );
             }
 
             // Plurals
             if ($('.pl', this).length) {
                 items = $('.pl span', this).text().split(', ');
+
+                hl = r[i].pl && r[i].pl.hl ? makeSingleArray(r[i].pl.hl) : null;
+
+                hl = !hl && r[i].pl && r[i].pl.tr ? makeSingleArray(r[i].pl.tr) : hl;
+
                 hielicht(
                     $('.pl span', this),
                     items,
-                    r[i].pl && r[i].pl.tr ? makeSingleArray(r[i].pl.tr) : null
+                    hl
                 );
             }
 

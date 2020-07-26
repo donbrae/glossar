@@ -401,7 +401,9 @@ G.dict.push({
     en: 'Scandinavia',
     tr: 'Scandanavie',
     gr: ['pn', 'adj'],
-    or: G.notes.or.mods + ' <i>Scandinavy</i> (1937, Aiberdeen)'
+    or: [
+        [G.notes.or.mods, 'Scandinavy']
+    ]
 }, {
     sc: 'Scotland',
     gr: 'pn',
