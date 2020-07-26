@@ -1668,7 +1668,8 @@ G.dict.push({ // A
         sc: 'proceed',
         en: 'proceed',
         gr: 'v',
-        tr: ['go', 'gae', 'gang', 'ging'],
+        tr: ['go', 'gae', 'gang', 'ging', 'haud'],
+        hl: [],
         or: [
             [G.notes.or.as, 'proced(e), proceid'],
             [G.notes.or.me + ' an ' + G.notes.or.eme, 'proced(e), proceede'],

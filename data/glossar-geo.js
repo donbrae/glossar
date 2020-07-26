@@ -399,7 +399,7 @@ G.dict.push({
 }, {
     sc: 'Scandinaivie',
     en: 'Scandinavia',
-    tr: 'Scandanavie',
+    tr: ['Scandanavy', 'Scandinavy'],
     gr: ['pn', 'adj'],
     or: [
         [G.notes.or.mods, 'Scandinavy']

@@ -522,7 +522,7 @@ var GLOSSAR = (function() {
                     if (state.highlight) {
                         $($('#results > dl').get().reverse()).each(function() { // Move highlighted entries to the top
                             $dl = $(this);
-                            if ($dl.find('dd').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                            if ($dl.find('dd').hasClass('hl') || $dl.find('dd.pl > span').hasClass('hl') || $dl.find('dd.neg > span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
                                 $dl.parent().prepend($dl);
                             }
                         });
