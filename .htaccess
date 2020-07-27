@@ -1,9 +1,12 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^glossar\.makforrit\.scot$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.glossar\.makforrit\.scot$
-RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
-RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-RewriteRule ^/?$ "https\:\/\/scots\.app\/" [R=301,L]
+ErrorDocument 403 "Error 403"
+ErrorDocument 404 "Error 404"
+ErrorDocument 500 "Error 500"
+
+# Hide .php from file extension in browser
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/plain

@@ -39,7 +39,7 @@ var GLOSSAR = (function() {
             // includeMatches: false, // false
             threshold: 0.1, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
             // location: 0, // 0
-            distance: 150, // 100 // 'The Muckle Dub' wasn't appearing with value set to 100
+            distance: 250, // 100 // 'tak the maiter throu haunds' wasn't appearing with value set to 100
             // ignoreLocation: false, // false
             // minMatchCharLength: 1, // Using cfg.threshold_non_hl instead
             useExtendedSearch: true, // false https://fusejs.io/examples.html#extended-search. Requires fuse.min.js (i.e. non-basic)
@@ -263,7 +263,7 @@ var GLOSSAR = (function() {
      * @returns {String}
      */
     function processVariants(input, test) {
-        
+
         var user_input = input.toLowerCase(),
             variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
             tests, common_word_part, variant;
