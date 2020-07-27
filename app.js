@@ -394,7 +394,7 @@ var GLOSSAR = (function() {
                     results_filtered.push(item);
 
                     grammar = item.gr ? '<dt class="dt-grammar">Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd>' : ''; // Grammar
-                    sc_alt = item.sc_alt ? '<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">' + [].concat(item.sc_alt).join(' ') + '</dd>' : ''; // Alternative Scots spellings
+                    sc_alt = item.sc_alt ? '<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</dd>' : ''; // Alternative Scots spellings
                     en = item.en ? '<dt class="dt-en">English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
                     pr = item.pr ? '<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
                     def = item.def ? '<dt class="dt-def">Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition

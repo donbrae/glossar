@@ -188,7 +188,7 @@ G.v.will = {
     neg: {
         sc: ['winna', 'willna'],
         sc_alt: ['winnae', 'willnae'],
-        tr: ['wullna', 'wullnae', 'wunna', 'wunnae', 'winny', 'wunny'],
+        tr: ['wullna', 'wullnae', 'wunna', 'wunnae', 'won\'t'],
         en: 'will not'
     },
     pt_pp: {
@@ -200,7 +200,7 @@ G.v.will = {
             en: [
                 ['wouldn\'t', 'would not']
             ],
-            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'widny', 'wudny', 'wouldna', 'wouldnae']
+            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'wouldna', 'wouldnae']
         }
     }
 };
@@ -358,14 +358,48 @@ G.v.dae = {
         pr: ['din', 'deen', 'dayn', 'doon']
     }
 };
-G.v.dae.trigs = [].concat( // Control display of conjugated 'hae'
-    G.v.dae.sc, G.v.dae.en, G.v.dae.pr, // dae
+G.v.dae.trigs = [].concat( // Control display of conjugated 'dae'
+    G.v.dae.sc, G.v.dae.en, G.v.dae.tr, G.v.dae.pr, // dae
     G.v.dae.neg.sc, G.v.dae.neg.sc_alt, G.v.dae.neg.en, G.v.dae.neg.tr, // dae neg
     G.v.dae.ps.sc, G.v.dae.ps.en, G.v.dae.ps.tr, // dae present singular
     G.v.dae.ps.neg.sc, G.v.dae.ps.neg.sc_alt, G.v.dae.ps.neg.en, G.v.dae.ps.neg.tr, // dae neg present singular
     G.v.dae.pt.sc, G.v.dae.pt.en, G.v.dae.pt.pr, // dae past tense
     G.v.dae.pt.neg.sc, G.v.dae.pt.neg.sc_alt, G.v.dae.pt.neg.en, // dae neg past tense
     G.v.dae.ptp.sc, G.v.dae.ptp.pr // dae past participle
+);
+// dae end
+
+// v can
+G.v.can = {
+    sc: 'can',
+    en: 'can',
+    pr: ['can', 'cin', 'cun'],
+    tr: 'may',
+    neg: {
+        sc: 'canna',
+        sc_alt: ['cannae', 'ca’'],
+        en: [
+            ['cannot', 'can\'t']
+        ],
+        tr: ['ca', 'ca\'', 'cah']
+    },
+    pt: {
+        sc: 'coud',
+        en: 'could',
+        neg: {
+            sc: ['coudna', 'coudnae'],
+            en: [
+                ['could not', 'couldn\'t']
+            ],
+            tr: ['couldna', 'couldnae']
+        }
+    }
+};
+G.v.can.trigs = [].concat( // Control display of conjugated 'can'
+    G.v.can.sc, G.v.can.en, G.v.can.pr, G.v.can.tr, // can
+    G.v.can.neg.sc, G.v.can.neg.sc_alt, G.v.can.neg.en, G.v.can.neg.tr, // can neg
+    G.v.can.pt.sc, G.v.can.pt.en, // can past tense
+    G.v.can.pt.neg.sc, G.v.can.pt.neg.en, G.v.can.pt.neg.tr, // can neg past tense
 );
 // dae end
 
@@ -405,7 +439,7 @@ G.v.hae = {
             en: [
                 ['had not', 'hadn\'t']
             ],
-            tr: ['hudnae', 'hidnae', 'hidna', 'hudna']
+            tr: ['hudnae', 'hidnae', 'hidna', 'hudna', 'hadnae']
         }
     },
     ptp: {
@@ -559,6 +593,37 @@ G.dict.push({ // A
             [G.notes.or.anor, 'byggja']
         ],
         au: 'big'
+    }, { // can
+        sc: G.v.can.sc,
+        en: G.v.can.en,
+        pr: G.v.can.pr,
+        tr: G.v.can.trigs,
+        hl: G.v.can.tr,
+        gr: 'v',
+        or: [
+            [G.notes.or.as, '{{ as }}'],
+            [G.notes.or.ae, '{{ ae/an }}']
+        ]
+    }, { // can neg
+        sc: G.v.can.neg.sc,
+        sc_alt: G.v.can.neg.sc_alt,
+        pr: G.v.can.neg.pr,
+        en: G.v.can.neg.en,
+        tr: G.v.can.trigs,
+        hl: G.v.can.neg.tr,
+        gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.can.sc)
+    }, { // can past tense
+        sc: G.v.can.pt.sc,
+        en: G.v.can.pt.en,
+        tr: G.v.can.trigs,
+        hl: [],
+        gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.can.sc)
+    }, { // can past tense neg
+        sc: G.v.can.pt.neg.sc,
+        en: G.v.can.pt.neg.en,
+        tr: G.v.can.trigs,
+        hl: [].concat(G.v.can.pt.neg.sc, G.v.can.pt.neg.tr),
+        gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.can.sc)
     }, { // C
         sc: 'cast-ower',
         en: 'review',
@@ -932,7 +997,7 @@ G.dict.push({ // A
         pr: G.v.dae.pr,
         en: G.v.dae.en,
         tr: G.v.dae.trigs,
-        hl: G.v.dae.sc,
+        hl: [].concat(G.v.dae.sc, G.v.dae.tr),
         gr: 'v'
     }, { // dae neg
         sc: G.v.dae.neg.sc,
@@ -1242,7 +1307,7 @@ G.dict.push({ // A
         en: 'know',
         neg: {
             sc: 'kenna',
-            tr: 'know not'
+            tr: ['know not', 'don\'t know', 'do not know']
         },
         tr: G.v.ken_knaw.trigs,
         hl: 'ken',
@@ -1536,7 +1601,7 @@ G.dict.push({ // A
         pr: G.v.hae.pr,
         en: G.v.hae.en,
         tr: G.v.hae.trigs,
-        hl: G.v.hae.sc,
+        hl: [],
         gr: 'v',
         ex: [G.ex.a1, G.ex.c1],
         or: [
@@ -1572,7 +1637,7 @@ G.dict.push({ // A
         pr: G.v.hae.pt.pr,
         en: G.v.hae.pt.en,
         tr: G.v.hae.trigs,
-        hl: [].concat(G.v.hae.pt.sc),
+        hl: [],
         gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
         ex: G.ex.d1
     }, { // hae neg past tense
@@ -1586,7 +1651,7 @@ G.dict.push({ // A
         en: G.v.hae.ptp.en,
         pr: G.v.hae.ptp.pr,
         tr: G.v.hae.trigs,
-        hl: [].concat(G.v.hae.ptp.sc, G.v.hae.ptp.pr),
+        hl: [],
         gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
         ex: G.ex.e1
     }, {
@@ -1784,7 +1849,7 @@ G.dict.push({ // A
         tr: ['empty', 'gush', 'discharge', 'drain'],
         gr: 'v',
         or: 'frae the adj',
-        ex: 'He tuimt the watter doun the cundie',
+        ex: 'He tuimed the watter doun the cundie',
         au: 'tuim'
     }, { // R
         sc: 'rax',
