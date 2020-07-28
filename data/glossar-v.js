@@ -155,7 +155,7 @@ G.v.gie = {
         en: 'given'
     },
     ing: {
-        sc: ['giein'],
+        sc: 'giein',
         en: 'giving',
         tr: 'givin'
     },
@@ -356,6 +356,10 @@ G.v.dae = {
         sc: ['duin', 'daen'],
         en: 'done',
         pr: ['din', 'deen', 'dayn', 'doon']
+    },
+    ing: {
+        sc: 'daein',
+        en: 'doing'
     }
 };
 G.v.dae.trigs = [].concat( // Control display of conjugated 'dae'
@@ -365,7 +369,8 @@ G.v.dae.trigs = [].concat( // Control display of conjugated 'dae'
     G.v.dae.ps.neg.sc, G.v.dae.ps.neg.sc_alt, G.v.dae.ps.neg.en, G.v.dae.ps.neg.tr, // dae neg present singular
     G.v.dae.pt.sc, G.v.dae.pt.en, G.v.dae.pt.pr, // dae past tense
     G.v.dae.pt.neg.sc, G.v.dae.pt.neg.sc_alt, G.v.dae.pt.neg.en, // dae neg past tense
-    G.v.dae.ptp.sc, G.v.dae.ptp.pr // dae past participle
+    G.v.dae.ptp.sc, G.v.dae.ptp.pr, // dae past participle
+    G.v.dae.ing.sc, G.v.dae.ing.en
 );
 // dae end
 
@@ -401,7 +406,7 @@ G.v.can.trigs = [].concat( // Control display of conjugated 'can'
     G.v.can.pt.sc, G.v.can.pt.en, // can past tense
     G.v.can.pt.neg.sc, G.v.can.pt.neg.en, G.v.can.pt.neg.tr, // can neg past tense
 );
-// dae end
+// can end
 
 // v hae
 G.v.hae = {
@@ -447,6 +452,10 @@ G.v.hae = {
         en: 'had',
         sc_alt: 'hed',
         pr: ['haid', 'hed', 'hid', 'hud', 'hain']
+    },
+    ing: {
+        sc: ['haein', 'hivin'],
+        en: 'having'
     }
 };
 G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
@@ -456,7 +465,8 @@ G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
     G.v.hae.ps.neg.sc, G.v.hae.ps.neg.en, G.v.hae.ps.neg.tr, // hae neg present singular
     G.v.hae.pt.sc, G.v.hae.pt.en, G.v.hae.pt.pr, // hae past tense
     G.v.hae.pt.neg.sc, G.v.hae.pt.neg.en, G.v.hae.pt.neg.tr, // hae neg past tense
-    G.v.hae.ptp.sc, G.v.hae.ptp.sc_alt, G.v.hae.ptp.pr // hae past participle
+    G.v.hae.ptp.sc, G.v.hae.ptp.sc_alt, G.v.hae.ptp.pr, // hae past participle
+    G.v.hae.ing.sc, G.v.hae.ing.en // ing
 );
 // hae end
 
@@ -601,8 +611,8 @@ G.dict.push({ // A
         hl: G.v.can.tr,
         gr: 'v',
         or: [
-            [G.notes.or.as, '{{ as }}'],
-            [G.notes.or.ae, '{{ ae/an }}']
+            [G.notes.or.as, 'can, kan'],
+            [G.notes.or.ae, 'cunnan']
         ]
     }, { // can neg
         sc: G.v.can.neg.sc,
@@ -611,19 +621,19 @@ G.dict.push({ // A
         en: G.v.can.neg.en,
         tr: G.v.can.trigs,
         hl: G.v.can.neg.tr,
-        gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.can.sc)
+        gr: 'neg o the v ' + G.utils.addSpan(G.v.can.sc)
     }, { // can past tense
         sc: G.v.can.pt.sc,
         en: G.v.can.pt.en,
         tr: G.v.can.trigs,
         hl: [],
-        gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.can.sc)
+        gr: 'pt o the v ' + G.utils.addSpan(G.v.can.sc)
     }, { // can past tense neg
         sc: G.v.can.pt.neg.sc,
         en: G.v.can.pt.neg.en,
         tr: G.v.can.trigs,
         hl: [].concat(G.v.can.pt.neg.sc, G.v.can.pt.neg.tr),
-        gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.can.sc)
+        gr: 'neg pt o the v ' + G.utils.addSpan(G.v.can.sc)
     }, { // C
         sc: 'cast-ower',
         en: 'review',
@@ -1044,6 +1054,11 @@ G.dict.push({ // A
         tr: G.v.dae.trigs,
         hl: [].concat(G.v.dae.ptp.sc, G.v.dae.ptp.pr),
         gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    }, { // dae -ing form
+        sc: G.v.dae.ing.sc,
+        en: G.v.dae.ing.en,
+        tr: G.v.dae.trigs,
+        hl: []
     }, {
         sc: 'jalouse',
         en: ['suspect', ['suppose', 'guess', 'surmise']],
@@ -1654,6 +1669,11 @@ G.dict.push({ // A
         hl: [],
         gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
         ex: G.ex.e1
+    }, { // hae -ing form
+        sc: G.v.hae.ing.sc,
+        en: G.v.hae.ing.en,
+        tr: G.v.hae.trigs,
+        hl: []
     }, {
         sc: 'haik',
         en: [

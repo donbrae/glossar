@@ -227,6 +227,26 @@ G.dict.push({ // A
         ['doubtful', 'undecided', 'ambiguous', 'uncertain']
     ],
     gr: 'adj'
+}, {
+    sc: 'dreich',
+    en: [
+        ['<span>anent the weather or scenery</span> dreary', 'bleak'],
+        ['protracted', 'dreary', 'hard to bear'],
+        ['<span>anent speeches or sermons</span> long-winded', 'interminable', 'dry', 'uninteresting'],
+        ['tedious', 'tiresome', 'slow'],
+        ['<span>anent people</span> depressed', 'dull', 'gloomy'],
+        ['<span>anent time or journeys</span> long', 'tedious'],
+        ['slow', 'tardy', 'backward'],
+        ['persistent']
+    ],
+    tr: ['depressed', 'long-winded', 'long winded', 'long', 'endure', 'wearying', 'protracted', 'monotonous', 'delayed', 'laboured', 'boring', 'doleful', 'cheerless', 'dule'],
+    hl: ['depressed', 'long-winded', 'long winded', 'long', 'wearying', 'protracted', 'monotonous', 'delayed', 'laboured', 'boring', 'doleful', 'cheerless'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.anor, 'drjúgr'],
+        [G.notes.or.as, 'dreich, dreigh']
+    ],
+    ex: 'It’s gey dreich this efternuin',
 }, { // E
     sc: 'easter',
     en: ['eastern', 'the more easterly of two places'],
@@ -490,6 +510,15 @@ G.dict.push({ // A
     en: 'burdened',
     gr: 'adj'
 }, {
+    sc: 'lang',
+    en: ['long', 'tall'],
+    tr: ['great', 'large', 'lengthy', 'high'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'lang(e), laing'],
+        [G.notes.or.ae, 'lang']
+    ]
+}, {
     sc: ['leart', 'leared'],
     en: [
         ['learned', 'educated']
@@ -732,6 +761,15 @@ G.dict.push({ // A
         [G.notes.or.as, 'tymous']
     ]
 }, { // T
+    sc: 'their',
+    en: 'their',
+    tr: ['thair', 'thir'],
+    gr: 'possessive adj',
+    or: [
+        [G.notes.or.as, 'thair, thar(e)'],
+        '?'
+    ],
+}, {
     sc: 'tuim',
     pr: ['tim', 'teem', 'toom', 'taim'],
     en: 'empty',
@@ -790,6 +828,16 @@ G.dict.push({ // A
         ['sensible, respectable']
     ],
     gr: 'adj'
+}, {
+    sc: 'weel',
+    en: 'well',
+    tr: ['healthy'],
+    gr: '',
+    or: [
+        [G.notes.or.as, 'weill, wele'],
+        [G.notes.or.ae, 'wel'],
+        [G.notes.or.anor, 'val']
+    ]
 }, {
     sc: 'wrocht-up',
     en: 'overwrought',

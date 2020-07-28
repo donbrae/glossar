@@ -207,6 +207,52 @@ G.dict = [{
     or: [
         [G.notes.or.lms + ' haes', 'gin']
     ]
+}, {
+    sc: 'hersel',
+    en: 'herself',
+    tr: 'hersell',
+    gr: 'pronoon',
+    or: [
+        [G.notes.or.as, 'hirself, hirselwyn, hir sell'],
+        [G.notes.or.ae, 'hire self']
+    ]
+}, { // H
+    sc: 'her',
+    pr: 'hur',
+    en: 'her',
+    tr: 'hir',
+    gr: 'pronoon',
+    or: [
+        [G.notes.or.as, 'hir, hyr(e)'],
+        [G.notes.or.ae, 'hire']
+    ]
+}, {
+    sc: 'him',
+    en: 'him',
+    gr: 'pronoon',
+    or: [
+        [G.notes.or.as, 'him, hym'],
+        [G.notes.or.ae, 'him']
+    ]
+}, {
+    sc: 'himsel',
+    en: 'himself',
+    gr: 'pronoon',
+    tr: ['hissel', 'himsell'],
+    hl: 'himsell',
+    or: [
+        [G.notes.or.as, 'himself, himsell'],
+        [G.notes.or.ae, 'him self']
+    ]
+}, {
+    sc: 'hissel',
+    en: 'himself',
+    gr: 'pronoon',
+    tr: ['himsel', 'hissell'],
+    hl: 'hissell',
+    or: [
+        [G.notes.or.as, 'his( )self, his sel']
+    ]
 }, { // I
     sc: 'ilk',
     en: [
@@ -233,7 +279,7 @@ G.dict = [{
         ['the mucklest amoont, the lairgest nummer, the majority']
     ],
     tr: ['most', 'majority', 'maste'],
-    gr: 'determiner and pronoun',
+    gr: 'determiner and pronoon',
     or: [
         [G.notes.or.as, 'mast(e), maist(e)'],
         [G.notes.or.ae, 'mǣst, māst']
@@ -298,7 +344,7 @@ G.dict = [{
     pr: 'oor',
     en: 'our',
     tr: 'wir',
-    gr: ['possesive pronoun']
+    gr: ['possesive pronoon']
 }, {
     sc: 'ower',
     pr: ['uower', 'oar', 'oor', 'err'],
@@ -316,7 +362,7 @@ G.dict = [{
     en: 'our',
     tr: 'oor',
     hl: 'wir',
-    gr: ['possesive pronoun'],
+    gr: ['possesive pronoon'],
     au: 'wir'
 }, {
     sc: ['whaniver', 'faniver'],
@@ -349,7 +395,7 @@ G.dict = [{
     pr: ['ah', 'aw', 'eh', 'eye'],
     en: 'I',
     tr: ['e'],
-    gr: 'first personal pronoun',
+    gr: 'first personal pronoon',
     ex: ['I ken whit ye mean', 'I stey in the wast end o Edinburgh'],
     or: [
         [G.notes.or.as, 'I'],
@@ -411,6 +457,34 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'than, then'],
         [G.notes.or.ae, 'ðanne']
+    ]
+}, {
+    sc: ['theirsel', 'themsel'],
+    en: 'themselves (collectively)',
+    tr: ['thairsel', 'thirsel', 'themselves', 'themself', 'theirself', 'themselfs', 'theirsels', 'themsels', 'theirselves'],
+    hl: ['thairsel', 'thirsel', 'themselves', 'themself', 'theirself', 'theirselves'],
+    gr: 'pronoon',
+    or: [
+        [G.notes.or.as, 'thair self, thar self, thair sell'],
+        [G.notes.or.as, 'thame sell, them sel']
+    ]
+}, {
+    sc: 'them',
+    en: 'them',
+    gr: 'pronoon',
+    or: [
+        [G.notes.or.as, 'thaim, tham(e)'],
+        [G.notes.or.anor, 'þeim']
+    ]
+}, {
+    sc: ['theirsels', 'themsels'],
+    en: 'themselves (individually)',
+    tr: ['thairsels', 'thirsels', 'themselves', 'themselfs', 'theirselfs', 'theirsel', 'themsel', 'theirselves'],
+    hl: ['thairsels', 'thirsels', 'themselves', 'themselfs', 'theirselfs', 'theirselves'],
+    gr: 'pronoon',
+    or: [
+        [G.notes.or.as, 'there selfs'],
+        [G.notes.or.as, 'thame sellffis, themsels, them sellis']
     ]
 }, {
     sc: 'thir',

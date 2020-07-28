@@ -64,6 +64,13 @@ G.dict.push({ // A
     en: 'almost',
     gr: 'adv'
 }, {
+    sc: 'awthegither',
+    en: 'altogether',
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'altogidder, altogither']
+    ]
+}, {
     sc: 'aye',
     en: ['always', 'still'],
     tr: ['ay', 'ey', 'continually', 'at all times', 'ayewis', 'ayeweys'],
@@ -546,6 +553,14 @@ G.dict.push({ // A
     gr: ['adv', 'n'],
     ex: [G.ex.n, G.ex.o, G.ex.p],
     or: '<span>the day</span> first appears in scrievit form in ' + G.notes.or.as + ' frae aboot 1500'
+}, {
+    sc: 'thegither',
+    en: 'together',
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'togidder, the gidder, thegither'],
+        [G.notes.or.ae, 'tōgædere']
+    ]
 }, {
     sc: 'the morn',
     en: [

@@ -412,6 +412,15 @@ G.dict.push({
     sc: 'documentar',
     en: 'documentary',
     gr: ['n', 'adj']
+}, {
+    sc: 'dreich',
+    en: [
+        ['dreariness', 'gloom']
+    ],
+    tr: 'dule',
+    hl: [],
+    gr: 'n',
+    or: 'see adj',
 }, { // E
     sc: 'ee',
     en: 'eye',
@@ -434,6 +443,14 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'idiot'],
         [G.notes.or.me, 'idiot']
+    ]
+}, {
+    sc: 'efternuin',
+    tr: ['efternin', 'efterneen', 'efternoon'],
+    en: 'afternoon',
+    gr: 'noun',
+    or: [
+        [G.notes.or.as, 'efternone, efter none']
     ]
 }, {
     sc: 'eneuch',
@@ -828,6 +845,12 @@ G.dict.push({
     gr: 'n',
     tr: ['instruct', 'lare'],
 }, {
+    sc: 'lassie',
+    en: ['a girl', 'a woman', 'a sweetheart', 'a female child'],
+    tr: ['girl', 'woman', 'wuman', 'sweetheart', 'child', 'lass', 'quine', 'quinie', 'quean'],
+    hl: ['girl', 'woman', 'wuman', 'sweetheart'],
+    gr: 'n'
+}, {
     sc: 'lawmakar',
     en: [
         ['lawmaker', 'legislator']
@@ -1088,6 +1111,7 @@ G.dict.push({
         'a daughter'
     ],
     tr: ['young woman', 'wench', 'girl', 'schoolgirl', 'sweetheart', 'daughter', 'lass', 'lassie', 'dochter'],
+    hl: ['young woman', 'wench', 'girl', 'schoolgirl', 'sweetheart', 'daughter'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'quene, quein'],
