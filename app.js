@@ -10,7 +10,8 @@ var GLOSSAR = (function() {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
             threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
             variants: ['fae|thrae|frae', 'sc|sk', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
-            threshold_variants: 4 // Minimum number of characters for processVariants() to be called. processVariants() doesn't make much sense for words with few characters
+            threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() doesn't make much sense for words with few characters
+            extended_cmd: '^' // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
         },
         state = {
             word: '', // Value of search text box
@@ -34,7 +35,7 @@ var GLOSSAR = (function() {
         const options = {
             // shouldSort: true, // true
             // isCaseSensitive: false, // false
-            // includeScore: false, // false
+            includeScore: true, // false
             // findAllMatches: false, // false
             // includeMatches: false, // false
             threshold: 0.1, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
@@ -122,7 +123,7 @@ var GLOSSAR = (function() {
             $('#searchTextbox').val(word);
             $('#results').removeClass('show');
             $('#clear-value').addClass('show').prop('disabled', false);
-            print(fuse.search(state.word), function() {
+            print(fuse.search(cfg.extended_cmd + state.word), function() {
                 state.random.push(num);
                 $btn.prop('disabled', false);
             });
@@ -191,7 +192,7 @@ var GLOSSAR = (function() {
                 if (state.word.length >= cfg.threshold_variants) {
                     state.query = processVariants(state.word, cfg.variants);
                 } else {
-                    state.query = state.word;
+                    state.query = cfg.extended_cmd + state.word;
                 }
 
                 $('#results').removeClass('show');
@@ -320,9 +321,9 @@ var GLOSSAR = (function() {
             }
         });
 
-        if (variants.length > 1) return variants.join('|'); // Fuse.js OR syntax
+        if (variants.length > 1) return cfg.extended_cmd + variants.join('|' + cfg.extended_cmd); // Fuse.js OR syntax
 
-        return input;
+        return cfg.extended_cmd + input;
     }
 
     /**
@@ -498,7 +499,7 @@ var GLOSSAR = (function() {
 
                     neg = neg_arr.length ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="' + neg_arr.join(',') + '">' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // (Modal) verb negative
 
-                    $('#results').append('<dl' + ph + '><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</dd> ' +
+                    $('#results').append('<dl' + ph + ' data-score="' + this.score + '"><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</dd> ' +
                         sc_alt +
                         audio +
                         pr +
@@ -629,6 +630,15 @@ var GLOSSAR = (function() {
         state.highlight = 0;
 
         function hielicht($el, items, other) {
+
+            // E.g. ['^michty|^michtie|^michtae']
+            function querySplit(q, cmd) {
+                if (cmd && cmd.length && q.charAt(0) === cmd) { // If there is unix-style command leading character
+                    q = q.slice(1, q.length + 1); // Remove it
+                }
+                return q.split('|' + cmd);
+            }
+
             if ($el.data('hl')) { // Add any highlight words to the items array
                 items = items.concat($el.data('hl').split(','));
             }
@@ -636,7 +646,7 @@ var GLOSSAR = (function() {
                 if (this &&
                     (
                         this.toLowerCase() === state.word_lc || // Direct match
-                        state.query.split('|').indexOf(this.toLowerCase()) > -1 || // Match on one of any variants
+                        querySplit(state.query, cfg.extended_cmd).indexOf(this.toLowerCase()) > -1 || // Match on one of any variants
                         (other && other.indexOf(state.word_lc) > -1) // Other values which should trigger highlighting
                     )
                 ) {

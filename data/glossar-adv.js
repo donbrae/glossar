@@ -223,10 +223,11 @@ G.dict.push({ // A
         [G.notes.or.f, 'gai']
     ]
 }, {
-    sc: ['gey an', 'gey and'],
+    sc: 'gey and',
     en: [
         ['rather', 'very']
     ],
+    tr: 'gey an',
     gr: 'adv',
     ex: [G.ex.g, 'The band’s new album wis gey and listenable']
 }, {

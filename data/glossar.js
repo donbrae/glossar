@@ -501,6 +501,10 @@ G.dict = [{
     tr: ['athwart', 'athort'],
     hl: 'athwart',
     gr: 'prep'
+}, { // Test
+    sc: 'almichty',
+    en: 'almighty',
+    gr: 'test'
 }];
 
 G.utils = {
