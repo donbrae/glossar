@@ -16,6 +16,7 @@ var GLOSSAR = (function() {
         state = {
             word: '', // Value of search text box
             word_lc: '', // Value of search text box in lower case
+            last_word_searched_for: '', // Set (post-search) by print() so we can check whether the input has changed on keyup
             query: '', // The query we're passing to Fuse.js
             timeout: null,
             highlight: 0, // True if at least one word is highlighted in results set
@@ -182,6 +183,8 @@ var GLOSSAR = (function() {
         var $field = $('#searchTextbox');
 
         function goSearch() {
+
+            if (state.word_lc === state.last_word_searched_for) return false;
 
             // Stop any audio, important especially if the connection is slow and audio file ends up loading later and playing 'randomly'
             if (state.audio) {
@@ -545,6 +548,8 @@ var GLOSSAR = (function() {
         } else { // !r.length (initial results)
             noResults();
         }
+
+        state.last_word_searched_for = state.word_lc;
     }
 
     function formatOrigin(obj) {
