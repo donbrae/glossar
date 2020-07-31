@@ -16,17 +16,6 @@ Presently at prototype stage.
 
 Audience: Scots speakers, scrievers and learners.
 
-# Highlichtin example
-
-	{
-	    sc: ['takkin', 'taein'],
-	    en: 'taking',
-	    tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'tooken', 'tookin'],
-	    hl: ['takken', 'tane', 'taen'], // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw. Assign an empty array if you want none of the 'tr' items to cause highlighting
-	    ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
-	    gr: 'pres participle o the v <span>tae tak</span>'
-	}
-
 # Dev
 
 Mak chynges tae template **index.dev.php** and **app.scss**. For tae big, see section *Biggin* ablo.
@@ -65,6 +54,27 @@ Rin **build.sh** for tae big JS bundle (**glossar-bundle.min.js**) and **index.p
 `fuse.basic.min.js:9 Uncaught TypeError: e.trim is not a function`
 
 Undefined property (e.g. relatit tae `tr`) (check complex verbs first). Stert by remuivin individual data files frae biggin process.
+
+# Properties
+
+## `heeze`
+
+This will gie a wird a heeze tae the tap o the results unner a couple o conditions: ony heezed items that’s highlichtit and that marras the wird bein searched for will be shiftit tae the tap. This wirks aboot an issue whaurin ‘haud’ and ‘hae’ haes the same score whan the uiser searches for ‘have’. We likely want to mak siccar ‘hae, hiv’ is at the tap. In anither instance, searchin for ‘dae’ will return results for ‘dae’ and ‘dae’, whaur the seicont means ‘dinna’. We’d want the first tae be at the tap as it’s mebbe mair likely tae be what the uiser wad expect.
+
+On the ither haund, ye coud eik a `heeze` tae the ither ‘dae’ sae that ‘deh’ pits it at the tap (`heeze: 'deh'`), as fowk is likely tae be leukin for the negative 'dae' if they search for ‘deh’ (‘I dae ken’ is common). I’v actually insteid eikit ‘deh’ as a trigger, but ye coud hae duin it either wey.
+
+# Highlichting
+
+Trigger wirds (`tr`) ar highlichtit by defaut. The `hl` property owerrides `tr` highlichting in cases whaur we dinna want aw the `tr` wirds bein highlichtit.
+
+	{
+	    sc: ['takkin', 'taein'],
+	    en: 'taking',
+	    tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'tooken', 'tookin'],
+	    hl: ['takken', 'tane', 'taen'], // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw. Assign an empty array if you want none of the 'tr' items to cause highlighting
+	    ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
+	    gr: 'pres participle o the v <span>tae tak</span>'
+	}
 
 # Reference
 

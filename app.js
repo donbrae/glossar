@@ -39,7 +39,7 @@ var GLOSSAR = (function() {
             includeScore: true, // false
             // findAllMatches: false, // false
             // includeMatches: false, // false
-            threshold: 0.1, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
+            threshold: 0.2, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
             // location: 0, // 0
             distance: 250, // 100 // 'tak the maiter throu haunds' wasn't appearing with value set to 100
             // ignoreLocation: false, // false
@@ -48,6 +48,9 @@ var GLOSSAR = (function() {
             keys: [{ // Boost certain keys
                     name: 'sc',
                     weight: 10
+                }, {
+                    name: 'en',
+                    weight: 8
                 },
                 'pl.sc',
                 'tr',
@@ -61,8 +64,7 @@ var GLOSSAR = (function() {
                 'neg.sc',
                 'neg.tr',
                 'sc_alt',
-                'pr',
-                'en'
+                'pr'
             ]
         };
 
@@ -408,6 +410,7 @@ var GLOSSAR = (function() {
                     or = item.or ? '<dt class="dt-or">Origin</dt><dd>' + formatOrigin(item.or) + '</dd>' : ''; // Origin
                     hl_sc_alt = item.sc_alt ? [].concat(item.sc_alt) : []; // Make sure to highlight any alternative Scots words
                     audio = item.au ? '<dt class="dt-au">Audio</dt><dd class="audio">' + addAudio(item.au) + '</dd> ' : ''; // Audio
+                    heeze = item.heeze ? ' data-heeze="' + item.heeze + '"' : ''; // Should this get a heeze tae the tap of the list?
 
                     /**
                      * Highlight based on trigger words
@@ -502,7 +505,7 @@ var GLOSSAR = (function() {
 
                     neg = neg_arr.length ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="' + neg_arr.join(',') + '">' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // (Modal) verb negative
 
-                    $('#results').append('<dl' + ph + ' data-score="' + this.score + '"><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</dd> ' +
+                    $('#results').append('<dl' + ph + ' data-score="' + this.score + '"' + heeze + '><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</dd> ' +
                         sc_alt +
                         audio +
                         pr +
@@ -524,9 +527,19 @@ var GLOSSAR = (function() {
             if (results_filtered.length) { // If there is at least one relevant result amang returned results
                 highlight(results_filtered, function() {
                     if (state.highlight) {
-                        $($('#results > dl').get().reverse()).each(function() { // Move highlighted entries to the top
+
+                        // Move highlighted entries to the top
+                        $($('#results > dl').get().reverse()).each(function() {
                             $dl = $(this);
                             if ($dl.find('dd').hasClass('hl') || $dl.find('dd.pl > span').hasClass('hl') || $dl.find('dd.neg > span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                                $dl.parent().prepend($dl);
+                            }
+                        });
+
+                        // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
+                        $('#results > dl').each(function() {
+                            $dl = $(this);
+                            if ($dl.data('heeze') && $dl.data('heeze') === state.word_lc) {
                                 $dl.parent().prepend($dl);
                             }
                         });

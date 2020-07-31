@@ -70,13 +70,14 @@ G.v = {}; // Verbs
 G.v.gae = {
     sc: ['gae', 'gang', 'gan', 'ging'],
     en: ['go'],
+    tr: ['proceed', 'haud'],
     neg: {
         sc: ['gaena', 'gangna', 'gingna'],
         en: [
             ['do not go', 'go not']
         ],
         tr: ['ganna', 'gona', 'don\'t go'],
-        tps: { // > Third person singular
+        tps: { // Third person singular
             sc: ['gaesna', 'gangsna', 'gansna', 'gingsna'],
             en: [
                 ['does not go', 'goes not']
@@ -109,14 +110,7 @@ G.v.gae = {
     }
 };
 G.v.gae.trigs = [].concat( // Control display of conjugated 'gae'
-    G.v.gae.sc, G.v.gae.en, // gae
-    G.v.gae.neg.sc, // gae neg
-    G.v.gae.neg.tps.sc, // gae neg third person singular
-    G.v.gae.pt.sc, G.v.gae.pt.en, G.v.gae.pt.tr, // gae pt
-    G.v.gae.pt.neg.sc, // gae pt neg
-    G.v.gae.pp.sc, G.v.gae.pp.en, G.v.gae.pp.tr, // gae pp
-    G.v.gae.ing.sc, G.v.gae.ing.en, G.v.gae.ing.tr, // gae -ing form
-    G.v.gae.tps.sc, G.v.gae.tps.en // gae third person singular
+    G.v.gae.sc, G.v.gae.en // gae
 );
 G.v.gae.meta = { // Metadata
     gr_hw: 'v ' + G.utils.addSpan('tae ' + G.v.gae.sc[0]) + ' etc.' // Which headwords should appear in the grammar definition
@@ -141,7 +135,7 @@ G.v.gie = {
         }
     },
     pt: {
-        sc: 'gied',
+        sc: ['gied', 'gae'],
         en: 'gave',
         neg: {
             sc: 'giedna',
@@ -165,15 +159,7 @@ G.v.gie = {
     }
 };
 G.v.gie.trigs = [].concat( // Control display of conjugated 'gie'
-    G.v.gie.sc, G.v.gie.en, // gie
-    G.v.gie.pr, // gie pr
-    G.v.gie.neg.sc, // gie neg
-    G.v.gie.neg.tps.sc, // gie neg third person singular
-    G.v.gie.pt.sc, G.v.gie.pt.en, // gie pt
-    G.v.gie.pt.neg.sc, // gie pt neg
-    G.v.gie.pp.sc, G.v.gie.pp.en, // gie pp
-    G.v.gie.ing.sc, G.v.gie.ing.en, G.v.gie.ing.tr, // gie -ing form
-    G.v.gie.tps.sc, G.v.gie.tps.en // gie third person singular
+    G.v.gie.sc, G.v.gie.en, G.v.gie.pr // gie
 );
 G.v.gie.meta = { // Metadata
     gr_hw: 'v ' + G.utils.addSpan('tae ' + G.v.gie.sc)
@@ -205,11 +191,7 @@ G.v.will = {
     }
 };
 G.v.will.trigs = [].concat( // Control display of conjugated 'will'
-    G.v.will.sc, G.v.will.en, // will
-    G.v.will.pr, // will pr
-    G.v.will.neg.sc, G.v.will.neg.sc_alt, G.v.will.neg.tr, G.v.will.neg.en, // will neg
-    G.v.will.pt_pp.sc, G.v.will.pt_pp.pr, // will pt_pp
-    G.v.will.pt_pp.neg.sc, G.v.will.pt_pp.neg.tr, G.v.will.pt_pp.neg.en // will pt_pp neg
+    G.v.will.sc, G.v.will.en, G.v.will.pr // will
 )
 // will end
 // v be
@@ -258,14 +240,6 @@ G.v.be = {
 };
 G.v.be.trigs = [].concat( // Control display of conjugated 'be'
     G.v.be.sc, G.v.be.en, // be
-    'to be', 'tae be',
-    G.v.be.ps.sc, G.v.be.ps.en, G.v.be.ps.tr, // be present singular
-    G.v.be.ps.neg.sc, G.v.be.ps.neg.en, G.v.be.ps.neg.tr, // neg
-    G.v.be.tpps.sc, G.v.be.tpps.en, // be third present present singular
-    G.v.be.tpps.neg.sc, G.v.be.tpps.neg.en, // neg
-    G.v.be.psp.sc, G.v.be.psp.en, // be present singular and plural
-    G.v.be.psp.neg.sc, G.v.be.psp.neg.en, G.v.be.psp.neg.tr, // neg
-    G.v.be.neg.sc, G.v.be.neg.en, G.v.be.neg.tr // be neg
 );
 // be end
 
@@ -287,8 +261,7 @@ G.v.wis = {
     }
 };
 G.v.wis.trigs = [].concat(
-    G.v.wis.sc, G.v.wis.pr, G.v.wis.en, G.v.wis.sc_alt, G.v.wis.tr, // wis
-    G.v.wis.neg.sc, G.v.wis.neg.en, G.v.wis.neg.tr // neg
+    G.v.wis.sc, G.v.wis.pr, G.v.wis.en, G.v.wis.sc_alt, G.v.wis.tr // wis
 );
 // wis end
 
@@ -308,8 +281,7 @@ G.v.war = {
     }
 };
 G.v.war.trigs = [].concat(
-    G.v.war.sc, G.v.war.pr, G.v.war.en, // war
-    G.v.war.neg.sc, G.v.war.neg.en, G.v.war.neg.tr // neg
+    G.v.war.sc, G.v.war.pr, G.v.war.en // war
 );
 // wis end
 
@@ -325,12 +297,12 @@ G.v.dae = {
         en: [
             ['do not', 'don\'t']
         ],
-        tr: ['daenae', 'deh', 'duvnae', 'duvna', 'dinnay']
+        tr: ['daenae', 'deh', 'dae\'', 'di\'', 'duvnae', 'duvna', 'dinnay']
     },
     ps: { // Present singular
         sc: ['daes', 'dis'],
         en: 'does',
-        tr: 'dus',
+        tr: ['dus', 'duz'],
         neg: {
             sc: ['daesna', 'disna'],
             sc_alt: ['daesnae', 'disnae'],
@@ -363,14 +335,7 @@ G.v.dae = {
     }
 };
 G.v.dae.trigs = [].concat( // Control display of conjugated 'dae'
-    G.v.dae.sc, G.v.dae.en, G.v.dae.tr, G.v.dae.pr, // dae
-    G.v.dae.neg.sc, G.v.dae.neg.sc_alt, G.v.dae.neg.en, G.v.dae.neg.tr, // dae neg
-    G.v.dae.ps.sc, G.v.dae.ps.en, G.v.dae.ps.tr, // dae present singular
-    G.v.dae.ps.neg.sc, G.v.dae.ps.neg.sc_alt, G.v.dae.ps.neg.en, G.v.dae.ps.neg.tr, // dae neg present singular
-    G.v.dae.pt.sc, G.v.dae.pt.en, G.v.dae.pt.pr, // dae past tense
-    G.v.dae.pt.neg.sc, G.v.dae.pt.neg.sc_alt, G.v.dae.pt.neg.en, // dae neg past tense
-    G.v.dae.ptp.sc, G.v.dae.ptp.pr, // dae past participle
-    G.v.dae.ing.sc, G.v.dae.ing.en
+    G.v.dae.sc, G.v.dae.en, G.v.dae.tr, G.v.dae.pr // dae
 );
 // dae end
 
@@ -401,10 +366,7 @@ G.v.can = {
     }
 };
 G.v.can.trigs = [].concat( // Control display of conjugated 'can'
-    G.v.can.sc, G.v.can.en, G.v.can.pr, G.v.can.tr, // can
-    G.v.can.neg.sc, G.v.can.neg.sc_alt, G.v.can.neg.en, G.v.can.neg.tr, // can neg
-    G.v.can.pt.sc, G.v.can.pt.en, // can past tense
-    G.v.can.pt.neg.sc, G.v.can.pt.neg.en, G.v.can.pt.neg.tr, // can neg past tense
+    G.v.can.sc, G.v.can.en, G.v.can.pr, G.v.can.tr // can
 );
 // can end
 
@@ -459,14 +421,7 @@ G.v.hae = {
     }
 };
 G.v.hae.trigs = [].concat( // Control display of conjugated 'hae'
-    G.v.hae.sc, G.v.hae.en, G.v.hae.pr, // hae
-    G.v.hae.neg.sc, G.v.hae.neg.sc_alt, G.v.hae.neg.en, G.v.hae.neg.tr, // hae neg
-    G.v.hae.ps.sc, G.v.hae.ps.sc_alt, G.v.hae.ps.en, G.v.hae.ps.pr, G.v.hae.ps.tr, // hae present singular
-    G.v.hae.ps.neg.sc, G.v.hae.ps.neg.en, G.v.hae.ps.neg.tr, // hae neg present singular
-    G.v.hae.pt.sc, G.v.hae.pt.en, G.v.hae.pt.pr, // hae past tense
-    G.v.hae.pt.neg.sc, G.v.hae.pt.neg.en, G.v.hae.pt.neg.tr, // hae neg past tense
-    G.v.hae.ptp.sc, G.v.hae.ptp.sc_alt, G.v.hae.ptp.pr, // hae past participle
-    G.v.hae.ing.sc, G.v.hae.ing.en // ing
+    G.v.hae.sc, G.v.hae.en, G.v.hae.pr // hae
 );
 // hae end
 
@@ -538,50 +493,48 @@ G.dict.push({ // A
     }, { // v be
         sc: G.v.be.sc,
         en: G.v.be.en,
-        tr: G.v.be.trigs, // Highlighted by default
-        hl: [].concat(G.v.be.en, 'to be', 'tae be'),
         gr: 'v'
     }, { // am
         sc: G.v.be.ps.sc,
         en: G.v.be.ps.en,
-        tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.ps.en, G.v.be.ps.tr),
+        tr: [].concat(G.v.be.trigs, G.v.be.ps.tr),
+        hl: G.v.be.ps.tr,
         gr: 'present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // amna
         sc: G.v.be.ps.neg.sc,
         en: G.v.be.ps.neg.en,
-        tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.ps.neg.en, G.v.be.ps.neg.tr),
+        tr: [].concat(G.v.be.trigs, G.v.be.ps.neg.tr),
+        hl: G.v.be.ps.neg.tr,
         gr: 'present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // is
         sc: G.v.be.tpps.sc,
         en: G.v.be.tpps.en,
         tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.tpps.en),
+        hl: [],
         gr: 'third person present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // isna
         sc: G.v.be.tpps.neg.sc,
         en: G.v.be.tpps.neg.en,
         tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.tpps.neg.en),
+        hl: [],
         gr: 'third person present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // are
         sc: G.v.be.psp.sc,
         en: G.v.be.psp.en,
-        tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.psp.en, G.v.be.psp.tr),
+        tr: [].concat(G.v.be.trigs, G.v.be.psp.tr),
+        hl: G.v.be.psp.tr,
         gr: 'present singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // arena
         sc: G.v.be.psp.neg.sc,
         en: G.v.be.psp.neg.en,
-        tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.psp.neg.en, G.v.be.psp.neg.tr),
+        tr: [].concat(G.v.be.trigs, G.v.be.psp.neg.tr),
+        hl:  G.v.be.psp.neg.tr,
         gr: 'present singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // binna
         sc: G.v.be.neg.sc,
         en: G.v.be.neg.en,
-        tr: G.v.be.trigs,
-        hl: [].concat(G.v.be.neg.en, G.v.be.neg.tr),
+        tr: [].concat(G.v.be.trigs, G.v.be.neg.tr),
+        hl: G.v.be.neg.tr,
         gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; literar'
     },
     // v be end
@@ -607,8 +560,6 @@ G.dict.push({ // A
         sc: G.v.can.sc,
         en: G.v.can.en,
         pr: G.v.can.pr,
-        tr: G.v.can.trigs,
-        hl: G.v.can.tr,
         gr: 'v',
         or: [
             [G.notes.or.as, 'can, kan'],
@@ -619,7 +570,7 @@ G.dict.push({ // A
         sc_alt: G.v.can.neg.sc_alt,
         pr: G.v.can.neg.pr,
         en: G.v.can.neg.en,
-        tr: G.v.can.trigs,
+        tr: [].concat(G.v.can.trigs, G.v.can.neg.tr),
         hl: G.v.can.neg.tr,
         gr: 'neg o the v ' + G.utils.addSpan(G.v.can.sc)
     }, { // can past tense
@@ -631,8 +582,8 @@ G.dict.push({ // A
     }, { // can past tense neg
         sc: G.v.can.pt.neg.sc,
         en: G.v.can.pt.neg.en,
-        tr: G.v.can.trigs,
-        hl: [].concat(G.v.can.pt.neg.sc, G.v.can.pt.neg.tr),
+        tr: [].concat(G.v.can.trigs, G.v.can.pt.neg.tr),
+        hl: G.v.can.pt.neg.tr,
         gr: 'neg pt o the v ' + G.utils.addSpan(G.v.can.sc)
     }, { // C
         sc: 'cast-ower',
@@ -866,49 +817,49 @@ G.dict.push({ // A
     { // v gae
         sc: G.v.gae.sc,
         en: G.v.gae.en,
-        tr: G.v.gae.trigs,
-        hl: [].concat(G.v.gae.sc, G.v.gae.tr), // Overrides tr highlighting above, as here we don't want all the tr words being highlighted
+        tr: G.v.gae.tr,
+        hl: [],
         gr: 'v'
     }, { // v gae neg
         sc: G.v.gae.neg.sc,
         en: G.v.gae.neg.en,
-        tr: G.v.gae.trigs,
-        hl: [].concat(G.v.gae.neg.sc, G.v.gae.neg.tr),
+        tr: [].concat(G.v.gae.trigs, G.v.gae.neg.tr),
+        hl: G.v.gae.neg.tr,
         gr: 'neg o ' + G.v.gae.meta.gr_hw
     }, { // v gae neg third person singular
         sc: G.v.gae.neg.tps.sc,
         en: G.v.gae.neg.tps.en,
-        tr: G.v.gae.neg.tps.tr,
-        hl: [].concat(G.v.gae.neg.tps.sc, G.v.gae.neg.tps.tr),
+        tr: [].concat(G.v.gae.trigs, G.v.gae.neg.tps.tr),
+        hl: G.v.gae.neg.tps.tr,
         gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw
     }, { // v gae pt
         sc: G.v.gae.pt.sc,
         en: G.v.gae.pt.en,
-        tr: G.v.gae.trigs, // So this is triggered when 'go' is entered
-        hl: G.v.gae.pt.tr, // Which trigger words should cause the headwords to be highlighted
+        tr: [].concat(G.v.gae.trigs, G.v.gae.pt.tr),
+        hl: G.v.gae.pt.tr,
         gr: 'pt o ' + G.v.gae.meta.gr_hw
     }, { // v gae pt neg
         sc: G.v.gae.pt.neg.sc,
         en: G.v.gae.pt.neg.en,
         tr: G.v.gae.trigs,
-        hl: G.v.gae.pt.neg.sc,
+        hl: [],
         gr: 'neg pt o ' + G.v.gae.meta.gr_hw
     }, { // v gae pp
         sc: G.v.gae.pp.sc,
         en: G.v.gae.pp.en,
         tr: G.v.gae.trigs,
-        hl: G.v.gae.pp.tr,
+        hl: [],
         gr: 'pp o ' + G.v.gae.meta.gr_hw
     }, { // v gae -ing form
         sc: G.v.gae.ing.sc,
         en: G.v.gae.ing.en,
         tr: G.v.gae.trigs,
-        hl: G.v.gae.ing.tr
+        hl: [],
     }, { // v Third person singular
         sc: G.v.gae.tps.sc,
         en: G.v.gae.tps.en,
         tr: G.v.gae.trigs,
-        hl: G.v.gae.tps.sc,
+        hl: [],
         gr: 'third person singular o ' + G.v.gae.meta.gr_hw
 
     },
@@ -918,8 +869,6 @@ G.dict.push({ // A
         sc: G.v.gie.sc,
         en: G.v.gie.en,
         pr: G.v.gie.pr,
-        tr: G.v.gie.trigs,
-        hl: [].concat(G.v.gie.sc, G.v.gie.pr),
         gr: 'v',
         au: 'gie',
         or: [
@@ -929,42 +878,42 @@ G.dict.push({ // A
         sc: G.v.gie.neg.sc,
         en: G.v.gie.neg.en,
         tr: G.v.gie.trigs,
-        hl: G.v.gie.neg.sc,
+        hl: [],
         gr: 'neg o ' + G.v.gie.meta.gr_hw
     }, { // v gae neg third person singular
         sc: G.v.gie.neg.tps.sc,
         en: G.v.gie.neg.tps.en,
         tr: G.v.gie.trigs,
-        hl: [].concat(G.v.gie.neg.tps.sc, G.v.gie.neg.tps.tr),
+        hl: [],
         gr: 'neg third person singular o ' + G.v.gie.sc
     }, { // v gie pt
         sc: G.v.gie.pt.sc,
         en: G.v.gie.pt.en,
         tr: G.v.gie.trigs,
-        hl: G.v.gie.pt.sc,
+        hl: [],
         gr: 'pt o ' + G.v.gie.meta.gr_hw
     }, { // v gie pt neg
         sc: G.v.gie.pt.neg.sc,
         en: G.v.gie.pt.neg.en,
         tr: G.v.gie.trigs,
-        hl: G.v.gie.pt.neg.sc,
+        hl: [],
         gr: 'neg pt o ' + G.v.gie.meta.gr_hw
     }, { // v gie pp
         sc: G.v.gie.pp.sc,
         en: G.v.gie.pp.en,
         tr: G.v.gie.trigs,
-        hl: G.v.gie.pp.sc,
+        hl: [],
         gr: 'pp o ' + G.v.gie.meta.gr_hw
     }, { // v gie -ing form
         sc: G.v.gie.ing.sc,
         en: G.v.gie.ing.en,
-        tr: G.v.gie.trigs,
-        hl: G.v.gie.ing.tr
+        tr: [].concat(G.v.gie.trigs, G.v.gie.ing.tr),
+        hl: G.v.gie.ing.tr,
     }, { // v Third person singular
         sc: G.v.gie.tps.sc,
         en: G.v.gie.tps.en,
         tr: G.v.gie.trigs,
-        hl: G.v.gie.tps.sc,
+        hl: [],
         gr: 'third person singular o ' + G.v.gie.meta.gr_hw
 
     },
@@ -1006,45 +955,45 @@ G.dict.push({ // A
         sc: G.v.dae.sc,
         pr: G.v.dae.pr,
         en: G.v.dae.en,
-        tr: G.v.dae.trigs,
-        hl: [].concat(G.v.dae.sc, G.v.dae.tr),
-        gr: 'v'
+        tr: [].concat(G.v.dae.tr),
+        gr: 'v',
+        heeze: 'dae'
     }, { // dae neg
         sc: G.v.dae.neg.sc,
         sc_alt: G.v.dae.neg.sc_alt,
         pr: G.v.dae.neg.pr,
         en: G.v.dae.neg.en,
-        tr: G.v.dae.trigs,
-        hl: [].concat(G.v.dae.neg.sc, G.v.dae.neg.tr),
+        tr: [].concat(G.v.dae.trigs, G.v.dae.neg.tr),
+        hl: G.v.dae.neg.tr,
         gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
         ex: 'I dae ken'
     }, { // dae present singular
         sc: G.v.dae.ps.sc,
         en: G.v.dae.ps.en,
         pr: G.v.dae.ps.pr,
-        tr: G.v.dae.trigs,
-        hl: [].concat(G.v.dae.ps.sc, G.v.dae.ps.tr),
+        tr: [].concat(G.v.dae.trigs, G.v.dae.ps.tr),
+        hl: G.v.dae.ps.tr,
         gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
     }, { // dae present singular neg
         sc: G.v.dae.ps.neg.sc,
         sc_alt: G.v.dae.ps.neg.sc_alt,
         en: G.v.dae.ps.neg.en,
-        tr: G.v.dae.trigs,
-        hl: [].concat(G.v.dae.ps.neg.sc, G.v.dae.ps.neg.tr),
+        tr: [].concat(G.v.dae.trigs, G.v.dae.ps.neg.tr),
+        hl: G.v.dae.ps.neg.tr,
         gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
     }, { // dae past tense
         sc: G.v.dae.pt.sc,
         pr: G.v.dae.pt.pr,
         en: G.v.dae.pt.en,
         tr: G.v.dae.trigs,
-        hl: [].concat(G.v.dae.pt.sc),
+        hl: [],
         gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
     }, { // dae neg past tense
         sc: G.v.dae.pt.neg.sc,
         sc_alt: G.v.dae.pt.neg.sc_alt,
         en: G.v.dae.pt.neg.en,
         tr: G.v.dae.trigs,
-        hl: [].concat(G.v.dae.pt.neg.sc, G.v.dae.pt.neg.tr),
+        hl: [],
         gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
     }, { // dae past par
         sc: G.v.dae.ptp.sc,
@@ -1052,7 +1001,7 @@ G.dict.push({ // A
         en: G.v.dae.ptp.en,
         pr: G.v.dae.ptp.pr,
         tr: G.v.dae.trigs,
-        hl: [].concat(G.v.dae.ptp.sc, G.v.dae.ptp.pr),
+        hl: [],
         gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
     }, { // dae -ing form
         sc: G.v.dae.ing.sc,
@@ -1172,7 +1121,7 @@ G.dict.push({ // A
             sc: 'hauden',
             tr: 'held'
         },
-        tr: ['hauden', 'hold', 'hae', 'hiv'],
+        tr: ['hauden', 'hold', 'hae', 'hiv', 'gae', 'go'],
         hl: ['haud', 'hold'],
         gr: 'v',
         ex: [G.ex.z, 'The neist comatee meetin will be hauden in Mey'],
@@ -1615,22 +1564,21 @@ G.dict.push({ // A
         sc: G.v.hae.sc,
         pr: G.v.hae.pr,
         en: G.v.hae.en,
-        tr: G.v.hae.trigs,
-        hl: [],
         gr: 'v',
         ex: [G.ex.a1, G.ex.c1],
         or: [
             [G.notes.or.as, 'hafe, haif(f), ha, hae'],
             [G.notes.or.ae, 'habban']
         ],
-        au: 'hae'
+        au: 'hae',
+        heeze: 'have'
     }, { // hae neg
         sc: G.v.hae.neg.sc,
         sc_alt: G.v.hae.neg.sc_alt,
         pr: G.v.hae.neg.pr,
         en: G.v.hae.neg.en,
         tr: G.v.hae.trigs,
-        hl: [].concat(G.v.hae.neg.sc, G.v.hae.neg.tr),
+        hl: [],
         gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
         ex: G.ex.b1
     }, { // hae present singular
@@ -1639,13 +1587,13 @@ G.dict.push({ // A
         en: G.v.hae.ps.en,
         pr: G.v.hae.ps.pr,
         tr: G.v.hae.trigs,
-        hl: [].concat(G.v.hae.ps.sc, G.v.hae.ps.tr),
+        hl: [],
         gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
     }, { // hae present singular neg
         sc: G.v.hae.ps.neg.sc,
         en: G.v.hae.ps.neg.en,
         tr: G.v.hae.trigs,
-        hl: [].concat(G.v.hae.ps.neg.sc, G.v.hae.ps.neg.tr),
+        hl: [],
         gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
     }, { // hae past tense
         sc: G.v.hae.pt.sc,
@@ -1659,7 +1607,7 @@ G.dict.push({ // A
         sc: G.v.hae.pt.neg.sc,
         en: G.v.hae.pt.neg.en,
         tr: G.v.hae.trigs,
-        hl: [].concat(G.v.hae.pt.neg.sc, G.v.hae.pt.neg.tr),
+        hl: [],
         gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
     }, { // hae past par
         sc: G.v.hae.ptp.sc,
@@ -2029,14 +1977,14 @@ G.dict.push({ // A
         sc_alt: G.v.wis.sc_alt,
         pr: G.v.wis.pr,
         en: G.v.wis.en,
-        tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
-        hl: [].concat(G.v.wis.sc, G.v.wis.pr, G.v.wis.tr),
+        tr: G.v.war.trigs,
+        hl: [],
         gr: 'v'
     }, { // wis neg
         sc: G.v.wis.neg.sc,
         en: G.v.wis.neg.en,
-        tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
-        hl: [].concat(G.v.wis.neg.sc, G.v.wis.neg.tr),
+        tr: [].concat(G.v.wis.neg.tr, G.v.wis.trigs, G.v.war.trigs),
+        hl: G.v.wis.neg.tr,
         gr: ['neg o v ' + G.utils.addSpan(G.v.wis.sc)]
     },
     // v wis end
@@ -2045,21 +1993,22 @@ G.dict.push({ // A
         sc: G.v.war.sc,
         pr: G.v.war.pr,
         en: G.v.war.en,
-        tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
-        hl: [].concat(G.v.war.sc, G.v.war.pr),
+        tr: G.v.wis.trigs,
+        hl: [],
         gr: 'v'
     }, { // war neg
         sc: G.v.war.neg.sc,
         en: G.v.war.neg.en,
-        tr: [].concat(G.v.war.trigs, G.v.wis.trigs),
-        hl: [].concat(G.v.war.neg.sc, G.v.war.neg.tr),
+        tr: [].concat(G.v.war.neg.tr, G.v.war.trigs, G.v.wis.trigs),
+        hl: G.v.war.neg.tr,
         gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)]
-    }, { // will
+    },
+    // v war end
+    // will
+    {
         sc: G.v.will.sc,
         pr: G.v.will.pr,
         en: G.v.will.en,
-        tr: G.v.will.trigs,
-        hl: [].concat(G.v.will.sc, G.v.will.pr),
         gr: 'v',
         or: [
             [G.notes.or.as, 'will'],
@@ -2069,14 +2018,14 @@ G.dict.push({ // A
         sc: G.v.will.neg.sc,
         sc_alt: G.v.will.neg.sc_alt,
         en: G.v.will.neg.en,
-        tr: G.v.will.trigs,
-        hl: [].concat(G.v.will.neg.sc, G.v.will.neg.tr),
+        tr: [].concat(G.v.will.trigs, G.v.will.neg.tr),
+        hl: G.v.will.neg.tr,
         gr: ['neg o v ' + G.utils.addSpan(G.v.will.sc)]
     }, { // will pt and pp
         sc: G.v.will.pt_pp.sc,
         en: G.v.will.pt_pp.en,
         tr: G.v.will.trigs,
-        hl: [].concat(G.v.will.pt_pp.sc, G.v.will.pt_pp.pr),
+        hl: [],
         gr: ['pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
         or: [
             [G.notes.or.as, 'wald'],
@@ -2085,12 +2034,12 @@ G.dict.push({ // A
     }, { // will pt and pp neg
         sc: G.v.will.pt_pp.neg.sc,
         en: G.v.will.pt_pp.neg.en,
-        tr: G.v.will.trigs,
-        hl: [].concat(G.v.will.pt_pp.neg.sc, G.v.will.pt_pp.neg.tr),
+        tr: [].concat(G.v.will.trigs, G.v.will.pt_pp.neg.tr),
+        hl: G.v.will.pt_pp.neg.tr,
         gr: ['neg pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
         ex: 'Ye wadna could tell he uised tae be in the airmy'
     }
-    // v war end
+    // v will end
     // Template
     // // v {{ wird }}
     // { // v {{ wird }}
