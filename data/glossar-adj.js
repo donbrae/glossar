@@ -662,6 +662,17 @@ G.dict.push({ // A
     tr: ['boisterous', 'uncertain'],
     gr: 'adj'
 }, {
+    sc: 'reid',
+    pr: ['rid', 'reed'],
+    tr: 'read',
+    en: 'red',
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'rede, reid'],
+        [G.notes.or.me, 'red']
+        [G.notes.or.ae, 'rēod']
+    ]
+}, {
     sc: 'richt',
     en: 'right',
     gr: ['adj', 'adv', 'n', 'v', 'exclamation']

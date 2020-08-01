@@ -9,7 +9,7 @@ var GLOSSAR = (function() {
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
             threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
-            variants: ['fae|thrae|frae', 'sc|sk', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
+            variants: ['fae|thrae|frae', 'sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
             threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() doesn't make much sense for words with few characters
             extended_cmd: '^' // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
         },
@@ -139,6 +139,7 @@ var GLOSSAR = (function() {
 
             var t = setTimeout(function() {
                 $('#results').html('');
+                state.last_word_searched_for = '';
             }, 250);
 
             // Cancel any timeout

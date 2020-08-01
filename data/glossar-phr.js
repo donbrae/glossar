@@ -124,4 +124,9 @@ G.dict.push({
     sc: 'faur-oot-aboot',
     en: 'remote',
     gr: 'phrasal adj'
+}, {
+    sc: 'how no?',
+    en: 'why not?',
+    tr: ['hoo no', 'how no'],
+    gr: 'phr'
 });

@@ -75,6 +75,26 @@ G.dict.push({
     ],
     au: 'bairn'
 }, {
+    sc: ['boak', 'boke', 'bowk'],
+    en: [
+        ['an eructation', 'belch', 'retch', 'vomit'],
+        ['nausea', 'disgust', 'revulsion']
+    ],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'bok, bock']
+    ]
+}, {
+    sc: ['the boak', 'the boke'],
+    en: 'belching',
+    tr: ['boak', 'boke', 'bowk'],
+    hl: [],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'the bok']
+    ],
+    ex: 'The fish fair gied me the boak'
+}, {
     sc: 'but',
     en: 'the kitchen or outer room, e.g. in a but and ben',
     tr: ['kitchen', 'outer room'],
@@ -1129,9 +1149,9 @@ G.dict.push({
     // ]
 }, {
     sc: 'uiss',
-    pr: ['yös', 'yis', 'ees', 'yoos'],
-    tr: ['yiss', 'uise', 'yaise', 'yaize'],
-    hl: ['uiss', 'yiss', 'ees'],
+    pr: ['yös', 'yis', 'ees', 'yoos', 'ös', 'yees'],
+    tr: ['yiss', 'uise', 'yaise', 'yaize', 'yuise', 'euse', 'yeuse', 'eese'],
+    hl: ['yiss', 'ees', 'yuise', 'ös', 'euse', 'yeuse', 'yeese', 'eese'],
     en: 'use',
     gr: 'n'
 }, {
@@ -1177,6 +1197,16 @@ G.dict.push({
         'frae the Greek <span>rhētorikē</span>'
     ],
     ex: 'It wis naething but tuim rhetoric'
+}, {
+    sc: 'rift',
+    en: [['a belch', 'fart']],
+    tr: ['belch', 'boak', 'boke', 'bowk'],
+    hl: 'belch',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'rift, ryfft'],
+        'see v'
+    ]
 }, {
     sc: 'road',
     def: [

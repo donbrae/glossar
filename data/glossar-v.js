@@ -528,7 +528,7 @@ G.dict.push({ // A
         sc: G.v.be.psp.neg.sc,
         en: G.v.be.psp.neg.en,
         tr: [].concat(G.v.be.trigs, G.v.be.psp.neg.tr),
-        hl:  G.v.be.psp.neg.tr,
+        hl: G.v.be.psp.neg.tr,
         gr: 'present singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
     }, { // binna
         sc: G.v.be.neg.sc,
@@ -556,6 +556,17 @@ G.dict.push({ // A
             [G.notes.or.anor, 'byggja']
         ],
         au: 'big'
+    }, {
+        sc: ['boak', 'boke', 'bowk'],
+        en: [
+            ['To retch', 'vomit', 'belch <span>(also figuratively)</span>'],
+        ],
+        tr: ['retch', 'belch', 'emit', 'eject', 'eructate', 'sick', 'seek', 'gush', 'spurt'],
+        hl: ['retch', 'belch', 'emit', 'eject', 'eructate', 'gush', 'spurt'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'bok, bock, bolk'],
+        ]
     }, { // can
         sc: G.v.can.sc,
         en: G.v.can.en,
@@ -1406,6 +1417,12 @@ G.dict.push({ // A
         ph: true
     }, {
         sc: 'mak',
+        pt: {
+            sc: ['made', 'makkit']
+        },
+        pp: {
+            sc: 'made'
+        },
         en: 'make',
         tr: ['manufacture', 'create', 'compose', 'compel', 'develop', 'fashion'],
         hl: ['manufacture', 'create', 'compel'],
@@ -1446,8 +1463,7 @@ G.dict.push({ // A
         tr: 'upload',
         pt: {
             sc: 'uplaidit',
-            en: 'uploaded',
-            tr: 'uploadit'
+            tr: ['uploadit', 'uploaded']
         },
         def: '<em>v</em> copy data frae ae computer system til anither, for ordinar til a server, an aften ower the internet; <em>n</em> the data (file) uplaidit',
         gr: ['v', 'n'],
@@ -1852,7 +1868,19 @@ G.dict.push({ // A
             [G.notes.or.as, 'remed(e)'],
             ['frae the noun or a reduced mak o ' + G.notes.or.an, 'remedier']
         ]
-    }, {
+    }, { // R
+        sc: 'rift',
+        en: [
+            ['to belch', 'fart']
+        ],
+        tr: ['belch', 'boak', 'boke', 'bowk'],
+        hl: 'belch',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'rift'],
+            [G.notes.or.anor, 'rypta']
+        ]
+    }, { // S
         sc: ['set furth', 'furthset'],
         pt: {
             sc: ['set furth', 'furthset'],
@@ -1866,7 +1894,7 @@ G.dict.push({ // A
         gr: 'phrasal v, v',
         or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],
         ex: 'She haes setten furth a pose o unco bonnie poyetry'
-    }, { // S
+    }, {
         sc: 'skair',
         en: 'share',
         gr: ['v', 'n'],
@@ -1927,8 +1955,12 @@ G.dict.push({ // A
         sc: 'uise',
         pr: ['yöz', 'yüz', 'öz', 'yaiz', 'ees'],
         en: 'use',
-        tr: ['yaise', 'uiss', 'yiss', 'yaize'],
-        hl: ['yaise', 'yaize', 'uise', 'yaiz', 'ees'],
+        pt_pp: {
+            sc: 'uised',
+            tr: ['used', 'eesed', 'yist', 'yaised', 'yaized', 'eest']
+        },
+        tr: ['yaise', 'uiss', 'yiss', 'yaize', 'yeese', 'eese'],
+        hl: ['yaise', 'yaize', 'yeese', 'eese'],
         gr: 'v'
     }, {
         sc: 'unsteek',

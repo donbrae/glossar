@@ -564,6 +564,7 @@ G.dict.push({
 }, {
     sc: 'Reid Sea',
     en: 'Red Sea',
+    tr: ['rid sea', 'reed sea'],
     gr: 'pn',
     or: [
         [G.notes.or.as, 'Reid Se']
