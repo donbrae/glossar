@@ -345,7 +345,7 @@ var GLOSSAR = (function() {
             }
         });
 
-        if (variants.length > 1) return ext_cmd + variants.join(' | ' + ext_cmd); // Fuse.js OR syntax
+        if (variants.length > 1) return ext_cmd + variants.join('|' + ext_cmd); // Fuse.js OR syntax
 
         return ext_cmd + input;
     }
@@ -389,7 +389,7 @@ var GLOSSAR = (function() {
     function print(r, callback) {
         var grammar, sc_alt, hl_sc_alt, audio, item,
             hl, hl_all, $dl, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, neg_arr, pl, pl_arr, or,
-            results_filtered = [];
+            results = [];
 
         if (r && r.length) {
             $('#results').html('');
@@ -397,7 +397,7 @@ var GLOSSAR = (function() {
             $.each(r, function() {
 
                 item = this.item;
-                results_filtered.push(item);
+                results.push(item);
 
                 grammar = item.gr ? '<dt class="dt-grammar">Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd>' : ''; // Grammar
                 sc_alt = item.sc_alt ? '<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</dd>' : ''; // Alternative Scots spellings
@@ -524,40 +524,33 @@ var GLOSSAR = (function() {
 
             });
 
-            if (results_filtered.length) { // If there is at least one relevant result amang returned results
-                highlight(results_filtered, function() {
-                    if (state.highlight) {
+            highlight(results, function() {
+                if (state.highlight) {
 
-                        // Move highlighted entries to the top
-                        $($('#results > dl').get().reverse()).each(function() {
-                            $dl = $(this);
-                            if ($dl.find('dd').hasClass('hl') || $dl.find('dd.pl > span').hasClass('hl') || $dl.find('dd.neg > span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
-                                $dl.parent().prepend($dl);
-                            }
-                        });
+                    // Move highlighted entries to the top
+                    $($('#results > dl').get().reverse()).each(function() {
+                        $dl = $(this);
+                        if ($dl.find('dd').hasClass('hl') || $dl.find('dd.pl > span').hasClass('hl') || $dl.find('dd.neg > span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                            $dl.parent().prepend($dl);
+                        }
+                    });
 
-                        // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
-                        $('#results > dl').each(function() {
-                            $dl = $(this);
-                            if ($dl.data('heeze') && $dl.data('heeze') === state.word_lc) {
-                                $dl.parent().prepend($dl);
-                            }
-                        });
-                    }
+                    // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
+                    $('#results > dl').each(function() {
+                        $dl = $(this);
+                        if ($dl.data('heeze') && $dl.data('heeze') === state.word_lc) {
+                            $dl.parent().prepend($dl);
+                        }
+                    });
+                }
 
-                    if (!state.highlight && !checkForTriggers(results_filtered)) { // If nothing in the UI has been highlighted and the word searched for does not match any non-highlighting trigger
-                        noResults();
-                    } else {
-                        $('#results').addClass('show');
-                    }
+                $('#results').addClass('show');
 
-                    if (typeof(callback) === 'function') {
-                        callback();
-                    }
-                });
-            } else { // !results_filtered.length (after we've filtered the initial results returned by algorithm)
-                noResults();
-            }
+                if (typeof(callback) === 'function') {
+                    callback();
+                }
+            });
+
         } else { // !r.length (initial results)
             noResults();
         }
@@ -651,12 +644,12 @@ var GLOSSAR = (function() {
 
             // E.g. ['^michty|^michtie|^michtae'] or ['=ony|=onie|=onae']
             function querySplit(q) {
-                var cmd = q.replace(/[0-9a-z$]/g, '').split(' | ')[0]; // Get non alphanumeic leading characters
+                var cmd = q.replace(/[0-9a-z$]/g, '').split('|')[0]; // Get non alphanumeic leading characters
 
                 if (cmd.length) { // If there is unix-style command leading character
                     q = q.slice(cmd.length, q.length + 1); // Remove it
                 }
-                return q.split(' | ' + cmd);
+                return q.split('|' + cmd);
             }
 
             if ($el.data('hl')) { // Add any highlight words to the items array
