@@ -86,8 +86,9 @@ G.dict = [{
     en: 'yes',
     gr: 'exclamation'
 }, {
-    sc: ['an', 'and'],
+    sc: 'and',
     pr: 'an',
+    tr: 'an',
     en: 'and',
     gr: ['conj']
 }, {
@@ -149,6 +150,7 @@ G.dict = [{
     pr: ['efter', 'aifter'],
     en: ['after', 'later'],
     tr: 'syne',
+    hl: [],
     gr: ['adv', 'prep', 'conj'],
     or: [
         [G.notes.or.as, 'efter, eftir'],

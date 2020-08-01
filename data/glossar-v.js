@@ -1437,7 +1437,7 @@ G.dict.push({ // A
         en: 'must',
         neg: {
             sc: ['maunna', 'maunnae'],
-            tr: ['must not', 'mustn\'t', 'manny']
+            tr: ['must not', 'mustn\'t', 'manny', 'manna']
         },
         gr: ['v'],
         or: [

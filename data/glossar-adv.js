@@ -29,7 +29,7 @@ G.dict.push({ // A
     en: [
         ['often', 'oft']
     ],
-    tr: ['aften', 'frequently'],
+    tr: ['aften', 'frequently', 'aft-times', 'aft times'],
     hl: 'frequently',
     gr: ['adv'],
     or: [
@@ -40,7 +40,8 @@ G.dict.push({ // A
     sc: 'aften',
     en: 'often',
     pr: ['affen', 'aften'],
-    tr: 'frequently',
+    tr: ['frequently', 'aft', 'aft-times', 'aft times'],
+    hl: 'frequently',
     gr: 'adv',
     or: [
         [G.notes.or.as, 'aften, aft, often']
@@ -50,7 +51,7 @@ G.dict.push({ // A
     en: [
         ['often', 'frequently']
     ],
-    tr: ['afttimes', 'aften'],
+    tr: ['afttimes', 'aft times', 'aften', 'aft'],
     hl: [],
     gr: ['adv']
 }, {
@@ -202,7 +203,7 @@ G.dict.push({ // A
 }, {
     sc: 'frequently',
     en: 'frequently',
-    tr: ['often', 'repeatedly', 'regularly', 'aften', 'aft-times'],
+    tr: ['often', 'repeatedly', 'regularly', 'aften', 'aft-times', 'aft'],
     hl: ['often', 'repeatedly', 'regularly'],
     gr: 'v',
     or: [
