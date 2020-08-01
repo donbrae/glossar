@@ -48,14 +48,24 @@
     <main role="main" class="container">
         <p class="mt-5">Scots.app is a quick-reference glossar that translates wirds and phrases atween Scots and English. It aye a beta and a lang gate aff frae bein a full dictionar, but we’r aye ettlin at makkin it better, sae check back aften if ye’r interestit in its development.</p>
 
-        <p>Biggit by Jamie Smith, a wab developer and Scots leid enthusiast steidit in Embra.</p>
+        <p>It’s biggit by Jamie Smith, a <a href="https://github.com/donbrae">wab developer</a> and <a href="https://www.makforrit.scot/author/jamie">Scots leid enthusiast</a> steidit in Embra.</p>
+
+        <h3>A bit aboot the Scots language</h3>
+
+        <p>Scots is a Germanic leid — a mellin thegither o Anglo-Scandinaivie, French, Latin, Gaelic and Dutch — spoken mainly in the Scottish Lawlands and Northren Isles.</p>
+
+        <p>It’s sib til English, and is different tae Gaelic, the Celtic leid that is the day spoken maistly in the Hielands.</p>
+
+        <p>The <a href="http://media.scotslanguage.com/library/document/SLC%20Analysis%20of%20Census%202011%20for%20Scots.pdf">2011 official census</a> shawed that it’s spoken by ower 1.5 million fowk (30 per cent o the population). The language haes a lang history gaun back hunners o years, and wis at ae time the <a href="https://www.makforrit.scot/2019/02/08/fechts-furnication-an-sclander">official leid o record</a>.</p>
+
+        <p><a href="https://dsl.ac.uk/about-scots">Ye can read mair aboot Scots here</a>.</p>
 
         <p><a href="./">← Gae back hame</a>.</p>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="text-muted">This page wis last updatit on 27 Julie 2020.</div>
+            <div class="text-muted">This page wis last updatit on 1 August 2020.</div>
     </footer>
 </body>
 
