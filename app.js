@@ -8,10 +8,11 @@ var GLOSSAR = (function() {
 
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Item in 'tr'/'hl' properties are unaffected and still show as configured
+            threshold_non_hl: 5, // The minimum character length at which non-exact matches (i.e. those that aren't highlighted) will be shown. This is to prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Items in 'tr'/'hl' properties are unaffected and still show as configured
+            threshold_exact_match: 5, // If length of searched-for word is below this threshold, '=' will be prepended to the query so that only exact matches are returned (so searching for 'fart' doesn't return 'aff' due to one of aff's triggers being 'farther away')
             variants: ['fae|thrae|frae', 'sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
-            threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() doesn't make much sense for words with few characters
-            extended_cmd: '^' // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
+            threshold_variants: 3, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
+            extended_cmd: '^' // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string.
         },
         state = {
             word: '', // Value of search text box
@@ -39,7 +40,7 @@ var GLOSSAR = (function() {
             includeScore: true, // false
             // findAllMatches: false, // false
             // includeMatches: false, // false
-            threshold: 0.2, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
+            threshold: 0.1, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
             // location: 0, // 0
             distance: 250, // 100 // 'tak the maiter throu haunds' wasn't appearing with value set to 100
             // ignoreLocation: false, // false
@@ -123,10 +124,18 @@ var GLOSSAR = (function() {
 
             state.word = G.utils.replaceQo(word).toLowerCase();
             state.word_lc = state.word.toLowerCase();
+            state.last_word_searched_for = '';
             $('#searchTextbox').val(word);
             $('#results').removeClass('show');
             $('#clear-value').addClass('show').prop('disabled', false);
-            print(fuse.search(cfg.extended_cmd + state.word), function() {
+
+            // We don't need to do variant check here because it's not based on user input
+            if (state.word.length < cfg.threshold_exact_match) {
+                state.query = '=' + state.word;
+            } else {
+                state.query = cfg.extended_cmd + state.word;
+            }
+            print(fuse.search(state.query), function() {
                 state.random.push(num);
                 $btn.prop('disabled', false);
             });
@@ -178,6 +187,7 @@ var GLOSSAR = (function() {
         });
     }
 
+    // GLOSSAR.state getter
     function getState() {
         console.log(state);
     }
@@ -195,8 +205,14 @@ var GLOSSAR = (function() {
             }
 
             if (state.word.length) {
-                if (state.word.length >= cfg.threshold_variants) {
-                    state.query = processVariants(state.word, cfg.variants);
+
+                if (state.word.length < cfg.threshold_exact_match && state.word.length < cfg.threshold_variants) {
+                    state.query = '=' + state.word;
+                } else if (state.word.length < cfg.threshold_exact_match &&
+                    state.word.length >= cfg.threshold_variants) {
+                    state.query = processVariants(state.word, cfg.variants, '='); // Look for any variants, passing in '=' (exact match) extended command override
+                } else if (state.word.length >= cfg.threshold_variants) {
+                    state.query = processVariants(state.word, cfg.variants); // Look for any variants
                 } else {
                     state.query = cfg.extended_cmd + state.word;
                 }
@@ -207,6 +223,7 @@ var GLOSSAR = (function() {
                 $('#results').removeClass('show');
                 var t = setTimeout(function() {
                     $('#results').html('');
+                    state.last_word_searched_for = '';
                 }, 250);
             }
         }
@@ -267,11 +284,13 @@ var GLOSSAR = (function() {
      * Process any variants based on user input
      * @param {String} inputs - The string the user types in the search field
      * @param {Array|String} test - The value(s) to test against, each item delimited with a '|'
+     * @param {String} ext - Optional override of cfg.extended_cmd
      * @returns {String}
      */
-    function processVariants(input, test) {
+    function processVariants(input, test, ext) {
 
-        var user_input = input.toLowerCase(),
+        var ext_cmd = ext ? ext : cfg.extended_cmd, // Is there an override?
+            user_input = input.toLowerCase(),
             variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
             tests, common_word_part, variant;
 
@@ -327,9 +346,9 @@ var GLOSSAR = (function() {
             }
         });
 
-        if (variants.length > 1) return cfg.extended_cmd + variants.join('|' + cfg.extended_cmd); // Fuse.js OR syntax
+        if (variants.length > 1) return ext_cmd + variants.join('|' + ext_cmd); // Fuse.js OR syntax
 
-        return cfg.extended_cmd + input;
+        return ext_cmd + input;
     }
 
     /**
@@ -381,7 +400,7 @@ var GLOSSAR = (function() {
                 item = this.item;
 
                 if (
-                    state.word.length >= cfg.threshold_non_hl || // Length of word user has input is equal to or greater than threshold
+                    state.word.length >= cfg.threshold_non_hl || // Length of word user has input is equal to or greater than non-highlight threshold
                     arrayToLowerCase([].concat(item.sc)).indexOf(state.word_lc) > -1 || // Exact match (Scots)
                     arrayToLowerCase([].concat(item.sc_alt)).indexOf(state.word_lc) > -1 || // Alternative Scots spelling
                     arrayToLowerCase([].concat(item.en)).indexOf(state.word_lc) > -1 || // Exact match (English)
@@ -650,9 +669,11 @@ var GLOSSAR = (function() {
 
         function hielicht($el, items, other) {
 
-            // E.g. ['^michty|^michtie|^michtae']
-            function querySplit(q, cmd) {
-                if (cmd && cmd.length && q.charAt(0) === cmd) { // If there is unix-style command leading character
+            // E.g. ['^michty|^michtie|^michtae'] or ['=ony|=onie|=onae']
+            function querySplit(q) {
+                var cmd = q.replace(/[0-9a-z$]/g, '').split('|')[0]; // Get non alphanumeic leading characters
+
+                if (cmd.length) { // If there is unix-style command leading character
                     q = q.slice(1, q.length + 1); // Remove it
                 }
                 return q.split('|' + cmd);
@@ -665,7 +686,7 @@ var GLOSSAR = (function() {
                 if (this &&
                     (
                         this.toLowerCase() === state.word_lc || // Direct match
-                        querySplit(state.query, cfg.extended_cmd).indexOf(this.toLowerCase()) > -1 || // Match on one of any variants
+                        querySplit(state.query).indexOf(this.toLowerCase()) > -1 || // Match on one of any variants
                         (other && other.indexOf(state.word_lc) > -1) // Other values which should trigger highlighting
                     )
                 ) {
