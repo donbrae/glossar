@@ -9,6 +9,17 @@ G.n = {}; // More complex nouns
  */
 
 G.dict.push({
+    sc: 'abbreviate',
+    en: [
+        ['an abstract', 'abridgement', 'summary']
+    ],
+    tr: 'abstract',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'abbreviat'],
+        [G.notes.or.l, 'abbreviātum']
+    ]
+}, {
     sc: 'airtin',
     def: 'wab link',
     tr: 'link',
@@ -1373,6 +1384,37 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'than, thyne'],
         [G.notes.or.ae, 'ðanne']
+    ]
+}, {
+    sc: 'thesaurer',
+    en: 'treasurer',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'thesaurar(e), ~tresorare'],
+        [G.notes.or.l, 'thēsaurārius'],
+        [G.notes.or.af, 'tresorer']
+    ]
+}, {
+    sc: 'thesaurery',
+    en: 'treasury',
+    gr: 'n',
+    tr: 'treasurership',
+    or: [
+        [G.notes.or.as, 'thesaurary, thesaurie, tresory']
+    ]
+}, {
+    sc: 'thesis',
+    pl: {
+        sc: 'theses'
+    },
+    en: 'thesis',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'thesis, these'],
+        ['(plural)', 'theses'],
+        [G.notes.or.gk, 'θέσις'],
+        [G.notes.or.l, 'thesis'],
+        [G.notes.or.mf, 'thèse']
     ]
 }, {
     sc: 'think',

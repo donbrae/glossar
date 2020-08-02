@@ -159,6 +159,19 @@ G.dict = [{
     ],
     ex: 'I’ll see ye efter!',
     au: 'efter'
+}, {
+    sc: 'awbody',
+    en: 'everyone',
+    tr: 'everybody',
+    gr: 'pronoon'
+}, {
+    sc: 'awthing',
+    en: 'everything',
+    tr: 'awthin',
+    gr: 'pronoon',
+    or: [
+        [G.notes.or.as, 'all thing, althing']
+    ]
 }, { // F
     sc: 'for',
     pr: ['faur', 'fur', 'fir', 'fer'],
@@ -263,19 +276,28 @@ G.dict = [{
     ],
     tr: 'ilka',
     hl: 'ilk',
-    gr: ['pron']
+    gr: 'pronoon'
 }, {
     sc: ['ilka ane', 'ilkane'],
     en: [
         ['each one', 'everyone']
     ],
-    gr: 'pron'
+    gr: 'pronoon'
+}, {
+    sc: ['in', 'i'],
+    en: 'in',
+    tr: 'i\'',
+    gr: ['prep', 'adv', 'adj', 'v'],
+    or: [
+        [G.notes.or.as, 'in'],
+        [G.notes.or.ae, 'in']
+    ]
 }, {
     sc: ['wha', 'fa'],
     pr: ['whah', 'whau', 'whae', 'whiu', 'fa', 'a'],
     en: 'who',
     tr: ['whae', 'whay', 'whey'],
-    gr: 'pron'
+    gr: 'pronoon'
 }, { // M
     sc: 'maist',
     def: [
@@ -294,6 +316,16 @@ G.dict = [{
     gr: 'interj',
     ex: ['Michty me!', 'Michty, what a weather!']
 }, { // N
+    sc: 'naebody',
+    en: [
+        ['no one', 'nobody']
+    ],
+    tr: ['no-one', 'noone'],
+    gr: 'pronoon',
+    or: [
+        [G.notes.or.as, 'na body']
+    ]
+}, {
     sc: 'naewey',
     en: [
         ['on no account', 'nowhere', 'no way']
@@ -317,16 +349,25 @@ G.dict = [{
     sc: 'ane',
     pr: ['ane', 'een', 'yin', 'wan'],
     en: 'one',
-    gr: 'cardinal number',
+    gr: 'cardinal nummer',
     tr: ['ae', 'ain', 'ann', 'yae', 'yay'],
     hl: ['ane', 'ain', 'yin', 'wan', 'een', 'ann'],
     inf: '<span>Ane</span> is aften uised the day as an adjective (as weel as bein the cardinal nummer <span>ane</span>), whauras in traditional spoken Modren Scots ye’r mair likely tae hear <span>ae</span> (also pronounced ‘yae’) as the adjective. <span>Ane</span> wis typically the written adjective in Aulder Scots'
+}, {
+    sc: 'twa',
+    pr: ['twah', 'twae'],
+    en: 'two',
+    gr: ['cardinal nummer', 'adj'],
+    or: [
+        [G.notes.or.as, 'twa, tua, twae'],
+        [G.notes.or.ae, 'twā']
+    ]
 }, {
     sc: 'ony',
     en: [
         ['any', 'either']
     ],
-    gr: ['pron'],
+    gr: 'pronoon',
     or: 'see adj'
 }, { // O
     sc: 'o',
@@ -341,7 +382,7 @@ G.dict = [{
 }, {
     sc: 'onyane',
     en: 'anyone',
-    gr: ['pron']
+    gr: ['pronoon']
 }, {
     sc: 'oor',
     pr: 'oor',
@@ -376,7 +417,7 @@ G.dict = [{
     sc_alt: ['whit', 'fit'],
     pr: ['what', 'whaut', 'whit', 'whut', 'fit', 'fut', 'fat', 'ut'],
     en: 'what',
-    gr: ['adj', 'adv', 'pron', 'conj']
+    gr: ['adj', 'adv', 'pronoon', 'conj']
 }, {
     sc: 'wi',
     pr: ['wi', 'wae', 'w'],

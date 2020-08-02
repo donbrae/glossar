@@ -437,7 +437,18 @@ G.v.lat.trigs = ['allow', 'permit', 'cause', 'make happen', 'luit', 'latten', 'l
  * Add verbs (both complex and more simple) to dictionary object
  */
 
-G.dict.push({ // A
+G.dict.push({
+        sc: 'abbreviate',
+        en: [
+            ['to shorten', 'abridge', 'summarize']
+        ],
+        tr: 'shorten',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'abbreviat'],
+            [G.notes.or.l, 'abbreviāre']
+        ]
+    }, { // A
         sc: 'accress',
         pt_pp: {
             sc: 'accressed',
@@ -1219,6 +1230,20 @@ G.dict.push({ // A
         en: 'stop',
         gr: ['imp phrasal v']
     }, { // I
+        sc: 'import',
+        pt_pp: {
+            sc: 'importit',
+            tr: 'imported'
+        },
+        tr: 'inbring',
+        hl: [],
+        en: 'import',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'import'],
+            [G.notes.or.l, 'importāre']
+        ]
+    }, {
         sc: 'inbring',
         pt_pp: {
             sc: 'inbrocht',
@@ -1227,7 +1252,7 @@ G.dict.push({ // A
         en: [
             ['bring to or into a place', 'convey', 'import']
         ],
-        tr: ['bring to a place', 'bring into a place'],
+        tr: 'bring in',
         gr: 'v',
         or: [
             [G.notes.or.as, 'inbring, imbring'],

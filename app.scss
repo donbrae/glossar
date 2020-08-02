@@ -33,17 +33,13 @@
 }
 
 ::selection {
-    background-color: #fffe9d;
-    color: #212529;
+    background-color: #0082ff;
+    color: #fff;
 }
 
 header ::selection {
-    color: #007bff;
-}
-
-input::selection {
-    background-color: #0082ff;
-    color: #fff;
+    background-color: #fff;
+    color: #0082ff;
 }
 
 .icon-cancel {
@@ -116,7 +112,7 @@ header {
 .container {
     width: auto;
     padding: 0 15px;
-    max-width: 650px;
+    max-width: 550px;
 }
 
 .footer {
@@ -433,6 +429,14 @@ ul {
     }
 
     .input-group {
+        width: 90% !important;
+        @media (min-width: 433px) {
+            width: 75% !important;
+        }
+        @media (min-width: 576px) {
+            width: 80% !important;
+        }
+
         > .custom-select:not(:last-child),
         > .form-control:not(:last-child) {
             border-top-right-radius: 2rem;
