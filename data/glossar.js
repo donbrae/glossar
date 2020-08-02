@@ -26,6 +26,7 @@ G.notes = {
         emods2: 'Earlier Modren Scots',
         anor: 'Auld Norse',
         as: 'Aulder Scots',
+        d: 'Dutch',
         md: 'Middle Dutch',
         eme: 'Early Modren English',
         mode: 'Modren English',

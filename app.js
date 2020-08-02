@@ -8,8 +8,8 @@ var GLOSSAR = (function() {
 
     var cfg = {
             search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_exact_match: 7, // If length of searched-for word is below this threshold, '=' will be prepended to the query so that only exact matches are returned (so searching for 'fart', for example, doesn't return 'aff' due to one of aff's triggers being 'farther away'). Also helps prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Items in 'tr'/'hl' properties are unaffected and still show as configured
-            variants: ['fae|thrae|frae', 'sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
+            threshold_exact_match: 5, // If length of searched-for word is below this threshold, '=' will be prepended to the query so that only exact matches are returned (so searching for 'fart', for example, doesn't return 'aff' due to one of aff's triggers being 'farther away'). Also helps prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Items in 'tr'/'hl' properties are unaffected and still show as configured
+            variants: ['sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
             threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
             extended_cmd: '^' // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string.
         },
@@ -206,14 +206,16 @@ var GLOSSAR = (function() {
             if (state.word.length) {
 
                 if (state.word.length < cfg.threshold_exact_match && state.word.length < cfg.threshold_variants) {
-                    state.query = '=' + state.word;
+                    state.query = '=' + state.word; // Exact match
                 } else if (state.word.length < cfg.threshold_exact_match &&
                     state.word.length >= cfg.threshold_variants) {
                     state.query = processVariants(state.word, cfg.variants, '='); // Look for any variants, passing in '=' (exact match) extended command override
+                } else if (state.word.length >= cfg.threshold_variants && state.word.split(' ').length > 1) {
+                    state.query = processVariants(state.word, cfg.variants, ''); // Multi-word search, passing in empty string so Fuse looks anywhere in the string
                 } else if (state.word.length >= cfg.threshold_variants) {
-                    state.query = processVariants(state.word, cfg.variants); // Look for any variants
+                    state.query = processVariants(state.word, cfg.variants); // Search at start of word ('^'), the default
                 } else {
-                    state.query = cfg.extended_cmd + state.word;
+                    state.query = cfg.extended_cmd + state.word; // Search at start of word ('^'), but without looking for variants
                 }
 
                 $('#results').removeClass('show');
@@ -288,7 +290,7 @@ var GLOSSAR = (function() {
      */
     function processVariants(input, test, ext) {
 
-        var ext_cmd = ext ? ext : cfg.extended_cmd, // Is there an override?
+        var ext_cmd = typeof(ext) === 'string' ? ext : cfg.extended_cmd, // Is there an override?
             user_input = input.toLowerCase(),
             variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
             tests, common_word_part, variant;

@@ -215,6 +215,7 @@ G.dict.push({ // A
     en: [
         ['delirious', 'mad', 'temporarily out of one\'s senses']
     ],
+    tr: 'deleerit',
     gr: 'adj',
     or: [
         [G.notes.or.emods2, 'deleeret, deleerit, delireet'],
@@ -594,7 +595,6 @@ G.dict.push({ // A
 }, {
     sc: 'ony',
     en: 'any',
-    tr: 'onie',
     gr: 'adj',
     or: [
         [G.notes.or.as, 'ony'],
@@ -661,6 +661,19 @@ G.dict.push({ // A
     ],
     tr: ['boisterous', 'uncertain'],
     gr: 'adj'
+}, {
+    sc: 'raivelt',
+    en: [
+        ['tangled', 'confused', 'muddled', 'in difficulties'],
+        ['rambling', 'delirious'],
+        ['<span>anent hair</span> unkempt', 'dishevelled']
+    ],
+    tr: ['raivelled', 'ravelled', 'reffelled', 'unkempt'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'ravelled, rawellit'],
+        'see v'
+    ]
 }, {
     sc: 'reid',
     pr: ['rid', 'reed'],

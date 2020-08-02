@@ -462,6 +462,15 @@ G.dict.push({ // A
         [G.notes.or.as, 'over, ouer, ower'],
         [G.notes.or.ae, 'ofer']
     ]
+}, { // R
+    sc: 'raither',
+    en: 'rather',
+    tr: 'rether',
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'rather, rether, raither'],
+        [G.notes.or.ae, 'hraþor']
+    ]
 }, { // S
     sc: 'sae',
     en: 'so',

@@ -1817,6 +1817,19 @@ G.dict.push({ // A
         en: 'teach',
         gr: 'v'
     }, {
+        sc: ['think', 'hink'],
+        en: 'think',
+        pt_pp: {
+            sc: 'thocht',
+            en: 'thought',
+            tr: 'thoat'
+        },
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'think, thynk; thocht, thoucht'],
+            [G.notes.or.xx, 'ðencan, ðyncan']
+        ]
+    }, {
         sc: 'tred',
         en: 'trade',
         gr: 'v'
@@ -1836,6 +1849,22 @@ G.dict.push({ // A
         ex: 'He tuimed the watter doun the cundie',
         au: 'tuim'
     }, { // R
+        sc: 'raivel',
+        en: [
+            ['become confused, muddled or disordered'],
+            'to entangle (yarn, thread etc.)',
+            'to unwind yarn, thread etc. from a reel',
+            ['ramble', 'be delirious', 'speak incoherently'],
+            ['to confuse', 'perplex'],
+            ['to confuse', 'outwit']
+        ],
+        tr: ['ravel', 'raffle', 'entangle', 'unwind', 'entangle', 'confuse', 'snarl', 'tangle'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'ravel, rawil'],
+            [G.notes.or.d, 'ravelen, rafelen']
+        ]
+    }, {
         sc: 'rax',
         en: [
             'stretch', ['make a great effort', 'overexert', 'strain a part of yourself', 'rouse yourself'], 'deal (a person) a blow', ['lengthen by stretching', 'pull out', 'extend something to its full reach or capacity', 'be flexible or accommodating'], 'hang a person', ['reach out or over the hand or arm', 'give a person your hand'], 'extend, raise up the head or eyes in order to look or listen', 'hand a person an object', 'sprain a limb', 'reach for, stretch out to take or grasp something'

@@ -704,6 +704,15 @@ G.dict.push({
     gr: 'n',
     or: 'see v'
 }, {
+    sc: 'hame',
+    en: 'home',
+    gr: ['n', 'adv'],
+    or: [
+        [G.notes.or.as, 'hame, haim(e)'],
+        [G.notes.or.ae, 'hām']
+    ],
+    ex: ['I’m awa hame']
+}, {
     sc: 'haudin gaun',
     en: 'continuation',
     gr: 'n'
@@ -1155,6 +1164,25 @@ G.dict.push({
     en: 'use',
     gr: 'n'
 }, {
+    sc: 'raivel',
+    en: [
+        ['a muddle', 'tangle', 'confusion']
+    ],
+    tr: ['ravel', 'raffle', 'muddle', 'disorder'],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'ravel'],
+        'see v'
+    ],
+    ex: 'I wis in a raivel'
+}, {
+    sc: 'raivelment',
+    en: [
+        ['confusion', 'a tangle']
+    ],
+    tr: 'ravelment',
+    gr: 'n'
+}, {
     sc: 'rax',
     en: [
         ['stretching', 'a pull', 'a stretch'],
@@ -1199,7 +1227,9 @@ G.dict.push({
     ex: 'It wis naething but tuim rhetoric'
 }, {
     sc: 'rift',
-    en: [['a belch', 'fart']],
+    en: [
+        ['a belch', 'fart']
+    ],
     tr: ['belch', 'boak', 'boke', 'bowk'],
     hl: 'belch',
     gr: 'n',
@@ -1344,6 +1374,37 @@ G.dict.push({
         [G.notes.or.as, 'than, thyne'],
         [G.notes.or.ae, 'ðanne']
     ]
+}, {
+    sc: 'think',
+    en: 'think',
+    gr: 'n',
+    tr: ['thought', 'idea', 'opinion', 'thinking'],
+    hl: ['thought', 'idea', 'opinion'],
+    or: 'see v',
+    ex: 'I’ll hae a think',
+}, {
+    sc: ['thinking', 'hinking'],
+    pr: ['thinkin', 'hinkin'],
+    en: 'thinking',
+    tr: 'considering',
+    gr: 'n',
+    ex: 'I wis hinkin I’d gie the perty a miss gin it’s awricht wi yoursel',
+}, {
+    sc: 'thocht',
+    en: 'thought',
+    gr: 'n',
+    tr: ['idea', 'intention', 'purpose', 'opinion', 'anxiety', 'care', 'sorrow', 'burden', 'worry'],
+    or: [
+        [G.notes.or.as, 'thocht, thoucht, thought'],
+        [G.notes.or.ae, 'ðōht']
+    ],
+    ex: ['It’s a thocht tae walk the dug whan it’s sae cauld ootside']
+}, {
+    sc: ['a thocht', 'a thochtie'],
+    def: 'a wee bit, somewhat',
+    tr: ['bit', 'thocht', 'thochtie'],
+    gr: 'n',
+    ex: 'He arrived at the perty a thochtie afore us'
 }, {
     sc: 'toun',
     pr: 'toon',
