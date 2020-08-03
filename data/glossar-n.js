@@ -994,6 +994,19 @@ G.dict.push({
     ],
     tr: ['memory', 'recollection', 'mynd'],
     gr: 'n'
+}, {
+    sc: 'money',
+    en: [
+        ['money', 'wealth'],
+        ['coinage', 'currency']
+    ],
+    tr: 'siller',
+    hl: [],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'money, mone, mony, monay'],
+        [G.notes.or.me, 'monei']
+    ]
 }, { // N
     sc: 'narrative',
     def: [
@@ -1108,6 +1121,26 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.as, 'paven, pavin, pavane']
+    ]
+}, {
+    sc: 'pey',
+    en: [
+        ['pay', 'wages', 'salary']
+    ],
+    gr: 'n',
+    tr: ['compensation', 'payment', 'peyment', 'wage'],
+    hl: ['compensation', 'payment', 'wage'],
+    or: [
+        [G.notes.or.as, 'pay, pey'],
+        [G.notes.or.an, 'paie, pay']
+    ]
+}, {
+    sc: 'peyment',
+    en: 'payment',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'payment, peyment'],
+        [G.notes.or.an + ', ' + G.notes.or.mf, 'paiement']
     ]
 }, {
     sc: 'pneumonie',
@@ -1301,7 +1334,7 @@ G.dict.push({
 }, {
     sc: 'siller',
     en: ['money', 'silver'],
-    tr: ['funds', 'cash', 'wealth'],
+    tr: ['funds', 'cash', 'wealth', 'money'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'silver, siller'],

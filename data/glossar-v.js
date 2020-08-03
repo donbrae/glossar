@@ -572,7 +572,7 @@ G.dict.push({
         en: [
             ['To retch', 'vomit', 'belch <span>(also figuratively)</span>'],
         ],
-        tr: ['retch', 'belch', 'emit', 'eject', 'eructate', 'sick', 'seek', 'gush', 'spurt'],
+        tr: ['retch', 'belch', 'emit', 'eject', 'gag', 'eructate', 'sick', 'seek', 'gush', 'spurt'],
         hl: ['retch', 'belch', 'emit', 'eject', 'eructate', 'gush', 'spurt'],
         gr: 'v',
         or: [
@@ -1750,6 +1750,19 @@ G.dict.push({
         gr: 'v',
         or: [
             [G.notes.or.as, 'overgive, ourgive']
+        ]
+    }, {
+        sc: 'pey',
+        en: 'pay',
+        pt_pp: {
+            sc: 'peyed',
+            tr: 'paid'
+        },
+        tr: 'recompense',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'pay, pey'],
+            [G.notes.or.an, 'paier']
         ]
     }, { // P
         sc: 'pit',

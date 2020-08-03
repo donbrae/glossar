@@ -363,6 +363,62 @@ G.dict = [{
         [G.notes.or.ae, 'twā']
     ]
 }, {
+    sc: 'three',
+    en: 'three',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'fower',
+    en: 'four',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'five',
+    en: 'five',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'sax',
+    en: 'six',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'seiven',
+    en: 'seven',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'echt',
+    en: 'eight',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'nine',
+    en: 'nine',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'ten',
+    en: 'ten',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'eleiven',
+    en: 'eleven',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'twal',
+    en: 'twelve',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'thirteen',
+    en: 'thirteen',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'fowerteen',
+    en: 'fourteen',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'fifteen',
+    en: 'fifteen',
+    gr: ['cardinal nummer', 'adj']
+}, {
+    sc: 'saxteen',
+    en: 'sixteen',
+    gr: ['cardinal nummer', 'adj']
+}, {
     sc: 'ony',
     en: [
         ['any', 'either']
