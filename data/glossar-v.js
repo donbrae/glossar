@@ -674,6 +674,22 @@ G.dict.push({
             [G.notes.or.af, 'defaillir']
         ]
     }, {
+        sc: 'demit',
+        pt_pp: {
+            sc: 'demitit',
+            tr: 'demittit'
+        },
+        en: [
+            ['to resign', 'lay down (an office or possession)']
+        ],
+        tr: 'resign',
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'demit(t), dimit(t)'],
+            [G.notes.or.l, 'dīmittere']
+        ],
+        ex: 'The professor demitit frae the post'
+    }, {
         sc: 'depone agin',
         en: 'accuse',
         gr: 'phrasal v'

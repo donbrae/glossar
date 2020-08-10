@@ -161,7 +161,7 @@ G.dict.push({
     ],
     tr: 'body',
     gr: 'n',
-    ex: 'The tapmaist file bouk permittit is 8MB'
+    ex: 'The tapmaist file bouk permitit is 8MB'
 }, {
     sc: 'boy',
     def: 'a man',
@@ -332,6 +332,15 @@ G.dict.push({
 }, { // D
     sc: 'daeins',
     en: 'activity',
+    gr: 'n'
+}, {
+    sc: 'daftie',
+    en: [
+        ['an imbecile', 'a foolish person'],
+        'a person with learning difficulties'
+    ],
+    tr: ['imbecile', 'fool', 'fuil', 'feel', 'eejit', 'bam', 'bammer', 'bampot', 'bamstick'],
+    hl: ['imbecile', 'fool', 'fuil', 'feel'],
     gr: 'n'
 }, {
     sc: 'dask',
@@ -1251,8 +1260,6 @@ G.dict.push({
     sc: 'retiral',
     pr: 'reteeral',
     en: 'retirement',
-    tr: 'demit',
-    hl: 'retiral',
     gr: 'n',
     or: [
         ['a Modren Scots coinage; Aulder Scots haes the verb <em>retere, reteir</em>, frae the ' + G.notes.or.mf, 'retirer']

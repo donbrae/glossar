@@ -202,6 +202,24 @@ G.dict.push({ // A
         [G.notes.or.mf, 'diffamatoire']
     ]
 }, { // D
+    sc: 'daft',
+    def: ['stupit, glaikit', 'gyte, insane, awa wi it', 'frivolous, thochtless'],
+    tr: ['unintelligent', 'stupid', 'stupit', 'gyte', 'crazy', 'insane', 'frivolous', 'thochtless', 'thoughtless', 'foolish'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'daft(e)'],
+        [G.notes.or.ae, 'gedæfte']
+    ]
+}, {
+    sc: 'deif',
+    pr: ['deef', 'dehf'],
+    en: 'deaf',
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'deif, defe'],
+        [G.notes.or.ae, 'dēaf']
+    ]
+}, {
     sc: 'defeat',
     tr: ['defait', 'defeet'],
     en: [
@@ -215,7 +233,8 @@ G.dict.push({ // A
     en: [
         ['delirious', 'mad', 'temporarily out of one\'s senses']
     ],
-    tr: 'deleerit',
+    tr: ['deleerit', 'dementit', 'crazy', 'mad', 'daft', 'insane'],
+    hl: ['deleerit', 'dementit', 'crazy', 'mad', 'insane'],
     gr: 'adj',
     or: [
         [G.notes.or.emods2, 'deleeret, deleerit, delireet'],
@@ -425,6 +444,16 @@ G.dict.push({ // A
     or: 'see adv',
     ex: ['It wis a gey trauchle winnin at the tap o Lee Pen', 'It’s gey cauld the nicht']
 }, {
+    sc: 'glaikit',
+    en: [
+        ['stupid', 'thoughtless', 'irresponsible', 'flighty', 'frivolous']
+    ],
+    tr: ['glakit', 'glaickit', 'stupit', 'thochtless'],
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'glaikit']
+    ]
+}, {
     sc: 'gray',
     tr: 'grey',
     def: 'o a colour somegate atween black and white',
@@ -439,6 +468,18 @@ G.dict.push({ // A
         [G.notes.or.as, 'gud(e), guid'],
         [G.notes.or.ae, 'gōd']
     ]
+}, {
+    sc: 'gyte',
+    en: [
+        ['insane', 'mad (with rage or pain)', 'demented'],
+        'nonsensical',
+        ['silly', 'foolish', 'stupid'],
+        ['love-sick', 'overly eager']
+    ],
+    tr: ['dementit', 'fuil', 'feel', 'crazy', 'stupit', 'awry', 'mad', 'deleerit', 'daft'],
+    hl: ['dementit', 'fuil', 'feel', 'crazy', 'stupit', 'awry', 'mad'],
+    gr: 'adj',
+    or: 'unkent'
 }, { // H
     sc: 'het',
     pr: ['heht', 'hait'],
@@ -506,6 +547,17 @@ G.dict.push({ // A
         [G.notes.or.mf, 'accointe']
     ],
     ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the minister’s view anent the maiter']
+}, {
+    sc: 'knackie',
+    en: [
+        ['adroit', 'deft', 'ingenious', 'skillful'],
+        ['witty', 'entertaining', 'facetious'],
+        ['nimble', 'smart'],
+        ['trim', 'neatly built', 'spruce', 'dainty']
+    ],
+    tr: ['skeely', 'clever', 'nippy'],
+    hl: [],
+    gr: 'adj'
 }, { // L
     sc: 'laident',
     en: 'burdened',
@@ -550,8 +602,8 @@ G.dict.push({ // A
 }, {
     sc: 'michty',
     en: 'mighty',
-    tr: ['powerful', 'important', 'rich', 'strong', 'big', 'muckle', 'sumptuous', 'loud'],
-    hl: ['powerful', 'important', 'rich', 'strong', 'big', 'sumptuous', 'loud'],
+    tr: ['powerful', 'important', 'rich', 'strong', 'big', 'muckle', 'sumptuous', 'loud', 'huge', 'large'],
+    hl: ['powerful', 'important', 'rich', 'strong', 'big', 'sumptuous', 'loud', 'huge', 'large'],
     gr: 'adj',
     or: [
         [G.notes.or.as, 'mychty, mychti, michty'],
@@ -651,6 +703,15 @@ G.dict.push({ // A
     sc: 'pyntit',
     en: 'decisive',
     gr: 'adj'
+}, {
+    sc: 'quirkie',
+    en: [
+        ['intricate', 'complicated', 'twisted'],
+        ['cunning', 'wily', 'resourceful', 'tricky'],
+    ],
+    tr: ['complex', 'complicatit'],
+    gr: 'adj',
+    or: 'unkent'
 }, { // R
     sc: 'ragglish',
     en: [

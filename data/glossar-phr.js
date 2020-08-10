@@ -130,4 +130,9 @@ G.dict.push({
     en: 'why not?',
     tr: ['hoo no', 'how no', 'why not'],
     gr: 'phr'
+}, {
+    sc: 'keep the heid',
+    en: 'remain calm',
+    tr: ['keep calm', 'keep caum'],
+    gr: 'phr'
 });

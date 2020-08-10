@@ -561,6 +561,7 @@ G.dict.push({ // A
 }, {
     sc: 'the day',
     en: 'today',
+    tr: 'nowadays',
     gr: ['adv', 'n'],
     ex: [G.ex.n, G.ex.o, G.ex.p],
     or: '<span>the day</span> first appears in scrievit form in ' + G.notes.or.as + ' frae aboot 1500'
