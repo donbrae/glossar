@@ -789,8 +789,8 @@ G.dict.push({
     ex: 'The forgaitherin o the management comatee is tae stert at twa oors, juist efter denner'
 }, {
     sc: 'hoose',
-    en: 'house',
-    tr: 'hous',
+    def: 'A place whaur fowk bides, the biggin whaur ye stey; a dwallin (ane o several in a biggin)',
+    tr: ['hous', 'house'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'hous, hows, hus(e)'],

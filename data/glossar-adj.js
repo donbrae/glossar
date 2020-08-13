@@ -53,6 +53,14 @@ G.dict.push({ // A
         [G.notes.or.ms, 'alla-volie'],
         ['frae the ' + G.notes.or.f, 'à la volée']
     ]
+}, {
+    sc: 'auld',
+    en: 'old',
+    gr: ['adj', 'n'],
+    or: [
+        [G.notes.or.as, 'auld, ald(e)'],
+        [G.notes.or.ae, 'ald']
+    ]
 }, { // B
     sc: 'baltic',
     def: 'o the weather, the temperatur: fell cauld',
@@ -634,6 +642,12 @@ G.dict.push({ // A
         [G.notes.or.ae, 'micel'],
         [G.notes.or.anor, 'mikill']
     ]
+}, {
+    sc: 'no weel',
+    en: 'ill',
+    tr: ['sick', 'seek', 'unwell'],
+    gr: 'phrasal adj',
+    ex: 'I’m feelin no weel the day'
 }, { // O
     sc: 'ocht',
     en: 'any',
@@ -743,13 +757,15 @@ G.dict.push({ // A
     gr: 'adj',
     or: [
         [G.notes.or.as, 'rede, reid'],
-        [G.notes.or.me, 'red']
+        [G.notes.or.me, 'red'],
         [G.notes.or.ae, 'rēod']
     ]
 }, {
     sc: 'richt',
     en: 'right',
-    gr: ['adj', 'adv', 'n', 'v', 'exclamation']
+    tr: 'correctly',
+    gr: ['adj', 'adv', 'n', 'v', 'exclamation'],
+    ex: ['They’r frae Dundee if I mind richt']
 }, { // S
     sc: 'sair',
     en: [
