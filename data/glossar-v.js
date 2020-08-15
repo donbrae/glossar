@@ -1319,6 +1319,12 @@ G.dict.push({
         gr: 'v'
         // or:
     }, {
+    sc: 'keech',
+    en: 'to defecate',
+    tr: ['defecate', 'shite'],
+    gr: 'v',
+    or: 'see the noun'
+}, {
         sc: 'ken',
         en: 'know',
         neg: {
@@ -2068,6 +2074,23 @@ G.dict.push({
         ],
         tr: 'rouse',
         gr: 'v'
+    }, {
+        sc: 'wale',
+        pt_pp: {
+            sc: 'waled',
+            tr: ['chose', 'chosen', 'selected', 'picked', 'picked out']
+        },
+        en: [
+            ['choose', 'select'],
+            ['arrange', 'sort']
+        ],
+        tr: ['pick', 'pick out', 'wale oot'],
+        gr: 'v',
+        or: [
+            [G.notes.or.as, 'waill'],
+            [G.notes.or.anor, 'val']
+        ],
+        ex: 'Clap the button for tae wale oot a wird allevolie'
     }, {
         sc: 'wirk',
         pr: ['wirk, wurk'],

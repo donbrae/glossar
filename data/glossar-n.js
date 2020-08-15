@@ -857,6 +857,14 @@ G.dict.push({
     gr: ['n', 'obsolete'],
     or: 'see v'
 }, {
+    sc: 'keech',
+    def: ['a lump o excrement; filth, clart', 'haivers, bletheration'],
+        tr: ['excrement', 'filth', 'clart', 'haivers', 'bletheration', 'nonsense', 'rubbish', 'pish', 'shite', 'jobby'],
+    hl: ['excrement', 'filth', 'nonsense', 'rubbish'],
+    gr: 'n',
+    or: 'frae the Scots <i>cack</i>',
+    ex: 'Ye’r talkin keech!'
+}, {
     sc: 'knawledge',
     en: 'knowledge',
     gr: 'n'
@@ -1526,6 +1534,15 @@ G.dict.push({
     tr: ['websteid'],
     gr: 'n',
     au: ['wabsite', 'wabsteid']
+}, {
+    sc: 'wale',
+    en: 'choice',
+    gr: 'n',
+    tr: ['pick', 'selection'],
+    or: [
+        [G.notes.or.as, 'waill'],
+        [G.notes.or.an, 'val']
+    ]
 }, {
     sc: 'wark',
     en: 'work',
