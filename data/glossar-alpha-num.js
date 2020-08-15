@@ -2,8 +2,7 @@
  * Alpha-numeric
  */
 
-G.dict.push(
-{
+G.dict.push({
     // sc: ['A', 'aw'],
     // def: 'first letter o the alphabet',
     // pr: ['aw', 'ah', 'ae']

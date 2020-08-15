@@ -438,116 +438,116 @@ G.v.lat.trigs = ['allow', 'permit', 'cause', 'make happen', 'luit', 'latten', 'l
  */
 
 G.dict.push({
-        sc: 'abbreviate',
-        en: [
-            ['to shorten', 'abridge', 'summarize']
-        ],
-        tr: 'shorten',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'abbreviat'],
-            [G.notes.or.l, 'abbreviāre']
-        ]
-    }, { // A
-        sc: 'accress',
-        pt_pp: {
-            sc: 'accressed',
-            tr: ['increased', 'accrued', 'grown', 'grew']
-        },
-        en: ['accrue', ['increase', 'grow']],
-        gr: ['v', 'obsolete'],
-        tr: 'added',
-        hl: 'accress',
-        or: [
-            [G.notes.or.as, 'accress, accresce'],
-            ['frae the ' + G.notes.or.rl + ' term', 'accrescere']
-        ]
-    }, {
-        sc: 'adduce',
-        en: ['cite as pertinent, quote as evidence'],
-        tr: 'pertain',
-        hl: 'adduce',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'adduce'],
-            [G.notes.or.l, 'adūcere']
-        ]
-    }, {
-        sc: 'aff',
-        en: 'off',
-        gr: ['v', 'adj', 'adv', 'prep'],
-        tr: ['depart', 'departing', 'take off', 'remove', 'away from', 'aside', 'farther off', 'away'],
-        or: [
-            [G.notes.or.as, 'af, aff, affe'],
-            [G.notes.or.ae, 'of']
-        ],
-        ex: ['Richt, I’m aff!', 'Ye’ll nae tae tak the hub caps aff', 'I’m a lang gate aff yet', 'He parked the car aff tae the side']
-    }, {
-        sc: 'allocate',
-        def: 'tae assign',
-        pt: {
-            sc: 'allocatit',
-            tr: ['allocated', 'assigned']
-        },
-        pp: {
-            sc: 'allocate',
-            tr: ['allocated', 'allocatit', 'assigned']
-        },
-        tr: ['assign', 'appoint'],
-        hl: 'assign',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'allocat'],
-            [G.notes.or.l, 'allocāt-, <span>ptp stem o</span> allocāre']
-        ],
-        ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', 'Resources haes been allocate tae them that’s maist in need']
-    }, { // v be
-        sc: G.v.be.sc,
-        en: G.v.be.en,
-        gr: 'v'
-    }, { // am
-        sc: G.v.be.ps.sc,
-        en: G.v.be.ps.en,
-        tr: [].concat(G.v.be.trigs, G.v.be.ps.tr),
-        hl: G.v.be.ps.tr,
-        gr: 'present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
-    }, { // amna
-        sc: G.v.be.ps.neg.sc,
-        en: G.v.be.ps.neg.en,
-        tr: [].concat(G.v.be.trigs, G.v.be.ps.neg.tr),
-        hl: G.v.be.ps.neg.tr,
-        gr: 'present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
-    }, { // is
-        sc: G.v.be.tpps.sc,
-        en: G.v.be.tpps.en,
-        tr: G.v.be.trigs,
-        hl: [],
-        gr: 'third person present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
-    }, { // isna
-        sc: G.v.be.tpps.neg.sc,
-        en: G.v.be.tpps.neg.en,
-        tr: G.v.be.trigs,
-        hl: [],
-        gr: 'third person present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
-    }, { // are
-        sc: G.v.be.psp.sc,
-        en: G.v.be.psp.en,
-        tr: [].concat(G.v.be.trigs, G.v.be.psp.tr),
-        hl: G.v.be.psp.tr,
-        gr: 'present singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
-    }, { // arena
-        sc: G.v.be.psp.neg.sc,
-        en: G.v.be.psp.neg.en,
-        tr: [].concat(G.v.be.trigs, G.v.be.psp.neg.tr),
-        hl: G.v.be.psp.neg.tr,
-        gr: 'present singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
-    }, { // binna
-        sc: G.v.be.neg.sc,
-        en: G.v.be.neg.en,
-        tr: [].concat(G.v.be.trigs, G.v.be.neg.tr),
-        hl: G.v.be.neg.tr,
-        gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; literar'
+    sc: 'abbreviate',
+    en: [
+        ['to shorten', 'abridge', 'summarize']
+    ],
+    tr: 'shorten',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'abbreviat'],
+        [G.notes.or.l, 'abbreviāre']
+    ]
+}, { // A
+    sc: 'accress',
+    pt_pp: {
+        sc: 'accressed',
+        tr: ['increased', 'accrued', 'grown', 'grew']
     },
+    en: ['accrue', ['increase', 'grow']],
+    gr: ['v', 'obsolete'],
+    tr: 'added',
+    hl: 'accress',
+    or: [
+        [G.notes.or.as, 'accress, accresce'],
+        ['frae the ' + G.notes.or.rl + ' term', 'accrescere']
+    ]
+}, {
+    sc: 'adduce',
+    en: ['cite as pertinent, quote as evidence'],
+    tr: 'pertain',
+    hl: 'adduce',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'adduce'],
+        [G.notes.or.l, 'adūcere']
+    ]
+}, {
+    sc: 'aff',
+    en: 'off',
+    gr: ['v', 'adj', 'adv', 'prep'],
+    tr: ['depart', 'departing', 'take off', 'remove', 'away from', 'aside', 'farther off', 'away'],
+    or: [
+        [G.notes.or.as, 'af, aff, affe'],
+        [G.notes.or.ae, 'of']
+    ],
+    ex: ['Richt, I’m aff!', 'Ye’ll nae tae tak the hub caps aff', 'I’m a lang gate aff yet', 'He parked the car aff tae the side']
+}, {
+    sc: 'allocate',
+    def: 'tae assign',
+    pt: {
+        sc: 'allocatit',
+        tr: ['allocated', 'assigned']
+    },
+    pp: {
+        sc: 'allocate',
+        tr: ['allocated', 'allocatit', 'assigned']
+    },
+    tr: ['assign', 'appoint'],
+    hl: 'assign',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'allocat'],
+        [G.notes.or.l, 'allocāt-, <span>ptp stem o</span> allocāre']
+    ],
+    ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', 'Resources haes been allocate tae them that’s maist in need']
+}, { // v be
+    sc: G.v.be.sc,
+    en: G.v.be.en,
+    gr: 'v'
+}, { // am
+    sc: G.v.be.ps.sc,
+    en: G.v.be.ps.en,
+    tr: [].concat(G.v.be.trigs, G.v.be.ps.tr),
+    hl: G.v.be.ps.tr,
+    gr: 'present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+}, { // amna
+    sc: G.v.be.ps.neg.sc,
+    en: G.v.be.ps.neg.en,
+    tr: [].concat(G.v.be.trigs, G.v.be.ps.neg.tr),
+    hl: G.v.be.ps.neg.tr,
+    gr: 'present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+}, { // is
+    sc: G.v.be.tpps.sc,
+    en: G.v.be.tpps.en,
+    tr: G.v.be.trigs,
+    hl: [],
+    gr: 'third person present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+}, { // isna
+    sc: G.v.be.tpps.neg.sc,
+    en: G.v.be.tpps.neg.en,
+    tr: G.v.be.trigs,
+    hl: [],
+    gr: 'third person present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+}, { // are
+    sc: G.v.be.psp.sc,
+    en: G.v.be.psp.en,
+    tr: [].concat(G.v.be.trigs, G.v.be.psp.tr),
+    hl: G.v.be.psp.tr,
+    gr: 'present singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+}, { // arena
+    sc: G.v.be.psp.neg.sc,
+    en: G.v.be.psp.neg.en,
+    tr: [].concat(G.v.be.trigs, G.v.be.psp.neg.tr),
+    hl: G.v.be.psp.neg.tr,
+    gr: 'present singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+}, { // binna
+    sc: G.v.be.neg.sc,
+    en: G.v.be.neg.en,
+    tr: [].concat(G.v.be.trigs, G.v.be.neg.tr),
+    hl: G.v.be.neg.tr,
+    gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; literar'
+},
     // v be end
     {
         sc: 'big',
@@ -568,289 +568,289 @@ G.dict.push({
         ],
         au: 'big'
     }, {
-        sc: ['boak', 'boke', 'bowk'],
-        en: [
-            ['To retch', 'vomit', 'belch <span>(also figuratively)</span>'],
-        ],
-        tr: ['retch', 'belch', 'emit', 'eject', 'gag', 'eructate', 'sick', 'seek', 'gush', 'spurt'],
-        hl: ['retch', 'belch', 'emit', 'eject', 'eructate', 'gush', 'spurt'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'bok, bock, bolk'],
-        ]
-    }, { // can
-        sc: G.v.can.sc,
-        en: G.v.can.en,
-        pr: G.v.can.pr,
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'can, kan'],
-            [G.notes.or.ae, 'cunnan']
-        ]
-    }, { // can neg
-        sc: G.v.can.neg.sc,
-        sc_alt: G.v.can.neg.sc_alt,
-        pr: G.v.can.neg.pr,
-        en: G.v.can.neg.en,
-        tr: [].concat(G.v.can.trigs, G.v.can.neg.tr),
-        hl: G.v.can.neg.tr,
-        gr: 'neg o the v ' + G.utils.addSpan(G.v.can.sc)
-    }, { // can past tense
-        sc: G.v.can.pt.sc,
-        en: G.v.can.pt.en,
-        tr: G.v.can.trigs,
-        hl: [],
-        gr: 'pt o the v ' + G.utils.addSpan(G.v.can.sc)
-    }, { // can past tense neg
-        sc: G.v.can.pt.neg.sc,
-        en: G.v.can.pt.neg.en,
-        tr: [].concat(G.v.can.trigs, G.v.can.pt.neg.tr),
-        hl: G.v.can.pt.neg.tr,
-        gr: 'neg pt o the v ' + G.utils.addSpan(G.v.can.sc)
-    }, { // C
-        sc: 'cast-ower',
-        en: 'review',
-        tr: ['cast ower'],
-        gr: 'phrasal v',
-        ex: 'Whiles we will cast-ower the policy an mak mair recommends'
-    }, {
-        sc: 'complouther',
-        pr: 'comploother',
-        en: [
-            ['mix or associate with'],
-            ['agree, coincide or fit in with']
-        ],
-        pt_pp: {
-            sc: 'complouthert'
-        },
-        tr: ['agree', 'coincide', 'fit in', 'mix with', 'associate with'],
-        gr: 'v',
-        or: 'see n'
-    }, {
-        sc: 'comprise',
-        en: [
-            ['include', 'contain', 'consist of'],
-            ['appraise', 'value']
-        ],
-        tr: 'make up',
-        hl: 'comprise',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'comprise, compryse, comprize'],
-            [G.notes.or.mf, 'compris']
-        ]
-    }, {
-        sc: 'consider',
-        pr: 'conseeder',
-        def: 'tae think on, tak intil accoont',
-        pt_pp: {
-            sc: ['considert', 'considered'],
-            tr: 'considered'
-        },
-        tr: ['think on', 'consider'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'consider, considder'],
-            [G.notes.or.af, 'considerer'],
-            [G.notes.or.l, 'consīderāre']
-        ]
-    }, {
-        sc: 'contrair',
-        en: [
-            ['oppose', 'contradict', 'go contrary to', 'act or speak against']
-        ],
-        tr: 'against',
-        hl: 'contrair',
-        gr: 'v',
-        or: 'see n',
-        ex: ['He contraired the new regulations the Pairlament haed pitten intae law']
-    }, { // D
-        sc: 'defaut',
-        en: 'to fail to fulfil an obligation or pay a debt',
-        tr: 'default',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'defalt, defawt, defaut'],
-            [G.notes.or.af, 'defaillir']
-        ]
-    }, {
-        sc: 'demit',
-        pt_pp: {
-            sc: 'demitit',
-            tr: 'demittit'
-        },
-        en: [
-            ['to resign', 'lay down (an office or possession)']
-        ],
-        tr: 'resign',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'demit(t), dimit(t)'],
-            [G.notes.or.l, 'dīmittere']
-        ],
-        ex: 'The professor demitit frae the post'
-    }, {
-        sc: 'depone agin',
-        en: 'accuse',
-        gr: 'phrasal v'
-    }, {
-        sc: 'defeat',
-        pr: ['defait', 'defeet'],
-        en: 'defeat',
-        pt_pp: {
-            sc: 'defeat',
-            tr: ['defeated', 'defait', 'defeet']
-        },
-        ex: 'Hibs war defeat by Hearts in the Cup final on Seturday',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'defait', 'defett'], G.notes.or.af + ' <span>desfait</span>, ptp o <span>desfaire</span>'
-        ]
-    }, {
-        sc: 'depone',
-        en: [
-            ['make a sworn statement', 'swear', 'testify', 'give evidence on oath']
-        ],
-        pt_pp: {
-            sc: ['deponed', 'depone’t'],
-            tr: ['swore', 'sworn', 'testified']
-        },
-        tr: 'declare',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'depone'],
-            [G.notes.or.l, 'dēpōnere']
-        ]
-    }, {
-        sc: 'depute',
-        pt_pp: {
-            sc: 'depute',
-            tr: 'deputised'
-        },
-        def: 'apynt as depute',
-        gr: 'v',
-        ex: 'Aaron wis depute tae cover for his manager at the comatee meetin',
-        or: [
-            [G.notes.or.as, 'depute, deput'],
-            [G.notes.or.af, 'deputer']
-        ]
-    }, {
-        sc: 'deburse',
-        en: 'disburse',
-        def: 'pey oot (siller frae a fund)',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'deburs, debours'],
-            [G.notes.or.mf, 'desbourser']
-        ]
-    }, {
-        sc: 'develop',
-        en: 'develop',
-        pt_pp: {
-            sc: 'developit',
-            tr: 'developed'
-        },
-        tr: ['mak', 'make'],
-        hl: 'develop',
-        gr: 'v'
-    }, {
-        sc: 'descrive',
-        pr: ['descreeve', 'descryve'],
-        pt_pp: {
-            sc: 'descrived',
-            tr: 'described'
-        },
-        en: 'describe',
-        tr: ['descrieve', 'discrieve'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'descrive, descryve, discrive, discryve'],
-            [G.notes.or.me, 'descriven']
-        ]
-    }, {
-        sc: 'differ',
-        en: [
-            ['be dissimilar or distinct'],
-            ['quarrel', 'disagree']
-        ],
-        tr: 'row',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'differ'],
-            [G.notes.or.mf, 'differer']
-        ]
-    }, { // E
-        sc: 'ettle',
-        en: [
-            ['intend', 'plan', 'propose'],
-            'take aim at', ['attempt', 'venture'],
-            'desire very much'
-        ],
-        pt_pp: {
-            sc: 'ettelt',
-            tr: ['intended', 'planned', 'proposed', 'attempted', 'ventured']
-        },
-        tr: ['aim', 'desire', 'ettlin'],
-        hl: ['aim', 'desire'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'ettle, ettill'],
-            [G.notes.or.anor, 'ætla']
-        ]
-    }, {
-        sc: 'ettlin',
-        en: [
-            ['endeavouring', 'trying']
-        ],
-        tr: ['attempting', 'ettle'],
-        hl: ['ettlin'],
-        gr: ['v'],
-        ex: [G.ex.i1, G.ex.g1]
-    }, {
-        sc: 'ettle sair',
-        en: [
-            ['try hard', 'strive']
-        ],
-        pt_pp: {
-            sc: 'ettelt sair',
-            tr: ['tried hard', 'strove', 'striven', 'strived']
-        },
-        gr: 'phrasal v',
-        ex: 'She’d ettelt sair tae pass aw her exams',
-        ph: true
-    }, {
-        sc: 'evite',
-        pr: ['evite', 'eveet'],
-        en: [
-            ['avoid', 'escape', 'shun', 'evade']
-        ],
-        pt_pp: {
-            sc: 'evitit',
-            tr: ['avoided', 'escaped', 'shunned', 'evaded', 'evited']
-        },
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'evit(e), eveit'],
-            [G.notes.or.f, 'éviter'],
-            [G.notes.or.l, 'ēvītāre']
-        ],
-        ex: 'He tried tae evite bein liftit by the polis'
-    }, {
-        sc: ['examine', 'exaimine'],
-        pt_pp: {
-            sc: ['examint', 'exaimint'],
-            tr: 'examined'
-        },
-        en: [
-            ['inspect', 'question', 'investigate']
-        ],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'examin, exemyn'],
-            [G.notes.or.mf, 'examiner'],
-            [G.notes.or.l, 'exāmināre']
-        ]
+    sc: ['boak', 'boke', 'bowk'],
+    en: [
+        ['To retch', 'vomit', 'belch <span>(also figuratively)</span>'],
+    ],
+    tr: ['retch', 'belch', 'emit', 'eject', 'gag', 'eructate', 'sick', 'seek', 'gush', 'spurt'],
+    hl: ['retch', 'belch', 'emit', 'eject', 'eructate', 'gush', 'spurt'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'bok, bock, bolk'],
+    ]
+}, { // can
+    sc: G.v.can.sc,
+    en: G.v.can.en,
+    pr: G.v.can.pr,
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'can, kan'],
+        [G.notes.or.ae, 'cunnan']
+    ]
+}, { // can neg
+    sc: G.v.can.neg.sc,
+    sc_alt: G.v.can.neg.sc_alt,
+    pr: G.v.can.neg.pr,
+    en: G.v.can.neg.en,
+    tr: [].concat(G.v.can.trigs, G.v.can.neg.tr),
+    hl: G.v.can.neg.tr,
+    gr: 'neg o the v ' + G.utils.addSpan(G.v.can.sc)
+}, { // can past tense
+    sc: G.v.can.pt.sc,
+    en: G.v.can.pt.en,
+    tr: G.v.can.trigs,
+    hl: [],
+    gr: 'pt o the v ' + G.utils.addSpan(G.v.can.sc)
+}, { // can past tense neg
+    sc: G.v.can.pt.neg.sc,
+    en: G.v.can.pt.neg.en,
+    tr: [].concat(G.v.can.trigs, G.v.can.pt.neg.tr),
+    hl: G.v.can.pt.neg.tr,
+    gr: 'neg pt o the v ' + G.utils.addSpan(G.v.can.sc)
+}, { // C
+    sc: 'cast-ower',
+    en: 'review',
+    tr: ['cast ower'],
+    gr: 'phrasal v',
+    ex: 'Whiles we will cast-ower the policy an mak mair recommends'
+}, {
+    sc: 'complouther',
+    pr: 'comploother',
+    en: [
+        ['mix or associate with'],
+        ['agree, coincide or fit in with']
+    ],
+    pt_pp: {
+        sc: 'complouthert'
     },
+    tr: ['agree', 'coincide', 'fit in', 'mix with', 'associate with'],
+    gr: 'v',
+    or: 'see n'
+}, {
+    sc: 'comprise',
+    en: [
+        ['include', 'contain', 'consist of'],
+        ['appraise', 'value']
+    ],
+    tr: 'make up',
+    hl: 'comprise',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'comprise, compryse, comprize'],
+        [G.notes.or.mf, 'compris']
+    ]
+}, {
+    sc: 'consider',
+    pr: 'conseeder',
+    def: 'tae think on, tak intil accoont',
+    pt_pp: {
+        sc: ['considert', 'considered'],
+        tr: 'considered'
+    },
+    tr: ['think on', 'consider'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'consider, considder'],
+        [G.notes.or.af, 'considerer'],
+        [G.notes.or.l, 'consīderāre']
+    ]
+}, {
+    sc: 'contrair',
+    en: [
+        ['oppose', 'contradict', 'go contrary to', 'act or speak against']
+    ],
+    tr: 'against',
+    hl: 'contrair',
+    gr: 'v',
+    or: 'see n',
+    ex: ['He contraired the new regulations the Pairlament haed pitten intae law']
+}, { // D
+    sc: 'defaut',
+    en: 'to fail to fulfil an obligation or pay a debt',
+    tr: 'default',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'defalt, defawt, defaut'],
+        [G.notes.or.af, 'defaillir']
+    ]
+}, {
+    sc: 'demit',
+    pt_pp: {
+        sc: 'demitit',
+        tr: 'demittit'
+    },
+    en: [
+        ['to resign', 'lay down (an office or possession)']
+    ],
+    tr: 'resign',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'demit(t), dimit(t)'],
+        [G.notes.or.l, 'dīmittere']
+    ],
+    ex: 'The professor demitit frae the post'
+}, {
+    sc: 'depone agin',
+    en: 'accuse',
+    gr: 'phrasal v'
+}, {
+    sc: 'defeat',
+    pr: ['defait', 'defeet'],
+    en: 'defeat',
+    pt_pp: {
+        sc: 'defeat',
+        tr: ['defeated', 'defait', 'defeet']
+    },
+    ex: 'Hibs war defeat by Hearts in the Cup final on Seturday',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'defait', 'defett'], G.notes.or.af + ' <span>desfait</span>, ptp o <span>desfaire</span>'
+    ]
+}, {
+    sc: 'depone',
+    en: [
+        ['make a sworn statement', 'swear', 'testify', 'give evidence on oath']
+    ],
+    pt_pp: {
+        sc: ['deponed', 'depone’t'],
+        tr: ['swore', 'sworn', 'testified']
+    },
+    tr: 'declare',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'depone'],
+        [G.notes.or.l, 'dēpōnere']
+    ]
+}, {
+    sc: 'depute',
+    pt_pp: {
+        sc: 'depute',
+        tr: 'deputised'
+    },
+    def: 'apynt as depute',
+    gr: 'v',
+    ex: 'Aaron wis depute tae cover for his manager at the comatee meetin',
+    or: [
+        [G.notes.or.as, 'depute, deput'],
+        [G.notes.or.af, 'deputer']
+    ]
+}, {
+    sc: 'deburse',
+    en: 'disburse',
+    def: 'pey oot (siller frae a fund)',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'deburs, debours'],
+        [G.notes.or.mf, 'desbourser']
+    ]
+}, {
+    sc: 'develop',
+    en: 'develop',
+    pt_pp: {
+        sc: 'developit',
+        tr: 'developed'
+    },
+    tr: ['mak', 'make'],
+    hl: 'develop',
+    gr: 'v'
+}, {
+    sc: 'descrive',
+    pr: ['descreeve', 'descryve'],
+    pt_pp: {
+        sc: 'descrived',
+        tr: 'described'
+    },
+    en: 'describe',
+    tr: ['descrieve', 'discrieve'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'descrive, descryve, discrive, discryve'],
+        [G.notes.or.me, 'descriven']
+    ]
+}, {
+    sc: 'differ',
+    en: [
+        ['be dissimilar or distinct'],
+        ['quarrel', 'disagree']
+    ],
+    tr: 'row',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'differ'],
+        [G.notes.or.mf, 'differer']
+    ]
+}, { // E
+    sc: 'ettle',
+    en: [
+        ['intend', 'plan', 'propose'],
+        'take aim at', ['attempt', 'venture'],
+        'desire very much'
+    ],
+    pt_pp: {
+        sc: 'ettelt',
+        tr: ['intended', 'planned', 'proposed', 'attempted', 'ventured']
+    },
+    tr: ['aim', 'desire', 'ettlin'],
+    hl: ['aim', 'desire'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'ettle, ettill'],
+        [G.notes.or.anor, 'ætla']
+    ]
+}, {
+    sc: 'ettlin',
+    en: [
+        ['endeavouring', 'trying']
+    ],
+    tr: ['attempting', 'ettle'],
+    hl: ['ettlin'],
+    gr: ['v'],
+    ex: [G.ex.i1, G.ex.g1]
+}, {
+    sc: 'ettle sair',
+    en: [
+        ['try hard', 'strive']
+    ],
+    pt_pp: {
+        sc: 'ettelt sair',
+        tr: ['tried hard', 'strove', 'striven', 'strived']
+    },
+    gr: 'phrasal v',
+    ex: 'She’d ettelt sair tae pass aw her exams',
+    ph: true
+}, {
+    sc: 'evite',
+    pr: ['evite', 'eveet'],
+    en: [
+        ['avoid', 'escape', 'shun', 'evade']
+    ],
+    pt_pp: {
+        sc: 'evitit',
+        tr: ['avoided', 'escaped', 'shunned', 'evaded', 'evited']
+    },
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'evit(e), eveit'],
+        [G.notes.or.f, 'éviter'],
+        [G.notes.or.l, 'ēvītāre']
+    ],
+    ex: 'He tried tae evite bein liftit by the polis'
+}, {
+    sc: ['examine', 'exaimine'],
+    pt_pp: {
+        sc: ['examint', 'exaimint'],
+        tr: 'examined'
+    },
+    en: [
+        ['inspect', 'question', 'investigate']
+    ],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'examin, exemyn'],
+        [G.notes.or.mf, 'examiner'],
+        [G.notes.or.l, 'exāmināre']
+    ]
+},
     // v gae
     { // v gae
         sc: G.v.gae.sc,
@@ -859,48 +859,48 @@ G.dict.push({
         hl: [],
         gr: 'v'
     }, { // v gae neg
-        sc: G.v.gae.neg.sc,
-        en: G.v.gae.neg.en,
-        tr: [].concat(G.v.gae.trigs, G.v.gae.neg.tr),
-        hl: G.v.gae.neg.tr,
-        gr: 'neg o ' + G.v.gae.meta.gr_hw
-    }, { // v gae neg third person singular
-        sc: G.v.gae.neg.tps.sc,
-        en: G.v.gae.neg.tps.en,
-        tr: [].concat(G.v.gae.trigs, G.v.gae.neg.tps.tr),
-        hl: G.v.gae.neg.tps.tr,
-        gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw
-    }, { // v gae pt
-        sc: G.v.gae.pt.sc,
-        en: G.v.gae.pt.en,
-        tr: [].concat(G.v.gae.trigs, G.v.gae.pt.tr),
-        hl: G.v.gae.pt.tr,
-        gr: 'pt o ' + G.v.gae.meta.gr_hw
-    }, { // v gae pt neg
-        sc: G.v.gae.pt.neg.sc,
-        en: G.v.gae.pt.neg.en,
-        tr: G.v.gae.trigs,
-        hl: [],
-        gr: 'neg pt o ' + G.v.gae.meta.gr_hw
-    }, { // v gae pp
-        sc: G.v.gae.pp.sc,
-        en: G.v.gae.pp.en,
-        tr: G.v.gae.trigs,
-        hl: [],
-        gr: 'pp o ' + G.v.gae.meta.gr_hw
-    }, { // v gae -ing form
-        sc: G.v.gae.ing.sc,
-        en: G.v.gae.ing.en,
-        tr: G.v.gae.trigs,
-        hl: [],
-    }, { // v Third person singular
-        sc: G.v.gae.tps.sc,
-        en: G.v.gae.tps.en,
-        tr: G.v.gae.trigs,
-        hl: [],
-        gr: 'third person singular o ' + G.v.gae.meta.gr_hw
+    sc: G.v.gae.neg.sc,
+    en: G.v.gae.neg.en,
+    tr: [].concat(G.v.gae.trigs, G.v.gae.neg.tr),
+    hl: G.v.gae.neg.tr,
+    gr: 'neg o ' + G.v.gae.meta.gr_hw
+}, { // v gae neg third person singular
+    sc: G.v.gae.neg.tps.sc,
+    en: G.v.gae.neg.tps.en,
+    tr: [].concat(G.v.gae.trigs, G.v.gae.neg.tps.tr),
+    hl: G.v.gae.neg.tps.tr,
+    gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw
+}, { // v gae pt
+    sc: G.v.gae.pt.sc,
+    en: G.v.gae.pt.en,
+    tr: [].concat(G.v.gae.trigs, G.v.gae.pt.tr),
+    hl: G.v.gae.pt.tr,
+    gr: 'pt o ' + G.v.gae.meta.gr_hw
+}, { // v gae pt neg
+    sc: G.v.gae.pt.neg.sc,
+    en: G.v.gae.pt.neg.en,
+    tr: G.v.gae.trigs,
+    hl: [],
+    gr: 'neg pt o ' + G.v.gae.meta.gr_hw
+}, { // v gae pp
+    sc: G.v.gae.pp.sc,
+    en: G.v.gae.pp.en,
+    tr: G.v.gae.trigs,
+    hl: [],
+    gr: 'pp o ' + G.v.gae.meta.gr_hw
+}, { // v gae -ing form
+    sc: G.v.gae.ing.sc,
+    en: G.v.gae.ing.en,
+    tr: G.v.gae.trigs,
+    hl: [],
+}, { // v Third person singular
+    sc: G.v.gae.tps.sc,
+    en: G.v.gae.tps.en,
+    tr: G.v.gae.trigs,
+    hl: [],
+    gr: 'third person singular o ' + G.v.gae.meta.gr_hw
 
-    },
+},
     // v gae end
     // v gie
     { // v gie
@@ -913,48 +913,48 @@ G.dict.push({
             [G.notes.or.as, 'give, gyve']
         ]
     }, { // v gie neg
-        sc: G.v.gie.neg.sc,
-        en: G.v.gie.neg.en,
-        tr: G.v.gie.trigs,
-        hl: [],
-        gr: 'neg o ' + G.v.gie.meta.gr_hw
-    }, { // v gae neg third person singular
-        sc: G.v.gie.neg.tps.sc,
-        en: G.v.gie.neg.tps.en,
-        tr: G.v.gie.trigs,
-        hl: [],
-        gr: 'neg third person singular o ' + G.v.gie.sc
-    }, { // v gie pt
-        sc: G.v.gie.pt.sc,
-        en: G.v.gie.pt.en,
-        tr: G.v.gie.trigs,
-        hl: [],
-        gr: 'pt o ' + G.v.gie.meta.gr_hw
-    }, { // v gie pt neg
-        sc: G.v.gie.pt.neg.sc,
-        en: G.v.gie.pt.neg.en,
-        tr: G.v.gie.trigs,
-        hl: [],
-        gr: 'neg pt o ' + G.v.gie.meta.gr_hw
-    }, { // v gie pp
-        sc: G.v.gie.pp.sc,
-        en: G.v.gie.pp.en,
-        tr: G.v.gie.trigs,
-        hl: [],
-        gr: 'pp o ' + G.v.gie.meta.gr_hw
-    }, { // v gie -ing form
-        sc: G.v.gie.ing.sc,
-        en: G.v.gie.ing.en,
-        tr: [].concat(G.v.gie.trigs, G.v.gie.ing.tr),
-        hl: G.v.gie.ing.tr,
-    }, { // v Third person singular
-        sc: G.v.gie.tps.sc,
-        en: G.v.gie.tps.en,
-        tr: G.v.gie.trigs,
-        hl: [],
-        gr: 'third person singular o ' + G.v.gie.meta.gr_hw
+    sc: G.v.gie.neg.sc,
+    en: G.v.gie.neg.en,
+    tr: G.v.gie.trigs,
+    hl: [],
+    gr: 'neg o ' + G.v.gie.meta.gr_hw
+}, { // v gae neg third person singular
+    sc: G.v.gie.neg.tps.sc,
+    en: G.v.gie.neg.tps.en,
+    tr: G.v.gie.trigs,
+    hl: [],
+    gr: 'neg third person singular o ' + G.v.gie.sc
+}, { // v gie pt
+    sc: G.v.gie.pt.sc,
+    en: G.v.gie.pt.en,
+    tr: G.v.gie.trigs,
+    hl: [],
+    gr: 'pt o ' + G.v.gie.meta.gr_hw
+}, { // v gie pt neg
+    sc: G.v.gie.pt.neg.sc,
+    en: G.v.gie.pt.neg.en,
+    tr: G.v.gie.trigs,
+    hl: [],
+    gr: 'neg pt o ' + G.v.gie.meta.gr_hw
+}, { // v gie pp
+    sc: G.v.gie.pp.sc,
+    en: G.v.gie.pp.en,
+    tr: G.v.gie.trigs,
+    hl: [],
+    gr: 'pp o ' + G.v.gie.meta.gr_hw
+}, { // v gie -ing form
+    sc: G.v.gie.ing.sc,
+    en: G.v.gie.ing.en,
+    tr: [].concat(G.v.gie.trigs, G.v.gie.ing.tr),
+    hl: G.v.gie.ing.tr,
+}, { // v Third person singular
+    sc: G.v.gie.tps.sc,
+    en: G.v.gie.tps.en,
+    tr: G.v.gie.trigs,
+    hl: [],
+    gr: 'third person singular o ' + G.v.gie.meta.gr_hw
 
-    },
+},
     // v gie end
     {
         sc: 'compone',
@@ -976,652 +976,652 @@ G.dict.push({
         tr: ['compose', 'calm', 'settle'],
         gr: ['v', 'merkit obsolete in CSD2']
     }, {
-        sc: 'compone',
-        pt_pp: {
-            sc: 'componed',
-            tr: ['composed', 'componit']
-        },
-        def: 'write or create (a wark o airt, inspecially muisic or poyetry)',
-        tr: ['compose', 'write'],
-        hl: 'compose',
-        gr: ['v'],
-        or: [
-            'pairt archaism, pairt protologism, frae the ' + G.notes.or.as + ' <span>compone</span> ‘tae mak by pittin thegither, tae compose; create in speak or writin.’ Henryson wrate: ‘Of thir sex … fyve hevynly symphonyis Componyt ar,’ whaur <span>symphonyis</span> = ‘a harmonious muisical sound’',
-            [G.notes.or.l, 'compōnere']
-        ]
-    }, { // dae
-        sc: G.v.dae.sc,
-        pr: G.v.dae.pr,
-        en: G.v.dae.en,
-        tr: [].concat(G.v.dae.tr),
-        gr: 'v',
-        heeze: 'dae'
-    }, { // dae neg
-        sc: G.v.dae.neg.sc,
-        sc_alt: G.v.dae.neg.sc_alt,
-        pr: G.v.dae.neg.pr,
-        en: G.v.dae.neg.en,
-        tr: [].concat(G.v.dae.trigs, G.v.dae.neg.tr),
-        hl: G.v.dae.neg.tr,
-        gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
-        ex: 'I dae ken'
-    }, { // dae present singular
-        sc: G.v.dae.ps.sc,
-        en: G.v.dae.ps.en,
-        pr: G.v.dae.ps.pr,
-        tr: [].concat(G.v.dae.trigs, G.v.dae.ps.tr),
-        hl: G.v.dae.ps.tr,
-        gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
-    }, { // dae present singular neg
-        sc: G.v.dae.ps.neg.sc,
-        sc_alt: G.v.dae.ps.neg.sc_alt,
-        en: G.v.dae.ps.neg.en,
-        tr: [].concat(G.v.dae.trigs, G.v.dae.ps.neg.tr),
-        hl: G.v.dae.ps.neg.tr,
-        gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
-    }, { // dae past tense
-        sc: G.v.dae.pt.sc,
-        pr: G.v.dae.pt.pr,
-        en: G.v.dae.pt.en,
-        tr: G.v.dae.trigs,
-        hl: [],
-        gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
-    }, { // dae neg past tense
-        sc: G.v.dae.pt.neg.sc,
-        sc_alt: G.v.dae.pt.neg.sc_alt,
-        en: G.v.dae.pt.neg.en,
-        tr: G.v.dae.trigs,
-        hl: [],
-        gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
-    }, { // dae past par
-        sc: G.v.dae.ptp.sc,
-        sc_alt: G.v.dae.ptp.sc_alt,
-        en: G.v.dae.ptp.en,
-        pr: G.v.dae.ptp.pr,
-        tr: G.v.dae.trigs,
-        hl: [],
-        gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
-    }, { // dae -ing form
-        sc: G.v.dae.ing.sc,
-        en: G.v.dae.ing.en,
-        tr: G.v.dae.trigs,
-        hl: []
-    }, {
-        sc: 'jalouse',
-        en: ['suspect', ['suppose', 'guess', 'surmise']],
-        pr: 'jaLooz',
-        pt: {
-            sc: 'jaloused',
-            tr: ['suspected', 'supposed', 'guessed', 'surmised', 'figured']
-        },
-        gr: 'v',
-        tr: ['jaloose', 'assume', 'assumed', 'figure'],
-        hl: ['jalouse', 'jaloose', 'figure'],
-        or: [
-            'this uissage first appears in ' + G.notes.or.lms, [G.notes.or.f, 'jalouser']
-        ],
-        ex: [G.ex.y, G.ex.z]
-    }, {
-        sc: 'dounlaid',
-        pt: {
-            sc: 'dounlaidit',
-            en: 'downloaded',
-            tr: 'doonloadit'
-        },
-        def: '<em>v</em> copy data frae ae computer system til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
-        pr: 'doonlaid',
-        gr: ['v', 'n'],
-        tr: ['doonload', 'download'],
-        or: [
-            ['Scots <em>doun</em> + Scots <em>laid</em>, efter ' + G.notes.or.mode, 'download']
-        ]
-    }, {
-        sc: 'edifee',
-        def: 'instruct, enlichten',
-        tr: ['edify', 'instruct', 'enlichten', 'enlighten', 'teach'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'edify, edifie'],
-            [G.notes.or.mf, 'edifier'],
-            [G.notes.or.l, 'aedificāre']
-        ]
-    }, {
-        sc: 'effeir',
-        pr: 'iFeer',
-        en: [
-            ['belong to', 'pertain to', 'be appropriate to', 'be fitting or proper']
-        ],
-        pt_pp: {
-            sc: 'effeirt',
-            tr: ['belonged to', 'pertained to', 'related to', 'corresponded to', 'concerned', 'referred to', 'applied to', 'applicable to', 'belonged', 'pertained', 'related', 'corresponded', 'referred', 'applied', 'applicable', 'belonged']
-        },
-        gr: ['v', 'formal'],
-        tr: ['belong', 'pertain', 'effeirin tae', 'effeirin til', 'applicable to', 'apply to', 'relate to', 'correspond to', 'concern', 'about', 'refer to'],
-        or: [
-            [G.notes.or.as, 'affer(e), effere'],
-            [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
-        ],
-        ex: 'The regulations effeir til hoose biggin'
-    }, {
-        sc: ['effeirin tae/til'],
-        pr: ['iFeerin tae', 'iFeerin til'],
-        en: [
-            ['pertaining to', 'belonging to'],
-            ['in relation to', 'in proportion to', 'corresponding to']
-        ],
-        gr: ['phrasal v', 'formal'],
-        tr: ['effeir', 'relating to', 'according to', 'applicable to', 'concerning', 'about', 'referring to'],
-        hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to', 'concerning', 'referring to'],
-        or: 'see v <span>effeir</span>',
-        ex: 'The comatee spak anent maiters effeirin til halth policy',
-        ph: true
-    }, {
-        sc: 'gar',
-        pt_pp: {
-            sc: ['gart', 'garred'],
-            // tr: ['made', 'caused', 'forced', 'compelled', 'required'],
-            tr: ['made', 'caused', 'forced', 'compelled', 'required', 'makkit'],
-            hl: ['made', 'caused', 'forced', 'compelled', 'required']
-        },
-        def: ['cause something tae be duin', 'mak a body or thing dae something'],
-        tr: ['make', 'mak', 'cause', 'force', 'compel', 'require'],
-        hl: ['make', 'cause', 'force', 'compel', 'require'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'ger, gar'],
-            [G.notes.or.anor, 'gera']
-        ],
-        ex: ['It gars ye think', G.ex.u, 'The court gart the company provide mair wittins']
-    }, {
-        sc: 'gie bield tae/til',
-        en: 'protect',
-        tr: ['gie bield tae', 'gie bield til'],
-        gr: 'phrasal v',
-        ex: 'The 1992 Chairter gies bield til Europe’s regional or smaw leids',
-        ph: true
-    }, {
-        sc: 'haud',
-        pr: ['haud', 'hod', 'hud', 'had'],
-        en: [
-            ['have', 'keep in the hand', 'hold onto', 'possess'],
-            ['confine', 'detain', 'hinder', 'restrain'],
-            ['continue as before'],
-            'arrange an event', ['continue', 'proceed', 'keep to a path or route'],
-            ['observe', 'adhere to', 'maintain'],
-            ['contain', 'keep within'],
-            ['restrain oneself', 'prevent']
-        ],
-        pt: {
-            sc: ['haudit', 'held', 'huild'],
-            tr: 'held'
-        },
-        pp: {
-            sc: 'hauden',
-            tr: 'held'
-        },
-        tr: ['hauden', 'hold', 'hae', 'hiv', 'gae', 'go'],
-        hl: ['haud', 'hold'],
-        gr: 'v',
-        ex: [G.ex.z, 'The neist comatee meetin will be hauden in Mey'],
-        or: [
-            [G.notes.or.as, 'hald, had, hauld, haud'],
-            [G.notes.or.ae, 'healdan']
-        ]
-    }, {
+    sc: 'compone',
+    pt_pp: {
+        sc: 'componed',
+        tr: ['composed', 'componit']
+    },
+    def: 'write or create (a wark o airt, inspecially muisic or poyetry)',
+    tr: ['compose', 'write'],
+    hl: 'compose',
+    gr: ['v'],
+    or: [
+        'pairt archaism, pairt protologism, frae the ' + G.notes.or.as + ' <span>compone</span> ‘tae mak by pittin thegither, tae compose; create in speak or writin.’ Henryson wrate: ‘Of thir sex … fyve hevynly symphonyis Componyt ar,’ whaur <span>symphonyis</span> = ‘a harmonious muisical sound’',
+        [G.notes.or.l, 'compōnere']
+    ]
+}, { // dae
+    sc: G.v.dae.sc,
+    pr: G.v.dae.pr,
+    en: G.v.dae.en,
+    tr: [].concat(G.v.dae.tr),
+    gr: 'v',
+    heeze: 'dae'
+}, { // dae neg
+    sc: G.v.dae.neg.sc,
+    sc_alt: G.v.dae.neg.sc_alt,
+    pr: G.v.dae.neg.pr,
+    en: G.v.dae.neg.en,
+    tr: [].concat(G.v.dae.trigs, G.v.dae.neg.tr),
+    hl: G.v.dae.neg.tr,
+    gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
+    ex: 'I dae ken'
+}, { // dae present singular
+    sc: G.v.dae.ps.sc,
+    en: G.v.dae.ps.en,
+    pr: G.v.dae.ps.pr,
+    tr: [].concat(G.v.dae.trigs, G.v.dae.ps.tr),
+    hl: G.v.dae.ps.tr,
+    gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+}, { // dae present singular neg
+    sc: G.v.dae.ps.neg.sc,
+    sc_alt: G.v.dae.ps.neg.sc_alt,
+    en: G.v.dae.ps.neg.en,
+    tr: [].concat(G.v.dae.trigs, G.v.dae.ps.neg.tr),
+    hl: G.v.dae.ps.neg.tr,
+    gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+}, { // dae past tense
+    sc: G.v.dae.pt.sc,
+    pr: G.v.dae.pt.pr,
+    en: G.v.dae.pt.en,
+    tr: G.v.dae.trigs,
+    hl: [],
+    gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+}, { // dae neg past tense
+    sc: G.v.dae.pt.neg.sc,
+    sc_alt: G.v.dae.pt.neg.sc_alt,
+    en: G.v.dae.pt.neg.en,
+    tr: G.v.dae.trigs,
+    hl: [],
+    gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+}, { // dae past par
+    sc: G.v.dae.ptp.sc,
+    sc_alt: G.v.dae.ptp.sc_alt,
+    en: G.v.dae.ptp.en,
+    pr: G.v.dae.ptp.pr,
+    tr: G.v.dae.trigs,
+    hl: [],
+    gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+}, { // dae -ing form
+    sc: G.v.dae.ing.sc,
+    en: G.v.dae.ing.en,
+    tr: G.v.dae.trigs,
+    hl: []
+}, {
+    sc: 'jalouse',
+    en: ['suspect', ['suppose', 'guess', 'surmise']],
+    pr: 'jaLooz',
+    pt: {
+        sc: 'jaloused',
+        tr: ['suspected', 'supposed', 'guessed', 'surmised', 'figured']
+    },
+    gr: 'v',
+    tr: ['jaloose', 'assume', 'assumed', 'figure'],
+    hl: ['jalouse', 'jaloose', 'figure'],
+    or: [
+        'this uissage first appears in ' + G.notes.or.lms, [G.notes.or.f, 'jalouser']
+    ],
+    ex: [G.ex.y, G.ex.z]
+}, {
+    sc: 'dounlaid',
+    pt: {
+        sc: 'dounlaidit',
+        en: 'downloaded',
+        tr: 'doonloadit'
+    },
+    def: '<em>v</em> copy data frae ae computer system til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
+    pr: 'doonlaid',
+    gr: ['v', 'n'],
+    tr: ['doonload', 'download'],
+    or: [
+        ['Scots <em>doun</em> + Scots <em>laid</em>, efter ' + G.notes.or.mode, 'download']
+    ]
+}, {
+    sc: 'edifee',
+    def: 'instruct, enlichten',
+    tr: ['edify', 'instruct', 'enlichten', 'enlighten', 'teach'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'edify, edifie'],
+        [G.notes.or.mf, 'edifier'],
+        [G.notes.or.l, 'aedificāre']
+    ]
+}, {
+    sc: 'effeir',
+    pr: 'iFeer',
+    en: [
+        ['belong to', 'pertain to', 'be appropriate to', 'be fitting or proper']
+    ],
+    pt_pp: {
+        sc: 'effeirt',
+        tr: ['belonged to', 'pertained to', 'related to', 'corresponded to', 'concerned', 'referred to', 'applied to', 'applicable to', 'belonged', 'pertained', 'related', 'corresponded', 'referred', 'applied', 'applicable', 'belonged']
+    },
+    gr: ['v', 'formal'],
+    tr: ['belong', 'pertain', 'effeirin tae', 'effeirin til', 'applicable to', 'apply to', 'relate to', 'correspond to', 'concern', 'about', 'refer to'],
+    or: [
+        [G.notes.or.as, 'affer(e), effere'],
+        [G.notes.or.an + ', ' + G.notes.or.af, 'aferir']
+    ],
+    ex: 'The regulations effeir til hoose biggin'
+}, {
+    sc: ['effeirin tae/til'],
+    pr: ['iFeerin tae', 'iFeerin til'],
+    en: [
+        ['pertaining to', 'belonging to'],
+        ['in relation to', 'in proportion to', 'corresponding to']
+    ],
+    gr: ['phrasal v', 'formal'],
+    tr: ['effeir', 'relating to', 'according to', 'applicable to', 'concerning', 'about', 'referring to'],
+    hl: ['effeirin tae', 'effeirin til', 'relating to', 'applicable to', 'concerning', 'referring to'],
+    or: 'see v <span>effeir</span>',
+    ex: 'The comatee spak anent maiters effeirin til halth policy',
+    ph: true
+}, {
+    sc: 'gar',
+    pt_pp: {
+        sc: ['gart', 'garred'],
+        // tr: ['made', 'caused', 'forced', 'compelled', 'required'],
+        tr: ['made', 'caused', 'forced', 'compelled', 'required', 'makkit'],
+        hl: ['made', 'caused', 'forced', 'compelled', 'required']
+    },
+    def: ['cause something tae be duin', 'mak a body or thing dae something'],
+    tr: ['make', 'mak', 'cause', 'force', 'compel', 'require'],
+    hl: ['make', 'cause', 'force', 'compel', 'require'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'ger, gar'],
+        [G.notes.or.anor, 'gera']
+    ],
+    ex: ['It gars ye think', G.ex.u, 'The court gart the company provide mair wittins']
+}, {
+    sc: 'gie bield tae/til',
+    en: 'protect',
+    tr: ['gie bield tae', 'gie bield til'],
+    gr: 'phrasal v',
+    ex: 'The 1992 Chairter gies bield til Europe’s regional or smaw leids',
+    ph: true
+}, {
+    sc: 'haud',
+    pr: ['haud', 'hod', 'hud', 'had'],
+    en: [
+        ['have', 'keep in the hand', 'hold onto', 'possess'],
+        ['confine', 'detain', 'hinder', 'restrain'],
+        ['continue as before'],
+        'arrange an event', ['continue', 'proceed', 'keep to a path or route'],
+        ['observe', 'adhere to', 'maintain'],
+        ['contain', 'keep within'],
+        ['restrain oneself', 'prevent']
+    ],
+    pt: {
+        sc: ['haudit', 'held', 'huild'],
+        tr: 'held'
+    },
+    pp: {
         sc: 'hauden',
-        en: 'be obliged or required to do something',
-        tr: ['obliged', 'required']
-    }, {
-        sc: 'haud aff',
-        en: 'keep off or away',
-        tr: ['keep off', 'keep away'],
-        gr: 'phrasal v'
-    }, {
-        sc: 'haud at',
-        en: [
-            ['persist in', 'keep at']
-        ],
-        tr: ['haud at', 'persist at', 'persevere at'],
-        gr: 'phrasal v'
-    }, {
-        sc: 'haud awa',
-        en: [
-            ['keep away', 'keep out or off'],
-            ['continue on one\'s way', 'go away']
-        ],
-        tr: ['keep out', 'keep off', 'continue'],
-        gr: 'phrasal v'
-    }, {
-        sc: 'haud for',
-        en: [
-            ['aim at', 'make for']
-        ],
-        tr: 'aim for',
-        gr: 'phrasal v'
-    }, {
-        sc: 'haud forrit',
-        en: 'continue to improve (e.g. in health, or in terms of the degree of one’s accomplishment at performing a given job, task or craft)',
-        tr: 'continue to improve',
-        gr: 'phrasal v'
-    }, {
-        sc: 'haud gaun',
-        en: [
-            ['keep going', 'continue']
-        ],
-        gr: 'phrasal v'
-    }, {
-        sc: 'haud haul',
-        en: [
-            ['offer resistance', 'prop', 'support']
-        ],
-        gr: 'phrasal v'
-    }, {
-        sc: 'haud in',
-        en: [
-            ['confine', 'retain', 'restrain', 'keep in order'],
-            ['save', 'economize', 'be miserly']
-        ],
-        gr: 'phrasal v'
-    }, {
-        sc: 'haud in aboot',
-        en: [
-            ['keep in order', 'restrain', 'control'],
-            ['bring', 'come closer']
-        ],
-        gr: ['phrasal v']
-    }, {
-        sc: 'haud in wi',
-        en: [
-            ['keep in with', 'curry favour with'],
-        ],
-        gr: ['phrasal v']
-    }, {
-        sc: 'haud on',
-        en: [
-            ['carry on', 'continue'],
-        ],
-        gr: ['phrasal v']
-    }, {
-        sc: 'haud on',
-        en: 'stop',
-        gr: ['imp phrasal v']
-    }, { // I
-        sc: 'import',
-        pt_pp: {
-            sc: 'importit',
-            tr: 'imported'
-        },
-        tr: 'inbring',
-        hl: [],
-        en: 'import',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'import'],
-            [G.notes.or.l, 'importāre']
-        ]
-    }, {
-        sc: 'inbring',
-        pt_pp: {
-            sc: 'inbrocht',
-            tr: ['imported', 'importit', 'conveyed']
-        },
-        en: [
-            ['bring to or into a place', 'convey', 'import']
-        ],
-        tr: 'bring in',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'inbring, imbring'],
-            [G.notes.or.ae, 'inbrengan']
-        ],
-        ex: [G.ex.l, G.ex.s]
-    }, {
+        tr: 'held'
+    },
+    tr: ['hauden', 'hold', 'hae', 'hiv', 'gae', 'go'],
+    hl: ['haud', 'hold'],
+    gr: 'v',
+    ex: [G.ex.z, 'The neist comatee meetin will be hauden in Mey'],
+    or: [
+        [G.notes.or.as, 'hald, had, hauld, haud'],
+        [G.notes.or.ae, 'healdan']
+    ]
+}, {
+    sc: 'hauden',
+    en: 'be obliged or required to do something',
+    tr: ['obliged', 'required']
+}, {
+    sc: 'haud aff',
+    en: 'keep off or away',
+    tr: ['keep off', 'keep away'],
+    gr: 'phrasal v'
+}, {
+    sc: 'haud at',
+    en: [
+        ['persist in', 'keep at']
+    ],
+    tr: ['haud at', 'persist at', 'persevere at'],
+    gr: 'phrasal v'
+}, {
+    sc: 'haud awa',
+    en: [
+        ['keep away', 'keep out or off'],
+        ['continue on one\'s way', 'go away']
+    ],
+    tr: ['keep out', 'keep off', 'continue'],
+    gr: 'phrasal v'
+}, {
+    sc: 'haud for',
+    en: [
+        ['aim at', 'make for']
+    ],
+    tr: 'aim for',
+    gr: 'phrasal v'
+}, {
+    sc: 'haud forrit',
+    en: 'continue to improve (e.g. in health, or in terms of the degree of one’s accomplishment at performing a given job, task or craft)',
+    tr: 'continue to improve',
+    gr: 'phrasal v'
+}, {
+    sc: 'haud gaun',
+    en: [
+        ['keep going', 'continue']
+    ],
+    gr: 'phrasal v'
+}, {
+    sc: 'haud haul',
+    en: [
+        ['offer resistance', 'prop', 'support']
+    ],
+    gr: 'phrasal v'
+}, {
+    sc: 'haud in',
+    en: [
+        ['confine', 'retain', 'restrain', 'keep in order'],
+        ['save', 'economize', 'be miserly']
+    ],
+    gr: 'phrasal v'
+}, {
+    sc: 'haud in aboot',
+    en: [
+        ['keep in order', 'restrain', 'control'],
+        ['bring', 'come closer']
+    ],
+    gr: ['phrasal v']
+}, {
+    sc: 'haud in wi',
+    en: [
+        ['keep in with', 'curry favour with'],
+    ],
+    gr: ['phrasal v']
+}, {
+    sc: 'haud on',
+    en: [
+        ['carry on', 'continue'],
+    ],
+    gr: ['phrasal v']
+}, {
+    sc: 'haud on',
+    en: 'stop',
+    gr: ['imp phrasal v']
+}, { // I
+    sc: 'import',
+    pt_pp: {
+        sc: 'importit',
+        tr: 'imported'
+    },
+    tr: 'inbring',
+    hl: [],
+    en: 'import',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'import'],
+        [G.notes.or.l, 'importāre']
+    ]
+}, {
+    sc: 'inbring',
+    pt_pp: {
+        sc: 'inbrocht',
+        tr: ['imported', 'importit', 'conveyed']
+    },
+    en: [
+        ['bring to or into a place', 'convey', 'import']
+    ],
+    tr: 'bring in',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'inbring, imbring'],
+        [G.notes.or.ae, 'inbrengan']
+    ],
+    ex: [G.ex.l, G.ex.s]
+}, {
+    sc: 'innovate',
+    pt: {
+        sc: 'innovatit',
+        tr: 'innovated'
+    },
+    pp: {
         sc: 'innovate',
-        pt: {
-            sc: 'innovatit',
-            tr: 'innovated'
-        },
-        pp: {
-            sc: 'innovate',
-            tr: 'innovated'
-        },
-        en: [
-            ['alter or revise (established practice or the status quo)', 'introduce something new']
-        ],
-        tr: ['alter', 'revise'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'innovat, innovate'],
-            G.notes.or.l + ' <em>innovāt-</em>, ptp stem o <em>innovāre</em>'
-        ],
-        ex: ['She aye likit tae innovate in her wark']
-    }, {
-        sc: 'interpone',
-        en: 'interpose',
-        pt_pp: {
-            sc: ['interponed', 'interpone’t'],
-            tr: ['interposed', 'intervened', 'interjected', 'interrupted', 'interruptit']
-        },
-        tr: ['intervene', 'interject', 'interrupt'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'interpone'],
-            [G.notes.or.l, 'interpõnere']
-        ],
-        inf: 'Uisses the day are limitit tae Scots law — aft-times in the phrase <span>interpone authority to</span> — but it wis uised mair braidly in Aulder Scots'
-    }, {
-        sc: 'introduce',
-        pt_pp: {
-            sc: 'introduced',
-            tr: 'introduced',
-        },
-        en: 'introduce',
-        gr: 'v'
-        // or:
-    }, {
+        tr: 'innovated'
+    },
+    en: [
+        ['alter or revise (established practice or the status quo)', 'introduce something new']
+    ],
+    tr: ['alter', 'revise'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'innovat, innovate'],
+        G.notes.or.l + ' <em>innovāt-</em>, ptp stem o <em>innovāre</em>'
+    ],
+    ex: ['She aye likit tae innovate in her wark']
+}, {
+    sc: 'interpone',
+    en: 'interpose',
+    pt_pp: {
+        sc: ['interponed', 'interpone’t'],
+        tr: ['interposed', 'intervened', 'interjected', 'interrupted', 'interruptit']
+    },
+    tr: ['intervene', 'interject', 'interrupt'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'interpone'],
+        [G.notes.or.l, 'interpõnere']
+    ],
+    inf: 'Uisses the day are limitit tae Scots law — aft-times in the phrase <span>interpone authority to</span> — but it wis uised mair braidly in Aulder Scots'
+}, {
+    sc: 'introduce',
+    pt_pp: {
+        sc: 'introduced',
+        tr: 'introduced',
+    },
+    en: 'introduce',
+    gr: 'v'
+    // or:
+}, {
     sc: 'keech',
     en: 'to defecate',
     tr: ['defecate', 'shite'],
     gr: 'v',
     or: 'see the noun'
 }, {
-        sc: 'ken',
-        en: 'know',
-        neg: {
-            sc: 'kenna',
-            tr: ['know not', 'don\'t know', 'do not know']
-        },
-        tr: G.v.ken_knaw.trigs,
-        hl: 'ken',
-        gr: 'v',
-        ex: [G.ex.h, G.ex.c]
-    }, {
-        sc: ['kent', 'kenned'],
-        en: 'knew',
-        tr: G.v.ken_knaw.trigs,
-        neg: {
-            sc: 'kentna',
-            tr: ['did not know', 'didn\'t know']
-        },
-        hl: ['kent', 'kenned', 'kend'],
-        gr: 'pt o v ' + G.utils.addSpan('tae ken'),
-        ex: 'Tammas kentna what tae dae'
-    }, {
-        sc: 'kent',
-        en: 'known',
-        gr: ['adj, an ptp o v ' + G.utils.addSpan('tae ken')],
-        ex: 'Brian is a weel kent face on the Edinburgh jazz scene',
-        tr: G.v.ken_knaw.trigs,
-        hl: 'kent'
-    }, {
-        sc: 'knaw',
-        en: 'know',
-        pt: {
-            sc: ['knew', 'knawed'],
-            tr: ['knew']
-        },
-        pp: {
-            sc: 'knawn',
-            tr: 'known'
-        },
-        tr: G.v.ken_knaw.trigs,
-        ex: G.ex.b,
-        hl: 'knaw',
-        gr: 'v'
-    }, { // L
-        sc: 'lead ajee',
-        pt: {
-            sc: 'led ajee',
-            tr: 'deceived'
-        },
-        en: 'deceive',
-        gr: 'phrasal v'
-    }, {
-        sc: 'laid',
-        en: 'load',
-        gr: ['v', 'n'],
-        or: [
-            [G.notes.or.as, 'laid, lade']
-        ]
-    }, {
-        sc: 'lat',
-        en: 'let',
-        pr: ['lat', 'lit'],
-        tr: G.v.lat.trigs,
-        hl: ['allow', 'permit', 'cause', 'make happen'],
-        gr: 'v',
-        ex: ['Lat’s hae a drink efter wark', G.ex.d],
-        or: [
-            [G.notes.or.as, 'lat, let, lete'],
-            [G.notes.or.ae, 'lǽtan']
-        ]
-    }, {
-        sc: 'lair',
-        en: 'teach',
-        gr: 'v',
-        tr: ['instruct', 'learn'],
-        pt_pp: {
-            sc: ['lairt', 'laired'],
-            tr: ['taught', 'instructed']
-        }
-    }, {
-        sc: 'lear',
-        en: [
-            ['teach', 'instruct'],
-            'learn'
-        ],
-        gr: 'v',
-        tr: 'instruct',
-        pt_pp: {
-            sc: ['leart', 'leared'],
-            tr: ['taught', 'instructed', 'learned']
-        }
-    }, {
-        sc: 'learn',
-        en: [
-            ['teach', 'instruct']
-        ],
-        tr: ['lair', 'lear'],
-        hl: ['learn', 'lair', 'lear'],
-        pt_pp: {
-            sc: 'learnt',
-            tr: ['taught', 'instructed']
-        },
-        gr: 'v',
-        au: 'learn'
-    }, {
-        sc: 'licht',
-        en: 'light',
-        pt_pp: {
-            sc: ['lichtit'],
-            tr: 'lit'
-        },
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'licht, lycht, light'],
-            [G.notes.or.ae, 'līhtan']
-        ],
-        au: 'licht'
-    }, {
-        sc: 'luit',
-        en: 'let',
-        tr: G.v.lat.trigs,
-        hl: 'luit',
-        pr: ['lit', 'leet', 'löt', 'lüt'],
-        gr: 'pt o the v <span>tae lat</span>',
-        ex: G.ex.e
-    }, {
-        sc: ['luiten', 'latten'],
-        en: 'let',
-        tr: G.v.lat.trigs,
-        hl: ['latten', 'luiten'],
-        gr: 'ptp o the v <span>tae lat</span>',
-        ex: 'John haed been luiten doun by his colleague'
-    }, {
-        sc: 'lat see',
-        en: 'produce',
-        gr: 'phrasal v',
-        ph: true
-    }, {
-        sc: 'mak',
-        pt: {
-            sc: ['made', 'makkit']
-        },
-        pp: {
-            sc: 'made'
-        },
-        en: 'make',
-        tr: ['manufacture', 'create', 'compose', 'compel', 'develop', 'fashion'],
-        hl: ['manufacture', 'create', 'compel'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'mak'],
-            [G.notes.or.ae, 'macian']
-        ]
-    }, { // M
-        sc: 'maun',
-        pr: ['maun', 'mon', 'man', 'mun'],
-        en: 'must',
-        neg: {
-            sc: ['maunna', 'maunnae'],
-            tr: ['must not', 'mustn\'t', 'manny', 'manna']
-        },
-        gr: ['v'],
-        or: [
-            [G.notes.or.as, 'man'],
-            [G.notes.or.anor, 'muna > man']
-        ],
-        ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
-    }, {
-        sc: 'mind',
-        pt: {
-            sc: 'mindit',
-            tr: ['reminded', 'remembered', 'recollected', 'called to mind', 'myndit']
-        },
-        en: ['remind', ['remember', 'recollect', 'call to mind']],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'minde, mynd(e)'],
-            [G.notes.or.ae, 'mynd']
-        ],
-        au: 'mind'
-    }, {
-        sc: 'uplaid',
-        tr: 'upload',
-        pt: {
-            sc: 'uplaidit',
-            tr: ['uploadit', 'uploaded']
-        },
-        def: '<em>v</em> copy data frae ae computer system til anither, for ordinar til a server, an aften ower the internet; <em>n</em> the data (file) uplaidit',
-        gr: ['v', 'n'],
-        or: [
-            ['Scots <em>up</em> + Scots <em>laid</em>, efter ' + G.notes.or.mode, 'upload']
-        ]
-    }, { // F
-        sc: 'fankle',
-        en: [
-            ['tangle', 'mix up'], 'become tangled', ['trap', 'ensnare'],
-            ['stumble', 'fumble']
-        ],
-        pt_pp: {
-            sc: 'fankelt',
-            tr: ['tangled', 'mixed up', 'trapped', 'ensnared', 'stumbled', 'fumbled']
-        },
-        gr: 'v',
-        or: 'see n'
-    }, {
-        sc: ['fash'],
-        en: [
-            ['irritate', 'annoy', 'anger', 'inconvenience'],
-            ['take trouble over', 'take pains with'],
-            ['vex', 'bother'],
-            ['fret']
-        ],
-        pt_pp: {
-            sc: 'fasht',
-            tr: [
-                ['irritated', 'annoyed', 'angered', 'inconvenienced', 'troubled', 'vexed', 'bothered', 'fretted', 'fashed']
-            ]
-        },
-        neg: {
-            sc: 'fashna',
-            tr: ['fash not', 'fash na']
-        },
-        gr: 'v',
-        or: [
-            [G.notes.or.ms, 'fasch, fash'],
-            [G.notes.or.mf, 'faschier']
-        ],
-        ex: ['Dinna fash yersel', 'I wis sair fasht aboot the job interview', G.ex.d]
-    }, {
-        sc: 'fecht',
-        en: 'fight',
-        tr: ['ficht', 'struggle', 'battle'],
-        pt_pp: {
-            sc: 'focht',
-            tr: ['fought', 'fechtit']
-        },
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'fecht, feicht'],
-            [G.notes.or.ae, 'feohtan']
-        ]
-    }, {
-        sc: 'fesh-on',
-        en: [
-            ['bring forward', 'advance', 'bring to maturity', 'develop']
-        ],
-        pt_pp: {
-            sc: 'fesht-on',
-            tr: ['feshed on', 'fesht on', 'brought forward', 'advanced', 'brought to maturity', 'developed']
-        },
-        tr: 'fesh on',
-        gr: 'v',
-        ex: 'The report recommendit we fesh-on a national policy'
-    }, {
-        sc: 'frequent',
-        pt_pp: {
-            sc: 'frequentit',
-            tr: ['frequented', 'frequented']
-        },
-        en: 'frequent',
-        def: ['tae visit aften or oot o habit', 'tae associate wi, meet up wi'],
-        tr: ['associate with', 'meet up with', 'visit'],
-        hl: ['associate with', 'meet up with'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'frequent'],
-            [G.notes.or.l, 'frequentāre']
-        ]
-    }, { // G
-        sc: 'greet',
-        en: ['cry', ['lament', 'complain']],
-        tr: ['howl, sob', 'weep', 'whine', 'grumble', 'wheenge'],
-        pt: {
-            sc: ['grat', 'gret'],
-            tr: ['cried', 'sobbed', 'wept', 'howled', 'wheenged', 'lamented', 'complained']
-        },
-        pp: {
-            sc: ['grat', 'gret', 'grutten'],
-            tr: ['cried', 'sobbed', 'wept', 'howled', 'wheenged', 'lamented', 'complained']
-        },
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'grete, greit'],
-            [G.notes.or.ae, 'grētan']
-        ],
-        ex: 'Ye dinna need tae greet aboot it!',
-        au: 'greet'
-    }, { // Tak -ing ending
-        sc: 'greetin',
-        en: 'crying',
-        tr: ['greeting', 'weeping'],
-        ex: 'The film haed me greetin',
-        gr: 'pres participle o the v <span>tae greet</span>',
-        or: [
-            [G.notes.or.as, 'gretand']
+    sc: 'ken',
+    en: 'know',
+    neg: {
+        sc: 'kenna',
+        tr: ['know not', 'don\'t know', 'do not know']
+    },
+    tr: G.v.ken_knaw.trigs,
+    hl: 'ken',
+    gr: 'v',
+    ex: [G.ex.h, G.ex.c]
+}, {
+    sc: ['kent', 'kenned'],
+    en: 'knew',
+    tr: G.v.ken_knaw.trigs,
+    neg: {
+        sc: 'kentna',
+        tr: ['did not know', 'didn\'t know']
+    },
+    hl: ['kent', 'kenned', 'kend'],
+    gr: 'pt o v ' + G.utils.addSpan('tae ken'),
+    ex: 'Tammas kentna what tae dae'
+}, {
+    sc: 'kent',
+    en: 'known',
+    gr: ['adj, an ptp o v ' + G.utils.addSpan('tae ken')],
+    ex: 'Brian is a weel kent face on the Edinburgh jazz scene',
+    tr: G.v.ken_knaw.trigs,
+    hl: 'kent'
+}, {
+    sc: 'knaw',
+    en: 'know',
+    pt: {
+        sc: ['knew', 'knawed'],
+        tr: ['knew']
+    },
+    pp: {
+        sc: 'knawn',
+        tr: 'known'
+    },
+    tr: G.v.ken_knaw.trigs,
+    ex: G.ex.b,
+    hl: 'knaw',
+    gr: 'v'
+}, { // L
+    sc: 'lead ajee',
+    pt: {
+        sc: 'led ajee',
+        tr: 'deceived'
+    },
+    en: 'deceive',
+    gr: 'phrasal v'
+}, {
+    sc: 'laid',
+    en: 'load',
+    gr: ['v', 'n'],
+    or: [
+        [G.notes.or.as, 'laid, lade']
+    ]
+}, {
+    sc: 'lat',
+    en: 'let',
+    pr: ['lat', 'lit'],
+    tr: G.v.lat.trigs,
+    hl: ['allow', 'permit', 'cause', 'make happen'],
+    gr: 'v',
+    ex: ['Lat’s hae a drink efter wark', G.ex.d],
+    or: [
+        [G.notes.or.as, 'lat, let, lete'],
+        [G.notes.or.ae, 'lǽtan']
+    ]
+}, {
+    sc: 'lair',
+    en: 'teach',
+    gr: 'v',
+    tr: ['instruct', 'learn'],
+    pt_pp: {
+        sc: ['lairt', 'laired'],
+        tr: ['taught', 'instructed']
+    }
+}, {
+    sc: 'lear',
+    en: [
+        ['teach', 'instruct'],
+        'learn'
+    ],
+    gr: 'v',
+    tr: 'instruct',
+    pt_pp: {
+        sc: ['leart', 'leared'],
+        tr: ['taught', 'instructed', 'learned']
+    }
+}, {
+    sc: 'learn',
+    en: [
+        ['teach', 'instruct']
+    ],
+    tr: ['lair', 'lear'],
+    hl: ['learn', 'lair', 'lear'],
+    pt_pp: {
+        sc: 'learnt',
+        tr: ['taught', 'instructed']
+    },
+    gr: 'v',
+    au: 'learn'
+}, {
+    sc: 'licht',
+    en: 'light',
+    pt_pp: {
+        sc: ['lichtit'],
+        tr: 'lit'
+    },
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'licht, lycht, light'],
+        [G.notes.or.ae, 'līhtan']
+    ],
+    au: 'licht'
+}, {
+    sc: 'luit',
+    en: 'let',
+    tr: G.v.lat.trigs,
+    hl: 'luit',
+    pr: ['lit', 'leet', 'löt', 'lüt'],
+    gr: 'pt o the v <span>tae lat</span>',
+    ex: G.ex.e
+}, {
+    sc: ['luiten', 'latten'],
+    en: 'let',
+    tr: G.v.lat.trigs,
+    hl: ['latten', 'luiten'],
+    gr: 'ptp o the v <span>tae lat</span>',
+    ex: 'John haed been luiten doun by his colleague'
+}, {
+    sc: 'lat see',
+    en: 'produce',
+    gr: 'phrasal v',
+    ph: true
+}, {
+    sc: 'mak',
+    pt: {
+        sc: ['made', 'makkit']
+    },
+    pp: {
+        sc: 'made'
+    },
+    en: 'make',
+    tr: ['manufacture', 'create', 'compose', 'compel', 'develop', 'fashion'],
+    hl: ['manufacture', 'create', 'compel'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'mak'],
+        [G.notes.or.ae, 'macian']
+    ]
+}, { // M
+    sc: 'maun',
+    pr: ['maun', 'mon', 'man', 'mun'],
+    en: 'must',
+    neg: {
+        sc: ['maunna', 'maunnae'],
+        tr: ['must not', 'mustn\'t', 'manny', 'manna']
+    },
+    gr: ['v'],
+    or: [
+        [G.notes.or.as, 'man'],
+        [G.notes.or.anor, 'muna > man']
+    ],
+    ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
+}, {
+    sc: 'mind',
+    pt: {
+        sc: 'mindit',
+        tr: ['reminded', 'remembered', 'recollected', 'called to mind', 'myndit']
+    },
+    en: ['remind', ['remember', 'recollect', 'call to mind']],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'minde, mynd(e)'],
+        [G.notes.or.ae, 'mynd']
+    ],
+    au: 'mind'
+}, {
+    sc: 'uplaid',
+    tr: 'upload',
+    pt: {
+        sc: 'uplaidit',
+        tr: ['uploadit', 'uploaded']
+    },
+    def: '<em>v</em> copy data frae ae computer system til anither, for ordinar til a server, an aften ower the internet; <em>n</em> the data (file) uplaidit',
+    gr: ['v', 'n'],
+    or: [
+        ['Scots <em>up</em> + Scots <em>laid</em>, efter ' + G.notes.or.mode, 'upload']
+    ]
+}, { // F
+    sc: 'fankle',
+    en: [
+        ['tangle', 'mix up'], 'become tangled', ['trap', 'ensnare'],
+        ['stumble', 'fumble']
+    ],
+    pt_pp: {
+        sc: 'fankelt',
+        tr: ['tangled', 'mixed up', 'trapped', 'ensnared', 'stumbled', 'fumbled']
+    },
+    gr: 'v',
+    or: 'see n'
+}, {
+    sc: ['fash'],
+    en: [
+        ['irritate', 'annoy', 'anger', 'inconvenience'],
+        ['take trouble over', 'take pains with'],
+        ['vex', 'bother'],
+        ['fret']
+    ],
+    pt_pp: {
+        sc: 'fasht',
+        tr: [
+            ['irritated', 'annoyed', 'angered', 'inconvenienced', 'troubled', 'vexed', 'bothered', 'fretted', 'fashed']
         ]
     },
+    neg: {
+        sc: 'fashna',
+        tr: ['fash not', 'fash na']
+    },
+    gr: 'v',
+    or: [
+        [G.notes.or.ms, 'fasch, fash'],
+        [G.notes.or.mf, 'faschier']
+    ],
+    ex: ['Dinna fash yersel', 'I wis sair fasht aboot the job interview', G.ex.d]
+}, {
+    sc: 'fecht',
+    en: 'fight',
+    tr: ['ficht', 'struggle', 'battle'],
+    pt_pp: {
+        sc: 'focht',
+        tr: ['fought', 'fechtit']
+    },
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'fecht, feicht'],
+        [G.notes.or.ae, 'feohtan']
+    ]
+}, {
+    sc: 'fesh-on',
+    en: [
+        ['bring forward', 'advance', 'bring to maturity', 'develop']
+    ],
+    pt_pp: {
+        sc: 'fesht-on',
+        tr: ['feshed on', 'fesht on', 'brought forward', 'advanced', 'brought to maturity', 'developed']
+    },
+    tr: 'fesh on',
+    gr: 'v',
+    ex: 'The report recommendit we fesh-on a national policy'
+}, {
+    sc: 'frequent',
+    pt_pp: {
+        sc: 'frequentit',
+        tr: ['frequented', 'frequented']
+    },
+    en: 'frequent',
+    def: ['tae visit aften or oot o habit', 'tae associate wi, meet up wi'],
+    tr: ['associate with', 'meet up with', 'visit'],
+    hl: ['associate with', 'meet up with'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'frequent'],
+        [G.notes.or.l, 'frequentāre']
+    ]
+}, { // G
+    sc: 'greet',
+    en: ['cry', ['lament', 'complain']],
+    tr: ['howl, sob', 'weep', 'whine', 'grumble', 'wheenge'],
+    pt: {
+        sc: ['grat', 'gret'],
+        tr: ['cried', 'sobbed', 'wept', 'howled', 'wheenged', 'lamented', 'complained']
+    },
+    pp: {
+        sc: ['grat', 'gret', 'grutten'],
+        tr: ['cried', 'sobbed', 'wept', 'howled', 'wheenged', 'lamented', 'complained']
+    },
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'grete, greit'],
+        [G.notes.or.ae, 'grētan']
+    ],
+    ex: 'Ye dinna need tae greet aboot it!',
+    au: 'greet'
+}, { // Tak -ing ending
+    sc: 'greetin',
+    en: 'crying',
+    tr: ['greeting', 'weeping'],
+    ex: 'The film haed me greetin',
+    gr: 'pres participle o the v <span>tae greet</span>',
+    or: [
+        [G.notes.or.as, 'gretand']
+    ]
+},
     // H
     { // hae
         sc: G.v.hae.sc,
@@ -1636,479 +1636,479 @@ G.dict.push({
         au: 'hae',
         heeze: 'have'
     }, { // hae neg
-        sc: G.v.hae.neg.sc,
-        sc_alt: G.v.hae.neg.sc_alt,
-        pr: G.v.hae.neg.pr,
-        en: G.v.hae.neg.en,
-        tr: G.v.hae.trigs,
-        hl: [],
-        gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
-        ex: G.ex.b1
-    }, { // hae present singular
-        sc: G.v.hae.ps.sc,
-        sc_alt: G.v.hae.ps.sc_alt,
-        en: G.v.hae.ps.en,
-        pr: G.v.hae.ps.pr,
-        tr: G.v.hae.trigs,
-        hl: [],
-        gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
-    }, { // hae present singular neg
-        sc: G.v.hae.ps.neg.sc,
-        en: G.v.hae.ps.neg.en,
-        tr: G.v.hae.trigs,
-        hl: [],
-        gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
-    }, { // hae past tense
-        sc: G.v.hae.pt.sc,
-        pr: G.v.hae.pt.pr,
-        en: G.v.hae.pt.en,
-        tr: G.v.hae.trigs,
-        hl: [],
-        gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
-        ex: G.ex.d1
-    }, { // hae neg past tense
-        sc: G.v.hae.pt.neg.sc,
-        en: G.v.hae.pt.neg.en,
-        tr: G.v.hae.trigs,
-        hl: [],
-        gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
-    }, { // hae past par
-        sc: G.v.hae.ptp.sc,
-        en: G.v.hae.ptp.en,
-        pr: G.v.hae.ptp.pr,
-        tr: G.v.hae.trigs,
-        hl: [],
-        gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
-        ex: G.ex.e1
-    }, { // hae -ing form
-        sc: G.v.hae.ing.sc,
-        en: G.v.hae.ing.en,
-        tr: G.v.hae.trigs,
-        hl: []
-    }, {
-        sc: 'haik',
-        en: [
-            ['trek', 'rove', 'roam', 'wander aimlessly', 'trudge'], 'carry or drag with difficulty'
-        ],
-        gr: 'v',
-        or: [
-            [G.notes.or.ms, 'haik']
-        ]
-    }, {
-        sc: 'haud oot',
-        pt: {
-            sc: ['held oot', 'haudit oot'],
-            tr: ['maintained', 'claimed']
-        },
-        pp: {
-            sc: ['hauden oot', 'held oot'],
-            tr: ['maintained', 'claimed']
-        },
-        en: [
-            ['maintain', 'claim']
-        ],
-        gr: 'phrasal v',
-        ex: 'He’d aye hauden oot tae be a millionaire, but fowk didna trew it'
-    }, {
-        sc: ['heat', 'het'],
-        pr: ['heet', 'hait', 'heht'],
-        en: 'heat',
-        tr: 'hate',
-        pt: {
-            sc: ['het', 'hat', 'heatit'],
-            tr: 'heated'
-        },
-        pp: {
-            sc: ['het', 'heatit', 'hetten'],
-            tr: 'heated'
-        },
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'hete, hett, heit, heat'],
-            [G.notes.or.ae, 'hǽtan']
-        ],
-        ex: ['He’d hetten up the car for a bit afore settin aff', 'The fitba haed him aw het up']
-    }, {
-        sc: 'hirple',
-        en: [
-            ['limp', 'hobble']
-        ],
-        tr: ['skleush', 'lame'],
-        hl: [],
-        gr: 'v'
-    }, {
-        sc: 'hoose',
-        def: ['tae provide wi a hoose', 'tae bouk guids or craps'],
-        tr: ['houss', 'hoose', 'house', 'hous'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'hous, huse, hows'],
-            [G.notes.or.ae, 'hūsian']
-        ],
-        ex: ['We can hoose the kye in the byre the nicht']
-    }, { // O
-        sc: 'ocht',
-        en: 'ought',
-        gr: 'v'
-    }, {
-        sc: 'ower',
-        pr: ['uower', 'oar', 'oor', 'err'],
-        pt_pp: {
-            sc: ['owert, owered']
-        },
-        en: [
-            ['overpower', 'take control', 'regulate or manage oneself']
-        ],
-        tr: ['over', 'owre'],
-        hl: ['ower', 'owre'],
-        gr: 'v',
-        or: 'see adv'
-    }, {
-        sc: 'owergie',
-        en: [
-            ['give up', 'renounce', 'resign', 'surrender property']
-        ],
-        tr: ['owregie', 'relinquish', 'surrender'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'overgive, ourgive']
-        ]
-    }, {
-        sc: 'pey',
-        en: 'pay',
-        pt_pp: {
-            sc: 'peyed',
-            tr: 'paid'
-        },
-        tr: 'recompense',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'pay, pey'],
-            [G.notes.or.an, 'paier']
-        ]
-    }, { // P
-        sc: 'pit',
-        en: 'put',
-        pt: {
-            sc: ['pat', 'pit'],
-            tr: 'put'
-        },
-        pp: {
-            sc: ['pat', 'pit', 'pitten', 'putten'],
-            tr: 'put'
-        },
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'pit'],
-            [G.notes.or.ae, 'pȳtan']
-        ],
-        ex: ['Jamie pit the cat oot', G.ex.f, 'Iona haed pitten forrit mony guid ideas']
-    }, {
-        sc: 'pit forrit',
-        en: 'introduce',
-        gr: 'phrasal v'
-    }, {
-        sc: 'proceed',
-        en: 'proceed',
-        gr: 'v',
-        tr: ['go', 'gae', 'gang', 'ging', 'haud'],
-        hl: [],
-        or: [
-            [G.notes.or.as, 'proced(e), proceid'],
-            [G.notes.or.me + ' an ' + G.notes.or.eme, 'proced(e), proceede'],
-            [G.notes.or.f, 'procéder'],
-            [G.notes.or.l, 'procéder']
-        ]
-    }, {
-        sc: 'propone',
-        pt_pp: {
-            sc: ['proponed', 'propone’t'],
-            tr: ['suggested', 'proposed', 'put forward']
-        },
-        def: [
-            ['pit forrit for consideration', 'suggest'],
-            ['<span>law</span> pit forrit or state (a plea) in a court']
-        ],
-        en: 'propose',
-        tr: 'bring forward',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'propone'],
-            [G.notes.or.l, 'prōpōnere']
-        ]
-    }, { // T
-        sc: 'tak',
-        en: 'take',
-        pt: {
-            sc: 'teuk',
-            tr: ['took', 'tuik']
-        },
-        pp: {
-            sc: ['taen', 'takken', 'teuken'],
-            tr: ['taken', 'tane', 'takkin', 'tooken', 'tookin']
-        },
-        pr: ['tak', 'take'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'tak'],
-            G.notes.or.ae + ' <span>tacan</span> frae the ' + G.notes.or.anor + ' <span>taka</span>'
-        ],
-        ex: 'The roaster’s comment haed been taen doun afore I could repone til him'
-    }, { // Tak -ing ending
-        sc: ['takkin', 'taein'],
-        en: 'taking',
-        tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'tooken', 'tookin', 'tak'],
-        hl: 'takken', // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw
-        ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
-        gr: 'pres participle o the v <span>tae tak</span>'
-    }, {
-        sc: 'tak on',
-        en: 'adopt',
-        tr: ['teuk on', 'adopted'],
-        pp: {
-            sc: ['taen on', 'takken on', 'teuken on'],
-            tr: ['adopted', 'took on', 'adoptit']
-        },
-        gr: 'phrasal v',
-        ex: 'The Chairter wis taen on in 1992',
-        ph: true
-    }, {
-        sc: 'teach',
-        en: 'teach',
-        gr: 'v'
-    }, {
-        sc: ['think', 'hink'],
-        en: 'think',
-        pt_pp: {
-            sc: 'thocht',
-            en: 'thought',
-            tr: 'thoat'
-        },
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'think, thynk; thocht, thoucht'],
-            [G.notes.or.xx, 'ðencan, ðyncan']
-        ]
-    }, {
-        sc: 'tred',
-        en: 'trade',
-        gr: 'v'
-    }, {
-        sc: 'tuim',
-        pr: ['tim', 'teem', 'toom', 'taim'],
-        pt_pp: {
-            sc: 'tuimt',
-            tr: ['tuimed', 'emptied', 'emptied out',
-                'discharged', 'drained', 'gushed', 'poured'
-            ]
-        },
-        en: 'empty',
-        tr: ['empty', 'gush', 'discharge', 'drain'],
-        gr: 'v',
-        or: 'frae the adj',
-        ex: 'He tuimed the watter doun the cundie',
-        au: 'tuim'
-    }, { // R
-        sc: 'raivel',
-        en: [
-            ['become confused, muddled or disordered'],
-            'to entangle (yarn, thread etc.)',
-            'to unwind yarn, thread etc. from a reel',
-            ['ramble', 'be delirious', 'speak incoherently'],
-            ['to confuse', 'perplex'],
-            ['to confuse', 'outwit']
-        ],
-        tr: ['ravel', 'raffle', 'entangle', 'unwind', 'entangle', 'confuse', 'snarl', 'tangle'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'ravel, rawil'],
-            [G.notes.or.d, 'ravelen, rafelen']
-        ]
-    }, {
-        sc: 'rax',
-        en: [
-            'stretch', ['make a great effort', 'overexert', 'strain a part of yourself', 'rouse yourself'], 'deal (a person) a blow', ['lengthen by stretching', 'pull out', 'extend something to its full reach or capacity', 'be flexible or accommodating'], 'hang a person', ['reach out or over the hand or arm', 'give a person your hand'], 'extend, raise up the head or eyes in order to look or listen', 'hand a person an object', 'sprain a limb', 'reach for, stretch out to take or grasp something'
-        ],
-        gr: 'v',
-        tr: ['hit', 'lengthen', 'rouse', 'reach', 'hand', 'sprain', 'hang', 'pass'],
-        pt_pp: {
-            sc: ['raxed', 'raxt'],
-            tr: ['hit', 'handed', 'reached', 'stretched', 'overexterted', 'strained', 'sprained', 'roused', 'lengthened', 'extended', 'accomodated', 'hanged']
-        },
-        or: [
-            [G.notes.or.as, 'rax, raux, wrax'],
-            [G.notes.or.ae, 'raxan']
-        ],
-        ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler']
-    }, {
-        sc: 'redd',
-        en: [
-            ['clear', 'rid'], 'clarify'
-        ],
-        gr: 'v'
-    }, {
-        sc: 'remeid',
-        en: [
-            ['remedy', 'redress']
-        ],
-        tr: ['remeed', 'rectify', 'cure'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'remed(e)'],
-            ['frae the noun or a reduced mak o ' + G.notes.or.an, 'remedier']
-        ]
-    }, { // R
-        sc: 'rift',
-        en: [
-            ['to belch', 'fart']
-        ],
-        tr: ['belch', 'boak', 'boke', 'bowk'],
-        hl: 'belch',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'rift'],
-            [G.notes.or.anor, 'rypta']
-        ]
-    }, { // S
-        sc: ['set furth', 'furthset'],
-        pt: {
-            sc: ['set furth', 'furthset'],
-            tr: 'published'
-        },
-        pp: {
-            sc: ['set furth', 'setten furth'],
-            tr: 'published'
-        },
-        en: 'publish',
-        gr: 'phrasal v, v',
-        or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],
-        ex: 'She haes setten furth a pose o unco bonnie poyetry'
-    }, {
-        sc: 'skair',
-        en: 'share',
-        gr: ['v', 'n'],
-        tr: 'skare',
-        or: [
-            [G.notes.or.as, 'skar, scar(e), schare'],
-            ['?' + G.notes.or.anor, 'skera'],
-            ['?' + G.notes.or.md, 'scare, scaer']
-        ]
-    }, {
-        sc: 'sklent',
-        en: [
-            ['turn sideways', 'curve', 'zigzag'],
-            ['slope', 'slant'],
-            ['glance sideways', 'look askance', 'squint']
-        ],
-        gr: 'v'
-    }, {
-        sc: 'sklent',
-        en: [
-            ['split', 'tear']
-        ],
-        tr: 'rip',
-        hl: [],
-        gr: 'v'
-    }, {
-        sc: 'skleush',
-        en: 'walk in a clumsy or shuffling manner',
-        tr: ['shuffle', 'hirple', 'limp'],
-        hl: 'shuffle',
-        gr: 'v'
-    }, {
-        sc: 'steek',
-        en: [
-            ['close', 'fasten', 'lock']
-        ],
-        tr: 'shut',
-        pt_pp: {
-            sc: 'steekit',
-            tr: ['closed', 'shut', 'fastened', 'locked']
-        },
-        gr: 'v',
-        ex: [G.ex.j1, 'She steekit her nieve', 'Steek yer gab!'],
-        or: [
-            [G.notes.or.as, 'steik, steek, steke']
-        ]
-    }, {
-        sc: 'swither',
-        en: [
-            ['doubt', 'falter', 'hesitate', 'dither']
-        ],
-        tr: ['ditter', 'doiter', 'unsure'],
-        hl: 'swither',
-        gr: 'v',
-        ex: 'Dinna swither, min — haud gaun!',
-        or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms]
-    }, { // U
-        sc: 'uise',
-        pr: ['yöz', 'yüz', 'öz', 'yaiz', 'ees'],
-        en: 'use',
-        pt_pp: {
-            sc: 'uised',
-            tr: ['used', 'eesed', 'yist', 'yaised', 'yaized', 'eest']
-        },
-        tr: ['yaise', 'uiss', 'yiss', 'yaize', 'yeese', 'eese'],
-        hl: ['yaise', 'yaize', 'yeese', 'eese'],
-        gr: 'v'
-    }, {
-        sc: 'unsteek',
-        en: 'open',
-        tr: ['unlock', 'unfasten'],
-        pt_pp: {
-            sc: 'unsteekit',
-            tr: ['opened', 'unfastened', 'unlocked']
-        },
-        gr: 'v'
-    }, {
-        sc: 'upcast',
-        en: [
-            ['calculate', 'reckon', 'estimate']
-        ],
-        gr: 'v'
-    }, {
-        sc: 'upsteer',
-        sc_alt: 'upsteir',
-        en: [
-            ['stir up', 'throw into turmoil', 'stimulate', 'encourage', 'arouse', 'incite']
-        ],
-        tr: 'rouse',
-        gr: 'v'
-    }, {
-        sc: 'wale',
-        pt_pp: {
-            sc: 'waled',
-            tr: ['chose', 'chosen', 'selected', 'picked', 'picked out']
-        },
-        en: [
-            ['choose', 'select'],
-            ['arrange', 'sort']
-        ],
-        tr: ['pick', 'pick out', 'wale oot'],
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'waill'],
-            [G.notes.or.anor, 'val']
-        ],
-        ex: 'Clap the button for tae wale oot a wird allevolie'
-    }, {
-        sc: 'wirk',
-        pr: ['wirk, wurk'],
-        pt_pp: {
-            sc: 'wrocht',
-            tr: ['worked', 'workit', 'made', 'built', 'manufactured', 'biggit', 'makkit'],
-            hl: ['worked', 'workit', 'made', 'built', 'manufactured']
-        },
-        tr: ['labour', 'labor', 'toil', 'wark', 'big', 'build', 'make', 'mak'],
-        hl: 'wirk',
-        en: 'work',
-        gr: 'v',
-        or: [
-            [G.notes.or.as, 'wirk, wyrk'],
-            [G.notes.or.ae, 'wyrcan']
-        ],
-        ex: ['She haed wrocht hersel sair tae win the company the contract', 'The team haed been wirkin on the project for a guid while']
+    sc: G.v.hae.neg.sc,
+    sc_alt: G.v.hae.neg.sc_alt,
+    pr: G.v.hae.neg.pr,
+    en: G.v.hae.neg.en,
+    tr: G.v.hae.trigs,
+    hl: [],
+    gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+    ex: G.ex.b1
+}, { // hae present singular
+    sc: G.v.hae.ps.sc,
+    sc_alt: G.v.hae.ps.sc_alt,
+    en: G.v.hae.ps.en,
+    pr: G.v.hae.ps.pr,
+    tr: G.v.hae.trigs,
+    hl: [],
+    gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+}, { // hae present singular neg
+    sc: G.v.hae.ps.neg.sc,
+    en: G.v.hae.ps.neg.en,
+    tr: G.v.hae.trigs,
+    hl: [],
+    gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+}, { // hae past tense
+    sc: G.v.hae.pt.sc,
+    pr: G.v.hae.pt.pr,
+    en: G.v.hae.pt.en,
+    tr: G.v.hae.trigs,
+    hl: [],
+    gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+    ex: G.ex.d1
+}, { // hae neg past tense
+    sc: G.v.hae.pt.neg.sc,
+    en: G.v.hae.pt.neg.en,
+    tr: G.v.hae.trigs,
+    hl: [],
+    gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+}, { // hae past par
+    sc: G.v.hae.ptp.sc,
+    en: G.v.hae.ptp.en,
+    pr: G.v.hae.ptp.pr,
+    tr: G.v.hae.trigs,
+    hl: [],
+    gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+    ex: G.ex.e1
+}, { // hae -ing form
+    sc: G.v.hae.ing.sc,
+    en: G.v.hae.ing.en,
+    tr: G.v.hae.trigs,
+    hl: []
+}, {
+    sc: 'haik',
+    en: [
+        ['trek', 'rove', 'roam', 'wander aimlessly', 'trudge'], 'carry or drag with difficulty'
+    ],
+    gr: 'v',
+    or: [
+        [G.notes.or.ms, 'haik']
+    ]
+}, {
+    sc: 'haud oot',
+    pt: {
+        sc: ['held oot', 'haudit oot'],
+        tr: ['maintained', 'claimed']
     },
+    pp: {
+        sc: ['hauden oot', 'held oot'],
+        tr: ['maintained', 'claimed']
+    },
+    en: [
+        ['maintain', 'claim']
+    ],
+    gr: 'phrasal v',
+    ex: 'He’d aye hauden oot tae be a millionaire, but fowk didna trew it'
+}, {
+    sc: ['heat', 'het'],
+    pr: ['heet', 'hait', 'heht'],
+    en: 'heat',
+    tr: 'hate',
+    pt: {
+        sc: ['het', 'hat', 'heatit'],
+        tr: 'heated'
+    },
+    pp: {
+        sc: ['het', 'heatit', 'hetten'],
+        tr: 'heated'
+    },
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'hete, hett, heit, heat'],
+        [G.notes.or.ae, 'hǽtan']
+    ],
+    ex: ['He’d hetten up the car for a bit afore settin aff', 'The fitba haed him aw het up']
+}, {
+    sc: 'hirple',
+    en: [
+        ['limp', 'hobble']
+    ],
+    tr: ['skleush', 'lame'],
+    hl: [],
+    gr: 'v'
+}, {
+    sc: 'hoose',
+    def: ['tae provide wi a hoose', 'tae bouk guids or craps'],
+    tr: ['houss', 'hoose', 'house', 'hous'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'hous, huse, hows'],
+        [G.notes.or.ae, 'hūsian']
+    ],
+    ex: ['We can hoose the kye in the byre the nicht']
+}, { // O
+    sc: 'ocht',
+    en: 'ought',
+    gr: 'v'
+}, {
+    sc: 'ower',
+    pr: ['uower', 'oar', 'oor', 'err'],
+    pt_pp: {
+        sc: ['owert, owered']
+    },
+    en: [
+        ['overpower', 'take control', 'regulate or manage oneself']
+    ],
+    tr: ['over', 'owre'],
+    hl: ['ower', 'owre'],
+    gr: 'v',
+    or: 'see adv'
+}, {
+    sc: 'owergie',
+    en: [
+        ['give up', 'renounce', 'resign', 'surrender property']
+    ],
+    tr: ['owregie', 'relinquish', 'surrender'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'overgive, ourgive']
+    ]
+}, {
+    sc: 'pey',
+    en: 'pay',
+    pt_pp: {
+        sc: 'peyed',
+        tr: 'paid'
+    },
+    tr: 'recompense',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'pay, pey'],
+        [G.notes.or.an, 'paier']
+    ]
+}, { // P
+    sc: 'pit',
+    en: 'put',
+    pt: {
+        sc: ['pat', 'pit'],
+        tr: 'put'
+    },
+    pp: {
+        sc: ['pat', 'pit', 'pitten', 'putten'],
+        tr: 'put'
+    },
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'pit'],
+        [G.notes.or.ae, 'pȳtan']
+    ],
+    ex: ['Jamie pit the cat oot', G.ex.f, 'Iona haed pitten forrit mony guid ideas']
+}, {
+    sc: 'pit forrit',
+    en: 'introduce',
+    gr: 'phrasal v'
+}, {
+    sc: 'proceed',
+    en: 'proceed',
+    gr: 'v',
+    tr: ['go', 'gae', 'gang', 'ging', 'haud'],
+    hl: [],
+    or: [
+        [G.notes.or.as, 'proced(e), proceid'],
+        [G.notes.or.me + ' an ' + G.notes.or.eme, 'proced(e), proceede'],
+        [G.notes.or.f, 'procéder'],
+        [G.notes.or.l, 'procéder']
+    ]
+}, {
+    sc: 'propone',
+    pt_pp: {
+        sc: ['proponed', 'propone’t'],
+        tr: ['suggested', 'proposed', 'put forward']
+    },
+    def: [
+        ['pit forrit for consideration', 'suggest'],
+        ['<span>law</span> pit forrit or state (a plea) in a court']
+    ],
+    en: 'propose',
+    tr: 'bring forward',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'propone'],
+        [G.notes.or.l, 'prōpōnere']
+    ]
+}, { // T
+    sc: 'tak',
+    en: 'take',
+    pt: {
+        sc: 'teuk',
+        tr: ['took', 'tuik']
+    },
+    pp: {
+        sc: ['taen', 'takken', 'teuken'],
+        tr: ['taken', 'tane', 'takkin', 'tooken', 'tookin']
+    },
+    pr: ['tak', 'take'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'tak'],
+        G.notes.or.ae + ' <span>tacan</span> frae the ' + G.notes.or.anor + ' <span>taka</span>'
+    ],
+    ex: 'The roaster’s comment haed been taen doun afore I could repone til him'
+}, { // Tak -ing ending
+    sc: ['takkin', 'taein'],
+    en: 'taking',
+    tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'tooken', 'tookin', 'tak'],
+    hl: 'takken', // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw
+    ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
+    gr: 'pres participle o the v <span>tae tak</span>'
+}, {
+    sc: 'tak on',
+    en: 'adopt',
+    tr: ['teuk on', 'adopted'],
+    pp: {
+        sc: ['taen on', 'takken on', 'teuken on'],
+        tr: ['adopted', 'took on', 'adoptit']
+    },
+    gr: 'phrasal v',
+    ex: 'The Chairter wis taen on in 1992',
+    ph: true
+}, {
+    sc: 'teach',
+    en: 'teach',
+    gr: 'v'
+}, {
+    sc: ['think', 'hink'],
+    en: 'think',
+    pt_pp: {
+        sc: 'thocht',
+        en: 'thought',
+        tr: 'thoat'
+    },
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'think, thynk; thocht, thoucht'],
+        [G.notes.or.xx, 'ðencan, ðyncan']
+    ]
+}, {
+    sc: 'tred',
+    en: 'trade',
+    gr: 'v'
+}, {
+    sc: 'tuim',
+    pr: ['tim', 'teem', 'toom', 'taim'],
+    pt_pp: {
+        sc: 'tuimt',
+        tr: ['tuimed', 'emptied', 'emptied out',
+            'discharged', 'drained', 'gushed', 'poured'
+        ]
+    },
+    en: 'empty',
+    tr: ['empty', 'gush', 'discharge', 'drain'],
+    gr: 'v',
+    or: 'frae the adj',
+    ex: 'He tuimed the watter doun the cundie',
+    au: 'tuim'
+}, { // R
+    sc: 'raivel',
+    en: [
+        ['become confused, muddled or disordered'],
+        'to entangle (yarn, thread etc.)',
+        'to unwind yarn, thread etc. from a reel',
+        ['ramble', 'be delirious', 'speak incoherently'],
+        ['to confuse', 'perplex'],
+        ['to confuse', 'outwit']
+    ],
+    tr: ['ravel', 'raffle', 'entangle', 'unwind', 'entangle', 'confuse', 'snarl', 'tangle'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'ravel, rawil'],
+        [G.notes.or.d, 'ravelen, rafelen']
+    ]
+}, {
+    sc: 'rax',
+    en: [
+        'stretch', ['make a great effort', 'overexert', 'strain a part of yourself', 'rouse yourself'], 'deal (a person) a blow', ['lengthen by stretching', 'pull out', 'extend something to its full reach or capacity', 'be flexible or accommodating'], 'hang a person', ['reach out or over the hand or arm', 'give a person your hand'], 'extend, raise up the head or eyes in order to look or listen', 'hand a person an object', 'sprain a limb', 'reach for, stretch out to take or grasp something'
+    ],
+    gr: 'v',
+    tr: ['hit', 'lengthen', 'rouse', 'reach', 'hand', 'sprain', 'hang', 'pass'],
+    pt_pp: {
+        sc: ['raxed', 'raxt'],
+        tr: ['hit', 'handed', 'reached', 'stretched', 'overexterted', 'strained', 'sprained', 'roused', 'lengthened', 'extended', 'accomodated', 'hanged']
+    },
+    or: [
+        [G.notes.or.as, 'rax, raux, wrax'],
+        [G.notes.or.ae, 'raxan']
+    ],
+    ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler']
+}, {
+    sc: 'redd',
+    en: [
+        ['clear', 'rid'], 'clarify'
+    ],
+    gr: 'v'
+}, {
+    sc: 'remeid',
+    en: [
+        ['remedy', 'redress']
+    ],
+    tr: ['remeed', 'rectify', 'cure'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'remed(e)'],
+        ['frae the noun or a reduced mak o ' + G.notes.or.an, 'remedier']
+    ]
+}, { // R
+    sc: 'rift',
+    en: [
+        ['to belch', 'fart']
+    ],
+    tr: ['belch', 'boak', 'boke', 'bowk'],
+    hl: 'belch',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'rift'],
+        [G.notes.or.anor, 'rypta']
+    ]
+}, { // S
+    sc: ['set furth', 'furthset'],
+    pt: {
+        sc: ['set furth', 'furthset'],
+        tr: 'published'
+    },
+    pp: {
+        sc: ['set furth', 'setten furth'],
+        tr: 'published'
+    },
+    en: 'publish',
+    gr: 'phrasal v, v',
+    or: [G.notes.or.as + ' haes <span>furthset</span> ‘tae set furth or forrit; tae advance’ an <span>furthsettar, furthsetter</span>'],
+    ex: 'She haes setten furth a pose o unco bonnie poyetry'
+}, {
+    sc: 'skair',
+    en: 'share',
+    gr: ['v', 'n'],
+    tr: 'skare',
+    or: [
+        [G.notes.or.as, 'skar, scar(e), schare'],
+        ['?' + G.notes.or.anor, 'skera'],
+        ['?' + G.notes.or.md, 'scare, scaer']
+    ]
+}, {
+    sc: 'sklent',
+    en: [
+        ['turn sideways', 'curve', 'zigzag'],
+        ['slope', 'slant'],
+        ['glance sideways', 'look askance', 'squint']
+    ],
+    gr: 'v'
+}, {
+    sc: 'sklent',
+    en: [
+        ['split', 'tear']
+    ],
+    tr: 'rip',
+    hl: [],
+    gr: 'v'
+}, {
+    sc: 'skleush',
+    en: 'walk in a clumsy or shuffling manner',
+    tr: ['shuffle', 'hirple', 'limp'],
+    hl: 'shuffle',
+    gr: 'v'
+}, {
+    sc: 'steek',
+    en: [
+        ['close', 'fasten', 'lock']
+    ],
+    tr: 'shut',
+    pt_pp: {
+        sc: 'steekit',
+        tr: ['closed', 'shut', 'fastened', 'locked']
+    },
+    gr: 'v',
+    ex: [G.ex.j1, 'She steekit her nieve', 'Steek yer gab!'],
+    or: [
+        [G.notes.or.as, 'steik, steek, steke']
+    ]
+}, {
+    sc: 'swither',
+    en: [
+        ['doubt', 'falter', 'hesitate', 'dither']
+    ],
+    tr: ['ditter', 'doiter', 'unsure'],
+    hl: 'swither',
+    gr: 'v',
+    ex: 'Dinna swither, min — haud gaun!',
+    or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms]
+}, { // U
+    sc: 'uise',
+    pr: ['yöz', 'yüz', 'öz', 'yaiz', 'ees'],
+    en: 'use',
+    pt_pp: {
+        sc: 'uised',
+        tr: ['used', 'eesed', 'yist', 'yaised', 'yaized', 'eest']
+    },
+    tr: ['yaise', 'uiss', 'yiss', 'yaize', 'yeese', 'eese'],
+    hl: ['yaise', 'yaize', 'yeese', 'eese'],
+    gr: 'v'
+}, {
+    sc: 'unsteek',
+    en: 'open',
+    tr: ['unlock', 'unfasten'],
+    pt_pp: {
+        sc: 'unsteekit',
+        tr: ['opened', 'unfastened', 'unlocked']
+    },
+    gr: 'v'
+}, {
+    sc: 'upcast',
+    en: [
+        ['calculate', 'reckon', 'estimate']
+    ],
+    gr: 'v'
+}, {
+    sc: 'upsteer',
+    sc_alt: 'upsteir',
+    en: [
+        ['stir up', 'throw into turmoil', 'stimulate', 'encourage', 'arouse', 'incite']
+    ],
+    tr: 'rouse',
+    gr: 'v'
+}, {
+    sc: 'wale',
+    pt_pp: {
+        sc: 'waled',
+        tr: ['chose', 'chosen', 'selected', 'picked', 'picked out']
+    },
+    en: [
+        ['choose', 'select'],
+        ['arrange', 'sort']
+    ],
+    tr: ['pick', 'pick out', 'wale oot'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'waill'],
+        [G.notes.or.anor, 'val']
+    ],
+    ex: 'Clap the button for tae wale oot a wird allevolie'
+}, {
+    sc: 'wirk',
+    pr: ['wirk, wurk'],
+    pt_pp: {
+        sc: 'wrocht',
+        tr: ['worked', 'workit', 'made', 'built', 'manufactured', 'biggit', 'makkit'],
+        hl: ['worked', 'workit', 'made', 'built', 'manufactured']
+    },
+    tr: ['labour', 'labor', 'toil', 'wark', 'big', 'build', 'make', 'mak'],
+    hl: 'wirk',
+    en: 'work',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'wirk, wyrk'],
+        [G.notes.or.ae, 'wyrcan']
+    ],
+    ex: ['She haed wrocht hersel sair tae win the company the contract', 'The team haed been wirkin on the project for a guid while']
+},
     // v wis
     {
         sc: G.v.wis.sc,
@@ -2119,12 +2119,12 @@ G.dict.push({
         hl: [],
         gr: 'v'
     }, { // wis neg
-        sc: G.v.wis.neg.sc,
-        en: G.v.wis.neg.en,
-        tr: [].concat(G.v.wis.neg.tr, G.v.wis.trigs, G.v.war.trigs),
-        hl: G.v.wis.neg.tr,
-        gr: ['neg o v ' + G.utils.addSpan(G.v.wis.sc)]
-    },
+    sc: G.v.wis.neg.sc,
+    en: G.v.wis.neg.en,
+    tr: [].concat(G.v.wis.neg.tr, G.v.wis.trigs, G.v.war.trigs),
+    hl: G.v.wis.neg.tr,
+    gr: ['neg o v ' + G.utils.addSpan(G.v.wis.sc)]
+},
     // v wis end
     // v war
     {
@@ -2135,12 +2135,12 @@ G.dict.push({
         hl: [],
         gr: 'v'
     }, { // war neg
-        sc: G.v.war.neg.sc,
-        en: G.v.war.neg.en,
-        tr: [].concat(G.v.war.neg.tr, G.v.war.trigs, G.v.wis.trigs),
-        hl: G.v.war.neg.tr,
-        gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)]
-    },
+    sc: G.v.war.neg.sc,
+    en: G.v.war.neg.en,
+    tr: [].concat(G.v.war.neg.tr, G.v.war.trigs, G.v.wis.trigs),
+    hl: G.v.war.neg.tr,
+    gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)]
+},
     // v war end
     // will
     {
@@ -2153,30 +2153,30 @@ G.dict.push({
             [G.notes.or.ae, 'willan']
         ]
     }, { // will neg
-        sc: G.v.will.neg.sc,
-        sc_alt: G.v.will.neg.sc_alt,
-        en: G.v.will.neg.en,
-        tr: [].concat(G.v.will.trigs, G.v.will.neg.tr),
-        hl: G.v.will.neg.tr,
-        gr: ['neg o v ' + G.utils.addSpan(G.v.will.sc)]
-    }, { // will pt and pp
-        sc: G.v.will.pt_pp.sc,
-        en: G.v.will.pt_pp.en,
-        tr: G.v.will.trigs,
-        hl: [],
-        gr: ['pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
-        or: [
-            [G.notes.or.as, 'wald'],
-            [G.notes.or.ae, 'wolde']
-        ]
-    }, { // will pt and pp neg
-        sc: G.v.will.pt_pp.neg.sc,
-        en: G.v.will.pt_pp.neg.en,
-        tr: [].concat(G.v.will.trigs, G.v.will.pt_pp.neg.tr),
-        hl: G.v.will.pt_pp.neg.tr,
-        gr: ['neg pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
-        ex: 'Ye wadna could tell he uised tae be in the airmy'
-    }
+    sc: G.v.will.neg.sc,
+    sc_alt: G.v.will.neg.sc_alt,
+    en: G.v.will.neg.en,
+    tr: [].concat(G.v.will.trigs, G.v.will.neg.tr),
+    hl: G.v.will.neg.tr,
+    gr: ['neg o v ' + G.utils.addSpan(G.v.will.sc)]
+}, { // will pt and pp
+    sc: G.v.will.pt_pp.sc,
+    en: G.v.will.pt_pp.en,
+    tr: G.v.will.trigs,
+    hl: [],
+    gr: ['pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
+    or: [
+        [G.notes.or.as, 'wald'],
+        [G.notes.or.ae, 'wolde']
+    ]
+}, { // will pt and pp neg
+    sc: G.v.will.pt_pp.neg.sc,
+    en: G.v.will.pt_pp.neg.en,
+    tr: [].concat(G.v.will.trigs, G.v.will.pt_pp.neg.tr),
+    hl: G.v.will.pt_pp.neg.tr,
+    gr: ['neg pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
+    ex: 'Ye wadna could tell he uised tae be in the airmy'
+}
     // v will end
     // Template
     // // v {{ wird }}

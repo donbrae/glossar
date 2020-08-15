@@ -4,15 +4,15 @@
  * @description Scots glossar
  */
 
-var GLOSSAR = (function() {
+var GLOSSAR = (function () {
 
     var cfg = {
-            search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
-            threshold_exact_match: 5, // If length of searched-for word is below this threshold, '=' will be prepended to the query so that only exact matches are returned (so searching for 'fart', for example, doesn't return 'aff' due to one of aff's triggers being 'farther away'). Also helps prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Items in 'tr'/'hl' properties are unaffected and still show as configured
-            variants: ['sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
-            threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
-            extended_cmd: '^' // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string.
-        },
+        search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
+        threshold_exact_match: 5, // If length of searched-for word is below this threshold, '=' will be prepended to the query so that only exact matches are returned (so searching for 'fart', for example, doesn't return 'aff' due to one of aff's triggers being 'farther away'). Also helps prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Items in 'tr'/'hl' properties are unaffected and still show as configured
+        variants: ['sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
+        threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
+        extended_cmd: '^' // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string.
+    },
         state = {
             word: '', // Value of search text box
             word_lc: '', // Value of search text box in lower case
@@ -26,7 +26,7 @@ var GLOSSAR = (function() {
         },
         fuse;
 
-    HTMLAudioElement.prototype.stop = function() {
+    HTMLAudioElement.prototype.stop = function () {
         this.pause();
         this.currentTime = 0.0;
     }
@@ -46,12 +46,12 @@ var GLOSSAR = (function() {
             // minMatchCharLength: 1, // Using cfg.threshold_exact_match instead
             useExtendedSearch: true, // false https://fusejs.io/examples.html#extended-search. Requires fuse.min.js (i.e. non-basic)
             keys: [{ // Boost certain keys
-                    name: 'sc',
-                    weight: 10
-                }, {
-                    name: 'en',
-                    weight: 8
-                },
+                name: 'sc',
+                weight: 10
+            }, {
+                name: 'en',
+                weight: 8
+            },
                 'pl.sc',
                 'tr',
                 'pl.tr',
@@ -73,7 +73,7 @@ var GLOSSAR = (function() {
         checkForUpdate();
 
         // Check for value on page load (after back button or not-yet-implemented GET variable). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
-        var t = setTimeout(function() {
+        var t = setTimeout(function () {
             if ($.trim($('#searchTextbox').val()).length) {
                 searchInit();
             }
@@ -90,15 +90,15 @@ var GLOSSAR = (function() {
         $('#searchTextbox').on('keyup', searchInit);
 
         // Text field pseudo-focus state on clear button focus
-        $('#clear-value').on('focus', function() {
+        $('#clear-value').on('focus', function () {
             $('#searchTextbox').addClass('form-control-pseudo-focus');
         });
 
-        $('#clear-value').on('blur', function() {
+        $('#clear-value').on('blur', function () {
             $('#searchTextbox').removeClass('form-control-pseudo-focus');
         });
 
-        $('#random').click(function() {
+        $('#random').click(function () {
 
             var num, word, $btn = $(this);
 
@@ -134,18 +134,18 @@ var GLOSSAR = (function() {
             } else {
                 state.query = cfg.extended_cmd + state.word;
             }
-            print(fuse.search(state.query), function() {
+            print(fuse.search(state.query), function () {
                 state.random.push(num);
                 $btn.prop('disabled', false);
             });
         });
 
-        $('#clear-value').click(function() {
+        $('#clear-value').click(function () {
             $(this).prev('input').val('').focus();
             $(this).removeClass('show').prop('disabled', true);
             $('#results').removeClass('show');
 
-            var t = setTimeout(function() {
+            var t = setTimeout(function () {
                 $('#results').html('');
                 state.last_word_searched_for = '';
             }, 250);
@@ -156,7 +156,7 @@ var GLOSSAR = (function() {
             }
         });
 
-        $(document).on('click', '.play-audio', function(e) {
+        $(document).on('click', '.play-audio', function (e) {
 
             if (!$(this).prop('disabled')) {
                 if (state.audio) { // If audio is currently being played
@@ -169,7 +169,7 @@ var GLOSSAR = (function() {
 
                 state.audio = document.getElementById(state.$audio_button.data('file'));
 
-                $(state.audio).bind('ended', function() {
+                $(state.audio).bind('ended', function () {
                     $(this).unbind('ended');
                     state.$audio_button.prop('disabled', false);
                     state.audio = null;
@@ -181,7 +181,7 @@ var GLOSSAR = (function() {
             e.preventDefault();
         });
 
-        $(document).on('click', '.get-update', function() {
+        $(document).on('click', '.get-update', function () {
             location.reload();
         });
     }
@@ -222,7 +222,7 @@ var GLOSSAR = (function() {
                 print(fuse.search(state.query));
             } else {
                 $('#results').removeClass('show');
-                var t = setTimeout(function() {
+                var t = setTimeout(function () {
                     $('#results').html('');
                     state.last_word_searched_for = '';
                 }, 250);
@@ -256,7 +256,7 @@ var GLOSSAR = (function() {
             url: './update-check.php',
             dataType: 'text',
             cache: false,
-            success: function(d) {
+            success: function (d) {
                 var date_ui = parseInt(
                     $('.last-updatit').data('updatit')
                 );
@@ -268,7 +268,7 @@ var GLOSSAR = (function() {
                     console.log('Data should be up tae date');
                 }
             },
-            error: function(xhr, type) {
+            error: function (xhr, type) {
                 console.log('Error when checking for update');
                 console.log(xhr);
                 console.log(type);
@@ -290,7 +290,7 @@ var GLOSSAR = (function() {
      */
     function processVariants(input, test, ext) {
 
-        var ext_cmd = typeof(ext) === 'string' ? ext : cfg.extended_cmd, // Is there an override?
+        var ext_cmd = typeof (ext) === 'string' ? ext : cfg.extended_cmd, // Is there an override?
             user_input = input.toLowerCase(),
             variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
             tests, common_word_part, variant;
@@ -360,7 +360,7 @@ var GLOSSAR = (function() {
     function checkForTriggers(items) {
         var trigger_found = false;
 
-        $.each(items, function() {
+        $.each(items, function () {
             if (this.tr && this.tr.indexOf(state.word_lc) > -1) {
                 trigger_found = true;
                 return;
@@ -373,7 +373,7 @@ var GLOSSAR = (function() {
     function addAudio(s) {
         var buttons = []; // HTML
 
-        $.each([].concat(s), function() {
+        $.each([].concat(s), function () {
             if (!$('#' + this).length) {
                 $('body').prepend('<audio id="' + this + '" class="audio d-none" src="./audio/' + this.charAt(0) + '/' + this + '.mp3" preload="auto"></audio>'); // Eik audio element
             }
@@ -396,7 +396,7 @@ var GLOSSAR = (function() {
         if (r && r.length) {
             $('#results').html('');
 
-            $.each(r, function() {
+            $.each(r, function () {
 
                 item = this.item;
                 results.push(item);
@@ -526,11 +526,11 @@ var GLOSSAR = (function() {
 
             });
 
-            highlight(results, function() {
+            highlight(results, function () {
                 if (state.highlight) {
 
                     // Move highlighted entries to the top
-                    $($('#results > dl').get().reverse()).each(function() {
+                    $($('#results > dl').get().reverse()).each(function () {
                         $dl = $(this);
                         if ($dl.find('dd').hasClass('hl') || $dl.find('dd.pl > span').hasClass('hl') || $dl.find('dd.neg > span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
                             $dl.parent().prepend($dl);
@@ -538,7 +538,7 @@ var GLOSSAR = (function() {
                     });
 
                     // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
-                    $('#results > dl').each(function() {
+                    $('#results > dl').each(function () {
                         $dl = $(this);
                         if ($dl.data('heeze') && $dl.data('heeze') === state.word_lc) {
                             $dl.parent().prepend($dl);
@@ -548,7 +548,7 @@ var GLOSSAR = (function() {
 
                 $('#results').addClass('show');
 
-                if (typeof(callback) === 'function') {
+                if (typeof (callback) === 'function') {
                     callback();
                 }
             });
@@ -564,7 +564,7 @@ var GLOSSAR = (function() {
         var origin = [].concat(obj),
             ul = [];
 
-        $.each(origin, function(i) {
+        $.each(origin, function (i) {
             if (this.join) { // If an array
                 ul.push(this[0] + ' <span>' + this[1] + '</span>');
             } else { // If a string
@@ -590,8 +590,8 @@ var GLOSSAR = (function() {
 
         // Redd word(s)
         if (w.join) { // Result is an array of values
-            $.each(w, function(i) {
-                $.each([].concat(this), function() {
+            $.each(w, function (i) {
+                $.each([].concat(this), function () {
                     if (this.indexOf(', ') > -1) { // If multiple 'synomyms'
                         words = words.concat(this.split(', ')); // Split any 'synomym' meanings and add to 'words' array
                     } else {
@@ -604,7 +604,7 @@ var GLOSSAR = (function() {
         }
 
         // Make lowercase
-        $.each(words, function(i) {
+        $.each(words, function (i) {
             words[i] = this.toLowerCase();
         });
 
@@ -622,7 +622,7 @@ var GLOSSAR = (function() {
         var words = [].concat(word), // Make array in case we're passed a string
             ol = [];
 
-        $.each(words, function() {
+        $.each(words, function () {
             if (this.join) { // If an array
                 ol.push(this.join(separator + ' ')); // Join array items into a single string
             } else { // If a string
@@ -657,7 +657,7 @@ var GLOSSAR = (function() {
             if ($el.data('hl')) { // Add any highlight words to the items array
                 items = items.concat($el.data('hl').split(','));
             }
-            $.each(items, function() {
+            $.each(items, function () {
                 if (this &&
                     (
                         this.toLowerCase() === state.word_lc || // Direct match
@@ -673,12 +673,12 @@ var GLOSSAR = (function() {
         }
 
         // Clear any highlights
-        $('.sc, .pt span, .pp span', '#results').each(function() {
+        $('.sc, .pt span, .pp span', '#results').each(function () {
             $(this).removeClass('hl');
         });
 
         // Add any new highlights
-        $($('#results > dl').get().reverse()).each(function() {
+        $($('#results > dl').get().reverse()).each(function () {
 
             var hl; // Trigger words to cause highlighting
 
@@ -787,7 +787,7 @@ var GLOSSAR = (function() {
 
     // Consider using https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat. See also https://stackoverflow.com/a/27267762/4667710. Nae IE support
     function flattenArray(arr) {
-        return arr.reduce(function(a, b) {
+        return arr.reduce(function (a, b) {
             if (Array.isArray(b)) {
                 return a.concat(flattenArray(b))
             }
@@ -799,7 +799,7 @@ var GLOSSAR = (function() {
     function arrayToLowerCase(arr) {
         var a = [];
 
-        $.each(flattenArray(arr), function() {
+        $.each(flattenArray(arr), function () {
             a.push(this.toString().toLowerCase());
         });
 
