@@ -501,6 +501,29 @@ G.dict.push({
         [G.notes.or.l, 'allocāt-, <span>ptp stem o</span> allocāre']
     ],
     ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', 'Resources haes been allocate tae them that’s maist in need']
+}, {
+    sc: 'awe',
+    en: ['own', 'owe'],
+    tr: ['possess', 'due', 'ain'],
+    hl: 'possess',
+    pt_pp: {
+        sc: ['aucht', 'awed'],
+        tr: ['owned', 'owed', 'ocht'],
+        hl: ['owned', 'owed']
+    },
+    gr: 'v',
+    ex: ['He awes a flat in Glesca', 'For years he aucht a simmer hoose in Fraunce', 'He haed tae sell nearhaund aw that he wis aucht', 'I’m awin ye some siller for the messages, am I no?', 'Ye awe me a beer!']
+}, {
+    sc: 'awn',
+    en: 'own',
+    tr: ['possess', 'ain'],
+    hl: 'possess',
+    pt_pp: {
+        sc: 'awned',
+        tr: ['owned', 'possessed']
+    },
+    gr: 'v',
+    ex: ['He struts aboot like he awns the place', 'She’s the awner o the estate']
 }, { // v be
     sc: G.v.be.sc,
     en: G.v.be.en,
@@ -778,6 +801,19 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'differ'],
         [G.notes.or.mf, 'differer']
+    ]
+}, {
+    sc: 'dreep',
+    def: ['a sype (o watter or ither liquid)', 'tae sythe tatties efter bilin', 'tae hing doun frae a waw wi your airms raxed oot abuin ye, syne drap tae the grund'],
+    pt: {
+        sc: 'dreepit',
+        tr: 'dripped'
+    },
+    tr: ['drip', 'drain', 'strain', 'descend'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'drepe, dreip, dreep'],
+        [G.notes.or.ae, 'drēopan']
     ]
 }, { // E
     sc: 'ettle',
@@ -1430,6 +1466,22 @@ G.dict.push({
     gr: 'v',
     au: 'learn'
 }, {
+    sc: 'lest',
+    pt_pp: {
+        sc: 'lestit',
+        tr: ['lasted', 'endured', 'continued']
+    },
+    en: [
+        ['endure', 'continue']
+    ],
+    tr: 'last',
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'lest(e)'],
+        [G.notes.or.ae, 'lǣstan']
+    ],
+    ex: 'The wather’s nice the noo but I dout it winna lest!'
+}, {
     sc: 'licht',
     en: 'light',
     pt_pp: {
@@ -1506,6 +1558,13 @@ G.dict.push({
     ],
     au: 'mind'
 }, {
+    sc: 'niffer',
+    en: [
+        ['to barter', 'trade', 'haggle', 'bargain']
+    ],
+    tr: ['barter', 'exchange', 'deal', 'transact', 'do business'],
+    gr: 'v'
+}, {
     sc: 'uplaid',
     tr: 'upload',
     pt: {
@@ -1578,6 +1637,24 @@ G.dict.push({
     tr: 'fesh on',
     gr: 'v',
     ex: 'The report recommendit we fesh-on a national policy'
+}, {
+    sc: 'finnd',
+    pt: {
+        sc: ['fund', 'fand'],
+        tr: ['found', 'fan']
+    },
+    pp: {
+        sc: 'fund',
+        tr: ['found', 'fun']
+    },
+    en: 'find',
+    tr: ['fin', 'locate', 'discover', 'experience', 'sense'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'find, fynd'],
+        [G.notes.or.ae, 'findan']
+    ],
+    ex: 'I’v fund the new season tae be awfie slaw'
 }, {
     sc: 'frequent',
     pt_pp: {

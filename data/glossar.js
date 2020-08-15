@@ -75,7 +75,8 @@ G.ex = {
     i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer",
     j1: "Mind and steek the yett ahint ye",
     k1: "I wis in an awfie raivel",
-    l1: "It’s yersel! Come awa ben the hoose"
+    l1: "It’s yersel! Come awa ben the hoose",
+    m2: "He’s as daft as a yett in a windy day"
 };
 
 G.pr = {
@@ -609,19 +610,19 @@ G.dict = [{
 
 G.utils = {
     // Adds <span> around string 's'
-    addSpan: function(s) {
+    addSpan: function (s) {
         return '<span>' + s + '</span>';
     },
     // Works with filter method to get unique array values
-    onlyUnique: function(value, index, self) {
+    onlyUnique: function (value, index, self) {
         return self.indexOf(value) === index;
     },
     // Replaces ‘ and ’ with '
-    replaceQo: function(s) {
+    replaceQo: function (s) {
         return s.replace(/‘|’/g, "'");
     },
     // Replaces ' with ’
-    curlyQuotes: function(s) {
+    curlyQuotes: function (s) {
         return s.replace(/'/g, "’");
     }
 };

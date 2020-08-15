@@ -43,6 +43,11 @@ G.dict.push({ // A
     ],
     gr: 'phrasal adj'
 }, {
+    sc: 'ain',
+    en: 'own',
+    gr: ['adj', 'pronoon'],
+    ex: 'Juist in your ain time, likes!'
+}, {
     sc: 'allevolie',
     en: [
         ['giddy', 'volatile']
@@ -217,7 +222,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'daft(e)'],
         [G.notes.or.ae, 'gedæfte']
-    ]
+    ],
+    ex: G.ex.m2
 }, {
     sc: 'deif',
     pr: ['deef', 'dehf'],
@@ -579,6 +585,16 @@ G.dict.push({ // A
         [G.notes.or.as, 'lang(e), laing'],
         [G.notes.or.ae, 'lang']
     ]
+}, {
+    sc: 'last',
+    en: 'last',
+    gr: ['adj', 'adv'],
+    tr: ['final', 'finally', 'most recent', 'most recently'],
+    or: [
+        [G.notes.or.as, 'last, laist'],
+        [G.notes.or.ae, 'lætest']
+    ],
+    ex: ['The last time I seen her wis afore Christmas'],
 }, {
     sc: ['leart', 'leared'],
     en: [

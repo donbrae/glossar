@@ -217,7 +217,6 @@ G.dict.push({ // A
     en: [
         ['considerably', 'very', 'rather']
     ],
-    tr: ['guy', 'giy'],
     gr: ['adv'],
     or: [
         [G.notes.or.as, 'gay(e), gey'],

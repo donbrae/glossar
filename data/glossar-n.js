@@ -453,6 +453,34 @@ G.dict.push({
     en: 'documentary',
     gr: ['n', 'adj']
 }, {
+    sc: 'dree',
+    pt_pp: {
+        sc: 'dree’d',
+        tr: ['dree\'d', 'endured']
+    },
+    def: [
+        'tae endure; tae thole pyne and ill sonse',
+        'tae lest; tae haud gaun'
+    ],
+    tr: ['endure', 'suffer', 'thole', 'lest', 'haud gaun'],
+    hl: ['endure', 'suffer'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'drie, dre(e)'],
+        [G.notes.or.ae, 'drēogan']
+    ]
+}, {
+    sc: 'dreeper',
+    en: [
+        ['strainer', 'draining board']
+    ],
+    tr: ['colander', 'sieve'],
+    hl: [],
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'dreiper'],
+    ]
+}, {
     sc: 'dreich',
     en: [
         ['dreariness', 'gloom']
@@ -636,6 +664,14 @@ G.dict.push({
     en: 'film-making',
     tr: ['filmmaking', 'filmmakkin'],
     gr: 'n'
+}, {
+    sc: 'finnd',
+    en: [
+        ['a find', 'discovery']
+    ],
+    tr: ['find', 'fin'],
+    gr: 'n',
+    or: 'noun isna fund in Aulder Scots',
 }, {
     sc: 'fitba',
     pr: ['fitbaw', 'fitbaa'],
@@ -859,7 +895,7 @@ G.dict.push({
 }, {
     sc: 'keech',
     def: ['a lump o excrement; filth, clart', 'haivers, bletheration'],
-        tr: ['excrement', 'filth', 'clart', 'haivers', 'bletheration', 'nonsense', 'rubbish', 'pish', 'shite', 'jobby'],
+    tr: ['excrement', 'filth', 'clart', 'haivers', 'bletheration', 'nonsense', 'rubbish', 'pish', 'shite', 'jobby'],
     hl: ['excrement', 'filth', 'nonsense', 'rubbish'],
     gr: 'n',
     or: 'frae the Scots <i>cack</i>',
@@ -1056,6 +1092,14 @@ G.dict.push({
     sc: 'nicht',
     en: 'night',
     gr: ['n']
+}, {
+    sc: 'niffer',
+    en: [
+        ['an exchange', 'barter']
+    ],
+    tr: ['exchange', 'transaction', 'deal', 'business'],
+    hl: ['exchange', 'transaction', 'deal'],
+    gr: 'n'
 }, { // O
     sc: 'onhaudin',
     en: 'continuation',
@@ -1095,7 +1139,7 @@ G.dict.push({
         ['aught', 'anything'], 'nothing'
     ],
     gr: 'n',
-    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'Yon’s ocht ava tae dae wi it!']
+    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'Haivers! That’s ocht ava tae dae wi it']
 }, {
     sc: 'owerance',
     en: [
@@ -1606,7 +1650,7 @@ G.dict.push({
     en: ['gate', 'a pass between hills'],
     tr: ['yate', 'entrance', 'pass'],
     gr: 'n',
-    ex: [G.ex.j1, 'He’s as daft as a yett in a windy day'],
+    ex: [G.ex.j1, G.ex.j2],
     or: [
         [G.notes.or.as, 'yett, Ȝet(t), yate'],
         [G.notes.or.ae, 'geat']

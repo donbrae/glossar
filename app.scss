@@ -189,6 +189,12 @@ ul {
             left: -0.2rem;
         }
 
+        &.sc {
+            line-height: 1.35;
+            padding-bottom: 0.15rem;
+            margin-bottom: -0.1rem;
+        }
+
         &.sc,
         &.sc > span {
             padding-left: 0.38rem;
@@ -242,8 +248,13 @@ ul {
         margin-top: 0.2rem;
     }
 
-    .dt-def+dd+.dt-en+dd > .en {
+    .dt-def+dd+.dt-en+dd>.en,
+    .pp+.dt-en+dd {
         margin-top: 0.1rem;
+    }
+
+    .dt-def+dd+.dt-ex+dd {
+        margin-top: -0.1rem;
     }
 
     div.ex::before,
