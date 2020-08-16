@@ -156,7 +156,7 @@ var GLOSSAR = (function () {
             }
         });
 
-        $(document).on('click', '.play-audio', function (e) {
+        $(document).on('click', '.play-audio', function () {
 
             if (!$(this).prop('disabled')) {
                 if (state.audio) { // If audio is currently being played
@@ -175,10 +175,9 @@ var GLOSSAR = (function () {
                     state.audio = null;
                 });
 
+                state.audio.currentTime = 0;
                 state.audio.play();
             }
-
-            e.preventDefault();
         });
 
         $(document).on('click', '.get-update', function () {
@@ -498,8 +497,9 @@ var GLOSSAR = (function () {
                 neg = neg_arr.length ? `<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="${neg_arr.join(',')}">${[].concat(item.neg.sc).join(', ')}</span>${audio_neg}</dd>` : ''; // (Modal) verb negative
 
                 $('#results').append(`<dl${ph} data-score="${this.score}"${heeze}><dt class="dt-sc">Scots</dt><dd class="sc"${hl}>${G.utils.curlyQuotes([].concat(item.sc).join(', '))}</dd>
+                <span class="audio-1">${audio}</span>
                 ${sc_alt}
-                ${audio}
+                <span class="audio-2">${audio}</span>
                 ${pr}
                 ${grammar}
                 ${pl}

@@ -54,6 +54,7 @@ header ::selection {
 .icon-sound:before {
     content: '\e800';
 }
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -84,6 +85,7 @@ header {
         margin: 1rem auto 1.2rem;
         letter-spacing: 0.02rem;
         font-weight: 600;
+
         @media (min-width: 576px) {
             font-size: 2.6rem;
         }
@@ -94,6 +96,7 @@ header {
             padding: 0;
             margin-left: 0.3rem;
             letter-spacing: 0;
+
             @media (min-width: 576px) {
                 font-size: 0.75rem;
                 // padding: 1px 5px 2px;
@@ -126,6 +129,7 @@ header {
     line-height: 20px;
     /* Vertically center the text there */
     background-color: inherit;
+
     @media (min-width: 576px) {
         font-size: 0.85rem;
         line-height: 1.7;
@@ -145,6 +149,7 @@ ul {
 #results {
     padding-bottom: 1.1rem;
     padding-top: 1.8rem;
+
     @media (min-width: 576px) {
         padding-bottom: 1.8rem;
     }
@@ -160,7 +165,7 @@ ul {
         }
     }
 
-    > dl {
+    >dl {
         padding: 0.6rem 0.55rem 0.71rem;
         background-color: #ffffff;
         border-radius: 11px;
@@ -176,7 +181,7 @@ ul {
     }
 
     dd,
-    dd > span {
+    dd>span {
         margin-left: 0;
         padding: 0 0.4rem;
     }
@@ -196,7 +201,7 @@ ul {
         }
 
         &.sc,
-        &.sc > span {
+        &.sc>span {
             padding-left: 0.38rem;
         }
     }
@@ -228,7 +233,7 @@ ul {
             list-style-type: none;
         }
 
-        > li {
+        >li {
             list-style-position: inside;
         }
     }
@@ -248,7 +253,7 @@ ul {
         margin-top: 0.1rem;
     }
 
-    .dt-def+dd+.dt-ex+dd > .ex {
+    .dt-def+dd+.dt-ex+dd>.ex {
         margin-top: 0.2rem;
     }
 
@@ -284,18 +289,18 @@ ul {
         min-height: 1.5rem;
     }
 
-    .pl > span,
-    .pp > span,
-    .pt > span,
-    .pt-pp > span {
+    .pl>span,
+    .pp>span,
+    .pt>span,
+    .pt-pp>span {
         min-height: 1.4rem;
     }
 
-    .neg > span,
-    .pl > span,
-    .pp > span,
-    .pt > span,
-    .pt-pp > span,
+    .neg>span,
+    .pl>span,
+    .pp>span,
+    .pt>span,
+    .pt-pp>span,
     .sc {
         display: inline-block;
     }
@@ -320,10 +325,12 @@ ul {
 
     .sc-alt {
         position: relative;
+
         @media (min-width: 576px) {
             display: inline-block;
             padding-left: 0;
         }
+
         // &+.dt-pr+.pr {
         //     @media (max-width: 575px) {
         //         padding-left: 0.5rem;
@@ -395,6 +402,7 @@ ul {
     .grammar,
     .pr {
         display: block;
+
         @media (min-width: 576px) {
             display: inline;
             padding: 0 !important;
@@ -418,6 +426,22 @@ ul {
     .pr {
         color: #8c8c8c;
     }
+
+    .audio-1 {
+        display: inline-block;
+
+        @media (min-width: 576px) {
+            display: none;
+        }
+    }
+
+    .audio-2 {
+        display: none;
+
+        @media (min-width: 576px) {
+            display: inline-block;
+        }
+    }
 }
 
 .text-muted {
@@ -426,6 +450,7 @@ ul {
 
 #search {
     padding-top: 1.8rem;
+
     @media (min-width: 576px) {
         padding-top: 2rem;
     }
@@ -445,15 +470,17 @@ ul {
 
     .input-group {
         width: 80% !important;
+
         @media (min-width: 433px) {
             width: 75% !important;
         }
+
         @media (min-width: 576px) {
             width: 80% !important;
         }
 
-        > .custom-select:not(:last-child),
-        > .form-control:not(:last-child) {
+        >.custom-select:not(:last-child),
+        >.form-control:not(:last-child) {
             border-top-right-radius: 2rem;
             border-bottom-right-radius: 2rem;
         }
@@ -541,6 +568,7 @@ button {
 
 .get-update {
     margin: 0.3rem 0;
+
     @media (min-width: 576px) {
         margin: 0.5rem 0;
     }
