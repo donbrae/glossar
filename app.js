@@ -29,7 +29,7 @@ var GLOSSAR = (function () {
     HTMLAudioElement.prototype.stop = function () {
         this.pause();
         this.currentTime = 0.0;
-    }
+    };
 
     function init() {
         // // options{} defaults in comments. See also https://fusejs.io/api/options.html#advanced-options
@@ -130,7 +130,7 @@ var GLOSSAR = (function () {
 
             // (We don't need to do variant check here because it's not based on user input)
             if (state.word.length < cfg.threshold_exact_match) {
-                state.query = '=' + state.word;
+                state.query = `=${state.word}`;
             } else {
                 state.query = cfg.extended_cmd + state.word;
             }
@@ -206,7 +206,7 @@ var GLOSSAR = (function () {
             if (state.word.length) {
 
                 if (state.word.length < cfg.threshold_exact_match && state.word.length < cfg.threshold_variants) {
-                    state.query = '=' + state.word; // Exact match
+                    state.query = `=${state.word}`; // Exact match
                 } else if (state.word.length < cfg.threshold_exact_match &&
                     state.word.length >= cfg.threshold_variants) {
                     state.query = processVariants(state.word, cfg.variants, '='); // Look for any variants, passing in '=' (exact match) extended command override
@@ -277,7 +277,7 @@ var GLOSSAR = (function () {
     }
 
     function noResults() {
-        $('#results').html('<div class="text-center no-results">Sorry, the’r nae results for <strong>' + state.word + '</strong></div>');
+        $('#results').html(`<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong></div>`);
         $('#results').addClass('show');
     }
 
@@ -352,32 +352,14 @@ var GLOSSAR = (function () {
         return ext_cmd + input;
     }
 
-    /**
-     * Checks whether the currently searched for word matches any of the items' 'tr' property
-     * @param {Array} items - Array of objects
-     * @returns {Boolean}
-     */
-    function checkForTriggers(items) {
-        var trigger_found = false;
-
-        $.each(items, function () {
-            if (this.tr && this.tr.indexOf(state.word_lc) > -1) {
-                trigger_found = true;
-                return;
-            }
-        });
-
-        return trigger_found;
-    }
-
     function addAudio(s) {
         var buttons = []; // HTML
 
         $.each([].concat(s), function () {
             if (!$('#' + this).length) {
-                $('body').prepend('<audio id="' + this + '" class="audio d-none" src="./audio/' + this.charAt(0) + '/' + this + '.mp3" preload="auto"></audio>'); // Eik audio element
+                $('body').prepend(`<audio id="${this}" class="audio d-none" src="./audio/${this.charAt(0)}/${this}.mp3" preload="auto"></audio>`); // Eik audio element
             }
-            buttons.push('<button class="play-audio btn bg-transparent" data-file="' + this + '"><i class="demo-icon icon-sound"></i></button>'); // Eik button
+            buttons.push(`<button class="play-audio btn bg-transparent" data-file="${this}"><i class="demo-icon icon-sound"></i></button>`); // Eik button
         });
 
         return buttons.join('');
@@ -399,18 +381,18 @@ var GLOSSAR = (function () {
                 item = this.item;
                 results.push(item);
 
-                grammar = item.gr ? '<dt class="dt-grammar">Grammar</dt><dd class="grammar">' + [].concat(item.gr).join('; ') + '</dd>' : ''; // Grammar
-                sc_alt = item.sc_alt ? '<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">' + [].concat(item.sc_alt).join(', ') + '</dd>' : ''; // Alternative Scots spellings
-                en = item.en ? '<dt class="dt-en">English</dt><dd>' + formatMultiple(item.en, ',', 'en') + '</dd>' : ''; // English
-                pr = item.pr ? '<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘' + [].concat(item.pr).join('’, ‘') + '’)</dd> ' : ''; // Pronunciation
-                def = item.def ? '<dt class="dt-def">Definition</dt><dd>' + formatMultiple(item.def, ';', 'def') + '</dd>' : ''; // Definition
-                ex = item.ex ? '<dt class="dt-ex">Examples</dt><dd>' + formatMultiple(item.ex, ';', 'ex') + '</dd>' : ''; // Examples
+                grammar = item.gr ? `<dt class="dt-grammar">Grammar</dt><dd class="grammar">${[].concat(item.gr).join('; ')}</dd>` : ''; // Grammar
+                sc_alt = item.sc_alt ? `<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">${[].concat(item.sc_alt).join(', ')}</dd>` : ''; // Alternative Scots spellings
+                en = item.en ? `<dt class="dt-en">English</dt><dd>${formatMultiple(item.en, ',', 'en')}</dd>` : ''; // English
+                pr = item.pr ? `<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘${[].concat(item.pr).join('’, ‘')}’)</dd> ` : ''; // Pronunciation
+                def = item.def ? `<dt class="dt-def">Definition</dt><dd>${formatMultiple(item.def, ';', 'def')}</dd>` : ''; // Definition
+                ex = item.ex ? `<dt class="dt-ex">Examples</dt><dd>${formatMultiple(item.ex, ';', 'ex')}</dd>` : ''; // Examples
                 ph = item.ph ? ' class="phrase"' : ''; // Phrases, idioms
-                inf = item.inf ? '<dt class="dt-inf">Information</dt><dd>' + formatMultiple(item.inf, ';', 'inf') + '</dd>' : ''; // Additional information
-                or = item.or ? '<dt class="dt-or">Origin</dt><dd>' + formatOrigin(item.or) + '</dd>' : ''; // Origin
+                inf = item.inf ? `<dt class="dt-inf">Information</dt><dd>${formatMultiple(item.inf, ';', 'inf')}</dd>` : ''; // Additional information
+                or = item.or ? `<dt class="dt-or">Origin</dt><dd>${formatOrigin(item.or)}</dd>` : ''; // Origin
                 hl_sc_alt = item.sc_alt ? [].concat(item.sc_alt) : []; // Make sure to highlight any alternative Scots words
-                audio = item.au ? '<dt class="dt-au">Audio</dt><dd class="audio">' + addAudio(item.au) + '</dd> ' : ''; // Audio
-                heeze = item.heeze ? ' data-heeze="' + item.heeze + '"' : ''; // Should this get a heeze tae the tap of the list?
+                audio = item.au ? `<dt class="dt-au">Audio</dt><dd class="audio">${addAudio(item.au)}</dd> ` : ''; // Audio
+                heeze = item.heeze ? ` data-heeze="${item.heeze}"` : ''; // Should this get a heeze tae the tap of the list?
 
                 /**
                  * Highlight based on trigger words
@@ -495,42 +477,42 @@ var GLOSSAR = (function () {
                     hl = ''; // No trigger words
                 }
 
-                audio_pl = item.pl && item.pl.au ? '<span class="audio">' + addAudio(item.pl.au) + '</span>' : ''; // Audio (plural)
+                audio_pl = item.pl && item.pl.au ? `<span class="audio">${addAudio(item.pl.au)}</span>` : ''; // Audio (plural)
 
-                pl = pl_arr.length ? '<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span>' + audio_pl + '</dd>' : ''; // Noun plurals
+                pl = pl_arr.length ? `<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="${pl_arr.join(',')}">${[].concat(item.pl.sc).join(', ')}</span>${audio_pl}</dd>` : ''; // Noun plurals
 
-                audio_pt = item.pt && item.pt.au ? '<span class="audio">' + addAudio(item.pt.au) + '</span>' : ''; // Audio (past tense)
+                audio_pt = item.pt && item.pt.au ? `<span class="audio">${addAudio(item.pt.au)}</span>` : ''; // Audio (past tense)
 
-                pt = pt_arr.length ? '<dt class="dt-pt">Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span>' + audio_pt + '</dd>' : ''; // Past tense (simpler verbs)
+                pt = pt_arr.length ? `<dt class="dt-pt">Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="${pt_arr.join(',')}">${[].concat(item.pt.sc).join(', ')}</span>${audio_pt}</dd>` : ''; // Past tense (simpler verbs)
 
-                audio_pp = item.pp && item.pp.au ? '<span class="audio">' + addAudio(item.pp.au) + '</span>' : ''; // Audio (past participle)
+                audio_pp = item.pp && item.pp.au ? `<span class="audio">${addAudio(item.pp.au)}</span>` : ''; // Audio (past participle)
 
-                pp = pp_arr.length ? '<dt class="dt-pp">Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span>' + audio_pp + '</dd>' : ''; // Past participle (simpler verbs)
+                pp = pp_arr.length ? `<dt class="dt-pp">Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="${pp_arr.join(',')}">${[].concat(item.pp.sc).join(', ')}</span>${audio_pp}</dd>` : ''; // Past participle (simpler verbs)
 
-                audio_pt_pp = item.pt_pp && item.pt_pp.au ? '<span class="audio">' + addAudio(item.pt_pp.au) + '</span>' : ''; // Audio (matching past tense and past participle)
+                audio_pt_pp = item.pt_pp && item.pt_pp.au ? `<span class="audio">${addAudio(item.pt_pp.au)}</span>` : ''; // Audio (matching past tense and past participle)
 
-                pt_pp = pt_pp_arr.length ? '<dt class="dt-pt_pp">Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span>' + audio_pt_pp + '</dd>' : ''; // Identical past tense and past participle (simpler verbs)
+                pt_pp = pt_pp_arr.length ? `<dt class="dt-pt_pp">Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="${pt_pp_arr.join(',')}">${[].concat(item.pt_pp.sc).join(', ')}</span>${audio_pt_pp}</dd>` : ''; // Identical past tense and past participle (simpler verbs)
 
-                audio_neg = item.neg && item.neg.au ? '<span class="audio">' + addAudio(item.neg.au) + '</span>' : ''; // Audio (negative)
+                audio_neg = item.neg && item.neg.au ? `<span class="audio">${addAudio(item.neg.au)}</span>` : ''; // Audio (negative)
 
-                neg = neg_arr.length ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="' + neg_arr.join(',') + '">' + [].concat(item.neg.sc).join(', ') + '</span>' + audio_neg + '</dd>' : ''; // (Modal) verb negative
+                neg = neg_arr.length ? `<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="${neg_arr.join(',')}">${[].concat(item.neg.sc).join(', ')}</span>${audio_neg}</dd>` : ''; // (Modal) verb negative
 
-                $('#results').append('<dl' + ph + ' data-score="' + this.score + '"' + heeze + '><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</dd> ' +
-                    sc_alt +
-                    audio +
-                    pr +
-                    grammar +
-                    pl +
-                    pt +
-                    pp +
-                    pt_pp +
-                    neg +
-                    def +
-                    G.utils.curlyQuotes(en) +
-                    ex +
-                    inf +
-                    or +
-                    '</dl>');
+                $('#results').append(`<dl${ph} data-score="${this.score}"${heeze}><dt class="dt-sc">Scots</dt><dd class="sc"${hl}>${G.utils.curlyQuotes([].concat(item.sc).join(', '))}</dd>
+                ${sc_alt}
+                ${audio}
+                ${pr}
+                ${grammar}
+                ${pl}
+                ${pt}
+                ${pp}
+                ${pt_pp}
+                ${neg}
+                ${def}
+                ${G.utils.curlyQuotes(en)}
+                ${ex}
+                ${inf}
+                ${or}
+                </dl>`);
 
             });
 
@@ -574,7 +556,7 @@ var GLOSSAR = (function () {
 
         $.each(origin, function (i) {
             if (this.join) { // If an array
-                ul.push(this[0] + ' <span>' + this[1] + '</span>');
+                ul.push(`${this[0]} <span>${this[1]}</span>`);
             } else { // If a string
                 ul.push(this);
             }
@@ -584,7 +566,7 @@ var GLOSSAR = (function () {
 
             return '<div class="or-container">Origin: <ul class="or"><li class="list-inline-item">' + ul.join('<i>;</i> </li><li class="list-inline-item">') + '</li></ul></div>';
         } else { // If there is just one origin
-            return '<div class="or-container">Origin: ' + ul[0] + '</div>';
+            return `<div class="or-container">Origin: ${ul[0]}</div>`;
         }
     }
 
@@ -632,16 +614,16 @@ var GLOSSAR = (function () {
 
         $.each(words, function () {
             if (this.join) { // If an array
-                ol.push(this.join(separator + ' ')); // Join array items into a single string
+                ol.push(this.join(`${separator} `)); // Join array items into a single string
             } else { // If a string
                 ol.push(this);
             }
         });
 
         if (ol.length > 1) { // There are multiple meanings
-            return '<ol class="' + cl + '"><li>' + ol.join('</li><li>') + '</li></ol>';
+            return `<ol class="${cl}"><li>${ol.join('</li><li>')}</li></ol>`;
         } else { // If there is just one meaning
-            return '<div class="' + cl + '">' + ol[0] + '</div>';
+            return `<div class="${cl}">${ol[0]}</div>`;
         }
     }
 
@@ -804,9 +786,9 @@ var GLOSSAR = (function () {
     function flattenArray(arr) {
         return arr.reduce(function (a, b) {
             if (Array.isArray(b)) {
-                return a.concat(flattenArray(b))
+                return a.concat(flattenArray(b));
             }
-            return a.concat(b)
+            return a.concat(b);
         }, []);
     }
 

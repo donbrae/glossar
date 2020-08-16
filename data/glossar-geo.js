@@ -495,14 +495,13 @@ G.dict.push({
     tr: 'swedish',
     def: 'anent Swaiden, its fowk, or their leid',
     gr: ['adj'],
-    au: 'swaidish'
+    au: ['swades', 'swaidish']
 }, {
     sc: 'Swades',
     sc_alt: 'Swaidish',
     tr: 'swedish',
     def: 'the Scandinaivie leid o Swaiden, forby spoken in pairts o Finland',
-    gr: 'n',
-    au: 'swades'
+    gr: 'n'
 }, {
     sc: 'Swisserland',
     en: 'Switzerland',

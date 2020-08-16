@@ -121,15 +121,15 @@ G.dict = [{
     sc: 'binna',
     en: 'don\'t be',
     tr: ['do not be', 'binnae'],
-    gr: ['imperative'],
-    au: 'binna'
+    gr: ['imperative']
 }, {
     sc: 'binna',
     en: [
         ['unless', 'except']
     ],
     tr: 'binnae',
-    gr: ['conj']
+    gr: 'conj',
+    au: 'binna'
 }, {
     sc: 'binna',
     en: 'except for',
@@ -439,7 +439,7 @@ G.dict = [{
         [G.notes.or.as, 'of, off'],
         [G.notes.or.ae, 'of']
     ],
-    au: 'o|o1'
+    au: ['o', 'o1']
 }, {
     sc: 'onyane',
     en: 'anyone',

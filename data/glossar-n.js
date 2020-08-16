@@ -995,7 +995,7 @@ G.dict.push({
         ['a natural-formed area o watter surroundit by laund (rangin in bouk frae muckle doun til lairge pownds); aft-times in street names', 'an inlat o the sea'], 'a dub'
     ],
     tr: ['lake', 'pond', 'puddle', 'pool', 'inlet', 'inlat', 'watter', 'dub'],
-    hl: ['lake', 'pond', 'puddle', 'pool', 'dub'],
+    hl: ['lake', 'pond', 'puddle', 'pool'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'loch, louch(e)'],

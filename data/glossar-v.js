@@ -604,8 +604,7 @@ G.dict.push({
     gr: 'v',
     or: [
         [G.notes.or.as, 'bok, bock, bolk'],
-    ],
-    au: 'boak'
+    ]
 }, { // can
     sc: G.v.can.sc,
     en: G.v.can.en,
@@ -1995,7 +1994,7 @@ G.dict.push({
     sc: 'tred',
     en: 'trade',
     gr: 'v',
-    au: 'tred|tred1'
+    au: ['tred', 'tred1']
 }, {
     sc: 'tuim',
     pr: ['tim', 'teem', 'toom', 'taim'],
