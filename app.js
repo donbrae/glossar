@@ -646,11 +646,18 @@ var GLOSSAR = (function () {
 
             // E.g. ['^michty|^michtie|^michtae'] or ['=ony|=onie|=onae']
             function querySplit(q) {
-                var cmd = q.replace(/[0-9a-z$]/g, '').split('|')[0]; // Get non alphanumeic leading characters
 
-                if (cmd.length) { // If there is unix-style command leading character
-                    q = q.slice(cmd.length, q.length + 1); // Remove it
+                var cmd = q.match(/^\W+|\W+$/); // Get non-alphanumeic leading characters (Latin-characters only, i.e. doesn't take account of letters with diacritics)
+                if (cmd) {
+                    cmd = $.trim(q.match(/^\W+|\W+$/)[0]);
+
+                    if (cmd.length) { // If there is unix-style command leading character
+                        q = q.slice(cmd.length, q.length + 1); // Remove it
+                    }
+                } else {
+                    cmd = '';
                 }
+
                 return q.split('|' + cmd);
             }
 

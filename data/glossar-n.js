@@ -136,7 +136,7 @@ G.dict.push({
 }, {
     sc: 'breid',
     en: 'bread',
-    pr: ['breed', 'bred'],
+    pr: ['breed', 'brehd'],
     gr: 'n',
     or: [
         [G.notes.or.as, 'breid, brede, braid'],

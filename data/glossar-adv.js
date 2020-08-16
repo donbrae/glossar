@@ -600,13 +600,13 @@ G.dict.push({ // A
         [G.notes.or.as, 'the year']
     ]
 }, {
-    sc: 'the nou',
+    sc: 'the noo',
     en: [
         ['just now', 'at present', 'just a moment ago'],
         ['in a moment', 'soon']
     ],
-    tr: ['the-nou', 'the-noo', 'the noo', 'the now', 'at the moment', 'suin', 'sin', 'seen', 'momentarily', 'a moment ago'],
-    ex: ['Haud on; I’ll be there the nou', 'I cawed her the nou but she wisna answerin'],
+    tr: ['the-noo', 'the now', 'at the moment', 'suin', 'sin', 'seen', 'momentarily', 'a moment ago'],
+    ex: ['Haud on; I’ll be there the noo', 'I cawed her the noo but she wisna answerin'],
     or: 'first kythes in ' + G.notes.or.mods
 }, {
     sc: 'timeously',

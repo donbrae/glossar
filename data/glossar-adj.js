@@ -649,7 +649,7 @@ G.dict.push({ // A
         ['numerous', 'abundant'],
         ['full-grown', 'adult'],
         ['of high rank or social standing', 'self-important'],
-        ['<span>of letters of the alphabet</span> capital']
+        ['<span>anent letters of the alphabet</span> capital']
     ],
     tr: ['large', 'great', 'much', 'capital letter', 'mukkil', 'self important'],
     gr: 'adj',

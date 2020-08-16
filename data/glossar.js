@@ -71,7 +71,7 @@ G.ex = {
     e1: "Oot o the lot o us I’d haen the maist beers",
     f1: "Rax me ane o thae ile filters, wad ye?",
     g1: "The app’s uiser interface is juist what the client’s ettlin efter",
-    h1: "I’v juist gotten stertit the nou sae ye’ll hae tae gie me a bit mair time",
+    h1: "I’v juist gotten stertit the noo sae ye’ll hae tae gie me a bit mair time",
     i1: "The Green Pairty convener wis ettlin tae appynt a depute by the end o the simmer",
     j1: "Mind and steek the yett ahint ye",
     k1: "I wis in an awfie raivel",
