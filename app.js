@@ -358,7 +358,7 @@ var GLOSSAR = (function () {
             if (!$('#' + this).length) {
                 $('body').prepend(`<audio id="${this}" class="audio d-none" src="./audio/${this.charAt(0)}/${this}.mp3" preload="auto"></audio>`); // Eik audio element
             }
-            buttons.push(`<button class="play-audio btn bg-transparent" data-file="${this}"><i class="demo-icon icon-sound"></i></button>`); // Eik button
+            buttons.push(`<button class="play-audio btn" data-file="${this}"><i class="demo-icon icon-sound"></i></button>`); // Eik button
         });
 
         return buttons.join('');

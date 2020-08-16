@@ -876,7 +876,7 @@ G.dict.push({
         [G.notes.or.l, 'ēvītāre']
     ],
     ex: 'He tried tae evite bein liftit by the polis',
-    au: 'evite|evite1'
+    au: ['evite1', 'evite']
 }, {
     sc: ['examine', 'exaimine'],
     pt_pp: {
