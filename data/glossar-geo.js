@@ -14,7 +14,8 @@ G.dict.push({
     or: [
         [G.notes.or.mods, 'Africy'],
         [G.notes.or.as, 'Aphrik, Affrik, Afric']
-    ]
+    ],
+    au: 'africae'
 }, {
     sc: 'African',
     en: 'African',
@@ -104,7 +105,8 @@ G.dict.push({
     en: 'Bulgaria',
     tr: ['Bulgars', 'Bulgarie'],
     hl: ['Bulgairie', 'Bulgarie'],
-    gr: 'pn'
+    gr: 'pn',
+    au: 'bulgairie'
 }, {
     sc: 'Bulgars',
     en: 'Bulgarian',
@@ -196,7 +198,8 @@ G.dict.push({
 }, {
     sc: 'Europe',
     en: 'Europe',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'europe'
 }, {
     sc: 'Faerae Isles',
     en: 'Faroe Isles',
@@ -216,7 +219,8 @@ G.dict.push({
 }, {
     sc: 'Freishland',
     en: 'Frisia',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'freishland'
 }, {
     sc: 'Frisie',
     en: 'Frisian',
@@ -229,11 +233,13 @@ G.dict.push({
     gr: 'pn',
     or: [
         [G.notes.or.as, 'Galice']
-    ]
+    ],
+    au: 'galicie'
 }, {
     sc: 'Georgie',
     en: 'Georgia',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'georgie'
 }, {
     sc: 'Germany',
     en: 'Germany',
@@ -262,7 +268,8 @@ G.dict.push({
     sc: ['Ireland', 'Irland'],
     def: ['a country comprisin aboot fower fifts o the island o Ireland; forby kent as the Republic o Ireland', 'an island in the North Atlantic, tae the wast o Great Britain'],
     tr: ['Republic o Ireland', 'Republic of Ireland'],
-    gr: 'pn'
+    gr: 'pn',
+    au: 'ireland'
 }, {
     sc: 'Italy',
     en: 'Italy',
@@ -275,12 +282,14 @@ G.dict.push({
 }, {
     sc: 'Jamaicae',
     en: 'Jamaica',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'jamaicae'
 }, {
     sc: 'Japan',
     en: 'Japan',
     gr: 'pn',
-    def: 'A country East Asie'
+    def: 'A country East Asie',
+    au: 'japan'
 }, {
     sc: 'Lappland',
     en: 'Lappland',
@@ -418,7 +427,8 @@ G.dict.push({
     gr: 'pn',
     or: [
         [G.notes.or.as, 'Saturn, Saturnus'],
-    ]
+    ],
+    au: 'setern'
 }, {
     sc: 'Siberie',
     en: 'Siberia',
@@ -484,13 +494,15 @@ G.dict.push({
     sc_alt: 'Swaidish',
     tr: 'swedish',
     def: 'anent Swaiden, its fowk, or their leid',
-    gr: ['adj']
+    gr: ['adj'],
+    au: 'swaidish'
 }, {
     sc: 'Swades',
     sc_alt: 'Swaidish',
     tr: 'swedish',
     def: 'the Scandinaivie leid o Swaiden, forby spoken in pairts o Finland',
-    gr: ['n']
+    gr: 'n',
+    au: 'swades'
 }, {
     sc: 'Swisserland',
     en: 'Switzerland',
@@ -538,7 +550,8 @@ G.dict.push({
 }, {
     sc: 'Wast Indies',
     en: 'West Indies',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'wast-indies'
 }, {
     sc: ['London', 'Lunnon'],
     en: 'London',
@@ -551,7 +564,8 @@ G.dict.push({
     gr: 'pn',
     or: [
         [G.notes.or.as, 'Macedone']
-    ]
+    ],
+    au: 'north-macedonie'
 }, {
     sc: 'Pairis',
     en: 'Paris',
@@ -560,7 +574,8 @@ G.dict.push({
     or: [
         [G.notes.or.mods, 'Pairis'],
         [G.notes.or.as, 'Paris, Parys, Pareis']
-    ]
+    ],
+    au: 'pairis'
 }, {
     sc: 'Reid Sea',
     en: 'Red Sea',
@@ -581,5 +596,6 @@ G.dict.push({
     sc: ['kintra', 'country'],
     pr: ['kintra', 'kintrae', 'kuntrae'],
     en: 'country',
-    gr: 'n'
+    gr: 'n',
+    au: 'country'
 });

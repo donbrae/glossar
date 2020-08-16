@@ -487,11 +487,13 @@ G.dict.push({
     def: 'tae assign',
     pt: {
         sc: 'allocatit',
-        tr: ['allocated', 'assigned']
+        tr: ['allocated', 'assigned'],
+        au: 'allocatit'
     },
     pp: {
         sc: 'allocate',
-        tr: ['allocated', 'allocatit', 'assigned']
+        tr: ['allocated', 'allocatit', 'assigned'],
+        au: 'allocate-pp'
     },
     tr: ['assign', 'appoint'],
     hl: 'assign',
@@ -500,7 +502,8 @@ G.dict.push({
         [G.notes.or.as, 'allocat'],
         [G.notes.or.l, 'allocāt-, <span>ptp stem o</span> allocāre']
     ],
-    ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', 'Resources haes been allocate tae them that’s maist in need']
+    ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', 'Resources haes been allocate tae them that’s maist in need'],
+    au: 'allocate'
 }, {
     sc: 'awe',
     en: ['own', 'owe'],
@@ -533,7 +536,8 @@ G.dict.push({
     en: G.v.be.ps.en,
     tr: [].concat(G.v.be.trigs, G.v.be.ps.tr),
     hl: G.v.be.ps.tr,
-    gr: 'present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+    gr: 'present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc),
+    au: 'am'
 }, { // amna
     sc: G.v.be.ps.neg.sc,
     en: G.v.be.ps.neg.en,
@@ -600,7 +604,8 @@ G.dict.push({
     gr: 'v',
     or: [
         [G.notes.or.as, 'bok, bock, bolk'],
-    ]
+    ],
+    au: 'boak'
 }, { // can
     sc: G.v.can.sc,
     en: G.v.can.en,
@@ -775,7 +780,8 @@ G.dict.push({
     },
     tr: ['mak', 'make'],
     hl: 'develop',
-    gr: 'v'
+    gr: 'v',
+    au: 'develop'
 }, {
     sc: 'descrive',
     pr: ['descreeve', 'descryve'],
@@ -870,7 +876,8 @@ G.dict.push({
         [G.notes.or.f, 'éviter'],
         [G.notes.or.l, 'ēvītāre']
     ],
-    ex: 'He tried tae evite bein liftit by the polis'
+    ex: 'He tried tae evite bein liftit by the polis',
+    au: 'evite|evite1'
 }, {
     sc: ['examine', 'exaimine'],
     pt_pp: {
@@ -1418,7 +1425,8 @@ G.dict.push({
     gr: ['v', 'n'],
     or: [
         [G.notes.or.as, 'laid, lade']
-    ]
+    ],
+    au: 'laid'
 }, {
     sc: 'lat',
     en: 'let',
@@ -1624,7 +1632,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'fecht, feicht'],
         [G.notes.or.ae, 'feohtan']
-    ]
+    ],
+    au: 'fecht'
 }, {
     sc: 'fesh-on',
     en: [
@@ -1671,6 +1680,18 @@ G.dict.push({
         [G.notes.or.l, 'frequentāre']
     ]
 }, { // G
+    sc: 'gowk',
+    pt_pp: {
+        sc: 'gowkit',
+        tr: ['fooled', 'deceived']
+    },
+    en: [
+        ['to fool', 'deceive']
+    ],
+    tr: ['fool', 'befool', 'lead ajee'],
+    hl: ['fool', 'befool'],
+    gr: 'v'
+}, {
     sc: 'greet',
     en: ['cry', ['lament', 'complain']],
     tr: ['howl, sob', 'weep', 'whine', 'grumble', 'wheenge'],
@@ -1812,7 +1833,8 @@ G.dict.push({
     ],
     tr: ['skleush', 'lame'],
     hl: [],
-    gr: 'v'
+    gr: 'v',
+    au: 'hirple'
 }, {
     sc: 'hoose',
     def: ['tae provide wi a hoose', 'tae bouk guids or craps'],
@@ -1872,14 +1894,16 @@ G.dict.push({
     },
     pp: {
         sc: ['pat', 'pit', 'pitten', 'putten'],
-        tr: 'put'
+        tr: 'put',
+        au: 'pitten'
     },
     gr: 'v',
     or: [
         [G.notes.or.as, 'pit'],
         [G.notes.or.ae, 'pȳtan']
     ],
-    ex: ['Jamie pit the cat oot', G.ex.f, 'Iona haed pitten forrit mony guid ideas']
+    ex: ['Jamie pit the cat oot', G.ex.f, 'Iona haed pitten forrit mony guid ideas'],
+    au: 'pit'
 }, {
     sc: 'pit forrit',
     en: 'introduce',
@@ -1965,11 +1989,13 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'think, thynk; thocht, thoucht'],
         [G.notes.or.xx, 'ðencan, ðyncan']
-    ]
+    ],
+    au: 'hink'
 }, {
     sc: 'tred',
     en: 'trade',
-    gr: 'v'
+    gr: 'v',
+    au: 'tred|tred1'
 }, {
     sc: 'tuim',
     pr: ['tim', 'teem', 'toom', 'taim'],
@@ -2000,7 +2026,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'ravel, rawil'],
         [G.notes.or.d, 'ravelen, rafelen']
-    ]
+    ],
+    au: 'raivel'
 }, {
     sc: 'rax',
     en: [
@@ -2100,13 +2127,15 @@ G.dict.push({
     tr: 'shut',
     pt_pp: {
         sc: 'steekit',
-        tr: ['closed', 'shut', 'fastened', 'locked']
+        tr: ['closed', 'shut', 'fastened', 'locked'],
+        au: 'steekit'
     },
     gr: 'v',
     ex: [G.ex.j1, 'She steekit her nieve', 'Steek yer gab!'],
     or: [
         [G.notes.or.as, 'steik, steek, steke']
-    ]
+    ],
+    au: 'steek'
 }, {
     sc: 'swither',
     en: [

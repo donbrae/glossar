@@ -66,6 +66,15 @@ G.dict.push({ // A
         [G.notes.or.as, 'auld, ald(e)'],
         [G.notes.or.ae, 'ald']
     ]
+}, {
+    sc: ['aw', 'aa'],
+    en: 'all',
+    gr: ['n', 'adj', 'adv'],
+    tr: ['a', 'a\'', 'the whole', 'wholly', 'the hale', 'halely', 'fully', 'every', 'any', 'ony', 'altogether', 'awthegither', 'completely', 'entirely', 'quite', 'everything', 'awthing'],
+    or: [
+        [G.notes.or.as, 'al(l), aw'],
+        [G.notes.or.ae, 'eall']
+    ]
 }, { // B
     sc: 'baltic',
     def: 'o the weather, the temperatur: fell cauld',
@@ -108,7 +117,8 @@ G.dict.push({ // A
     pr: ['blootert', 'bleetert'],
     tr: ['bloutered', 'blootered', 'bloutert', 'blootert'],
     en: ['drunk', 'having been hit or kicked hard'],
-    gr: ['adj', 'informal']
+    gr: ['adj', 'informal'],
+    au: 'bluitert'
 }, {
     sc: 'braw',
     en: [
@@ -223,7 +233,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'daft(e)'],
         [G.notes.or.ae, 'gedæfte']
     ],
-    ex: G.ex.m2
+    ex: G.ex.m2,
+    au: 'daft'
 }, {
     sc: 'deif',
     pr: ['deef', 'dehf'],
@@ -281,6 +292,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'dreich, dreigh']
     ],
     ex: 'It’s gey dreich this efternuin',
+    au: 'dreich'
 }, { // E
     sc: 'easter',
     en: ['eastern', 'the more easterly of two places'],
@@ -466,7 +478,8 @@ G.dict.push({ // A
     gr: 'adj',
     or: [
         [G.notes.or.as, 'glaikit']
-    ]
+    ],
+    au: 'glaikit'
 }, {
     sc: 'gray',
     tr: 'grey',
@@ -495,6 +508,15 @@ G.dict.push({ // A
     gr: 'adj',
     or: 'unkent'
 }, { // H
+    sc: 'hale',
+    en: 'whole',
+    tr: ['hail', 'haill', 'the entirety', 'sound', 'healthy', 'uninjured', 'wholesome', 'robust', 'vigorous', 'complete', 'undamaged', 'all', 'aw', 'entire'],
+    gr: ['n', 'adj', 'adv'],
+    or: [
+        [G.notes.or.as, 'hail(l), hale'],
+        [G.notes.or.xx, 'hāl']
+    ]
+}, {
     sc: 'het',
     pr: ['heht', 'hait'],
     en: [
@@ -584,7 +606,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'lang(e), laing'],
         [G.notes.or.ae, 'lang']
-    ]
+    ],
+    au: 'lang'
 }, {
     sc: 'last',
     en: 'last',
@@ -764,7 +787,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'ravelled, rawellit'],
         'see v'
-    ]
+    ],
+    au: 'raivelt'
 }, {
     sc: 'reid',
     pr: ['rid', 'reed'],
@@ -775,7 +799,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'rede, reid'],
         [G.notes.or.me, 'red'],
         [G.notes.or.ae, 'rēod']
-    ]
+    ],
+    au: 'reid'
 }, {
     sc: 'richt',
     en: 'right',
@@ -801,6 +826,7 @@ G.dict.push({ // A
         [G.notes.or.ae, 'sār']
     ],
     ex: ['She’s sair on her feet!', 'My back’s been sair for a week noo', 'It’s a sair fecht, sae it is'],
+    au: 'sair'
 }, {
     sc: 'shuir',
     pr: ['shair', 'shör', 'shür', 'sheer', 'seer'],
@@ -824,7 +850,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'sib'],
         [G.notes.or.ae, 'sibb']
-    ]
+    ],
+    au: 'sib'
 }, {
     sc: 'sklent',
     en: [
@@ -845,6 +872,14 @@ G.dict.push({ // A
         [G.notes.or.me, 'sliken, sleken']
     ],
     ex: 'Ay, I wadna trust the sleekit bastart!'
+}, {
+    sc: 'stupit',
+    en: 'stupid',
+    gr: 'adj',
+    or: [
+        [G.notes.or.as, 'stupid'],
+        [G.notes.or.l, 'stupidus']
+    ]
 }, {
     sc: 'sweir',
     pr: 'sweer',
@@ -960,5 +995,6 @@ G.dict.push({ // A
     en: 'overwrought',
     tr: ['over-wrought', 'wrocht up', 'wrochtup'],
     gr: 'adj',
-    ex: G.ex.w
+    ex: G.ex.w,
+    au: 'wrocht-up'
 });

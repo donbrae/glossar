@@ -37,7 +37,8 @@ G.dict.push({
 }, {
     sc: 'ower and abuin',
     en: 'over and above',
-    gr: 'phr'
+    gr: 'phr',
+    au: 'ower-and-abuin'
 }, {
     sc: 'ower muckle',
     en: 'too much',
@@ -102,7 +103,8 @@ G.dict.push({
     sc: 'nae faurer gane than',
     en: 'as recently as',
     tr: 'nae farrer gane than',
-    gr: 'phr'
+    gr: 'phr',
+    au: 'nae-faurer-gane-than'
 }, {
     sc: 'conform tae',
     sc_alt: 'conform til',
@@ -129,7 +131,8 @@ G.dict.push({
     sc: 'how no?',
     en: 'why not?',
     tr: ['hoo no', 'how no', 'why not'],
-    gr: 'phr'
+    gr: 'phr',
+    au: 'how-no'
 }, {
     sc: 'keep the heid',
     en: 'remain calm',

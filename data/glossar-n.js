@@ -104,7 +104,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'the bok']
     ],
-    ex: 'The fish fair gied me the boak'
+    ex: 'The fish fair gied me the boak',
+    au: 'the-boak'
 }, {
     sc: 'but',
     en: 'the kitchen or outer room, e.g. in a but and ben',
@@ -168,7 +169,8 @@ G.dict.push({
     tr: ['man', 'lad', 'laddie', 'loun'],
     hl: ['boy', 'man'],
     gr: ['n', 'informal'],
-    ex: ['The boy wi the bustit timin belt is sittin waitin in the office', 'Ach, he’s an auld boy sae I wisna gonnae argue wi him', 'That boy taks nae shite frae naeb’dy!']
+    ex: ['The boy wi the bustit timin belt is sittin waitin in the office', 'Ach, he’s an auld boy sae I wisna gonnae argue wi him', 'That boy taks nae shite frae naeb’dy!'],
+    au: 'boy'
 }, {
     sc: 'brae',
     def: ['the (stey or sclentin) banks o a river, loch or seashore', 'a bank or lenth o grund wi a fairly strait upwart sclent til it', 'a gate wi a stey upcome (aft-times in street names)', 'the brou o a hill'],
@@ -431,7 +433,8 @@ G.dict.push({
 }, {
     sc: 'development',
     en: 'development',
-    gr: 'n'
+    gr: 'n',
+    au: 'development'
 }, {
     sc: 'differ',
     en: [
@@ -602,7 +605,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'fang'],
         [G.notes.or.anor, 'fang']
-    ]
+    ],
+    au: 'fankle'
 }, {
     sc: 'fash',
     en: [
@@ -644,7 +648,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'fichter, fechtar']
     ],
-    ex: 'She’s a bonnie fechter, that ane!'
+    ex: 'She’s a bonnie fechter, that ane!',
+    au: 'fechter'
 }, {
     sc: 'fechtin',
     en: 'fighting',
@@ -717,7 +722,8 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.ms + ' <span>furthsetting</span>', '<span>‘settin forrit, feshin on, forderin’</span>']
-    ]
+    ],
+    au: 'furthsettin'
 }, { // G
     sc: 'gate',
     sc_alt: 'gait',
@@ -739,6 +745,19 @@ G.dict.push({
     or: [
         [G.notes.or.ms, 'gloriositie'],
         [G.notes.or.mf, 'glorieuseté']
+    ]
+}, {
+    sc: 'gowk',
+    en: [
+        'the cuckoo',
+        ['a fool', 'simpleton'],
+        ['a joke, trick']
+    ],
+    gr: 'n',
+    tr: ['cuckoo', 'fool', 'fuil', 'feel', 'joke'],
+    or: [
+        [G.notes.or.as, 'gowk, gouk'],
+        [G.notes.or.anor, 'gaukr']
     ]
 }, {
     sc: 'greet',
@@ -917,7 +936,8 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.as, 'lad']
-    ]
+    ],
+    au: 'lad'
 }, {
     sc: 'laddie',
     en: ['a young man', 'a male child', 'a male sweetheart', 'a son'],
@@ -927,7 +947,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'laddie']
     ],
-    ex: 'That’s Eck’s laddie, is it no?'
+    ex: 'That’s Eck’s laddie, is it no?',
+    au: 'laddie'
 }, {
     sc: 'lair',
     en: [
@@ -993,7 +1014,8 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.as, 'loun']
-    ]
+    ],
+    au: 'loun'
 }, { // M
     sc: 'maiter',
     en: 'matter',
@@ -1059,7 +1081,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'money, mone, mony, monay'],
         [G.notes.or.me, 'monei']
-    ]
+    ],
+    au: 'siller'
 }, { // N
     sc: 'narrative',
     def: [
@@ -1093,6 +1116,15 @@ G.dict.push({
     en: 'night',
     gr: ['n']
 }, {
+    sc: 'nieve',
+    en: 'fist',
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'neiv(e), neve, nefe, neif(f'],
+        [G.notes.or.anor, 'hnefi']
+    ],
+    au: 'nieve'
+}, {
     sc: 'niffer',
     en: [
         ['an exchange', 'barter']
@@ -1103,7 +1135,8 @@ G.dict.push({
 }, { // O
     sc: 'onhaudin',
     en: 'continuation',
-    gr: 'n'
+    gr: 'n',
+    au: 'onhaudin'
 }, {
     sc: 'onybody',
     en: 'anybody',
@@ -1132,14 +1165,16 @@ G.dict.push({
 }, {
     sc: 'origin',
     en: 'origin',
-    gr: 'n'
+    gr: 'n',
+    au: 'origin'
 }, {
     sc: 'ocht',
     en: [
         ['aught', 'anything'], 'nothing'
     ],
     gr: 'n',
-    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'Haivers! That’s ocht ava tae dae wi it']
+    ex: ['Jamie didna hae the time tae mak ocht for the bake sale', 'Haivers! That’s ocht ava tae dae wi it'],
+    au: 'ocht'
 }, {
     sc: 'owerance',
     en: [
@@ -1286,7 +1321,8 @@ G.dict.push({
         ['confusion', 'a tangle']
     ],
     tr: 'ravelment',
-    gr: 'n'
+    gr: 'n',
+    au: 'raivelment'
 }, {
     sc: 'rax',
     en: [
@@ -1339,7 +1375,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'rift, ryfft'],
         'see v'
-    ]
+    ],
+    au: 'rift'
 }, {
     sc: 'road',
     def: [
@@ -1408,7 +1445,8 @@ G.dict.push({
     ],
     tr: ['brae', 'slope', 'incline', 'glance', 'squint'],
     hl: ['slope', 'incline', 'glance', 'squint'],
-    gr: 'n'
+    gr: 'n',
+    au: 'sklent'
 }, {
     sc: 'sklent',
     en: [
@@ -1431,7 +1469,8 @@ G.dict.push({
     en: [
         ['source', 'origin']
     ],
-    gr: 'n'
+    gr: 'n',
+    au: 'springheid'
 }, {
     sc: 'steerar',
     sc_alt: 'steerer',

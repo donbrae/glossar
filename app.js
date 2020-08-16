@@ -389,9 +389,7 @@ var GLOSSAR = (function () {
      * @param {Function} callback
      */
     function print(r, callback) {
-        var grammar, sc_alt, hl_sc_alt, audio, item,
-            hl, hl_all, $dl, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, neg_arr, pl, pl_arr, or,
-            results = [];
+        var grammar, sc_alt, hl_sc_alt, audio, audio_pt, audio_pp, audio_pt_pp, item, hl, hl_all, $dl, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, neg_arr, pl, pl_arr, or, results = [];
 
         if (r && r.length) {
             $('#results').html('');
@@ -427,7 +425,7 @@ var GLOSSAR = (function () {
                     if (item.pl && item.pl.hl) { // Highlighting override words
                         pl_arr = pl_arr.concat(item.pl.hl);
                     } else if (item.pl && item.pl.tr) { // Standard triggers
-                        pl_arr = pl_arr.concat(item.pl.tr)
+                        pl_arr = pl_arr.concat(item.pl.tr);
                     }
                 }
 
@@ -438,7 +436,7 @@ var GLOSSAR = (function () {
                     if (item.pt && item.pt.hl) {
                         pt_arr = pt_arr.concat(item.pt.hl);
                     } else if (item.pt && item.pt.tr) {
-                        pt_arr = pt_arr.concat(item.pt.tr)
+                        pt_arr = pt_arr.concat(item.pt.tr);
                     }
                 }
 
@@ -449,7 +447,7 @@ var GLOSSAR = (function () {
                     if (item.pp && item.pp.hl) {
                         pp_arr = pp_arr.concat(item.pp.hl);
                     } else if (item.pp && item.pp.tr) {
-                        pp_arr = pp_arr.concat(item.pp.tr)
+                        pp_arr = pp_arr.concat(item.pp.tr);
                     }
                 }
 
@@ -460,7 +458,7 @@ var GLOSSAR = (function () {
                     if (item.pt_pp && item.pt_pp.hl) {
                         pt_pp_arr = pt_pp_arr.concat(item.pt_pp.hl);
                     } else if (item.pt_pp && item.pt_pp.tr) {
-                        pt_pp_arr = pt_pp_arr.concat(item.pt_pp.tr)
+                        pt_pp_arr = pt_pp_arr.concat(item.pt_pp.tr);
                     }
                 }
 
@@ -471,7 +469,7 @@ var GLOSSAR = (function () {
                     if (item.neg && item.neg.hl) {
                         neg_arr = neg_arr.concat(item.neg.hl);
                     } else if (item.neg && item.neg.tr) {
-                        neg_arr = neg_arr.concat(item.neg.tr)
+                        neg_arr = neg_arr.concat(item.neg.tr);
                     }
                 }
 
@@ -497,15 +495,25 @@ var GLOSSAR = (function () {
                     hl = ''; // No trigger words
                 }
 
-                pl = pl_arr.length ? '<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span></dd>' : ''; // Noun plurals
+                audio_pl = item.pl && item.pl.au ? '<span class="audio">' + addAudio(item.pl.au) + '</span>' : ''; // Audio (plural)
 
-                pt = pt_arr.length ? '<dt class="dt-pt">Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span></dd>' : ''; // Past tense (simpler verbs)
+                pl = pl_arr.length ? '<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="' + pl_arr.join(',') + '">' + [].concat(item.pl.sc).join(', ') + '</span>' + audio_pl + '</dd>' : ''; // Noun plurals
 
-                pp = pp_arr.length ? '<dt class="dt-pp">Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span></dd>' : ''; // Past participle (simpler verbs)
+                audio_pt = item.pt && item.pt.au ? '<span class="audio">' + addAudio(item.pt.au) + '</span>' : ''; // Audio (past tense)
 
-                pt_pp = pt_pp_arr.length ? '<dt class="dt-pt_pp">Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span></dd>' : ''; // Identical past tense and past participle (simpler verbs)
+                pt = pt_arr.length ? '<dt class="dt-pt">Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="' + pt_arr.join(',') + '">' + [].concat(item.pt.sc).join(', ') + '</span>' + audio_pt + '</dd>' : ''; // Past tense (simpler verbs)
 
-                neg = neg_arr.length ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="' + neg_arr.join(',') + '">' + [].concat(item.neg.sc).join(', ') + '</span></dd>' : ''; // (Modal) verb negative
+                audio_pp = item.pp && item.pp.au ? '<span class="audio">' + addAudio(item.pp.au) + '</span>' : ''; // Audio (past participle)
+
+                pp = pp_arr.length ? '<dt class="dt-pp">Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="' + pp_arr.join(',') + '">' + [].concat(item.pp.sc).join(', ') + '</span>' + audio_pp + '</dd>' : ''; // Past participle (simpler verbs)
+
+                audio_pt_pp = item.pt_pp && item.pt_pp.au ? '<span class="audio">' + addAudio(item.pt_pp.au) + '</span>' : ''; // Audio (matching past tense and past participle)
+
+                pt_pp = pt_pp_arr.length ? '<dt class="dt-pt_pp">Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="' + pt_pp_arr.join(',') + '">' + [].concat(item.pt_pp.sc).join(', ') + '</span>' + audio_pt_pp + '</dd>' : ''; // Identical past tense and past participle (simpler verbs)
+
+                audio_neg = item.neg && item.neg.au ? '<span class="audio">' + addAudio(item.neg.au) + '</span>' : ''; // Audio (negative)
+
+                neg = neg_arr.length ? '<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="' + neg_arr.join(',') + '">' + [].concat(item.neg.sc).join(', ') + '</span>' + audio_neg + '</dd>' : ''; // (Modal) verb negative
 
                 $('#results').append('<dl' + ph + ' data-score="' + this.score + '"' + heeze + '><dt class="dt-sc">Scots</dt><dd class="sc"' + hl + '>' + G.utils.curlyQuotes([].concat(item.sc).join(', ')) + '</dd> ' +
                     sc_alt +
@@ -699,14 +707,14 @@ var GLOSSAR = (function () {
 
             // Past tense
             if ($('.pt', this).length) {
-                items = $('.pt span', this).text().split(', ');
+                items = $('.pt span:not(.audio)', this).text().split(', ');
 
                 hl = r[i].pt && r[i].pt.hl ? makeSingleArray(r[i].pt.hl) : null; // Highlight overrides
 
                 hl = !hl && r[i].pt && r[i].pt.tr ? makeSingleArray(r[i].pt.tr) : hl; // No highlight overrides
 
                 hielicht(
-                    $('.pt span', this),
+                    $('.pt span:not(.audio)', this),
                     items, // Scots words
                     hl // Other words to cause highlighting
                 );
@@ -714,14 +722,14 @@ var GLOSSAR = (function () {
 
             // Past participle
             if ($('.pp', this).length) {
-                items = $('.pp span', this).text().split(', ');
+                items = $('.pp span:not(.audio)', this).text().split(', ');
 
                 hl = r[i].pp && r[i].pp.hl ? makeSingleArray(r[i].pp.hl) : null; // Highlight overrides
 
                 hl = !hl && r[i].pp && r[i].pp.tr ? makeSingleArray(r[i].pp.tr) : hl; // No highlight overrides
 
                 hielicht(
-                    $('.pp span', this),
+                    $('.pp span:not(.audio)', this),
                     items,
                     hl
                 );
@@ -729,14 +737,14 @@ var GLOSSAR = (function () {
 
             // Identical past tense and past participle
             if ($('.pt-pp', this).length) {
-                items = $('.pt-pp span', this).text().split(', ');
+                items = $('.pt-pp span:not(.audio)', this).text().split(', ');
 
                 hl = r[i].pt_pp && r[i].pt_pp.hl ? makeSingleArray(r[i].pt_pp.hl) : null;
 
                 hl = !hl && r[i].pt_pp && r[i].pt_pp.tr ? makeSingleArray(r[i].pt_pp.tr) : hl;
 
                 hielicht(
-                    $('.pt-pp span', this),
+                    $('.pt-pp span:not(.audio)', this),
                     items,
                     hl
                 );
@@ -744,14 +752,14 @@ var GLOSSAR = (function () {
 
             // Negative
             if ($('.neg', this).length) {
-                items = $('.neg span', this).text().split(', ');
+                items = $('.neg span:not(.audio)', this).text().split(', ');
 
                 hl = r[i].neg && r[i].neg.hl ? makeSingleArray(r[i].neg.hl) : null;
 
                 hl = !hl && r[i].neg && r[i].neg.tr ? makeSingleArray(r[i].neg.tr) : hl;
 
                 hielicht(
-                    $('.neg span', this),
+                    $('.neg span:not(.audio)', this),
                     items,
                     hl
                 );
@@ -759,14 +767,14 @@ var GLOSSAR = (function () {
 
             // Plurals
             if ($('.pl', this).length) {
-                items = $('.pl span', this).text().split(', ');
+                items = $('.pl span:not(.audio)', this).text().split(', ');
 
                 hl = r[i].pl && r[i].pl.hl ? makeSingleArray(r[i].pl.hl) : null;
 
                 hl = !hl && r[i].pl && r[i].pl.tr ? makeSingleArray(r[i].pl.tr) : hl;
 
                 hielicht(
-                    $('.pl span', this),
+                    $('.pl span:not(.audio)', this),
                     items,
                     hl
                 );

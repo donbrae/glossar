@@ -70,7 +70,8 @@ G.dict.push({ // A
     gr: 'adv',
     or: [
         [G.notes.or.as, 'altogidder, altogither']
-    ]
+    ],
+    au: 'awthegither'
 }, {
     sc: 'aye',
     en: ['always', 'still'],
@@ -221,7 +222,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'gay(e), gey'],
         [G.notes.or.f, 'gai']
-    ]
+    ],
+    au: 'gey'
 }, {
     sc: 'gey and',
     en: [
@@ -245,7 +247,8 @@ G.dict.push({ // A
     tr: ['just', 'exack', 'exact'],
     gr: ['adv'],
     or: 'see adj',
-    ex: [G.ex.g1, 'It’s juist gane echt oors', G.ex.h1]
+    ex: [G.ex.g1, 'It’s juist gane echt oors', G.ex.h1],
+    au: 'juist'
 }, {
     sc: 'guid',
     en: [
@@ -255,6 +258,16 @@ G.dict.push({ // A
     pr: G.adj.guid.pr,
     gr: 'adv',
     or: 'see adj'
+}, {
+    sc: 'halely',
+    en: [
+        ['wholly', 'completely']
+    ],
+    tr: ['all', 'aw', 'entirely'],
+    gr: 'adv',
+    or: [
+        [G.notes.or.as, 'halely, haillely']
+    ]
 }, {
     sc: 'atweel',
     en: [
@@ -268,7 +281,8 @@ G.dict.push({ // A
     ],
     tr: ['attour', 'further', 'as well', 'too', 'additionally', 'mairower', 'mairowre'],
     hl: ['attour', 'further', 'atour', 'additionally', 'mairower', 'mairowre'],
-    gr: ['adv', 'prep']
+    gr: ['adv', 'prep'],
+    au: 'atour'
 }, {
     sc: 'mairower',
     en: 'moreover',
@@ -371,7 +385,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'na']
     ],
-    ex: ['I’v nae heard that sang afore', 'She’s been nae weel for a whilie nou']
+    ex: ['I’v nae heard that sang afore', 'She’s been nae weel for a whilie nou'],
+    au: 'nae'
 }, {
     sc: ['na', 'naw', 'nae'],
     en: 'no',
@@ -392,6 +407,11 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'na, nae']
     ]
+}, {
+    sc: 'noo',
+    en: 'now',
+    tr: 'nou',
+    gr: ['adv', 'conj'],
 }, { // O
     sc: 'ony',
     en: [
@@ -421,7 +441,8 @@ G.dict.push({ // A
         ['anyhow', 'in any way', 'anywhere']
     ],
     tr: 'anyway',
-    gr: ['adv']
+    gr: 'adv',
+    au: 'onyweys'
 }, {
     sc: 'ocht',
     en: [
@@ -503,7 +524,8 @@ G.dict.push({ // A
     ],
     gr: ['adv'],
     tr: ['shair', 'shör', 'shür', 'sheer', 'seer', 'sure'],
-    or: 'see adj'
+    or: 'see adj',
+    au: 'shuir'
 }, {
     sc: 'shuirly',
     en: [
@@ -513,7 +535,8 @@ G.dict.push({ // A
     tr: ['with certainty', 'with conviction', 'shairly', 'sheerly', 'seerly', 'surely'],
     gr: 'adv',
     or: 'see adj',
-    ex: ['Ye’d shuirly need tae hae a permit, wad ye no?', G.ex.x]
+    ex: ['Ye’d shuirly need tae hae a permit, wad ye no?', G.ex.x],
+    au: 'shuirly'
 }, {
     sc: 'sicweys',
     en: 'thus',
@@ -545,7 +568,8 @@ G.dict.push({ // A
     en: [
         ['sincerely', 'honestly', 'faithfully']
     ],
-    gr: 'adv'
+    gr: 'adv',
+    au: 'aefauldlie'
 }, { // T
     sc: ['than'],
     pr: ['than', 'thaun', 'thin', 'dan'],

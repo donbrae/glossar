@@ -121,7 +121,8 @@ G.dict = [{
     sc: 'binna',
     en: 'don\'t be',
     tr: ['do not be', 'binnae'],
-    gr: ['imperative']
+    gr: ['imperative'],
+    au: 'binna'
 }, {
     sc: 'binna',
     en: [
@@ -212,7 +213,8 @@ G.dict = [{
     gr: ['conj'],
     or: [
         [G.notes.or.as, 'gef, gefe, geve']
-    ]
+    ],
+    au: 'gin'
 }, {
     sc: 'gin',
     en: [
@@ -410,7 +412,8 @@ G.dict = [{
 }, {
     sc: 'fowerteen',
     en: 'fourteen',
-    gr: ['cardinal nummer', 'adj']
+    gr: ['cardinal nummer', 'adj'],
+    au: 'fowerteen'
 }, {
     sc: 'fifteen',
     en: 'fifteen',
@@ -435,7 +438,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'of, off'],
         [G.notes.or.ae, 'of']
-    ]
+    ],
+    au: 'o|o1'
 }, {
     sc: 'onyane',
     en: 'anyone',
@@ -507,7 +511,8 @@ G.dict = [{
     en: 'the'
 }, {
     sc: ['thare', 'there'],
-    en: 'there'
+    en: 'there',
+    au: 'the'
 }, {
     sc: 'particular',
     pr: ['purTikyulur', 'purTiklur', 'parTeekyulur', 'parTeeklur'],
