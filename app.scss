@@ -140,9 +140,15 @@ header {
 
 a:focus,
 button.btn-link-gray:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
-    background-color: rgba(0, 123, 255, .25);
+    outline: 1px dotted #212529;
+}
+
+a:focus {
+    outline-offset: 0.2rem;
+}
+
+button.btn-link-gray:focus {
+    outline-offset: 0.4rem;
 }
 
 ul {
@@ -440,7 +446,8 @@ ul {
 
         &:focus {
             box-shadow: none;
-            background-color: rgba(0, 123, 255, .25);
+            outline: 1px dotted #212529;
+            outline-offset: 0.1rem;
         }
     }
 
@@ -519,9 +526,9 @@ ul {
         &:focus {
             color: #212529;
             border-color: #7777771a;
-            // box-shadow: 0 2px 9px 0 rgba(148, 148, 148, 0.14);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
-            outline: 0;
+            box-shadow: 0 2px 9px 0 rgba(148, 148, 148, 0.14);
+            // box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+            // outline: 0;
         }
     }
 }
@@ -559,6 +566,7 @@ button {
         top: -0.1rem;
         position: relative;
         margin-right: 0.24rem;
+        line-height: 1;
 
         i {
             color: #212529;
@@ -582,7 +590,8 @@ button {
 
         &:focus {
             i {
-                background-color: rgba(0, 123, 255, .25);
+                outline: 1px dotted #212529;
+                outline-offset: 0.1rem;
             }
         }
     }

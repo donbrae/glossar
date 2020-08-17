@@ -385,8 +385,7 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'na']
     ],
-    ex: ['I’v nae heard that sang afore', 'She’s been nae weel for a whilie nou'],
-    au: 'nae'
+    ex: ['I’v nae heard that sang afore', 'She’s been nae weel for a whilie nou']
 }, {
     sc: ['na', 'naw', 'nae'],
     en: 'no',
@@ -406,7 +405,8 @@ G.dict.push({ // A
     ex: ['It’s nae bother', 'Nae nukes!', 'The’r nae mair tickets left'],
     or: [
         [G.notes.or.as, 'na, nae']
-    ]
+    ],
+    au: 'nae'
 }, {
     sc: 'noo',
     en: 'now',

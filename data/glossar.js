@@ -213,8 +213,7 @@ G.dict = [{
     gr: ['conj'],
     or: [
         [G.notes.or.as, 'gef, gefe, geve']
-    ],
-    au: 'gin'
+    ]
 }, {
     sc: 'gin',
     en: [
@@ -225,7 +224,8 @@ G.dict = [{
     gr: ['conj'],
     or: [
         [G.notes.or.lms + ' haes', 'gin']
-    ]
+    ],
+    au: 'gin'
 }, {
     sc: 'hersel',
     en: 'herself',
@@ -413,7 +413,7 @@ G.dict = [{
     sc: 'fowerteen',
     en: 'fourteen',
     gr: ['cardinal nummer', 'adj'],
-    au: 'fowerteen'
+    au: ['fowerteen', 'fowerteen1']
 }, {
     sc: 'fifteen',
     en: 'fifteen',

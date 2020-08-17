@@ -722,8 +722,7 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.ms + ' <span>furthsetting</span>', '<span>‘settin forrit, feshin on, forderin’</span>']
-    ],
-    au: 'furthsettin'
+    ]
 }, { // G
     sc: 'gate',
     sc_alt: 'gait',
@@ -745,7 +744,8 @@ G.dict.push({
     or: [
         [G.notes.or.ms, 'gloriositie'],
         [G.notes.or.mf, 'glorieuseté']
-    ]
+    ],
+    au: 'gloriosity'
 }, {
     sc: 'gowk',
     en: [
@@ -1082,7 +1082,7 @@ G.dict.push({
         [G.notes.or.as, 'money, mone, mony, monay'],
         [G.notes.or.me, 'monei']
     ],
-    au: 'siller'
+    au: 'money'
 }, { // N
     sc: 'narrative',
     def: [
@@ -1436,7 +1436,8 @@ G.dict.push({
         [G.notes.or.as, 'silver, siller'],
         [G.notes.or.ae, 'seolfor']
     ],
-    ex: 'I’ll send ye the siller'
+    ex: 'I’ll send ye the siller',
+    au: 'siller'
 }, {
     sc: 'sklent',
     en: [
