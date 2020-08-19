@@ -76,7 +76,8 @@ G.ex = {
     j1: "Mind and steek the yett ahint ye",
     k1: "I wis in an awfie raivel",
     l1: "It’s yersel! Come awa ben the hoose",
-    m2: "He’s as daft as a yett in a windy day"
+    m1: "He’s as daft as a yett in a windy day",
+    n1: "We can hoose the kye in the byre the nicht"
 };
 
 G.pr = {

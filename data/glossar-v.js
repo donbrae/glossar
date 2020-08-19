@@ -1844,7 +1844,7 @@ G.dict.push({
         [G.notes.or.as, 'hous, huse, hows'],
         [G.notes.or.ae, 'hūsian']
     ],
-    ex: ['We can hoose the kye in the byre the nicht']
+    ex: G.ex.n1
 }, { // O
     sc: 'ocht',
     en: 'ought',

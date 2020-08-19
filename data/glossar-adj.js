@@ -233,7 +233,7 @@ G.dict.push({ // A
         [G.notes.or.as, 'daft(e)'],
         [G.notes.or.ae, 'gedæfte']
     ],
-    ex: G.ex.m2,
+    ex: G.ex.m1,
     au: 'daft'
 }, {
     sc: 'deif',

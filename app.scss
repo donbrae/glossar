@@ -263,7 +263,7 @@ ul {
 
     .def,
     .or-container {
-        margin-top: 0.1rem;
+        margin-top: 0.15rem;
     }
 
     .dt-def+dd+.dt-ex+dd>.ex {
@@ -277,6 +277,11 @@ ul {
 
     .dt-def+dd+.dt-ex+dd {
         margin-top: -0.1rem;
+    }
+
+    ol.ex,
+    ol.inf {
+        line-height: 1.4;
     }
 
     div.ex::before,
@@ -355,9 +360,34 @@ ul {
         font-style: italic;
     }
 
-    .def,
-    .en {
-        font-size: 1rem;
+    .dt-en+dd .en,
+    .dt-def+dd .def,
+    .pt-pp,
+    .pt,
+    .pp,
+    .neg,
+    .pl {
+        font-size: 0.95rem;
+    }
+
+    .dt-en+dd .en,
+    .dt-def+dd .def {
+        padding-top: 0.15rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .dt-en+dd ol.en,
+    .dt-def+dd ol.def {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    dd:last-of-type {
+
+        .en,
+        .def {
+            padding-bottom: 0;
+        }
     }
 
     .or {
@@ -382,6 +412,14 @@ ul {
         font-weight: 600;
     }
 
+    .neg span,
+    .pl span,
+    .pp span,
+    .pt span,
+    .pt-pp span {
+        padding-bottom: 0.15rem;
+    }
+
     .en {
         font-style: italic;
 
@@ -390,10 +428,6 @@ ul {
             font-style: normal;
             color: #9e9e9e;
         }
-    }
-
-    ol.en {
-        padding-top: 0.1rem;
     }
 
     .def em,

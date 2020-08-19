@@ -117,6 +117,7 @@ G.dict.push({
     def: 'a twa-roomed cottage',
     tr: ['but', 'ben'],
     hl: [],
+    gr: 'n',
     or: [
         [G.notes.or.as, 'but and ben']
     ]
@@ -235,14 +236,19 @@ G.dict.push({
     ]
 }, {
     sc: 'coo',
-    en: 'cow',
     tr: 'cou',
+    en: 'cow',
+    pl: {
+        sc: ['kye', 'coos'],
+        tr: 'cows'
+    },
     gr: 'n',
     or: [
         [G.notes.or.as, 'cow, cou'],
         [G.notes.or.ae, 'cū']
     ],
-    au: 'coo'
+    ex: G.ex.n1,
+    au: 'coo',
 }, {
     sc: 'cloot',
     def: ['a bit claith, rag, dishclaith, patch'],
