@@ -22,7 +22,7 @@ var GLOSSAR = (function () {
             highlight: 0, // True if at least one word is highlighted in results set
             random: [], // Indices of which random entries have already been selected
             audio: null,
-            $audio_button: null
+            audio_button: null
         },
         fuse;
 
@@ -156,33 +156,40 @@ var GLOSSAR = (function () {
             }
         });
 
-        $(document).on('click', '.play-audio', function () {
+        // Delegatit events
+        document.addEventListener('click', function (e) {
+            for (let target = e.target; target && target != this; target = target.parentNode) {
 
-            if (!$(this).prop('disabled')) {
-                if (state.audio) { // If audio is currently being played
-                    state.audio.stop();
-                    state.audio.dispatchEvent(new Event('ended')); // Prompt 'ended' event (see below)
+                if (target.matches('.play-audio')) {
+                    if (!target.disabled) {
+                        ended = el => {
+                            el.target.removeEventListener('ended', ended);
+                            state.audio_button.disabled = false;
+                            state.audio = null;
+                        };
+
+                        if (state.audio) { // If audio is currently being played
+                            state.audio.stop();
+                            state.audio.dispatchEvent(new Event('ended')); // Prompt 'ended' event (see below)
+                        }
+
+                        state.audio_button = target;
+                        state.audio_button.disabled = true;
+
+                        state.audio = document.getElementById(state.audio_button.dataset.file);
+
+                        state.audio.addEventListener('ended', ended);
+
+                        state.audio.currentTime = 0;
+                        state.audio.play();
+                    }
+                    break;
+                } else if (target.matches('.get-update')) {
+                    location.reload();
+                    break;
                 }
-
-                state.$audio_button = $(this);
-                state.$audio_button.prop('disabled', true);
-
-                state.audio = document.getElementById(state.$audio_button.data('file'));
-
-                $(state.audio).bind('ended', function () {
-                    $(this).unbind('ended');
-                    state.$audio_button.prop('disabled', false);
-                    state.audio = null;
-                });
-
-                state.audio.currentTime = 0;
-                state.audio.play();
             }
-        });
-
-        $(document).on('click', '.get-update', function () {
-            location.reload();
-        });
+        }, false);
     }
 
     // GLOSSAR.state getter

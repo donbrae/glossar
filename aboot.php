@@ -66,6 +66,7 @@
     <footer class="footer">
         <div class="container">
             <div class="text-muted">This page wis last updatit on 1 August 2020.</div>
+        </div>
     </footer>
 </body>
 
