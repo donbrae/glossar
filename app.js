@@ -87,20 +87,18 @@ var GLOSSAR = (function () {
     }
 
     function addListeners() {
-        $('#searchTextbox').on('keyup', searchInit);
+        document.querySelector('#searchTextbox').addEventListener('keyup', searchInit);
 
         // Text field pseudo-focus state on clear button focus
-        $('#clear-value').on('focus', function () {
-            $('#searchTextbox').addClass('form-control-pseudo-focus');
+        document.querySelector('#clear-value').addEventListener('focus', function () {
+            document.querySelector('#searchTextbox').classList.toggle('form-control-pseudo-focus');
+        });
+        document.querySelector('#clear-value').addEventListener('blur', function () {
+            document.querySelector('#searchTextbox').classList.toggle('form-control-pseudo-focus');
         });
 
-        $('#clear-value').on('blur', function () {
-            $('#searchTextbox').removeClass('form-control-pseudo-focus');
-        });
-
-        $('#random').click(function () {
-
-            var num, word, $btn = $(this);
+        document.querySelector('#random').addEventListener('click', function (e) {
+            let num, word, btn = e.target;
 
             function getRandomIndex() {
 
@@ -119,14 +117,16 @@ var GLOSSAR = (function () {
 
             word = G.dict[num].sc.join ? G.dict[num].sc[0] : G.dict[num].sc;
 
-            $btn.prop('disabled', true);
+            btn.disabled = true;
 
             state.word = G.utils.replaceQo(word).toLowerCase();
             state.word_lc = state.word.toLowerCase();
             state.last_word_searched_for = '';
-            $('#searchTextbox').val(word);
-            $('#results').removeClass('show');
-            $('#clear-value').addClass('show').prop('disabled', false);
+            document.querySelector('#searchTextbox').value = word;
+            document.querySelector('#results').classList.add('show');
+
+            let clear = document.querySelector('#clear-value');            clear.classList.add('show');
+            clear.disabled = false;
 
             // (We don't need to do variant check here because it's not based on user input)
             if (state.word.length < cfg.threshold_exact_match) {
@@ -136,17 +136,24 @@ var GLOSSAR = (function () {
             }
             print(fuse.search(state.query), function () {
                 state.random.push(num);
-                $btn.prop('disabled', false);
+                btn.disabled = false;
             });
         });
 
-        $('#clear-value').click(function () {
-            $(this).prev('input').val('').focus();
-            $(this).removeClass('show').prop('disabled', true);
-            $('#results').removeClass('show');
+        document.querySelector('#clear-value').addEventListener('click', function (e) {
 
-            var t = setTimeout(function () {
-                $('#results').html('');
+            let btn = this;
+            let input = document.getElementById('searchTextbox');
+            let results = document.getElementById('results');
+            
+            input.value = '';
+            input.focus();
+            btn.classList.remove('show');
+            btn.disabled = true;
+            results.classList.remove('show');
+
+            setTimeout(function () {
+                results.innerHTML = '';
                 state.last_word_searched_for = '';
             }, 250);
 
