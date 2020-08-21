@@ -73,31 +73,30 @@ var GLOSSAR = (function () {
         checkForUpdate();
 
         // Check for value on page load (after back button or not-yet-implemented GET variable). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
-        var t = setTimeout(function () {
-            if ($.trim($('#searchTextbox').val()).length) {
+        setTimeout(function () {
+            let val = document.getElementById('searchTextbox').value;
+            if (val.trim().length)
                 searchInit();
-            }
-        }, 500);
+        }, 250);
 
         addListeners();
 
-        if ('ontouchstart' in window === false) {
-            $('#searchTextbox').focus();
-        }
+        if ('ontouchstart' in window === false)
+            document.getElementById('searchTextbox').focus();
     }
 
     function addListeners() {
-        document.querySelector('#searchTextbox').addEventListener('keyup', searchInit);
+        document.getElementById('searchTextbox').addEventListener('keyup', searchInit);
 
         // Text field pseudo-focus state on clear button focus
-        document.querySelector('#clear-value').addEventListener('focus', function () {
-            document.querySelector('#searchTextbox').classList.toggle('form-control-pseudo-focus');
+        document.getElementById('clear-value').addEventListener('focus', function () {
+            document.getElementById('searchTextbox').classList.toggle('form-control-pseudo-focus');
         });
-        document.querySelector('#clear-value').addEventListener('blur', function () {
-            document.querySelector('#searchTextbox').classList.toggle('form-control-pseudo-focus');
+        document.getElementById('clear-value').addEventListener('blur', function () {
+            document.getElementById('searchTextbox').classList.toggle('form-control-pseudo-focus');
         });
 
-        document.querySelector('#random').addEventListener('click', function (e) {
+        document.getElementById('random').addEventListener('click', function (e) {
             let num, word, btn = e.target;
 
             function getRandomIndex() {
@@ -122,10 +121,10 @@ var GLOSSAR = (function () {
             state.word = G.utils.replaceQo(word).toLowerCase();
             state.word_lc = state.word.toLowerCase();
             state.last_word_searched_for = '';
-            document.querySelector('#searchTextbox').value = word;
-            document.querySelector('#results').classList.add('show');
+            document.getElementById('searchTextbox').value = word;
+            document.getElementById('results').classList.add('show');
 
-            let clear = document.querySelector('#clear-value');            clear.classList.add('show');
+            let clear = document.getElementById('clear-value'); clear.classList.add('show');
             clear.disabled = false;
 
             // (We don't need to do variant check here because it's not based on user input)
@@ -140,12 +139,12 @@ var GLOSSAR = (function () {
             });
         });
 
-        document.querySelector('#clear-value').addEventListener('click', function (e) {
+        document.getElementById('clear-value').addEventListener('click', function (e) {
 
             let btn = this;
             let input = document.getElementById('searchTextbox');
             let results = document.getElementById('results');
-            
+
             input.value = '';
             input.focus();
             btn.classList.remove('show');
@@ -205,16 +204,20 @@ var GLOSSAR = (function () {
     }
 
     function searchInit(e) {
-        var $field = $('#searchTextbox');
+        let field = document.getElementById('searchTextbox');
 
         function goSearch() {
 
-            if (state.word_lc === state.last_word_searched_for) return false;
+            if (state.word_lc === state.last_word_searched_for) return;
 
             // Stop any audio, important especially if the connection is slow and audio file ends up loading later and playing 'randomly'
             if (state.audio) {
                 state.audio.stop();
             }
+
+            let results = document.getElementById('results');
+
+            results.classList.add('show');
 
             if (state.word.length) {
 
@@ -231,67 +234,65 @@ var GLOSSAR = (function () {
                     state.query = cfg.extended_cmd + state.word; // Search at start of word ('^'), but without looking for variants
                 }
 
-                $('#results').removeClass('show');
                 print(fuse.search(state.query));
-            } else {
-                $('#results').removeClass('show');
-                var t = setTimeout(function () {
-                    $('#results').html('');
+            } else
+                setTimeout(function () {
+                    results.innerHTML = '';
                     state.last_word_searched_for = '';
                 }, 250);
-            }
         }
 
         state.word = G.utils.replaceQo( // Replace ‘ and ’ with '
-            $.trim(
-                $field.val().replace(/(<([^>]+)>)/ig, ' ') // Strip any HTML
-            )
+            field.value.replace(/(<([^>]+)>)/ig, ' ').trim() // Strip any HTML
         );
         state.word_lc = state.word.toLowerCase();
 
-        if ($field.val().length) {
-            $('#clear-value').addClass('show').prop('disabled', false);
-        } else {
-            $('#clear-value').removeClass('show').prop('disabled', true);
-        }
+        let clear = document.getElementById('clear-value');
+
+        clear.classList.add('show');
+
+        if (field.value.length) {
+            clear.disabled = false;
+        } else
+            clear.disabled = true;
 
         if (e && e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
             goSearch();
-        } else {
+        } else
             timeoutStart(goSearch);
-        }
     }
 
     // XHR check to see whether data file is newer than what is printed in the UI (XHR requests seem to be better at bypassing the cache)
     function checkForUpdate() {
-        $.ajax({
-            type: 'GET',
-            url: './update-check.php',
-            dataType: 'text',
-            cache: false,
-            success: function (d) {
-                var date_ui = parseInt(
-                    $('.last-updatit').data('updatit')
-                );
 
-                if (parseInt(d) > date_ui) {
-                    $('.update-link').removeClass('d-none');
+        let request = new XMLHttpRequest();
+        request.open('GET', './update-check.php', true);
+        request.setRequestHeader('Content-type', 'text/plain');
+
+        request.onload = function () {
+            if (this.status >= 200 && this.status < 400) { // Success
+                let date_ui = document.querySelector('.last-updatit').dataset.updatit;
+
+                if (parseInt(this.response) > parseInt(date_ui)) {
+                    document.querySelector('.update-link').classList.remove('d-none');
                     console.log('Update available');
-                } else {
+                } else
                     console.log('Data should be up tae date');
-                }
-            },
-            error: function (xhr, type) {
-                console.log('Error when checking for update');
-                console.log(xhr);
-                console.log(type);
-            }
-        });
+            } else
+                console.error('XHR error', this.response);
+        };
+
+        request.onerror = function () {
+            console.error('XHR connection error');
+        };
+
+        request.send();
     }
 
     function noResults() {
-        $('#results').html(`<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong></div>`);
-        $('#results').addClass('show');
+        let results = document.getElementById('results');
+        results.innerHTML = `<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong></div>`;
+        results.classList.add('show');
     }
 
     /**
@@ -368,11 +369,13 @@ var GLOSSAR = (function () {
     function addAudio(s) {
         var buttons = []; // HTML
 
-        $.each([].concat(s), function () {
-            if (!$('#' + this).length) {
-                $('body').prepend(`<audio id="${this}" class="audio d-none" src="./audio/${this.charAt(0)}/${this}.mp3" preload="auto"></audio>`); // Eik audio element
-            }
-            buttons.push(`<button class="play-audio btn" data-file="${this}"><i class="demo-icon icon-sound"></i></button>`); // Eik button
+        [].concat(s).forEach(id => {
+            const el = document.getElementById(id);
+
+            if (!el) // If an <audio> element for this words has not already be added to DOM
+                document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="./audio/${id.charAt(0)}/${id}.mp3" preload="auto"></audio>`); // Eik audio element
+
+            buttons.push(`<button class="play-audio btn" data-file="${id}"><i class="demo-icon icon-sound"></i></button>`); // Eik button 
         });
 
         return buttons.join('');
@@ -387,11 +390,10 @@ var GLOSSAR = (function () {
         var grammar, sc_alt, hl_sc_alt, audio, audio_pt, audio_pp, audio_pt_pp, item, hl, hl_all, $dl, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, neg_arr, pl, pl_arr, or, results = [];
 
         if (r && r.length) {
-            $('#results').html('');
+            document.getElementById('results').innerHTML = '';
 
-            $.each(r, function () {
-
-                item = this.item;
+            r.forEach(result => {
+                item = result.item;
                 results.push(item);
 
                 grammar = item.gr ? `<dt class="dt-grammar">Grammar</dt><dd class="grammar">${[].concat(item.gr).join('; ')}</dd>` : ''; // Grammar
@@ -510,7 +512,7 @@ var GLOSSAR = (function () {
 
                 neg = neg_arr.length ? `<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="${neg_arr.join(',')}">${[].concat(item.neg.sc).join(', ')}</span>${audio_neg}</dd>` : ''; // (Modal) verb negative
 
-                $('#results').append(`<dl${ph} data-score="${this.score}"${heeze}><dt class="dt-sc">Scots</dt><dd class="sc"${hl}>${G.utils.curlyQuotes([].concat(item.sc).join(', '))}</dd>
+                $('#results').append(`<dl${ph} data-score="${result.score}"${heeze}><dt class="dt-sc">Scots</dt><dd class="sc"${hl}>${G.utils.curlyQuotes([].concat(item.sc).join(', '))}</dd>
                 <span class="audio-1">${audio}</span>
                 ${sc_alt}
                 <span class="audio-2">${audio}</span>
@@ -527,30 +529,48 @@ var GLOSSAR = (function () {
                 ${inf}
                 ${or}
                 </dl>`);
-
             });
+
+            hasHighlightedElement = (parent, find) => {
+                let highlighted = false;
+                const children = parent.querySelectorAll(find);
+
+                for (let i = 0; i < children.length; i++) {
+                    let classes = [...children[i].classList]; // Convert NodeList to array
+                    if (classes.indexOf('hl') > -1) { // Element has 'hl' class
+                        highlighted = true;
+                        break;
+                    }
+                }
+
+                return highlighted;
+            };
 
             highlight(results, function () {
                 if (state.highlight) {
 
+                    let results = document.getElementById('results');
+
+                    // G.utils.reverseChildren(results); ???
+                    let dl = document.querySelectorAll('#results > dl');
+
                     // Move highlighted entries to the top
-                    $($('#results > dl').get().reverse()).each(function () {
-                        $dl = $(this);
-                        if ($dl.find('dd').hasClass('hl') || $dl.find('dd.pl > span').hasClass('hl') || $dl.find('dd.neg > span').hasClass('hl')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
-                            $dl.parent().prepend($dl);
+                    Array.prototype.forEach.call(dl, function (el) {
+                        if (hasHighlightedElement(el, 'dd') || hasHighlightedElement(el, 'dd.pl > span') || hasHighlightedElement(el, 'dd.neg > span')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                            results.insertAdjacentElement('afterbegin', el);
                         }
                     });
 
                     // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
-                    $('#results > dl').each(function () {
-                        $dl = $(this);
-                        if ($dl.data('heeze') && $dl.data('heeze') === state.word_lc) {
-                            $dl.parent().prepend($dl);
-                        }
-                    });
+
+                    // Seems to be working fine without this function so commenting out for the now.
+                    // Array.prototype.forEach.call(dl, function (el) {
+                    //     if (el.dataset.heeze && el.dataset.heeze === state.word_lc)
+                    //         results.insertAdjacentElement('afterbegin', el);
+                    // });
                 }
 
-                $('#results').addClass('show');
+                document.getElementById('results').classList.add('show');
 
                 if (typeof (callback) === 'function') {
                     callback();

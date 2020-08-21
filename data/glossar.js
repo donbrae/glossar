@@ -630,5 +630,10 @@ G.utils = {
     // Replaces ' with ’
     curlyQuotes: function (s) {
         return s.replace(/'/g, "’");
+    },
+    reverseChildren: function (parent) {
+        for (let i = 1; i < parent.childNodes.length; i++) {
+            parent.insertBefore(parent.childNodes[i], parent.firstChild);
+        }
     }
 };
