@@ -551,7 +551,7 @@ var GLOSSAR = (function () {
 
                     let results = document.getElementById('results');
 
-                    // G.utils.reverseChildren(results); ???
+                    // G.utils.reverseChildren(results);
                     let dl = document.querySelectorAll('#results > dl');
 
                     // Move highlighted entries to the top
@@ -562,12 +562,10 @@ var GLOSSAR = (function () {
                     });
 
                     // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
-
-                    // Seems to be working fine without this function so commenting out for the now.
-                    // Array.prototype.forEach.call(dl, function (el) {
-                    //     if (el.dataset.heeze && el.dataset.heeze === state.word_lc)
-                    //         results.insertAdjacentElement('afterbegin', el);
-                    // });
+                    Array.prototype.forEach.call(dl, function (el) {
+                        if (el.dataset.heeze && el.dataset.heeze === state.word_lc)
+                            results.insertAdjacentElement('afterbegin', el);
+                    });
                 }
 
                 document.getElementById('results').classList.add('show');
