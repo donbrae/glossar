@@ -195,6 +195,8 @@ var GLOSSAR = (function () {
                     break;
                 }
             }
+
+            e.preventDefault();
         }, false);
     }
 
@@ -216,8 +218,6 @@ var GLOSSAR = (function () {
             }
 
             let results = document.getElementById('results');
-
-            results.classList.add('show');
 
             if (state.word.length) {
 
@@ -390,7 +390,8 @@ var GLOSSAR = (function () {
         var grammar, sc_alt, hl_sc_alt, audio, audio_pt, audio_pp, audio_pt_pp, item, hl, hl_all, $dl, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, neg_arr, pl, pl_arr, or, results = [];
 
         if (r && r.length) {
-            document.getElementById('results').innerHTML = '';
+            const results_div = document.getElementById('results');
+            results_div.innerHTML = '';
 
             r.forEach(result => {
                 item = result.item;
@@ -512,7 +513,7 @@ var GLOSSAR = (function () {
 
                 neg = neg_arr.length ? `<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="${neg_arr.join(',')}">${[].concat(item.neg.sc).join(', ')}</span>${audio_neg}</dd>` : ''; // (Modal) verb negative
 
-                $('#results').append(`<dl${ph} data-score="${result.score}"${heeze}><dt class="dt-sc">Scots</dt><dd class="sc"${hl}>${G.utils.curlyQuotes([].concat(item.sc).join(', '))}</dd>
+                results_div.innerHTML += `<dl${ph} data-score="${result.score}"${heeze}><dt class="dt-sc">Scots</dt><dd class="sc"${hl}>${G.utils.curlyQuotes([].concat(item.sc).join(', '))}</dd>
                 <span class="audio-1">${audio}</span>
                 ${sc_alt}
                 <span class="audio-2">${audio}</span>
@@ -528,7 +529,7 @@ var GLOSSAR = (function () {
                 ${ex}
                 ${inf}
                 ${or}
-                </dl>`);
+                </dl>`;
             });
 
             hasHighlightedElement = (parent, find) => {
@@ -555,11 +556,21 @@ var GLOSSAR = (function () {
                     let dl = document.querySelectorAll('#results > dl');
 
                     // Move highlighted entries to the top
-                    Array.prototype.forEach.call(dl, function (el) {
-                        if (hasHighlightedElement(el, 'dd') || hasHighlightedElement(el, 'dd.pl > span') || hasHighlightedElement(el, 'dd.neg > span')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
-                            results.insertAdjacentElement('afterbegin', el);
+                    for (let i = dl.length - 1; i === 0; i--) {
+                        let element = dl[i];
+                        
+                        if (hasHighlightedElement(element, 'dd') || hasHighlightedElement(element, 'dd.pl > span') || hasHighlightedElement(element, 'dd.neg > span')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                            results.insertAdjacentElement('afterbegin', element);
                         }
-                    });
+
+                    }
+                    // Array.prototype.forEach.call(dl, function (el) {
+                    //     if (hasHighlightedElement(el, 'dd') || hasHighlightedElement(el, 'dd.pl > span') || hasHighlightedElement(el, 'dd.neg > span')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
+                    //         results.insertAdjacentElement('afterbegin', el);
+                    //     }
+                    // });
+
+                    // G.utils.reverseChildren
 
                     // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
                     Array.prototype.forEach.call(dl, function (el) {
@@ -612,12 +623,12 @@ var GLOSSAR = (function () {
 
         // Redd word(s)
         if (w.join) { // Result is an array of values
-            $.each(w, function (i) {
-                $.each([].concat(this), function () {
-                    if (this.indexOf(', ') > -1) { // If multiple 'synomyms'
-                        words = words.concat(this.split(', ')); // Split any 'synomym' meanings and add to 'words' array
+            w.forEach(item => {
+                [].concat(item).forEach(item => {
+                    if (item.indexOf(', ') > -1) { // If multiple 'synomyms'
+                        words = words.concat(item.split(', ')); // Split any 'synomym' meanings and add to 'words' array
                     } else {
-                        words = words.concat(this); // Add array to the 'words' array
+                        words = words.concat(item); // Add array to the 'words' array
                     }
                 });
             });
@@ -660,11 +671,12 @@ var GLOSSAR = (function () {
     }
 
     function highlight(r, callback) {
-        var i = r.length - 1;
+        let i = 0;
+        let results = document.querySelector('#results');
 
         state.highlight = 0;
 
-        function hielicht($el, items, other) {
+        function hielicht(el, items, other) {
 
             // E.g. ['^michty|^michtie|^michtae'] or ['=ony|=onie|=onae']
             function querySplit(q) {
@@ -683,118 +695,132 @@ var GLOSSAR = (function () {
                 return q.split('|' + cmd);
             }
 
-            if ($el.data('hl')) { // Add any highlight words to the items array
-                items = items.concat($el.data('hl').split(','));
-            }
-            $.each(items, function () {
-                if (this &&
-                    (
-                        this.toLowerCase() === state.word_lc || // Direct match
-                        querySplit(state.query).indexOf(this.toLowerCase()) > -1 || // Match on one of any variants
-                        (other && other.indexOf(state.word_lc) > -1) // Other values which should trigger highlighting
-                    )
+            let words = items;
+
+            if (el.dataset.hl) // Add any highlight words to the items array
+                words = words.concat(el.dataset.hl.split(','));
+        
+            words.forEach(word => {
+                if (
+                    word.toLowerCase() === state.word_lc || // Direct match
+                    querySplit(state.query).indexOf(word.toLowerCase()) > -1 || // Match on one of any variants
+                    (other && other.indexOf(state.word_lc) > -1) // Other values which should trigger highlighting
                 ) {
-                    $el.addClass('hl');
+                    el.classList.add('hl');
                     state.highlight = state.highlight + 1;
                     return false; // Exit loop
-                }
+                } 
             });
         }
 
         // Clear any highlights
-        $('.sc, .pt span, .pp span', '#results').each(function () {
-            $(this).removeClass('hl');
+        let elements = results.querySelectorAll('.sc, .pt span, .pp span');
+        Array.prototype.forEach.call(elements, function (el) {
+            el.classList.remove('hl');
         });
 
         // Add any new highlights
-        $($('#results > dl').get().reverse()).each(function () {
-
-            var hl; // Trigger words to cause highlighting
+        elements = results.querySelectorAll('dl');
+        Array.prototype.forEach.call(elements, function (dl) {
+            let hl; // Trigger words to cause highlighting
+            let el_hl; // Actual element to highlight (e.g. <span> within <dd>)
 
             // Head word(s)
-            items = $('.sc', this).text().split(', ');
+            let el = dl.querySelector('.sc');
+            let words = el.textContent.split(', ');
             hielicht(
-                $('.sc', this), // UI element
-                items, // Scots words
+                el, // UI element
+                words, // Scots words
                 r[i].en ? makeSingleArray(r[i].en) : null // Corresponding English words to cause highlighting
             );
 
             // Past tense
-            if ($('.pt', this).length) {
-                items = $('.pt span:not(.audio)', this).text().split(', ');
+            // let classes = [...children[i].classList]
+            el = dl.querySelector('.pt');
+            if (el) {
+                el_hl = el.querySelector('.pt span:not(.audio)');
+                words = el_hl.textContent.split(', ');
 
                 hl = r[i].pt && r[i].pt.hl ? makeSingleArray(r[i].pt.hl) : null; // Highlight overrides
 
                 hl = !hl && r[i].pt && r[i].pt.tr ? makeSingleArray(r[i].pt.tr) : hl; // No highlight overrides
 
                 hielicht(
-                    $('.pt span:not(.audio)', this),
-                    items, // Scots words
+                    el_hl,
+                    words, // Scots words
                     hl // Other words to cause highlighting
                 );
             }
 
             // Past participle
-            if ($('.pp', this).length) {
-                items = $('.pp span:not(.audio)', this).text().split(', ');
+            el = dl.querySelector('.pp');
+            if (el) {
+                el_hl = el.querySelector('.pp span:not(.audio)');
+                words = el_hl.textContent.split(', ');
 
                 hl = r[i].pp && r[i].pp.hl ? makeSingleArray(r[i].pp.hl) : null; // Highlight overrides
 
                 hl = !hl && r[i].pp && r[i].pp.tr ? makeSingleArray(r[i].pp.tr) : hl; // No highlight overrides
 
                 hielicht(
-                    $('.pp span:not(.audio)', this),
-                    items,
+                    el_hl,
+                    words,
                     hl
                 );
             }
 
             // Identical past tense and past participle
-            if ($('.pt-pp', this).length) {
-                items = $('.pt-pp span:not(.audio)', this).text().split(', ');
+            el = dl.querySelector('.pt-pp');
+            if (el) {
+                el_hl = el.querySelector('.pt-pp span:not(.audio)');
+                words = el_hl.textContent.split(', ');
 
                 hl = r[i].pt_pp && r[i].pt_pp.hl ? makeSingleArray(r[i].pt_pp.hl) : null;
 
                 hl = !hl && r[i].pt_pp && r[i].pt_pp.tr ? makeSingleArray(r[i].pt_pp.tr) : hl;
 
                 hielicht(
-                    $('.pt-pp span:not(.audio)', this),
-                    items,
+                    el_hl,
+                    words,
                     hl
                 );
             }
 
             // Negative
-            if ($('.neg', this).length) {
-                items = $('.neg span:not(.audio)', this).text().split(', ');
+            el = dl.querySelector('.neg');
+            if (el) {
+                el_hl = el.querySelector('.neg span:not(.audio)');
+                words = el_hl.textContent.split(', ');
 
                 hl = r[i].neg && r[i].neg.hl ? makeSingleArray(r[i].neg.hl) : null;
 
                 hl = !hl && r[i].neg && r[i].neg.tr ? makeSingleArray(r[i].neg.tr) : hl;
 
                 hielicht(
-                    $('.neg span:not(.audio)', this),
-                    items,
+                    el_hl,
+                    words,
                     hl
                 );
             }
 
             // Plurals
-            if ($('.pl', this).length) {
-                items = $('.pl span:not(.audio)', this).text().split(', ');
+            el = dl.querySelector('.pl');
+            if (el) {
+                el_hl = el.querySelector('.pl span:not(.audio)');
+                words = el_hl.textContent.split(', ');
 
                 hl = r[i].pl && r[i].pl.hl ? makeSingleArray(r[i].pl.hl) : null;
 
                 hl = !hl && r[i].pl && r[i].pl.tr ? makeSingleArray(r[i].pl.tr) : hl;
 
                 hielicht(
-                    $('.pl span:not(.audio)', this),
-                    items,
+                    el_hl,
+                    words,
                     hl
                 );
             }
 
-            i = i - 1;
+            i++;
         });
 
         callback();
@@ -812,27 +838,6 @@ var GLOSSAR = (function () {
             clearTimeout(state.timeout); // Cancel timeout
             start(); // Start a new one
         }
-    }
-
-    // Consider using https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat. See also https://stackoverflow.com/a/27267762/4667710. Nae IE support
-    function flattenArray(arr) {
-        return arr.reduce(function (a, b) {
-            if (Array.isArray(b)) {
-                return a.concat(flattenArray(b));
-            }
-            return a.concat(b);
-        }, []);
-    }
-
-    // Returns array where each item is in lower case.
-    function arrayToLowerCase(arr) {
-        var a = [];
-
-        $.each(flattenArray(arr), function () {
-            a.push(this.toString().toLowerCase());
-        });
-
-        return a;
     }
 
     return {
