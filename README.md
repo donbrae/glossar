@@ -44,7 +44,7 @@ Rin **build.sh** for tae big JS bundle (**glossar-bundle.min.js**) and **index.p
 
 **build.sh** requires `sass` (`brew install sass/sass/sass`) and, optionally, `terser` (for minification; see abuin).
 
-**index.php**, **glossar-bundle.min.js**, **glossar-bundle.min.js.map**, **app.css** and **app.css.map** should be uplaidit, as weel as **app.js** and **./data** (sae as the source mappin wirks).
+**index.php**, **glossar-bundle.min.js**, **glossar-bundle.min.js.map**, **app.css** and **app.css.map** should be uplaidit, as weel as **app.js** and **./data** (sae as the source mappin wirks). Merk that the source disna wirk on dev, sae dinna minifee whan wirkin on dev.
 
 * https://glossar.makforrit.scot/
 * (non-local) dev URL: https://glossar.makforrit.scot/index-dev.html

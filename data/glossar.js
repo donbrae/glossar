@@ -1,6 +1,4 @@
-var GLOSSAR = GLOSSAR || {};
-
-var G = GLOSSAR;
+let G = GLOSSAR;
 
 G.notes = {
     a: 'protologism; frae analogy wi Dutch and French-influenced <em>Armenie</em>, <em>Roumainie</em>, <em>Roushie</em> etc., vs <em>-a</em> or <em>-ia</em> (meanin ‘land’ or ‘steid’) that English haes borraed frae the Laitin', // Californie et al

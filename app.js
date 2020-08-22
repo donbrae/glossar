@@ -4,7 +4,7 @@
  * @description Scots glossar
  */
 
-var GLOSSAR = (function () {
+const GLOSSAR = (function () {
 
     const cfg = {
         search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
@@ -268,7 +268,7 @@ var GLOSSAR = (function () {
     function checkForUpdate() {
 
         const request = new XMLHttpRequest();
-        request.open('GET', './update-check.php', true);
+        request.open('GET', './update-check.php?' + new Date().getTime(), true);
         request.setRequestHeader('Content-type', 'text/plain');
 
         request.onload = function () {
@@ -306,21 +306,21 @@ var GLOSSAR = (function () {
      */
     function processVariants(input, test, ext) {
 
-        var ext_cmd = typeof (ext) === 'string' ? ext : cfg.extended_cmd, // Is there an override?
-            user_input = input.toLowerCase(),
-            variants = [user_input], // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
-            tests, common_word_part, variant;
+        const ext_cmd = typeof (ext) === 'string' ? ext : cfg.extended_cmd; // Is there an override?
+        const user_input = input.toLowerCase();
+        const variants = [user_input]; // Add original user input as first array item. Items may be added in the proceeding logic. The array will then be converted to a string (with '|' separator) and passed to Fuse.js
+        let variant;
 
         [].concat(test).forEach((test_group, i) => { // Loop through array of groups of variant strings, e.g. 'fae|frae|thrae', 'sc|sk' or '-ie|-y|-ae'
             if (test_group.indexOf('|') > -1) { // Each test must use | character
-                tests = test_group.toLowerCase().split('|');
+                let tests = test_group.toLowerCase().split('|');
 
                 tests.forEach((t, i) => { // Each variant string, e.g 'frae', 'sc' or '-ie
 
                     if (t.charAt(0) === '-' && user_input.substring(user_input.length - t.length + 1) == t.substring(1, t.length)) { // Does this variant string affect word ending, e.g. '-ie'?
 
                         variants.forEach((s, i) => { // Each variant currently in [variants] array
-                            common_word_part = s.substring(0, s.length - t.length + 1); // Get common (leading) part of word, to which we'll append the other endings (t.length - 1 to account for the leading '-')
+                            let common_word_part = s.substring(0, s.length - t.length + 1); // Get common (leading) part of word, to which we'll append the other endings (t.length - 1 to account for the leading '-')
 
                             tests.forEach((s, i) => { // Loop through each variant string (e.g. '-ie') in this group again
 
@@ -369,10 +369,10 @@ var GLOSSAR = (function () {
     }
 
     function addAudio(s) {
-        var buttons = []; // HTML
+        const buttons = []; // HTML
 
         [].concat(s).forEach(id => {
-            const el = document.getElementById(id);
+            let el = document.getElementById(id);
 
             if (!el) // If an <audio> element for this words has not already be added to DOM
                 document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="./audio/${id.charAt(0)}/${id}.mp3" preload="auto"></audio>`); // Eik audio element
@@ -389,27 +389,27 @@ var GLOSSAR = (function () {
      * @param {Function} callback
      */
     function print(r, callback) {
-        var grammar, sc_alt, hl_sc_alt, audio, audio_pt, audio_pp, audio_pt_pp, item, hl, hl_all, $dl, def, ex, inf, en, ph, pr, pt, pt_arr, pp, pp_arr, pt_pp, pt_pp_arr, neg, neg_arr, pl, pl_arr, or, results = [];
 
         if (r && r.length) {
             const results_div = document.getElementById('results');
             results_div.innerHTML = '';
+            const results = [];
 
             r.forEach(result => {
-                item = result.item;
+                let item = result.item;
                 results.push(item);
 
-                grammar = item.gr ? `<dt class="dt-grammar">Grammar</dt><dd class="grammar">${[].concat(item.gr).join('; ')}</dd>` : ''; // Grammar
-                sc_alt = item.sc_alt ? `<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">${[].concat(item.sc_alt).join(', ')}</dd>` : ''; // Alternative Scots spellings
-                en = item.en ? `<dt class="dt-en">English</dt><dd>${formatMultiple(item.en, ',', 'en')}</dd>` : ''; // English
-                pr = item.pr ? `<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘${[].concat(item.pr).join('’, ‘')}’)</dd> ` : ''; // Pronunciation
-                def = item.def ? `<dt class="dt-def">Definition</dt><dd>${formatMultiple(item.def, ';', 'def')}</dd>` : ''; // Definition
-                ex = item.ex ? `<dt class="dt-ex">Examples</dt><dd>${formatMultiple(item.ex, ';', 'ex')}</dd>` : ''; // Examples
-                ph = item.ph ? ' class="phrase"' : ''; // Phrases, idioms
-                inf = item.inf ? `<dt class="dt-inf">Information</dt><dd>${formatMultiple(item.inf, ';', 'inf')}</dd>` : ''; // Additional information
-                or = item.or ? `<dt class="dt-or">Origin</dt><dd>${formatOrigin(item.or)}</dd>` : ''; // Origin
-                hl_sc_alt = item.sc_alt ? [].concat(item.sc_alt) : []; // Make sure to highlight any alternative Scots words
-                audio = item.au ? `<dt class="dt-au">Audio</dt><dd class="audio">${addAudio(item.au)}</dd> ` : ''; // Audio
+                let grammar = item.gr ? `<dt class="dt-grammar">Grammar</dt><dd class="grammar">${[].concat(item.gr).join('; ')}</dd>` : ''; // Grammar
+                let sc_alt = item.sc_alt ? `<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">${[].concat(item.sc_alt).join(', ')}</dd>` : ''; // Alternative Scots spellings
+                let en = item.en ? `<dt class="dt-en">English</dt><dd>${formatMultiple(item.en, ',', 'en')}</dd>` : ''; // English
+                let pr = item.pr ? `<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘${[].concat(item.pr).join('’, ‘')}’)</dd> ` : ''; // Pronunciation
+                let def = item.def ? `<dt class="dt-def">Definition</dt><dd>${formatMultiple(item.def, ';', 'def')}</dd>` : ''; // Definition
+                let ex = item.ex ? `<dt class="dt-ex">Examples</dt><dd>${formatMultiple(item.ex, ';', 'ex')}</dd>` : ''; // Examples
+                let ph = item.ph ? ' class="phrase"' : ''; // Phrases, idioms
+                let inf = item.inf ? `<dt class="dt-inf">Information</dt><dd>${formatMultiple(item.inf, ';', 'inf')}</dd>` : ''; // Additional information
+                let or = item.or ? `<dt class="dt-or">Origin</dt><dd>${formatOrigin(item.or)}</dd>` : ''; // Origin
+                let hl_sc_alt = item.sc_alt ? [].concat(item.sc_alt) : []; // Make sure to highlight any alternative Scots words
+                let audio = item.au ? `<dt class="dt-au">Audio</dt><dd class="audio">${addAudio(item.au)}</dd> ` : ''; // Audio
                 heeze = item.heeze ? ` data-heeze="${item.heeze}"` : ''; // Should this get a heeze tae the tap of the list?
 
                 /**
@@ -419,7 +419,7 @@ var GLOSSAR = (function () {
                  */
 
                 // Noun plural
-                pl_arr = item.pl && item.pl.sc ? [].concat(item.pl.sc) : []; // Scots plural
+                let pl_arr = item.pl && item.pl.sc ? [].concat(item.pl.sc) : []; // Scots plural
 
                 if (pl_arr.length) {
                     if (item.pl && item.pl.hl) { // Highlighting override words
@@ -430,7 +430,7 @@ var GLOSSAR = (function () {
                 }
 
                 // Past tense
-                pt_arr = item.pt && item.pt.sc ? [].concat(item.pt.sc) : [];
+                let pt_arr = item.pt && item.pt.sc ? [].concat(item.pt.sc) : [];
 
                 if (pt_arr.length) {
                     if (item.pt && item.pt.hl) {
@@ -441,7 +441,7 @@ var GLOSSAR = (function () {
                 }
 
                 // Past participle
-                pp_arr = item.pp && item.pp.sc ? [].concat(item.pp.sc) : [];
+                let pp_arr = item.pp && item.pp.sc ? [].concat(item.pp.sc) : [];
 
                 if (pp_arr.length) {
                     if (item.pp && item.pp.hl) {
@@ -452,7 +452,7 @@ var GLOSSAR = (function () {
                 }
 
                 // Where Scots past tense and past participles are the same
-                pt_pp_arr = item.pt_pp && item.pt_pp.sc ? [].concat(item.pt_pp.sc) : [];
+                let pt_pp_arr = item.pt_pp && item.pt_pp.sc ? [].concat(item.pt_pp.sc) : [];
 
                 if (pt_pp_arr.length) {
                     if (item.pt_pp && item.pt_pp.hl) {
@@ -463,7 +463,7 @@ var GLOSSAR = (function () {
                 }
 
                 // (Modal) verb negative
-                neg_arr = item.neg && item.neg.sc ? [].concat(item.neg.sc) : [];
+                let neg_arr = item.neg && item.neg.sc ? [].concat(item.neg.sc) : [];
 
                 if (neg_arr.length) {
                     if (item.neg && item.neg.hl) {
@@ -473,6 +473,7 @@ var GLOSSAR = (function () {
                     }
                 }
 
+                let hl_all;
                 if (item.hl) { // Specific trigger highlight words
                     hl_all = [].concat(item.hl);
                 } else if (item.tr) { // Standard triggers
@@ -489,6 +490,7 @@ var GLOSSAR = (function () {
                     hl_all = hl_all.concat(item.pr);
                 }
                 // Add any highlighting words
+                let hl;
                 if (hl_all.length) {
                     hl = ' data-hl="' + hl_all.filter(G.utils.onlyUnique).join(',') + '"';
                 } else {
@@ -497,23 +499,23 @@ var GLOSSAR = (function () {
 
                 audio_pl = item.pl && item.pl.au ? `<span class="audio">${addAudio(item.pl.au)}</span>` : ''; // Audio (plural)
 
-                pl = pl_arr.length ? `<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="${pl_arr.join(',')}">${[].concat(item.pl.sc).join(', ')}</span>${audio_pl}</dd>` : ''; // Noun plurals
+                let pl = pl_arr.length ? `<dt class="dt-pl">Plural</dt><dd class="pl"><label>pl</label> <span data-hl="${pl_arr.join(',')}">${[].concat(item.pl.sc).join(', ')}</span>${audio_pl}</dd>` : ''; // Noun plurals
 
-                audio_pt = item.pt && item.pt.au ? `<span class="audio">${addAudio(item.pt.au)}</span>` : ''; // Audio (past tense)
+                let audio_pt = item.pt && item.pt.au ? `<span class="audio">${addAudio(item.pt.au)}</span>` : ''; // Audio (past tense)
 
-                pt = pt_arr.length ? `<dt class="dt-pt">Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="${pt_arr.join(',')}">${[].concat(item.pt.sc).join(', ')}</span>${audio_pt}</dd>` : ''; // Past tense (simpler verbs)
+                let pt = pt_arr.length ? `<dt class="dt-pt">Past tense</dt><dd class="pt"><label>pt</label> <span data-hl="${pt_arr.join(',')}">${[].concat(item.pt.sc).join(', ')}</span>${audio_pt}</dd>` : ''; // Past tense (simpler verbs)
 
-                audio_pp = item.pp && item.pp.au ? `<span class="audio">${addAudio(item.pp.au)}</span>` : ''; // Audio (past participle)
+                let audio_pp = item.pp && item.pp.au ? `<span class="audio">${addAudio(item.pp.au)}</span>` : ''; // Audio (past participle)
 
-                pp = pp_arr.length ? `<dt class="dt-pp">Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="${pp_arr.join(',')}">${[].concat(item.pp.sc).join(', ')}</span>${audio_pp}</dd>` : ''; // Past participle (simpler verbs)
+                let pp = pp_arr.length ? `<dt class="dt-pp">Past participle</dt><dd class="pp"><label>ptp</label> <span data-hl="${pp_arr.join(',')}">${[].concat(item.pp.sc).join(', ')}</span>${audio_pp}</dd>` : ''; // Past participle (simpler verbs)
 
-                audio_pt_pp = item.pt_pp && item.pt_pp.au ? `<span class="audio">${addAudio(item.pt_pp.au)}</span>` : ''; // Audio (matching past tense and past participle)
+                let audio_pt_pp = item.pt_pp && item.pt_pp.au ? `<span class="audio">${addAudio(item.pt_pp.au)}</span>` : ''; // Audio (matching past tense and past participle)
 
-                pt_pp = pt_pp_arr.length ? `<dt class="dt-pt_pp">Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="${pt_pp_arr.join(',')}">${[].concat(item.pt_pp.sc).join(', ')}</span>${audio_pt_pp}</dd>` : ''; // Identical past tense and past participle (simpler verbs)
+                let pt_pp = pt_pp_arr.length ? `<dt class="dt-pt_pp">Past tense and past participle</dt><dd class="pt-pp"><label>pt ptp</label> <span data-hl="${pt_pp_arr.join(',')}">${[].concat(item.pt_pp.sc).join(', ')}</span>${audio_pt_pp}</dd>` : ''; // Identical past tense and past participle (simpler verbs)
 
                 audio_neg = item.neg && item.neg.au ? `<span class="audio">${addAudio(item.neg.au)}</span>` : ''; // Audio (negative)
 
-                neg = neg_arr.length ? `<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="${neg_arr.join(',')}">${[].concat(item.neg.sc).join(', ')}</span>${audio_neg}</dd>` : ''; // (Modal) verb negative
+                let neg = neg_arr.length ? `<dt class="dt-neg">Negative</dt><dd class="neg"><label>neg.</label> <span data-hl="${neg_arr.join(',')}">${[].concat(item.neg.sc).join(', ')}</span>${audio_neg}</dd>` : ''; // (Modal) verb negative
 
                 results_div.innerHTML += `<dl${ph} data-score="${result.score}"${heeze}><dt class="dt-sc">Scots</dt><dd class="sc"${hl}>${G.utils.curlyQuotes([].concat(item.sc).join(', '))}</dd>
                 <span class="audio-1">${audio}</span>
@@ -552,7 +554,6 @@ var GLOSSAR = (function () {
             highlight(results, function () {
                 if (state.highlight) {
 
-                    const results = document.getElementById('results');
                     const dl = document.querySelectorAll('#results > dl');
 
                     // Move highlighted entries to the top (doesn't look like we need this post-vanilla JS refactor)
@@ -560,7 +561,7 @@ var GLOSSAR = (function () {
                         let element = dl[i];
 
                         if (hasHighlightedElement(element, 'dd') || hasHighlightedElement(element, 'dd.pl > span') || hasHighlightedElement(element, 'dd.neg > span')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
-                            results.insertAdjacentElement('afterbegin', element);
+                            document.getElementById('results').insertAdjacentElement('afterbegin', element);
                         }
                     }
 
@@ -569,7 +570,7 @@ var GLOSSAR = (function () {
                     // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
                     Array.prototype.forEach.call(dl, function (el) {
                         if (el.dataset.heeze && el.dataset.heeze === state.word_lc)
-                            results.insertAdjacentElement('afterbegin', el);
+                            document.getElementById('results').insertAdjacentElement('afterbegin', el);
                     });
                 }
 
