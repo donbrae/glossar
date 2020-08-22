@@ -6,26 +6,27 @@
 
 var GLOSSAR = (function () {
 
-    var cfg = {
+    const cfg = {
         search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
         threshold_exact_match: 5, // If length of searched-for word is below this threshold, '=' will be prepended to the query so that only exact matches are returned (so searching for 'fart', for example, doesn't return 'aff' due to one of aff's triggers being 'farther away'). Also helps prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Items in 'tr'/'hl' properties are unaffected and still show as configured
         variants: ['sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
         threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
         extended_cmd: '^', // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
         lug: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 -0.3 24 22" stroke-width="1.8" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round" height="20" width="20"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3  a4.5 4.5 0 0 1 -6.8 1.4"></path><path d="M10 10a3 3 0 1 1 5 2.2"></path></svg>' // Credit: Paweł Kuna (@codecalm; tablericons.com)
-    },
-        state = {
-            word: '', // Value of search text box
-            word_lc: '', // Value of search text box in lower case
-            last_word_searched_for: '', // Set (post-search) by print() so we can check whether the input has changed on keyup
-            query: '', // The query we're passing to Fuse.js
-            timeout: null,
-            highlight: 0, // True if at least one word is highlighted in results set
-            random: [], // Indices of which random entries have already been selected
-            audio: null,
-            audio_button: null
-        },
-        fuse;
+    };
+    const state = {
+        word: '', // Value of search text box
+        word_lc: '', // Value of search text box in lower case
+        last_word_searched_for: '', // Set (post-search) by print() so we can check whether the input has changed on keyup
+        query: '', // The query we're passing to Fuse.js
+        timeout: null,
+        highlight: 0, // True if at least one word is highlighted in results set
+        random: [], // Indices of which random entries have already been selected
+        audio: null,
+        audio_button: null
+    };
+    
+    let fuse;
 
     HTMLAudioElement.prototype.stop = function () {
         this.pause();
@@ -248,7 +249,7 @@ var GLOSSAR = (function () {
         );
         state.word_lc = state.word.toLowerCase();
 
-        let clear = document.getElementById('clear-value');
+        const clear = document.getElementById('clear-value');
 
         clear.classList.add('show');
 
@@ -266,13 +267,13 @@ var GLOSSAR = (function () {
     // XHR check to see whether data file is newer than what is printed in the UI (XHR requests seem to be better at bypassing the cache)
     function checkForUpdate() {
 
-        let request = new XMLHttpRequest();
+        const request = new XMLHttpRequest();
         request.open('GET', './update-check.php', true);
         request.setRequestHeader('Content-type', 'text/plain');
 
         request.onload = function () {
             if (this.status >= 200 && this.status < 400) { // Success
-                let date_ui = document.querySelector('.last-updatit').dataset.updatit;
+                const date_ui = document.querySelector('.last-updatit').dataset.updatit;
 
                 if (parseInt(this.response) > parseInt(date_ui)) {
                     document.querySelector('.update-link').classList.remove('d-none');
@@ -291,7 +292,7 @@ var GLOSSAR = (function () {
     }
 
     function noResults() {
-        let results = document.getElementById('results');
+        const results = document.getElementById('results');
         results.innerHTML = `<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong></div>`;
         results.classList.add('show');
     }
@@ -551,8 +552,8 @@ var GLOSSAR = (function () {
             highlight(results, function () {
                 if (state.highlight) {
 
-                    let results = document.getElementById('results');
-                    let dl = document.querySelectorAll('#results > dl');
+                    const results = document.getElementById('results');
+                    const dl = document.querySelectorAll('#results > dl');
 
                     // Move highlighted entries to the top (doesn't look like we need this post-vanilla JS refactor)
                     for (let i = dl.length - 1; i >= 0; i--) {
@@ -612,7 +613,7 @@ var GLOSSAR = (function () {
      * @returns {Array}
      */
     function makeSingleArray(w) {
-        var words = [];
+        let words = [];
 
         // Redd word(s)
         if (w.join) { // Result is an array of values
@@ -666,7 +667,7 @@ var GLOSSAR = (function () {
     function highlight(r, callback) {
 
         let i = 0;
-        let results = document.querySelector('#results');
+        const results = document.querySelector('#results');
 
         state.highlight = 0;
 
@@ -690,6 +691,7 @@ var GLOSSAR = (function () {
             }
 
             let words = items;
+            const query = querySplit(state.query);
 
             if (el.dataset.hl) // Add any highlight words to the items array
                 words = words.concat(el.dataset.hl.split(','));
@@ -697,7 +699,7 @@ var GLOSSAR = (function () {
             words.forEach(word => {
                 if (
                     word.toLowerCase() === state.word_lc || // Direct match
-                    querySplit(state.query).indexOf(word.toLowerCase()) > -1 || // Match on one of any variants
+                    query.indexOf(word.toLowerCase()) > -1 || // Match on one of any variants
                     (other && other.indexOf(state.word_lc) > -1) // Other values which should trigger highlighting
                 ) {
                     el.classList.add('hl');
