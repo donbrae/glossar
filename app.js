@@ -11,7 +11,8 @@ var GLOSSAR = (function () {
         threshold_exact_match: 5, // If length of searched-for word is below this threshold, '=' will be prepended to the query so that only exact matches are returned (so searching for 'fart', for example, doesn't return 'aff' due to one of aff's triggers being 'farther away'). Also helps prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Items in 'tr'/'hl' properties are unaffected and still show as configured
         variants: ['sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
         threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
-        extended_cmd: '^' // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string.
+        extended_cmd: '^', // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
+        lug: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 -0.3 24 22" stroke-width="1.8" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round" height="20" width="20"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3  a4.5 4.5 0 0 1 -6.8 1.4"></path><path d="M10 10a3 3 0 1 1 5 2.2"></path></svg>' // Credit: Paweł Kuna (@codecalm; tablericons.com)
     },
         state = {
             word: '', // Value of search text box
@@ -189,14 +190,14 @@ var GLOSSAR = (function () {
                         state.audio.currentTime = 0;
                         state.audio.play();
                     }
+                    e.preventDefault();
                     break;
                 } else if (target.matches('.get-update')) {
                     location.reload();
+                    e.preventDefault();
                     break;
                 }
             }
-
-            e.preventDefault();
         }, false);
     }
 
@@ -375,7 +376,7 @@ var GLOSSAR = (function () {
             if (!el) // If an <audio> element for this words has not already be added to DOM
                 document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="./audio/${id.charAt(0)}/${id}.mp3" preload="auto"></audio>`); // Eik audio element
 
-            buttons.push(`<button class="play-audio btn" data-file="${id}"><i class="demo-icon icon-sound"></i></button>`); // Eik button 
+            buttons.push(`<button class="play-audio btn" data-file="${id}">${cfg.lug}</i></button>`); // Eik button 
         });
 
         return buttons.join('');
@@ -551,26 +552,18 @@ var GLOSSAR = (function () {
                 if (state.highlight) {
 
                     let results = document.getElementById('results');
-
-                    // G.utils.reverseChildren(results);
                     let dl = document.querySelectorAll('#results > dl');
 
-                    // Move highlighted entries to the top
-                    for (let i = dl.length - 1; i === 0; i--) {
+                    // Move highlighted entries to the top (doesn't look like we need this post-vanilla JS refactor)
+                    for (let i = dl.length - 1; i >= 0; i--) {
                         let element = dl[i];
-                        
+
                         if (hasHighlightedElement(element, 'dd') || hasHighlightedElement(element, 'dd.pl > span') || hasHighlightedElement(element, 'dd.neg > span')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
                             results.insertAdjacentElement('afterbegin', element);
                         }
-
                     }
-                    // Array.prototype.forEach.call(dl, function (el) {
-                    //     if (hasHighlightedElement(el, 'dd') || hasHighlightedElement(el, 'dd.pl > span') || hasHighlightedElement(el, 'dd.neg > span')) { // If any of the Scots words (e.g. headword, past tense) is highlighted
-                    //         results.insertAdjacentElement('afterbegin', el);
-                    //     }
-                    // });
 
-                    // G.utils.reverseChildren
+                    // > Maybe do a comparison a la PHP's similar_text() to push the Scots cognate to the top. E.g. if user searches for 'stupid', the Scots 'stupit' should be at the top (currently it's 'glaikit')
 
                     // Any items with 'heeze' data attribute that matches currently searched for word should be moved to the top. This works around issue where 'haud' and 'hae' have the same score when user searches for 'have'. We probably want to make sure 'hae, hiv' is at the top
                     Array.prototype.forEach.call(dl, function (el) {
@@ -594,14 +587,14 @@ var GLOSSAR = (function () {
     }
 
     function formatOrigin(obj) {
-        var origin = [].concat(obj),
-            ul = [];
+        const origin = [].concat(obj);
+        const ul = [];
 
-        $.each(origin, function (i) {
-            if (this.join) { // If an array
-                ul.push(`${this[0]} <span>${this[1]}</span>`);
+        origin.forEach(item => {
+            if (item.join) { // If an array
+                ul.push(`${item[0]} <span>${item[1]}</span>`);
             } else { // If a string
-                ul.push(this);
+                ul.push(item);
             }
         });
 
@@ -637,8 +630,8 @@ var GLOSSAR = (function () {
         }
 
         // Make lowercase
-        $.each(words, function (i) {
-            words[i] = this.toLowerCase();
+        words.forEach((word, i) => {
+            words[i] = word.toLowerCase();
         });
 
         return words;
@@ -652,14 +645,14 @@ var GLOSSAR = (function () {
      * @returns {String}
      */
     function formatMultiple(word, separator, cl) {
-        var words = [].concat(word), // Make array in case we're passed a string
-            ol = [];
+        const words = [].concat(word); // Make array in case we're passed a string
+        const ol = [];
 
-        $.each(words, function () {
-            if (this.join) { // If an array
-                ol.push(this.join(`${separator} `)); // Join array items into a single string
+        words.forEach(word => {
+            if (word.join) { // If an array
+                ol.push(word.join(`${separator} `)); // Join array items into a single string
             } else { // If a string
-                ol.push(this);
+                ol.push(word);
             }
         });
 
@@ -671,6 +664,7 @@ var GLOSSAR = (function () {
     }
 
     function highlight(r, callback) {
+
         let i = 0;
         let results = document.querySelector('#results');
 
@@ -683,7 +677,7 @@ var GLOSSAR = (function () {
 
                 var cmd = q.match(/^\W+|\W+$/); // Get non-alphanumeic leading characters (Latin-characters only, i.e. doesn't take account of letters with diacritics)
                 if (cmd) {
-                    cmd = $.trim(q.match(/^\W+|\W+$/)[0]);
+                    cmd = q.match(/^\W+|\W+$/)[0].trim();
 
                     if (cmd.length) { // If there is unix-style command leading character
                         q = q.slice(cmd.length, q.length + 1); // Remove it
@@ -699,7 +693,7 @@ var GLOSSAR = (function () {
 
             if (el.dataset.hl) // Add any highlight words to the items array
                 words = words.concat(el.dataset.hl.split(','));
-        
+
             words.forEach(word => {
                 if (
                     word.toLowerCase() === state.word_lc || // Direct match
@@ -709,7 +703,7 @@ var GLOSSAR = (function () {
                     el.classList.add('hl');
                     state.highlight = state.highlight + 1;
                     return false; // Exit loop
-                } 
+                }
             });
         }
 
