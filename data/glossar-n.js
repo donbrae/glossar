@@ -1719,7 +1719,7 @@ G.dict.push({
     en: ['gate', 'a pass between hills'],
     tr: ['yate', 'entrance', 'pass'],
     gr: 'n',
-    ex: [G.ex.j1, G.ex.j2],
+    ex: [G.ex.j1, G.ex.m1],
     or: [
         [G.notes.or.as, 'yett, Ȝet(t), yate'],
         [G.notes.or.ae, 'geat']

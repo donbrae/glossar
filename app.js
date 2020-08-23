@@ -302,7 +302,7 @@ const GLOSSAR = (function () {
 
     function noResults() {
         const results = document.getElementById('results');
-        results.innerHTML = `<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong>.</div>`;
+        results.innerHTML = `<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong></div>`;
         results.classList.add('show');
     }
 
@@ -650,20 +650,22 @@ const GLOSSAR = (function () {
 
     /**
      * For English words, definitions, examples etc. Creates an <ol> out of an array, or, if passed only a string, returns the original string
-     * @param {Array} word
+     * @param {Array} item
      * @param {String} separator - e.g. ';'
      * @param {String} cl - class, e.g. 'en'
      * @returns {String}
      */
-    function formatMultiple(word, separator, cl) {
-        const words = [].concat(word); // Make array in case we're passed a string
+    function formatMultiple(item, separator, cl) {
+        const items = [].concat(item); // Make array in case we're passed a string
         const ol = [];
 
-        words.forEach(word => {
-            if (word.join) { // If an array
-                ol.push(word.join(`${separator} `)); // Join array items into a single string
-            } else { // If a string
-                ol.push(word);
+        items.forEach(item => {
+            if (item && item.join) { // If an array
+                ol.push(item.join(`${separator} `)); // Join array items into a single string
+            } else if (item) { // If a string
+                ol.push(item);
+            } else {
+                console.warn(item, items);
             }
         });
 
@@ -708,6 +710,7 @@ const GLOSSAR = (function () {
 
             words.forEach(word => {
                 if (
+                    word &&
                     word.toLowerCase() === state.word_lc || // Direct match
                     query.indexOf(word.toLowerCase()) > -1 || // Match on one of any variants
                     (other && other.indexOf(state.word_lc) > -1) // Other values which should trigger highlighting
@@ -715,6 +718,8 @@ const GLOSSAR = (function () {
                     el.classList.add('hl');
                     state.highlight = state.highlight + 1;
                     return false; // Exit loop
+                } else if (!word) {
+                    console.warn(word);
                 }
             });
         }

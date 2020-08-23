@@ -194,10 +194,6 @@ ul {
         }
     }
 
-    span.audio {
-        margin-left: -0.3rem;
-    }
-
     ol,
     ul {
         margin: 0;
@@ -236,7 +232,6 @@ ul {
         margin-top: 0.2rem;
     }
 
-    .def,
     .or-container {
         margin-top: 0.15rem;
     }
@@ -351,11 +346,23 @@ ul {
         padding-bottom: 0.2rem;
     }
 
-    .dt-en+dd ol.en,
-    .dt-def+dd ol.def {
-        padding-top: 0.2rem;
-        padding-bottom: 0.2rem;
+    .dt-def+dd+.dt-en+dd .en {
+        margin-top: 0;
+        padding-top: 0.1rem;
     }
+
+    .pt,
+    .pp,
+    .pt-pp {
+        &+.dt-def+dd .def {
+            padding-top: 0.1rem;
+        }
+    }
+
+    // .dt-en+dd ol.en,
+    // .dt-def+dd ol.def {
+    //     padding-bottom: 0.2rem;
+    // }
 
     dd:last-of-type {
 
@@ -387,12 +394,15 @@ ul {
         font-weight: 600;
     }
 
-    .neg span,
-    .pl span,
-    .pp span,
-    .pt span,
-    .pt-pp span {
-        padding-bottom: 0.15rem;
+    .neg,
+    .pl,
+    .pp,
+    .pt,
+    .pt-pp {
+
+        span:not(.audio) {
+            padding-bottom: 0.15rem;
+        }
     }
 
     .en {
@@ -600,6 +610,17 @@ button {
                 outline-offset: 0.1rem;
             }
         }
+    }
+}
+
+.pt,
+.pp,
+.pt-pp,
+.neg,
+.pl {
+    button.play-audio svg {
+        height: 1.1rem;
+        width: 1.2rem;
     }
 }
 

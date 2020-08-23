@@ -495,6 +495,7 @@ G.dict.push({
     pp: {
         sc: 'allocate',
         tr: ['allocated', 'allocatit', 'assigned'],
+        hl: ['allocated'],
         au: 'allocate-pp'
     },
     tr: ['assign', 'appoint'],
