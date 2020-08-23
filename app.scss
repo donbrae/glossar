@@ -462,6 +462,7 @@ ul {
     .btn {
         background: none;
         transition: none;
+        height: 1.4rem;
 
         &:focus {
             box-shadow: none;
@@ -582,7 +583,7 @@ button {
     &.play-audio {
         padding: 0;
         border: 1px solid #212529;
-        top: -0.1rem;
+        top: -0.09rem;
         position: relative;
         margin-right: 0.24rem;
         line-height: 1;
