@@ -20,7 +20,8 @@ G.dict.push({ // A
     gr: 'adj',
     tr: ['ane', 'yay', 'ain', 'yin', 'wan', 'een', 'ann'],
     hl: [],
-    ex: ['I haed ae last beer syne taen the gate hame', 'Fowk bein full o theirsels wis the ae thing I couldna staund']
+    ex: ['I haed ae last beer syne taen the gate hame', 'Fowk bein full o theirsels wis the ae thing I couldna staund'],
+    au: ['ae', 'ae1']
 }, {
     sc: 'aesome',
     en: [
@@ -384,7 +385,8 @@ G.dict.push({ // A
     ],
     tr: ['scared', 'frightened'],
     gr: 'adj',
-    ex: G.ex.a
+    ex: G.ex.a,
+    au: 'feart'
 }, {
     sc: 'fell',
     en: [
@@ -433,7 +435,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'frequent'],
         [G.notes.or.l, 'frequens']
-    ]
+    ],
+    au: 'frequent-adj'
 }, {
     sc: 'furrin',
     en: [
@@ -445,7 +448,8 @@ G.dict.push({ // A
         [G.notes.or.as + ' haes ', 'forain(e), forayne, forane'],
         [G.notes.or.me, 'forain(e), forayn(e), forein(e), foreyne'],
         [G.notes.or.af, 'forain']
-    ]
+    ],
+    au: 'furrin'
 }, {
     sc: 'furthie',
     en: [
@@ -494,7 +498,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'gud(e), guid'],
         [G.notes.or.ae, 'gōd']
-    ]
+    ],
+    au: 'guid'
 }, {
     sc: 'gyte',
     en: [
@@ -567,7 +572,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'depute, deput'],
         [G.notes.or.af, 'deputé']
-    ]
+    ],
+    au: 'depute-adj'
 }, {
     sc: 'acquent',
     en: [
@@ -597,7 +603,8 @@ G.dict.push({ // A
 }, { // L
     sc: 'laident',
     en: 'burdened',
-    gr: 'adj'
+    gr: 'adj',
+    au: 'laident'
 }, {
     sc: 'lang',
     en: ['long', 'tall'],
@@ -655,7 +662,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'mychty, mychti, michty'],
         [G.notes.or.ae, 'mihtig']
-    ]
+    ],
+    au: 'michty'
 }, {
     sc: 'mony',
     en: 'many',
@@ -663,7 +671,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'mony, monie'],
         [G.notes.or.ae, 'mǫniᵹ']
-    ]
+    ],
+    au: 'mony'
 }, {
     sc: 'muckle',
     pr: ['muckl', 'meekl'],
@@ -680,7 +689,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'mekill, mykill, mukill, muckle'],
         [G.notes.or.ae, 'micel'],
         [G.notes.or.anor, 'mikill']
-    ]
+    ],
+    au: 'muckle'
 }, {
     sc: 'no weel',
     en: 'ill',
@@ -704,7 +714,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'ony'],
         [G.notes.or.ae, 'ǽniᵹ']
-    ]
+    ],
+    au: 'ony'
 }, {
     sc: 'ordinar',
     en: [
@@ -715,7 +726,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.me, 'ordinari'],
         [G.notes.or.mf, 'ordinaire']
-    ]
+    ],
+    au: 'ordinar'
 }, {
     sc: 'ower',
     pr: ['uower', 'oar', 'oor', 'err'],
@@ -806,7 +818,8 @@ G.dict.push({ // A
     en: 'right',
     tr: 'correctly',
     gr: ['adj', 'adv', 'n', 'v', 'exclamation'],
-    ex: ['They’r frae Dundee if I mind richt']
+    ex: ['They’r frae Dundee if I mind richt'],
+    au: 'richt'
 }, { // S
     sc: 'sair',
     en: [
@@ -871,7 +884,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'slekit, sleikit'],
         [G.notes.or.me, 'sliken, sleken']
     ],
-    ex: 'Ay, I wadna trust the sleekit bastart!'
+    ex: 'Ay, I wadna trust the sleekit bastart!',
+    au: 'sleekit'
 }, {
     sc: 'stupit',
     en: 'stupid',
@@ -903,7 +917,8 @@ G.dict.push({ // A
     tr: 'laith',
     hl: [],
     gr: 'adj',
-    or: 'see adj <span>sweir</span>'
+    or: 'see adj <span>sweir</span>',
+    au: 'sweirt'
 }, {
     sc: 'timeous',
     en: 'timely',
@@ -948,7 +963,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'uncow'],
         [G.notes.or.ae, 'uncūð']
     ],
-    ex: [G.ex.r, 'He fand hissel in an unco pairt o toun', 'An unco thrang bourached ootside the pairlament biggin', G.ex.v, 'The mechanic haed an unco job sortin the electrics']
+    ex: [G.ex.r, 'He fand hissel in an unco pairt o toun', 'An unco thrang bourached ootside the pairlament biggin', G.ex.v, 'The mechanic haed an unco job sortin the electrics'],
+    au: 'unco'
 }, { // V
     sc: 'versant',
     en: [
@@ -990,6 +1006,11 @@ G.dict.push({ // A
         [G.notes.or.ae, 'wel'],
         [G.notes.or.anor, 'val']
     ]
+}, {
+    sc: 'wrang',
+    en: 'wrong',
+    gr: ['adj', 'n'],
+    au: 'wrang'
 }, {
     sc: 'wrocht-up',
     en: 'overwrought',

@@ -59,7 +59,8 @@ G.dict.push({
     gr: 'n',
     or: [
         ['?' + G.notes.or.f, 'associé']
-    ]
+    ],
+    au: 'associe'
 }, { // B
     sc: ['bam', 'bammer', 'bampot', 'bamstick'],
     def: 'a fuil, eejit, stupit person; a nutcase',
@@ -336,7 +337,8 @@ G.dict.push({
         [G.notes.or.me, 'counseil'],
         [G.notes.or.l, 'concilium']
     ],
-    ex: 'Edinburgh City Council the day set furth new wittins anent the raxin oot o the tram netwark til Newhaven'
+    ex: 'Edinburgh City Council the day set furth new wittins anent the raxin oot o the tram netwark til Newhaven',
+    au: 'cooncil'
 }, { // D
     sc: 'daeins',
     en: 'activity',
@@ -406,7 +408,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'defect'],
         [G.notes.or.l, 'dēfectus']
-    ]
+    ],
+    au: 'defect'
 }, {
     sc: 'defection',
     en: [
@@ -417,7 +420,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'defection'],
         [G.notes.or.l, 'dēfectio']
-    ]
+    ],
+    au: 'defection'
 }, {
     sc: 'depute',
     en: 'a deputy',
@@ -456,7 +460,8 @@ G.dict.push({
     tr: 'swither',
     hl: 'dither',
     gr: ['n', 'v'],
-    ex: ['Ay, he’s a richt ditter', 'The’r nae time tae be ditterin aboot']
+    ex: ['Ay, he’s a richt ditter', 'The’r nae time tae be ditterin aboot'],
+    au: 'ditter'
 }, {
     sc: 'documentar',
     en: 'documentary',
@@ -816,7 +821,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'heid, hede'],
         [G.notes.or.ae, 'hēafod']
-    ]
+    ],
+    au: 'heid'
 }, {
     sc: 'hirple',
     en: [
@@ -913,6 +919,14 @@ G.dict.push({
         [G.notes.or.l, 'novātor']
     ]
 }, {
+    sc: 'jaiket',
+    tr: 'jaicket',
+    en: [
+        ['coat', 'jacket']
+    ],
+    gr: 'n',
+    au: 'jaiket'
+}, {
     sc: 'accress',
     en: 'increase',
     gr: ['n', 'obsolete'],
@@ -976,7 +990,8 @@ G.dict.push({
         ['lawmaker', 'legislator']
     ],
     gr: 'n',
-    or: 'protologism steidit on English <em>lawmaker</em>'
+    or: 'protologism steidit on English <em>lawmaker</em>',
+    au: 'law-makar'
 }, {
     sc: 'licht',
     en: 'light',
@@ -1006,7 +1021,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'loch, louch(e)'],
         [G.notes.or.ga, 'loch']
-    ]
+    ],
+    au: 'loch'
 }, {
     sc: 'loun',
     pr: 'loon',
@@ -1061,7 +1077,8 @@ G.dict.push({
         [G.notes.or.as, 'mycht, micht'],
         [G.notes.or.ae, 'meaht']
     ],
-    ex: 'He poued the pleuch wi aw his micht'
+    ex: 'He poued the pleuch wi aw his micht',
+    au: 'micht'
 }, {
     sc: 'mind',
     tr: 'mynd',
@@ -1099,7 +1116,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'narrative'],
         [G.notes.or.mf, 'narrative']
-    ]
+    ],
+    au: 'narrative'
 }, {
     sc: 'naturality',
     en: [
@@ -1120,7 +1138,8 @@ G.dict.push({
 }, {
     sc: 'nicht',
     en: 'night',
-    gr: ['n']
+    gr: 'n',
+    au: 'nicht'
 }, {
     sc: 'nieve',
     en: 'fist',
@@ -1274,7 +1293,8 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.as, 'poetry, poetrie, poyetrie']
-    ]
+    ],
+    au: 'poyetry'
 }, { // Q
     sc: ['quine', 'quinie'],
     sc_alt: 'quean',
@@ -1308,7 +1328,8 @@ G.dict.push({
     tr: ['yiss', 'uise', 'yaise', 'yaize', 'yuise', 'euse', 'yeuse', 'eese'],
     hl: ['yiss', 'ees', 'yuise', 'ös', 'euse', 'yeuse', 'yeese', 'eese'],
     en: 'use',
-    gr: 'n'
+    gr: 'n',
+    au: 'uiss'
 }, {
     sc: 'raivel',
     en: [
@@ -1596,7 +1617,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'toun, town(e), ton(e)'],
         [G.notes.or.ae, 'tūn']
-    ]
+    ],
+    au: 'toun'
 }, {
     sc: 'tred',
     en: 'trade',
@@ -1646,7 +1668,8 @@ G.dict.push({
     ex: [
         ['He gaed intae wark early for tae set furth a saftware update'],
         G.ex.w
-    ]
+    ],
+    au: 'wark'
 }, {
     sc: 'watter',
     en: 'water',

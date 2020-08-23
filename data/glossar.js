@@ -85,7 +85,8 @@ G.pr = {
 G.dict = [{
     sc: ['ay', 'aye'],
     en: 'yes',
-    gr: 'exclamation'
+    gr: 'exclamation',
+    au: 'ay'
 }, {
     sc: 'and',
     pr: 'an',
@@ -107,7 +108,11 @@ G.dict = [{
         [G.notes.or.ae, 'on efen']
     ],
     ex: [G.ex.q, G.ex.o]
-}, { // B
+    }, {
+        sc: 'as',
+        en: 'than',
+        ex: ['Ye ken better as that', 'I’ll need tae pack mair as that if I’m gaun for the week'],
+    }, { // B
     sc: 'ben',
     en: 'through the house, towards the inner part',
     gr: 'prep',
@@ -182,7 +187,8 @@ G.dict = [{
         [G.notes.or.as, 'for, fore, foir'],
         [G.notes.or.ae, 'for']
     ],
-    ex: ['Ar ye for gaun oot efter?', G.ex.k]
+    ex: ['Ar ye for gaun oot efter?', G.ex.k],
+    au: 'for'
 }, {
     sc: 'forby',
     sc_alt: 'forbye',
@@ -203,7 +209,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'fra, frae'],
         [G.notes.or.anor, 'frá']
-    ]
+    ],
+    au: ['fae', 'frae']
 }, {
     sc: ['if', 'gif'],
     en: 'if',
@@ -261,7 +268,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'himself, himsell'],
         [G.notes.or.ae, 'him self']
-    ]
+    ],
+    au: 'himsel'
 }, {
     sc: 'hissel',
     en: 'himself',
@@ -270,7 +278,8 @@ G.dict = [{
     hl: 'hissell',
     or: [
         [G.notes.or.as, 'his( )self, his sel']
-    ]
+    ],
+    au: 'hissel'
 }, { // I
     sc: 'ilk',
     en: [
@@ -299,7 +308,8 @@ G.dict = [{
     pr: ['whah', 'whau', 'whae', 'whiu', 'fa', 'a'],
     en: 'who',
     tr: ['whae', 'whay', 'whey'],
-    gr: 'pronoon'
+    gr: 'pronoon',
+    au: 'wha'
 }, { // M
     sc: 'maist',
     def: [
@@ -471,7 +481,8 @@ G.dict = [{
 }, {
     sc: ['whaniver', 'faniver'],
     en: 'whenever',
-    tr: ['wheniver', 'fanever']
+    tr: ['wheniver', 'fanever'],
+    au: 'whaniver'
 }, {
     sc: ['what', 'fat'],
     sc_alt: ['whit', 'fit'],
@@ -482,7 +493,8 @@ G.dict = [{
     sc: 'wi',
     pr: ['wi', 'wae', 'w'],
     en: 'with',
-    gr: ['preposition']
+    gr: ['preposition'],
+    au: 'wi'
 }, {
     sc: ['whiles', 'fyles'],
     pr: ['whilez', 'filez'],

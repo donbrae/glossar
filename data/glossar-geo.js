@@ -251,7 +251,8 @@ G.dict.push({
 }, {
     sc: 'Greece',
     en: 'Greece',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'greece'
 }, {
     sc: 'Iceland',
     en: 'Iceland',
@@ -295,9 +296,10 @@ G.dict.push({
     en: 'Lappland',
     gr: 'pn'
 }, {
-    sc: ['Lithuania', 'Leifland'],
+    sc: ['Lithuanie', 'Leifland'],
     en: 'Lithuania',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'lithuanie'
 }, {
     sc: ['Latvie', 'Lettland'],
     en: 'Latvia',
@@ -545,7 +547,8 @@ G.dict.push({
     sc: 'warld',
     pr: 'wuruld',
     en: 'world',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'warld'
 }, {
     sc: 'Wast Indies',
     en: 'West Indies',

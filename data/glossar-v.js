@@ -186,8 +186,10 @@ G.v.will = {
             en: [
                 ['wouldn\'t', 'would not']
             ],
-            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'wouldna', 'wouldnae']
-        }
+            tr: ['widnae', 'wadnae', 'wudnae', 'widna', 'wudna', 'wouldna', 'wouldnae'],
+            au: 'wadna'
+        },
+        au: 'wad'
     }
 };
 G.v.will.trigs = [].concat( // Control display of conjugated 'will'
@@ -700,7 +702,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'defalt, defawt, defaut'],
         [G.notes.or.af, 'defaillir']
-    ]
+    ],
+    au: 'defaut'
 }, {
     sc: 'demit',
     pt_pp: {
@@ -748,7 +751,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'depone'],
         [G.notes.or.l, 'dēpōnere']
-    ]
+    ],
+    au: 'depone'
 }, {
     sc: 'depute',
     pt_pp: {
@@ -838,7 +842,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'ettle, ettill'],
         [G.notes.or.anor, 'ætla']
-    ]
+    ],
+    au: 'ettle'
 }, {
     sc: 'ettlin',
     en: [
@@ -900,7 +905,8 @@ G.dict.push({
         en: G.v.gae.en,
         tr: G.v.gae.tr,
         hl: [],
-        gr: 'v'
+        gr: 'v',
+        au: 'gang'
     }, { // v gae neg
     sc: G.v.gae.neg.sc,
     en: G.v.gae.neg.en,
@@ -972,7 +978,8 @@ G.dict.push({
     en: G.v.gie.pt.en,
     tr: G.v.gie.trigs,
     hl: [],
-    gr: 'pt o ' + G.v.gie.meta.gr_hw
+    gr: 'pt o ' + G.v.gie.meta.gr_hw,
+    au: 'gied'
 }, { // v gie pt neg
     sc: G.v.gie.pt.neg.sc,
     en: G.v.gie.pt.neg.en,
@@ -1038,7 +1045,8 @@ G.dict.push({
     en: G.v.dae.en,
     tr: [].concat(G.v.dae.tr),
     gr: 'v',
-    heeze: 'dae'
+    heeze: 'dae',
+    au: 'dae'
 }, { // dae neg
     sc: G.v.dae.neg.sc,
     sc_alt: G.v.dae.neg.sc_alt,
@@ -1083,12 +1091,14 @@ G.dict.push({
     pr: G.v.dae.ptp.pr,
     tr: G.v.dae.trigs,
     hl: [],
-    gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    gr: 'pp o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
+    au: 'duin'
 }, { // dae -ing form
     sc: G.v.dae.ing.sc,
     en: G.v.dae.ing.en,
     tr: G.v.dae.trigs,
-    hl: []
+    hl: [],
+    au: 'daein'
 }, {
     sc: 'jalouse',
     en: ['suspect', ['suppose', 'guess', 'surmise']],
@@ -1103,7 +1113,8 @@ G.dict.push({
     or: [
         'this uissage first appears in ' + G.notes.or.lms, [G.notes.or.f, 'jalouser']
     ],
-    ex: [G.ex.y, G.ex.z]
+    ex: [G.ex.y, G.ex.z],
+    au: 'jalouse'
 }, {
     sc: 'dounlaid',
     pt: {
@@ -1283,11 +1294,13 @@ G.dict.push({
     en: [
         ['carry on', 'continue'],
     ],
-    gr: ['phrasal v']
+    gr: ['phrasal v'],
+    au: 'haud-on'
 }, {
     sc: 'haud on',
     en: 'stop',
-    gr: ['imp phrasal v']
+    gr: ['imp phrasal v'],
+    au: 'haud-on-imp'
 }, { // I
     sc: 'import',
     pt_pp: {
@@ -1351,7 +1364,8 @@ G.dict.push({
         [G.notes.or.as, 'interpone'],
         [G.notes.or.l, 'interpõnere']
     ],
-    inf: 'Uisses the day are limitit tae Scots law — aft-times in the phrase <span>interpone authority to</span> — but it wis uised mair braidly in Aulder Scots'
+    inf: 'Uisses the day are limitit tae Scots law — aft-times in the phrase <span>interpone authority to</span> — but it wis uised mair braidly in Aulder Scots',
+    au: 'interpone'
 }, {
     sc: 'introduce',
     pt_pp: {
@@ -1395,7 +1409,8 @@ G.dict.push({
     gr: ['adj, an ptp o v ' + G.utils.addSpan('tae ken')],
     ex: 'Brian is a weel kent face on the Edinburgh jazz scene',
     tr: G.v.ken_knaw.trigs,
-    hl: 'kent'
+    hl: 'kent',
+    au: 'kent'
 }, {
     sc: 'knaw',
     en: 'know',
@@ -1537,21 +1552,24 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'mak'],
         [G.notes.or.ae, 'macian']
-    ]
+    ],
+    au: 'mak'
 }, { // M
     sc: 'maun',
     pr: ['maun', 'mon', 'man', 'mun'],
     en: 'must',
     neg: {
         sc: ['maunna', 'maunnae'],
-        tr: ['must not', 'mustn\'t', 'manny', 'manna']
+        tr: ['must not', 'mustn\'t', 'manny', 'manna'],
+        au: 'maunna'
     },
     gr: ['v'],
     or: [
         [G.notes.or.as, 'man'],
         [G.notes.or.anor, 'muna > man']
     ],
-    ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds']
+    ex: ['Ye maun be jokin!', 'He maunna hae been able tae come', 'The essay maunna be ower 3,000 wirds'],
+    au: 'maun'
 }, {
     sc: 'mind',
     pt: {
@@ -1678,7 +1696,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'frequent'],
         [G.notes.or.l, 'frequentāre']
-    ]
+    ],
+    au: 'frequent-v'
 }, { // G
     sc: 'gowk',
     pt_pp: {
@@ -1763,7 +1782,8 @@ G.dict.push({
     tr: G.v.hae.trigs,
     hl: [],
     gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
-    ex: G.ex.d1
+    ex: G.ex.d1,
+    au: 'haed'
 }, { // hae neg past tense
     sc: G.v.hae.pt.neg.sc,
     en: G.v.hae.pt.neg.en,
@@ -1791,7 +1811,8 @@ G.dict.push({
     gr: 'v',
     or: [
         [G.notes.or.ms, 'haik']
-    ]
+    ],
+    au: 'haik'
 }, {
     sc: 'haud oot',
     pt: {
@@ -2119,7 +2140,8 @@ G.dict.push({
     en: 'walk in a clumsy or shuffling manner',
     tr: ['shuffle', 'hirple', 'limp'],
     hl: 'shuffle',
-    gr: 'v'
+    gr: 'v',
+    au: 'skleush'
 }, {
     sc: 'steek',
     en: [
@@ -2146,7 +2168,8 @@ G.dict.push({
     hl: 'swither',
     gr: 'v',
     ex: 'Dinna swither, min — haud gaun!',
-    or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms]
+    or: ['doutsome; first kythes (as a verb) in ' + G.notes.or.ms],
+    au: 'swither'
 }, { // U
     sc: 'uise',
     pr: ['yöz', 'yüz', 'öz', 'yaiz', 'ees'],
@@ -2157,7 +2180,8 @@ G.dict.push({
     },
     tr: ['yaise', 'uiss', 'yiss', 'yaize', 'yeese', 'eese'],
     hl: ['yaise', 'yaize', 'yeese', 'eese'],
-    gr: 'v'
+    gr: 'v',
+    au: 'uise'
 }, {
     sc: 'unsteek',
     en: 'open',
@@ -2246,7 +2270,8 @@ G.dict.push({
     en: G.v.war.neg.en,
     tr: [].concat(G.v.war.neg.tr, G.v.war.trigs, G.v.wis.trigs),
     hl: G.v.war.neg.tr,
-    gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)]
+    gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)],
+    au: 'warna'
 },
     // v war end
     // will
@@ -2275,14 +2300,16 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'wald'],
         [G.notes.or.ae, 'wolde']
-    ]
+    ],
+    au: 'wad'
 }, { // will pt and pp neg
     sc: G.v.will.pt_pp.neg.sc,
     en: G.v.will.pt_pp.neg.en,
     tr: [].concat(G.v.will.trigs, G.v.will.pt_pp.neg.tr),
     hl: G.v.will.pt_pp.neg.tr,
     gr: ['neg pt and ptp o v ' + G.utils.addSpan(G.v.will.sc)],
-    ex: 'Ye wadna could tell he uised tae be in the airmy'
+    ex: 'Ye wadna could tell he uised tae be in the airmy',
+    au: 'wadna'
 }
     // v will end
     // Template

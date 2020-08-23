@@ -44,7 +44,8 @@ G.dict.push({
     en: 'too much',
     gr: 'phr',
     tr: ['tae muckle', 'tae much', 'owre muckle'],
-    hl: 'owre muckle'
+    hl: 'owre muckle',
+    au: 'ower-muckle'
 }, {
     sc: 'pit intil effect',
     en: 'implement',

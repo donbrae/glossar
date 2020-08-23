@@ -13,7 +13,8 @@ G.dict.push({ // A
     pr: 'abLo',
     sc_alt: 'ablow',
     en: 'below',
-    gr: ['prep', 'adv']
+    gr: ['prep', 'adv'],
+    au: 'ablo'
 }, {
     sc: 'aboot',
     en: 'about',
@@ -23,7 +24,8 @@ G.dict.push({ // A
     sc: 'abuin',
     pr: ['abön', 'abün', 'abin', 'abain', 'abeen'],
     en: 'above',
-    gr: ['adv', 'prep']
+    gr: ['adv', 'prep'],
+    au: 'abuin'
 }, {
     sc: 'aft',
     en: [
@@ -53,7 +55,8 @@ G.dict.push({ // A
     ],
     tr: ['afttimes', 'aft times', 'aften', 'aft'],
     hl: [],
-    gr: ['adv']
+    gr: 'adv',
+    au: 'aft-times'
 }, {
     sc: 'allevolie',
     en: ['at random'],
@@ -81,7 +84,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'ay, aye'],
         [G.notes.or.anor, 'ei']
     ],
-    ex: ['It’s aye been!', 'Dis he aye bide in Aiberdeen?']
+    ex: ['It’s aye been!', 'Dis he aye bide in Aiberdeen?'],
+    au: 'aye'
 }, { // B
     sc: 'ben',
     en: ['in or towards the inner part of a house'],
@@ -89,7 +93,8 @@ G.dict.push({ // A
     tr: ['inside', 'indoors', 'in'],
     hl: ['inside', 'indoors'],
     or: 'see prep',
-    ex: 'She gaed ben for tae fesh some newspaper'
+    ex: 'She gaed ben for tae fesh some newspaper',
+    au: 'ben'
 }, {
     sc: 'benwart',
     en: 'inward',
@@ -132,7 +137,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'but(t)'],
         [G.notes.or.ae, 'būtan']
-    ]
+    ],
+    au: 'but'
 }, {
     sc: 'but and ben',
     en: [
@@ -143,7 +149,8 @@ G.dict.push({ // A
     gr: 'phrasal adv',
     or: [
         [G.notes.or.as, 'but and ben'],
-    ]
+    ],
+    au: 'but-and-ben'
 }, {
     sc: 'byous',
     en: [
@@ -200,7 +207,8 @@ G.dict.push({ // A
     ],
     tr: ['also', 'too', 'additionally'],
     hl: ['forby', 'also', 'additionally'],
-    gr: ['adv']
+    gr: ['adv'],
+    au: 'forby'
 }, {
     sc: 'frequently',
     en: 'frequently',
@@ -418,7 +426,7 @@ G.dict.push({ // A
         ['in any degree', 'to any extent'],
         ['in any way', 'at all']
     ],
-    gr: ['adv'],
+    gr: 'adv',
     or: 'see adj'
 }, {
     sc: 'onyplace',
@@ -434,7 +442,8 @@ G.dict.push({ // A
         ['anyhow', 'in any way']
     ],
     tr: 'anyway',
-    gr: ['adv']
+    gr: 'adv',
+    au: 'onywey'
 }, {
     sc: 'onyweys',
     en: [
@@ -481,7 +490,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'over, ouer, ower'],
         [G.notes.or.ae, 'ofer']
-    ]
+    ],
+    au: 'ower'
 }, { // R
     sc: 'raither',
     en: 'rather',
@@ -561,7 +571,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'syn(e), sin, sen, sene'],
         [G.notes.or.ae, 'siþþan']
-    ]
+    ],
+    au: 'syne'
 }, {
     sc: 'aefauldly',
     tr: 'aefauldlie',
@@ -603,7 +614,8 @@ G.dict.push({ // A
     ],
     gr: ['adv', 'n'],
     or: '<span>the morn(e)</span> ‘the follaein day’ dates back til aboot 1470',
-    ex: 'I\'ll see ye the morn!'
+    ex: 'I\'ll see ye the morn!',
+    au: 'the-morn'
 }, {
     sc: 'the morra',
     en: 'tomorrow',
@@ -613,10 +625,11 @@ G.dict.push({ // A
 }, {
     sc: 'the nicht',
     en: 'tonight',
-    tr: 'the night',
+    tr: ['the night', 'the-nicht'],
     gr: ['adv', 'n'],
     ex: ['Ar ye gaun oot the nicht?', 'It’s affa cauld the nicht'],
-    or: 'the earliest kent kythin o <span>the nicht</span> (as <em>the nycht</em>) ‘the present or approachin nicht’ is frae 1475'
+    or: 'the earliest kent kythin o <span>the nicht</span> (as <em>the nycht</em>) ‘the present or approachin nicht’ is frae 1475',
+    au: 'the-nicht'
 }, {
     sc: 'the year',
     en: 'this year',
@@ -631,7 +644,8 @@ G.dict.push({ // A
     ],
     tr: ['the-noo', 'the now', 'at the moment', 'suin', 'sin', 'seen', 'momentarily', 'a moment ago'],
     ex: ['Haud on; I’ll be there the noo', 'I cawed her the noo but she wisna answerin'],
-    or: 'first kythes in ' + G.notes.or.mods
+    or: 'first kythes in ' + G.notes.or.mods,
+    au: 'the-noo'
 }, {
     sc: 'timeously',
     def: 'in a timeous mainer, promptly',
