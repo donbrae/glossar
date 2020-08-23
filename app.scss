@@ -22,6 +22,15 @@ header ::selection {
     content: '\e800';
 }
 
+svg.block {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -472,13 +481,16 @@ ul {
     color: #595e63 !important;
 }
 
-#search {
+#search,
+.js-warning {
     padding-top: 1.8rem;
 
     @media (min-width: 576px) {
         padding-top: 2rem;
     }
+}
 
+#search {
     .form-group {
         margin-bottom: 1.2rem;
     }

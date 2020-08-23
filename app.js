@@ -12,7 +12,8 @@ const GLOSSAR = (function () {
         variants: ['sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
         threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
         extended_cmd: '^', // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
-        lug: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 -0.3 24 22" stroke-width="1.8" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round" height="20" width="20"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3  a4.5 4.5 0 0 1 -6.8 1.4"></path><path d="M10 10a3 3 0 1 1 5 2.2"></path></svg>' // Credit: Paweł Kuna (@codecalm; tablericons.com)
+        lug: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 -0.3 24 22" stroke-width="1.8" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round" height="20" width="20"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3  a4.5 4.5 0 0 1 -6.8 1.4"></path><path d="M10 10a3 3 0 1 1 5 2.2"></path></svg>', // Credit: Paweł Kuna (@codecalm; tablericons.com)
+        warning: '<svg class="block" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ff0002" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>'
     };
     const state = {
         word: '', // Value of search text box
@@ -25,7 +26,7 @@ const GLOSSAR = (function () {
         audio: null,
         audio_button: null
     };
-    
+
     let fuse;
 
     HTMLAudioElement.prototype.stop = function () {
@@ -71,6 +72,14 @@ const GLOSSAR = (function () {
         };
 
         fuse = new Fuse(GLOSSAR.dict, options);
+
+        if (!Array.from) { // Auld browser check
+            const results = document.getElementById('search');
+            results.innerHTML = cfg.warning + '<div class="text-center text-bold">Sorry, your wab browser is ower auld tae rin this app.<br>Please dounlaid a newer ane.</div>';
+            results.classList.add('show');
+
+            return;
+        }
 
         checkForUpdate();
 
@@ -293,7 +302,7 @@ const GLOSSAR = (function () {
 
     function noResults() {
         const results = document.getElementById('results');
-        results.innerHTML = `<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong></div>`;
+        results.innerHTML = `<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong>.</div>`;
         results.classList.add('show');
     }
 
