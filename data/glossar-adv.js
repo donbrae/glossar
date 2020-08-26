@@ -120,7 +120,7 @@ G.dict.push({ // A
     or: 'see the adj',
     ex: G.ex.h
 }, {
-    sc: ['braw an', 'braw and'],
+    sc: 'braw and',
     en: [
         ['very', 'extremely']
     ],

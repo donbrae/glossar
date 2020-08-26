@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Basic JSON to JS object Fuse test</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Derp</h1>
+
+  <script>
+
+    // Generate JSON via JSON.stringify(GLOSSAR.dict) then save the result to dict.json
+    // If the dictionar gets ower big ye can try fetching as JSON. Combined with some library that would allow the fetch to be made with gzip, I'm no sure whether the file size will be smaller. However it may come in useful if we need to code split further down the line
+
+    fetch('./dict.json').then(function (response) {
+
+      // Success
+      if (response.ok) {
+        return response.json(); // Returns to then()
+      }
+
+      // Error
+      return Promise.reject(response);
+
+    }).then(function (data) {
+      console.log(data); // JSON
+      const options = {
+        includeScore: true, // false
+        threshold: 0.1, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
+        distance: 250, // 100 // 'tak the maiter throu haunds' wasn't appearing with value set to 100
+        useExtendedSearch: true, // false https://fusejs.io/examples.html#extended-search. Requires fuse.min.js (i.e. non-basic)
+        keys: [{ // Boost certain keys
+          name: 'sc',
+          weight: 10
+        }, {
+          name: 'en',
+          weight: 8
+        },
+          'pl.sc',
+          'tr',
+          'pl.tr',
+          'pt.sc',
+          'pt.tr',
+          'pp.sc',
+          'pp.tr',
+          'pt_pp.sc',
+          'pt_pp.tr',
+          'neg.sc',
+          'neg.tr',
+          'sc_alt',
+          'pr'
+        ]
+      };
+      const dict = data;
+      const fuse = new Fuse(dict, options);
+
+      fuse.search('ken').forEach(element => {
+        console.log(element);
+      });
+    }).catch(function (err) {
+      console.error(err); // Error
+    });
+
+  </script>
+
+</body>
+
+</html>

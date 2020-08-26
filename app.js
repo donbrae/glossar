@@ -7,13 +7,14 @@
 const GLOSSAR = (function () {
 
     const cfg = {
-        search_delay: 500, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
+        search_delay: 550, // Number of ms to wait after last keystroke before doing a search. See functions timeoutStart() timeoutCancel()
         threshold_exact_match: 5, // If length of searched-for word is below this threshold, '=' will be prepended to the query so that only exact matches are returned (so searching for 'fart', for example, doesn't return 'aff' due to one of aff's triggers being 'farther away'). Also helps prevent long lists of irrelevant results when short words (I, na, ay) are searched for. Items in 'tr'/'hl' properties are unaffected and still show as configured
         variants: ['sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
         threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
         extended_cmd: '^', // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
         lug: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 -0.3 24 22" stroke-width="1.8" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round" height="19" width="20"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3  a4.5 4.5 0 0 1 -6.8 1.4"></path><path d="M10 10a3 3 0 1 1 5 2.2"></path></svg>', // Credit: Paweł Kuna (@codecalm; tablericons.com)
-        warning: '<svg class="block" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ff0002" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>'
+        warning: '<svg class="block" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ff0002" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>',
+        user_query_path: 'q' // Used in history management and accessing results via URL. E.g. https://scots.app/<user_query_path>/muckle
     };
     const state = {
         word: '', // Value of search text box
@@ -24,7 +25,9 @@ const GLOSSAR = (function () {
         highlight: 0, // True if at least one word is highlighted in results set
         random: [], // Indices of which random entries have already been selected
         audio: null,
-        audio_button: null
+        audio_button: null,
+        initial_path: location.pathname,
+        popstate: false // User navigates history
     };
 
     let fuse;
@@ -83,12 +86,16 @@ const GLOSSAR = (function () {
 
         checkForUpdate();
 
-        // Check for value on page load (after back button or not-yet-implemented GET variable). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
+        // Check for value on page load (after back button having navigated away from the app, or via the not-yet-implemented GET variable). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
         setTimeout(function () {
-            let val = document.getElementById('searchTextbox').value;
+            const val = document.getElementById('searchTextbox').value.trim();
+            // const path = val.length ? `${state.initial_path}${cfg.user_query_path}/${val.toLowerCase()}` : '';
+
+            // updateHistory(val.toLowerCase(), val, path);
+
             if (val.trim().length)
                 searchInit();
-        }, 250);
+        }, 150);
 
         addListeners();
 
@@ -165,12 +172,25 @@ const GLOSSAR = (function () {
             setTimeout(function () {
                 results.innerHTML = '';
                 state.last_word_searched_for = '';
+                if (!state.popstate) {
+                    updateHistory('', '', state.initial_path);
+                } else {
+                    state.popstate = false;
+                }
             }, 250);
 
             // Cancel any timeout
             if (state.timeout) {
                 clearTimeout(state.timeout);
             }
+        });
+
+        // User navigates history
+        window.addEventListener('popstate', function (event) {
+            state.popstate = true;
+            let search_box = document.getElementById('searchTextbox');
+            search_box.value = event.state ? event.state.user_query : ''; // Blank string required for when user navigates all the way back to an initally loaded (empty) screen
+            search_box.dispatchEvent(new Event('keyup'));
         });
 
         // Delegatit events
@@ -216,6 +236,10 @@ const GLOSSAR = (function () {
         console.log(state);
     }
 
+    function updateHistory(state, title, path) {
+        history.pushState({ user_query: state }, title, path);
+    }
+
     function searchInit(e) {
         let field = document.getElementById('searchTextbox');
 
@@ -246,11 +270,16 @@ const GLOSSAR = (function () {
                 }
 
                 print(fuse.search(state.query));
-            } else
-                setTimeout(function () {
-                    results.innerHTML = '';
-                    state.last_word_searched_for = '';
-                }, 250);
+                state.popstate = false;
+            } else {
+                results.innerHTML = '';
+                state.last_word_searched_for = '';
+                if (!state.popstate) {
+                    updateHistory('', '', state.initial_path);
+                } else {
+                    state.popstate = false;
+                }
+            }
         }
 
         state.word = G.utils.replaceQo( // Replace ‘ and ’ with '
@@ -267,7 +296,7 @@ const GLOSSAR = (function () {
         } else
             clear.disabled = true;
 
-        if (e && e.code === 'Enter') { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout
+        if (e && e.code === 'Enter' || state.popstate || !state.word.length) { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout. Also run goSearch() if the user has moved a step in the history or there is no value in the search field
             goSearch();
         } else
             timeoutStart(goSearch);
@@ -384,7 +413,7 @@ const GLOSSAR = (function () {
             let el = document.getElementById(id);
 
             if (!el) // If an <audio> element for this words has not already be added to DOM
-                document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="./audio/${id.charAt(0)}/${id}.mp3" preload="auto"></audio>`); // Eik audio element
+                document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="/audio/${id.charAt(0)}/${id}.mp3" preload="auto"></audio>`); // Eik audio element
 
             buttons.push(`<button class="play-audio btn" data-file="${id}">${cfg.lug}</i></button>`); // Eik button 
         });
@@ -595,6 +624,9 @@ const GLOSSAR = (function () {
         }
 
         state.last_word_searched_for = state.word_lc;
+
+        if (!state.popstate)
+            updateHistory(state.word_lc, state.word, `${state.initial_path}${cfg.user_query_path}/${state.word_lc}`);
     }
 
     function formatOrigin(obj) {
@@ -853,7 +885,8 @@ const GLOSSAR = (function () {
 
     return {
         init: init,
-        getState: getState
+        getState: getState,
+        state: state // dev
     };
 
 }());

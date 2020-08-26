@@ -120,7 +120,7 @@ G.dict = [{
         [G.notes.or.as, 'ben(n), bene'],
         [G.notes.or.ae, 'binnan']
     ],
-    ex: G.ex.l1
+        ex: [G.ex.l1, 'Ye can only win ben a Discord server by gate o an invite URL']
 }, {
     sc: 'binna',
     en: 'don\'t be',

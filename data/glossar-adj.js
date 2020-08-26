@@ -816,9 +816,9 @@ G.dict.push({ // A
 }, {
     sc: 'richt',
     en: 'right',
-    tr: 'correctly',
+    tr: ['correctly', 'considerable', 'almighty', 'very'],
     gr: ['adj', 'adv', 'n', 'v', 'exclamation'],
-    ex: ['They’r frae Dundee if I mind richt'],
+    ex: ['They’r frae Dundee if I mind richt', 'It’s a richt fash', 'It’s richt cauld the day'],
     au: 'richt'
 }, { // S
     sc: 'sair',
