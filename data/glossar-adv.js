@@ -59,9 +59,10 @@ G.dict.push({ // A
     au: 'aft-times'
 }, {
     sc: 'allevolie',
-    en: ['at random'],
-    gr: ['adv'],
-    tr: ['alevoly', 'alevolie'],
+    en: 'at random',
+    gr: 'adv',
+    tr: ['alevoly', 'alevolie', 'random'],
+    hl: ['alevoly', 'alevolie'],
     or: 'see the adj'
 }, {
     sc: 'awmaist',
@@ -463,7 +464,7 @@ G.dict.push({ // A
     en: [
         ['normally', 'usually']
     ],
-    tr: 'ordinarily',
+    tr: ['ordinarily', 'uisually'],
     gr: 'adv',
     or: 'see n <em>ordinar</em>'
 }, {
@@ -471,7 +472,7 @@ G.dict.push({ // A
     en: [
         ['usually', 'in the usual way', 'somewhat', 'to a certain extent']
     ],
-    tr: 'ordinarily',
+    tr: ['ordinarily', 'uisually'],
     gr: 'adv',
     or: 'see the adj'
 }, {

@@ -2,6 +2,12 @@ ErrorDocument 403 "Error 403"
 ErrorDocument 404 "Error 404"
 ErrorDocument 500 "Error 500"
 
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.dev\.scots\.app$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "https\:\/\/dev\.scots\.app\/" [R=302,L]
+
 # Rewrite path to query string
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f

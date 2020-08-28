@@ -13,8 +13,7 @@ const GLOSSAR = (function () {
         threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
         extended_cmd: '^', // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
         lug: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 -0.3 24 22" stroke-width="1.8" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round" height="19" width="20"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3  a4.5 4.5 0 0 1 -6.8 1.4"></path><path d="M10 10a3 3 0 1 1 5 2.2"></path></svg>', // Credit: Paweł Kuna (@codecalm; tablericons.com)
-        warning: '<svg class="block" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ff0002" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>',
-        user_query_path: 'q' // Used in history management and accessing results via URL. E.g. https://scots.app/<user_query_path>/muckle
+        warning: '<svg class="block" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ff0002" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>'
     };
     const state = {
         word: '', // Value of search text box
@@ -22,12 +21,12 @@ const GLOSSAR = (function () {
         last_word_searched_for: '', // Set (post-search) by print() so we can check whether the input has changed on keyup
         query: '', // The query we're passing to Fuse.js
         timeout: null,
-        highlight: 0, // True if at least one word is highlighted in results set
+        highlight: 0, // Truthy if at least one word is highlighted in results set
         random: [], // Indices of which random entries have already been selected
         audio: null,
+        title: document.title, // Change page title so the search for words are in the user's browser history
         audio_button: null,
-        initial_path: location.pathname,
-        popstate: false // User navigates history
+        bypass_history_push: false // Flag. When user navigates history we don't want to call historyPush() to add in item to the history. See popstate listener
     };
 
     let fuse;
@@ -86,21 +85,39 @@ const GLOSSAR = (function () {
 
         checkForUpdate();
 
-        // Check for value on page load (after back button having navigated away from the app, or via the not-yet-implemented GET variable). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
-        setTimeout(function () {
-            const val = document.getElementById('searchTextbox').value.trim();
-            // const path = val.length ? `${state.initial_path}${cfg.user_query_path}/${val.toLowerCase()}` : '';
+        // Check for value on page load (after back button having navigated away from the app). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
+        // setTimeout(function () {
+        //     const val = document.getElementById('searchTextbox').value.trim();
+        //     // const path = val.length ? `${state.initial_path}${cfg.user_query_path}/${val.toLowerCase()}` : '';
 
-            // updateHistory(val.toLowerCase(), val, path);
+        //     // historyPush(val.toLowerCase(), val, path);
 
-            if (val.trim().length)
-                searchInit();
-        }, 150);
+        //     if (val.trim().length)
+        //         searchInit();
+        // }, 150);
 
         addListeners();
 
+        const word = checkPath(); // Has the user landed on the app with a word in the URL?
+
+        if (word) {
+            document.getElementById('searchTextbox').value = word;
+            state.bypass_history_push = true;
+            searchInit();
+        }
+
         if ('ontouchstart' in window === false)
             document.getElementById('searchTextbox').focus();
+    }
+
+    // Returns any word in URL path
+    function checkPath() {
+        const path = location.pathname.split('/');
+        const q = path[1] && path[1] === 'q' ? path[1] : null; // scots.app/q
+        const word = path[2] && path[2].length ? path[2] : null; // scots.app/q/<word>
+
+        if (q && word)
+            return decodeURIComponent(word);
     }
 
     function addListeners() {
@@ -148,9 +165,9 @@ const GLOSSAR = (function () {
             // (We don't need to do variant check here because it's not based on user input)
             if (state.word.length < cfg.threshold_exact_match) {
                 state.query = `=${state.word}`;
-            } else {
+            } else
                 state.query = cfg.extended_cmd + state.word;
-            }
+
             print(fuse.search(state.query), function () {
                 state.random.push(num);
                 btn.disabled = false;
@@ -169,27 +186,22 @@ const GLOSSAR = (function () {
             btn.disabled = true;
             results.classList.remove('show');
 
-            setTimeout(function () {
-                results.innerHTML = '';
-                state.last_word_searched_for = '';
-                if (!state.popstate) {
-                    updateHistory('', '', state.initial_path);
-                } else {
-                    state.popstate = false;
-                }
-            }, 250);
+            document.title = state.title;
 
-            // Cancel any timeout
+            setTimeout(reset, 250);
+
+            // Cancel any state-level timeout
             if (state.timeout) {
                 clearTimeout(state.timeout);
             }
         });
 
         // User navigates history
-        window.addEventListener('popstate', function (event) {
-            state.popstate = true;
-            let search_box = document.getElementById('searchTextbox');
-            search_box.value = event.state ? event.state.user_query : ''; // Blank string required for when user navigates all the way back to an initally loaded (empty) screen
+        window.addEventListener('popstate', function () {
+            const search_box = document.getElementById('searchTextbox');
+            const word = checkPath(); // The word is normally available in 'state' property of the object that's returned to this callback function, but not when you navigate to the initially loaded state where the user has accessed the app via a URL with a word in the path. So here we get if from the URL path
+            search_box.value = word ? word : ''; // Empty string for when user navigates all the way back to an initally loaded screen state that doesn't have a word in the URL path
+            state.bypass_history_push = true;
             search_box.dispatchEvent(new Event('keyup'));
         });
 
@@ -236,7 +248,19 @@ const GLOSSAR = (function () {
         console.log(state);
     }
 
-    function updateHistory(state, title, path) {
+    function reset() {
+        document.getElementById('results').innerHTML = '';
+        document.title = state.title;
+        state.last_word_searched_for = '';
+        if (!state.bypass_history_push) {
+            historyPush('', '', '/');
+        } else
+            state.bypass_history_push = false;
+    }
+
+    // Add state to browser history
+    function historyPush(state, title, path) {
+        console.log('historyPush()');
         history.pushState({ user_query: state }, title, path);
     }
 
@@ -252,8 +276,6 @@ const GLOSSAR = (function () {
                 state.audio.stop();
             }
 
-            let results = document.getElementById('results');
-
             if (state.word.length) {
 
                 if (state.word.length < cfg.threshold_exact_match && state.word.length < cfg.threshold_variants) {
@@ -265,21 +287,13 @@ const GLOSSAR = (function () {
                     state.query = processVariants(state.word, cfg.variants, ''); // Multi-word search, passing in empty string so Fuse looks anywhere in the string
                 } else if (state.word.length >= cfg.threshold_variants) {
                     state.query = processVariants(state.word, cfg.variants); // Search at start of word ('^'), the default
-                } else {
+                } else
                     state.query = cfg.extended_cmd + state.word; // Search at start of word ('^'), but without looking for variants
-                }
 
                 print(fuse.search(state.query));
-                state.popstate = false;
-            } else {
-                results.innerHTML = '';
-                state.last_word_searched_for = '';
-                if (!state.popstate) {
-                    updateHistory('', '', state.initial_path);
-                } else {
-                    state.popstate = false;
-                }
-            }
+                state.bypass_history_push = false;
+            } else
+                reset();
         }
 
         state.word = G.utils.replaceQo( // Replace ‘ and ’ with '
@@ -296,7 +310,7 @@ const GLOSSAR = (function () {
         } else
             clear.disabled = true;
 
-        if (e && e.code === 'Enter' || state.popstate || !state.word.length) { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout. Also run goSearch() if the user has moved a step in the history or there is no value in the search field
+        if (e && e.code === 'Enter' || state.bypass_history_push || !state.word.length) { // 'Enter' key should allow user to do the search right away, and not wait for the performance-enhancing timeout. Also run goSearch() if the user has moved a step in the history or there is no value in the search field
             goSearch();
         } else
             timeoutStart(goSearch);
@@ -462,9 +476,8 @@ const GLOSSAR = (function () {
                 if (pl_arr.length) {
                     if (item.pl && item.pl.hl) { // Highlighting override words
                         pl_arr = pl_arr.concat(item.pl.hl);
-                    } else if (item.pl && item.pl.tr) { // Standard triggers
+                    } else if (item.pl && item.pl.tr) // Standard triggers
                         pl_arr = pl_arr.concat(item.pl.tr);
-                    }
                 }
 
                 // Past tense
@@ -473,9 +486,8 @@ const GLOSSAR = (function () {
                 if (pt_arr.length) {
                     if (item.pt && item.pt.hl) {
                         pt_arr = pt_arr.concat(item.pt.hl);
-                    } else if (item.pt && item.pt.tr) {
+                    } else if (item.pt && item.pt.tr)
                         pt_arr = pt_arr.concat(item.pt.tr);
-                    }
                 }
 
                 // Past participle
@@ -484,9 +496,8 @@ const GLOSSAR = (function () {
                 if (pp_arr.length) {
                     if (item.pp && item.pp.hl) {
                         pp_arr = pp_arr.concat(item.pp.hl);
-                    } else if (item.pp && item.pp.tr) {
+                    } else if (item.pp && item.pp.tr)
                         pp_arr = pp_arr.concat(item.pp.tr);
-                    }
                 }
 
                 // Where Scots past tense and past participles are the same
@@ -495,9 +506,8 @@ const GLOSSAR = (function () {
                 if (pt_pp_arr.length) {
                     if (item.pt_pp && item.pt_pp.hl) {
                         pt_pp_arr = pt_pp_arr.concat(item.pt_pp.hl);
-                    } else if (item.pt_pp && item.pt_pp.tr) {
+                    } else if (item.pt_pp && item.pt_pp.tr)
                         pt_pp_arr = pt_pp_arr.concat(item.pt_pp.tr);
-                    }
                 }
 
                 // (Modal) verb negative
@@ -506,9 +516,8 @@ const GLOSSAR = (function () {
                 if (neg_arr.length) {
                     if (item.neg && item.neg.hl) {
                         neg_arr = neg_arr.concat(item.neg.hl);
-                    } else if (item.neg && item.neg.tr) {
+                    } else if (item.neg && item.neg.tr)
                         neg_arr = neg_arr.concat(item.neg.tr);
-                    }
                 }
 
                 let hl_all;
@@ -516,9 +525,9 @@ const GLOSSAR = (function () {
                     hl_all = [].concat(item.hl);
                 } else if (item.tr) { // Standard triggers
                     hl_all = [].concat(item.tr);
-                } else { // No triggers of any kind
+                } else // No triggers of any kind
                     hl_all = [];
-                }
+
                 // Add any alternative Scots words which should trigger highlighting
                 if (hl_sc_alt.length) {
                     hl_all = hl_all.concat(hl_sc_alt);
@@ -531,9 +540,8 @@ const GLOSSAR = (function () {
                 let hl;
                 if (hl_all.length) {
                     hl = ' data-hl="' + hl_all.filter(G.utils.onlyUnique).join(',') + '"';
-                } else {
+                } else
                     hl = ''; // No trigger words
-                }
 
                 audio_pl = item.pl && item.pl.au ? `<span class="audio">${addAudio(item.pl.au)}</span>` : ''; // Audio (plural)
 
@@ -619,14 +627,14 @@ const GLOSSAR = (function () {
                 }
             });
 
-        } else { // !r.length (initial results)
+        } else // !r.length (initial results)
             noResults();
-        }
 
+        document.title = `${state.title}: ${state.word}`;
         state.last_word_searched_for = state.word_lc;
 
-        if (!state.popstate)
-            updateHistory(state.word_lc, state.word, `${state.initial_path}${cfg.user_query_path}/${state.word_lc}`);
+        if (!state.bypass_history_push)
+            historyPush(state.word_lc, state.word, `/q/${state.word_lc}`);
     }
 
     function formatOrigin(obj) {
@@ -636,17 +644,15 @@ const GLOSSAR = (function () {
         origin.forEach(item => {
             if (item.join) { // If an array
                 ul.push(`${item[0]} <span>${item[1]}</span>`);
-            } else { // If a string
+            } else // If a string
                 ul.push(item);
-            }
         });
 
         if (ul.length > 1) { // There are multiple (possible) origins
 
             return '<div class="or-container">Origin: <ul class="or"><li class="list-inline-item">' + ul.join('<i>;</i> </li><li class="list-inline-item">') + '</li></ul></div>';
-        } else { // If there is just one origin
+        } else // If there is just one origin
             return `<div class="or-container">Origin: ${ul[0]}</div>`;
-        }
     }
 
     /**
@@ -663,9 +669,8 @@ const GLOSSAR = (function () {
                 [].concat(item).forEach(item => {
                     if (item.indexOf(', ') > -1) { // If multiple 'synomyms'
                         words = words.concat(item.split(', ')); // Split any 'synomym' meanings and add to 'words' array
-                    } else {
+                    } else
                         words = words.concat(item); // Add array to the 'words' array
-                    }
                 });
             });
         } else { // Result is single string
@@ -696,16 +701,14 @@ const GLOSSAR = (function () {
                 ol.push(item.join(`${separator} `)); // Join array items into a single string
             } else if (item) { // If a string
                 ol.push(item);
-            } else {
+            } else
                 console.warn(item, items);
-            }
         });
 
         if (ol.length > 1) { // There are multiple meanings
             return `<ol class="${cl}"><li>${ol.join('</li><li>')}</li></ol>`;
-        } else { // If there is just one meaning
+        } else // If there is just one meaning
             return `<div class="${cl}">${ol[0]}</div>`;
-        }
     }
 
     function highlight(r, callback) {
@@ -727,9 +730,8 @@ const GLOSSAR = (function () {
                     if (cmd.length) { // If there is unix-style command leading character
                         q = q.slice(cmd.length, q.length + 1); // Remove it
                     }
-                } else {
+                } else
                     cmd = '';
-                }
 
                 return q.split('|' + cmd);
             }
@@ -748,11 +750,10 @@ const GLOSSAR = (function () {
                     (other && other.indexOf(state.word_lc) > -1) // Other values which should trigger highlighting
                 ) {
                     el.classList.add('hl');
-                    state.highlight = state.highlight + 1;
+                    state.highlight++;
                     return false; // Exit loop
-                } else if (!word) {
+                } else if (!word)
                     console.warn(word);
-                }
             });
         }
 
@@ -877,10 +878,9 @@ const GLOSSAR = (function () {
 
         if (!state.timeout) { // If there is no timeout currently running
             start();
-        } else { // If there's a timeout in place already
+        } else // If there's a timeout in place already
             clearTimeout(state.timeout); // Cancel timeout
             start(); // Start a new one
-        }
     }
 
     return {
