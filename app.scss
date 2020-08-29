@@ -31,6 +31,10 @@ svg.block {
     font-weight: 600;
 }
 
+.hide {
+    display: none !important;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -105,12 +109,6 @@ header {
     line-height: 20px;
     /* Vertically center the text there */
     background-color: inherit;
-
-    @media (min-width: 576px) {
-        font-size: 0.85rem;
-        line-height: 1.7;
-        padding: 17px 0;
-    }
 }
 
 a:focus,
@@ -136,12 +134,8 @@ ul {
 }
 
 #results {
-    padding-bottom: 1.1rem;
+    padding-bottom: 0.4rem;
     padding-top: 1.8rem;
-
-    @media (min-width: 576px) {
-        padding-bottom: 1.8rem;
-    }
 
     a {
         color: inherit;
@@ -593,6 +587,10 @@ button {
     &:disabled {
         color: inherit !important;
         opacity: 0.75 !important;
+    }
+
+    &#btn-copy {
+        margin-bottom: 2rem;
     }
 
     &#clear-value {

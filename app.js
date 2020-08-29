@@ -13,7 +13,8 @@ const GLOSSAR = (function () {
         threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
         extended_cmd: '^', // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
         lug: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 -0.3 24 22" stroke-width="1.8" stroke="#212529" fill="none" stroke-linecap="round" stroke-linejoin="round" height="19" width="20"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3  a4.5 4.5 0 0 1 -6.8 1.4"></path><path d="M10 10a3 3 0 1 1 5 2.2"></path></svg>', // Credit: Paweł Kuna (@codecalm; tablericons.com)
-        warning: '<svg class="block" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ff0002" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>'
+        warning: '<svg class="block" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ff0002" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>',
+        btn_copy_after_text: 'That’s the URL copied tae the clipbuird'
     };
     const state = {
         word: '', // Value of search text box
@@ -28,8 +29,9 @@ const GLOSSAR = (function () {
         audio_button: null,
         bypass_history_push: false, // Flag. When user navigates history we don't want to call historyPush() to add in item to the history. See popstate listener
         last_successful_search: '', // Helps with managing navigation through history
-        nae_results: false // Flag set to true when no results are returned
+        nae_results: false, // Flag set to true when no results are returned
         // last_unsuccessful_user_query: '' // Value of user's search. Populated when there are no results
+        btn_copy_initial_text: document.getElementById('btn-copy').innerText
     };
 
     let fuse;
@@ -177,7 +179,7 @@ const GLOSSAR = (function () {
             });
         });
 
-        document.getElementById('clear-value').addEventListener('click', function (e) {
+        document.getElementById('clear-value').addEventListener('click', function () {
 
             let btn = this;
             let input = document.getElementById('searchTextbox');
@@ -191,12 +193,23 @@ const GLOSSAR = (function () {
 
             document.title = state.title;
 
+            hideCopyButton();
             setTimeout(reset, 250);
 
             // Cancel any state-level timeout
             if (state.timeout) {
                 clearTimeout(state.timeout);
             }
+        });
+
+        document.getElementById('btn-copy').addEventListener('click', function () {
+            const field = document.getElementById('field-copy');
+            field.value = document.location.href;
+            field.select();
+            document.execCommand('Copy');
+
+            this.innerText = cfg.btn_copy_after_text;
+            this.focus();
         });
 
         // User navigates history
@@ -207,7 +220,7 @@ const GLOSSAR = (function () {
 
             if (!state.nae_results)
                 state.bypass_history_push = true;
-                
+
             search_box.dispatchEvent(new Event('keyup'));
         });
 
@@ -300,8 +313,11 @@ const GLOSSAR = (function () {
 
                 print(fuse.search(state.query));
                 state.bypass_history_push = false;
-            } else
+
+            } else {
+                hideCopyButton();
                 reset();
+            }
         }
 
         state.word = G.utils.replaceQo( // Replace ‘ and ’ with '
@@ -310,7 +326,6 @@ const GLOSSAR = (function () {
         state.word_lc = state.word.toLowerCase();
 
         const clear = document.getElementById('clear-value');
-
         clear.classList.add('show');
 
         if (field.value.length) {
@@ -638,6 +653,7 @@ const GLOSSAR = (function () {
 
             document.title = `${state.title}: ${state.word}`;
             state.last_successful_search = state.word;
+            showCopyButton();
 
             if (!state.bypass_history_push)
                 historyPush(state.word_lc, state.word, `/q/${state.word_lc}`);
@@ -646,6 +662,18 @@ const GLOSSAR = (function () {
             noResults();
 
         state.last_word_searched_for = state.word_lc;
+    }
+
+    function showCopyButton() {
+        const btn_copy = document.getElementById('btn-copy');
+        btn_copy.classList.add('show');
+        btn_copy.classList.remove('hide');
+        btn_copy.innerText = state.btn_copy_initial_text;
+    }
+    function hideCopyButton() {
+        const btn_copy = document.getElementById('btn-copy');
+        btn_copy.classList.remove('show');
+        btn_copy.classList.add('hide');
     }
 
     function formatOrigin(obj) {
