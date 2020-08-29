@@ -26,7 +26,10 @@ const GLOSSAR = (function () {
         audio: null,
         title: document.title, // Change page title so the search for words are in the user's browser history
         audio_button: null,
-        bypass_history_push: false // Flag. When user navigates history we don't want to call historyPush() to add in item to the history. See popstate listener
+        bypass_history_push: false, // Flag. When user navigates history we don't want to call historyPush() to add in item to the history. See popstate listener
+        last_successful_search: '', // Helps with managing navigation through history
+        nae_results: false // Flag set to true when no results are returned
+        // last_unsuccessful_user_query: '' // Value of user's search. Populated when there are no results
     };
 
     let fuse;
@@ -197,11 +200,14 @@ const GLOSSAR = (function () {
         });
 
         // User navigates history
-        window.addEventListener('popstate', function () {
+        window.addEventListener('popstate', function (e) {
             const search_box = document.getElementById('searchTextbox');
-            const word = checkPath(); // The word is normally available in 'state' property of the object that's returned to this callback function, but not when you navigate to the initially loaded state where the user has accessed the app via a URL with a word in the path. So here we get if from the URL path
+            const word = state.nae_results ? state.last_successful_search : checkPath(); // The word is normally available in 'state' property of the object that's returned to this callback function, but not when you navigate to the initially loaded state where the user has accessed the app via a URL with a word in the path. So here we get if from the URL path
             search_box.value = word ? word : ''; // Empty string for when user navigates all the way back to an initally loaded screen state that doesn't have a word in the URL path
-            state.bypass_history_push = true;
+
+            if (!state.nae_results)
+                state.bypass_history_push = true;
+                
             search_box.dispatchEvent(new Event('keyup'));
         });
 
@@ -278,6 +284,8 @@ const GLOSSAR = (function () {
 
             if (state.word.length) {
 
+                state.nae_results = false; // Reset flag
+
                 if (state.word.length < cfg.threshold_exact_match && state.word.length < cfg.threshold_variants) {
                     state.query = `=${state.word}`; // Exact match
                 } else if (state.word.length < cfg.threshold_exact_match &&
@@ -347,6 +355,7 @@ const GLOSSAR = (function () {
         const results = document.getElementById('results');
         results.innerHTML = `<div class="text-center no-results">Sorry, the’r nae results for <strong>${state.word}</strong></div>`;
         results.classList.add('show');
+        state.nae_results = true;
     }
 
     /**
@@ -627,14 +636,16 @@ const GLOSSAR = (function () {
                 }
             });
 
+            document.title = `${state.title}: ${state.word}`;
+            state.last_successful_search = state.word;
+
+            if (!state.bypass_history_push)
+                historyPush(state.word_lc, state.word, `/q/${state.word_lc}`);
+
         } else // !r.length (initial results)
             noResults();
 
-        document.title = `${state.title}: ${state.word}`;
         state.last_word_searched_for = state.word_lc;
-
-        if (!state.bypass_history_push)
-            historyPush(state.word_lc, state.word, `/q/${state.word_lc}`);
     }
 
     function formatOrigin(obj) {
@@ -880,7 +891,7 @@ const GLOSSAR = (function () {
             start();
         } else // If there's a timeout in place already
             clearTimeout(state.timeout); // Cancel timeout
-            start(); // Start a new one
+        start(); // Start a new one
     }
 
     return {
