@@ -1392,7 +1392,7 @@ G.dict.push({
     tr: G.v.ken_knaw.trigs,
     hl: 'ken',
     gr: 'v',
-    ex: [G.ex.h, G.ex.c]
+    ex: [G.ex.h, G.ex.c, G.ex.b]
 }, {
     sc: ['kent', 'kenned'],
     en: 'knew',
@@ -1424,7 +1424,6 @@ G.dict.push({
         tr: 'known'
     },
     tr: G.v.ken_knaw.trigs,
-    ex: G.ex.b,
     hl: 'knaw',
     gr: 'v'
 }, { // L

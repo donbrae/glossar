@@ -103,7 +103,7 @@ header {
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 8px 0;
+    padding: 0.6rem 0 1rem 0;
     font-size: 0.8rem;
     /* Set the fixed height of the footer here */
     line-height: 20px;
@@ -590,7 +590,7 @@ button {
     }
 
     &#btn-copy {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     &#clear-value {

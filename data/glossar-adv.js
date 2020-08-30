@@ -673,7 +673,7 @@ G.dict.push({ // A
     sc: 'up the stair',
     en: 'upstairs',
     gr: 'phrasal adv',
-    ex: ['Awa up the stair an hae a leuk', 'My neebour up the stair telt me']
+    ex: ['Awa up the stair and hae a leuk', 'My neebour up the stair telt me']
 }, {
     sc: ['whan', 'fan'],
     pr: ['whan', 'whaun', 'whin', 'fan', 'fin', 'aan'],
