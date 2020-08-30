@@ -605,7 +605,7 @@ button {
 
         &:focus {
             svg {
-                outline: 1px solid #212529;
+                outline: 1px dotted #212529;
                 outline-offset: 0.1rem;
             }
         }

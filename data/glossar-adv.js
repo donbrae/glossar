@@ -59,10 +59,10 @@ G.dict.push({ // A
     au: 'aft-times'
 }, {
     sc: 'allevolie',
-    en: 'at random',
+    en: 'randomly',
     gr: 'adv',
-    tr: ['alevoly', 'alevolie', 'random'],
-    hl: ['alevoly', 'alevolie'],
+    tr: ['alevoly', 'alevolie', 'random', 'at random', 'arbitrary', 'arbitrarily'],
+    hl: ['alevoly', 'alevolie', 'arbitrarily', 'at random'],
     or: 'see the adj'
 }, {
     sc: 'awmaist',

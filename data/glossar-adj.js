@@ -522,6 +522,12 @@ G.dict.push({ // A
         [G.notes.or.xx, 'hāl']
     ]
 }, {
+    sc: 'heidmaist',
+    en: [
+        ['topmost', 'chief', 'primary']
+    ],
+    gr: 'adj'
+}, {
     sc: 'het',
     pr: ['heht', 'hait'],
     en: [

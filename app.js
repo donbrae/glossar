@@ -25,10 +25,11 @@ const GLOSSAR = (function () {
         highlight: 0, // Truthy if at least one word is highlighted in results set
         random: [], // Indices of which random entries have already been selected
         audio: null,
-        title: document.title, // Change page title so the search for words are in the user's browser history
+        results_length: 0, // How many results are returned by user query
+        title: document.title.split(': ')[1] ? document.title.split(': ')[0] : document.title, // Change page title so searches are in the user's browser history. state.title is the default title, without a trailing ": <user_query>" (which will be present if a user navigates directly to a query URL, e.g. https://scots.app/muckle)
         audio_button: null,
         bypass_history_push: false, // Flag. When user navigates history we don't want to call historyPush() to add in item to the history. See popstate listener
-        btn_copy_initial_text: document.getElementById('btn-copy').innerText
+        btn_copy_initial_html: document.getElementById('btn-copy').innerHTML
     };
 
     let fuse;
@@ -207,7 +208,7 @@ const GLOSSAR = (function () {
             field.select();
             document.execCommand('Copy');
 
-            this.innerText = cfg.btn_copy_after_text;
+            this.innerHTML = cfg.btn_copy_after_text;
             this.focus();
         });
 
@@ -266,6 +267,7 @@ const GLOSSAR = (function () {
 
     function reset() {
         document.getElementById('results').innerHTML = '';
+        state.results_length = 0;
         document.title = state.title;
         state.last_word_searched_for = '';
         if (!state.bypass_history_push && !state.nae_results) {
@@ -605,6 +607,8 @@ const GLOSSAR = (function () {
                 </dl>`;
             });
 
+            state.results_length = results.length;
+
             hasHighlightedElement = (parent, find) => {
                 let highlighted = false;
                 const children = parent.querySelectorAll(find);
@@ -667,15 +671,24 @@ const GLOSSAR = (function () {
     }
 
     function showCopyButton() {
-        const btn_copy = document.getElementById('btn-copy');
-        btn_copy.classList.add('show');
-        btn_copy.classList.remove('hide');
-        btn_copy.innerText = state.btn_copy_initial_text;
+        const btn = document.getElementById('btn-copy');
+        btn.innerHTML = state.btn_copy_initial_html;
+        const btn_span = btn.querySelector('span'); // Optional values for single and multiple results
+        const btn_options = btn_span ? btn_span.innerText.split('|') : null; // Get the options
+
+        if (btn_options && state.results_length > 1) { // Multiple results
+            btn_span.innerHTML = btn_options[1];
+        } else if (btn_options && state.results_length === 1) // Single result
+            btn_span.innerHTML = btn_options[0];
+
+        btn.classList.add('show');
+        btn.classList.remove('hide');
     }
+
     function hideCopyButton() {
-        const btn_copy = document.getElementById('btn-copy');
-        btn_copy.classList.remove('show');
-        btn_copy.classList.add('hide');
+        const btn = document.getElementById('btn-copy');
+        btn.classList.remove('show');
+        btn.classList.add('hide');
     }
 
     function formatOrigin(obj) {

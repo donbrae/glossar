@@ -59,7 +59,29 @@
         <p>The <a href="http://media.scotslanguage.com/library/document/SLC%20Analysis%20of%20Census%202011%20for%20Scots.pdf">2011 official census</a> shawed that it’s spoken by ower 1.5 million fowk (30 per cent o the population). The language haes a lang history gaun back hunners o years, and wis at ae time the <a href="https://www.makforrit.scot/2019/02/08/fechts-furnication-an-sclander">official leid o record</a>.</p>
 
         <p><a href="https://dsl.ac.uk/about-scots">Ye can read mair aboot Scots here</a>.</p>
+        
+        <!--
+        <h3>Soorces (incomplete)</h3>
 
+        <ul>
+            <li>Scots speakers</li>
+            <li>Facebook <a href="https://www.facebook.com/groups/126242628908">Scots Language Forum</a></li>
+            <li>’E Scots Leed Discord server</li>
+            <li><a href="https://dsl.ac.uk">Dictionar o the Scots Leid (DSL)</a></li>
+            <li><a href="https://dsl.ac.uk/our-publications/concise-scots-dictionary/">Concise Scots Dictionary (CSD)</a> (2nt edition, 2017): the maist up-tae-date and authoritative soorce for etymology</li>
+            <li><a href="https://www.scots-online.org/mobile/dictionary/">Scots Online Dictionary</a></li>
+            <li><a href="https://www.scotslanguage.com">Centre for the Scots Leid</a></li>
+            <li><a href="http://www.cs.stir.ac.uk/~kjt/general/scots.html">Scots Tongue</a> (Stirlin Uni) [<a href="http://archive.is/fgSD3">archive.is doobel</a>]</li>
+            <li><a href="https://www.scotslanguage.com/Scots_Culture/Names_in_Scots/Names_in_Scots_-_countries_abroad">Names in Scots - kintras ootland</a> (Centre for the Scots Leid) [<a href="https://archive.is/9QoGP">archive.is doobel</a>]</li>
+            <li><a href="https://www.britishnewspaperarchive.co.uk/search/results?retrievecountrycounts=false&sortorder=dayearly&country=scotland">British Newspaper Archive</a> (Scottish newspapers)</li>
+            <li><a href="https://digital.nls.uk/publications-by-scottish-clubs/archive/84240604">Publications by Scottish clubs</a> (National Library o Scotland archives)</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        -->
+        
         <p><a href="./">← Gae back hame</a>.</p>
     </main>
 
