@@ -464,6 +464,8 @@ button.btn-link-gray:focus {
     .btn {
         background: none;
         transition: none;
+        vertical-align: middle;
+        display: inline-flex;
 
         &:focus {
             box-shadow: none;
@@ -583,12 +585,12 @@ button {
 
     &.play-audio {
         padding: 0;
-        border: 1px solid #212529;
-        position: relative;
+        // border: 1px solid #212529;
+        // position: relative;
         margin-right: 0.24rem;
-        top: -0.05rem;
-        line-height: 1;
-        background-color: #c9e1f7 !important;
+        // top: -0.05rem;
+        // line-height: 1;
+        // background-color: #c9e1f7 !important;
     }
 
     &:disabled {
