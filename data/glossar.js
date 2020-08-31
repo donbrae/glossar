@@ -108,11 +108,11 @@ G.dict = [{
         [G.notes.or.ae, 'on efen']
     ],
     ex: [G.ex.q, G.ex.o]
-    }, {
-        sc: 'as',
-        en: 'than',
-        ex: ['Ye ken better as that', 'I’ll need tae pack mair as that if I’m gaun for the week'],
-    }, { // B
+}, {
+    sc: 'as',
+    en: 'than',
+    ex: ['Ye ken better as that', 'I’ll need tae pack mair as that if I’m gaun for the week'],
+}, { // B
     sc: 'ben',
     en: 'through the house, towards the inner part',
     gr: 'prep',
@@ -120,7 +120,7 @@ G.dict = [{
         [G.notes.or.as, 'ben(n), bene'],
         [G.notes.or.ae, 'binnan']
     ],
-        ex: [G.ex.l1, 'Ye can only win ben a Discord server by gate o an invite URL']
+    ex: [G.ex.l1, 'Ye can only win ben a Discord server by gate o an invite URL']
 }, {
     sc: 'binna',
     en: 'don\'t be',
@@ -358,18 +358,27 @@ G.dict = [{
         [G.notes.or.me, 'nor']
     ]
 }, {
+    sc: 'nowithstaundin',
+    en: 'notwithstanding',
+    tr: 'nowithstanding',
+    gr: 'prep',
+    or: [
+        [G.notes.or.as, 'nochtwithstanding, nowithstanding']
+    ]
+}, {
     sc: 'ane',
     pr: ['ane', 'een', 'yin', 'wan'],
     en: 'one',
     gr: 'cardinal nummer',
-    tr: ['ae', 'ain', 'ann', 'yae', 'yay'],
-    hl: ['ane', 'ain', 'yin', 'wan', 'een', 'ann'],
+    tr: ['1', 'ae', 'ain', 'ann', 'yae', 'yay'],
+    hl: ['1', 'ane', 'ain', 'yin', 'wan', 'een', 'ann'],
     inf: '<span>Ane</span> is aften uised the day as an adjective (as weel as bein the cardinal nummer <span>ane</span>), whauras in traditional spoken Modren Scots ye’r mair likely tae hear <span>ae</span> (also pronounced ‘yae’) as the adjective. <span>Ane</span> wis typically the written adjective in Aulder Scots'
 }, {
     sc: 'twa',
     pr: ['twah', 'twae'],
     en: 'two',
-    gr: ['cardinal nummer', 'adj'],
+    tr: '2',
+    gr: 'cardinal nummer',
     or: [
         [G.notes.or.as, 'twa, tua, twae'],
         [G.notes.or.ae, 'twā']
@@ -377,60 +386,82 @@ G.dict = [{
 }, {
     sc: 'three',
     en: 'three',
-    gr: ['cardinal nummer', 'adj']
+    tr: '3',
+    gr: 'cardinal nummer'
 }, {
     sc: 'fower',
     en: 'four',
-    gr: ['cardinal nummer', 'adj']
+    tr: '4',
+    gr: 'cardinal nummer'
 }, {
     sc: 'five',
     en: 'five',
-    gr: ['cardinal nummer', 'adj']
+    tr: '5',
+    gr: 'cardinal nummer'
 }, {
     sc: 'sax',
     en: 'six',
-    gr: ['cardinal nummer', 'adj']
+    tr: '6',
+    gr: 'cardinal nummer'
 }, {
     sc: 'seiven',
     en: 'seven',
-    gr: ['cardinal nummer', 'adj']
+    tr: '7',
+    gr: 'cardinal nummer'
 }, {
     sc: 'echt',
     en: 'eight',
-    gr: ['cardinal nummer', 'adj']
+    tr: '8',
+    gr: 'cardinal nummer'
 }, {
     sc: 'nine',
     en: 'nine',
-    gr: ['cardinal nummer', 'adj']
+    tr: '9',
+    gr: 'cardinal nummer'
 }, {
     sc: 'ten',
     en: 'ten',
-    gr: ['cardinal nummer', 'adj']
+    tr: '10',
+    gr: 'cardinal nummer'
 }, {
     sc: 'eleiven',
     en: 'eleven',
-    gr: ['cardinal nummer', 'adj']
+    tr: '11',
+    gr: 'cardinal nummer'
 }, {
     sc: 'twal',
     en: 'twelve',
-    gr: ['cardinal nummer', 'adj']
+    tr: '12',
+    gr: 'cardinal nummer'
 }, {
     sc: 'thirteen',
     en: 'thirteen',
-    gr: ['cardinal nummer', 'adj']
+    tr: '13',
+    gr: 'cardinal nummer'
 }, {
     sc: 'fowerteen',
     en: 'fourteen',
-    gr: ['cardinal nummer', 'adj'],
+    tr: '14',
+    gr: 'cardinal nummer',
     au: ['fowerteen', 'fowerteen1']
 }, {
     sc: 'fifteen',
     en: 'fifteen',
-    gr: ['cardinal nummer', 'adj']
+    tr: '15',
+    gr: 'cardinal nummer'
 }, {
     sc: 'saxteen',
     en: 'sixteen',
-    gr: ['cardinal nummer', 'adj']
+    tr: '16',
+    gr: 'cardinal nummer'
+}, {
+    sc: ['hunner', 'hunder'],
+    en: 'hundred',
+    tr: '100',
+    gr: 'cardinal nummer',
+    or: [
+        [G.notes.or.as, 'hunder, hundir, hunir'],
+    ]
 }, {
     sc: 'ony',
     en: [

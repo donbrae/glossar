@@ -203,13 +203,32 @@ const GLOSSAR = (function () {
         });
 
         document.getElementById('btn-copy').addEventListener('click', function () {
-            const field = document.getElementById('field-copy');
+
+            // Create text field with value of current URL
+            const field = document.createElement('input');
+            field.id = 'field-copy';
+            field.style.position = 'absolute';
+            field.style.marginLeft = '-9999px';
+            document.body.appendChild(field);
             field.value = document.location.href;
+
+            // Select and copy field value to clipboard
             field.select();
             document.execCommand('Copy');
 
+            // Amend copy button (that's just been clicked)
             this.innerHTML = cfg.btn_copy_after_text;
             this.focus();
+
+            document.body.removeChild(field); // Remove field
+
+            // const field = document.getElementById('field-copy');
+            // field.value = document.location.href;
+            // field.select();  
+            // document.execCommand('Copy');
+
+            // this.innerHTML = cfg.btn_copy_after_text;
+            // this.focus();
         });
 
         // User navigates history
@@ -343,7 +362,7 @@ const GLOSSAR = (function () {
     function checkForUpdate() {
 
         const request = new XMLHttpRequest();
-        request.open('GET', './update-check.php?' + new Date().getTime(), true);
+        request.open('GET', '/update-check.php?' + new Date().getTime(), true);
         request.setRequestHeader('Content-type', 'text/plain');
 
         request.onload = function () {

@@ -1006,41 +1006,8 @@ G.dict.push({
     gr: 'third person singular o ' + G.v.gie.meta.gr_hw
 
 },
-    // v gie end
-    {
-        sc: 'compone',
-        pt_pp: {
-            sc: 'componed',
-            tr: ['composed', 'componit', 'compounded', 'combined', 'settled', 'calmed']
-        },
-        en: [
-            ['come to an agreement', 'settle a dispute with payment'],
-            ['compound', 'combine'],
-            'compose in speech or writing',
-            'compound a payment for a certain sum',
-            'compose or calm oneself'
-        ],
-        or: [
-            [G.notes.or.as, 'compone'],
-            [G.notes.or.l, 'compōnere']
-        ],
-        tr: ['compose', 'calm', 'settle'],
-        gr: ['v', 'merkit obsolete in CSD2']
-    }, {
-    sc: 'compone',
-    pt_pp: {
-        sc: 'componed',
-        tr: ['composed', 'componit']
-    },
-    def: 'write or create (a wark o airt, inspecially muisic or poyetry)',
-    tr: ['compose', 'write'],
-    hl: 'compose',
-    gr: ['v'],
-    or: [
-        'pairt archaism, pairt protologism, frae the ' + G.notes.or.as + ' <span>compone</span> ‘tae mak by pittin thegither, tae compose; create in speak or writin.’ Henryson wrate: ‘Of thir sex … fyve hevynly symphonyis Componyt ar,’ whaur <span>symphonyis</span> = ‘a harmonious muisical sound’',
-        [G.notes.or.l, 'compōnere']
-    ]
-}, { // dae
+// v gie end
+{ // dae
     sc: G.v.dae.sc,
     pr: G.v.dae.pr,
     en: G.v.dae.en,
@@ -2065,7 +2032,7 @@ G.dict.push({
         [G.notes.or.as, 'rax, raux, wrax'],
         [G.notes.or.ae, 'raxan']
     ],
-    ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler']
+    ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler', 'I haed tae fair rax my harns tae wirk that oot']
 }, {
     sc: 'redd',
     en: [

@@ -278,6 +278,13 @@ G.dict.push({ // A
         [G.notes.or.as, 'halely, haillely']
     ]
 }, {
+    sc: 'housomiver',
+    en: [
+        ['notwithstanding', 'nevertheless', 'however']
+    ],
+    tr: ['hooiver', 'nowithstanding'],
+    gr: 'adv'
+}, {
     sc: 'atweel',
     en: [
         ['assuredly', 'certainly', 'indeed']

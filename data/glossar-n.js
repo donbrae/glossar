@@ -289,12 +289,6 @@ G.dict.push({
     gr: 'n',
     or: ['unkent, but mak compare wi ' + G.notes.or.af + ' <span>complote</span>, ‘a raivelt thrang o fowk’']
 }, {
-    sc: 'componer',
-    def: 'a body that writes muisic',
-    tr: 'composer',
-    gr: 'n',
-    or: 'see the v <span>tae compone</span>'
-}, {
     sc: 'composition',
     en: [
         ['<span>law</span> a sum paid in settlement of a claim, dispute or obligation; the amount fixed by mutual agreement'],
