@@ -224,7 +224,7 @@ const GLOSSAR = (function () {
 
             // const field = document.getElementById('field-copy');
             // field.value = document.location.href;
-            // field.select();  
+            // field.select();
             // document.execCommand('Copy');
 
             // this.innerHTML = cfg.btn_copy_after_text;
@@ -293,7 +293,7 @@ const GLOSSAR = (function () {
             historyPush('', '', '/');
         } else
             state.bypass_history_push = false;
-            // state.nae_results is reset in goSearch()
+        // state.nae_results is reset in goSearch()
     }
 
     // Add state to browser history
@@ -473,7 +473,7 @@ const GLOSSAR = (function () {
             if (!el) // If an <audio> element for this words has not already be added to DOM
                 document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="/audio/${id.charAt(0)}/${id}.mp3" preload="auto"></audio>`); // Eik audio element
 
-            buttons.push(`<button class="play-audio btn" data-file="${id}">${cfg.lug}</i></button>`); // Eik button 
+            buttons.push(`<button class="play-audio btn" data-file="${id}">${cfg.lug}</i></button>`); // Eik button
         });
 
         return buttons.join('');
@@ -951,9 +951,10 @@ const GLOSSAR = (function () {
 
         if (!state.timeout) { // If there is no timeout currently running
             start();
-        } else // If there's a timeout in place already
+        } else { // If there's a timeout in place already
             clearTimeout(state.timeout); // Cancel timeout
-        start(); // Start a new one
+            start(); // Start a new one
+        }
     }
 
     return {
