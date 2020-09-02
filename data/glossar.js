@@ -88,7 +88,7 @@ G.dict = [{
     gr: 'exclamation',
     au: 'ay'
 }, {
-    sc: 'and',
+    sc: ['an', 'and'],
     pr: 'an',
     tr: 'an',
     en: 'and',
@@ -481,6 +481,15 @@ G.dict = [{
     ],
     au: ['o', 'o1']
 }, {
+    sc: 'och',
+    def: '{{ Exclamation shawin mild irritation or afore sayin sowt reassurin or self-effacin }}',
+    gr: 'exclamation',
+    // or: [
+    //     [G.notes.or.as, ''],
+    //     [G.notes.or.xx, '']
+    // ],
+    ex: ['Och, naw, I dinnae speak muckle German', 'Och, dinnae fash, ye’ll be fine!']
+}, {
     sc: 'onyane',
     en: 'anyone',
     gr: ['pronoon']
@@ -550,11 +559,11 @@ G.dict = [{
     ]
 }, {
     sc: 'the',
-    en: 'the'
+    en: 'the',
+    au: 'the'
 }, {
     sc: ['thare', 'there'],
-    en: 'there',
-    au: 'the'
+    en: 'there'
 }, {
     sc: 'particular',
     pr: ['purTikyulur', 'purTiklur', 'parTeekyulur', 'parTeeklur'],

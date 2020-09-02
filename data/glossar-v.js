@@ -1006,16 +1006,16 @@ G.dict.push({
     gr: 'third person singular o ' + G.v.gie.meta.gr_hw
 
 },
-// v gie end
-{ // dae
-    sc: G.v.dae.sc,
-    pr: G.v.dae.pr,
-    en: G.v.dae.en,
-    tr: [].concat(G.v.dae.tr),
-    gr: 'v',
-    heeze: 'dae',
-    au: 'dae'
-}, { // dae neg
+    // v gie end
+    { // dae
+        sc: G.v.dae.sc,
+        pr: G.v.dae.pr,
+        en: G.v.dae.en,
+        tr: [].concat(G.v.dae.tr),
+        gr: 'v',
+        heeze: 'dae',
+        au: 'dae'
+    }, { // dae neg
     sc: G.v.dae.neg.sc,
     sc_alt: G.v.dae.neg.sc_alt,
     pr: G.v.dae.neg.pr,
@@ -1650,6 +1650,28 @@ G.dict.push({
     ],
     ex: 'I’v fund the new season tae be awfie slaw'
 }, {
+    sc: 'follae',
+    pt_pp: {
+        sc: 'follaed',
+        tr: ['followed', 'copied', 'conformed', 'accompanied', 'escorted']
+    },
+    en: 'follow',
+    tr: ['copy', 'conform', 'imitate', 'accompany', 'escort'],
+    gr: 'v'
+}, {
+    sc: 'foond',
+    pt_pp: {
+        sc: 'foondit',
+        en: 'founded'
+    },
+    def: ['tae steid or stert the biggin o a kirk, tour, toun etc.', 'tae estaiblish, bring intae bein'],
+    tr: ['found', 'estaiblish', 'establish'],
+    gr: 'v',
+    or: [
+        [G.notes.or.as, 'found'],
+        [G.notes.or.af, 'fonder']
+    ]
+}, {
     sc: 'frequent',
     pt_pp: {
         sc: 'frequentit',
@@ -2019,20 +2041,27 @@ G.dict.push({
     au: 'raivel'
 }, {
     sc: 'rax',
-    en: [
-        'stretch', ['make a great effort', 'overexert', 'strain a part of yourself', 'rouse yourself'], 'deal (a person) a blow', ['lengthen by stretching', 'pull out', 'extend something to its full reach or capacity', 'be flexible or accommodating'], 'hang a person', ['reach out or over the hand or arm', 'give a person your hand'], 'extend, raise up the head or eyes in order to look or listen', 'hand a person an object', 'sprain a limb', 'reach for, stretch out to take or grasp something'
+    def: [
+        'streetch',
+        ['mak a maucht', 'straiten', 'rouse yoursel'],
+        'ding someane',
+        ['lenthen', 'pull oot'],
+        'gie someane an object',
+        'stave a body pairt',
+        'streetch oot for tae claucht something'
     ],
-    gr: 'v',
-    tr: ['hit', 'lengthen', 'rouse', 'reach', 'hand', 'sprain', 'hang', 'pass'],
+    tr: ['hit', 'ding', 'lengthen', 'rouse', 'straiten', 'pull oot', 'reach', 'hand', 'gie', 'give', 'hang', 'sprain', 'hang', 'pass', 'stretch', 'overexert', 'strain', 'lengthen', 'pull', 'maucht'],
+    hl: ['hit', 'ding', 'lengthen', 'rouse', 'straiten', 'pull oot', 'reach', 'hand', 'gie', 'give', 'hang', 'sprain', 'hang', 'pass', 'stretch', 'overexert', 'strain', 'lengthen', 'pull'],
     pt_pp: {
         sc: ['raxed', 'raxt'],
-        tr: ['hit', 'handed', 'reached', 'stretched', 'overexterted', 'strained', 'sprained', 'roused', 'lengthened', 'extended', 'accomodated', 'hanged']
+        tr: ['streetched', 'hit', 'handed', 'reached', 'stretched', 'overexterted', 'strained', 'sprained', 'roused', 'lengthened', 'extended', 'accomodated', 'hanged']
     },
+    gr: 'v',
     or: [
         [G.notes.or.as, 'rax, raux, wrax'],
         [G.notes.or.ae, 'raxan']
     ],
-    ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler', 'I haed tae fair rax my harns tae wirk that oot']
+    ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler', 'I haed tae fair rax my harns tae wirk that oot', 'He raxed his craig for tae see what wis gaun on']
 }, {
     sc: 'redd',
     en: [

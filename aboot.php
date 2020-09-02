@@ -10,13 +10,13 @@
 
     <!-- opengraph url tag -->
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Scots glossar"/>
+    <meta property="og:title" content="Scots glossar: Aboot"/>
     <meta property="og:description" content="Scots glossar (beta): translate atween Scots an English."/>
     <meta property="og:image" content="https://scots.app/social.jpg"/>
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@makforrit" />
-    <meta name="twitter:title" content="Scots glossar" />
+    <meta name="twitter:title" content="Scots glossar: Aboot" />
     <meta name="twitter:description" content="Scots glossar (beta): translate atween Scots an English." />
     <meta name="twitter:image" content="https://scots.app/social.jpg" />
 
@@ -90,6 +90,9 @@
             <li><a href="https://www.scotslanguage.com/Scots_Culture/Names_in_Scots/Names_in_Scots_-_countries_abroad">Names in Scots - kintras ootland</a> (Centre for the Scots Leid) [<a href="https://archive.is/9QoGP">archive.is doobel</a>]</li>
             <li><a href="https://www.britishnewspaperarchive.co.uk/search/results?retrievecountrycounts=false&sortorder=dayearly&country=scotland">British Newspaper Archive</a> (Scottish newspapers)</li>
             <li><a href="https://digital.nls.uk/publications-by-scottish-clubs/archive/84240604">Publications by Scottish clubs</a> (National Library o Scotland archives)</li>
+            <li><a href="https://canongate.co.uk/books/194-the-new-testament-in-scots">The New Testament in Scots</a> (W. L. Lorimer)</li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1tsuI9ehdk5tcy2cpw56GY2mpelNnKNtE6BtkGCtwPRA">scots-ui-labels</a></li>
+            <li><a href="https://www.icloud.com/numbers/0FGj02LsRfEfkgaxiOqyv099A#Scots_kintra_names">Geographic names in Scots quairs and ither texts</a></li>
         </ul>
 
         <p><a href="./">← Gae back hame</a>.</p>
@@ -97,7 +100,7 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="text-muted">This page wis last updatit on 31 August 2020.</div>
+            <div class="text-muted">This page wis last updatit on 1 September 2020.</div>
         </div>
     </footer>
 </body>

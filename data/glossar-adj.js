@@ -403,6 +403,18 @@ G.dict.push({ // A
         [G.notes.or.me, 'fel']
     ]
 }, {
+    sc: 'foostie',
+    en: [
+        ['musty', 'stale', 'decaying']
+    ],
+    tr: ['dank', 'decayed', 'fusty', 'mouldy', 'damp'],
+    gr: 'adj',
+    ex: 'This cloot’s a bit foostie',
+    or: [
+        G.notes.or.as + ' haes <em>foistit</em> (’growen foostie’)',
+        [G.notes.or.af, 'fust']
+    ]
+}, {
     sc: 'forby',
     sc_alt: 'forbye',
     pr: 'forBye',

@@ -12,7 +12,7 @@ const GLOSSAR = (function () {
         variants: ['sc|sk', 'oo|ou', 'ee|ei', 'aa-|aw-', '-it|-et', '-ie|-y|-ae'], // Must denote variants via '|'
         threshold_variants: 4, // Minimum number of characters for processVariants() to be called. processVariants() makes less sense for words with few characters
         extended_cmd: '^', // See https://fusejs.io/examples.html#extended-search. I've only implemented commands that pertain to the start of the string
-        lug: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="-2.4 -2 28 28" fill="#0082ff" stroke="#0082ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>', // Credit: Cole Bemis (@colebemis; https://feathericons.com/?query=play)
+        play_button: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="-2.4 -2 28 28" fill="#212529" stroke="#212529" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>', // Credit: Cole Bemis (@colebemis; https://feathericons.com/?query=play)
         warning: '<svg class="block" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ff0002" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>',
         btn_copy_after_text: 'That’s the URL copied tae the clipbuird'
     };
@@ -473,7 +473,7 @@ const GLOSSAR = (function () {
             if (!el) // If an <audio> element for this words has not already be added to DOM
                 document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="/audio/${id.charAt(0)}/${id}.mp3" preload="auto"></audio>`); // Eik audio element
 
-            buttons.push(`<button class="play-audio btn" data-file="${id}">${cfg.lug}</i></button>`); // Eik button
+            buttons.push(`<button class="play-audio btn" data-file="${id}">${cfg.play_button}</i></button>`); // Eik button
         });
 
         return buttons.join('');
@@ -499,7 +499,7 @@ const GLOSSAR = (function () {
                 let sc_alt = item.sc_alt ? `<dt class="dt-sc-alt">Ither Scots spellins</dt><dd class="sc-alt">${[].concat(item.sc_alt).join(', ')}</dd>` : ''; // Alternative Scots spellings
                 let en = item.en ? `<dt class="dt-en">English</dt><dd>${formatMultiple(item.en, ',', 'en')}</dd>` : ''; // English
                 let pr = item.pr ? `<dt class="dt-pr">Pronunciation</dt><dd class="pr">(‘${[].concat(item.pr).join('’, ‘')}’)</dd> ` : ''; // Pronunciation
-                let def = item.def ? `<dt class="dt-def">Definition</dt><dd>${formatMultiple(item.def, ';', 'def')}</dd>` : ''; // Definition
+                let def = item.def ? `<dt class="dt-def">Definition</dt><dd>${formatMultiple(item.def, ',', 'def')}</dd>` : ''; // Definition
                 let ex = item.ex ? `<dt class="dt-ex">Examples</dt><dd>${formatMultiple(item.ex, ';', 'ex')}</dd>` : ''; // Examples
                 let ph = item.ph ? ' class="phrase"' : ''; // Phrases, idioms
                 let inf = item.inf ? `<dt class="dt-inf">Information</dt><dd>${formatMultiple(item.inf, ';', 'inf')}</dd>` : ''; // Additional information

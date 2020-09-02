@@ -692,6 +692,20 @@ G.dict.push({
         G.notes.or.as + ' <span>futebal(l), fuitbal, futbaw</span>', [G.notes.or.lme, 'fotebal']
     ]
 }, {
+    sc: 'foond',
+    en: 'foundation',
+    gr: 'n',
+    or: 'see v',
+    ex: 'They pit doun the foonds o the biggin'
+}, {
+    sc: 'foost',
+    en: [
+        ['staleness', 'mould', 'mustiness']
+    ],
+    gr: 'n',
+    tr: ['fustiness', 'mildew', 'damp', 'must'],
+    or: 'see adj'
+}, {
     sc: 'fowk',
     pr: ['fuowk', 'foak'],
     en: 'people',
@@ -1346,11 +1360,12 @@ G.dict.push({
     au: 'raivelment'
 }, {
     sc: 'rax',
-    en: [
-        ['stretching', 'a pull', 'a stretch'],
-        ['a strain', 'a sprain'],
-        ['reaching', 'reach']
+    def: [
+        ['streetch', 'a streetch', 'a pull'],
+        'a stave (o a body pairt)',
+        ['reakin', 'a reak']
     ],
+    tr: ['streetch', 'stretch', 'pull', 'stave', 'reakin', 'reak', 'stretching', 'a pull', 'a stretch', 'a strain', 'a sprain', 'reaching', 'reach'],
     gr: 'n',
     or: 'see verb'
 }, { // R

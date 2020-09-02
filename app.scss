@@ -169,6 +169,12 @@ button.btn-link-gray:focus {
         padding: 0 0.4rem;
     }
 
+    // dd, span {
+    //     &.audio {
+    //         top: -0.07rem;
+    //     }
+    // }
+
     dd {
         &.audio {
             display: inline-block;
@@ -464,7 +470,7 @@ button.btn-link-gray:focus {
     .btn {
         background: none;
         transition: none;
-        vertical-align: middle;
+        vertical-align: -0.3rem;
         display: inline-flex;
 
         &:focus {

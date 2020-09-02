@@ -650,7 +650,7 @@ G.dict.push({ // A
         ['just now', 'at present', 'just a moment ago'],
         ['in a moment', 'soon']
     ],
-    tr: ['the-noo', 'the now', 'at the moment', 'suin', 'sin', 'seen', 'momentarily', 'a moment ago'],
+    tr: ['the-noo', 'the now', 'at the moment', 'suin', 'sin', 'seen', 'momentarily', 'a moment ago', 'currently'],
     ex: ['Haud on; I’ll be there the noo', 'I cawed her the noo but she wisna answerin'],
     or: 'first kythes in ' + G.notes.or.mods,
     au: 'the-noo'
