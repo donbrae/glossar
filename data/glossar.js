@@ -75,7 +75,8 @@ G.ex = {
     k1: "I wis in an awfie raivel",
     l1: "It’s yersel! Come awa ben the hoose",
     m1: "He’s as daft as a yett in a windy day",
-    n1: "We can hoose the kye in the byre the nicht"
+    n1: "We can hoose the kye in the byre the nicht",
+    o1: "Resources haes been allocate tae thaim that’s maist in need"
 };
 
 G.pr = {
@@ -219,7 +220,8 @@ G.dict = [{
     gr: ['conj'],
     or: [
         [G.notes.or.as, 'gef, gefe, geve']
-    ]
+    ],
+    au: ['if', 'gif']
 }, {
     sc: 'gin',
     en: [
@@ -250,7 +252,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'hir, hyr(e)'],
         [G.notes.or.ae, 'hire']
-    ]
+    ],
+    au: 'her'
 }, {
     sc: 'him',
     en: 'him',
@@ -258,7 +261,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'him, hym'],
         [G.notes.or.ae, 'him']
-    ]
+    ],
+    au: 'him'
 }, {
     sc: 'himsel',
     en: 'himself',
@@ -356,7 +360,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'nor'],
         [G.notes.or.me, 'nor']
-    ]
+    ],
+    au: 'nor'
 }, {
     sc: 'nowithstaundin',
     en: 'notwithstanding',
@@ -387,57 +392,68 @@ G.dict = [{
     sc: 'three',
     en: 'three',
     tr: '3',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'three'
 }, {
     sc: 'fower',
     en: 'four',
     tr: '4',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'fower'
 }, {
     sc: 'five',
     en: 'five',
     tr: '5',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'five'
 }, {
     sc: 'sax',
     en: 'six',
     tr: '6',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'sax'
 }, {
     sc: 'seiven',
     en: 'seven',
     tr: '7',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'seiven'
 }, {
     sc: 'echt',
     en: 'eight',
     tr: '8',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'echt'
 }, {
     sc: 'nine',
     en: 'nine',
     tr: '9',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'nine'
 }, {
     sc: 'ten',
     en: 'ten',
     tr: '10',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'ten'
 }, {
     sc: 'eleiven',
     en: 'eleven',
     tr: '11',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'eleiven'
 }, {
     sc: 'twal',
     en: 'twelve',
     tr: '12',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'twal'
 }, {
     sc: 'thirteen',
     en: 'thirteen',
     tr: '13',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'thirteen'
 }, {
     sc: 'fowerteen',
     en: 'fourteen',
@@ -448,12 +464,38 @@ G.dict = [{
     sc: 'fifteen',
     en: 'fifteen',
     tr: '15',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'fifteen'
 }, {
     sc: 'saxteen',
     en: 'sixteen',
     tr: '16',
-    gr: 'cardinal nummer'
+    gr: 'cardinal nummer',
+    au: 'saxteen'
+}, {
+    sc: 'seiventeen',
+    en: 'seventeen',
+    tr: '17',
+    gr: 'cardinal nummer',
+    au: 'seiventeen'
+}, {
+    sc: 'echteen',
+    en: 'eighteen',
+    tr: '18',
+    gr: 'cardinal nummer',
+    au: 'echteen'
+}, {
+    sc: 'nineteen',
+    en: 'nineteen',
+    tr: '19',
+    gr: 'cardinal nummer',
+    au: 'nineteen'
+}, {
+    sc: 'twinty',
+    en: 'twenty',
+    tr: '20',
+    gr: 'cardinal nummer',
+    au: 'twinty'
 }, {
     sc: ['hunner', 'hunder'],
     en: 'hundred',
@@ -602,7 +644,8 @@ G.dict = [{
         [G.notes.or.as, 'tha(i), thay, thae'],
         [G.notes.or.ae, 'ðā']
     ],
-    ex: [G.ex.f1, 'Lat’s hae a blether aboot thae twa issues ye brocht up in the meetin']
+    ex: [G.ex.f1, 'Lat’s hae a blether aboot thae twa issues ye brocht up in the meetin'],
+    au: 'thae'
 }, {
     sc: ['than', '’an'],
     en: 'than',
@@ -614,7 +657,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'than, then'],
         [G.notes.or.ae, 'ðanne']
-    ]
+    ],
+    au: 'than'
 }, {
     sc: ['theirsel', 'themsel'],
     en: 'themselves (collectively)',
@@ -626,13 +670,22 @@ G.dict = [{
         [G.notes.or.as, 'thame sell, them sel']
     ]
 }, {
-    sc: 'them',
+    sc: 'thaim',
     en: 'them',
     gr: 'pronoon',
     or: [
         [G.notes.or.as, 'thaim, tham(e)'],
         [G.notes.or.anor, 'þeim']
     ]
+}, {
+    sc: 'thaim that',
+    en: 'those who',
+    tr: 'them that',
+    gr: 'phrase',
+    or: [
+        [G.notes.or.as, 'thaim that, tham that']
+    ],
+    ex: G.ex.o1
 }, {
     sc: ['theirsels', 'themsels'],
     en: 'themselves (individually)',
@@ -651,7 +704,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'thir']
     ],
-    ex: [G.ex.a1, G.ex.b1]
+    ex: [G.ex.a1, G.ex.b1],
+    au: 'thir'
 }, {
     sc: 'sklent',
     en: 'across',

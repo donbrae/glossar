@@ -82,7 +82,8 @@ G.dict.push({
     gr: ['pn', 'adj'],
     or: [
         [G.notes.or.as, 'Bertan(e), Bartan(e)']
-    ]
+    ],
+    au: 'bertany'
 }, {
     sc: 'Bey o Bescay',
     en: 'Bay of Biscay',
@@ -133,7 +134,8 @@ G.dict.push({
     gr: 'pn',
     or: [
         [G.notes.or.mods + ' haes haed ', 'Cheena <span>syne at least the mid-19t century</span>']
-    ]
+    ],
+    au: 'cheena'
 }, {
     sc: 'Corsicae',
     en: 'Corsica',
@@ -141,7 +143,8 @@ G.dict.push({
 }, {
     sc: 'Croaitie',
     en: 'Croatia',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'croaitie'
 }, {
     sc: ['Czechie', 'Czechland'],
     en: ['Czech Republic, Czechia'],
@@ -154,7 +157,8 @@ G.dict.push({
     gr: 'pn',
     or: [
         [G.notes.or.as, 'Denmark']
-    ]
+    ],
+    au: 'denmark'
 }, {
     sc: 'Dens',
     def: ['the Scandinaivie leid spoken in Denmark and in pairts o Greenland and the Faerae Isles', ['a body that bides in, or is frae, Denmark', 'someane o Dens strynd']],
@@ -173,7 +177,8 @@ G.dict.push({
 }, {
     sc: 'Easter Seas',
     en: 'Baltic Sea',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'easter-seas'
 }, {
     sc: ['Edinburgh', 'Embra', 'Edinburrae'],
     en: 'Edinburgh',
@@ -346,7 +351,8 @@ G.dict.push({
 }, {
     sc: 'Netherlands',
     en: 'Netherlands',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'netherlands'
 }, {
     sc: 'Neveron',
     en: 'Basque Country',
@@ -360,7 +366,8 @@ G.dict.push({
     tr: ['norrawa', 'norawa', 'norowa'],
     en: 'Norway',
     def: 'a country in Scandinaivie',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'norrowa'
 }, {
     sc: 'Norse Sea',
     en: 'Norwegian Sea',
@@ -558,7 +565,8 @@ G.dict.push({
     sc: ['London', 'Lunnon'],
     en: 'London',
     gr: 'pn',
-    def: 'the capital city o England'
+    def: 'the capital city o England',
+    au: ['london', 'london1']
 }, {
     sc: 'North Macedonie',
     en: 'North Macedonia',

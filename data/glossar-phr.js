@@ -14,7 +14,8 @@ G.dict.push({
 }, {
     sc: 'be on the haik for',
     en: 'be on the lookout for',
-    gr: 'phr'
+    gr: 'phr',
+    au: 'be-on-the-haik-for'
 }, {
     sc: ['nae bother', 'nae bather'],
     en: 'no problem',
@@ -28,6 +29,7 @@ G.dict.push({
         [G.notes.or.as, 'far ben']
     ],
     ex: ['He wis gey faur ben wi his warkmates'],
+    au: 'nae-bother'
 }, {
     sc: 'for tae',
     en: 'in order to',
@@ -64,7 +66,8 @@ G.dict.push({
     sc: 'like as it wis',
     en: 'as if it wis',
     ph: true,
-    ex: 'It wis daurk like as it wis the nicht, but it wis juist three in the efternuin'
+    ex: 'It wis daurk like as it wis the nicht, but it wis juist three in the efternuin',
+    au: 'like-as-it-wis'
 }, {
     sc: 'muckle the mair',
     en: 'all the more',
@@ -78,7 +81,8 @@ G.dict.push({
 }, {
     sc: 'gie\'s',
     tr: ['gies', 'geez', 'gie me', 'gie us', 'give me', 'give us'],
-    def: 'Gie me, gie us (contraction o ‘gie us’)'
+    def: 'Gie me, gie us (contraction o ‘gie us’)',
+    au: 'gie’s'
 }, {
     sc: 'afore aa is duin',
     tr: 'afore aw is duin',

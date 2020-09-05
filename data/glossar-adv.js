@@ -175,7 +175,8 @@ G.dict.push({ // A
     gr: ['adv', 'prep', 'adj'],
     or: [
         [G.notes.or.as, 'doun, down']
-    ]
+    ],
+    au: 'doun'
 }, { // E
     sc: 'evendoun',
     en: [
@@ -473,7 +474,8 @@ G.dict.push({ // A
     ],
     tr: ['ordinarily', 'uisually'],
     gr: 'adv',
-    or: 'see n <em>ordinar</em>'
+    or: 'see n <em>ordinar</em>',
+    au: 'for-ordinar'
 }, {
     sc: 'ordinar',
     en: [
@@ -556,10 +558,6 @@ G.dict.push({ // A
     ex: ['Ye’d shuirly need tae hae a permit, wad ye no?', G.ex.x],
     au: 'shuirly'
 }, {
-    sc: 'sicweys',
-    en: 'thus',
-    gr: ['adv']
-}, {
     sc: 'sklent',
     en: [
         ['at a slant', 'obliquely']
@@ -606,7 +604,8 @@ G.dict.push({ // A
     tr: 'nowadays',
     gr: ['adv', 'n'],
     ex: [G.ex.n, G.ex.o, G.ex.p],
-    or: '<span>the day</span> first appears in scrievit form in ' + G.notes.or.as + ' frae aboot 1500'
+    or: '<span>the day</span> first appears in scrievit form in ' + G.notes.or.as + ' frae aboot 1500',
+    au: 'the-day'
 }, {
     sc: 'thegither',
     en: 'together',
@@ -643,7 +642,8 @@ G.dict.push({ // A
     en: 'this year',
     or: [
         [G.notes.or.as, 'the year']
-    ]
+    ],
+    au: 'the-year'
 }, {
     sc: 'the noo',
     en: [
@@ -692,7 +692,8 @@ G.dict.push({ // A
     en: [
         ['sometimes', 'at times', 'occasionally']
     ],
-    gr: ['adv']
+    gr: ['adv'],
+    au: 'whiles'
 }, {
     sc: ['what for', 'fat for'],
     sc_alt: ['whit for', 'fit for'],

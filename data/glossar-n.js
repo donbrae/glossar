@@ -18,7 +18,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'abbreviat'],
         [G.notes.or.l, 'abbreviātum']
-    ]
+    ],
+    au: 'abbreviate'
 }, {
     sc: 'airtin',
     def: 'wab link',
@@ -144,7 +145,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'breid, brede, braid'],
         [G.notes.or.ae, 'brēad']
-    ]
+    ],
+    au: 'breid'
 }, {
     sc: 'bittie',
     en: [
@@ -464,7 +466,8 @@ G.dict.push({
     sc: 'dree',
     pt_pp: {
         sc: 'dree’d',
-        tr: ['dree\'d', 'endured']
+        tr: ['dree\'d', 'endured'],
+        au: 'dree’d'
     },
     def: [
         'tae endure; tae thole pyne and ill sonse',
@@ -476,7 +479,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'drie, dre(e)'],
         [G.notes.or.ae, 'drēogan']
-    ]
+    ],
+    au: 'dree'
 }, {
     sc: 'dreeper',
     en: [
@@ -487,7 +491,8 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.as, 'dreiper'],
-    ]
+    ],
+    au: 'dreeper'
 }, {
     sc: 'dreich',
     en: [
@@ -600,7 +605,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'examinato(u)r'],
         [G.notes.or.l, 'examinator']
-    ]
+    ],
+    au: 'examinator'
 }, { // F
     sc: 'fankle',
     en: [
@@ -673,7 +679,8 @@ G.dict.push({
     sc: 'film-makkin',
     en: 'film-making',
     tr: ['filmmaking', 'filmmakkin'],
-    gr: 'n'
+    gr: 'n',
+    au: 'film-makkin'
 }, {
     sc: 'finnd',
     en: [
@@ -805,11 +812,13 @@ G.dict.push({
         [G.notes.or.as, 'hame, haim(e)'],
         [G.notes.or.ae, 'hām']
     ],
-    ex: ['I’m awa hame']
+    ex: ['I’m awa hame'],
+    au: 'hame'
 }, {
     sc: 'haudin gaun',
     en: 'continuation',
-    gr: 'n'
+    gr: 'n',
+    au: 'haudin-gaun'
 }, {
     sc: 'heat',
     pr: ['heet', 'hait'],
@@ -946,7 +955,8 @@ G.dict.push({
     hl: ['excrement', 'filth', 'nonsense', 'rubbish'],
     gr: 'n',
     or: 'frae the Scots <i>cack</i>',
-    ex: 'Ye’r talkin keech!'
+    ex: 'Ye’r talkin keech!',
+    au: 'keech'
 }, {
     sc: 'knawledge',
     en: 'knowledge',
@@ -1017,7 +1027,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'lone, loan, loyne'],
         [G.notes.or.ae, 'lanu']
-    ]
+    ],
+    au: 'loan'
 }, {
     sc: 'loch',
     def: [
@@ -1270,7 +1281,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'payment, peyment'],
         [G.notes.or.an + ', ' + G.notes.or.mf, 'paiement']
-    ]
+    ],
+    au: 'peyment'
 }, {
     sc: 'pneumonie',
     en: 'pneumonia',
@@ -1561,7 +1573,8 @@ G.dict.push({
         [G.notes.or.as, 'thesaurar(e), ~tresorare'],
         [G.notes.or.l, 'thēsaurārius'],
         [G.notes.or.af, 'tresorer']
-    ]
+    ],
+    au: 'thesaurer'
 }, {
     sc: 'thesaurery',
     en: 'treasury',

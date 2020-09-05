@@ -449,7 +449,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'abbreviat'],
         [G.notes.or.l, 'abbreviāre']
-    ]
+    ],
+    au: 'abbreviate1'
 }, { // A
     sc: 'accress',
     pt_pp: {
@@ -505,7 +506,7 @@ G.dict.push({
         [G.notes.or.as, 'allocat'],
         [G.notes.or.l, 'allocāt-, <span>ptp stem o</span> allocāre']
     ],
-    ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', 'Resources haes been allocate tae them that’s maist in need'],
+    ex: ['Aw students is allocate £100 o prent credit at the stert o ilka semester', G.ex.o1],
     au: 'allocate'
 }, {
     sc: 'awe',
@@ -518,7 +519,7 @@ G.dict.push({
         hl: ['owned', 'owed']
     },
     gr: 'v',
-    ex: ['He awes a flat in Glesca', 'For years he aucht a simmer hoose in Fraunce', 'He haed tae sell nearhaund aw that he wis aucht', 'I’m awin ye some siller for the messages, am I no?', 'Ye awe me a beer!']
+    ex: ['He awes a flat in Glesca', 'For years he aucht a simmer hoose in Fraunce', 'He haed tae sell nearhaund aw that he wis aucht', 'I’m aye awin ye some siller for the messages, na?']
 }, {
     sc: 'awn',
     en: 'own',
@@ -533,7 +534,8 @@ G.dict.push({
 }, { // v be
     sc: G.v.be.sc,
     en: G.v.be.en,
-    gr: 'v'
+    gr: 'v',
+    au: 'be'
 }, { // am
     sc: G.v.be.ps.sc,
     en: G.v.be.ps.en,
@@ -546,37 +548,43 @@ G.dict.push({
     en: G.v.be.ps.neg.en,
     tr: [].concat(G.v.be.trigs, G.v.be.ps.neg.tr),
     hl: G.v.be.ps.neg.tr,
-    gr: 'present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+    gr: 'present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc),
+    au: 'amna'
 }, { // is
     sc: G.v.be.tpps.sc,
     en: G.v.be.tpps.en,
     tr: G.v.be.trigs,
     hl: [],
-    gr: 'third person present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+    gr: 'third person present singular o v ' + G.utils.addSpan('tae ' + G.v.be.sc),
+    au: 'is'
 }, { // isna
     sc: G.v.be.tpps.neg.sc,
     en: G.v.be.tpps.neg.en,
     tr: G.v.be.trigs,
     hl: [],
-    gr: 'third person present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+    gr: 'third person present singular neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc),
+    au: 'isna'
 }, { // are
     sc: G.v.be.psp.sc,
     en: G.v.be.psp.en,
     tr: [].concat(G.v.be.trigs, G.v.be.psp.tr),
     hl: G.v.be.psp.tr,
-    gr: 'present singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+    gr: 'present singular an plural o v ' + G.utils.addSpan('tae ' + G.v.be.sc),
+    au: ['ar', 'ar1']
 }, { // arena
     sc: G.v.be.psp.neg.sc,
     en: G.v.be.psp.neg.en,
     tr: [].concat(G.v.be.trigs, G.v.be.psp.neg.tr),
     hl: G.v.be.psp.neg.tr,
-    gr: 'present singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc)
+    gr: 'present singular an plural neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc),
+    au: 'arna'
 }, { // binna
     sc: G.v.be.neg.sc,
     en: G.v.be.neg.en,
     tr: [].concat(G.v.be.trigs, G.v.be.neg.tr),
     hl: G.v.be.neg.tr,
-    gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; literar'
+    gr: 'neg o v ' + G.utils.addSpan('tae ' + G.v.be.sc) + '; literar',
+    au: 'binna1'
 },
     // v be end
     {
@@ -617,7 +625,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'can, kan'],
         [G.notes.or.ae, 'cunnan']
-    ]
+    ],
+    au: 'can'
 }, { // can neg
     sc: G.v.can.neg.sc,
     sc_alt: G.v.can.neg.sc_alt,
@@ -625,19 +634,22 @@ G.dict.push({
     en: G.v.can.neg.en,
     tr: [].concat(G.v.can.trigs, G.v.can.neg.tr),
     hl: G.v.can.neg.tr,
-    gr: 'neg o the v ' + G.utils.addSpan(G.v.can.sc)
+    gr: 'neg o the v ' + G.utils.addSpan(G.v.can.sc),
+    au: 'canna'
 }, { // can past tense
     sc: G.v.can.pt.sc,
     en: G.v.can.pt.en,
     tr: G.v.can.trigs,
     hl: [],
-    gr: 'pt o the v ' + G.utils.addSpan(G.v.can.sc)
+    gr: 'pt o the v ' + G.utils.addSpan(G.v.can.sc),
+    au: 'coud'
 }, { // can past tense neg
     sc: G.v.can.pt.neg.sc,
     en: G.v.can.pt.neg.en,
     tr: [].concat(G.v.can.trigs, G.v.can.pt.neg.tr),
     hl: G.v.can.pt.neg.tr,
-    gr: 'neg pt o the v ' + G.utils.addSpan(G.v.can.sc)
+    gr: 'neg pt o the v ' + G.utils.addSpan(G.v.can.sc),
+    au: 'coudna'
 }, { // C
     sc: 'cast-ower',
     en: 'review',
@@ -669,7 +681,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'comprise, compryse, comprize'],
         [G.notes.or.mf, 'compris']
-    ]
+    ],
+    au: 'comprise'
 }, {
     sc: 'consider',
     pr: 'conseeder',
@@ -724,7 +737,8 @@ G.dict.push({
 }, {
     sc: 'depone agin',
     en: 'accuse',
-    gr: 'phrasal v'
+    gr: 'phrasal v',
+    au: 'depone-agin'
 }, {
     sc: 'defeat',
     pr: ['defait', 'defeet'],
@@ -825,7 +839,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'drepe, dreip, dreep'],
         [G.notes.or.ae, 'drēopan']
-    ]
+    ],
+    au: 'dreep'
 }, { // E
     sc: 'ettle',
     en: [
@@ -899,57 +914,61 @@ G.dict.push({
         [G.notes.or.mf, 'examiner'],
         [G.notes.or.l, 'exāmināre']
     ]
-},
-    // v gae
-    { // v gae
-        sc: G.v.gae.sc,
-        en: G.v.gae.en,
-        tr: G.v.gae.tr,
-        hl: [],
-        gr: 'v',
-        au: 'gang'
-    }, { // v gae neg
+}, { // v gae
+    sc: G.v.gae.sc,
+    en: G.v.gae.en,
+    tr: G.v.gae.tr,
+    hl: [],
+    gr: 'v',
+    au: ['gang', 'gae']
+}, { // v gae neg
     sc: G.v.gae.neg.sc,
     en: G.v.gae.neg.en,
     tr: [].concat(G.v.gae.trigs, G.v.gae.neg.tr),
     hl: G.v.gae.neg.tr,
-    gr: 'neg o ' + G.v.gae.meta.gr_hw
+    gr: 'neg o ' + G.v.gae.meta.gr_hw,
+    au: 'gaena'
 }, { // v gae neg third person singular
     sc: G.v.gae.neg.tps.sc,
     en: G.v.gae.neg.tps.en,
     tr: [].concat(G.v.gae.trigs, G.v.gae.neg.tps.tr),
     hl: G.v.gae.neg.tps.tr,
-    gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw
+    gr: 'neg third person singular o ' + G.v.gae.meta.gr_hw,
+    au: 'gaesna'
 }, { // v gae pt
     sc: G.v.gae.pt.sc,
     en: G.v.gae.pt.en,
     tr: [].concat(G.v.gae.trigs, G.v.gae.pt.tr),
     hl: G.v.gae.pt.tr,
-    gr: 'pt o ' + G.v.gae.meta.gr_hw
+    gr: 'pt o ' + G.v.gae.meta.gr_hw,
+    au: ['gaed', 'went']
 }, { // v gae pt neg
     sc: G.v.gae.pt.neg.sc,
     en: G.v.gae.pt.neg.en,
     tr: G.v.gae.trigs,
     hl: [],
-    gr: 'neg pt o ' + G.v.gae.meta.gr_hw
+    gr: 'neg pt o ' + G.v.gae.meta.gr_hw,
+    au: 'gaedna'
 }, { // v gae pp
     sc: G.v.gae.pp.sc,
     en: G.v.gae.pp.en,
     tr: G.v.gae.trigs,
     hl: [],
-    gr: 'pp o ' + G.v.gae.meta.gr_hw
+    gr: 'pp o ' + G.v.gae.meta.gr_hw,
+    au: 'gane'
 }, { // v gae -ing form
     sc: G.v.gae.ing.sc,
     en: G.v.gae.ing.en,
     tr: G.v.gae.trigs,
     hl: [],
+    au: 'gaun'
 }, { // v Third person singular
     sc: G.v.gae.tps.sc,
     en: G.v.gae.tps.en,
     tr: G.v.gae.trigs,
     hl: [],
-    gr: 'third person singular o ' + G.v.gae.meta.gr_hw
-
+    gr: 'third person singular o ' + G.v.gae.meta.gr_hw,
+    au: 'gaes'
 },
     // v gae end
     // v gie
@@ -1073,7 +1092,8 @@ G.dict.push({
     pr: 'jaLooz',
     pt: {
         sc: 'jaloused',
-        tr: ['suspected', 'supposed', 'guessed', 'surmised', 'figured']
+        tr: ['suspected', 'supposed', 'guessed', 'surmised', 'figured'],
+        au: 'jaloused'
     },
     gr: 'v',
     tr: ['jaloose', 'assume', 'assumed', 'figure'],
@@ -1088,7 +1108,8 @@ G.dict.push({
     pt: {
         sc: 'dounlaidit',
         en: 'downloaded',
-        tr: 'doonloadit'
+        tr: 'doonloadit',
+        au: 'dounlaidit'
     },
     def: '<em>v</em> copy data frae ae computer system til anither, for ordinar ower the internet; <em>n</em> the data (file) dounlaidit',
     pr: 'doonlaid',
@@ -1096,7 +1117,8 @@ G.dict.push({
     tr: ['doonload', 'download'],
     or: [
         ['Scots <em>doun</em> + Scots <em>laid</em>, efter ' + G.notes.or.mode, 'download']
-    ]
+    ],
+    au: 'dounlaid'
 }, {
     sc: 'edifee',
     def: 'instruct, enlichten',
@@ -1175,7 +1197,8 @@ G.dict.push({
     ],
     pt: {
         sc: ['haudit', 'held', 'huild'],
-        tr: 'held'
+        tr: 'held',
+        au: 'haudit'
     },
     pp: {
         sc: 'hauden',
@@ -1212,7 +1235,8 @@ G.dict.push({
         ['continue on one\'s way', 'go away']
     ],
     tr: ['keep out', 'keep off', 'continue'],
-    gr: 'phrasal v'
+    gr: 'phrasal v',
+    au: 'haud-awa'
 }, {
     sc: 'haud for',
     en: [
@@ -1224,13 +1248,15 @@ G.dict.push({
     sc: 'haud forrit',
     en: 'continue to improve (e.g. in health, or in terms of the degree of one’s accomplishment at performing a given job, task or craft)',
     tr: 'continue to improve',
-    gr: 'phrasal v'
+    gr: 'phrasal v',
+    au: 'haud-forrit'
 }, {
     sc: 'haud gaun',
     en: [
         ['keep going', 'continue']
     ],
-    gr: 'phrasal v'
+    gr: 'phrasal v',
+    au: 'haud-gaun'
 }, {
     sc: 'haud haul',
     en: [
@@ -1256,7 +1282,8 @@ G.dict.push({
     en: [
         ['keep in with', 'curry favour with'],
     ],
-    gr: ['phrasal v']
+    gr: ['phrasal v'],
+    au: 'haud-in-wi'
 }, {
     sc: 'haud on',
     en: [
@@ -1273,7 +1300,8 @@ G.dict.push({
     sc: 'import',
     pt_pp: {
         sc: 'importit',
-        tr: 'imported'
+        tr: 'imported',
+        au: 'importit'
     },
     tr: 'inbring',
     hl: [],
@@ -1282,7 +1310,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'import'],
         [G.notes.or.l, 'importāre']
-    ]
+    ],
+    au: 'import'
 }, {
     sc: 'inbring',
     pt_pp: {
@@ -1420,7 +1449,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'lat, let, lete'],
         [G.notes.or.ae, 'lǽtan']
-    ]
+    ],
+    au: 'lat'
 }, {
     sc: 'lair',
     en: 'teach',
@@ -1491,14 +1521,16 @@ G.dict.push({
     hl: 'luit',
     pr: ['lit', 'leet', 'löt', 'lüt'],
     gr: 'pt o the v <span>tae lat</span>',
-    ex: G.ex.e
+    ex: G.ex.e,
+    au: 'luit'
 }, {
     sc: ['luiten', 'latten'],
     en: 'let',
     tr: G.v.lat.trigs,
     hl: ['latten', 'luiten'],
     gr: 'ptp o the v <span>tae lat</span>',
-    ex: 'John haed been luiten doun by his colleague'
+    ex: 'John haed been luiten doun by his colleague',
+    au: 'luiten'
 }, {
     sc: 'lat see',
     en: 'produce',
@@ -1522,6 +1554,11 @@ G.dict.push({
     ],
     au: 'mak'
 }, { // M
+    sc: 'mak compare',
+    en: 'compare',
+    gr: 'phrasal v',
+    ex: 'Mak compare atween the twa documents for tae unnerstaund the differs'
+}, {
     sc: 'maun',
     pr: ['maun', 'mon', 'man', 'mun'],
     en: 'must',
@@ -1593,18 +1630,21 @@ G.dict.push({
         sc: 'fasht',
         tr: [
             ['irritated', 'annoyed', 'angered', 'inconvenienced', 'troubled', 'vexed', 'bothered', 'fretted', 'fashed']
-        ]
+        ],
+        au: 'fasht'
     },
     neg: {
         sc: 'fashna',
-        tr: ['fash not', 'fash na']
+        tr: ['fash not', 'fash na'],
+        au: 'fashna'
     },
     gr: 'v',
     or: [
         [G.notes.or.ms, 'fasch, fash'],
         [G.notes.or.mf, 'faschier']
     ],
-    ex: ['Dinna fash yersel', 'I wis sair fasht aboot the job interview', G.ex.d]
+    ex: ['Dinna fash yersel', 'I wis sair fasht aboot the job interview', G.ex.d],
+    au: 'fash'
 }, {
     sc: 'fecht',
     en: 'fight',
@@ -1691,14 +1731,16 @@ G.dict.push({
     sc: 'gowk',
     pt_pp: {
         sc: 'gowkit',
-        tr: ['fooled', 'deceived']
+        tr: ['fooled', 'deceived'],
+        au: 'gowkit'
     },
     en: [
         ['to fool', 'deceive']
     ],
     tr: ['fool', 'befool', 'lead ajee'],
     hl: ['fool', 'befool'],
-    gr: 'v'
+    gr: 'v',
+    au: 'gowk'
 }, {
     sc: 'greet',
     en: ['cry', ['lament', 'complain']],
@@ -1709,7 +1751,8 @@ G.dict.push({
     },
     pp: {
         sc: ['grat', 'gret', 'grutten'],
-        tr: ['cried', 'sobbed', 'wept', 'howled', 'wheenged', 'lamented', 'complained']
+        tr: ['cried', 'sobbed', 'wept', 'howled', 'wheenged', 'lamented', 'complained'],
+        au: ['grat', 'gret']
     },
     gr: 'v',
     or: [
@@ -1718,7 +1761,7 @@ G.dict.push({
     ],
     ex: 'Ye dinna need tae greet aboot it!',
     au: 'greet'
-}, { // Tak -ing ending
+}, {
     sc: 'greetin',
     en: 'crying',
     tr: ['greeting', 'weeping'],
@@ -1726,7 +1769,8 @@ G.dict.push({
     gr: 'pres participle o the v <span>tae greet</span>',
     or: [
         [G.notes.or.as, 'gretand']
-    ]
+    ],
+    au: 'greetin'
 },
     // H
     { // hae
@@ -1894,7 +1938,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'pay, pey'],
         [G.notes.or.an, 'paier']
-    ]
+    ],
+    au: 'pey'
 }, { // P
     sc: 'pit',
     en: 'put',
@@ -2061,7 +2106,8 @@ G.dict.push({
         [G.notes.or.as, 'rax, raux, wrax'],
         [G.notes.or.ae, 'raxan']
     ],
-    ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler', 'I haed tae fair rax my harns tae wirk that oot', 'He raxed his craig for tae see what wis gaun on']
+    ex: [G.ex.f1, 'I raxt mysel sair pittin in the byler', 'I haed tae fair rax my harns tae wirk that oot', 'He raxed his craig for tae see what wis gaun on'],
+    au: 'rax'
 }, {
     sc: 'redd',
     en: [
@@ -2268,8 +2314,7 @@ G.dict.push({
     hl: G.v.war.neg.tr,
     gr: ['neg o v ' + G.utils.addSpan(G.v.war.sc)],
     au: 'warna'
-},
-    // v war end
+}, // v war end
     // will
     {
         sc: G.v.will.sc,
@@ -2279,15 +2324,18 @@ G.dict.push({
         or: [
             [G.notes.or.as, 'will'],
             [G.notes.or.ae, 'willan']
-        ]
-    }, { // will neg
-    sc: G.v.will.neg.sc,
-    sc_alt: G.v.will.neg.sc_alt,
-    en: G.v.will.neg.en,
-    tr: [].concat(G.v.will.trigs, G.v.will.neg.tr),
-    hl: G.v.will.neg.tr,
-    gr: ['neg o v ' + G.utils.addSpan(G.v.will.sc)]
-}, { // will pt and pp
+        ],
+        au: 'will'
+    },
+    { // will neg
+        sc: G.v.will.neg.sc,
+        sc_alt: G.v.will.neg.sc_alt,
+        en: G.v.will.neg.en,
+        tr: [].concat(G.v.will.trigs, G.v.will.neg.tr),
+        hl: G.v.will.neg.tr,
+        gr: ['neg o v ' + G.utils.addSpan(G.v.will.sc)],
+        au: ['winna', 'willna']
+    }, { // will pt and pp
     sc: G.v.will.pt_pp.sc,
     en: G.v.will.pt_pp.en,
     tr: G.v.will.trigs,

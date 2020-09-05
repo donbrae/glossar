@@ -81,7 +81,8 @@ G.dict.push({ // A
     def: 'o the weather, the temperatur: fell cauld',
     tr: ['chankin', 'cold', 'cauld'],
     hl: ['baltic', 'cold', 'cauld'],
-    gr: ['adj', 'informal']
+    gr: ['adj', 'informal'],
+    au: 'baltic'
 }, {
     sc: 'ben',
     en: [
@@ -97,7 +98,8 @@ G.dict.push({ // A
     ],
     tr: ['ben', 'innermaist'],
     hl: 'innermost',
-    gr: 'adj'
+    gr: 'adj',
+    au: 'benmaist'
 }, {
     sc: 'benner',
     en: [
@@ -106,7 +108,8 @@ G.dict.push({ // A
     tr: 'ben',
     hl: [],
     gr: 'adj',
-    ex: 'The benner room wis buskit sae braw'
+    ex: 'The benner room wis buskit braw',
+    au: 'benner'
 }, {
     sc: 'bittie',
     en: 'a bit of',
@@ -168,19 +171,22 @@ G.dict.push({ // A
     ],
     tr: ['canty', 'merry'],
     gr: 'adj',
-    ex: 'They haed a cantie efternuin in the beer gairden'
+    ex: 'They haed a cantie efternuin in the beer gairden',
+    au: 'cantie'
 }, {
     sc: 'chankin',
     def: 'o the weather, the temperatur: (fell) cauld',
     tr: ['chanking', 'baltic', 'cold', 'cauld'],
     hl: ['chankin', 'cold', 'cauld'],
-    gr: ['adj', 'informal']
+    gr: ['adj', 'informal'],
+    au: 'chankin'
 }, {
     sc: 'cauld',
     en: 'cold',
     tr: ['chanking', 'chankin', 'baltic', 'cold', 'cauld'],
     hl: 'cauld',
-    gr: 'adj'
+    gr: 'adj',
+    au: 'cauld'
 }, {
     sc: 'contigue',
     en: [
@@ -369,7 +375,8 @@ G.dict.push({ // A
         ['fractious', 'peevish']
     ],
     gr: 'adj',
-    ex: 'What wi aw the snaw, drivin intae wark wis awfu fashious'
+    ex: 'What wi aw the snaw, drivin intae wark wis awfu fashious',
+    au: 'fashious'
 }, {
     sc: 'faur kent',
     en: [
@@ -377,7 +384,8 @@ G.dict.push({ // A
     ],
     tr: ['far kent', 'well known', 'weel kent'],
     hl: 'far kent',
-    gr: 'phrasal adj'
+    gr: 'phrasal adj',
+    au: 'faur-kent'
 }, {
     sc: 'feart',
     en: [
@@ -428,7 +436,8 @@ G.dict.push({ // A
     tr: 'aforementiont',
     gr: 'adj',
     or: ['?' + G.notes.or.eme + '; <span>forementioned</span> kythes in ' + G.notes.or.lms + ' an ' + G.notes.or.emods],
-    ex: G.ex.m
+    ex: G.ex.m,
+    au: 'forementiont'
 }, {
     sc: 'foresaid',
     en: 'aforesaid',
@@ -771,7 +780,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'pertinent'],
         [G.notes.or.me, 'pertinent'],
         [G.notes.or.l, 'pertinentia']
-    ]
+    ],
+    au: 'pertinent'
 }, {
     sc: 'previous',
     en: 'previous',
@@ -785,7 +795,8 @@ G.dict.push({ // A
 }, {
     sc: 'pyntit',
     en: 'decisive',
-    gr: 'adj'
+    gr: 'adj',
+    au: 'pyntit'
 }, {
     sc: 'quirkie',
     en: [
@@ -794,7 +805,8 @@ G.dict.push({ // A
     ],
     tr: ['complex', 'complicatit'],
     gr: 'adj',
-    or: 'unkent'
+    or: 'unkent',
+    au: 'quirkie'
 }, { // R
     sc: 'ragglish',
     en: [

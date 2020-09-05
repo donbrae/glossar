@@ -37,7 +37,7 @@ if (strlen(trim($params[1])) && strlen(trim($params[2]))) {
     <title>Scots.app (beta)<?php echo $title_append; ?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="Description" content="Scots dictionary app: translate words between Scots and English.">
 
     <!-- opengraph url tag -->
