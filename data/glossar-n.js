@@ -243,7 +243,8 @@ G.dict.push({
     en: 'cow',
     pl: {
         sc: ['kye', 'coos'],
-        tr: 'cows'
+        tr: 'cows',
+        au: 'kye'
     },
     gr: 'n',
     or: [
@@ -272,7 +273,8 @@ G.dict.push({
         [G.notes.or.as, 'clos, clois, close'],
         [G.notes.or.mf, 'clos'],
         [G.notes.or.l, 'clausum']
-    ]
+    ],
+    au: 'close'
 }, {
     sc: 'collectorie',
     def: 'the office o (tax) collector',
@@ -338,7 +340,8 @@ G.dict.push({
 }, { // D
     sc: 'daeins',
     en: 'activity',
-    gr: 'n'
+    gr: 'n',
+    au: 'daeins'
 }, {
     sc: 'daftie',
     en: [
@@ -347,7 +350,8 @@ G.dict.push({
     ],
     tr: ['imbecile', 'fool', 'fuil', 'feel', 'eejit', 'bam', 'bammer', 'bampot', 'bamstick'],
     hl: ['imbecile', 'fool', 'fuil', 'feel'],
-    gr: 'n'
+    gr: 'n',
+    au: 'daftie'
 }, {
     sc: 'dask',
     en: [
@@ -449,7 +453,8 @@ G.dict.push({
     ],
     tr: ['disagreement', 'dispute', 'difference', 'dissimilarity'],
     gr: 'n',
-    or: ['see v']
+    or: ['see v'],
+    au: 'differ'
 }, {
     sc: ['ditter'],
     en: 'dither',
@@ -509,13 +514,15 @@ G.dict.push({
     pl: {
         sc: 'een',
         tr: ['ees', 'e\'en', 'eyes'],
+        au: 'een'
     },
     gr: 'n',
     or: [
         [G.notes.or.as, 'ee'],
         ['(plural)', 'een(e), eeis'],
         [G.notes.or.ae, 'ēage']
-    ]
+    ],
+    au: 'ee'
 }, {
     sc: ['eediot', 'eejit'],
     en: 'idiot',
@@ -597,7 +604,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'examinatioun, exemenatioun'],
         [G.notes.or.l, 'exāminātio']
-    ]
+    ],
+    au: 'examination'
 }, {
     sc: 'examinator',
     en: 'examiner',
@@ -678,7 +686,7 @@ G.dict.push({
 }, {
     sc: 'film-makkin',
     en: 'film-making',
-    tr: ['filmmaking', 'filmmakkin'],
+    tr: ['filmmaking', 'film making', 'filmmakkin'],
     gr: 'n',
     au: 'film-makkin'
 }, {
@@ -899,7 +907,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'mete, meit, met, mait, meat'],
         [G.notes.or.ae, 'mete']
-    ]
+    ],
+    au: 'meat'
 }, { // I
     sc: 'ilk',
     en: [
@@ -960,7 +969,8 @@ G.dict.push({
 }, {
     sc: 'knawledge',
     en: 'knowledge',
-    gr: 'n'
+    gr: 'n',
+    au: 'knawledge'
 }, { // L
     sc: 'lad',
     en: [
@@ -996,12 +1006,14 @@ G.dict.push({
     ],
     gr: 'n',
     tr: ['instruct', 'lare'],
+    au: 'lair'
 }, {
     sc: 'lassie',
     en: ['a girl', 'a woman', 'a sweetheart', 'a female child'],
     tr: ['girl', 'woman', 'wuman', 'sweetheart', 'child', 'lass', 'quine', 'quinie', 'quean'],
     hl: ['girl', 'woman', 'wuman', 'sweetheart'],
-    gr: 'n'
+    gr: 'n',
+    au: 'lassie'
 }, {
     sc: 'lawmakar',
     en: [
@@ -1237,7 +1249,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'perlament, pairliament, parliament'],
         [G.notes.or.me, 'parlement']
-    ]
+    ],
+    au: 'pairlament'
 }, { // P
     sc: 'pairt-takar',
     tr: 'pairt takar',
@@ -1299,7 +1312,8 @@ G.dict.push({
     gr: 'n',
     or: [
         [G.notes.or.as, 'poet, poiet, poyet']
-    ]
+    ],
+    au: 'poyet'
 }, {
     sc: 'poyem',
     en: 'poem',

@@ -474,7 +474,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'adduce'],
         [G.notes.or.l, 'adūcere']
-    ]
+    ],
+    au: 'adduce'
 }, {
     sc: 'aff',
     en: 'off',
@@ -484,7 +485,8 @@ G.dict.push({
         [G.notes.or.as, 'af, aff, affe'],
         [G.notes.or.ae, 'of']
     ],
-    ex: ['Richt, I’m aff!', 'Ye’ll nae tae tak the hub caps aff', 'I’m a lang gate aff yet', 'He parked the car aff tae the side']
+    ex: ['Richt, I’m aff!', 'Ye’ll need tae tak the hub caps aff', 'I’m a lang gate aff yet', 'He parked the car aff tae the side'],
+    au: 'aff'
 }, {
     sc: 'allocate',
     def: 'tae assign',
@@ -519,7 +521,8 @@ G.dict.push({
         hl: ['owned', 'owed']
     },
     gr: 'v',
-    ex: ['He awes a flat in Glesca', 'For years he aucht a simmer hoose in Fraunce', 'He haed tae sell nearhaund aw that he wis aucht', 'I’m aye awin ye some siller for the messages, na?']
+    ex: ['He awes a flat in Glesca', 'For years he aucht a simmer hoose in Fraunce', 'He haed tae sell nearhaund aw that he wis aucht', 'I’m aye awin ye some siller for the messages, na?'],
+    au: 'awe'
 }, {
     sc: 'awn',
     en: 'own',
@@ -530,7 +533,8 @@ G.dict.push({
         tr: ['owned', 'possessed']
     },
     gr: 'v',
-    ex: ['He struts aboot like he awns the place', 'She’s the awner o the estate']
+    ex: ['He struts aboot like he awns the place', 'She’s the awner o the estate'],
+    au: 'awn'
 }, { // v be
     sc: G.v.be.sc,
     en: G.v.be.en,
@@ -745,7 +749,8 @@ G.dict.push({
     en: 'defeat',
     pt_pp: {
         sc: 'defeat',
-        tr: ['defeated', 'defait', 'defeet']
+        tr: ['defeated', 'defait', 'defeet'],
+        au: 'defeat'
     },
     ex: 'Hibs war defeat by Hearts in the Cup final on Seturday',
     gr: 'v',
@@ -913,14 +918,15 @@ G.dict.push({
         [G.notes.or.as, 'examin, exemyn'],
         [G.notes.or.mf, 'examiner'],
         [G.notes.or.l, 'exāmināre']
-    ]
+    ],
+    au: 'examine'
 }, { // v gae
     sc: G.v.gae.sc,
     en: G.v.gae.en,
     tr: G.v.gae.tr,
     hl: [],
     gr: 'v',
-    au: ['gang', 'gae']
+    au: ['gae', 'gang']
 }, { // v gae neg
     sc: G.v.gae.neg.sc,
     en: G.v.gae.neg.en,
@@ -986,13 +992,15 @@ G.dict.push({
     en: G.v.gie.neg.en,
     tr: G.v.gie.trigs,
     hl: [],
-    gr: 'neg o ' + G.v.gie.meta.gr_hw
+    gr: 'neg o ' + G.v.gie.meta.gr_hw,
+    au: 'giena'
 }, { // v gae neg third person singular
     sc: G.v.gie.neg.tps.sc,
     en: G.v.gie.neg.tps.en,
     tr: G.v.gie.trigs,
     hl: [],
-    gr: 'neg third person singular o ' + G.v.gie.sc
+    gr: 'neg third person singular o ' + G.v.gie.sc,
+    au: 'giesna'
 }, { // v gie pt
     sc: G.v.gie.pt.sc,
     en: G.v.gie.pt.en,
@@ -1005,27 +1013,29 @@ G.dict.push({
     en: G.v.gie.pt.neg.en,
     tr: G.v.gie.trigs,
     hl: [],
-    gr: 'neg pt o ' + G.v.gie.meta.gr_hw
+    gr: 'neg pt o ' + G.v.gie.meta.gr_hw,
+    au: 'giedna'
 }, { // v gie pp
     sc: G.v.gie.pp.sc,
     en: G.v.gie.pp.en,
     tr: G.v.gie.trigs,
     hl: [],
-    gr: 'pp o ' + G.v.gie.meta.gr_hw
+    gr: 'pp o ' + G.v.gie.meta.gr_hw,
+    au: 'gien'
 }, { // v gie -ing form
     sc: G.v.gie.ing.sc,
     en: G.v.gie.ing.en,
     tr: [].concat(G.v.gie.trigs, G.v.gie.ing.tr),
     hl: G.v.gie.ing.tr,
+    au: 'giein'
 }, { // v Third person singular
     sc: G.v.gie.tps.sc,
     en: G.v.gie.tps.en,
     tr: G.v.gie.trigs,
     hl: [],
-    gr: 'third person singular o ' + G.v.gie.meta.gr_hw
-
-},
-    // v gie end
+    gr: 'third person singular o ' + G.v.gie.meta.gr_hw,
+    au: 'gies'
+}, // v gie end
     { // dae
         sc: G.v.dae.sc,
         pr: G.v.dae.pr,
@@ -1033,7 +1043,7 @@ G.dict.push({
         tr: [].concat(G.v.dae.tr),
         gr: 'v',
         heeze: 'dae',
-        au: 'dae'
+        au: ['dae', 'div']
     }, { // dae neg
     sc: G.v.dae.neg.sc,
     sc_alt: G.v.dae.neg.sc_alt,
@@ -1042,35 +1052,40 @@ G.dict.push({
     tr: [].concat(G.v.dae.trigs, G.v.dae.neg.tr),
     hl: G.v.dae.neg.tr,
     gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
-    ex: 'I dae ken'
+    ex: 'I dae ken',
+    au: ['dinna', 'divna']
 }, { // dae present singular
     sc: G.v.dae.ps.sc,
     en: G.v.dae.ps.en,
     pr: G.v.dae.ps.pr,
     tr: [].concat(G.v.dae.trigs, G.v.dae.ps.tr),
     hl: G.v.dae.ps.tr,
-    gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
+    au: 'dis'
 }, { // dae present singular neg
     sc: G.v.dae.ps.neg.sc,
     sc_alt: G.v.dae.ps.neg.sc_alt,
     en: G.v.dae.ps.neg.en,
     tr: [].concat(G.v.dae.trigs, G.v.dae.ps.neg.tr),
     hl: G.v.dae.ps.neg.tr,
-    gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
+    au: 'disna'
 }, { // dae past tense
     sc: G.v.dae.pt.sc,
     pr: G.v.dae.pt.pr,
     en: G.v.dae.pt.en,
     tr: G.v.dae.trigs,
     hl: [],
-    gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    gr: 'pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
+    au: 'did'
 }, { // dae neg past tense
     sc: G.v.dae.pt.neg.sc,
     sc_alt: G.v.dae.pt.neg.sc_alt,
     en: G.v.dae.pt.neg.en,
     tr: G.v.dae.trigs,
     hl: [],
-    gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', '))
+    gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.dae.sc.join(', ')),
+    au: 'didna'
 }, { // dae past par
     sc: G.v.dae.ptp.sc,
     sc_alt: G.v.dae.ptp.sc_alt,
@@ -1128,7 +1143,8 @@ G.dict.push({
         [G.notes.or.as, 'edify, edifie'],
         [G.notes.or.mf, 'edifier'],
         [G.notes.or.l, 'aedificāre']
-    ]
+    ],
+    au: 'edifee'
 }, {
     sc: 'effeir',
     pr: 'iFeer',
@@ -1175,7 +1191,8 @@ G.dict.push({
         [G.notes.or.as, 'ger, gar'],
         [G.notes.or.anor, 'gera']
     ],
-    ex: ['It gars ye think', G.ex.u, 'The court gart the company provide mair wittins']
+    ex: ['It gars ye think', G.ex.u, 'The court gart the company provide mair wittins'],
+    au: 'gar'
 }, {
     sc: 'gie bield tae/til',
     en: 'protect',
@@ -1211,7 +1228,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'hald, had, hauld, haud'],
         [G.notes.or.ae, 'healdan']
-    ]
+    ],
+    au: 'haud'
 }, {
     sc: 'hauden',
     en: 'be obliged or required to do something',
@@ -1276,20 +1294,21 @@ G.dict.push({
         ['keep in order', 'restrain', 'control'],
         ['bring', 'come closer']
     ],
-    gr: ['phrasal v']
+    gr: 'phrasal v',
+    au: 'haud-in-aboot'
 }, {
     sc: 'haud in wi',
     en: [
         ['keep in with', 'curry favour with'],
     ],
-    gr: ['phrasal v'],
+    gr: 'phrasal v',
     au: 'haud-in-wi'
 }, {
     sc: 'haud on',
     en: [
         ['carry on', 'continue'],
     ],
-    gr: ['phrasal v'],
+    gr: 'phrasal v',
     au: 'haud-on'
 }, {
     sc: 'haud on',
@@ -1353,7 +1372,8 @@ G.dict.push({
     en: 'interpose',
     pt_pp: {
         sc: ['interponed', 'interpone’t'],
-        tr: ['interposed', 'intervened', 'interjected', 'interrupted', 'interruptit']
+        tr: ['interposed', 'intervened', 'interjected', 'interrupted', 'interruptit'],
+        au: 'interponed'
     },
     tr: ['intervene', 'interject', 'interrupt'],
     gr: 'v',
@@ -1383,12 +1403,14 @@ G.dict.push({
     en: 'know',
     neg: {
         sc: 'kenna',
-        tr: ['know not', 'don\'t know', 'do not know']
+        tr: ['know not', 'don\'t know', 'do not know'],
+        au: 'kenna'
     },
     tr: G.v.ken_knaw.trigs,
     hl: 'ken',
     gr: 'v',
-    ex: [G.ex.h, G.ex.c, G.ex.b]
+    ex: [G.ex.h, G.ex.c, G.ex.b],
+    au: 'ken'
 }, {
     sc: ['kent', 'kenned'],
     en: 'knew',
@@ -1471,7 +1493,8 @@ G.dict.push({
     pt_pp: {
         sc: ['leart', 'leared'],
         tr: ['taught', 'instructed', 'learned']
-    }
+    },
+    au: 'lear'
 }, {
     sc: 'learn',
     en: [
@@ -1489,7 +1512,8 @@ G.dict.push({
     sc: 'lest',
     pt_pp: {
         sc: 'lestit',
-        tr: ['lasted', 'endured', 'continued']
+        tr: ['lasted', 'endured', 'continued'],
+        au: 'lestit'
     },
     en: [
         ['endure', 'continue']
@@ -1500,7 +1524,8 @@ G.dict.push({
         [G.notes.or.as, 'lest(e)'],
         [G.notes.or.ae, 'lǣstan']
     ],
-    ex: 'The wather’s nice the noo but I dout it winna lest!'
+    ex: 'The wather’s nice the noo but I dout it winna lest!',
+    au: 'lest'
 }, {
     sc: 'licht',
     en: 'light',
@@ -1783,7 +1808,7 @@ G.dict.push({
             [G.notes.or.as, 'hafe, haif(f), ha, hae'],
             [G.notes.or.ae, 'habban']
         ],
-        au: 'hae',
+        au: ['hae', 'hiv'],
         heeze: 'have'
     }, { // hae neg
     sc: G.v.hae.neg.sc,
@@ -1793,7 +1818,8 @@ G.dict.push({
     tr: G.v.hae.trigs,
     hl: [],
     gr: 'neg o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
-    ex: G.ex.b1
+    ex: G.ex.b1,
+    au: ['hinna', 'hivna']
 }, { // hae present singular
     sc: G.v.hae.ps.sc,
     sc_alt: G.v.hae.ps.sc_alt,
@@ -1801,13 +1827,15 @@ G.dict.push({
     pr: G.v.hae.ps.pr,
     tr: G.v.hae.trigs,
     hl: [],
-    gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    gr: 'present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+    au: 'haes'
 }, { // hae present singular neg
     sc: G.v.hae.ps.neg.sc,
     en: G.v.hae.ps.neg.en,
     tr: G.v.hae.trigs,
     hl: [],
-    gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    gr: 'neg present singular o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+    au: 'haesna'
 }, { // hae past tense
     sc: G.v.hae.pt.sc,
     pr: G.v.hae.pt.pr,
@@ -1822,7 +1850,8 @@ G.dict.push({
     en: G.v.hae.pt.neg.en,
     tr: G.v.hae.trigs,
     hl: [],
-    gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', '))
+    gr: 'neg pt o the v ' + G.utils.addSpan('tae ' + G.v.hae.sc.join(', ')),
+    au: 'haedna'
 }, { // hae past par
     sc: G.v.hae.ptp.sc,
     en: G.v.hae.ptp.en,
@@ -1835,7 +1864,8 @@ G.dict.push({
     sc: G.v.hae.ing.sc,
     en: G.v.hae.ing.en,
     tr: G.v.hae.trigs,
-    hl: []
+    hl: [],
+    au: ['haein', 'hivin']
 }, {
     sc: 'haik',
     en: [
@@ -1850,17 +1880,20 @@ G.dict.push({
     sc: 'haud oot',
     pt: {
         sc: ['held oot', 'haudit oot'],
-        tr: ['maintained', 'claimed']
+        tr: ['maintained', 'claimed'],
+        au: ['held-oot', 'haudit-oot']
     },
     pp: {
         sc: ['hauden oot', 'held oot'],
-        tr: ['maintained', 'claimed']
+        tr: ['maintained', 'claimed'],
+        au: 'hauden-oot'
     },
     en: [
         ['maintain', 'claim']
     ],
     gr: 'phrasal v',
-    ex: 'He’d aye hauden oot tae be a millionaire, but fowk didna trew it'
+    ex: 'He’d aye hauden oot tae be a millionaire, but fowk didna trew it',
+    au: 'haud-oot'
 }, {
     sc: ['heat', 'het'],
     pr: ['heet', 'hait', 'heht'],
@@ -1925,7 +1958,8 @@ G.dict.push({
     gr: 'v',
     or: [
         [G.notes.or.as, 'overgive, ourgive']
-    ]
+    ],
+    au: 'owergie'
 }, {
     sc: 'pey',
     en: 'pay',
@@ -1962,7 +1996,8 @@ G.dict.push({
 }, {
     sc: 'pit forrit',
     en: 'introduce',
-    gr: 'phrasal v'
+    gr: 'phrasal v',
+    au: 'pit-forrit'
 }, {
     sc: 'proceed',
     en: 'proceed',
@@ -1979,7 +2014,8 @@ G.dict.push({
     sc: 'propone',
     pt_pp: {
         sc: ['proponed', 'propone’t'],
-        tr: ['suggested', 'proposed', 'put forward']
+        tr: ['suggested', 'proposed', 'put forward'],
+        au: 'proponed'
     },
     def: [
         ['pit forrit for consideration', 'suggest'],
@@ -1991,17 +2027,20 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'propone'],
         [G.notes.or.l, 'prōpōnere']
-    ]
+    ],
+    au: 'propone'
 }, { // T
     sc: 'tak',
     en: 'take',
     pt: {
         sc: 'teuk',
-        tr: ['took', 'tuik']
+        tr: ['took', 'tuik'],
+        au: 'teuk'
     },
     pp: {
         sc: ['taen', 'takken', 'teuken'],
-        tr: ['taken', 'tane', 'takkin', 'tooken', 'tookin']
+        tr: ['taken', 'tane', 'takkin', 'tooken', 'tookin'],
+        au: ['taen', 'teuken']
     },
     pr: ['tak', 'take'],
     gr: 'v',
@@ -2009,14 +2048,16 @@ G.dict.push({
         [G.notes.or.as, 'tak'],
         G.notes.or.ae + ' <span>tacan</span> frae the ' + G.notes.or.anor + ' <span>taka</span>'
     ],
-    ex: 'The roaster’s comment haed been taen doun afore I could repone til him'
+    ex: 'The roaster’s comment haed been taen doun afore I could repone til him',
+    au: 'tak'
 }, { // Tak -ing ending
     sc: ['takkin', 'taein'],
     en: 'taking',
     tr: ['take', 'teuk', 'took', 'taen', 'takken', 'teuken', 'taken', 'tane', 'tooken', 'tookin', 'tak'],
     hl: 'takken', // Stops aw [tr] wirds frae bein highlichtit; wirds in [sc] and [en] will be highlichtit by defaut, sae need tae pit them here an aw
     ex: 'I wis takkin the dug for a walk whan it stertit smirrin',
-    gr: 'pres participle o the v <span>tae tak</span>'
+    gr: 'pres participle o the v <span>tae tak</span>',
+    au: ['takkin', 'taein']
 }, {
     sc: 'tak on',
     en: 'adopt',
@@ -2031,7 +2072,8 @@ G.dict.push({
 }, {
     sc: 'teach',
     en: 'teach',
-    gr: 'v'
+    gr: 'v',
+    au: 'teach'
 }, {
     sc: ['think', 'hink'],
     en: 'think',
@@ -2066,7 +2108,7 @@ G.dict.push({
     gr: 'v',
     or: 'frae the adj',
     ex: 'He tuimed the watter doun the cundie',
-    au: 'tuim'
+    au: ['tuim', 'tuim1', 'tuim2']
 }, { // R
     sc: 'raivel',
     en: [
@@ -2230,9 +2272,11 @@ G.dict.push({
     tr: ['unlock', 'unfasten'],
     pt_pp: {
         sc: 'unsteekit',
-        tr: ['opened', 'unfastened', 'unlocked']
+        tr: ['opened', 'unfastened', 'unlocked'],
+        au: 'unsteekit'
     },
-    gr: 'v'
+    gr: 'v',
+    au: 'unsteek'
 }, {
     sc: 'upcast',
     en: [
@@ -2263,7 +2307,8 @@ G.dict.push({
         [G.notes.or.as, 'waill'],
         [G.notes.or.anor, 'val']
     ],
-    ex: 'Clap the button for tae wale oot a wird allevolie'
+    ex: 'Clap the button for tae wale oot a wird allevolie',
+    au: 'wale'
 }, {
     sc: 'wirk',
     pr: ['wirk, wurk'],
@@ -2281,22 +2326,22 @@ G.dict.push({
         [G.notes.or.ae, 'wyrcan']
     ],
     ex: ['She haed wrocht hersel sair tae win the company the contract', 'The team haed been wirkin on the project for a guid while']
-},
-    // v wis
-    {
-        sc: G.v.wis.sc,
-        sc_alt: G.v.wis.sc_alt,
-        pr: G.v.wis.pr,
-        en: G.v.wis.en,
-        tr: G.v.war.trigs,
-        hl: [],
-        gr: 'v'
-    }, { // wis neg
+}, { // v wis
+    sc: G.v.wis.sc,
+    sc_alt: G.v.wis.sc_alt,
+    pr: G.v.wis.pr,
+    en: G.v.wis.en,
+    tr: G.v.war.trigs,
+    hl: [],
+    gr: 'v',
+    au: 'wis'
+}, { // wis neg
     sc: G.v.wis.neg.sc,
     en: G.v.wis.neg.en,
     tr: [].concat(G.v.wis.neg.tr, G.v.wis.trigs, G.v.war.trigs),
     hl: G.v.wis.neg.tr,
-    gr: ['neg o v ' + G.utils.addSpan(G.v.wis.sc)]
+    gr: ['neg o v ' + G.utils.addSpan(G.v.wis.sc)],
+    au: 'wisna'
 },
     // v wis end
     // v war
@@ -2306,7 +2351,8 @@ G.dict.push({
         en: G.v.war.en,
         tr: G.v.wis.trigs,
         hl: [],
-        gr: 'v'
+        gr: 'v',
+        au: 'war'
     }, { // war neg
     sc: G.v.war.neg.sc,
     en: G.v.war.neg.en,

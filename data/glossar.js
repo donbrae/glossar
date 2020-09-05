@@ -108,11 +108,13 @@ G.dict = [{
         [G.notes.or.as, 'anent'],
         [G.notes.or.ae, 'on efen']
     ],
-    ex: [G.ex.q, G.ex.o]
+    ex: [G.ex.q, G.ex.o],
+    au: 'anent'
 }, {
     sc: 'as',
     en: 'than',
     ex: ['Ye ken better as that', 'I’ll need tae pack mair as that if I’m gaun for the week'],
+    au: 'as'
 }, { // B
     sc: 'ben',
     en: 'through the house, towards the inner part',
@@ -242,7 +244,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'hirself, hirselwyn, hir sell'],
         [G.notes.or.ae, 'hire self']
-    ]
+    ],
+    au: 'hersel'
 }, { // H
     sc: 'her',
     pr: 'hur',
@@ -291,7 +294,8 @@ G.dict = [{
     ],
     tr: 'ilka',
     hl: 'ilk',
-    gr: 'pronoon'
+    gr: 'pronoon',
+    au: 'ilk'
 }, {
     sc: ['ilka ane', 'ilkane'],
     en: [
@@ -377,7 +381,8 @@ G.dict = [{
     gr: 'cardinal nummer',
     tr: ['1', 'ae', 'ain', 'ann', 'yae', 'yay'],
     hl: ['1', 'ane', 'ain', 'yin', 'wan', 'een', 'ann'],
-    inf: '<span>Ane</span> is aften uised the day as an adjective (as weel as bein the cardinal nummer <span>ane</span>), whauras in traditional spoken Modren Scots ye’r mair likely tae hear <span>ae</span> (also pronounced ‘yae’) as the adjective. <span>Ane</span> wis typically the written adjective in Aulder Scots'
+    inf: '<span>Ane</span> is aften uised the day as an adjective (as weel as bein the cardinal nummer <span>ane</span>), whauras in traditional spoken Modren Scots ye’r mair likely tae hear <span>ae</span> (also pronounced ‘yae’) as the adjective. <span>Ane</span> wis typically the written adjective in Aulder Scots',
+    au: 'ane'
 }, {
     sc: 'twa',
     pr: ['twah', 'twae'],
@@ -387,7 +392,8 @@ G.dict = [{
     or: [
         [G.notes.or.as, 'twa, tua, twae'],
         [G.notes.or.ae, 'twā']
-    ]
+    ],
+    au: 'twa'
 }, {
     sc: 'three',
     en: 'three',
@@ -540,7 +546,8 @@ G.dict = [{
     pr: 'oor',
     en: 'our',
     tr: 'wir',
-    gr: ['possesive pronoon']
+    gr: ['possesive pronoon'],
+    au: 'oor'
 }, {
     sc: 'ower',
     pr: ['uower', 'oar', 'oor', 'err'],
@@ -634,7 +641,8 @@ G.dict = [{
     en: 'to',
     gr: 'prep',
     inf: '<em>til</em> is whiles uised only afore vouels and the letter h, and aften no afore verbs',
-    ex: ['I walkit ower and spak til him', G.ex.i]
+    ex: ['I walkit ower and spak til him', G.ex.i],
+    au: 'til'
 }, {
     sc: 'thae',
     en: 'those',
@@ -660,15 +668,16 @@ G.dict = [{
     ],
     au: 'than'
 }, {
-    sc: ['theirsel', 'themsel'],
+    sc: ['thairsel', 'themsel'],
     en: 'themselves (collectively)',
-    tr: ['thairsel', 'thirsel', 'themselves', 'themself', 'theirself', 'themselfs', 'theirsels', 'themsels', 'theirselves'],
+    tr: ['theirsel', 'thirsel', 'themselves', 'themself', 'theirself', 'themselfs', 'theirsels', 'themsels', 'theirselves'],
     hl: ['thairsel', 'thirsel', 'themselves', 'themself', 'theirself', 'theirselves'],
     gr: 'pronoon',
     or: [
         [G.notes.or.as, 'thair self, thar self, thair sell'],
         [G.notes.or.as, 'thame sell, them sel']
-    ]
+    ],
+    au: ['thairsel', 'themsel']
 }, {
     sc: 'thaim',
     en: 'them',
@@ -687,15 +696,16 @@ G.dict = [{
     ],
     ex: G.ex.o1
 }, {
-    sc: ['theirsels', 'themsels'],
+    sc: ['thairsels', 'thaimsels'],
     en: 'themselves (individually)',
-    tr: ['thairsels', 'thirsels', 'themselves', 'themselfs', 'theirselfs', 'theirsel', 'themsel', 'theirselves'],
+    tr: ['theirsels', 'thirsels', 'themselves', 'themselfs', 'theirselfs', 'theirsel', 'themsel', 'themsel', 'theirselves'],
     hl: ['thairsels', 'thirsels', 'themselves', 'themselfs', 'theirselfs', 'theirselves'],
     gr: 'pronoon',
     or: [
         [G.notes.or.as, 'there selfs'],
         [G.notes.or.as, 'thame sellffis, themsels, them sellis']
-    ]
+    ],
+    au: ['thairsels', 'thaimsels']
 }, {
     sc: 'thir',
     pr: ['thir', 'thur'],

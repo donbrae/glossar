@@ -29,13 +29,15 @@ G.dict.push({
         [G.notes.or.as, 'far ben']
     ],
     ex: ['He wis gey faur ben wi his warkmates'],
-    au: 'nae-bother'
+    au: 'nae-bother',
+    au: 'faur-ben'
 }, {
     sc: 'for tae',
     en: 'in order to',
     tr: 'for to',
     gr: 'subordinatin conj',
-    ex: G.ex.k
+    ex: G.ex.k,
+    au: 'for-tae'
 }, {
     sc: 'ower and abuin',
     en: 'over and above',
@@ -71,16 +73,18 @@ G.dict.push({
 }, {
     sc: 'muckle the mair',
     en: 'all the more',
-    gr: 'phr'
+    gr: 'phr',
+    au: 'muckle-the-mair'
 }, {
     sc: 'gae aboot the buss',
     en: 'beat around the bush',
     tr: 'beat about the bush',
     ex: 'He spak fair oot, no gaein aboot the buss wi it',
-    gr: 'phr'
+    gr: 'phr',
+    au: 'gae-aboot-the-buss'
 }, {
-    sc: 'gie\'s',
-    tr: ['gies', 'geez', 'gie me', 'gie us', 'give me', 'give us'],
+    sc: 'gie’s',
+    tr: ['gies', 'gie\'s', 'geez', 'gie me', 'gie us', 'give me', 'give us'],
     def: 'Gie me, gie us (contraction o ‘gie us’)',
     au: 'gie’s'
 }, {
@@ -92,11 +96,13 @@ G.dict.push({
     sc: 'aabody ither',
     tr: ['awbody ither', 'everybody else'],
     en: 'everyone else',
-    gr: 'phr'
+    gr: 'phr',
+    au: 'awbody-ither'
 }, {
     sc: 'frae this forrit',
     en: 'from now on',
-    gr: 'phr'
+    gr: 'phr',
+    au: 'frae-this-forrit'
 }, {
     sc: 'pit in an unco flutter',
     en: 'amaze',

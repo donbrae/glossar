@@ -42,12 +42,14 @@ G.dict.push({ // A
     en: [
         ['previous', 'prior', 'antecedent']
     ],
-    gr: 'phrasal adj'
+    gr: 'phrasal adj',
+    au: 'afore-gane'
 }, {
     sc: 'ain',
     en: 'own',
     gr: ['adj', 'pronoon'],
-    ex: 'Juist in your ain time, likes!'
+    ex: 'Juist in your ain time, likes!',
+    au: 'ain'
 }, {
     sc: 'allevolie',
     en: [
@@ -75,7 +77,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'al(l), aw'],
         [G.notes.or.ae, 'eall']
-    ]
+    ],
+    au: 'aw'
 }, { // B
     sc: 'baltic',
     def: 'o the weather, the temperatur: fell cauld',
@@ -272,7 +275,8 @@ G.dict.push({ // A
         [G.notes.or.emods2, 'deleeret, deleerit, delireet'],
         [G.notes.or.mf, 'delirer'],
         [G.notes.or.l, 'dēlīrāre']
-    ]
+    ],
+    au: 'deleerit'
 }, {
     sc: 'doutsome',
     en: [
@@ -319,7 +323,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'elementar, elementair'],
         [G.notes.or.mf, 'elementaire'],
         [G.notes.or.l, 'elementārius']
-    ]
+    ],
+    au: 'elementar'
 }, {
     sc: 'evendoun',
     en: [
@@ -334,7 +339,8 @@ G.dict.push({ // A
     sc: 'evenforrit',
     en: 'straightforward',
     tr: 'straight forward',
-    gr: 'adj'
+    gr: 'adj',
+    au: 'evenforrit'
 }, {
     sc: 'evident',
     en: [
@@ -447,7 +453,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'for(e)said, foirsaid'],
         [G.notes.or.ae, 'foresæᵹd, foresǽd']
-    ]
+    ],
+    au: 'foresaid'
 }, {
     sc: 'frequent',
     en: 'frequent',
@@ -532,7 +539,8 @@ G.dict.push({ // A
     tr: ['dementit', 'fuil', 'feel', 'crazy', 'stupit', 'awry', 'mad', 'deleerit', 'daft'],
     hl: ['dementit', 'fuil', 'feel', 'crazy', 'stupit', 'awry', 'mad'],
     gr: 'adj',
-    or: 'unkent'
+    or: 'unkent',
+    au: 'gyte'
 }, { // H
     sc: 'hale',
     en: 'whole',
@@ -615,7 +623,8 @@ G.dict.push({ // A
         [G.notes.or.me, 'aquointe'],
         [G.notes.or.mf, 'accointe']
     ],
-    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the minister’s view anent the maiter']
+    ex: ['I’m no yet fully acquent wi the policy', 'I’m weel aquent wi the minister’s view anent the maiter'],
+    au: 'acquent'
 }, {
     sc: 'knackie',
     en: [
@@ -626,7 +635,8 @@ G.dict.push({ // A
     ],
     tr: ['skeely', 'clever', 'nippy'],
     hl: [],
-    gr: 'adj'
+    gr: 'adj',
+    au: 'knackie'
 }, { // L
     sc: 'laident',
     en: 'burdened',
@@ -652,6 +662,7 @@ G.dict.push({ // A
         [G.notes.or.ae, 'lætest']
     ],
     ex: ['The last time I seen her wis afore Christmas'],
+    au: 'last'
 }, {
     sc: ['leart', 'leared'],
     en: [
@@ -733,7 +744,8 @@ G.dict.push({ // A
     en: [
         ['ongoing', 'continuing']
     ],
-    gr: 'adj'
+    gr: 'adj',
+    au: 'ongaein'
 }, {
     sc: 'ony',
     en: 'any',
@@ -791,7 +803,8 @@ G.dict.push({ // A
         [G.notes.or.lms, 'pravious'],
         [G.notes.or.mode, 'prævious, previous'],
         [G.notes.or.l, 'prævi-us']
-    ]
+    ],
+    au: 'previous'
 }, {
     sc: 'pyntit',
     en: 'decisive',
@@ -958,14 +971,15 @@ G.dict.push({ // A
         [G.notes.or.as, 'tymous']
     ]
 }, { // T
-    sc: 'their',
+    sc: 'thair',
     en: 'their',
-    tr: ['thair', 'thir'],
+    tr: ['their', 'thir'],
     gr: 'possessive adj',
     or: [
         [G.notes.or.as, 'thair, thar(e)'],
         '?'
     ],
+    au: 'thair'
 }, {
     sc: 'tuim',
     pr: ['tim', 'teem', 'toom', 'taim'],
@@ -1035,7 +1049,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'weill, wele'],
         [G.notes.or.ae, 'wel'],
         [G.notes.or.anor, 'val']
-    ]
+    ],
+    au: 'weel'
 }, {
     sc: 'wrang',
     en: 'wrong',

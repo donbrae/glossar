@@ -75,7 +75,8 @@ G.dict.push({
 }, {
     sc: 'Belgium',
     en: 'Belgium',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'belgium'
 }, {
     sc: 'Bertany',
     en: 'Brittany',
@@ -119,7 +120,8 @@ G.dict.push({
     sc: 'Californie',
     en: 'California',
     gr: 'pn',
-    def: 'a state in wastren USA'
+    def: 'a state in wastren USA',
+    au: 'californie'
 }, {
     sc: 'Canadae',
     en: 'Canada',
@@ -173,7 +175,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'Dens, Dence'],
         [G.notes.or.ae, 'denisc']
-    ]
+    ],
+    au: 'dens'
 }, {
     sc: 'Easter Seas',
     en: 'Baltic Sea',
@@ -375,7 +378,8 @@ G.dict.push({
 }, {
     sc: 'North Pole',
     en: 'Arctic',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'north-pole'
 }, {
     sc: 'North Sea',
     en: 'North Sea',
@@ -395,7 +399,8 @@ G.dict.push({
 }, {
     sc: 'Poland',
     en: 'Poland',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'poland'
 }, {
     sc: ['Portingal', 'Portugal'],
     en: 'Portugal',
@@ -490,7 +495,8 @@ G.dict.push({
     or: [
         [G.notes.or.as, 'Swedin, Suadin'],
         [G.notes.or.mlg + ', ' + G.notes.or.md, 'Sweden']
-    ]
+    ],
+    au: 'swaiden'
 }, {
     sc: 'Swade',
     def: [
@@ -540,7 +546,8 @@ G.dict.push({
     gr: 'pn',
     or: [
         [G.notes.or.as, 'Ungarie, Ungary']
-    ]
+    ],
+    au: 'ungairy'
 }, {
     sc: 'Ungairian',
     pr: 'unGairian',
@@ -549,7 +556,8 @@ G.dict.push({
 }, {
     sc: 'Wales',
     def: 'a country in Great Britain that is pairt o the Unitit Kinrick',
-    gr: 'pn'
+    gr: 'pn',
+    au: 'wales'
 }, {
     sc: 'warld',
     pr: 'wuruld',

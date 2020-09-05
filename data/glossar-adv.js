@@ -19,7 +19,8 @@ G.dict.push({ // A
     sc: 'aboot',
     en: 'about',
     tr: 'anenst',
-    gr: ['prep', 'adv']
+    gr: ['prep', 'adv'],
+    au: 'aboot'
 }, {
     sc: 'abuin',
     pr: ['abön', 'abün', 'abin', 'abain', 'abeen'],
@@ -37,7 +38,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'aft, oft'],
         [G.notes.or.ae, 'oft']
-    ]
+    ],
+    au: 'aft'
 }, {
     sc: 'aften',
     en: 'often',
@@ -47,7 +49,8 @@ G.dict.push({ // A
     gr: 'adv',
     or: [
         [G.notes.or.as, 'aften, aft, often']
-    ]
+    ],
+    au: 'aften'
 }, {
     sc: 'aft-times',
     en: [
@@ -100,7 +103,8 @@ G.dict.push({ // A
     sc: 'benwart',
     en: 'inward',
     tr: ['benward', 'inwards'],
-    gr: ['adv', 'adj']
+    gr: ['adv', 'adj'],
+    au: 'benwart'
 }, {
     sc: 'a bittie',
     en: [
@@ -220,7 +224,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'frequentlie'],
         [G.notes.or.l, 'frequens']
-    ]
+    ],
+    au: 'frequently'
 }, { // G
     sc: 'gey',
     pr: 'guyee',
@@ -245,7 +250,8 @@ G.dict.push({ // A
 }, {
     sc: 'hinderly',
     en: 'eventually',
-    gr: 'adv'
+    gr: 'adv',
+    au: 'hinderly'
 }, { // J
     sc: 'juist',
     pr: G.pr.juist,
@@ -308,7 +314,8 @@ G.dict.push({ // A
     hl: 'besides',
     or: [
         [G.notes.or.as, 'mar(e)over, mairower']
-    ]
+    ],
+    au: 'mairower'
 }, {
     sc: ['certie', 'certes'],
     pr: ['certie', 'certis'],
@@ -350,7 +357,8 @@ G.dict.push({ // A
         ['almost', 'nearly']
     ],
     gr: 'adv',
-    tr: 'mostly'
+    tr: 'mostly',
+    au: 'maistly'
 }, {
     sc: 'michty',
     en: [
@@ -413,7 +421,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'na'],
         [G.notes.or.as, 'nay']
-    ]
+    ],
+    au: 'naw'
 }, {
     sc: ['nae'],
     en: 'no',
@@ -520,7 +529,8 @@ G.dict.push({ // A
         [G.notes.or.as, 'sa, swa, sua'],
         [G.notes.or.ae, 'swā']
     ],
-    ex: ['I wis gey forfauchelt sae didna bather gaun oot', 'The wather’s no sae nice the day', 'He haed tae pit mair siller in the pairkin meter sae as tae evite gettin a ticket', 'Ye’r a bonnie fechter, sae ye ar!']
+    ex: ['I wis gey forfauchelt sae didna bather gaun oot', 'The wather’s no sae nice the day', 'He haed tae pit mair siller in the pairkin meter sae as tae evite gettin a ticket', 'Ye’r a bonnie fechter, sae ye ar!'],
+    au: 'sae'
 }, {
     sc: 'sair',
     en: [
@@ -613,7 +623,8 @@ G.dict.push({ // A
     or: [
         [G.notes.or.as, 'togidder, the gidder, thegither'],
         [G.notes.or.ae, 'tōgædere']
-    ]
+    ],
+    au: 'thegither'
 }, {
     sc: 'the morn',
     en: [
@@ -680,7 +691,8 @@ G.dict.push({ // A
     sc: 'up the stair',
     en: 'upstairs',
     gr: 'phrasal adv',
-    ex: ['Awa up the stair and hae a leuk', 'My neebour up the stair telt me']
+    ex: ['Awa up the stair and hae a leuk', 'My neebour up the stair telt me'],
+    au: 'up-the-stair'
 }, {
     sc: ['whan', 'fan'],
     pr: ['whan', 'whaun', 'whin', 'fan', 'fin', 'aan'],
