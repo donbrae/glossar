@@ -1120,7 +1120,7 @@ G.dict.push({
     au: 'jalouse'
 }, {
     sc: 'dounlaid',
-    pt: {
+    pt_pp: {
         sc: 'dounlaidit',
         en: 'downloaded',
         tr: 'doonloadit',

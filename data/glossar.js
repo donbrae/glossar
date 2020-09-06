@@ -592,7 +592,7 @@ G.dict = [{
     ],
     gr: ['conj']
 }, {
-    sc: ['thay', 'they'],
+    sc: 'thay',
     en: 'they',
     tr: ['thai']
 }, {
@@ -668,16 +668,15 @@ G.dict = [{
     ],
     au: 'than'
 }, {
-    sc: ['thairsel', 'themsel'],
+    sc: ['thairsel', 'thaimsel'],
     en: 'themselves (collectively)',
-    tr: ['theirsel', 'thirsel', 'themselves', 'themself', 'theirself', 'themselfs', 'theirsels', 'themsels', 'theirselves'],
-    hl: ['thairsel', 'thirsel', 'themselves', 'themself', 'theirself', 'theirselves'],
+    tr: ['theirsel', 'thirsel', 'themself', 'theirself', 'themsel'],
     gr: 'pronoon',
     or: [
         [G.notes.or.as, 'thair self, thar self, thair sell'],
         [G.notes.or.as, 'thame sell, them sel']
     ],
-    au: ['thairsel', 'themsel']
+    au: ['thairsel', 'thaimsel']
 }, {
     sc: 'thaim',
     en: 'them',
@@ -698,8 +697,7 @@ G.dict = [{
 }, {
     sc: ['thairsels', 'thaimsels'],
     en: 'themselves (individually)',
-    tr: ['theirsels', 'thirsels', 'themselves', 'themselfs', 'theirselfs', 'theirsel', 'themsel', 'themsel', 'theirselves'],
-    hl: ['thairsels', 'thirsels', 'themselves', 'themselfs', 'theirselfs', 'theirselves'],
+    tr: ['theirsels', 'thirsels', 'themselves', 'themselfs', 'themsels', 'theirselfs', 'theirselves'],
     gr: 'pronoon',
     or: [
         [G.notes.or.as, 'there selfs'],

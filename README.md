@@ -27,6 +27,22 @@ Audience: Scots speakers, scrievers and learners.
 
 In the project folder (`./glossar`) rin `php -S localhost:8000` and gae tae [http://localhost:8000](http://localhost:8000) in the brouser.
 
+## Testing audio
+
+Rin this script in the brouser console:
+
+```javascript
+GLOSSAR.dict.forEach(item => {
+    if (item.au) {
+        [].concat(item.au).forEach(item => {
+            document.body.insertAdjacentHTML('afterbegin', `<audio id="${item}" class="audio d-none" src="/audio/${item.charAt(0)}/${item}.mp3" preload="auto"></audio>`);
+        });
+    }
+});
+
+console.log('Checking duin');
+```
+
 # Dev and eikin items tae the `GLOSSAR.dict` object
 
 Mak chenges tae template **index.dev.php** and **app.scss**. For tae big, see section *Bigging* ablo.
