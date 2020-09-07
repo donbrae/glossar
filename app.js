@@ -26,7 +26,7 @@ const GLOSSAR = (function () {
         random: [], // Indices of which random entries have already been selected
         audio: null,
         results_length: 0, // How many results are returned by user query
-        title: document.title.split(': ')[1] ? document.title.split(': ')[0] : document.title, // Change page title so searches are in the user's browser history. state.title is the default title, without a trailing ": <user_query>" (which will be present if a user navigates directly to a query URL, e.g. https://scots.app/muckle)
+        title: document.title.split(': ')[1] ? document.title.split(': ')[0] : document.title, // (This shouldn't change) Store page title so searches are in the user's browser history. state.title is the default title, without a trailing ": <user_query>" (which will be present if a user navigates directly to a query URL, e.g. https://scots.app/muckle)
         audio_button: null,
         bypass_history_push: false, // Flag. When user navigates history we don't want to call historyPush() to add in item to the history. See popstate listener
         btn_copy_initial_html: document.getElementById('btn-copy').innerHTML
@@ -191,8 +191,6 @@ const GLOSSAR = (function () {
             btn.disabled = true;
             results.classList.remove('show');
 
-            document.title = state.title;
-
             hideCopyButton();
             setTimeout(reset, 250);
 
@@ -287,19 +285,24 @@ const GLOSSAR = (function () {
     function reset() {
         document.getElementById('results').innerHTML = '';
         state.results_length = 0;
-        document.title = state.title;
         state.last_word_searched_for = '';
         if (!state.bypass_history_push && !state.nae_results) {
-            historyPush('', '', '/');
+            historyPush('', '', '/', state.title);
         } else
             state.bypass_history_push = false;
         // state.nae_results is reset in goSearch()
     }
 
-    // Add state to browser history
-    function historyPush(state, title, path) {
+    // Add state to browser history (and optionally amend document.title)
+    function historyPush(state, title, path, document_title) {
         console.log('historyPush()');
+        // console.log('state', state);
+        // console.log('title', title);
+        // console.log('path', path);
         history.pushState({ user_query: state }, title, path);
+
+        if (document_title) // Should document.title be changed?
+            document.title = document_title;
     }
 
     function searchInit(e) {
@@ -673,17 +676,16 @@ const GLOSSAR = (function () {
                 }
             });
 
-            document.title = `${state.title}: ${state.word}`;
             showCopyButton();
 
             if (!state.bypass_history_push)
-                historyPush(state.word_lc, state.word, `/q/${state.word_lc}`);
+                historyPush(state.word_lc, state.word, `/q/${state.word_lc}`, `${state.title}: ${state.word}`);
 
         } else { // !r.length (initial results)
             noResults();
 
             if (checkPath()) // checkPath to make sure we don't keep adding to history after the first empty results set in a series of failed searches (on the first empty result the previously successful user search query will be returned by checkPath(), based on the URL path)
-                historyPush('', '', '/');
+                historyPush('', '', '/', state.title);
         }
 
         state.last_word_searched_for = state.word_lc;

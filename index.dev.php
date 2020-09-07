@@ -22,6 +22,7 @@ $last_updatit_unix = date("U", filemtime("glossar-bundle.min.js"));
 # Detect query string for URLs like https://scots.app/q/muckle
 $params = explode('/', $_SERVER['REQUEST_URI']);
 $user_query = '';
+$title_append = '';
 
 if (strlen(trim($params[1])) && strlen(trim($params[2]))) {
   $user_query = trim(urldecode($params[2]));
