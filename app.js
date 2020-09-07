@@ -471,7 +471,7 @@ const GLOSSAR = (function () {
             let el = document.getElementById(id);
 
             if (!el) // If an <audio> element for this words has not already be added to DOM
-                document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="/audio/${id.charAt(0)}/${id}.mp3" preload="auto"></audio>`); // Eik audio element
+                document.body.insertAdjacentHTML('afterbegin', `<audio id="${id}" class="audio d-none" src="/audio/${id.charAt(0)}/${id}.mp3" preload="none"></audio>`); // Eik audio element
 
             buttons.push(`<button class="play-audio btn" data-file="${id}">${cfg.play_button}</i></button>`); // Eik button
         });
