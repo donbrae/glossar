@@ -87,18 +87,6 @@ const GLOSSAR = (function () {
         }
 
         checkForUpdate();
-
-        // Check for value on page load (after back button having navigated away from the app). In timeout because the browser doesn't fill in the input field right away. GET query will be available right away
-        // setTimeout(function () {
-        //     const val = document.getElementById('searchTextbox').value.trim();
-        //     // const path = val.length ? `${state.initial_path}${cfg.user_query_path}/${val.toLowerCase()}` : '';
-
-        //     // historyPush(val.toLowerCase(), val, path);
-
-        //     if (val.trim().length)
-        //         searchInit();
-        // }, 150);
-
         addListeners();
 
         const word = checkPath(); // Has the user landed on the app with a word in the URL?
@@ -172,6 +160,12 @@ const GLOSSAR = (function () {
                 state.query = `=${state.word}`;
             } else
                 state.query = cfg.extended_cmd + state.word;
+
+            // Speed test
+            // console.time();
+            // fuse.search(state.query);
+            // console.timeEnd();
+            // btn.disabled = false;
 
             print(fuse.search(state.query), function () {
                 state.random.push(num);
