@@ -19,7 +19,8 @@ G.dict.push({
 }, {
     sc: ['nae bother', 'nae bather'],
     en: 'no problem',
-    gr: 'phr'
+    gr: 'phr',
+    au: 'nae-bother'
 }, {
     sc: 'faur ben',
     en: [['in great favour', 'on good terms', 'friendly', 'popular']],
@@ -29,7 +30,6 @@ G.dict.push({
         [G.notes.or.as, 'far ben']
     ],
     ex: ['He wis gey faur ben wi his warkmates'],
-    au: 'nae-bother',
     au: 'faur-ben'
 }, {
     sc: 'for tae',

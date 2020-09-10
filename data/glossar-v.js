@@ -2137,8 +2137,8 @@ G.dict.push({
         'stave a body pairt',
         'streetch oot for tae claucht something'
     ],
-    tr: ['hit', 'ding', 'lengthen', 'rouse', 'straiten', 'pull oot', 'reach', 'hand', 'gie', 'give', 'hang', 'sprain', 'hang', 'pass', 'stretch', 'overexert', 'strain', 'lengthen', 'pull', 'maucht'],
-    hl: ['hit', 'ding', 'lengthen', 'rouse', 'straiten', 'pull oot', 'reach', 'hand', 'gie', 'give', 'hang', 'sprain', 'hang', 'pass', 'stretch', 'overexert', 'strain', 'lengthen', 'pull'],
+    tr: ['streetch', 'hit', 'ding', 'lengthen', 'lenthen', 'rouse', 'straiten', 'pull oot', 'reach', 'hand', 'gie', 'give', 'hang', 'sprain', 'hang', 'pass', 'stretch', 'overexert', 'strain', 'lengthen', 'pull', 'stave', 'maucht', 'claucht'],
+    hl: ['streetch', 'hit', 'ding', 'lengthen', 'lenthen', 'rouse', 'straiten', 'pull oot', 'reach', 'hand', 'gie', 'give', 'hang', 'sprain', 'hang', 'pass', 'stretch', 'overexert', 'strain', 'lengthen', 'pull', 'stave'],
     pt_pp: {
         sc: ['raxed', 'raxt'],
         tr: ['streetched', 'hit', 'handed', 'reached', 'stretched', 'overexterted', 'strained', 'sprained', 'roused', 'lengthened', 'extended', 'accomodated', 'hanged']

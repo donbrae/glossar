@@ -496,14 +496,14 @@ G.dict.push({ // A
 }, {
     sc: 'ower',
     pr: ['uower', 'oar', 'oor', 'err'],
-    en: [
-        ['above', 'covering', 'downward (over)'],
-        ['across', 'sideways'],
-        ['overmuch, excessively'],
-        ['from beginning to end', 'throughout'],
-        ['off to sleep']
+    def: [
+        ['abuin', 'coverin', 'doun the wey (ower)'],
+        ['athort', 'sideyweys'],
+        'ower muckle',
+        ['frae stert tae feenish', 'oot-throu'],
+        'aff tae sleep'
     ],
-    tr: ['owre', 'ootthrou', 'overly', 'abuin', 'over', 'too', 'athort', 'athwart'],
+    tr: ['off to sleep', 'from beginning to end', 'throughout', 'overmuch', 'excessively', 'across', 'sideways', 'above', 'covering', 'downward', 'owre', 'ootthrou', 'overly', 'over', 'too', 'athwart'],
     hl: ['overly', 'over', 'too', 'athwart'],
     gr: 'adv',
     or: [

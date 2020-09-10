@@ -1391,7 +1391,7 @@ G.dict.push({
         'a stave (o a body pairt)',
         ['reakin', 'a reak']
     ],
-    tr: ['streetch', 'stretch', 'pull', 'stave', 'reakin', 'reak', 'stretching', 'a pull', 'a stretch', 'a strain', 'a sprain', 'reaching', 'reach'],
+    tr: ['streetch', 'stretch', 'pull', 'stave', 'reakin', 'reak', 'stretching', 'strain', 'sprain', 'reaching', 'reach'],
     gr: 'n',
     or: 'see verb'
 }, { // R
