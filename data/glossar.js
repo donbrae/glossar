@@ -84,6 +84,15 @@ G.pr = {
 };
 
 G.dict = [{
+    sc: ['a, an'],
+    en: [
+        ['a', 'an']
+    ],
+    gr: 'indefinite airticle',
+    inf: '<i>a</i> can be uised afore baith a vouel and a consonant',
+    ex: ['It’s a braw day the day', 'A horse cam skelpin by us', 'He’s sic a eediot', 'I wis haein a awfie time o it'],
+    heeze: 'a'
+}, {
     sc: ['ay', 'aye'],
     en: 'yes',
     gr: 'exclamation',
@@ -637,12 +646,27 @@ G.dict = [{
     gr: 'conj',
     or: 'see adv'
 }, { // T
-    sc: 'til',
+    sc: ['tae', 'til'],
     en: 'to',
     gr: 'prep',
-    inf: '<em>til</em> is whiles uised only afore vouels and the letter h, and aften no afore verbs',
-    ex: ['I walkit ower and spak til him', G.ex.i],
+    inf: '<em>til</em> is whiles uised only afore vouels and the letter h, and no aften afore verbs',
+    ex: ['I walkit ower and spak til him', G.ex.i, 'I haed my coffee than gaed tae wark'],
+    or: [
+        [G.notes.or.as, 'to, til(l), ta'],
+        [G.notes.or.ae, 'tō']
+    ],
     au: 'til'
+}, {
+    sc: 'tae',
+    def: [['an aw', 'as weel', 'forby']],
+    gr: 'adv',
+    tr: ['an aw', 'as weel', 'forby', 'besides', 'too', 'also', 'additionally', 'as well', 'moreover'],
+    hl: ['besides', 'too', 'also', 'additionally', 'as well', 'moreover'],
+    ex: ['I’v bade in Glesca tae', 'I fund it richt difficult tae'],
+    or: [
+        [G.notes.or.as, 'to'],
+        [G.notes.or.ae, 'tō']
+    ]
 }, {
     sc: 'thae',
     en: 'those',

@@ -936,6 +936,15 @@ G.dict.push({
         [G.notes.or.l, 'innovātio']
     ]
 }, {
+    // sc: ['it', 'hit'],
+    // en: 'it',
+    // gr: 'pronoon',
+    // or: [
+    //     [G.notes.or.as, ''],
+    //     [G.notes.or.xx, '']
+    // ],
+    // ex: G.ex.,
+}, {
     sc: 'novator',
     en: 'innovator',
     gr: 'n',
@@ -1486,9 +1495,14 @@ G.dict.push({
     gr: 'n',
     or: 'see adj'
 }, {
-    sc: 'signatur',
+    sc: 'signature',
     en: 'signature',
-    gr: 'n'
+    gr: 'n',
+    or: [
+        [G.notes.or.as, 'signatour, signator'],
+        [G.notes.or.mf, 'signature'],
+        [G.notes.or.l, 'signātūra']
+    ]
 }, {
     sc: 'siller',
     en: ['money', 'silver'],
