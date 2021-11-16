@@ -25,7 +25,7 @@ Audience: Scots speakers, scrievers and learners.
 
 # Testing locally
 
-In the project folder (`./glossar`) rin `php -S localhost:8000` and gae tae [http://localhost:8000](http://localhost:8000) in the brouser.
+Rin **build.sh** (see ‘Biggin’ section ablo), syne rin `php -S localhost:8000` and gae tae [http://localhost:8000](http://localhost:8000) in the brouser.
 
 ## Testing audio
 
@@ -83,7 +83,7 @@ Rin **build.sh** for tae big the JS bundle (**glossar-bundle.min.js**) and **ind
 
 **build.sh** requires `sass` (`brew install sass/sass/sass`) and, optionally, `terser` (for minification; see ablo).
 
-Whan testin on dev.scots.app or deployin tae production at scots.app, **index.php**, **glossar-bundle.min.js**, **glossar-bundle.min.js.map**, **app.css** and **app.css.map** shoud be uplaidit, as weel as **app.js** and **./data** (sae as the source mapping wirks). **app.js** and **./data** shoud be pittin in the folder cried **src**.
+Whan testin on dev.scots.app or deployin tae production at scots.app, **index.php**, **glossar-bundle.min.js**, **glossar-bundle.min.js.map**, **app.css** and **app.css.map** shoud be uplaidit, as weel as **app.js** and **./data** (sae as the source mapping wirks). **app.js** and **./data** shoud be pitten in the folder cried **src**.
 
 ## JS minification
 
