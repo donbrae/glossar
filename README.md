@@ -35,6 +35,8 @@ Whan testin on dev.scots.app or deployin tae production at scots.app, **index.ph
 
 In the `jsmin` script in package.json, mak siccar that the ruit is pyntit at either live or dev as relevant: `--source-map "root='https://dev.scots.app/src',url='glossar-bundle.min.js.map'"`
 
+Mind and redd the wab host’s cache an aw.
+
 # Testing locally
 
 Rin `php -S localhost:8000` and gae tae [http://localhost:8000](http://localhost:8000) in the brouser.

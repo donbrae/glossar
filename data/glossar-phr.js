@@ -149,4 +149,52 @@ G.dict.push({
     en: 'remain calm',
     tr: ['keep calm', 'keep caum'],
     gr: 'phr'
-});
+}, {
+    sc: 'It\'s past jookin whan the heid\'s aff', // > Not being highlighted
+    tr: ['horse', 'bolt', 'stable'],
+    hl: 'It\'s past jookin whan the heid\'s aff',
+    en: 'It\'s too late to lock the stable when the horse has bolted', // > Not being highlighted
+    gr: 'phr'
+}, {
+    sc: 'Ilka land haes its ain leid',
+    en: 'Every country has its own language and story',
+    tr: ['leid', 'language'],
+    hl: 'Ilka land haes its ain leid',
+    gr: 'phr'
+}, {
+    sc: 'A bairn maun creep afore it gangs',
+    en: 'Practice makes perfect',
+    tr: ['bairn', 'practise', 'perfect'],
+    hl: 'A bairn maun creep afore it gangs',
+    gr: 'phr'
+}, {
+    sc: 'Lea walcome aye ahint ye',
+    en: 'Don\'t outstay your welcome',
+    tr: ['welcome', 'walcome', 'outstay'],
+    hl: 'Lea walcome aye ahint ye',
+    gr: 'phr'
+}, {
+    sc: '',
+    en: '',
+    gr: 'phr'
+}, {
+    sc: '',
+    en: '',
+    gr: 'phr'
+}, {
+    sc: '',
+    en: '',
+    gr: 'phr'
+}, {
+    sc: '',
+    en: '',
+    gr: 'phr'
+}, {
+    sc: '',
+    en: '',
+    gr: 'phr'
+}, {
+    sc: '',
+    en: '',
+    gr: 'phr'
+} );

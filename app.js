@@ -49,7 +49,7 @@ const GLOSSAR = (function () {
             // includeMatches: false, // false
             threshold: 0.1, // 0.6 (key fuzzy search property: https://fusejs.io/api/options.html#fuzzy-matching-options)
             // location: 0, // 0
-            distance: 250, // 100 // 'tak the maiter throu haunds' wasn't appearing with value set to 100
+            distance: 600, // 100 // 'tak the maiter throu haunds' wasn't appearing with value set to 100
             // ignoreLocation: false, // false
             // minMatchCharLength: 1, // Using cfg.threshold_exact_match instead
             useExtendedSearch: true, // false https://fusejs.io/examples.html#extended-search. Requires fuse.min.js (i.e. non-basic)

@@ -123,7 +123,7 @@ if (strlen(trim($params[1])) && strlen(trim($params[2]))) {
 
     <footer class="footer">
         <div class="container">
-            <div class="text-muted">Last updatit: <span class="last-updatit" data-updatit="<?php echo $last_updatit_unix; ?>"><?php echo $last_updatit; ?></span>. <a href="/aboot">Aboot this app</a>.<br>Nae trackin cookies.</div>
+            <div class="text-muted">Last updatit: <span class="last-updatit" data-updatit="<?php echo $last_updatit_unix; ?>"><?php echo $last_updatit; ?></span>. <a href="/aboot">Aboot this app</a>.<br>Nae tracking cookies.</div>
             <div class="update-link d-none">
                 <button class="btn btn-primary get-update">Update available. Refresh noo!</button>
             </div>
