@@ -23,9 +23,21 @@ Audience: Scots speakers, scrievers and learners.
 * `terser` (optional; for JS minification)
 * `sass`
 
+# Install and big
+
+`npm install`
+
+Rin **build.sh** for tae big the JS bundle (**glossar-bundle.min.js**) and **index.php**. Eik argument `css` tae compile CSS and update query string when calling CSS, or *min* for tae minifee the JS.
+
+**build.sh** requires `sass` and, optionally, `terser` (for minification).
+
+Whan testin on dev.scots.app or deployin tae production at scots.app, **index.php**, **glossar-bundle.min.js**, **glossar-bundle.min.js.map**, **app.css** and **app.css.map** shoud be uplaidit, as weel as **app.js** and **./data** (sae as the source mapping wirks). **app.js** and **./data** shoud be pitten in the folder cried **src**.
+
+In the `jsmin` script in package.json, mak siccar that the ruit is pyntit at either live or dev as relevant: `--source-map "root='https://dev.scots.app/src',url='glossar-bundle.min.js.map'"`
+
 # Testing locally
 
-Rin **build.sh** (see ‘Biggin’ section ablo), syne rin `php -S localhost:8000` and gae tae [http://localhost:8000](http://localhost:8000) in the brouser.
+Rin `php -S localhost:8000` and gae tae [http://localhost:8000](http://localhost:8000) in the brouser.
 
 ## Testing audio
 
@@ -45,7 +57,7 @@ console.log('Checking duin');
 
 # Dev and eikin items tae the `GLOSSAR.dict` object
 
-Mak chenges tae template **index.dev.php** and **app.scss**. For tae big, see section *Bigging* ablo.
+Mak chenges tae template **index.dev.php** and **app.scss**.
 
 Trigger wirds (`tr`), pronunciations (`pr`) and alternative spellings (`sc_alt`) will be hielichtit in the UI by defaut. Ye can uise the *hielicht* property (`hl`) tae owerride this. See, for instance, hoo *depute* (Scots) vs *deputy* (English) is haundelt. For a mair complex example, sicht the verbs *tae gae* and *tae gie*.
 
@@ -76,26 +88,6 @@ Trigger wirds (`tr`) ar hielichtit by defaut. The `hl` property owerrides `tr` h
     }
 }
 ```
-
-## Bigging
-
-Rin **build.sh** for tae big the JS bundle (**glossar-bundle.min.js**) and **index.php**. Eik optional argument *css* tae update query string when calling CSS, or *min* for tae minifee.
-
-**build.sh** requires `sass` (`brew install sass/sass/sass`) and, optionally, `terser` (for minification; see ablo).
-
-Whan testin on dev.scots.app or deployin tae production at scots.app, **index.php**, **glossar-bundle.min.js**, **glossar-bundle.min.js.map**, **app.css** and **app.css.map** shoud be uplaidit, as weel as **app.js** and **./data** (sae as the source mapping wirks). **app.js** and **./data** shoud be pitten in the folder cried **src**.
-
-## JS minification
-
-`sh build.sh min`
-
-Requires `terser`:
-
-`npm install terser -g`
-
-In **build.sh** mak siccar that the ruit is pyntit at either live or dev as relevant:
-
-`--source-map "root='https://dev.scots.app/src',url='glossar-bundle.min.js.map'"`
 
 ## Error messages
 

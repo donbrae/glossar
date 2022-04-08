@@ -1,0 +1,28 @@
+{
+  "name": "glossar",
+  "version": "1.0.0",
+  "description": "Scots leid glossar",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "sass app.scss app.css",
+    "jsmin": "terser app.js data/glossar.js data/glossar-v.js data/glossar-adj.js data/glossar-adv.js data/glossar-n.js data/glossar-geo.js data/glossar-phr.js \\\n    -o glossar-bundle.min.js -c -m \\\n    --source-map \"root='https://scots.app/src',url='glossar-bundle.min.js.map'\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donbrae/glossar.git"
+  },
+  "author": "Jamie Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donbrae/glossar/issues"
+  },
+  "homepage": "https://github.com/donbrae/glossar#readme",
+  "dependencies": {
+    "sass": "^1.50.0",
+    "terser": "^5.12.1"
+  }
+}
